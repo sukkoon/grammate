@@ -87,9 +87,9 @@ export const curriculum: Part[] = [
         title: "be동사와 일반동사",
         hook: "영어 문장의 심장, 동사부터 제대로.",
         units: [
-          u("be-verb", "be동사: ~이다, ~에 있다", "am, are, is와 부정문·의문문.", ["초등"]),
-          u("general-verbs", "일반동사와 3인칭 단수", "do/does와 -s의 비밀.", ["초등"]),
-          u("past-forms", "과거형과 불규칙 동사", "went, saw, had…", ["초등", "중1"]),
+          u("be-verb", "be동사: ~이다, ~에 있다", "am, are, is와 부정문·의문문.", ["초등"], true),
+          u("general-verbs", "일반동사와 3인칭 단수", "do/does와 -s의 비밀.", ["초등"], true),
+          u("past-forms", "과거형과 불규칙 동사", "went, saw, had…", ["초등", "중1"], true),
         ],
       },
       {

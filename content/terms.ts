@@ -737,6 +737,198 @@ export const terms: Term[] = [
     "group": "동사",
     "href": "/learn/tenses/perfect-family"
   },
+
+  // 추가된 용어
+  {
+    "id": "be-verb",
+    "term": "be동사",
+    "parts": [
+      {
+        "c": "be",
+        "m": "영어 동사 be를 그대로 읽은 이름 (~이다, ~에 있다)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "주어가 누구인지, 어떤지, 어디에 있는지 말해 주는 동사. 원래 모양은 be이고, 주어와 시제에 따라 am, are, is, was, were로 바뀌어요.",
+    "myth": "am, are, is는 서로 다른 동사가 아니에요. 모두 be 하나가 옷만 갈아입은 거예요.",
+    "english": "be verb",
+    "englishNote": "be는 '있다, 존재하다'라는 뜻의 아주 오래된 영어 동사예요.",
+    "example": "I [[am]] a student. My bag [[is]] on the desk.",
+    "group": "동사",
+    "href": "/learn/verbs-basics/be-verb"
+  },
+  {
+    "id": "contraction",
+    "term": "축약형 (줄임말)",
+    "parts": [
+      {
+        "c": "축약",
+        "m": "줄여서 짧게 만들다 ('축소'의 축 + '요약'의 약)"
+      },
+      {
+        "c": "형",
+        "m": "모양 ('형태'의 형)"
+      }
+    ],
+    "result": "두 단어를 줄여 하나로 붙인 모양. 빠진 글자 자리에 아포스트로피(')를 찍어요: I'm, isn't, don't",
+    "english": "contraction",
+    "englishNote": "contract(줄어들다, 오그라들다)에서 왔어요.",
+    "example": "[[I'm]] hungry. It [[isn't]] cold.",
+    "group": "동사",
+    "href": "/learn/verbs-basics/be-verb"
+  },
+  {
+    "id": "negative",
+    "term": "부정문",
+    "parts": [
+      {
+        "c": "부정",
+        "m": "아니라고 하다 (not)"
+      },
+      {
+        "c": "문",
+        "m": "문장 ('문장'의 문)"
+      }
+    ],
+    "result": "'~이 아니다', '~하지 않다'라고 말하는 문장. not을 넣어서 만들어요.",
+    "myth": "부정관사·부정사의 '부정'(정해지지 않은)과는 다른 말이에요! 여기서는 not이라는 뜻이에요.",
+    "english": "negative sentence",
+    "englishNote": "negative(아니라고 하는)",
+    "example": "I [[am not]] hungry. He [[doesn't]] like milk.",
+    "group": "문장 구조",
+    "href": "/learn/verbs-basics/be-verb"
+  },
+  {
+    "id": "interrogative",
+    "term": "의문문",
+    "parts": [
+      {
+        "c": "의문",
+        "m": "궁금해서 묻다 ('의문점'의 의문)"
+      },
+      {
+        "c": "문",
+        "m": "문장 ('문장'의 문)"
+      }
+    ],
+    "result": "궁금한 것을 묻는 문장. 끝에 물음표(?)를 붙여요.",
+    "english": "interrogative sentence (question)",
+    "englishNote": "interrogate(묻다, 캐묻다)에서 왔어요.",
+    "example": "[[Are you]] hungry? [[{Do|조동사:의문문을 만드는 말}]] you like cats?",
+    "group": "문장 구조",
+    "href": "/learn/verbs-basics/be-verb"
+  },
+  {
+    "id": "general-verb",
+    "term": "일반동사",
+    "parts": [
+      {
+        "c": "일반",
+        "m": "특별하지 않은 보통의 것 ('일반인'의 일반)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "be동사와 조동사를 뺀 나머지 모든 동사. 동작이나 마음·상태를 나타내요: eat, play, like, have, know…",
+    "myth": "영어 동사의 대부분이 일반동사예요. 특별한 건 오히려 be동사와 조동사 쪽이에요.",
+    "english": "lexical verb",
+    "englishNote": "lexical(낱말의, 사전의): 사전에 실린 뜻을 그대로 담은 동사라는 뜻이에요. main verb(주된 동사)라고도 해요.",
+    "example": "I [[play]] soccer. She [[likes]] cats.",
+    "group": "동사",
+    "href": "/learn/verbs-basics/general-verbs"
+  },
+  {
+    "id": "third-singular",
+    "term": "3인칭 단수",
+    "parts": [
+      {
+        "c": "3인칭",
+        "m": "나(1인칭)와 너(2인칭)를 뺀 나머지"
+      },
+      {
+        "c": "단수",
+        "m": "하나 ('단 하나'의 단 + '숫자'의 수)"
+      }
+    ],
+    "result": "나와 너를 뺀 하나: he, she, it, Minsu, my dog, the book. 현재형 일반동사에 -s가 붙어요.",
+    "myth": "사람만 3인칭이 아니에요. 동물, 물건도 하나면 모두 3인칭 단수예요.",
+    "english": "third person singular",
+    "englishNote": "third(세 번째) + person(인칭) + singular(하나의)",
+    "example": "[[My dog]] likes water. [[She]] plays the piano.",
+    "group": "동사",
+    "href": "/learn/verbs-basics/general-verbs"
+  },
+  {
+    "id": "base-form",
+    "term": "동사원형",
+    "parts": [
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      },
+      {
+        "c": "원형",
+        "m": "본래 모양 ('원래'의 원 + '모형'의 형)"
+      }
+    ],
+    "result": "아무것도 붙지 않은 동사의 본래 모양. 사전에 실린 모양 그대로예요: be, go, play, have",
+    "myth": "동그라미 모양이라는 '원형'이 아니에요! '원래 모양'이라는 뜻이에요.",
+    "english": "base form",
+    "englishNote": "base(바탕): -s, -ed, -ing가 모두 이 모양을 바탕으로 만들어져요.",
+    "example": "She doesn't [[like]] milk. Can you [[swim]]?",
+    "group": "동사",
+    "href": "/learn/verbs-basics/general-verbs"
+  },
+  {
+    "id": "regular-verb",
+    "term": "규칙 동사",
+    "parts": [
+      {
+        "c": "규칙",
+        "m": "모두가 똑같이 따르는 정해진 약속 ('교통 규칙'의 규칙)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "과거형·과거분사를 만들 때 -ed만 붙이면 되는, 규칙을 잘 지키는 동사: play → played → played",
+    "english": "regular verb",
+    "englishNote": "regular(규칙적인): rule(규칙)과 뿌리가 같아요.",
+    "example": "I [[played]] soccer. She [[studied]] math.",
+    "group": "동사",
+    "href": "/learn/verbs-basics/past-forms"
+  },
+  {
+    "id": "irregular-verb",
+    "term": "불규칙 동사",
+    "parts": [
+      {
+        "c": "불",
+        "m": "아니다 ('불가능'의 불)"
+      },
+      {
+        "c": "규칙",
+        "m": "모두가 똑같이 따르는 정해진 약속"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "과거형·과거분사가 -ed 규칙을 따르지 않고 따로 정해진 모양으로 바뀌는 동사: go → went → gone",
+    "myth": "아무렇게나 바뀌는 건 아니에요. buy – bought, think – thought처럼 소리가 닮은 가족이 많아요.",
+    "english": "irregular verb",
+    "englishNote": "ir(아닌) + regular(규칙적인)",
+    "example": "I [[went]] to the park and [[saw]] Minsu.",
+    "group": "동사",
+    "href": "/learn/verbs-basics/past-forms"
+  },
 ];
 
 export const termById = (id: string) => terms.find((t) => t.id === id);

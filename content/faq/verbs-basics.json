@@ -1,0 +1,207 @@
+[
+  {
+    "id": "vb-1",
+    "unit": "verbs-basics/be-verb",
+    "q": "be동사가 뭐예요?",
+    "alts": ["비동사가 뭐야", "be동사 뜻", "am are is가 뭐예요", "왜 이름이 비동사예요", "be동사 이름 이유"],
+    "keys": ["be동사", "be", "am", "are", "is"],
+    "a": "am, are, is, was, were를 모두 묶어 부르는 이름이에요. 다섯 개 모두 원래 모양(사전에 실린 모양)이 **be**라서 be동사라고 해요.\n뜻은 **'~이다'** 또는 **'~에 있다'**예요.",
+    "ex": [
+      { "en": "I [[am]] a student.", "ko": "나는 학생이야. (~이다)" },
+      { "en": "My bag [[is]] on the desk.", "ko": "내 가방은 책상 위에 있어. (~에 있다)" }
+    ],
+    "check": "am, is, were의 원래 모양은 무엇일까요?"
+  },
+  {
+    "id": "vb-2",
+    "unit": "verbs-basics/be-verb",
+    "q": "am, are, is는 어떻게 골라요?",
+    "alts": ["am are is 차이", "is 언제 써요", "are 언제 써요", "에이엠 아 이즈 구별", "주어에 따라 be동사"],
+    "keys": ["am", "are", "is", "주어"],
+    "a": "주어를 보고 골라요. **I는 am**, **you·we·they와 여럿은 are**, **he·she·it처럼 나와 너를 뺀 하나는 is**예요.\n이름이나 물건이 주어면 대명사로 바꿔 보세요. Minsu는 he니까 is, Minsu and Jisu는 they니까 are예요.",
+    "ex": [
+      { "en": "[[I am]] happy.", "ko": "나는 행복해." },
+      { "en": "[[She is]] kind.", "ko": "그녀는 친절해." },
+      { "en": "[[They are]] my friends.", "ko": "그들은 내 친구들이야." }
+    ],
+    "check": "My dogs ___ cute. 빈칸에는 is와 are 중 뭘 쓸까요?"
+  },
+  {
+    "id": "vb-3",
+    "unit": "verbs-basics/be-verb",
+    "q": "amn't는 왜 없어요?",
+    "alts": ["am not 줄임말", "암은트", "I amn't 맞아요", "am not 줄이는 법", "앰낫 줄임말"],
+    "keys": ["amn't", "am not", "I'm not", "줄임말"],
+    "a": "is not은 isn't, are not은 aren't로 줄이지만, am not을 줄인 amn't는 쓰지 않아요. m과 n이 붙으면 발음이 어색하거든요.\n대신 I am 쪽을 줄여서 **I'm not**이라고 해요.",
+    "ex": [{ "en": "[[I'm not]] tired.", "ko": "나 안 피곤해." }]
+  },
+  {
+    "id": "vb-4",
+    "unit": "verbs-basics/be-verb",
+    "q": "be동사 의문문은 어떻게 만들어요?",
+    "alts": ["be동사 질문 만들기", "is를 앞으로", "Are you 만드는 법", "be동사 물어보는 문장", "be동사 의문문 대답"],
+    "keys": ["의문문", "be동사", "주어", "대답"],
+    "a": "be동사를 **주어 앞으로** 옮기고 물음표를 붙이면 돼요. You are hungry. → Are you hungry?\n대답은 **Yes, 주어 + be동사.** 또는 **No, 주어 + be동사 + not.**이에요. 주어는 대명사로 바꿔서 대답해요.",
+    "ex": [
+      { "en": "[[Is she]] your sister? Yes, she [[is]].", "ko": "그녀가 네 언니야? 응, 맞아." },
+      { "en": "[[Are you]] hungry? No, [[I'm not]].", "ko": "너 배고파? 아니, 안 고파." }
+    ]
+  },
+  {
+    "id": "vb-5",
+    "unit": "verbs-basics/be-verb",
+    "q": "Yes, I'm이라고 대답하면 틀려요?",
+    "alts": ["Yes I'm 틀려요", "대답할 때 줄임말", "예스 아임", "긍정 대답 줄이기", "Yes, he's 돼요"],
+    "keys": ["yes", "i'm", "대답", "줄임말"],
+    "a": "네, 틀려요. **긍정 대답은 줄이지 않아요.** 문장 끝에 오는 be동사는 힘을 주어 말하는 자리라서 줄일 수 없거든요. Yes, I am. / Yes, he is.\n부정 대답은 줄여도 돼요: No, I'm not. / No, he isn't.",
+    "ex": [{ "en": "Are you ready? Yes, I [[am]].", "ko": "준비됐어? 응, 됐어." }]
+  },
+  {
+    "id": "vb-6",
+    "unit": "verbs-basics/be-verb",
+    "q": "I am like pizza는 왜 틀려요?",
+    "alts": ["am이랑 동사 같이 써요", "be동사 일반동사 같이", "I am go 틀려요", "아이 엠 라이크", "am 빼야 해요"],
+    "keys": ["be동사", "일반동사", "like", "같이"],
+    "a": "like가 이미 진짜 동사이기 때문이에요. 한 문장에 진짜 동사는 하나라서 be동사와 일반동사를 나란히 쓰지 않아요. 그래서 **I like pizza.**가 맞아요.\n우리말 '~이다'가 떠올라 am을 넣고 싶을 때는, 뒤에 이미 동사가 있는지 먼저 보세요.",
+    "ex": [{ "en": "I [[like]] pizza.", "ko": "나는 피자를 좋아해." }]
+  },
+  {
+    "id": "vb-7",
+    "unit": "verbs-basics/general-verbs",
+    "q": "일반동사가 뭐예요?",
+    "alts": ["일반 동사 뜻", "be동사 말고 동사", "일반동사 be동사 차이", "일반동사 종류"],
+    "keys": ["일반동사", "be동사", "조동사"],
+    "a": "be동사(am, are, is…)와 조동사(can, will…)를 뺀 **나머지 모든 동사**예요. eat, play, like, have, know처럼 동작이나 마음·상태를 나타내요.\n부정문·의문문을 만들 때 be동사는 혼자 하지만, 일반동사는 **do/does**의 도움을 받아요.",
+    "ex": [
+      { "en": "I [[play]] soccer.", "ko": "나는 축구를 해." },
+      { "en": "She [[likes]] cats.", "ko": "그녀는 고양이를 좋아해." }
+    ]
+  },
+  {
+    "id": "vb-8",
+    "unit": "verbs-basics/general-verbs",
+    "q": "동사 뒤에 s는 언제 붙여요?",
+    "alts": ["동사에 s 붙이는 이유", "3인칭 단수 s", "likes 왜 s 붙어요", "삼인칭 단수", "He like 틀려요"],
+    "keys": ["s", "3인칭", "단수", "현재"],
+    "a": "주어가 **3인칭 단수**(he, she, it, 사람 한 명, 물건 하나)이고 **현재**의 일일 때 일반동사 끝에 -s를 붙여요.\nI, you, we, they와 여럿에는 붙이지 않아요. 과거형에도 붙이지 않아요.",
+    "ex": [
+      { "en": "He [[likes]] music.", "ko": "그는 음악을 좋아해." },
+      { "en": "My dog [[runs]] fast.", "ko": "우리 개는 빨리 달려." }
+    ],
+    "check": "Minsu ___ the guitar. 빈칸에 play의 알맞은 모양은?"
+  },
+  {
+    "id": "vb-9",
+    "unit": "verbs-basics/general-verbs",
+    "q": "es는 언제 붙여요?",
+    "alts": ["s es 차이", "watches 왜 es", "ies 규칙", "study studies", "goes 왜 es예요"],
+    "keys": ["es", "ies", "sh", "ch", "has"],
+    "a": "동사가 **s, sh, ch, x, o**로 끝나면 -es를 붙여요: watches, washes, fixes, goes.\n**자음 + y**로 끝나면 y를 i로 바꾸고 -es: study → studies. 모음 + y면 그냥 -s: play → plays.\nhave는 특별히 **has**가 돼요.",
+    "ex": [
+      { "en": "She [[watches]] TV.", "ko": "그녀는 TV를 봐." },
+      { "en": "He [[studies]] hard.", "ko": "그는 열심히 공부해." }
+    ]
+  },
+  {
+    "id": "vb-10",
+    "unit": "verbs-basics/general-verbs",
+    "q": "doesn't 뒤에는 왜 동사원형이에요?",
+    "alts": ["doesn't likes 틀려요", "does 뒤에 s 붙여요", "Does she plays", "더즌트 뒤에 동사", "doesn't 다음 동사 모양"],
+    "keys": ["doesn't", "does", "동사원형", "원형"],
+    "a": "does가 -s를 **대신 가져갔기** 때문이에요. 주어에 맞춰 모양을 바꾸는 일은 한 문장에서 한 번만 해요. does가 이미 -s를 달고 있으니, 뒤의 동사는 아무것도 붙지 않은 원형으로 돌아가요.\nShe likes → She doesn't like / Does she like?",
+    "ex": [
+      { "en": "She [[doesn't like]] milk.", "ko": "그녀는 우유를 안 좋아해." },
+      { "en": "[[{Does|조동사:의문문을 만드는 말}]] she [[like]] milk?", "ko": "그녀는 우유를 좋아해?" }
+    ]
+  },
+  {
+    "id": "vb-11",
+    "unit": "verbs-basics/general-verbs",
+    "q": "Do you ~?에는 뭐라고 대답해요?",
+    "alts": ["do 질문 대답", "Yes I do", "does 질문 대답", "Yes I am이라고 하면 틀려요", "두 유 대답"],
+    "keys": ["do", "does", "대답", "yes", "no"],
+    "a": "Do로 물으면 **do**로, Does로 물으면 **does**로 대답해요. Yes, I do. / No, I don't. / Yes, she does. / No, she doesn't.\nbe동사로 물었을 때만 be동사로 대답해요.",
+    "ex": [
+      { "en": "[[{Do|조동사:의문문을 만드는 말}]] you like cats? Yes, I [[{do|조동사:앞에 나온 동사를 대신하는 말}]].", "ko": "너 고양이 좋아해? 응, 좋아해." }
+    ]
+  },
+  {
+    "id": "vb-12",
+    "unit": "verbs-basics/general-verbs",
+    "q": "-s는 스예요 즈예요?",
+    "alts": ["s 발음", "플레이즈 플레이스", "es 발음 이즈", "3인칭 s 읽는 법"],
+    "keys": ["발음", "s", "즈", "이즈"],
+    "a": "앞 소리에 따라 세 가지예요. k, p, f처럼 목이 떨리지 않는 소리 뒤는 **[스]**(likes), 모음이나 목이 떨리는 소리 뒤는 **[즈]**(plays), s, sh, ch, x 소리 뒤는 **[이즈]**(watches)예요.\n목에 손을 대고 끝소리를 내 보면 쉽게 구별할 수 있어요.",
+    "ex": [{ "en": "She [[plays]] the piano.", "ko": "그녀는 피아노를 쳐. ([플레이즈])" }]
+  },
+  {
+    "id": "vb-13",
+    "unit": "verbs-basics/past-forms",
+    "q": "과거형은 어떻게 만들어요?",
+    "alts": ["과거형 만드는 법", "ed 붙이는 법", "played 왜 ed", "과거 동사 만들기", "studied 왜 ied"],
+    "keys": ["과거형", "ed", "규칙"],
+    "a": "대부분은 동사 끝에 **-ed**를 붙여요: play → played. e로 끝나면 -d만(like → liked), 자음 + y면 y를 i로 바꾸고 -ed(study → studied), stop처럼 짧은 모음 + 자음 하나로 끝나면 자음을 한 번 더 쓰고 -ed(stopped).\n과거형은 주어가 누구든 모양이 같아요.",
+    "ex": [
+      { "en": "I [[played]] soccer yesterday.", "ko": "나는 어제 축구를 했어." },
+      { "en": "She [[studied]] math.", "ko": "그녀는 수학을 공부했어." }
+    ]
+  },
+  {
+    "id": "vb-14",
+    "unit": "verbs-basics/past-forms",
+    "q": "불규칙 동사는 다 외워야 해요?",
+    "alts": ["불규칙 동사 외우는 법", "went 왜 went예요", "goed 틀려요", "불규칙 동사표", "불규칙 동사 너무 많아요"],
+    "keys": ["불규칙", "외우", "went", "표"],
+    "a": "자주 쓰는 것부터 외우면 돼요. 불규칙 동사는 대부분 go, see, eat, have처럼 **아주 자주 쓰는 동사**라서 쓰다 보면 금방 익숙해져요.\n소리가 닮은 것끼리 묶으면 쉬워요: buy – bought, think – thought, bring – brought / sing – sang – sung, drink – drank – drunk.",
+    "ex": [{ "en": "I [[went]] to the park and [[saw]] Minsu.", "ko": "나는 공원에 가서 민수를 봤어." }]
+  },
+  {
+    "id": "vb-15",
+    "unit": "verbs-basics/past-forms",
+    "q": "didn't 뒤에 과거형 써요?",
+    "alts": ["didn't went 맞아요", "did 뒤에 원형", "Did you saw", "디든트 뒤에 동사", "과거 부정문 만들기"],
+    "keys": ["didn't", "did", "원형", "과거"],
+    "a": "아니요, **동사원형**을 써요. did가 이미 과거를 맡았으니 뒤의 동사는 원형으로 돌아가요: didn't go, Did you see?\n현재형에서 does가 -s를 가져가는 것과 똑같은 원리예요.",
+    "ex": [
+      { "en": "I [[didn't go]] to school.", "ko": "나는 학교에 안 갔어." },
+      { "en": "[[{Did|조동사:과거의 의문문을 만드는 말}]] you [[see]] the movie?", "ko": "너 그 영화 봤어?" }
+    ]
+  },
+  {
+    "id": "vb-16",
+    "unit": "verbs-basics/past-forms",
+    "q": "-ed는 드예요 트예요?",
+    "alts": ["ed 발음", "워크드 워크트", "wanted 발음 이드", "과거형 발음", "ed 읽는 법"],
+    "keys": ["ed", "발음", "트", "드", "이드"],
+    "a": "앞 소리에 따라 세 가지예요. k, p, s, sh, ch, f처럼 목이 떨리지 않는 소리 뒤는 **[트]**(walked), 모음이나 목이 떨리는 소리 뒤는 **[드]**(played), **t나 d 뒤는 [이드]**(wanted, needed)예요.",
+    "ex": [
+      { "en": "We [[walked]] to school.", "ko": "우리는 걸어서 학교에 갔어. ([웍트])" },
+      { "en": "I [[wanted]] a puppy.", "ko": "나는 강아지를 갖고 싶었어. ([원티드])" }
+    ]
+  },
+  {
+    "id": "vb-17",
+    "unit": "verbs-basics/past-forms",
+    "q": "last Sunday 앞에 on 써요?",
+    "alts": ["on last Sunday 맞아요", "in last year", "last 앞에 전치사", "지난 일요일에 영어로", "ago 위치"],
+    "keys": ["last", "on", "전치사", "ago"],
+    "a": "쓰지 않아요. **last, this, next, every** 앞에는 at, on, in을 붙이지 않아요: last Sunday, last year.\n'~ 전에'는 ago를 **뒤에** 써요: two days ago, an hour ago.",
+    "ex": [
+      { "en": "I met him [[last Sunday]].", "ko": "나는 지난 일요일에 그를 만났어." },
+      { "en": "She moved here [[two years ago]].", "ko": "그녀는 2년 전에 여기로 이사 왔어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "vb-18",
+    "unit": "verbs-basics/past-forms",
+    "q": "read의 과거형은 뭐예요?",
+    "alts": ["read 과거", "readed 맞아요", "레드 리드", "read 과거형 발음"],
+    "keys": ["read", "과거형", "발음"],
+    "a": "모양은 똑같이 **read**인데 발음이 [리드]에서 **[레드]**로 바뀌어요.\n주어가 he나 she인데 reads가 아니라 read라면, 과거라는 신호예요.",
+    "ex": [
+      { "en": "He [[{read|동사:읽었다 (read의 과거형, 발음 [레드])}]] the book last night.", "ko": "그는 어젯밤에 그 책을 읽었어." }
+    ],
+    "level": "middle"
+  }
+]
