@@ -1,0 +1,103 @@
+[
+  {
+    "id": "main-clause",
+    "term": "주절",
+    "parts": [
+      { "c": "주", "m": "주인, 중심 ('주인공'의 주)" },
+      { "c": "절", "m": "주어와 동사를 갖춘 문장의 한 마디" }
+    ],
+    "result": "문장의 중심이 되는 절. 접속사가 붙어 있지 않고, 혼자서도 문장이 될 수 있어요.",
+    "english": "main clause",
+    "englishNote": "main(중심의, 주된). independent clause(혼자 설 수 있는 절)라고도 해요.",
+    "example": "{When|접속사:~할 때} I {got home}, [[my mom was cooking]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "subordinate-clause",
+    "term": "종속절",
+    "parts": [
+      { "c": "종", "m": "따르다 ('복종', '종업원'의 종)" },
+      { "c": "속", "m": "딸려 붙다 ('소속', '부속'의 속)" },
+      { "c": "절", "m": "주어와 동사를 갖춘 문장의 한 마디" }
+    ],
+    "result": "접속사나 관계사가 이끌어서 주절에 딸린 절. 혼자서는 문장이 될 수 없어요. 명사절·형용사절·부사절이 모두 종속절이에요.",
+    "english": "subordinate clause",
+    "englishNote": "sub(아래) + ordinate(순서를 매기다): 한 단계 아래에 놓인 절",
+    "example": "I was late [[because I missed the bus]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "coordinating-conjunction",
+    "term": "등위접속사",
+    "parts": [
+      { "c": "등", "m": "같다, 대등하다 ('평등', '동등'의 등)" },
+      { "c": "위", "m": "자리 ('위치', '지위'의 위)" },
+      { "c": "접속사", "m": "이어 주는 말" }
+    ],
+    "result": "같은 자격의 말끼리 나란히 잇는 접속사: and, but, or, so. 이어진 두 절은 각각 혼자서도 문장이 돼요.",
+    "english": "coordinating conjunction",
+    "englishNote": "co(함께) + ordinate(순서를 매기다): 같은 순서에 나란히 놓는 말",
+    "example": "I like cats, [[but]] my sister likes dogs.",
+    "group": "연결",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "subordinating-conjunction",
+    "term": "종속접속사",
+    "parts": [
+      { "c": "종속", "m": "주인에게 따라 딸려 붙다 ('종'은 따르다, '속'은 붙다)" },
+      { "c": "접속사", "m": "이어 주는 말" }
+    ],
+    "result": "절을 이끌어서 주절에 딸려 붙이는 접속사: that, whether, if, when, because, although…",
+    "english": "subordinating conjunction",
+    "englishNote": "subordinate(아래에 두다, 딸리게 하다)",
+    "example": "I stayed home [[because]] it rained.",
+    "group": "연결",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "noun-clause",
+    "term": "명사절",
+    "parts": [
+      { "c": "명사", "m": "이름을 나타내는 말" },
+      { "c": "절", "m": "주어와 동사를 갖춘 문장의 한 마디" }
+    ],
+    "result": "명사처럼 주어·목적어·보어 자리에 서는 절. that(~라는 것), whether·if(~인지), 의문사, what(~하는 것)이 이끌어요.",
+    "english": "noun clause",
+    "englishNote": "noun(명사) + clause(절)",
+    "example": "I believe [[{that|접속사:~라는 것} you can do it]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/three-clauses"
+  },
+  {
+    "id": "adjective-clause",
+    "term": "형용사절",
+    "parts": [
+      { "c": "형용사", "m": "명사를 꾸미는 말" },
+      { "c": "절", "m": "주어와 동사를 갖춘 문장의 한 마디" }
+    ],
+    "result": "형용사처럼 바로 앞의 명사(선행사)를 꾸미는 절. 관계사가 이끌어서 관계사절이라고도 해요.",
+    "myth": "한 단어 형용사는 명사 앞에서 꾸미지만, 형용사절은 명사 뒤에서 꾸며요.",
+    "english": "adjective clause (relative clause)",
+    "englishNote": "relative(관계를 맺는): 앞의 명사와 관계를 맺는 절",
+    "example": "This is the cake [[{that|관계대명사:~하는 (앞의 명사를 꾸며요)} my dad made]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/three-clauses"
+  },
+  {
+    "id": "adverb-clause",
+    "term": "부사절",
+    "parts": [
+      { "c": "부사", "m": "곁에서 꾸며 주는 말" },
+      { "c": "절", "m": "주어와 동사를 갖춘 문장의 한 마디" }
+    ],
+    "result": "부사처럼 동사나 문장 전체를 꾸미는 절. 때·이유·조건·양보를 나타내요: when, because, if, although…",
+    "english": "adverb clause",
+    "englishNote": "adverb(부사) + clause(절)",
+    "example": "[[{When|접속사:~할 때} I {got home}]], my dog was sleeping.",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/three-clauses"
+  }
+]

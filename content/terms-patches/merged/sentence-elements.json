@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sentence-element",
+    "term": "문장 성분",
+    "parts": [
+      { "c": "문장", "m": "생각을 완성해서 나타낸 말" },
+      { "c": "성", "m": "이루다 ('완성', '구성'의 성)" },
+      { "c": "분", "m": "나눈 한 부분 ('부분', '분량'의 분)" }
+    ],
+    "result": "문장을 이루는 조각이 문장 속에서 맡은 역할: 주어, 서술어, 목적어, 보어, 수식어",
+    "myth": "품사와 헷갈리지 마세요. 품사는 단어의 직업이라 늘 같고, 성분은 그 문장에서 맡은 역할이라 문장마다 달라져요.",
+    "english": "sentence element",
+    "englishNote": "element(요소): 전체를 이루는 기본 조각",
+    "example": "[[Minsu]] [[plays]] [[soccer]] [[after school]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-elements/five-roles"
+  },
+  {
+    "id": "subject-complement",
+    "term": "주격보어",
+    "parts": [
+      { "c": "주격", "m": "주어에 대한, 주어 자리의" },
+      { "c": "보어", "m": "모자란 뜻을 채우는 말 ('보충'의 보)" }
+    ],
+    "result": "주어가 누구인지, 어떤 상태인지 채워 주는 말. 주어 = 보어 관계가 돼요. 명사나 형용사가 맡아요.",
+    "myth": "보어 자리에 부사는 올 수 없어요. You look happily (✕) → You look happy (O)",
+    "english": "subject complement",
+    "englishNote": "subject(주어)를 complete(채우다)하는 말",
+    "example": "My dad is [[a nurse]]. This soup smells [[good]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-elements/five-roles"
+  },
+  {
+    "id": "object-complement",
+    "term": "목적격보어",
+    "parts": [
+      { "c": "목적격", "m": "목적어에 대한, 목적어 자리의" },
+      { "c": "보어", "m": "모자란 뜻을 채우는 말 ('보충'의 보)" }
+    ],
+    "result": "목적어가 누구인지, 어떤 상태인지 채워 주는 말. 목적어 = 보어 관계가 돼요.",
+    "english": "object complement",
+    "englishNote": "object(목적어)를 complete(채우다)하는 말",
+    "example": "The movie made me [[sad]]. We call our cat [[Coco]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-elements/five-roles"
+  },
+  {
+    "id": "dummy-subject",
+    "term": "가주어",
+    "parts": [
+      { "c": "가", "m": "가짜, 임시로 세운 ('가짜', '가면'의 가)" },
+      { "c": "주어", "m": "문장의 주인. '누가, 무엇이'에 해당하는 말" }
+    ],
+    "result": "긴 진짜 주어(to부정사, that절, whether절)를 문장 뒤로 보내고, 주어 자리를 대신 채우는 it. 뒤로 간 진짜 주어는 진주어라고 해요.",
+    "myth": "가주어 it은 '그것'이라고 해석하지 않아요. 뒤에 있는 진주어를 주어로 해석해요.",
+    "english": "dummy subject (preparatory it)",
+    "englishNote": "dummy(모형, 자리만 채우는 가짜)",
+    "example": "[[{It|대명사:가주어 (뜻 없이 자리만 채워요)}]] is fun [[to ride a bike]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-elements/forms-of-elements"
+  }
+]

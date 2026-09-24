@@ -1,0 +1,207 @@
+[
+  {
+    "id": "pr-1",
+    "unit": "prepositions/time",
+    "q": "시간 앞에 at, on, in은 어떻게 구별해요?",
+    "alts": ["앳 온 인 차이", "시간 전치사 뭐 써요", "몇 시에는 at이에요", "월요일에 영어로 on이에요 in이에요", "3월에는 인이야 온이야"],
+    "keys": ["at", "on", "in", "시간"],
+    "a": "시간의 **크기**로 골라요. 콕 찍은 시각은 **at**(at 7:30), 달력 한 칸인 요일·날짜·특정한 날은 **on**(on Monday, on my birthday), 여러 날이 모인 달·계절·연도는 **in**(in March, in winter, in 2020)이에요.\n점 → 면 → 공간처럼 좁은 것에서 넓은 것으로, at → on → in이라고 기억하세요.",
+    "ex": [
+      { "en": "School starts [[at]] nine [[on]] Monday.", "ko": "월요일에는 학교가 9시에 시작해." },
+      { "en": "We go to the beach [[in]] August.", "ko": "우리는 8월에 바닷가에 가." }
+    ],
+    "check": "'크리스마스 날에'는 at, on, in 중 무엇일까요?"
+  },
+  {
+    "id": "pr-2",
+    "unit": "prepositions/time",
+    "q": "아침은 in the morning인데 밤은 왜 at night예요?",
+    "alts": ["앳 나잇 왜", "in the night 틀려요", "밤에 영어로", "at night 이유", "정오에 영어로"],
+    "keys": ["night", "at night", "morning", "noon"],
+    "a": "at night는 오래전부터 굳어진 표현이라 한 덩어리로 외워 두는 게 좋아요. 아침·오후·저녁은 **in the** morning/afternoon/evening, 밤은 **at night**, 정오는 **at noon**, 자정은 **at midnight**예요.\n밤은 자는 동안 눈 깜짝할 새 지나가서 한 점 같다고 떠올리면 잘 안 잊혀요.",
+    "ex": [{ "en": "I read comics [[at night]].", "ko": "나는 밤에 만화책을 읽어." }]
+  },
+  {
+    "id": "pr-3",
+    "unit": "prepositions/time",
+    "q": "last week 앞에는 왜 on을 안 써요?",
+    "alts": ["on last Monday 틀려요", "next week 전치사 붙여요", "every day 앞에 전치사", "this morning 인 붙여요", "지난주에 영어로"],
+    "keys": ["last", "next", "this", "every"],
+    "a": "**this, next, last, every**가 붙으면 그 말이 이미 '언제'인지 알려 주니까 at, on, in을 쓰지 않아요. yesterday, today, tomorrow, tonight 앞에도 전치사를 쓰지 않아요.",
+    "ex": [
+      { "en": "I saw a movie [[last Saturday]].", "ko": "나는 지난 토요일에 영화를 봤어. (on last Saturday는 틀려요)" },
+      { "en": "We have a party [[this Friday]].", "ko": "이번 주 금요일에 파티가 있어." }
+    ],
+    "check": "'다음 주 월요일에'를 영어로 하면 어떻게 될까요?"
+  },
+  {
+    "id": "pr-4",
+    "unit": "prepositions/time",
+    "q": "for랑 during은 둘 다 ~ 동안 아니에요?",
+    "alts": ["포 듀링 차이", "during two hours 돼요", "동안 영어로", "방학 동안 영어로", "for during 뭐 써요"],
+    "keys": ["for", "during", "동안"],
+    "a": "둘 다 '~ 동안'이지만 **for**는 '얼마 동안?'에 답하는 **숫자 길이**(for two hours, for three days), **during**은 '언제?'에 답하는 **기간의 이름**(during the vacation, during class)과 써요.\n그래서 during two hours는 틀리고 for two hours가 맞아요.",
+    "ex": [{ "en": "I read [[for]] an hour [[during]] the trip.", "ko": "나는 여행하는 동안 한 시간 동안 책을 읽었어." }]
+  },
+  {
+    "id": "pr-5",
+    "unit": "prepositions/time",
+    "q": "by랑 until 둘 다 ~까지인데 뭐가 달라요?",
+    "alts": ["바이 언틸 차이", "까지 영어로", "until 마감", "by friday 뜻", "틸 언틸 뭐예요"],
+    "keys": ["by", "until", "까지"],
+    "a": "**until**은 그때까지 **쭉 계속**할 때(wait, stay, sleep), **by**는 늦어도 그때까지 **한 번 끝낼** 때(finish, return, hand in) 써요.\n'계속'을 넣어서 자연스러우면 until, '늦어도'를 넣어서 자연스러우면 by예요.",
+    "ex": [
+      { "en": "I'll wait [[until]] six.", "ko": "6시까지 (계속) 기다릴게." },
+      { "en": "Finish it [[{by|전치사:~까지 (늦어도)}]] six.", "ko": "늦어도 6시까지 끝내." }
+    ],
+    "check": "'늦어도 내일까지 답장해 줘'에는 by와 until 중 무엇을 쓸까요?",
+    "level": "middle"
+  },
+  {
+    "id": "pr-6",
+    "unit": "prepositions/time",
+    "q": "월요일 아침은 in the morning이에요, on이에요?",
+    "alts": ["on monday morning", "특정한 날 아침 전치사", "생일 아침에 영어로", "in the morning of 돼요"],
+    "keys": ["morning", "on", "특정한 날"],
+    "a": "그냥 아침이면 **in the morning**, 어느 날의 아침인지 콕 집으면 그 하루가 주인공이 되어 **on**을 써요. on Monday morning, on the morning of my birthday처럼요.",
+    "ex": [{ "en": "We have a test [[on Monday morning]].", "ko": "우리는 월요일 아침에 시험이 있어." }],
+    "level": "middle"
+  },
+  {
+    "id": "pr-7",
+    "unit": "prepositions/place",
+    "q": "in이랑 into는 뭐가 달라요?",
+    "alts": ["인 인투 차이", "into 뜻", "안으로 영어로", "on onto 차이", "jump in into"],
+    "keys": ["in", "into", "onto"],
+    "a": "**in**은 안에 이미 **있는** 상태, **into**는 안으로 **들어가는** 움직임이에요. on(위에 있음)과 onto(위로 올라감)도 같은 관계예요.\nto가 붙으면 움직이는 화살표가 생긴다고 기억하세요.",
+    "ex": [
+      { "en": "The ducks are [[in]] the pond.", "ko": "오리들이 연못 안에 있어." },
+      { "en": "The boy jumped [[into]] the pond.", "ko": "소년이 연못으로 뛰어들었어." }
+    ],
+    "check": "'고양이가 식탁 위로 뛰어올랐다'에는 on과 onto 중 무엇이 어울릴까요?"
+  },
+  {
+    "id": "pr-8",
+    "unit": "prepositions/place",
+    "q": "벽에 걸린 그림은 왜 on the wall이에요?",
+    "alts": ["in the wall 틀려요", "벽에 영어로", "천장에 붙은 거 전치사", "on은 위에 아니에요"],
+    "keys": ["on", "wall", "표면"],
+    "a": "on은 '위'가 아니라 **표면에 닿아 있음**이에요. 그래서 벽에 걸린 그림도, 천장에 붙은 거미도 on이에요. in the wall이라고 하면 벽 속에 박혀 들어간 것처럼 들려요.",
+    "ex": [{ "en": "There is a clock [[on]] the wall.", "ko": "벽에 시계가 걸려 있어." }]
+  },
+  {
+    "id": "pr-9",
+    "unit": "prepositions/place",
+    "q": "between이랑 among은 뭐가 달라요?",
+    "alts": ["비트윈 어몽 차이", "사이에 영어로", "셋 사이는 뭐 써요", "between A or B 돼요"],
+    "keys": ["between", "among", "사이"],
+    "a": "**between**은 **둘 사이**, **among**은 **셋 이상의 무리 사이**예요. between은 and와 짝을 이뤄 between A and B로 써요. or를 쓰면 틀려요.",
+    "ex": [
+      { "en": "I sat [[between]] Jisu [[and]] Minsu.", "ko": "나는 지수와 민수 사이에 앉았어." },
+      { "en": "The cat is sleeping [[among]] the flowers.", "ko": "고양이가 꽃들 사이에서 자고 있어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pr-10",
+    "unit": "prepositions/place",
+    "q": "버스는 on the bus인데 차는 왜 in a car예요?",
+    "alts": ["on the bus in the car 차이", "택시 탈 때 전치사", "get on get in 차이", "지하철에서 영어로", "버스에서 내리다 영어로"],
+    "keys": ["bus", "car", "taxi", "on", "in"],
+    "a": "안에서 **서서 걸어 다닐 수 있는 큰 탈것**(버스, 기차, 지하철, 비행기)과 **올라타는 탈것**(자전거)은 **on**, **몸을 굽혀 들어가 앉는 작은 탈것**(승용차, 택시)은 **in**이에요.\n타고 내릴 때도 get on / get off the bus, get in / get out of the car로 달라져요.",
+    "ex": [
+      { "en": "I met Jisu [[on the bus]].", "ko": "나는 버스에서 지수를 만났어." },
+      { "en": "Mom is waiting [[in the car]].", "ko": "엄마가 차 안에서 기다리고 계셔." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pr-11",
+    "unit": "prepositions/place",
+    "q": "across랑 through는 둘 다 지나가다 아니에요?",
+    "alts": ["어크로스 쓰루 차이", "터널 지나가다 영어로", "길 건너다 영어로", "along 뜻", "따라서 영어로"],
+    "keys": ["across", "through", "along"],
+    "a": "**across**는 길·강처럼 **평평한 면을 가로질러** 건너편으로, **through**는 터널·숲처럼 **안을 뚫고** 지나가요. 길쭉한 것을 **따라서** 쭉 가면 **along**이에요.",
+    "ex": [
+      { "en": "We walked [[across]] the bridge.", "ko": "우리는 다리를 건넜어." },
+      { "en": "The train went [[through]] the tunnel.", "ko": "기차가 터널을 지나갔어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pr-12",
+    "unit": "prepositions/prep-vs-conj",
+    "q": "during이랑 while은 뭐가 달라요?",
+    "alts": ["듀링 와일 차이", "동안 영어 두 개", "while 뒤에 뭐 와요", "during 뒤에 문장 와도 돼요"],
+    "keys": ["during", "while", "동안"],
+    "a": "뜻은 같지만 **뒤에 오는 모양**이 달라요. **during**은 전치사라서 뒤에 명사(구)(during the movie), **while**은 접속사라서 뒤에 주어 + 동사(while I was watching the movie)가 와요.\n진짜 동사를 세어 보면 쉬워요. 접속사 while이 들어오면 진짜 동사가 하나 더 생겨요.",
+    "ex": [
+      { "en": "My phone rang [[during]] the class.", "ko": "수업 중에 휴대폰이 울렸어. (during + 명사구)" },
+      { "en": "My phone rang [[while]] the teacher was talking.", "ko": "선생님이 말씀하시는 동안 휴대폰이 울렸어. (while + 주어 + 동사)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "pr-13",
+    "unit": "prepositions/prep-vs-conj",
+    "q": "because랑 because of는 뭐가 달라요?",
+    "alts": ["비코즈 오브 차이", "때문에 영어로", "because of 뒤에 문장 돼요", "due to 뜻", "since 때문에"],
+    "keys": ["because", "because of", "due to", "since", "때문에"],
+    "a": "**because of**, **due to**는 전치사라서 뒤에 명사(구)가 오고, **because**, **since**는 접속사라서 뒤에 주어 + 동사가 와요. 뜻은 모두 '~ 때문에'예요.",
+    "ex": [
+      { "en": "We stayed home [[{because of}]] the storm.", "ko": "폭풍 때문에 우리는 집에 있었어. (전치사 + 명사구)" },
+      { "en": "We stayed home [[because]] it was stormy.", "ko": "폭풍이 불어서 우리는 집에 있었어. (접속사 + 주어 + 동사)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pr-14",
+    "unit": "prepositions/prep-vs-conj",
+    "q": "despite of라고 쓰면 안 돼요?",
+    "alts": ["디스파이트 오브", "in spite of despite 차이", "에도 불구하고 영어로", "although despite 차이", "though 뜻"],
+    "keys": ["despite", "in spite of", "although", "불구하고"],
+    "a": "**despite**는 혼자서 전치사라 of를 붙이지 않아요. of가 필요한 건 **in spite of**예요. 둘 다 뒤에 명사(구)가 오고, 뒤에 주어 + 동사가 오면 접속사 **although**나 **though**를 써요.",
+    "ex": [
+      { "en": "[[Despite]] the {cold|명사:추위}, we went out.", "ko": "추운데도 우리는 밖에 나갔어. (전치사 + 명사)" },
+      { "en": "[[Although]] it was cold, we went out.", "ko": "추웠지만 우리는 밖에 나갔어. (접속사 + 주어 + 동사)" }
+    ],
+    "check": "'비가 왔는데도'를 despite로 말하면 어떻게 될까요?",
+    "level": "high"
+  },
+  {
+    "id": "pr-15",
+    "unit": "prepositions/prep-vs-conj",
+    "q": "전치사 뒤에는 왜 동사가 -ing로 와요?",
+    "alts": ["before eating 왜 ing", "전치사 뒤 동명사", "after to eat 돼요", "without ing 왜", "for helping 이유"],
+    "keys": ["전치사", "동명사", "ing"],
+    "a": "전치사 뒤는 **명사 자리**예요. 그래서 동사를 쓰려면 명사로 변장한 **동명사(-ing)**를 써요. to부정사나 동사원형은 쓸 수 없어요.\n동사 1개의 법칙 그대로예요. 진짜 동사는 이미 있으니, 전치사 뒤 동사는 변장해야 해요.",
+    "ex": [
+      { "en": "Thank you [[{for|전치사:~에 대해 (고마운 이유)} coming]].", "ko": "와 줘서 고마워." },
+      { "en": "Wash your hands [[before eating]].", "ko": "먹기 전에 손을 씻어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pr-16",
+    "unit": "prepositions/prep-vs-conj",
+    "q": "before는 전치사예요, 접속사예요?",
+    "alts": ["after 품사 뭐예요", "since 전치사 접속사", "until 뒤에 문장 와요", "둘 다 되는 거 있어요"],
+    "keys": ["before", "after", "since", "until"],
+    "a": "**둘 다**예요. before, after, since, until은 뒤에 명사가 오면 전치사, 주어 + 동사가 오면 접속사예요. 그래서 이 말들은 전치사·접속사 구별 문제에서 틀린 곳이 되기 어려워요.",
+    "ex": [
+      { "en": "[[After]] lunch, we played soccer.", "ko": "점심 먹고 나서 우리는 축구를 했어. (전치사)" },
+      { "en": "[[After]] we ate lunch, we played soccer.", "ko": "점심을 먹은 후에 우리는 축구를 했어. (접속사)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "pr-17",
+    "unit": "prepositions/prep-vs-conj",
+    "q": "수능에서 전치사 접속사 고르는 문제는 어떻게 풀어요?",
+    "alts": ["어법 전치사 접속사", "네모 문제 during while", "수능 despite although", "진짜 동사 세기", "어법 문제 푸는 법"],
+    "keys": ["수능", "어법", "전치사", "접속사"],
+    "a": "① 네모 뒤를 끝까지 읽고 ② 주어 + 동사가 있으면 접속사, 명사(구)·동명사만 있으면 전치사를 골라요. ③ 마지막으로 **진짜 동사 개수 = 접속사 개수 + 1**이 맞는지 확인해요.\n뒤가 -ing로 시작하면 조심! while, when 같은 접속사는 분사구문으로 -ing가 올 수 있지만, during은 안 돼요.",
+    "ex": [{ "en": "[[While]] walking home, I met Minsu.", "ko": "집에 걸어가다가 민수를 만났어. (While I was walking에서 I was를 줄였어요)" }],
+    "level": "high"
+  }
+]

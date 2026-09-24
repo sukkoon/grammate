@@ -1,0 +1,47 @@
+[
+  {
+    "id": "syllable",
+    "term": "음절",
+    "parts": [
+      { "c": "음", "m": "소리 ('음악', '발음'의 음)" },
+      { "c": "절", "m": "마디 (대나무 마디처럼)" }
+    ],
+    "result": "한 번에 소리 내는 소리 덩어리. 영어에서는 모음 소리 하나가 한 음절이에요: tall(1음절), hap-py(2음절), beau-ti-ful(3음절)",
+    "myth": "글자 수가 아니라 모음 소리의 수를 세요. strong은 글자가 여섯 개지만 1음절이에요.",
+    "english": "syllable",
+    "englishNote": "그리스어 syllabe(함께 묶은 것): 소리를 한 덩어리로 묶은 것",
+    "example": "[[tall]] → [[taller]], [[famous]] → [[more famous]]",
+    "group": "표현",
+    "href": "/learn/comparison/forms"
+  },
+  {
+    "id": "equative",
+    "term": "원급 비교",
+    "parts": [
+      { "c": "원급", "m": "모양을 바꾸지 않은 본래 그대로의 등급 (tall)" },
+      { "c": "비교", "m": "견주어 보다" }
+    ],
+    "result": "형용사·부사를 원급 그대로 as와 as 사이에 넣어, 두 대상이 같은 정도라고 말하는 비교: as tall as (~만큼 키가 큰)",
+    "myth": "'원급'의 원은 동그라미가 아니라 '본래 그대로'라는 뜻이에요.",
+    "english": "equative comparison",
+    "englishNote": "equal(같은)과 뿌리가 같아요: '같은 정도'를 말하는 비교",
+    "example": "My cat is [[{as|부사:그만큼} heavy {as|접속사:…만큼}]] your dog.",
+    "group": "표현",
+    "href": "/learn/comparison/as-as"
+  },
+  {
+    "id": "multiplier",
+    "term": "배수사",
+    "parts": [
+      { "c": "배", "m": "곱절, 몇 곱 ('두 배', '세 배'의 배)" },
+      { "c": "수", "m": "수, 개수" },
+      { "c": "사", "m": "말" }
+    ],
+    "result": "몇 배인지 나타내는 말: half(절반), twice(두 배), three times(세 배)… as ~ as나 비교급 앞에 써요",
+    "english": "multiplier",
+    "englishNote": "multiply(곱하다)에서 왔어요: 곱하는 말",
+    "example": "My room is [[{twice|부사:두 배}]] {as|부사:그만큼} big {as|접속사:…만큼} yours.",
+    "group": "표현",
+    "href": "/learn/comparison/comparative-expressions"
+  }
+]

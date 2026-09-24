@@ -1,0 +1,249 @@
+[
+  {
+    "id": "sp-1",
+    "unit": "sentence-patterns/five-patterns",
+    "q": "문장의 형식이 뭐예요?",
+    "alts": ["1형식 2형식 이런 게 뭐예요", "영어 5형식 뜻", "형식 왜 배워요", "문장 형식 쉽게 알려줘", "오형식이 뭐야"],
+    "keys": ["형식", "설계도", "5형식", "문장"],
+    "a": "형식은 **영어 문장의 설계도**예요. 꾸미는 말을 빼고 뼈대만 남기면, 영어 문장은 다섯 가지 틀 중 하나예요: S + V, S + V + C, S + V + O, S + V + IO + DO, S + V + O + OC.\n어떤 틀을 쓸지는 **진짜 동사**가 정해요. 동사 뒤에 무엇이 꼭 있어야 하는지 보면 형식이 보여요.",
+    "ex": [
+      { "en": "Birds [[fly]].", "ko": "새들은 날아. (1형식: S + V)" },
+      { "en": "I love [[my cat]].", "ko": "나는 우리 고양이를 사랑해. (3형식: S + V + O)" }
+    ],
+    "check": "Mom gave me a gift.는 몇 형식일까요?"
+  },
+  {
+    "id": "sp-2",
+    "unit": "sentence-patterns/five-patterns",
+    "q": "수식어는 왜 형식에 안 넣어요?",
+    "alts": ["in the park는 몇 형식에 들어가요", "부사도 형식에 세요", "전치사구 형식", "문장이 길면 몇 형식이에요", "yesterday는 뭐예요"],
+    "keys": ["수식어", "부사", "전치사", "괄호"],
+    "a": "형식은 문장의 **뼈대**만 보는 거예요. 수식어는 빼도 문장이 무너지지 않는 말이라서 세지 않아요.\n시간·장소·방법을 알려 주는 부사나 '전치사 + 명사' 덩어리에 괄호를 치고, 괄호 밖에 남은 것만 보세요.",
+    "ex": [
+      { "en": "[[My brother sleeps]] on the sofa every Sunday.", "ko": "우리 형은 일요일마다 소파에서 자. (괄호를 치면 S + V, 1형식)" }
+    ]
+  },
+  {
+    "id": "sp-3",
+    "unit": "sentence-patterns/five-patterns",
+    "q": "보어랑 목적어는 어떻게 구별해요?",
+    "alts": ["보어 목적어 차이", "2형식 3형식 구별법", "동사 뒤 명사는 보어예요 목적어예요", "보어가 뭐예요"],
+    "keys": ["보어", "목적어", "2형식", "3형식"],
+    "a": "동사 뒤 명사가 **주어와 같은 사람·물건**이면 보어, **다른 대상**이면 목적어예요.\nShe is a nurse는 그녀 = 간호사라서 보어(2형식), She met a nurse는 그녀 ≠ 간호사라서 목적어(3형식)예요.",
+    "ex": [
+      { "en": "She is [[a nurse]].", "ko": "그녀는 간호사야. (그녀 = 간호사 → 보어)" },
+      { "en": "She met [[a nurse]].", "ko": "그녀는 간호사를 만났어. (그녀 ≠ 간호사 → 목적어)" }
+    ],
+    "check": "My uncle is a doctor.에서 a doctor는 보어일까요, 목적어일까요?"
+  },
+  {
+    "id": "sp-4",
+    "unit": "sentence-patterns/five-patterns",
+    "q": "make는 몇 형식 동사예요?",
+    "alts": ["같은 동사인데 형식이 달라요", "동사마다 형식이 정해져 있어요", "make 3형식 4형식 5형식", "get은 몇 형식", "메이크 형식"],
+    "keys": ["make", "get", "같은 동사"],
+    "a": "형식은 동사 **단어**가 아니라, 그 문장에서 동사가 **어떻게 쓰였는지**가 정해요.\nmake는 3형식(케이크를 만들다), 4형식(누구에게 케이크를 만들어 주다), 5형식(누구를 ~하게 만들다)이 모두 돼요.",
+    "ex": [
+      { "en": "I made [[a cake]].", "ko": "나는 케이크를 만들었어. (3형식)" },
+      { "en": "I made [[my sister]] [[a cake]].", "ko": "나는 여동생에게 케이크를 만들어 줬어. (4형식)" },
+      { "en": "The news made [[my sister]] [[happy]].", "ko": "그 소식은 여동생을 행복하게 했어. (5형식)" }
+    ]
+  },
+  {
+    "id": "sp-5",
+    "unit": "sentence-patterns/five-patterns",
+    "q": "4형식이랑 5형식은 어떻게 구별해요?",
+    "alts": ["4형식 5형식 차이", "동사 뒤에 두 개 있으면", "made him a cake 몇 형식", "목적어 두 개 5형식"],
+    "keys": ["4형식", "5형식", "목적격보어", "간접목적어"],
+    "a": "동사 뒤 두 덩어리 사이에 **=**를 넣어 보세요.\n'~에게 + ~을'이고 둘이 서로 다르면 **4형식**, 앞의 것 = 뒤의 것이 말이 되면 **5형식**이에요.",
+    "ex": [
+      { "en": "She made [[him]] [[a sandwich]].", "ko": "그녀는 그에게 샌드위치를 만들어 줬어. (him ≠ a sandwich → 4형식)" },
+      { "en": "They made [[him]] [[captain]].", "ko": "그들은 그를 주장으로 만들었어. (him = captain → 5형식)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "sp-6",
+    "unit": "sentence-patterns/five-patterns",
+    "q": "discuss about은 왜 틀려요?",
+    "alts": ["arrive at은 왜 at을 써요", "자동사 타동사랑 형식", "reach at 틀려요", "marry with 맞아요", "디스커스 어바웃"],
+    "keys": ["discuss", "arrive", "자동사", "타동사", "전치사"],
+    "a": "discuss는 **타동사**라서 전치사 없이 바로 목적어를 데려와요: discuss the plan. 우리말 '~에 대해'에 끌려서 about을 붙이면 틀려요. reach, enter, marry, resemble도 같아요.\n반대로 arrive는 **자동사**라서 장소를 말하려면 전치사가 필요해요: arrive at the station.",
+    "ex": [
+      { "en": "We discussed [[the {plan|명사:계획}]].", "ko": "우리는 그 계획에 대해 의논했어." },
+      { "en": "He arrived [[at]] the station.", "ko": "그는 역에 도착했어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sp-7",
+    "unit": "sentence-patterns/linking-verbs",
+    "q": "look happily는 왜 틀려요?",
+    "alts": ["look 뒤에 형용사 써요", "감각동사 뒤에 부사", "행복하게 보인다 영어로", "룩 해피 해필리", "~하게인데 왜 형용사예요"],
+    "keys": ["look", "형용사", "부사", "보어", "감각동사"],
+    "a": "look 뒤는 **주어가 어떤지** 말하는 보어 자리예요. 주어(명사)의 상태를 말하는 건 형용사의 일이라서 happy를 써요.\n우리말로 '행복하게 보여'라고 해석돼서 헷갈리는 거예요. 동사를 is로 바꿔 보세요. She is happy는 되지만 She is happily는 어색하죠.",
+    "ex": [{ "en": "She looks [[happy]].", "ko": "그녀는 행복해 보여." }],
+    "check": "This cake tastes ___. sweet와 sweetly 중 뭐가 맞을까요?"
+  },
+  {
+    "id": "sp-8",
+    "unit": "sentence-patterns/linking-verbs",
+    "q": "감각동사가 뭐예요?",
+    "alts": ["감각동사 종류", "look sound smell taste feel", "오감 동사", "감각 동사 뜻", "2형식 동사 뭐 있어요"],
+    "keys": ["감각동사", "look", "sound", "smell", "taste"],
+    "a": "눈·귀·코·입·피부로 느낀 **주어의 상태**를 말하는 2형식 동사예요. look(~해 보이다), sound(~하게 들리다), smell(~한 냄새가 나다), taste(~한 맛이 나다), feel(~한 느낌이 나다) 다섯 개예요.\n뒤에는 **형용사** 보어가 와요.",
+    "ex": [
+      { "en": "This soup smells [[good]].", "ko": "이 수프 냄새 좋다." },
+      { "en": "Your idea sounds [[great]].", "ko": "네 생각 좋은데." }
+    ]
+  },
+  {
+    "id": "sp-9",
+    "unit": "sentence-patterns/linking-verbs",
+    "q": "look이랑 look like는 언제 달라요?",
+    "alts": ["look like 뒤에 형용사", "닮았다 영어로", "sound like 뜻", "look like happy 맞아요", "룩 라이크"],
+    "keys": ["look like", "like", "명사", "형용사"],
+    "a": "look 뒤에 **형용사**가 오면 그냥 look, **명사**가 오면 look like예요. 여기서 like는 '~처럼'이라는 전치사라서 뒤에 명사가 와요.\nsound like, smell like, taste like, feel like도 똑같아요.",
+    "ex": [
+      { "en": "You look [[happy]].", "ko": "너 행복해 보여. (형용사)" },
+      { "en": "You [[{look like}]] your mom.", "ko": "너 엄마 닮았다. (명사)" }
+    ]
+  },
+  {
+    "id": "sp-10",
+    "unit": "sentence-patterns/linking-verbs",
+    "q": "get angry의 get도 2형식이에요?",
+    "alts": ["~해지다 영어로", "become get turn 차이", "turn red 뜻", "get 뒤에 형용사", "grow old 뜻"],
+    "keys": ["get", "become", "turn", "grow", "해지다"],
+    "a": "네! get, become, turn, grow는 '~해지다, ~이 되다'라는 뜻의 2형식 동사예요. 뒤에 형용사가 와요.\nget은 날씨·기분이 변할 때(get cold, get angry), turn은 색이 변할 때(turn red), grow는 천천히 변할 때(grow old) 잘 써요.",
+    "ex": [
+      { "en": "It {got|동사:~해졌다} [[dark]].", "ko": "어두워졌어." },
+      { "en": "The leaves {turned|동사:(~한 색으로) 변했다} [[yellow]].", "ko": "나뭇잎이 노랗게 물들었어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "sp-11",
+    "unit": "sentence-patterns/linking-verbs",
+    "q": "friendly는 -ly니까 부사 아니에요?",
+    "alts": ["ly로 끝나는 형용사", "lovely 품사", "looks friendly 맞아요", "프렌들리 부사예요", "lonely 형용사"],
+    "keys": ["friendly", "lovely", "lonely", "ly", "형용사"],
+    "a": "-ly로 끝나지만 **형용사**예요. 명사 뒤에 -ly가 붙으면 형용사가 되거든요: friend → friendly(다정한), love → lovely(사랑스러운).\n그래서 감각동사 뒤 보어 자리에 올 수 있어요. 수능 어법에서 함정으로 자주 나와요.",
+    "ex": [
+      { "en": "He looks [[{friendly|형용사:친절한, 다정한}]].", "ko": "그는 다정해 보여." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sp-12",
+    "unit": "sentence-patterns/giving-verbs",
+    "q": "수여동사가 뭐예요?",
+    "alts": ["4형식 동사", "수여동사 종류", "주다 동사", "give send show 몇 형식", "수여 뜻"],
+    "keys": ["수여동사", "4형식", "give", "send"],
+    "a": "'누구에게 무엇을 주다'라는 뜻을 가진 동사예요. give, send, show, tell, teach, lend, buy, make처럼 목적어를 **두 개**(사람 + 물건) 데려와서 4형식을 만들어요.",
+    "ex": [{ "en": "Mom gave [[me]] [[a gift]].", "ko": "엄마가 나에게 선물을 주셨어." }]
+  },
+  {
+    "id": "sp-13",
+    "unit": "sentence-patterns/giving-verbs",
+    "q": "간접목적어랑 직접목적어가 뭐예요?",
+    "alts": ["간접목적어 뜻", "직접목적어 차이", "~에게 ~을 순서", "목적어가 두 개예요", "아이오 디오"],
+    "keys": ["간접목적어", "직접목적어", "~에게", "순서"],
+    "a": "4형식에서 **사람(~에게)**이 간접목적어, **물건(~을)**이 직접목적어예요. 주는 동작이 곧바로 닿는 건 물건이라 '직접', 사람은 그 물건을 거쳐서 받으니 '간접'이에요.\n순서는 늘 **사람 먼저, 물건 나중**!",
+    "ex": [
+      { "en": "Jisu showed [[us]] [[her new phone]].", "ko": "지수가 우리에게(간접목적어) 새 휴대폰을(직접목적어) 보여 줬어." }
+    ]
+  },
+  {
+    "id": "sp-14",
+    "unit": "sentence-patterns/giving-verbs",
+    "q": "3형식으로 바꿀 때 to랑 for는 어떻게 골라요?",
+    "alts": ["4형식 3형식 전치사", "give to buy for", "전환할 때 전치사", "for 쓰는 동사", "to for of 구별"],
+    "keys": ["to", "for", "of", "3형식", "전환"],
+    "a": "동사를 보고 골라요. give, send, show, tell, teach, lend처럼 **받는 사람이 있어야 끝나는 동작**은 to, buy, make, cook, get처럼 **상대를 위해 해 주는 동작**은 for, ask는 of를 써요.\n헷갈리면 '혼자서도 할 수 있는 동작인가?'를 생각해 보세요. 혼자 할 수 있으면 for예요.",
+    "ex": [
+      { "en": "I sent a card [[to]] my grandma.", "ko": "나는 할머니께 카드를 보냈어." },
+      { "en": "Dad bought a bike [[for]] me.", "ko": "아빠가 나에게 자전거를 사 주셨어." }
+    ],
+    "check": "Grandma cooked dinner ___ us. to일까요, for일까요?"
+  },
+  {
+    "id": "sp-15",
+    "unit": "sentence-patterns/giving-verbs",
+    "q": "give me it은 왜 틀려요?",
+    "alts": ["대명사 4형식", "give it to me", "기브 미 잇", "it 들어가면 3형식", "them 4형식"],
+    "keys": ["it", "them", "대명사", "give"],
+    "a": "물건 자리(직접목적어)에 it, them 같은 **대명사**가 오면 4형식으로 쓰지 않고 3형식으로 써요: give it to me.\n사람 자리의 대명사는 괜찮아요: Give me the pen.",
+    "ex": [{ "en": "I'll give [[it to you]].", "ko": "그거 너한테 줄게." }],
+    "level": "middle"
+  },
+  {
+    "id": "sp-16",
+    "unit": "sentence-patterns/giving-verbs",
+    "q": "explain me는 왜 안 돼요?",
+    "alts": ["explain 4형식", "say to me", "introduce 4형식", "설명해 주다 영어로", "익스플레인 미"],
+    "keys": ["explain", "say", "introduce", "suggest"],
+    "a": "explain, say, introduce, suggest는 우리말로는 '~에게 ~을'이라서 4형식처럼 보이지만, 영어에서는 목적어를 **하나만** 가져요.\n사람은 꼭 **to + 사람**으로 써요: explain the rule to me.",
+    "ex": [{ "en": "Can you explain [[the rule to me]]?", "ko": "나에게 규칙 좀 설명해 줄래?" }],
+    "level": "high"
+  },
+  {
+    "id": "sp-17",
+    "unit": "sentence-patterns/object-complements",
+    "q": "목적격보어가 뭐예요?",
+    "alts": ["목적격 보어 뜻", "OC가 뭐예요", "5형식 보어", "목적보어", "목적어 뒤에 오는 말"],
+    "keys": ["목적격보어", "5형식", "보어"],
+    "a": "**목적어가 무엇인지, 어떤지, 무엇을 하는지** 채워 주는 말이에요. The news made me happy에서 happy는 '내가 행복하다'는 뜻을 채워 줘요.\n목적어와 목적격보어 사이에는 작은 문장이 숨어 있어요.",
+    "ex": [{ "en": "The news made [[me]] [[happy]].", "ko": "그 소식은 나를 행복하게 했어. (숨은 문장: 내가 행복하다)" }],
+    "level": "middle"
+  },
+  {
+    "id": "sp-18",
+    "unit": "sentence-patterns/object-complements",
+    "q": "사역동사 뒤에는 왜 to가 없어요?",
+    "alts": ["make me to 틀려요", "사역동사 동사원형", "let me go 왜 to 없어요", "have 사역", "메이크 미 클린"],
+    "keys": ["사역동사", "make", "have", "let", "동사원형"],
+    "a": "make, have, let은 목적격보어로 **to 없는 동사원형**을 쓰기로 정해져 있어요. to를 벗은 부정사라서 원형부정사라고도 해요.\n반대로 want, tell, ask, get은 to부정사를 써요. 뜻이 비슷한 get(~하게 하다)이 to를 쓰는 게 시험 단골이에요.",
+    "ex": [
+      { "en": "Mom made me [[clean]] my room.", "ko": "엄마가 나에게 방을 청소하게 하셨어." },
+      { "en": "I got my brother [[to clean]] his room.", "ko": "나는 동생이 자기 방을 청소하게 했어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "sp-19",
+    "unit": "sentence-patterns/object-complements",
+    "q": "지각동사 뒤에 -ing 써도 돼요?",
+    "alts": ["saw him cross crossing 차이", "지각동사 ing", "hear 뒤에 동사원형", "보고 듣는 동사 뒤", "지각동사 to"],
+    "keys": ["지각동사", "see", "hear", "ing", "동사원형"],
+    "a": "네, 둘 다 돼요. 동사원형은 동작을 **처음부터 끝까지** 본 느낌, -ing는 **하고 있는 중인 순간**을 본 느낌이에요.\n하지만 to부정사는 쓰지 않아요.",
+    "ex": [
+      { "en": "I saw him [[cross]] the street.", "ko": "나는 그가 길을 건너는 걸 봤어." },
+      { "en": "I saw him [[crossing]] the street.", "ko": "나는 그가 길을 건너고 있는 걸 봤어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "sp-20",
+    "unit": "sentence-patterns/object-complements",
+    "q": "help me to find랑 help me find는 달라요?",
+    "alts": ["help 뒤에 to", "help 동사원형", "헬프 미 투", "help 목적격보어"],
+    "keys": ["help", "to", "동사원형"],
+    "a": "뜻은 같아요. help는 목적격보어로 동사원형과 to부정사를 **둘 다** 쓸 수 있어요. 말할 때는 to 없이 더 자주 써요.",
+    "ex": [
+      { "en": "Can you help me [[find]] my key?", "ko": "내 열쇠 찾는 것 좀 도와줄래?" },
+      { "en": "Can you help me [[to find]] my key?", "ko": "내 열쇠 찾는 것 좀 도와줄래?" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "sp-21",
+    "unit": "sentence-patterns/object-complements",
+    "q": "have my hair cut은 무슨 뜻이에요?",
+    "alts": ["머리 잘랐다 영어로", "have 과거분사", "had my hair cut", "사역동사 과거분사", "목적격보어 과거분사"],
+    "keys": ["have", "cut", "과거분사", "hair"],
+    "a": "'내 머리를 (누군가에게) 잘리게 했다', 즉 **미용실에서 머리를 잘랐다**는 뜻이에요. 머리는 자르는 쪽이 아니라 **잘리는** 쪽이라서 과거분사 cut을 써요.\n목적어가 그 동작을 당하면 과거분사!",
+    "ex": [{ "en": "I {had|동사:~하게 했다} my hair [[{cut|과거분사:잘린}]].", "ko": "나는 (미용실에서) 머리를 잘랐어." }],
+    "level": "high"
+  }
+]

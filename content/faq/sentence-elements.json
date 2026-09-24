@@ -1,0 +1,151 @@
+[
+  {
+    "id": "se-1",
+    "unit": "sentence-elements/five-roles",
+    "q": "문장 성분이 뭐예요? 몇 개예요?",
+    "alts": ["문장 성분 종류", "주어 서술어 목적어 보어 수식어", "성분이 뭐예요", "에스 브이 오 씨 엠이 뭐예요", "문장 성분 다섯 개"],
+    "keys": ["문장 성분", "성분", "주어", "목적어", "보어"],
+    "a": "문장 성분은 단어나 덩어리가 **문장 속에서 맡은 역할**이에요. 다섯 가지가 있어요: **주어**(누가), **서술어**(한다·이다), **목적어**(무엇을), **보어**(누구·어떤 상태), **수식어**(꾸밈).\n문법책에서는 S, V, O, C, M으로 줄여 쓰기도 해요.",
+    "ex": [
+      { "en": "[[My brother]] [[kicked]] [[the ball]] [[in the park]].", "ko": "우리 형은 공원에서 공을 찼어. (주어 · 서술어 · 목적어 · 수식어)" }
+    ],
+    "check": "I love music.에서 music은 무슨 성분일까요?"
+  },
+  {
+    "id": "se-2",
+    "unit": "sentence-elements/five-roles",
+    "q": "목적어랑 보어는 어떻게 구별해요?",
+    "alts": ["목적어 보어 차이", "동사 뒤에 오는 거 뭐예요", "보어인지 목적어인지 모르겠어요", "became a teacher 보어예요", "목적어 보어 헷갈려요"],
+    "keys": ["목적어", "보어", "구별", "차이"],
+    "a": "둘 다 동사 뒤에 와서 헷갈리죠. **주어와 = 관계가 되는지** 보세요. =가 되면 **보어**, 주어와 다른 대상이면 **목적어**예요.\nMy sister became a teacher.는 언니 = 선생님이라서 보어, My sister met a teacher.는 언니 ≠ 선생님이라서 목적어예요.",
+    "ex": [
+      { "en": "My sister became [[a teacher]].", "ko": "우리 언니는 선생님이 되었어. (보어)" },
+      { "en": "My sister met [[a teacher]].", "ko": "우리 언니는 선생님 한 분을 만났어. (목적어)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "se-3",
+    "unit": "sentence-elements/five-roles",
+    "q": "서술어랑 동사는 같은 거예요?",
+    "alts": ["서술어가 뭐예요", "동사랑 서술어 차이", "서술어 품사", "브이가 동사예요", "서술어 찾는 법"],
+    "keys": ["서술어", "동사", "진짜 동사"],
+    "a": "**동사**는 품사(단어의 직업)이고, **서술어**는 문장 성분(역할)이에요. 영어에서 서술어 역할은 언제나 동사가 맡아요.\n다만 문장 속 동사가 모두 서술어는 아니에요. to eat, swimming처럼 **변장한 동사**는 서술어가 될 수 없고, 주어와 시제에 맞춰 모양이 바뀐 **진짜 동사**만 서술어예요.",
+    "ex": [
+      { "en": "I [[want]] to eat pizza.", "ko": "나는 피자를 먹고 싶어. (서술어는 want 하나)" }
+    ]
+  },
+  {
+    "id": "se-4",
+    "unit": "sentence-elements/five-roles",
+    "q": "수식어는 빼도 된다는 게 무슨 말이에요?",
+    "alts": ["수식어 빼도 돼요", "필수 성분이 뭐예요", "문장 뼈대", "꾸미는 말 없어도 돼요", "수식어 뜻"],
+    "keys": ["수식어", "빼", "뼈대", "필수"],
+    "a": "주어·서술어·목적어·보어는 **뼈대**라서 하나만 빠져도 문장이 무너져요. 수식어는 **꾸밈**이라서 빼도 문장이 그대로 서요.\n헷갈리면 직접 빼 보세요. I run in the park.에서 in the park를 빼도 I run.은 문장이지만, She is kind.에서 kind를 빼면 She is.만 남아서 뜻이 모자라요.",
+    "ex": [
+      { "en": "I {get up} [[early]] [[every morning]].", "ko": "나는 매일 아침 일찍 일어나. (수식어를 빼도 I get up.)" }
+    ],
+    "check": "She sings well.에서 빼도 되는 단어는 뭘까요?"
+  },
+  {
+    "id": "se-5",
+    "unit": "sentence-elements/five-roles",
+    "q": "주어가 길면 동사는 뭐에 맞춰요?",
+    "alts": ["주어가 어디까지예요", "주어 길 때 수일치", "in my class 뒤 동사", "주어 중심 단어", "주어 뒤에 전치사 있으면"],
+    "keys": ["주어", "수일치", "중심", "단수", "복수"],
+    "a": "주어는 덩어리 전체지만, 동사는 **주어의 중심 단어**에 맞춰요. 주어 안의 수식어(전치사 + 명사 같은 것)를 괄호로 묶고 빼 보세요.\nThe girls (in my class) love this song.에서 중심은 girls라서 복수 동사 love예요. class에 속아서 loves를 쓰면 안 돼요.",
+    "ex": [
+      { "en": "The books on my desk [[are]] from the library.", "ko": "내 책상 위의 책들은 도서관 책이야. (중심 단어: books)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "se-6",
+    "unit": "sentence-elements/five-roles",
+    "q": "목적격보어가 뭐예요?",
+    "alts": ["목적격 보어", "made me happy 문법", "5형식 보어", "목적어 뒤에 형용사", "오브젝트 컴플리먼트"],
+    "keys": ["목적격보어", "목적어", "보어", "5형식"],
+    "a": "보어가 **목적어**를 채워 줄 때 목적격보어라고 해요. **목적어 = 보어** 관계가 돼요.\nThe movie made me sad.에서 me = sad(슬픈 상태)라서 sad가 목적격보어예요. 문장의 형식 장(5형식)에서 자세히 배워요.",
+    "ex": [
+      { "en": "The movie made me [[sad]].", "ko": "그 영화는 나를 슬프게 했어. (me = sad)" },
+      { "en": "We call our cat [[Coco]].", "ko": "우리는 우리 고양이를 코코라고 불러. (our cat = Coco)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "se-7",
+    "unit": "sentence-elements/forms-of-elements",
+    "q": "주어 자리에 동사가 올 수 있어요?",
+    "alts": ["동사가 주어", "Play is fun 맞아요", "주어에 ing", "투부정사 주어", "동명사 주어"],
+    "keys": ["주어", "동명사", "to부정사", "변장"],
+    "a": "동사원형 그대로는 안 되고, **변장하면** 돼요. 동명사(-ing)나 to부정사(to + 동사원형)로 바꾸면 '~하는 것, ~하기'라는 명사처럼 일해서 주어 자리에 설 수 있어요.\n진짜 동사(서술어)는 따로 있으니까, 주어 자리에 들어오는 동사는 변장해야 하는 거예요.",
+    "ex": [
+      { "en": "[[Playing]] video games is fun.", "ko": "비디오 게임을 하는 건 재미있어." },
+      { "en": "[[To learn]] a new language takes time.", "ko": "새로운 언어를 배우는 건 시간이 걸려." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "se-8",
+    "unit": "sentence-elements/forms-of-elements",
+    "q": "동명사가 주어면 동사는 단수예요 복수예요?",
+    "alts": ["동명사 주어 수일치", "Reading books are 맞아요", "to부정사 주어 단수", "명사절 주어 동사", "주어가 ing면 is"],
+    "keys": ["동명사", "단수", "수일치", "주어", "명사절"],
+    "a": "**단수**예요. 동명사·to부정사·명사절 주어는 '한 가지 일, 한 가지 사실'이라서 is, was, 동사 + -s를 써요.\n동사 바로 앞에 복수 명사가 있어도 속지 마세요. Reading comic books **is** fun.에서 주어는 '읽기'예요.",
+    "ex": [
+      { "en": "Reading comic books [[is]] fun.", "ko": "만화책 읽기는 재미있어." },
+      { "en": "{What|관계대명사:~하는 것} my friends said [[was]] true.", "ko": "내 친구들이 한 말은 사실이었어." }
+    ],
+    "check": "Walking in the rain ___ fun. 빈칸에 is와 are 중 뭘 쓸까요?",
+    "level": "high"
+  },
+  {
+    "id": "se-9",
+    "unit": "sentence-elements/forms-of-elements",
+    "q": "가주어 it은 왜 써요?",
+    "alts": ["가주어 진주어", "It is to 구문", "It is that 구문", "잇 이즈 댓", "가짜 주어 it 해석"],
+    "keys": ["가주어", "진주어", "it", "that"],
+    "a": "영어는 **머리가 무거운 문장**을 싫어해요. to부정사나 that절처럼 긴 주어를 뒤로 보내고, 주어 자리에 it을 먼저 세우는 거예요.\n이 it은 '그것'이라고 해석하지 않아요. 뒤에 있는 **진짜 주어**(진주어)를 주어로 해석하면 돼요.",
+    "ex": [
+      { "en": "[[{It|대명사:가주어 (뜻 없이 자리만 채워요)}]] is true [[{that|접속사:~라는 것} Jisu moved to Busan]].", "ko": "지수가 부산으로 이사 간 건 사실이야." },
+      { "en": "[[{It|대명사:가주어 (뜻 없이 자리만 채워요)}]] is not easy [[to {wake up} early]].", "ko": "일찍 일어나는 건 쉽지 않아." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "se-10",
+    "unit": "sentence-elements/forms-of-elements",
+    "q": "명사절이 뭐예요? 주어 자리에 문장이 와요?",
+    "alts": ["명사절 뜻", "that절 주어", "문장이 주어가 돼요", "왓 절 주어", "whether절이 뭐예요"],
+    "keys": ["명사절", "that", "what", "whether", "주어"],
+    "a": "명사절은 **주어 + 동사를 갖춘 절이 명사처럼** 주어·목적어·보어 자리에 서는 거예요. that(~라는 것), whether·if(~인지), what(~하는 것), 의문사가 이끌어요.\n명사절 안에도 진짜 동사가 있어서, 문장 전체의 진짜 동사는 접속사 개수 + 1개가 돼요.",
+    "ex": [
+      { "en": "[[{That|접속사:~라는 것} Minsu won the race]] surprised everyone.", "ko": "민수가 경주에서 이긴 것이 모두를 놀라게 했어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "se-11",
+    "unit": "sentence-elements/forms-of-elements",
+    "q": "Do you know where is the library는 틀려요?",
+    "alts": ["간접의문문 어순", "where is 순서", "의문사 뒤 어순", "두 유 노우 웨어", "know 뒤에 의문문"],
+    "keys": ["간접의문문", "어순", "의문사", "where"],
+    "a": "네, 틀려요. 의문사가 이끄는 절이 **목적어 자리에 들어가면** 의문문이 아니라 명사절이 돼요. 그래서 평범한 문장처럼 **의문사 + 주어 + 동사** 순서로 써요.\nWhere is the library? → Do you know where the library is?",
+    "ex": [
+      { "en": "Do you know [[where the library is]]?", "ko": "도서관이 어디 있는지 아니?" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "se-12",
+    "unit": "sentence-elements/forms-of-elements",
+    "q": "긴 문장에서 주어랑 동사를 어떻게 찾아요?",
+    "alts": ["긴 문장 해석", "주어 동사 찾기", "괄호 치기", "문장 뼈대 찾는 법", "주어가 너무 길어요"],
+    "keys": ["긴 문장", "괄호", "수식어", "뼈대", "주어"],
+    "a": "**수식어에 괄호**를 치세요. 전치사 + 명사, 명사 뒤의 분사구, to부정사구, 관계사절, 부사절이 괄호 후보예요.\n괄호 밖에 남은 것이 S·V·O·C 뼈대예요. 그다음 주어와 시제에 맞춰 모양이 바뀐 **진짜 동사**를 찾으면 돼요.",
+    "ex": [
+      { "en": "The boy playing the guitar [[is]] Minsu.", "ko": "기타를 치고 있는 소년이 민수야. (playing the guitar를 괄호로 묶으면 The boy is Minsu.)" }
+    ],
+    "level": "high"
+  }
+]

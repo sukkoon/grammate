@@ -1101,6 +1101,781 @@ export const terms: Term[] = [
     "group": "문장 구조",
     "href": "/learn/sentence-types/tag-questions"
   },
+
+  // 추가된 용어
+  {
+    "id": "syllable",
+    "term": "음절",
+    "parts": [
+      {
+        "c": "음",
+        "m": "소리 ('음악', '발음'의 음)"
+      },
+      {
+        "c": "절",
+        "m": "마디 (대나무 마디처럼)"
+      }
+    ],
+    "result": "한 번에 소리 내는 소리 덩어리. 영어에서는 모음 소리 하나가 한 음절이에요: tall(1음절), hap-py(2음절), beau-ti-ful(3음절)",
+    "myth": "글자 수가 아니라 모음 소리의 수를 세요. strong은 글자가 여섯 개지만 1음절이에요.",
+    "english": "syllable",
+    "englishNote": "그리스어 syllabe(함께 묶은 것): 소리를 한 덩어리로 묶은 것",
+    "example": "[[tall]] → [[taller]], [[famous]] → [[more famous]]",
+    "group": "표현",
+    "href": "/learn/comparison/forms"
+  },
+  {
+    "id": "equative",
+    "term": "원급 비교",
+    "parts": [
+      {
+        "c": "원급",
+        "m": "모양을 바꾸지 않은 본래 그대로의 등급 (tall)"
+      },
+      {
+        "c": "비교",
+        "m": "견주어 보다"
+      }
+    ],
+    "result": "형용사·부사를 원급 그대로 as와 as 사이에 넣어, 두 대상이 같은 정도라고 말하는 비교: as tall as (~만큼 키가 큰)",
+    "myth": "'원급'의 원은 동그라미가 아니라 '본래 그대로'라는 뜻이에요.",
+    "english": "equative comparison",
+    "englishNote": "equal(같은)과 뿌리가 같아요: '같은 정도'를 말하는 비교",
+    "example": "My cat is [[{as|부사:그만큼} heavy {as|접속사:…만큼}]] your dog.",
+    "group": "표현",
+    "href": "/learn/comparison/as-as"
+  },
+  {
+    "id": "multiplier",
+    "term": "배수사",
+    "parts": [
+      {
+        "c": "배",
+        "m": "곱절, 몇 곱 ('두 배', '세 배'의 배)"
+      },
+      {
+        "c": "수",
+        "m": "수, 개수"
+      },
+      {
+        "c": "사",
+        "m": "말"
+      }
+    ],
+    "result": "몇 배인지 나타내는 말: half(절반), twice(두 배), three times(세 배)… as ~ as나 비교급 앞에 써요",
+    "english": "multiplier",
+    "englishNote": "multiply(곱하다)에서 왔어요: 곱하는 말",
+    "example": "My room is [[{twice|부사:두 배}]] {as|부사:그만큼} big {as|접속사:…만큼} yours.",
+    "group": "표현",
+    "href": "/learn/comparison/comparative-expressions"
+  },
+  {
+    "id": "main-clause",
+    "term": "주절",
+    "parts": [
+      {
+        "c": "주",
+        "m": "주인, 중심 ('주인공'의 주)"
+      },
+      {
+        "c": "절",
+        "m": "주어와 동사를 갖춘 문장의 한 마디"
+      }
+    ],
+    "result": "문장의 중심이 되는 절. 접속사가 붙어 있지 않고, 혼자서도 문장이 될 수 있어요.",
+    "english": "main clause",
+    "englishNote": "main(중심의, 주된). independent clause(혼자 설 수 있는 절)라고도 해요.",
+    "example": "{When|접속사:~할 때} I {got home}, [[my mom was cooking]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "subordinate-clause",
+    "term": "종속절",
+    "parts": [
+      {
+        "c": "종",
+        "m": "따르다 ('복종', '종업원'의 종)"
+      },
+      {
+        "c": "속",
+        "m": "딸려 붙다 ('소속', '부속'의 속)"
+      },
+      {
+        "c": "절",
+        "m": "주어와 동사를 갖춘 문장의 한 마디"
+      }
+    ],
+    "result": "접속사나 관계사가 이끌어서 주절에 딸린 절. 혼자서는 문장이 될 수 없어요. 명사절·형용사절·부사절이 모두 종속절이에요.",
+    "english": "subordinate clause",
+    "englishNote": "sub(아래) + ordinate(순서를 매기다): 한 단계 아래에 놓인 절",
+    "example": "I was late [[because I missed the bus]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "coordinating-conjunction",
+    "term": "등위접속사",
+    "parts": [
+      {
+        "c": "등",
+        "m": "같다, 대등하다 ('평등', '동등'의 등)"
+      },
+      {
+        "c": "위",
+        "m": "자리 ('위치', '지위'의 위)"
+      },
+      {
+        "c": "접속사",
+        "m": "이어 주는 말"
+      }
+    ],
+    "result": "같은 자격의 말끼리 나란히 잇는 접속사: and, but, or, so. 이어진 두 절은 각각 혼자서도 문장이 돼요.",
+    "english": "coordinating conjunction",
+    "englishNote": "co(함께) + ordinate(순서를 매기다): 같은 순서에 나란히 놓는 말",
+    "example": "I like cats, [[but]] my sister likes dogs.",
+    "group": "연결",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "subordinating-conjunction",
+    "term": "종속접속사",
+    "parts": [
+      {
+        "c": "종속",
+        "m": "주인에게 따라 딸려 붙다 ('종'은 따르다, '속'은 붙다)"
+      },
+      {
+        "c": "접속사",
+        "m": "이어 주는 말"
+      }
+    ],
+    "result": "절을 이끌어서 주절에 딸려 붙이는 접속사: that, whether, if, when, because, although…",
+    "english": "subordinating conjunction",
+    "englishNote": "subordinate(아래에 두다, 딸리게 하다)",
+    "example": "I stayed home [[because]] it rained.",
+    "group": "연결",
+    "href": "/learn/phrase-clause/phrase-vs-clause"
+  },
+  {
+    "id": "noun-clause",
+    "term": "명사절",
+    "parts": [
+      {
+        "c": "명사",
+        "m": "이름을 나타내는 말"
+      },
+      {
+        "c": "절",
+        "m": "주어와 동사를 갖춘 문장의 한 마디"
+      }
+    ],
+    "result": "명사처럼 주어·목적어·보어 자리에 서는 절. that(~라는 것), whether·if(~인지), 의문사, what(~하는 것)이 이끌어요.",
+    "english": "noun clause",
+    "englishNote": "noun(명사) + clause(절)",
+    "example": "I believe [[{that|접속사:~라는 것} you can do it]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/three-clauses"
+  },
+  {
+    "id": "adjective-clause",
+    "term": "형용사절",
+    "parts": [
+      {
+        "c": "형용사",
+        "m": "명사를 꾸미는 말"
+      },
+      {
+        "c": "절",
+        "m": "주어와 동사를 갖춘 문장의 한 마디"
+      }
+    ],
+    "result": "형용사처럼 바로 앞의 명사(선행사)를 꾸미는 절. 관계사가 이끌어서 관계사절이라고도 해요.",
+    "myth": "한 단어 형용사는 명사 앞에서 꾸미지만, 형용사절은 명사 뒤에서 꾸며요.",
+    "english": "adjective clause (relative clause)",
+    "englishNote": "relative(관계를 맺는): 앞의 명사와 관계를 맺는 절",
+    "example": "This is the cake [[{that|관계대명사:~하는 (앞의 명사를 꾸며요)} my dad made]].",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/three-clauses"
+  },
+  {
+    "id": "adverb-clause",
+    "term": "부사절",
+    "parts": [
+      {
+        "c": "부사",
+        "m": "곁에서 꾸며 주는 말"
+      },
+      {
+        "c": "절",
+        "m": "주어와 동사를 갖춘 문장의 한 마디"
+      }
+    ],
+    "result": "부사처럼 동사나 문장 전체를 꾸미는 절. 때·이유·조건·양보를 나타내요: when, because, if, although…",
+    "english": "adverb clause",
+    "englishNote": "adverb(부사) + clause(절)",
+    "example": "[[{When|접속사:~할 때} I {got home}]], my dog was sleeping.",
+    "group": "문장 구조",
+    "href": "/learn/phrase-clause/three-clauses"
+  },
+  {
+    "id": "sentence-element",
+    "term": "문장 성분",
+    "parts": [
+      {
+        "c": "문장",
+        "m": "생각을 완성해서 나타낸 말"
+      },
+      {
+        "c": "성",
+        "m": "이루다 ('완성', '구성'의 성)"
+      },
+      {
+        "c": "분",
+        "m": "나눈 한 부분 ('부분', '분량'의 분)"
+      }
+    ],
+    "result": "문장을 이루는 조각이 문장 속에서 맡은 역할: 주어, 서술어, 목적어, 보어, 수식어",
+    "myth": "품사와 헷갈리지 마세요. 품사는 단어의 직업이라 늘 같고, 성분은 그 문장에서 맡은 역할이라 문장마다 달라져요.",
+    "english": "sentence element",
+    "englishNote": "element(요소): 전체를 이루는 기본 조각",
+    "example": "[[Minsu]] [[plays]] [[soccer]] [[after school]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+  {
+    "id": "subject-complement",
+    "term": "주격보어",
+    "parts": [
+      {
+        "c": "주격",
+        "m": "주어에 대한, 주어 자리의"
+      },
+      {
+        "c": "보어",
+        "m": "모자란 뜻을 채우는 말 ('보충'의 보)"
+      }
+    ],
+    "result": "주어가 누구인지, 어떤 상태인지 채워 주는 말. 주어 = 보어 관계가 돼요. 명사나 형용사가 맡아요.",
+    "myth": "보어 자리에 부사는 올 수 없어요. You look happily (✕) → You look happy (O)",
+    "english": "subject complement",
+    "englishNote": "subject(주어)를 complete(채우다)하는 말",
+    "example": "My dad is [[a nurse]]. This soup smells [[good]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+  {
+    "id": "object-complement",
+    "term": "목적격보어",
+    "parts": [
+      {
+        "c": "목적격",
+        "m": "목적어에 대한, 목적어 자리의"
+      },
+      {
+        "c": "보어",
+        "m": "모자란 뜻을 채우는 말 ('보충'의 보)"
+      }
+    ],
+    "result": "목적어가 누구인지, 어떤 상태인지 채워 주는 말. 목적어 = 보어 관계가 돼요.",
+    "english": "object complement",
+    "englishNote": "object(목적어)를 complete(채우다)하는 말",
+    "example": "The movie made me [[sad]]. We call our cat [[Coco]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+  {
+    "id": "dummy-subject",
+    "term": "가주어",
+    "parts": [
+      {
+        "c": "가",
+        "m": "가짜, 임시로 세운 ('가짜', '가면'의 가)"
+      },
+      {
+        "c": "주어",
+        "m": "문장의 주인. '누가, 무엇이'에 해당하는 말"
+      }
+    ],
+    "result": "긴 진짜 주어(to부정사, that절, whether절)를 문장 뒤로 보내고, 주어 자리를 대신 채우는 it. 뒤로 간 진짜 주어는 진주어라고 해요.",
+    "myth": "가주어 it은 '그것'이라고 해석하지 않아요. 뒤에 있는 진주어를 주어로 해석해요.",
+    "english": "dummy subject (preparatory it)",
+    "englishNote": "dummy(모형, 자리만 채우는 가짜)",
+    "example": "[[{It|대명사:가주어 (뜻 없이 자리만 채워요)}]] is fun [[to ride a bike]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-elements/forms-of-elements"
+  },
+  {
+    "id": "sentence-pattern",
+    "term": "형식 (문장의 형식)",
+    "parts": [
+      {
+        "c": "형",
+        "m": "모양, 틀 ('형태', '외형'의 형)"
+      },
+      {
+        "c": "식",
+        "m": "정해진 방식 ('공식', '방식'의 식)"
+      }
+    ],
+    "result": "진짜 동사가 무엇을 필요로 하느냐에 따라 나눈 영어 문장의 다섯 가지 틀(설계도). 1형식부터 5형식까지 있어요.",
+    "myth": "'형식적이다'처럼 겉모양만 갖춘다는 뜻이 아니에요. 문장을 짓는 설계도라는 뜻이에요.",
+    "english": "sentence pattern",
+    "englishNote": "pattern(본, 틀): 옷을 만들 때 대고 자르는 본처럼, 문장을 찍어 내는 틀이에요.",
+    "example": "Birds [[fly]]. I [[love]] my cat. Mom [[gave]] me a gift.",
+    "group": "문장 구조",
+    "href": "/learn/sentence-patterns/five-patterns"
+  },
+  {
+    "id": "sense-verb",
+    "term": "감각동사",
+    "parts": [
+      {
+        "c": "감각",
+        "m": "눈·귀·코·입·피부로 느끼는 것"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "보고, 듣고, 냄새 맡고, 맛보고, 만져서 느낀 주어의 상태를 말하는 2형식 동사: look, sound, smell, taste, feel",
+    "myth": "우리말로 '~하게'라고 해석돼도 뒤에는 부사가 아니라 형용사가 와요!",
+    "english": "sensory linking verb",
+    "englishNote": "link(잇다): 주어와 보어를 등호(=)로 이어 주는 동사라서 linking verb라고 불러요.",
+    "example": "This soup [[tastes]] salty.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/linking-verbs"
+  },
+  {
+    "id": "dative-verb",
+    "term": "수여동사",
+    "parts": [
+      {
+        "c": "수여",
+        "m": "주다 ('수여식'의 수여)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "'누구에게 무엇을 주다'라는 뜻으로 목적어를 두 개(사람 + 물건) 데려오는 동사. 4형식을 만들어요.",
+    "english": "dative verb",
+    "englishNote": "dative: 라틴어 dare(주다)에서 온 말로 '~에게 주는'이라는 뜻이에요.",
+    "example": "Mom [[gave]] me a gift.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/giving-verbs"
+  },
+  {
+    "id": "indirect-object",
+    "term": "간접목적어",
+    "parts": [
+      {
+        "c": "간",
+        "m": "사이 ('중간', '공간'의 간)"
+      },
+      {
+        "c": "접",
+        "m": "닿다 ('접촉'의 접)"
+      },
+      {
+        "c": "목적어",
+        "m": "동작이 향하는 대상"
+      }
+    ],
+    "result": "동작이 곧바로 닿지 않고 물건을 사이에 두고 거쳐서 닿는 목적어. 4형식에서 '~에게'에 해당하는 받는 사람이에요.",
+    "english": "indirect object",
+    "englishNote": "indirect(곧바로가 아닌, 돌아서 가는)",
+    "example": "Mom gave [[me]] a gift.",
+    "group": "문장 성분",
+    "href": "/learn/sentence-patterns/giving-verbs"
+  },
+  {
+    "id": "direct-object",
+    "term": "직접목적어",
+    "parts": [
+      {
+        "c": "직",
+        "m": "곧바로 ('직진', '직행'의 직)"
+      },
+      {
+        "c": "접",
+        "m": "닿다 ('접촉'의 접)"
+      },
+      {
+        "c": "목적어",
+        "m": "동작이 향하는 대상"
+      }
+    ],
+    "result": "동작이 곧바로 닿는 목적어. 4형식에서 '~을/를'에 해당하는 주는 물건이에요.",
+    "english": "direct object",
+    "englishNote": "direct(곧바로의)",
+    "example": "Mom gave me [[a gift]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-patterns/giving-verbs"
+  },
+  {
+    "id": "causative",
+    "term": "사역동사",
+    "parts": [
+      {
+        "c": "사",
+        "m": "부리다, 시키다 ('사용'의 사)"
+      },
+      {
+        "c": "역",
+        "m": "일 ('역할'의 역)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "남을 부려 어떤 일을 하게 시키는 동사: make, have, let. 목적격보어로 동사원형을 써요.",
+    "english": "causative verb",
+    "englishNote": "cause(원인이 되다, ~하게 하다)",
+    "example": "Mom made me [[clean]] my room.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+  {
+    "id": "perception-verb",
+    "term": "지각동사",
+    "parts": [
+      {
+        "c": "지",
+        "m": "알다 ('지식'의 지)"
+      },
+      {
+        "c": "각",
+        "m": "깨닫다, 느끼다 ('감각'의 각)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "눈·귀·몸으로 알아차리는 동사: see, watch, hear, feel. 목적격보어로 동사원형이나 -ing를 써요.",
+    "myth": "학교에 늦는 '지각'과는 소리만 같아요!",
+    "english": "perception verb",
+    "englishNote": "perceive(알아차리다, 감지하다)",
+    "example": "I heard someone [[call]] my name.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+  {
+    "id": "bare-infinitive",
+    "term": "원형부정사",
+    "parts": [
+      {
+        "c": "원형",
+        "m": "본래 모양 그대로"
+      },
+      {
+        "c": "부정사",
+        "m": "주어·시제에 따라 모양이 정해지지 않는 말"
+      }
+    ],
+    "result": "to 없이 동사원형 그대로 쓰는 부정사. 사역동사·지각동사의 목적격보어 자리에서 만나요.",
+    "myth": "to가 없어도 진짜 동사가 아니에요. 모양만 동사원형일 뿐, 변장한 동사예요.",
+    "english": "bare infinitive",
+    "englishNote": "bare(맨-, 벌거벗은): to를 입지 않은 맨몸의 부정사",
+    "example": "Dad let me [[use]] his phone.",
+    "group": "준동사",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+
+  // 추가된 용어
+  {
+    "id": "past-participle",
+    "term": "과거분사 (p.p.)",
+    "parts": [
+      {
+        "c": "과거",
+        "m": "지나간 때"
+      },
+      {
+        "c": "분사",
+        "m": "동사와 형용사의 성질을 나누어 가진 말 ('분배', '분담'의 분)"
+      }
+    ],
+    "result": "동사의 세 번째 모양(원형 – 과거형 – 과거분사). 수동태(be + p.p.)와 완료형(have + p.p.)을 만들고, '~된, ~당한'이라는 뜻으로 명사를 꾸미기도 해요.",
+    "myth": "이름에 '과거'가 들어 있지만 과거에만 쓰는 게 아니에요! is made(현재), will be made(미래)처럼 어느 시제에나 써요.",
+    "english": "past participle",
+    "englishNote": "p.p.는 past participle의 머리글자예요.",
+    "example": "This cake was [[made]] by my mom.",
+    "group": "준동사",
+    "href": "/learn/passive/basic"
+  },
+  {
+    "id": "agent",
+    "term": "행위자",
+    "parts": [
+      {
+        "c": "행위",
+        "m": "하는 일, 움직임 ('행동'의 행)"
+      },
+      {
+        "c": "자",
+        "m": "사람, ~하는 이 ('학자', '기자'의 자)"
+      }
+    ],
+    "result": "수동태에서 그 동작을 실제로 한 사람이나 것. by 뒤에 와요.",
+    "myth": "사람만이 아니에요. by a ball, by the news처럼 물건이나 일도 행위자가 될 수 있어요.",
+    "english": "agent",
+    "englishNote": "라틴어 agere(하다, 움직이다)에서 왔어요. act(행동하다)와 뿌리가 같아요.",
+    "example": "This picture was painted [[by my sister]].",
+    "group": "동사",
+    "href": "/learn/passive/basic"
+  },
+  {
+    "id": "phrasal-verb",
+    "term": "구동사",
+    "parts": [
+      {
+        "c": "구",
+        "m": "두 단어 이상의 묶음 ('구와 절'의 구)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "동사 뒤에 전치사나 부사가 붙어서 한 덩어리로 새로운 뜻을 만드는 동사: look after(돌보다), turn off(끄다)",
+    "myth": "look after를 '뒤를 보다'로 읽으면 안 돼요. 두 단어가 합쳐져 새로운 뜻이 돼요.",
+    "english": "phrasal verb",
+    "englishNote": "phrase(구, 단어 묶음) + al(~의): 단어 묶음으로 된 동사",
+    "example": "My grandma [[{looks after}]] the baby.",
+    "group": "동사",
+    "href": "/learn/passive/phrasal"
+  },
+  {
+    "id": "phrasal-preposition",
+    "term": "구전치사",
+    "parts": [
+      {
+        "c": "구",
+        "m": "두 단어 이상이 모인 묶음"
+      },
+      {
+        "c": "전치사",
+        "m": "명사 앞에 놓이는 말"
+      }
+    ],
+    "result": "두 단어 이상이 모여 전치사 하나처럼 쓰이는 것: in front of, next to, because of",
+    "myth": "'전치사구'와 헷갈리지 마세요. 전치사구는 전치사 + 명사 덩어리(in the box)예요.",
+    "english": "phrasal preposition",
+    "englishNote": "phrase(단어 묶음) + preposition(전치사)",
+    "example": "The bank is [[{next to}]] the bakery.",
+    "group": "품사",
+    "href": "/learn/prepositions/place"
+  },
+  {
+    "id": "prepositional-phrase",
+    "term": "전치사구",
+    "parts": [
+      {
+        "c": "전치사",
+        "m": "명사 앞에 놓이는 말"
+      },
+      {
+        "c": "구",
+        "m": "주어·동사 없이 모인 단어 묶음"
+      }
+    ],
+    "result": "전치사와 그 뒤의 명사(구)가 모인 한 덩어리. 주어와 동사가 없어서 진짜 동사를 늘리지 않아요: during the movie, in the box",
+    "myth": "'구전치사'(in front of처럼 여러 단어로 된 전치사 하나)와는 달라요.",
+    "english": "prepositional phrase",
+    "englishNote": "preposition(전치사) + phrase(단어 묶음)",
+    "example": "I {fell asleep} [[during the movie]].",
+    "group": "문장 구조",
+    "href": "/learn/prepositions/prep-vs-conj"
+  },
+  {
+    "id": "concession",
+    "term": "양보",
+    "parts": [
+      {
+        "c": "양",
+        "m": "내주다, 물러서다 ('사양하다'의 양)"
+      },
+      {
+        "c": "보",
+        "m": "걸음 ('보행', '도보'의 보)"
+      }
+    ],
+    "result": "자리를 양보하듯 상대의 말을 한 걸음 물러서서 인정해 준 뒤, 예상과 다른 이야기를 잇는 것. '~에도 불구하고, 비록 ~이지만'의 뜻: although, though, despite, in spite of",
+    "english": "concession",
+    "englishNote": "concede(인정하다, 내주다)",
+    "example": "[[Although]] it was raining, we played soccer.",
+    "group": "연결",
+    "href": "/learn/prepositions/prep-vs-conj"
+  },
+
+  // 추가된 용어
+  {
+    "id": "attributive",
+    "term": "한정적 용법",
+    "parts": [
+      {
+        "c": "한정",
+        "m": "범위를 좁혀 딱 정하다 ('한정판'의 한정)"
+      },
+      {
+        "c": "적",
+        "m": "~의 성질을 띤 ('과학적'의 적)"
+      },
+      {
+        "c": "용법",
+        "m": "쓰는 방법"
+      }
+    ],
+    "result": "형용사가 명사 바로 앞에서 명사를 꾸며, 어떤 것인지 범위를 좁혀 주는 쓰임 (a small dog)",
+    "english": "attributive use",
+    "englishNote": "attribute(성질을 붙여 주다): 명사에 성질을 딱 붙여 줘요.",
+    "example": "I have a [[small]] dog.",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adjectives"
+  },
+  {
+    "id": "predicative",
+    "term": "서술적 용법",
+    "parts": [
+      {
+        "c": "서술",
+        "m": "설명해서 말하다"
+      },
+      {
+        "c": "적",
+        "m": "~의 성질을 띤"
+      },
+      {
+        "c": "용법",
+        "m": "쓰는 방법"
+      }
+    ],
+    "result": "형용사가 동사 뒤 보어 자리에서 주어나 목적어가 어떤 상태인지 설명하는 쓰임 (The dog is small.)",
+    "myth": "명사 앞이 아니라 동사 뒤에 있어도 형용사는 형용사예요. 자리만 달라요.",
+    "english": "predicative use",
+    "englishNote": "predicate(서술어) 쪽에 붙어서 주어를 설명해요.",
+    "example": "My dog is [[small]].",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adjectives"
+  },
+  {
+    "id": "suffix",
+    "term": "접미사",
+    "parts": [
+      {
+        "c": "접",
+        "m": "붙이다 ('접착제'의 접)"
+      },
+      {
+        "c": "미",
+        "m": "꼬리, 끝 ('말미', '어미'의 미)"
+      },
+      {
+        "c": "사",
+        "m": "말"
+      }
+    ],
+    "result": "단어 끝에 붙어서 뜻이나 품사를 바꾸는 말 조각: -ful, -less, -ous, -y, -ly",
+    "english": "suffix",
+    "englishNote": "suf(아래, 뒤에) + fix(붙이다): 뒤에 붙이는 것",
+    "example": "Be [[careful]].",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adjectives"
+  },
+  {
+    "id": "quantifier",
+    "term": "수량형용사",
+    "parts": [
+      {
+        "c": "수량",
+        "m": "수(몇 개)와 양(얼마만큼)"
+      },
+      {
+        "c": "형용사",
+        "m": "명사를 꾸미는 말"
+      }
+    ],
+    "result": "명사 앞에서 얼마나 많은지, 적은지 알려 주는 형용사: many, much, a few, a little, some, any, enough",
+    "myth": "'수'는 하나, 둘 셀 수 있는 것의 개수, '양'은 물이나 돈처럼 셀 수 없는 것의 많고 적음이에요. 그래서 셀 수 있느냐에 따라 쓰는 말이 갈려요.",
+    "english": "quantifier",
+    "englishNote": "quantity(양, 수량)에서 왔어요: 양을 나타내는 말",
+    "example": "I have [[{a few}]] friends.",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/quantifiers"
+  },
+  {
+    "id": "frequency-adverb",
+    "term": "빈도부사",
+    "parts": [
+      {
+        "c": "빈",
+        "m": "자주 ('빈번하다'의 빈)"
+      },
+      {
+        "c": "도",
+        "m": "정도, 횟수 ('온도', '속도'의 도)"
+      },
+      {
+        "c": "부사",
+        "m": "곁에서 꾸며 주는 말"
+      }
+    ],
+    "result": "어떤 일이 얼마나 자주 일어나는지 알려 주는 부사: always, usually, often, sometimes, rarely, never",
+    "english": "adverb of frequency",
+    "englishNote": "frequency(자주 일어남, 빈도)",
+    "example": "I [[always]] get up early.",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adverbs"
+  },
+
+  // 추가된 용어
+  {
+    "id": "deduction",
+    "term": "추측",
+    "parts": [
+      {
+        "c": "추",
+        "m": "미루어 생각하다 ('추리'의 추)"
+      },
+      {
+        "c": "측",
+        "m": "헤아리다, 재다 ('측정'의 측)"
+      }
+    ],
+    "result": "눈앞의 증거를 바탕으로 '아마 그럴 것이다'라고 미루어 짐작하는 것. 영어에서는 must, may, might, can't 같은 조동사로 얼마나 확신하는지를 나타내요.",
+    "myth": "아무렇게나 찍는 게 아니에요. 보이는 증거에서 결론을 끌어내는 거예요.",
+    "english": "deduction",
+    "englishNote": "de(~에서) + duct(이끌다): 증거에서 결론을 이끌어 내다",
+    "example": "Minsu ate three bowls of rice. He [[{must|조동사:~임에 틀림없다} be]] hungry.",
+    "group": "동사",
+    "href": "/learn/modals/guess"
+  },
+  {
+    "id": "pro-verb",
+    "term": "대동사",
+    "parts": [
+      {
+        "c": "대",
+        "m": "대신하다 ('대명사', '대신'의 대)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "앞에 나온 동사(와 뒤에 딸린 말)를 되풀이하지 않고 대신하는 do, does, did",
+    "myth": "크다는 뜻의 '대'가 아니에요! 대명사의 '대'처럼 대신한다는 뜻이에요.",
+    "english": "pro-verb",
+    "englishNote": "pro(대신하여) + verb(동사): pronoun(대명사)과 같은 방식으로 지은 이름이에요.",
+    "example": "She runs faster than I [[do]].",
+    "group": "동사",
+    "href": "/learn/modals/special-should"
+  },
 ];
 
 export const termById = (id: string) => terms.find((t) => t.id === id);

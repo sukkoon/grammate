@@ -1,0 +1,78 @@
+[
+  {
+    "id": "attributive",
+    "term": "한정적 용법",
+    "parts": [
+      { "c": "한정", "m": "범위를 좁혀 딱 정하다 ('한정판'의 한정)" },
+      { "c": "적", "m": "~의 성질을 띤 ('과학적'의 적)" },
+      { "c": "용법", "m": "쓰는 방법" }
+    ],
+    "result": "형용사가 명사 바로 앞에서 명사를 꾸며, 어떤 것인지 범위를 좁혀 주는 쓰임 (a small dog)",
+    "english": "attributive use",
+    "englishNote": "attribute(성질을 붙여 주다): 명사에 성질을 딱 붙여 줘요.",
+    "example": "I have a [[small]] dog.",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adjectives"
+  },
+  {
+    "id": "predicative",
+    "term": "서술적 용법",
+    "parts": [
+      { "c": "서술", "m": "설명해서 말하다" },
+      { "c": "적", "m": "~의 성질을 띤" },
+      { "c": "용법", "m": "쓰는 방법" }
+    ],
+    "result": "형용사가 동사 뒤 보어 자리에서 주어나 목적어가 어떤 상태인지 설명하는 쓰임 (The dog is small.)",
+    "myth": "명사 앞이 아니라 동사 뒤에 있어도 형용사는 형용사예요. 자리만 달라요.",
+    "english": "predicative use",
+    "englishNote": "predicate(서술어) 쪽에 붙어서 주어를 설명해요.",
+    "example": "My dog is [[small]].",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adjectives"
+  },
+  {
+    "id": "suffix",
+    "term": "접미사",
+    "parts": [
+      { "c": "접", "m": "붙이다 ('접착제'의 접)" },
+      { "c": "미", "m": "꼬리, 끝 ('말미', '어미'의 미)" },
+      { "c": "사", "m": "말" }
+    ],
+    "result": "단어 끝에 붙어서 뜻이나 품사를 바꾸는 말 조각: -ful, -less, -ous, -y, -ly",
+    "english": "suffix",
+    "englishNote": "suf(아래, 뒤에) + fix(붙이다): 뒤에 붙이는 것",
+    "example": "Be [[careful]].",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adjectives"
+  },
+  {
+    "id": "quantifier",
+    "term": "수량형용사",
+    "parts": [
+      { "c": "수량", "m": "수(몇 개)와 양(얼마만큼)" },
+      { "c": "형용사", "m": "명사를 꾸미는 말" }
+    ],
+    "result": "명사 앞에서 얼마나 많은지, 적은지 알려 주는 형용사: many, much, a few, a little, some, any, enough",
+    "myth": "'수'는 하나, 둘 셀 수 있는 것의 개수, '양'은 물이나 돈처럼 셀 수 없는 것의 많고 적음이에요. 그래서 셀 수 있느냐에 따라 쓰는 말이 갈려요.",
+    "english": "quantifier",
+    "englishNote": "quantity(양, 수량)에서 왔어요: 양을 나타내는 말",
+    "example": "I have [[{a few}]] friends.",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/quantifiers"
+  },
+  {
+    "id": "frequency-adverb",
+    "term": "빈도부사",
+    "parts": [
+      { "c": "빈", "m": "자주 ('빈번하다'의 빈)" },
+      { "c": "도", "m": "정도, 횟수 ('온도', '속도'의 도)" },
+      { "c": "부사", "m": "곁에서 꾸며 주는 말" }
+    ],
+    "result": "어떤 일이 얼마나 자주 일어나는지 알려 주는 부사: always, usually, often, sometimes, rarely, never",
+    "english": "adverb of frequency",
+    "englishNote": "frequency(자주 일어남, 빈도)",
+    "example": "I [[always]] get up early.",
+    "group": "품사",
+    "href": "/learn/adjectives-adverbs/adverbs"
+  }
+]

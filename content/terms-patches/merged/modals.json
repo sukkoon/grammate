@@ -1,0 +1,47 @@
+[
+  {
+    "id": "deduction",
+    "term": "추측",
+    "parts": [
+      { "c": "추", "m": "미루어 생각하다 ('추리'의 추)" },
+      { "c": "측", "m": "헤아리다, 재다 ('측정'의 측)" }
+    ],
+    "result": "눈앞의 증거를 바탕으로 '아마 그럴 것이다'라고 미루어 짐작하는 것. 영어에서는 must, may, might, can't 같은 조동사로 얼마나 확신하는지를 나타내요.",
+    "myth": "아무렇게나 찍는 게 아니에요. 보이는 증거에서 결론을 끌어내는 거예요.",
+    "english": "deduction",
+    "englishNote": "de(~에서) + duct(이끌다): 증거에서 결론을 이끌어 내다",
+    "example": "Minsu ate three bowls of rice. He [[{must|조동사:~임에 틀림없다} be]] hungry.",
+    "group": "동사",
+    "href": "/learn/modals/guess"
+  },
+  {
+    "id": "pro-verb",
+    "term": "대동사",
+    "parts": [
+      { "c": "대", "m": "대신하다 ('대명사', '대신'의 대)" },
+      { "c": "동사", "m": "움직임·상태를 나타내는 말" }
+    ],
+    "result": "앞에 나온 동사(와 뒤에 딸린 말)를 되풀이하지 않고 대신하는 do, does, did",
+    "myth": "크다는 뜻의 '대'가 아니에요! 대명사의 '대'처럼 대신한다는 뜻이에요.",
+    "english": "pro-verb",
+    "englishNote": "pro(대신하여) + verb(동사): pronoun(대명사)과 같은 방식으로 지은 이름이에요.",
+    "example": "She runs faster than I [[do]].",
+    "group": "동사",
+    "href": "/learn/modals/special-should"
+  },
+  {
+    "id": "base-form",
+    "term": "동사원형",
+    "parts": [
+      { "c": "동사", "m": "움직임·상태를 나타내는 말" },
+      { "c": "원형", "m": "본래 모양 ('원래'의 원 + '모형'의 형)" }
+    ],
+    "result": "아무것도 붙지 않은 동사의 본래 모양. 사전에 실린 모양 그대로예요: be, go, play, have",
+    "myth": "동그라미 모양이라는 '원형'이 아니에요! '원래 모양'이라는 뜻이에요.",
+    "english": "base form",
+    "englishNote": "base(바탕): -s, -ed, -ing가 모두 이 모양을 바탕으로 만들어져요.",
+    "example": "She doesn't [[like]] milk. Can you [[swim]]?",
+    "group": "동사",
+    "href": "/learn/verbs-basics/general-verbs"
+  }
+]

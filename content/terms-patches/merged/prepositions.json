@@ -1,0 +1,46 @@
+[
+  {
+    "id": "phrasal-preposition",
+    "term": "구전치사",
+    "parts": [
+      { "c": "구", "m": "두 단어 이상이 모인 묶음" },
+      { "c": "전치사", "m": "명사 앞에 놓이는 말" }
+    ],
+    "result": "두 단어 이상이 모여 전치사 하나처럼 쓰이는 것: in front of, next to, because of",
+    "myth": "'전치사구'와 헷갈리지 마세요. 전치사구는 전치사 + 명사 덩어리(in the box)예요.",
+    "english": "phrasal preposition",
+    "englishNote": "phrase(단어 묶음) + preposition(전치사)",
+    "example": "The bank is [[{next to}]] the bakery.",
+    "group": "품사",
+    "href": "/learn/prepositions/place"
+  },
+  {
+    "id": "prepositional-phrase",
+    "term": "전치사구",
+    "parts": [
+      { "c": "전치사", "m": "명사 앞에 놓이는 말" },
+      { "c": "구", "m": "주어·동사 없이 모인 단어 묶음" }
+    ],
+    "result": "전치사와 그 뒤의 명사(구)가 모인 한 덩어리. 주어와 동사가 없어서 진짜 동사를 늘리지 않아요: during the movie, in the box",
+    "myth": "'구전치사'(in front of처럼 여러 단어로 된 전치사 하나)와는 달라요.",
+    "english": "prepositional phrase",
+    "englishNote": "preposition(전치사) + phrase(단어 묶음)",
+    "example": "I {fell asleep} [[during the movie]].",
+    "group": "문장 구조",
+    "href": "/learn/prepositions/prep-vs-conj"
+  },
+  {
+    "id": "concession",
+    "term": "양보",
+    "parts": [
+      { "c": "양", "m": "내주다, 물러서다 ('사양하다'의 양)" },
+      { "c": "보", "m": "걸음 ('보행', '도보'의 보)" }
+    ],
+    "result": "자리를 양보하듯 상대의 말을 한 걸음 물러서서 인정해 준 뒤, 예상과 다른 이야기를 잇는 것. '~에도 불구하고, 비록 ~이지만'의 뜻: although, though, despite, in spite of",
+    "english": "concession",
+    "englishNote": "concede(인정하다, 내주다)",
+    "example": "[[Although]] it was raining, we played soccer.",
+    "group": "연결",
+    "href": "/learn/prepositions/prep-vs-conj"
+  }
+]

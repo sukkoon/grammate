@@ -1,0 +1,47 @@
+[
+  {
+    "id": "past-participle",
+    "term": "과거분사 (p.p.)",
+    "parts": [
+      { "c": "과거", "m": "지나간 때" },
+      { "c": "분사", "m": "동사와 형용사의 성질을 나누어 가진 말 ('분배', '분담'의 분)" }
+    ],
+    "result": "동사의 세 번째 모양(원형 – 과거형 – 과거분사). 수동태(be + p.p.)와 완료형(have + p.p.)을 만들고, '~된, ~당한'이라는 뜻으로 명사를 꾸미기도 해요.",
+    "myth": "이름에 '과거'가 들어 있지만 과거에만 쓰는 게 아니에요! is made(현재), will be made(미래)처럼 어느 시제에나 써요.",
+    "english": "past participle",
+    "englishNote": "p.p.는 past participle의 머리글자예요.",
+    "example": "This cake was [[made]] by my mom.",
+    "group": "준동사",
+    "href": "/learn/passive/basic"
+  },
+  {
+    "id": "agent",
+    "term": "행위자",
+    "parts": [
+      { "c": "행위", "m": "하는 일, 움직임 ('행동'의 행)" },
+      { "c": "자", "m": "사람, ~하는 이 ('학자', '기자'의 자)" }
+    ],
+    "result": "수동태에서 그 동작을 실제로 한 사람이나 것. by 뒤에 와요.",
+    "myth": "사람만이 아니에요. by a ball, by the news처럼 물건이나 일도 행위자가 될 수 있어요.",
+    "english": "agent",
+    "englishNote": "라틴어 agere(하다, 움직이다)에서 왔어요. act(행동하다)와 뿌리가 같아요.",
+    "example": "This picture was painted [[by my sister]].",
+    "group": "동사",
+    "href": "/learn/passive/basic"
+  },
+  {
+    "id": "phrasal-verb",
+    "term": "구동사",
+    "parts": [
+      { "c": "구", "m": "두 단어 이상의 묶음 ('구와 절'의 구)" },
+      { "c": "동사", "m": "움직임·상태를 나타내는 말" }
+    ],
+    "result": "동사 뒤에 전치사나 부사가 붙어서 한 덩어리로 새로운 뜻을 만드는 동사: look after(돌보다), turn off(끄다)",
+    "myth": "look after를 '뒤를 보다'로 읽으면 안 돼요. 두 단어가 합쳐져 새로운 뜻이 돼요.",
+    "english": "phrasal verb",
+    "englishNote": "phrase(구, 단어 묶음) + al(~의): 단어 묶음으로 된 동사",
+    "example": "My grandma [[{looks after}]] the baby.",
+    "group": "동사",
+    "href": "/learn/passive/phrasal"
+  }
+]

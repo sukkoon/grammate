@@ -30,7 +30,8 @@ function sentencesIn(file: string): string[] {
   const src = readFileSync(file, "utf8");
   const out: string[] = [];
   for (const re of [EN_ATTR, EN_KEY]) for (const m of src.matchAll(re)) out.push((m[1] ?? m[2]).replace(/\\(["'])/g, "$1"));
-  return out.map(stripHunt);
+  // 진짜 동사 찾기 표기(*동사*, ~변장|이름~)가 있는 문장만 벗긴다
+  return out.map((x) => (x.includes("*") ? stripHunt(x) : x));
 }
 
 // 공개된 단원과 연결된 그림만 검사한다. 쓰는 중인 초안은 tests/draft.test.ts로 따로 검사한다.

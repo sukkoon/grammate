@@ -1,0 +1,182 @@
+[
+  {
+    "id": "sentence-pattern",
+    "term": "형식 (문장의 형식)",
+    "parts": [
+      {
+        "c": "형",
+        "m": "모양, 틀 ('형태', '외형'의 형)"
+      },
+      {
+        "c": "식",
+        "m": "정해진 방식 ('공식', '방식'의 식)"
+      }
+    ],
+    "result": "진짜 동사가 무엇을 필요로 하느냐에 따라 나눈 영어 문장의 다섯 가지 틀(설계도). 1형식부터 5형식까지 있어요.",
+    "myth": "'형식적이다'처럼 겉모양만 갖춘다는 뜻이 아니에요. 문장을 짓는 설계도라는 뜻이에요.",
+    "english": "sentence pattern",
+    "englishNote": "pattern(본, 틀): 옷을 만들 때 대고 자르는 본처럼, 문장을 찍어 내는 틀이에요.",
+    "example": "Birds [[fly]]. I [[love]] my cat. Mom [[gave]] me a gift.",
+    "group": "문장 구조",
+    "href": "/learn/sentence-patterns/five-patterns"
+  },
+  {
+    "id": "sense-verb",
+    "term": "감각동사",
+    "parts": [
+      {
+        "c": "감각",
+        "m": "눈·귀·코·입·피부로 느끼는 것"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "보고, 듣고, 냄새 맡고, 맛보고, 만져서 느낀 주어의 상태를 말하는 2형식 동사: look, sound, smell, taste, feel",
+    "myth": "우리말로 '~하게'라고 해석돼도 뒤에는 부사가 아니라 형용사가 와요!",
+    "english": "sensory linking verb",
+    "englishNote": "link(잇다): 주어와 보어를 등호(=)로 이어 주는 동사라서 linking verb라고 불러요.",
+    "example": "This soup [[tastes]] salty.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/linking-verbs"
+  },
+  {
+    "id": "dative-verb",
+    "term": "수여동사",
+    "parts": [
+      {
+        "c": "수여",
+        "m": "주다 ('수여식'의 수여)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "'누구에게 무엇을 주다'라는 뜻으로 목적어를 두 개(사람 + 물건) 데려오는 동사. 4형식을 만들어요.",
+    "english": "dative verb",
+    "englishNote": "dative: 라틴어 dare(주다)에서 온 말로 '~에게 주는'이라는 뜻이에요.",
+    "example": "Mom [[gave]] me a gift.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/giving-verbs"
+  },
+  {
+    "id": "indirect-object",
+    "term": "간접목적어",
+    "parts": [
+      {
+        "c": "간",
+        "m": "사이 ('중간', '공간'의 간)"
+      },
+      {
+        "c": "접",
+        "m": "닿다 ('접촉'의 접)"
+      },
+      {
+        "c": "목적어",
+        "m": "동작이 향하는 대상"
+      }
+    ],
+    "result": "동작이 곧바로 닿지 않고 물건을 사이에 두고 거쳐서 닿는 목적어. 4형식에서 '~에게'에 해당하는 받는 사람이에요.",
+    "english": "indirect object",
+    "englishNote": "indirect(곧바로가 아닌, 돌아서 가는)",
+    "example": "Mom gave [[me]] a gift.",
+    "group": "문장 성분",
+    "href": "/learn/sentence-patterns/giving-verbs"
+  },
+  {
+    "id": "direct-object",
+    "term": "직접목적어",
+    "parts": [
+      {
+        "c": "직",
+        "m": "곧바로 ('직진', '직행'의 직)"
+      },
+      {
+        "c": "접",
+        "m": "닿다 ('접촉'의 접)"
+      },
+      {
+        "c": "목적어",
+        "m": "동작이 향하는 대상"
+      }
+    ],
+    "result": "동작이 곧바로 닿는 목적어. 4형식에서 '~을/를'에 해당하는 주는 물건이에요.",
+    "english": "direct object",
+    "englishNote": "direct(곧바로의)",
+    "example": "Mom gave me [[a gift]].",
+    "group": "문장 성분",
+    "href": "/learn/sentence-patterns/giving-verbs"
+  },
+  {
+    "id": "causative",
+    "term": "사역동사",
+    "parts": [
+      {
+        "c": "사",
+        "m": "부리다, 시키다 ('사용'의 사)"
+      },
+      {
+        "c": "역",
+        "m": "일 ('역할'의 역)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "남을 부려 어떤 일을 하게 시키는 동사: make, have, let. 목적격보어로 동사원형을 써요.",
+    "english": "causative verb",
+    "englishNote": "cause(원인이 되다, ~하게 하다)",
+    "example": "Mom made me [[clean]] my room.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+  {
+    "id": "perception-verb",
+    "term": "지각동사",
+    "parts": [
+      {
+        "c": "지",
+        "m": "알다 ('지식'의 지)"
+      },
+      {
+        "c": "각",
+        "m": "깨닫다, 느끼다 ('감각'의 각)"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "눈·귀·몸으로 알아차리는 동사: see, watch, hear, feel. 목적격보어로 동사원형이나 -ing를 써요.",
+    "myth": "학교에 늦는 '지각'과는 소리만 같아요!",
+    "english": "perception verb",
+    "englishNote": "perceive(알아차리다, 감지하다)",
+    "example": "I heard someone [[call]] my name.",
+    "group": "동사",
+    "href": "/learn/sentence-patterns/object-complements"
+  },
+  {
+    "id": "bare-infinitive",
+    "term": "원형부정사",
+    "parts": [
+      {
+        "c": "원형",
+        "m": "본래 모양 그대로"
+      },
+      {
+        "c": "부정사",
+        "m": "주어·시제에 따라 모양이 정해지지 않는 말"
+      }
+    ],
+    "result": "to 없이 동사원형 그대로 쓰는 부정사. 사역동사·지각동사의 목적격보어 자리에서 만나요.",
+    "myth": "to가 없어도 진짜 동사가 아니에요. 모양만 동사원형일 뿐, 변장한 동사예요.",
+    "english": "bare infinitive",
+    "englishNote": "bare(맨-, 벌거벗은): to를 입지 않은 맨몸의 부정사",
+    "example": "Dad let me [[use]] his phone.",
+    "group": "준동사",
+    "href": "/learn/sentence-patterns/object-complements"
+  }
+]

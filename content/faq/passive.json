@@ -1,0 +1,275 @@
+[
+  {
+    "id": "ps-1",
+    "unit": "passive/basic",
+    "q": "수동태가 뭐예요?",
+    "alts": ["능동태 수동태 차이", "수동태 뜻", "비 피피가 뭐예요", "태가 뭐예요", "당하는 문장 영어로"],
+    "keys": ["수동태", "능동태", "태", "p.p."],
+    "a": "**태**는 '모습'이라는 뜻이에요. 주어가 직접 **하는 모습**이면 능동태, 주어가 **당하는 모습**이면 수동태예요.\n수동태는 **be + p.p.**(과거분사)로 만들고, 우리말로는 '~되다, ~받다, ~당하다'로 옮기면 자연스러워요.",
+    "ex": [
+      { "en": "My mom [[made]] this cake.", "ko": "우리 엄마가 이 케이크를 만드셨어. (능동태)" },
+      { "en": "This cake [[was made]] by my mom.", "ko": "이 케이크는 우리 엄마가 만드셨어. (수동태)" }
+    ],
+    "check": "The window was broken.은 능동태일까요, 수동태일까요?",
+    "level": "middle"
+  },
+  {
+    "id": "ps-2",
+    "unit": "passive/basic",
+    "q": "능동태를 수동태로 어떻게 바꿔요?",
+    "alts": ["수동태 만드는 법", "수동태 바꾸기", "수동태 순서", "능동 수동 전환", "수동태로 고치기"],
+    "keys": ["바꾸기", "만드는 법", "by", "목적어"],
+    "a": "3단계예요. **① 목적어를 주어 자리로 ② 동사를 be + p.p.로 ③ 원래 주어를 by + 목적격으로** 맨 뒤에 보내요.\nbe동사는 **새 주어**와 **원래 시제**에 맞춰 골라요.",
+    "ex": [{ "en": "The room [[was cleaned]] by Jisu.", "ko": "그 방은 지수가 청소했어. (Jisu cleaned the room.)" }],
+    "check": "My dad washes the dishes.를 수동태로 바꿔 볼까요?",
+    "level": "middle"
+  },
+  {
+    "id": "ps-3",
+    "unit": "passive/basic",
+    "q": "by 뒤에 왜 he가 아니라 him이에요?",
+    "alts": ["by he by him", "바이 뒤에 목적격", "by she 틀려요", "by 뒤 대명사"],
+    "keys": ["by", "목적격", "him", "her"],
+    "a": "by는 **전치사**예요. 전치사 뒤에는 늘 **목적격**이 와요. by he ✕ → by him, by she ✕ → by her, by they ✕ → by them.",
+    "ex": [{ "en": "I [[was invited]] to the party [[by her]].", "ko": "나는 그녀에게 파티 초대를 받았어." }],
+    "level": "middle"
+  },
+  {
+    "id": "ps-4",
+    "unit": "passive/basic",
+    "q": "by 누구는 꼭 써야 해요?",
+    "alts": ["by 생략", "by 빼도 돼요", "행위자 생략", "누가 했는지 안 쓰는 수동태"],
+    "keys": ["by", "생략", "행위자"],
+    "a": "아니요, 빼는 경우가 더 많아요. **누가 했는지 모를 때**, **중요하지 않을 때**, **people처럼 누구나 아는 일반 사람들일 때**는 by + 행위자를 빼요. 누가 했는지가 중요한 정보일 때만 남겨요.",
+    "ex": [
+      { "en": "My bike [[was stolen]] last night.", "ko": "어젯밤에 자전거를 도둑맞았어. (누가 훔쳤는지 몰라요)" },
+      { "en": "English [[is spoken]] in Australia.", "ko": "호주에서는 영어를 써. (by people 생략)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-5",
+    "unit": "passive/basic",
+    "q": "happen은 왜 수동태가 안 돼요?",
+    "alts": ["was happened 틀려요", "수동태 안 되는 동사", "arrive 수동태", "resemble 수동태", "해픈드"],
+    "keys": ["happen", "arrive", "resemble", "자동사"],
+    "a": "수동태는 **목적어를 주어로 올려서** 만들어요. happen(일어나다), arrive(도착하다), appear(나타나다)는 목적어가 없는 자동사라서 올릴 목적어가 없어요.\nhave(가지고 있다), resemble(닮다)처럼 **상태**를 나타내는 동사도 수동태로 쓰지 않아요.",
+    "ex": [{ "en": "The accident [[happened]] last night.", "ko": "그 사고는 어젯밤에 일어났어. (was happened ✕)" }],
+    "level": "middle"
+  },
+  {
+    "id": "ps-6",
+    "unit": "passive/basic",
+    "q": "수동태 의문문은 어떻게 만들어요?",
+    "alts": ["수동태 질문", "수동태에 did 써요", "수동태 부정문", "was 앞으로 보내요"],
+    "keys": ["의문문", "부정문", "did"],
+    "a": "수동태의 맨 앞은 be동사라서 **be동사 문장처럼** 만들어요. 의문문은 **Be + 주어 + p.p.?**, 부정문은 **be + not + p.p.**예요. do, does, did는 쓰지 않아요.",
+    "ex": [
+      { "en": "[[Was]] this letter [[written]] by you?", "ko": "이 편지 네가 쓴 거야?" },
+      { "en": "The door [[wasn't locked]].", "ko": "문이 잠겨 있지 않았어." }
+    ],
+    "check": "Did the window broken?을 바르게 고쳐 볼까요?",
+    "level": "middle"
+  },
+  {
+    "id": "ps-7",
+    "unit": "passive/tenses",
+    "q": "진행형 수동태는 어떻게 써요?",
+    "alts": ["is being p.p.", "되고 있다 영어로", "being 수동태", "진행 수동태", "이즈 빙"],
+    "keys": ["진행형", "being", "되고 있다"],
+    "a": "진행형(be + -ing)에 수동태(be + p.p.)를 겹치면 **be + being + p.p.**예요. '~되고 있다, ~되는 중이다'라는 뜻이에요.",
+    "ex": [{ "en": "The wall [[is being painted]] now.", "ko": "벽이 지금 칠해지고 있어." }],
+    "level": "middle"
+  },
+  {
+    "id": "ps-8",
+    "unit": "passive/tenses",
+    "q": "완료형 수동태는 어떻게 써요?",
+    "alts": ["has been p.p.", "현재완료 수동태", "been 수동태", "have been 뜻", "해즈 빈"],
+    "keys": ["완료형", "been", "have been"],
+    "a": "완료형(have + p.p.)에 수동태(be + p.p.)를 겹치면 **have + been + p.p.**예요. '(이미) ~되었다, ~되어 왔다'라는 뜻이에요. 주어가 3인칭 단수면 has been이에요.",
+    "ex": [{ "en": "My bike [[has been stolen]].", "ko": "내 자전거를 도둑맞았어. (그래서 지금 없어)" }],
+    "level": "middle"
+  },
+  {
+    "id": "ps-9",
+    "unit": "passive/tenses",
+    "q": "조동사가 있으면 수동태를 어떻게 만들어요?",
+    "alts": ["can be p.p.", "will be p.p.", "미래 수동태", "must be 뜻", "조동사 수동태"],
+    "keys": ["조동사", "can be", "will be", "미래"],
+    "a": "조동사 뒤에는 늘 동사원형이 오니까 **조동사 + be + p.p.**예요. 미래도 will을 쓰니까 **will be + p.p.**예요. 조동사 뒤에 is, are를 쓰지 않도록 조심하세요.",
+    "ex": [
+      { "en": "This problem [[can be solved]] easily.", "ko": "이 문제는 쉽게 풀 수 있어." },
+      { "en": "The party [[will be held]] on Saturday.", "ko": "파티는 토요일에 열릴 거야." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-10",
+    "unit": "passive/tenses",
+    "q": "being이랑 been이 헷갈려요",
+    "alts": ["빙 빈 차이", "being been 구별", "is being is been", "has being 맞아요"],
+    "keys": ["being", "been"],
+    "a": "**being**은 be의 -ing형이라서 **진행형**(be + being + p.p.)에, **been**은 be의 과거분사라서 **완료형**(have + been + p.p.)에 써요. be동사 뒤에는 being, have 뒤에는 been이에요.",
+    "ex": [
+      { "en": "The room [[is being cleaned]].", "ko": "방이 청소되는 중이야." },
+      { "en": "The room [[has been cleaned]].", "ko": "방 청소가 끝났어." }
+    ],
+    "check": "The house is ___ built. 빈칸에 being과 been 중 무엇이 올까요?",
+    "level": "middle"
+  },
+  {
+    "id": "ps-11",
+    "unit": "passive/tenses",
+    "q": "수동태 부정문에서 not은 어디에 넣어요?",
+    "alts": ["hasn't been", "can't be", "수동태 부정 위치", "won't be", "not 위치"],
+    "keys": ["not", "부정문", "위치"],
+    "a": "덩어리가 길어도 **not은 맨 앞 조각 바로 뒤**에 와요. 의문문도 **맨 앞 조각만** 주어 앞으로 보내요. 나머지 조각은 제자리에 그대로 있어요.",
+    "ex": [
+      { "en": "The email [[hasn't been sent]] yet.", "ko": "그 이메일은 아직 안 보내졌어." },
+      { "en": "[[Can]] this bike [[be fixed]]?", "ko": "이 자전거 고칠 수 있을까요?" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-12",
+    "unit": "passive/patterns",
+    "q": "4형식은 수동태가 두 개예요?",
+    "alts": ["4형식 수동태", "간접목적어 수동태", "직접목적어 수동태", "I was given 맞아요"],
+    "keys": ["4형식", "간접목적어", "직접목적어"],
+    "a": "네, 목적어가 둘이라서 둘 다 주어가 될 수 있어요. **간접목적어(사람)**를 주어로 하거나, **직접목적어(물건)**를 주어로 해요. 물건이 주어면 남은 사람 앞에 to, for, of를 붙여요.",
+    "ex": [
+      { "en": "[[I]] was given a present by Mom.", "ko": "나는 엄마에게 선물을 받았어." },
+      { "en": "[[A present]] was given [[to]] me by Mom.", "ko": "선물이 엄마로부터 나에게 주어졌어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-13",
+    "unit": "passive/patterns",
+    "q": "수동태에서 to랑 for는 언제 써요?",
+    "alts": ["given to made for", "수동태 to for of", "ask of 뭐예요", "남은 사람 앞 전치사"],
+    "keys": ["to", "for", "of"],
+    "a": "3형식으로 바꿀 때 쓰는 전치사와 같아요. **to**는 받는 사람에게 건너가는 동사(give, send, show, teach, tell), **for**는 누군가를 위해 해 주는 동사(buy, make, cook, get), **of**는 ask예요.",
+    "ex": [
+      { "en": "A letter was sent [[to]] Jisu.", "ko": "편지가 지수에게 보내졌어." },
+      { "en": "A cake was made [[for]] me.", "ko": "나를 위해 케이크가 만들어졌어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-14",
+    "unit": "passive/patterns",
+    "q": "I was bought a bike는 왜 틀려요?",
+    "alts": ["buy 수동태", "make 수동태 사람 주어", "cook 수동태", "for 동사 수동태"],
+    "keys": ["buy", "make", "cook", "bought"],
+    "a": "buy, make, cook 같은 for 동사는 **사람을 주어로 쓰지 않아요.** I was bought a bike.는 '내가 사졌다', 즉 내가 팔려 간 것처럼 들리거든요. 물건을 주어로 해서 A bike was bought for me.라고 해요.",
+    "ex": [{ "en": "A bike [[was bought for me]] by Dad.", "ko": "아빠가 나에게 자전거를 사 주셨어." }],
+    "level": "middle"
+  },
+  {
+    "id": "ps-15",
+    "unit": "passive/patterns",
+    "q": "5형식 수동태는 어떻게 만들어요?",
+    "alts": ["목적격보어 수동태", "was elected captain", "was made happy", "call 수동태"],
+    "keys": ["5형식", "목적격보어", "elected"],
+    "a": "목적어만 주어로 올라가고, **목적격보어는 p.p. 뒤에 그대로** 남아요. 형용사 보어를 부사로 바꾸지 않도록 조심하세요.",
+    "ex": [
+      { "en": "He [[was elected]] captain.", "ko": "그는 주장으로 뽑혔어. (We elected him captain.)" },
+      { "en": "She [[was made]] happy by the news.", "ko": "그녀는 그 소식에 행복해졌어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-16",
+    "unit": "passive/patterns",
+    "q": "was made to clean에서 to는 왜 생겨요?",
+    "alts": ["사역동사 수동태", "지각동사 수동태", "was seen to", "원형부정사 수동태", "메이드 투"],
+    "keys": ["사역동사", "지각동사", "to부정사", "made to"],
+    "a": "능동태에서 make, see 뒤의 동사원형은 목적어가 사이에 있어서 헷갈리지 않았어요. 수동태가 되면 목적어가 주어로 떠나서 was made 바로 뒤에 동사가 붙어요. 그래서 **to를 다시 써서 변장한 동사임을 밝혀요.** 지각동사는 -ing도 그대로 써도 돼요.",
+    "ex": [
+      { "en": "I [[was {made|동사:시키다 (make의 과거분사)} to clean]] my room.", "ko": "나는 방 청소를 해야 했어." },
+      { "en": "He [[was seen entering]] the building.", "ko": "그가 건물에 들어가는 모습이 보였어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "ps-17",
+    "unit": "passive/phrasal",
+    "q": "laughed at by처럼 전치사가 두 개 붙어도 돼요?",
+    "alts": ["구동사 수동태", "look after 수동태", "at by 연달아", "전치사 두 개"],
+    "keys": ["구동사", "laughed at", "looked after"],
+    "a": "네, 괜찮아요. **구동사는 한 덩어리**라서 수동태에서도 전치사를 떼지 않아요. 앞의 at, after는 구동사의 일부이고, 뒤의 by는 행위자를 데려오는 말이에요.",
+    "ex": [
+      { "en": "He [[was {laughed at}]] by his classmates.", "ko": "그는 반 친구들에게 비웃음을 당했어." },
+      { "en": "The baby [[is {looked after}]] by my grandma.", "ko": "아기는 할머니께서 돌봐 주셔." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-18",
+    "unit": "passive/phrasal",
+    "q": "be interested in은 왜 by를 안 써요?",
+    "alts": ["by 말고 다른 전치사", "be surprised at", "be filled with", "수동태 전치사 외우기", "인터레스티드 인"],
+    "keys": ["interested", "surprised", "with", "전치사"],
+    "a": "interested, surprised, pleased 같은 p.p.는 '당했다'보다 **감정이나 상태**를 나타내서 거의 형용사처럼 굳어졌어요. 그래서 짝꿍 전치사가 정해져 있어요. interested **in**, surprised **at**, pleased·satisfied·filled·covered **with**, worried **about**.",
+    "ex": [
+      { "en": "I [[am {interested in}]] science.", "ko": "나는 과학에 관심이 있어." },
+      { "en": "The box [[was {filled with}]] old toys.", "ko": "상자는 오래된 장난감으로 가득했어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-19",
+    "unit": "passive/phrasal",
+    "q": "made of랑 made from은 뭐가 달라요?",
+    "alts": ["메이드 오브 메이드 프롬", "of from 차이", "재료 수동태", "made by랑 차이"],
+    "keys": ["made of", "made from", "재료"],
+    "a": "재료가 **그대로 보이면 of**(나무 책상), 재료가 **변해서 알아볼 수 없으면 from**(우유로 만든 치즈)이에요. 만든 **사람**을 말할 때는 by를 써요.",
+    "ex": [
+      { "en": "This desk [[is {made of}]] wood.", "ko": "이 책상은 나무로 만들어졌어." },
+      { "en": "Cheese [[is {made from}]] milk.", "ko": "치즈는 우유로 만들어." }
+    ],
+    "check": "Paper is made ___ wood. of와 from 중 무엇이 올까요?",
+    "level": "middle"
+  },
+  {
+    "id": "ps-20",
+    "unit": "passive/phrasal",
+    "q": "known to, known for, known as는 뭐가 달라요?",
+    "alts": ["be known for", "be known as", "노운 투 포 애즈", "유명하다 영어로"],
+    "keys": ["known to", "known for", "known as"],
+    "a": "**to**는 누구에게 알려졌는지(대상), **for**는 왜 유명한지(이유), **as**는 무엇으로 알려졌는지(이름·자격)예요.",
+    "ex": [
+      { "en": "Jeju Island [[is {known for}]] its beautiful beaches.", "ko": "제주도는 아름다운 해변으로 유명해." },
+      { "en": "Seoul [[is {known as}]] the capital of Korea.", "ko": "서울은 한국의 수도로 알려져 있어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ps-21",
+    "unit": "passive/phrasal",
+    "q": "It is said that이랑 He is said to는 같은 뜻이에요?",
+    "alts": ["이즈 세드 댓", "be said to 뜻", "~라고들 한다 영어로", "that절 수동태", "to have been 뜻"],
+    "keys": ["said", "it is said", "be said to", "that절"],
+    "a": "네, 뜻이 같아요. People say that he is honest.를 ① **It is said that** he is honest.(가주어 it)나 ② **He is said to be** honest.로 바꿀 수 있어요. ②에서는 that이 사라져서 진짜 동사가 하나만 남으니까 is가 to be로 변장해요.\nthat절의 일이 더 앞선 때면 **to have p.p.**를 써요.",
+    "ex": [
+      { "en": "He [[is said to be]] honest.", "ko": "그는 정직하다고들 해." },
+      { "en": "She [[is said to have been]] a great singer.", "ko": "그녀는 훌륭한 가수였다고들 해." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "ps-22",
+    "unit": "passive/phrasal",
+    "q": "got hurt도 수동태예요?",
+    "alts": ["get p.p.", "겟 수동태", "got lost 뜻", "got married 뜻", "be 대신 get"],
+    "keys": ["get", "got", "hurt", "lost"],
+    "a": "네, **get + p.p.**도 수동태의 한 가지예요. be 대신 get을 쓰면 '~하게 되다'라는 **변화**가 강조되고, 주로 말할 때 써요.",
+    "ex": [
+      { "en": "He [[{got|동사:(~하게) 되었다 (get의 과거형)} hurt]] during the game.", "ko": "그는 경기 중에 다쳤어." },
+      { "en": "We [[{got lost}]] in the city.", "ko": "우리는 그 도시에서 길을 잃었어." }
+    ],
+    "level": "middle"
+  }
+]

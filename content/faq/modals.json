@@ -1,0 +1,313 @@
+[
+  {
+    "id": "md-1",
+    "unit": "modals/basic",
+    "q": "조동사가 뭐예요?",
+    "alts": ["조동사 뜻", "조동사는 왜 조동사예요", "can 같은 거 뭐라고 불러요", "헬핑 버브가 뭐예요", "동사 도와주는 말"],
+    "keys": ["조동사", "can", "will", "must"],
+    "a": "조동사의 '조'는 **돕는다**는 뜻이에요. can, will, must처럼 동사 앞에 서서 '할 수 있다', '할 것이다', '해야 한다' 같은 뜻을 더해 주는 도우미 동사예요.\n조동사 뒤에는 늘 **동사원형**이 와요.",
+    "ex": [{ "en": "I [[can swim]].", "ko": "나는 수영할 수 있어." }],
+    "check": "'나는 피아노를 칠 수 있어'를 영어로 말해 볼까요?"
+  },
+  {
+    "id": "md-2",
+    "unit": "modals/basic",
+    "q": "He can swims는 왜 틀려요?",
+    "alts": ["can 뒤에 s 붙여요", "조동사 뒤에 동사 모양", "cans 맞아요", "3인칭인데 왜 s 안 붙여요", "캔 스윔스"],
+    "keys": ["can", "동사원형", "3인칭", "s"],
+    "a": "조동사 뒤에는 **동사원형**이 와요. 주어가 he, she여도 조동사 can에도, 뒤의 swim에도 -s를 붙이지 않아요.\ncan swim이 한 덩어리의 진짜 동사라서, 주어가 바뀌어도 모양이 그대로예요. be동사도 원형 be로 써요.",
+    "ex": [
+      { "en": "He [[can swim]].", "ko": "그는 수영할 수 있어. (cans ✕, swims ✕)" },
+      { "en": "My sister [[will be]] ten next year.", "ko": "우리 여동생은 내년에 열 살이 돼. (will is ✕)" }
+    ]
+  },
+  {
+    "id": "md-3",
+    "unit": "modals/basic",
+    "q": "조동사 의문문이랑 부정문은 어떻게 만들어요?",
+    "alts": ["Do you can 맞아요", "can 의문문", "조동사 부정문", "cannot can not 차이", "캔 유 수영"],
+    "keys": ["의문문", "부정문", "not", "do"],
+    "a": "의문문은 **조동사를 주어 앞으로** 보내면 끝이에요. do는 필요 없어요.\n부정문은 **조동사 바로 뒤에 not**을 붙여요. can + not은 붙여서 cannot, 줄이면 can't예요.",
+    "ex": [
+      { "en": "[[Can you swim]]? Yes, I [[can]].", "ko": "너 수영할 수 있어? 응, 할 수 있어." },
+      { "en": "My cat [[cannot swim]].", "ko": "우리 고양이는 수영을 못 해." }
+    ],
+    "check": "'너 기타 칠 수 있어?'를 영어로 물어볼까요?"
+  },
+  {
+    "id": "md-4",
+    "unit": "modals/basic",
+    "q": "must랑 should는 뭐가 달라요?",
+    "alts": ["머스트 슈드 차이", "해야 한다 영어로", "should 뜻", "must는 너무 센가요"],
+    "keys": ["must", "should", "충고", "의무"],
+    "a": "둘 다 '해야 한다'로 해석할 때가 있지만 세기가 달라요. **must**는 '꼭 해야 해'라는 강한 의무, **should**는 '하는 게 좋겠어'라는 부드러운 충고예요.\n친구에게 조언할 때는 보통 should를 써요.",
+    "ex": [
+      { "en": "You [[must {wear|동사:(모자 등을) 쓰다}]] a helmet.", "ko": "너는 꼭 헬멧을 써야 해. (규칙)" },
+      { "en": "You [[should go]] to bed early.", "ko": "너는 일찍 자는 게 좋겠어. (충고)" }
+    ]
+  },
+  {
+    "id": "md-5",
+    "unit": "modals/basic",
+    "q": "can이랑 may는 둘 다 '해도 된다'예요?",
+    "alts": ["May I 뜻", "can I may I 차이", "메이 아이", "허락 영어로", "may 일지도 모른다"],
+    "keys": ["may", "can", "허락"],
+    "a": "네, 둘 다 허락을 나타낼 수 있어요. **May I ~?**가 더 공손해서 선생님이나 어른께 여쭐 때 잘 어울려요.\nmay에는 '~일지도 모른다'라는 **약한 추측**의 뜻도 있어요.",
+    "ex": [
+      { "en": "[[{May|조동사:~해도 될까요?} I come]] in?", "ko": "들어가도 될까요?" },
+      { "en": "It [[{may|조동사:~일지도 모른다} rain]] tomorrow.", "ko": "내일 비가 올지도 몰라." }
+    ]
+  },
+  {
+    "id": "md-6",
+    "unit": "modals/basic",
+    "q": "won't가 뭐예요? want랑 같아요?",
+    "alts": ["워운트 뜻", "will not 줄임말", "won't want 차이", "willn't 맞아요"],
+    "keys": ["won't", "will not", "want", "줄임말"],
+    "a": "won't는 **will not**의 줄임말이에요. willn't가 아니에요!\n소리도 달라요. won't는 [워운트], want(원하다)는 [원트]예요.",
+    "ex": [{ "en": "I [[won't be]] late again.", "ko": "다시는 안 늦을게." }],
+    "check": "cannot의 줄임말은 뭘까요?"
+  },
+  {
+    "id": "md-7",
+    "unit": "modals/more",
+    "q": "must not이랑 don't have to는 뭐가 달라요?",
+    "alts": ["머스트 낫 돈 해브 투", "안 해도 된다 영어로", "하면 안 된다 영어로", "must not 뜻", "don't have to 뜻"],
+    "keys": ["must not", "don't have to", "금지", "필요"],
+    "a": "**must not**은 '하면 안 된다'(금지), **don't have to**는 '안 해도 된다'(필요 없음)예요.\n긍정일 때는 must = have to지만, not이 붙으면 뜻이 완전히 달라져요. 내신 단골 문제예요!",
+    "ex": [
+      { "en": "You [[must not]] run here.", "ko": "여기서 뛰면 안 돼. (금지)" },
+      { "en": "You [[{don't have to}]] run.", "ko": "뛸 필요 없어. (필요 없음)" }
+    ],
+    "check": "'오늘은 숙제를 안 해도 돼'에는 둘 중 무엇을 쓸까요?",
+    "level": "middle"
+  },
+  {
+    "id": "md-8",
+    "unit": "modals/more",
+    "q": "must의 과거형은 뭐예요?",
+    "alts": ["must 과거", "해야 했다 영어로", "had to 뜻", "머스트 과거형", "will must 돼요"],
+    "keys": ["must", "had to", "have to", "과거"],
+    "a": "must에는 과거형이 없어요. 그래서 같은 뜻의 have to를 빌려서 **had to**(~해야 했다)라고 써요.\n미래는 **will have to**예요. will must처럼 조동사 두 개를 붙이면 안 돼요.",
+    "ex": [{ "en": "We [[{had to}]] wait for an hour.", "ko": "우리는 한 시간 동안 기다려야 했어." }],
+    "level": "middle"
+  },
+  {
+    "id": "md-9",
+    "unit": "modals/more",
+    "q": "can이랑 be able to는 같은 거예요?",
+    "alts": ["be able to 뜻", "비 에이블 투", "can 미래형", "will can 돼요", "할 수 있게 될 거야 영어로"],
+    "keys": ["be able to", "can", "will"],
+    "a": "뜻은 같아요. 둘 다 '~할 수 있다'예요.\n다른 점은 be able to에는 **be동사가 들어 있어서** 주어·시제에 따라 모양이 바뀌고, will 뒤에도 쓸 수 있다는 거예요. '~할 수 있게 될 거야'는 **will be able to**!",
+    "ex": [{ "en": "You [[will {be able to}]] ride a bike soon.", "ko": "너는 곧 자전거를 탈 수 있게 될 거야." }],
+    "level": "middle"
+  },
+  {
+    "id": "md-10",
+    "unit": "modals/more",
+    "q": "had better는 과거예요?",
+    "alts": ["had better 뜻", "해드 베터", "you'd better 뜻", "하는 게 좋을 거야 영어로", "had better not"],
+    "keys": ["had better", "충고", "should"],
+    "a": "had가 들어 있지만 **과거가 아니에요**. '~하는 게 좋을 거야'라는 강한 충고로, 지금이나 앞으로의 일을 말해요.\n뒤에는 동사원형, 부정은 **had better not**이에요. 경고처럼 들릴 수 있어서 어른께는 should가 좋아요.",
+    "ex": [
+      { "en": "You [[{had better} take]] an umbrella.", "ko": "우산 가져가는 게 좋을 거야." },
+      { "en": "You [[{had better} not be]] late.", "ko": "늦지 않는 게 좋을 거야." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "md-11",
+    "unit": "modals/more",
+    "q": "used to랑 would는 뭐가 달라요?",
+    "alts": ["유즈드 투 뜻", "예전에 했다 영어로", "used to 과거 습관", "would 과거 습관", "be used to 차이"],
+    "keys": ["used to", "would", "습관", "상태"],
+    "a": "둘 다 '예전에 ~하곤 했다'는 **과거의 습관**을 말해요. 그런데 live, be, have 같은 **과거의 상태**에는 used to만 쓸 수 있어요.\nbe used to + -ing(~에 익숙하다)와도 헷갈리지 마세요.",
+    "ex": [
+      { "en": "I [[{used to} live]] in Busan.", "ko": "나는 예전에 부산에 살았어. (상태: would ✕)" },
+      { "en": "{When|접속사:…할 때} I was little, my grandma [[{would|조동사:~하곤 했다} read]] me stories.", "ko": "내가 어렸을 때 할머니는 이야기를 읽어 주시곤 했어. (습관)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "md-12",
+    "unit": "modals/more",
+    "q": "would like to는 want to랑 같아요?",
+    "alts": ["우드 라이크 투", "I'd like to 뜻", "would you like to 뜻", "공손하게 하고 싶다 영어로"],
+    "keys": ["would like to", "want to", "공손"],
+    "a": "뜻은 같아요. '~하고 싶다'예요. would like to가 훨씬 **공손한** 말이라서 가게에서 주문하거나 어른께 말할 때 잘 어울려요.\n줄이면 I'd like to예요. 뒤에 명사가 오면 would like만 써요.",
+    "ex": [{ "en": "I [[{would like to}]] order a pizza.", "ko": "피자 한 판 주문하고 싶어요." }],
+    "level": "middle"
+  },
+  {
+    "id": "md-13",
+    "unit": "modals/guess",
+    "q": "must가 '틀림없다'라는 뜻도 있어요?",
+    "alts": ["must be 뜻", "머스트 비", "추측의 must", "must 해석 두 개", "의무 추측 구별"],
+    "keys": ["must be", "추측", "틀림없다", "의무"],
+    "a": "네! must에는 '~해야 한다'(의무) 말고도 '**틀림없이 ~일 거야**'라는 강한 추측의 뜻이 있어요.\n뒤에 be, know처럼 상태를 나타내는 동사가 오면 추측일 때가 많지만, 마지막 판단은 **문맥**으로 해요.",
+    "ex": [
+      { "en": "Minsu ate three bowls of rice. He [[{must|조동사:~임에 틀림없다} be]] hungry.", "ko": "민수가 밥을 세 그릇이나 먹었어. 틀림없이 배고픈 거야. (추측)" },
+      { "en": "You [[{must|조동사:~해야 한다} be]] quiet in the library.", "ko": "도서관에서는 조용히 해야 해. (의무)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "md-14",
+    "unit": "modals/guess",
+    "q": "must be의 반대말은 must not be예요?",
+    "alts": ["일 리가 없다 영어로", "can't be 뜻", "캔트 비", "must not be 맞아요"],
+    "keys": ["can't be", "must be", "반대"],
+    "a": "'틀림없이 ~이다'(must be)의 반대, 즉 '**~일 리가 없다**'는 보통 **can't be**로 써요.\nmust not은 '~하면 안 된다'는 금지로 먼저 읽히거든요. couldn't be도 can't be와 같은 뜻이에요.",
+    "ex": [{ "en": "That [[{can't|조동사:~일 리가 없다} be]] true!", "ko": "그게 사실일 리가 없어!" }],
+    "level": "middle"
+  },
+  {
+    "id": "md-15",
+    "unit": "modals/guess",
+    "q": "may랑 might는 뭐가 달라요?",
+    "alts": ["마이트 뜻", "might may 차이", "might는 과거형이에요", "could be 뜻"],
+    "keys": ["may", "might", "could", "추측"],
+    "a": "추측할 때 may, might, could는 모두 '**~일지도 모른다**'예요. might는 may보다 살짝 더 자신 없을 때 써요.\n여기서 might는 과거가 아니라 **지금**에 대한 추측이에요.",
+    "ex": [{ "en": "It [[{might|조동사:~일지도 모른다} rain]] tonight.", "ko": "오늘 밤에 비가 올지도 몰라." }],
+    "level": "middle"
+  },
+  {
+    "id": "md-16",
+    "unit": "modals/guess",
+    "q": "추측 조동사는 확신 순서가 어떻게 돼요?",
+    "alts": ["확신 정도 순서", "must will should may 순서", "추측 세기", "어느 게 더 확실해요"],
+    "keys": ["must", "will", "should", "may", "can't"],
+    "a": "확신이 강한 순서로 **must be**(틀림없이) → **will be**(아마) → **should be**(당연히 그럴 것) → **may·might·could be**(~일지도)예요.\n아니라고 확신할 때는 **can't be**(~일 리가 없다)를 써요.",
+    "ex": [{ "en": "The phone is ringing. It [[{must|조동사:~임에 틀림없다} be]] Mom.", "ko": "전화가 울려. 엄마인 게 틀림없어." }],
+    "check": "'지수일지도 몰라'라고 할 때는 어떤 조동사를 쓸까요?",
+    "level": "middle"
+  },
+  {
+    "id": "md-17",
+    "unit": "modals/guess",
+    "q": "'그게 정말일까?'는 영어로 어떻게 물어요?",
+    "alts": ["추측 의문문", "May it be true 맞아요", "Can it be true 뜻", "could it be 뜻", "누구일까 영어로"],
+    "keys": ["can it be", "could", "의문문"],
+    "a": "추측을 물을 때는 must나 may를 쓰지 않고 **can**이나 **could**로 물어요.\nCan it be true?(그게 정말일까?), Who could it be?(누구일까?)",
+    "ex": [{ "en": "[[{Can|조동사:(도대체) ~일까?} it be]] true?", "ko": "그게 정말일까?" }],
+    "level": "middle"
+  },
+  {
+    "id": "md-18",
+    "unit": "modals/have-pp",
+    "q": "조동사 + have p.p.는 왜 have를 써요?",
+    "alts": ["must have p.p. 뜻", "머스트 해브 피피", "과거 추측 영어로", "must went 틀려요", "했음에 틀림없다 영어로"],
+    "keys": ["have p.p.", "과거", "추측", "must have"],
+    "a": "조동사 뒤에는 **동사원형만** 올 수 있어서 must went처럼 과거형을 쓸 수 없어요. 그래서 원형 have 뒤에 p.p.를 붙여 **한 칸 과거**로 보내요.\n조동사는 지금의 생각, have p.p.는 과거의 일을 맡아요.",
+    "ex": [{ "en": "The ground is wet. It [[{must|조동사:~였음에 틀림없다} {have|조동사:완료형을 만드는 말} rained]] last night.", "ko": "땅이 젖었어. 어젯밤에 비가 왔던 게 틀림없어." }],
+    "level": "middle"
+  },
+  {
+    "id": "md-19",
+    "unit": "modals/have-pp",
+    "q": "should have p.p.랑 must have p.p.는 뭐가 달라요?",
+    "alts": ["했어야 했는데 영어로", "슈드 해브 피피", "후회 영어로", "should have 뜻"],
+    "keys": ["should have", "must have", "후회", "추측"],
+    "a": "**should have p.p.**는 '~했어야 했는데 (안 했다)'라는 **후회**, **must have p.p.**는 '~했음에 틀림없다'라는 **추측**이에요.\n실제로 했는지 안 했는지가 반대예요.",
+    "ex": [{ "en": "I [[{should|조동사:~했어야 했는데} {have|조동사:완료형을 만드는 말} studied]] harder.", "ko": "공부를 더 열심히 했어야 했는데. (실제로는 안 했어요)" }],
+    "check": "'더 일찍 잤어야 했는데'는 둘 중 어느 쪽일까요?",
+    "level": "middle"
+  },
+  {
+    "id": "md-20",
+    "unit": "modals/have-pp",
+    "q": "can't have p.p.는 무슨 뜻이에요?",
+    "alts": ["했을 리가 없다 영어로", "couldn't have 뜻", "캔트 해브", "may have p.p. 뜻", "했을지도 모른다 영어로"],
+    "keys": ["can't have", "may have", "과거 추측"],
+    "a": "**can't have p.p.**는 '~했을 리가 없다', **may(might) have p.p.**는 '~했을지도 모른다'예요.\n지금에 대한 추측의 확신 사다리가 그대로 과거로 옮겨 간 거예요.",
+    "ex": [
+      { "en": "She [[{can't|조동사:~했을 리가 없다} {have|조동사:완료형을 만드는 말} seen]] me.", "ko": "그녀가 나를 봤을 리가 없어." },
+      { "en": "I [[{may|조동사:~했을지도 모른다} {have|조동사:완료형을 만드는 말} left]] it on the bus.", "ko": "그걸 버스에 두고 내렸을지도 몰라." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "md-21",
+    "unit": "modals/have-pp",
+    "q": "could have p.p.는 무슨 뜻이에요?",
+    "alts": ["할 수도 있었는데 영어로", "쿠드 해브", "could have 두 가지 뜻", "다칠 뻔했다 영어로"],
+    "keys": ["could have", "아쉬움", "추측"],
+    "a": "보통 '**~할 수도 있었는데** (실제로는 안 했다)'라는 아쉬움이에요.\n문맥에 따라 '~했을 수도 있다'라는 약한 과거 추측으로도 쓰여요.",
+    "ex": [{ "en": "We [[{could|조동사:~할 수도 있었는데} {have|조동사:완료형을 만드는 말} won]] the game.", "ko": "우리가 이길 수도 있었는데. (실제로는 졌어요)" }],
+    "level": "high"
+  },
+  {
+    "id": "md-22",
+    "unit": "modals/have-pp",
+    "q": "should've는 뭐예요? should of라고 써도 돼요?",
+    "alts": ["슈드브 뜻", "should of 맞아요", "could've 뜻", "must've 뜻"],
+    "keys": ["should've", "should of", "줄임말"],
+    "a": "should've는 **should have**의 줄임말이에요.\nhave가 약하게 [어브]처럼 들려서 of와 소리가 비슷하지만, should of라고 쓰면 틀려요.",
+    "ex": [{ "en": "I [[should've]] left earlier.", "ko": "더 일찍 나왔어야 했는데." }],
+    "level": "middle"
+  },
+  {
+    "id": "md-23",
+    "unit": "modals/special-should",
+    "q": "suggest that 뒤에 왜 동사원형이 와요?",
+    "alts": ["suggest that 동사원형", "should 생략", "주요제명이 뭐예요", "insist that 동사원형", "demand that be"],
+    "keys": ["suggest", "insist", "demand", "should", "동사원형"],
+    "a": "주장(insist)·요구(demand, require)·제안(suggest, recommend)·명령(order) 동사 뒤 that절이 '**~해야 한다**'는 내용이면 **(should) 동사원형**을 써요.\nshould를 빼도 동사는 원형 그대로라서 he go, she be처럼 보여요. 수능 어법 단골이에요.",
+    "ex": [{ "en": "The coach demanded {that|접속사:~라고} every player [[(should) be]] {on time}.", "ko": "코치는 모든 선수가 제시간에 와야 한다고 요구했어." }],
+    "check": "The doctor suggested that he (rest / rests). 무엇이 맞을까요?",
+    "level": "high"
+  },
+  {
+    "id": "md-24",
+    "unit": "modals/special-should",
+    "q": "suggest인데 왜 동사원형이 아니에요?",
+    "alts": ["suggest 암시하다", "suggest that was", "insist 사실 주장", "should 안 쓰는 경우"],
+    "keys": ["suggest", "insist", "암시", "시제"],
+    "a": "suggest가 '제안하다'가 아니라 '**암시하다, 보여 주다**'일 때는 that절이 이미 있는 **사실**을 말해요. 그래서 should를 쓰지 않고 시제를 맞춰요.\ninsist도 '(사실이라고) 주장하다'일 때는 마찬가지예요.",
+    "ex": [{ "en": "His red face {suggested|동사:암시했다, 보여 주었다} {that|접속사:~라는 것을} he [[was]] angry.", "ko": "그의 빨개진 얼굴은 그가 화가 났다는 걸 보여 줬어." }],
+    "level": "high"
+  },
+  {
+    "id": "md-25",
+    "unit": "modals/special-should",
+    "q": "It is important that 뒤에도 동사원형이 와요?",
+    "alts": ["이성적 판단 형용사", "necessary that 동사원형", "essential that should", "important that he be"],
+    "keys": ["important", "necessary", "essential", "should"],
+    "a": "네. necessary, essential, important, vital처럼 '그래야 마땅하다'고 판단하는 형용사 뒤의 that절에도 **(should) 동사원형**을 써요.",
+    "ex": [{ "en": "It is necessary {that|접속사:~라는 것} he [[(should) {see a doctor}]].", "ko": "그는 병원에 가 볼 필요가 있어." }],
+    "level": "high"
+  },
+  {
+    "id": "md-26",
+    "unit": "modals/special-should",
+    "q": "대동사가 뭐예요?",
+    "alts": ["than I do 뜻", "대동사 do", "do를 왜 써요", "does did 대신"],
+    "keys": ["대동사", "do", "does", "did"],
+    "a": "앞에 나온 동사(와 딸린 말)를 되풀이하지 않으려고 **do, does, did**로 대신하는 거예요.\n앞 동사가 be동사면 be동사로, 조동사면 조동사로 받아요.",
+    "ex": [{ "en": "My sister runs faster than I [[{do|대동사:= run (앞의 동사를 대신해요)}]].", "ko": "우리 언니는 나보다 빨리 달려." }],
+    "level": "high"
+  },
+  {
+    "id": "md-27",
+    "unit": "modals/special-should",
+    "q": "So do I랑 So am I는 언제 써요?",
+    "alts": ["나도 그래 영어로", "neither do I 뜻", "쏘 두 아이", "so am i 차이", "나도 아니야 영어로"],
+    "keys": ["so do i", "so am i", "neither", "맞장구"],
+    "a": "앞 문장의 **동사 종류**를 따라가요. 일반동사면 So do I, be동사면 So am I, 조동사면 So can I.\n부정문에는 **Neither**를 쓰고, not은 또 붙이지 않아요.",
+    "ex": [
+      { "en": "I love pizza. [[{So|부사:~도 그렇다} {do|대동사:앞의 동사를 대신해요} I]].", "ko": "나 피자 정말 좋아해. 나도 그래." },
+      { "en": "I can't whistle. [[{Neither|부사:~도 아니다} can I]].", "ko": "나 휘파람 못 불어. 나도 못 해." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "md-28",
+    "unit": "modals/special-should",
+    "q": "I do like it의 do는 뭐예요?",
+    "alts": ["강조의 do", "do like 뜻", "does look 뜻", "did finish 뜻"],
+    "keys": ["강조", "do", "동사원형"],
+    "a": "동사 앞에 do, does, did를 넣으면 '**정말로**'라는 강조가 돼요.\ndo가 주어와 시제를 맡으니 뒤의 동사는 **원형**이에요. She does look tired. (looks ✕)",
+    "ex": [{ "en": "I [[{do|조동사:(강조) 정말로} like]] your new hairstyle.", "ko": "네 새 머리 모양 정말 마음에 들어." }],
+    "level": "high"
+  }
+]

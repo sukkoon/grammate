@@ -25,7 +25,10 @@ describe.skipIf(!chapter)(`초안 검사: ${chapter}`, () => {
     if (existsSync(dir))
       for (const f of readdirSync(dir).filter((n) => n.endsWith(".mdx"))) {
         const src = readFileSync(join(dir, f), "utf8");
-        for (const re of [EN_ATTR, EN_KEY]) for (const m of src.matchAll(re)) sentences.push([f, stripHunt(m[1] ?? m[2])]);
+        for (const re of [EN_ATTR, EN_KEY]) for (const m of src.matchAll(re)) {
+          const x = m[1] ?? m[2];
+          sentences.push([f, x.includes("*") ? stripHunt(x) : x]);
+        }
       }
     const illu = join(ROOT, "components/illustrations", `${chapter}.tsx`);
     if (existsSync(illu)) {
