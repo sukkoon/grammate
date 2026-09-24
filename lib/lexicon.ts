@@ -6,9 +6,15 @@ import forms from "@/content/lexicon/forms.json";
  * 예) "like": ["동사", "좋아하다", "전치사: ~처럼, ~같이"]
  */
 type Entry = string[];
-const WORDS = words as Record<string, Entry>;
+const WORDS: Record<string, Entry> = { ...(words as Record<string, Entry>) };
 /** 불규칙 변화형: "went": ["go", "과거형"] */
-const FORMS = forms as unknown as Record<string, [string, string]>;
+const FORMS: Record<string, [string, string]> = { ...(forms as unknown as Record<string, [string, string]>) };
+
+/** 검사용: 아직 합치지 않은 사전 패치를 잠시 더한다 (사이트에서는 쓰지 않는다) */
+export function registerExtra(extraWords: Record<string, Entry>, extraForms: Record<string, [string, string]> = {}) {
+  Object.assign(WORDS, extraWords);
+  Object.assign(FORMS, extraForms);
+}
 
 export interface Gloss {
   /** 문장에 쓰인 모양 그대로 */
