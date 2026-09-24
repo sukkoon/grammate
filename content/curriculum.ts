@@ -197,11 +197,11 @@ export const curriculum: Part[] = [
         title: "시제",
         hook: "시간선 위에 동사를 올려놓는 방법.",
         units: [
-          u("simple", "현재·과거·미래", "", ["초등", "중1"]),
-          u("progressive", "진행형", "be + -ing", ["초등", "중1"]),
-          u("present-perfect", "현재완료", "과거가 지금까지 이어질 때", ["중2"]),
-          u("perfect-family", "과거완료·미래완료·완료진행", "", ["중3", "고1"]),
-          u("time-clauses", "시간·조건 부사절의 현재시제", "When he comes, …", ["고1"]),
+          u("simple", "현재·과거·미래", "", ["초등", "중1"], true),
+          u("progressive", "진행형", "be + -ing", ["초등", "중1"], true),
+          u("present-perfect", "현재완료", "과거가 지금까지 이어질 때", ["중2"], true),
+          u("perfect-family", "과거완료·미래완료·완료진행", "", ["중3", "고1"], true),
+          u("time-clauses", "시간·조건 부사절의 현재시제", "When he comes, …", ["고1"], true),
         ],
       },
       {

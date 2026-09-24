@@ -727,3 +727,4 @@ export function PrepositionBox() {
   );
 }
 export * from "./nouns";
+export * from "./tenses";

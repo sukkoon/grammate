@@ -674,6 +674,69 @@ export const terms: Term[] = [
     "group": "명사·관사",
     "href": "/learn/nouns/plurals"
   },
+
+  // 추가된 용어
+  {
+    "id": "progressive",
+    "term": "진행형",
+    "parts": [
+      {
+        "c": "진행",
+        "m": "앞으로 나아가며 계속되다"
+      },
+      {
+        "c": "형",
+        "m": "모양 ('형태'의 형)"
+      }
+    ],
+    "result": "동작이 한창 이어지고 있는 중인 모양: be + -ing",
+    "english": "progressive",
+    "englishNote": "progress(나아가다, 진행하다)",
+    "example": "I [[am reading]] a book.",
+    "group": "동사",
+    "href": "/learn/tenses/progressive"
+  },
+  {
+    "id": "present-perfect",
+    "term": "현재완료",
+    "parts": [
+      {
+        "c": "현재",
+        "m": "지금"
+      },
+      {
+        "c": "완료",
+        "m": "다 마치다 ('완성', '완주'의 완)"
+      }
+    ],
+    "result": "과거의 일이 지금까지 이어지거나 지금에 영향을 줄 때 쓰는 시제: have/has + p.p.",
+    "myth": "'지금 막 끝난 일'만이 아니에요. 과거와 지금을 잇는 다리예요.",
+    "english": "present perfect",
+    "englishNote": "perfect(완전히 끝난)",
+    "example": "I [[have lived]] here for five years.",
+    "group": "동사",
+    "href": "/learn/tenses/present-perfect"
+  },
+  {
+    "id": "past-perfect",
+    "term": "과거완료",
+    "parts": [
+      {
+        "c": "과거",
+        "m": "지나간 때"
+      },
+      {
+        "c": "완료",
+        "m": "다 마치다"
+      }
+    ],
+    "result": "과거의 어느 때보다 더 먼저 일어났거나 그때까지 이어진 일: had + p.p.",
+    "english": "past perfect",
+    "englishNote": "과거 기준의 perfect(완료)",
+    "example": "The movie [[had started]] when I arrived.",
+    "group": "동사",
+    "href": "/learn/tenses/perfect-family"
+  },
 ];
 
 export const termById = (id: string) => terms.find((t) => t.id === id);

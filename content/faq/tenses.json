@@ -1,0 +1,132 @@
+[
+  {
+    "id": "tn-1",
+    "unit": "tenses/simple",
+    "q": "will이랑 be going to는 뭐가 달라요?",
+    "alts": ["윌 비고잉투 차이", "미래 표현 두 개", "be going to 언제 써요"],
+    "keys": ["will", "be going to", "going to", "미래"],
+    "a": "**will**은 말하는 순간 정한 일이나 예측·의지에, **be going to**는 이미 세워 둔 계획이나 눈앞에 증거가 있는 예측에 써요. 둘 다 뒤에는 동사원형이 와요.",
+    "ex": [
+      { "en": "It's heavy? I [[will help]] you.", "ko": "무겁다고? 내가 도와줄게. (지금 정함)" },
+      { "en": "I [[am {going to|숙어:~할 것이다 (예정)}]] visit my grandma this weekend.", "ko": "이번 주말에 할머니 댁에 갈 거야. (계획)" }
+    ]
+  },
+  {
+    "id": "tn-2",
+    "unit": "tenses/simple",
+    "q": "현재형은 지금 하는 거 아니에요?",
+    "alts": ["현재 시제 언제 써요", "현재형 현재진행형 차이", "습관 영어로"],
+    "keys": ["현재", "현재형", "습관"],
+    "a": "현재형은 '딱 지금 이 순간'보다 **늘, 반복해서 그런 일**(습관, 사실)에 더 많이 써요. 지금 한창 하는 중인 일은 현재진행형(be + -ing)이에요.",
+    "ex": [
+      { "en": "I [[play]] soccer every Saturday.", "ko": "나는 토요일마다 축구를 해. (습관)" },
+      { "en": "I [[am playing]] soccer now.", "ko": "나 지금 축구하고 있어. (진행 중)" }
+    ]
+  },
+  {
+    "id": "tn-3",
+    "unit": "tenses/progressive",
+    "q": "진행형은 어떻게 만들어요?",
+    "alts": ["ing 붙이는 법", "하고 있다 영어로", "running n 두 번"],
+    "keys": ["진행형", "ing", "be"],
+    "a": "**be + 동사-ing**예요. -ing는 대부분 그냥 붙이고, e로 끝나면 e를 빼고(making), 짧은 모음 + 자음 하나로 끝나면 자음을 한 번 더(running), ie는 y로 바꿔요(lying).",
+    "ex": [{ "en": "The kids [[are swimming]] in the pool.", "ko": "아이들이 수영장에서 수영하고 있어." }]
+  },
+  {
+    "id": "tn-4",
+    "unit": "tenses/progressive",
+    "q": "I am knowing은 왜 틀려요?",
+    "alts": ["진행형 안 되는 동사", "want 진행형", "상태 동사 진행형"],
+    "keys": ["know", "want", "상태", "진행형"],
+    "a": "know, like, want, believe, have(가지고 있다) 같은 **상태를 나타내는 동사**는 움직임이 없어서 보통 진행형으로 쓰지 않아요. I know the answer처럼 현재형으로 써요.",
+    "ex": [{ "en": "I [[know]] the answer.", "ko": "나는 답을 알아." }],
+    "level": "middle"
+  },
+  {
+    "id": "tn-5",
+    "unit": "tenses/present-perfect",
+    "q": "현재완료가 뭐예요? 과거랑 뭐가 달라요?",
+    "alts": ["현완이 뭐예요", "have p.p. 뜻", "현재완료 과거 차이", "해브 피피"],
+    "keys": ["현재완료", "have", "p.p.", "과거"],
+    "a": "현재완료(have + p.p.)는 **과거와 지금을 잇는 다리**예요. 과거형은 과거의 한 점만 말하지만, 현재완료는 그 일이 지금까지 이어지거나 지금에 영향을 줄 때 써요.",
+    "ex": [
+      { "en": "I [[lost]] my key yesterday.", "ko": "어제 열쇠를 잃어버렸어. (과거의 일)" },
+      { "en": "I [[have lost]] my key.", "ko": "열쇠를 잃어버렸어. (그래서 지금 없어)" }
+    ],
+    "check": "I have lived here for 10 years.는 지금도 여기 살고 있을까요?"
+  },
+  {
+    "id": "tn-6",
+    "unit": "tenses/present-perfect",
+    "q": "현재완료에 yesterday를 쓰면 왜 틀려요?",
+    "alts": ["현재완료 ago", "현재완료 과거 시간", "have seen yesterday"],
+    "keys": ["yesterday", "ago", "last", "현재완료"],
+    "a": "현재완료는 '지금'과 이어진 이야기라서, yesterday, last week, ago, When…? 같은 **분명한 과거 시간**과 함께 쓸 수 없어요. 그럴 땐 과거형을 써요.",
+    "ex": [{ "en": "I [[saw]] the movie last week.", "ko": "나는 지난주에 그 영화를 봤어." }]
+  },
+  {
+    "id": "tn-7",
+    "unit": "tenses/present-perfect",
+    "q": "for랑 since는 뭐가 달라요?",
+    "alts": ["포 신스 차이", "since 뒤에 뭐", "동안 이후로 영어로"],
+    "keys": ["for", "since"],
+    "a": "**for** 뒤에는 기간(for three years, for an hour), **since** 뒤에는 시작한 때(since 2020, since Monday)가 와요.",
+    "ex": [
+      { "en": "We have lived in Seoul [[for]] ten years.", "ko": "우리는 10년째 서울에 살고 있어." },
+      { "en": "I have known Minsu [[since]] 2020.", "ko": "나는 2020년부터 민수를 알고 지냈어." }
+    ]
+  },
+  {
+    "id": "tn-8",
+    "unit": "tenses/present-perfect",
+    "q": "have been to랑 have gone to는 뭐가 달라요?",
+    "alts": ["해브 빈 투 해브 곤 투", "가 본 적 있다 영어로", "gone to 뜻"],
+    "keys": ["been to", "gone to"],
+    "a": "**have been to**는 '가 본 적이 있다'(경험, 지금은 돌아와 있음), **have gone to**는 '가 버렸다'(결과, 지금 여기 없음)예요.",
+    "ex": [
+      { "en": "I [[have been to]] Japan.", "ko": "나는 일본에 가 본 적 있어." },
+      { "en": "My dad [[has gone to]] Japan.", "ko": "아빠는 일본에 가셨어. (지금 없음)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "tn-9",
+    "unit": "tenses/perfect-family",
+    "q": "과거완료는 언제 써요?",
+    "alts": ["had p.p. 뜻", "대과거가 뭐예요", "해드 피피"],
+    "keys": ["과거완료", "had", "대과거"],
+    "a": "과거에 일어난 두 일 중 **더 먼저 일어난 일**에 had + p.p.를 써요. 기준이 되는 과거보다 앞선 일이라 '과거의 과거(대과거)'라고도 해요.",
+    "ex": [{ "en": "When I arrived, the movie [[had already started]].", "ko": "내가 도착했을 때 영화는 이미 시작했었어." }],
+    "level": "middle"
+  },
+  {
+    "id": "tn-10",
+    "unit": "tenses/perfect-family",
+    "q": "have been -ing는 뭐예요?",
+    "alts": ["현재완료진행", "해브 빈 잉", "계속 하고 있다 영어로"],
+    "keys": ["been", "ing", "완료진행"],
+    "a": "현재완료진행(have been + -ing)은 **과거에 시작해서 지금도 계속 하고 있는** 일을 강조해요.",
+    "ex": [{ "en": "I [[have been waiting]] for you for an hour!", "ko": "한 시간째 너를 기다리고 있었어!" }],
+    "level": "middle"
+  },
+  {
+    "id": "tn-11",
+    "unit": "tenses/time-clauses",
+    "q": "If it will rain은 왜 틀려요?",
+    "alts": ["if 뒤에 will", "when 뒤에 현재형", "조건 부사절 현재", "미래인데 왜 현재형"],
+    "keys": ["if", "when", "will", "부사절"],
+    "a": "'만약 ~라면', '~할 때' 같은 **시간·조건 부사절**에서는 미래 일이어도 **현재형**을 써요. 주절에 이미 will이 있어서 미래라는 게 분명하거든요. If it rains tomorrow, we will stay home.",
+    "ex": [{ "en": "When he [[comes]] back, I will tell him.", "ko": "그가 돌아오면 말해 줄게." }],
+    "level": "high"
+  },
+  {
+    "id": "tn-12",
+    "unit": "tenses/time-clauses",
+    "q": "I don't know if he will come는 will 써도 돼요?",
+    "alts": ["if 인지 will", "명사절 will", "when 언제인지 will"],
+    "keys": ["인지", "명사절", "know"],
+    "a": "네! 여기서 if는 '~인지'라는 **명사절**(know의 목적어)이라서 미래면 will을 그대로 써요. if를 '만약'으로 읽으면 현재형, '~인지'로 읽으면 will이에요.",
+    "ex": [{ "en": "I don't know if he [[will come]] tomorrow.", "ko": "그가 내일 올지 모르겠어." }],
+    "level": "high"
+  }
+]
