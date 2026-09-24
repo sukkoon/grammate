@@ -137,9 +137,9 @@ export const curriculum: Part[] = [
         title: "관사",
         hook: "명사 머리에 쓰는 모자. 정해진 것인지, 아닌지를 알려줘요.",
         units: [
-          u("a-an", "부정관사 a/an: 정해지지 않은 하나", "'부정'은 not이 아니라 '정해지지 않은'!", ["초등", "중1"]),
-          u("the", "정관사 the: 우리 둘 다 아는 그것", "말하는 사람과 듣는 사람이 둘 다 아는 것.", ["초등", "중1", "중2"]),
-          u("no-article", "관사를 쓰지 않을 때", "go to school, by bus, play soccer", ["중1", "중2", "고1"]),
+          u("a-an", "부정관사 a/an: 정해지지 않은 하나", "'부정'은 not이 아니라 '정해지지 않은'!", ["초등", "중1"], true),
+          u("the", "정관사 the: 우리 둘 다 아는 그것", "말하는 사람과 듣는 사람이 둘 다 아는 것.", ["초등", "중1", "중2"], true),
+          u("no-article", "관사를 쓰지 않을 때", "go to school, by bus, play soccer", ["중1", "중2", "고1"], true),
         ],
       },
       {
@@ -147,10 +147,10 @@ export const curriculum: Part[] = [
         title: "대명사",
         hook: "같은 이름을 반복하지 않게, 대신 뛰는 선수.",
         units: [
-          u("personal", "인칭대명사와 격", "I, my, me, mine: 자리마다 옷을 갈아입어요.", ["초등", "중1"]),
-          u("demonstrative-it", "지시대명사와 비인칭 it", "this, that, 그리고 날씨·시간의 it", ["초등", "중1"]),
-          u("reflexive", "재귀대명사", "myself: 나에게 되돌아오는 말", ["중1", "중2"]),
-          u("indefinite", "부정대명사", "one, another, the other, some, any", ["중2", "중3", "고1"]),
+          u("personal", "인칭대명사와 격", "I, my, me, mine: 자리마다 옷을 갈아입어요.", ["초등", "중1"], true),
+          u("demonstrative-it", "지시대명사와 비인칭 it", "this, that, 그리고 날씨·시간의 it", ["초등", "중1"], true),
+          u("reflexive", "재귀대명사", "myself: 나에게 되돌아오는 말", ["중1", "중2"], true),
+          u("indefinite", "부정대명사", "one, another, the other, some, any", ["중2", "중3", "고1"], true),
         ],
       },
       {
