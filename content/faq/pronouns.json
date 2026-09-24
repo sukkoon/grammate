@@ -1,0 +1,209 @@
+[
+  {
+    "id": "pp-1",
+    "unit": "pronouns/personal",
+    "q": "I my me mine은 언제 써요?",
+    "alts": ["격 헷갈려요", "주격 소유격 목적격", "아이 마이 미 마인", "대명사 모양이 왜 바뀌어요"],
+    "keys": ["격", "주격", "소유격", "목적격", "I", "my", "me", "mine"],
+    "a": "자리에 따라 모양이 바뀌어요. **주어 자리**(~은/는)는 I, **명사 앞**(~의)은 my, **동사·전치사 뒤**(~을/를)는 me, **혼자서 '~의 것'**은 mine이에요.",
+    "ex": [
+      { "en": "[[I]] love [[my]] mom.", "ko": "나는 우리 엄마를 사랑해." },
+      { "en": "Mom loves [[me]].", "ko": "엄마는 나를 사랑해." },
+      { "en": "This bag is [[mine]].", "ko": "이 가방은 내 거야." }
+    ],
+    "check": "Can you help ___? 빈칸에 we와 us 중 뭐가 올까요?"
+  },
+  {
+    "id": "pp-2",
+    "unit": "pronouns/personal",
+    "q": "3인칭이 뭐예요?",
+    "alts": ["1인칭 2인칭 3인칭", "인칭이 뭐예요", "삼인칭 단수", "제3자"],
+    "keys": ["인칭", "3인칭", "1인칭", "2인칭"],
+    "a": "말하는 **나**(I, we)는 1인칭, 듣는 **너**(you)는 2인칭, **나와 너를 뺀 나머지 모두**가 3인칭이에요. he, she, it, they는 물론이고 Minsu, my dog, the book도 3인칭이에요.",
+    "ex": [{ "en": "[[My dog]] likes water.", "ko": "우리 개는 물을 좋아해. (3인칭 단수라서 likes)" }]
+  },
+  {
+    "id": "pp-3",
+    "unit": "pronouns/personal",
+    "q": "its랑 it's는 뭐가 달라요?",
+    "alts": ["its it's 차이", "잇츠 두 개", "아포스트로피"],
+    "keys": ["its", "it's"],
+    "a": "**its**는 '그것의'(소유격)이고, **it's**는 it is를 줄인 말이에요. 아포스트로피(')가 있으면 줄인 말이라고 기억하세요.",
+    "ex": [
+      { "en": "The dog is wagging [[its]] tail.", "ko": "개가 꼬리를 흔들고 있어. (그것의 꼬리)" },
+      { "en": "[[It's]] my dog.", "ko": "그건 내 개야. (It is)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pp-4",
+    "unit": "pronouns/personal",
+    "q": "my랑 mine은 뭐가 달라요?",
+    "alts": ["This is my 맞아요", "소유대명사", "내 것 영어로"],
+    "keys": ["my", "mine", "소유대명사"],
+    "a": "my는 뒤에 **꼭 명사**가 와요(my book). mine은 '**나의 것**'이라서 혼자 써요(The book is mine). mine = my + 명사예요.",
+    "ex": [
+      { "en": "This is [[my]] book.", "ko": "이건 내 책이야." },
+      { "en": "This book is [[mine]].", "ko": "이 책은 내 거야." }
+    ]
+  },
+  {
+    "id": "pp-5",
+    "unit": "pronouns/personal",
+    "q": "Jisu and I 인지 Jisu and me 인지 모르겠어요",
+    "alts": ["친구랑 나 영어로", "and I and me", "나와 누구"],
+    "keys": ["and I", "and me"],
+    "a": "다른 사람을 빼고 읽어 보세요. 주어 자리면 I, 목적어 자리면 me예요. Jisu and I are friends (I are → 주어), Mom called Jisu and me (Mom called me → 목적어).",
+    "ex": [
+      { "en": "Jisu and [[I]] are friends.", "ko": "지수와 나는 친구야." },
+      { "en": "Mom called Jisu and [[me]].", "ko": "엄마가 지수와 나를 부르셨어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "dt-1",
+    "unit": "pronouns/demonstrative-it",
+    "q": "this랑 that은 뭐가 달라요?",
+    "alts": ["디스 댓 차이", "these those", "이것 저것 영어로", "가까운 거 먼 거"],
+    "keys": ["this", "that", "these", "those"],
+    "a": "가까운 것은 **this**(여럿이면 these), 먼 것은 **that**(여럿이면 those)이에요. 명사 앞에서 '이 ~, 저 ~'로도 써요: this book, those shoes.",
+    "ex": [
+      { "en": "[[This]] is my pencil.", "ko": "이건 내 연필이야." },
+      { "en": "[[Those]] are beautiful flowers.", "ko": "저것들은 아름다운 꽃이야." }
+    ],
+    "check": "멀리 있는 여러 별을 가리킬 때는 뭘 쓸까요?"
+  },
+  {
+    "id": "dt-2",
+    "unit": "pronouns/demonstrative-it",
+    "q": "It is sunny의 it은 뭘 가리켜요?",
+    "alts": ["비인칭 it", "날씨 it", "시간 it", "그것이라고 해석해요"],
+    "keys": ["it", "날씨", "시간", "비인칭"],
+    "a": "아무것도 가리키지 않아요. 영어 문장은 주어 자리를 비워 둘 수 없어서, 날씨·시간·날짜·거리·명암을 말할 때 it이 **자리만 채워요**. 이 it은 '그것'이라고 해석하지 않아요.",
+    "ex": [
+      { "en": "[[It]] is raining now.", "ko": "지금 비가 와." },
+      { "en": "[[It]] is seven o'clock.", "ko": "7시야." }
+    ]
+  },
+  {
+    "id": "dt-3",
+    "unit": "pronouns/demonstrative-it",
+    "q": "It is fun to swim의 it은 뭐예요?",
+    "alts": ["가주어 it", "가짜 주어", "it to 구문"],
+    "keys": ["가주어", "it", "to"],
+    "a": "**가주어**(가짜 주어) it이에요. 진짜 주어 to swim(수영하는 것)이 길어서 뒤로 보내고, 주어 자리에 it을 먼저 세운 거예요. '수영하는 것은 재미있다'로 해석해요.",
+    "ex": [{ "en": "[[It]] is fun to play soccer.", "ko": "축구를 하는 것은 재미있어." }],
+    "level": "middle"
+  },
+  {
+    "id": "dt-4",
+    "unit": "pronouns/demonstrative-it",
+    "q": "소개할 때 왜 This is 써요?",
+    "alts": ["this is 소개", "전화할 때 this", "친구 소개 영어"],
+    "keys": ["소개", "전화", "this is"],
+    "a": "사람을 소개할 때는 가까이 있든 멀리 있든 This is ~라고 해요. 전화로 '저는 ~예요'라고 할 때도 This is ~예요.",
+    "ex": [{ "en": "[[This]] is Minsu.", "ko": "얘는 민수야. / (전화) 저 민수예요." }]
+  },
+  {
+    "id": "rf-1",
+    "unit": "pronouns/reflexive",
+    "q": "myself는 언제 써요?",
+    "alts": ["재귀대명사 언제", "셀프 붙는 거", "마이셀프", "himself him 차이"],
+    "keys": ["myself", "재귀대명사", "self", "himself"],
+    "a": "동작이 **주어 자신에게 되돌아올 때** 써요. 거울 속 나를 볼 때처럼 하는 사람과 받는 사람이 같으면 -self를 붙여요.\nHe hurt him은 '다른 그'를 다치게 한 거고, 자기 자신이면 He hurt himself예요.",
+    "ex": [
+      { "en": "I looked at [[myself]] in the mirror.", "ko": "나는 거울 속 나 자신을 봤어." },
+      { "en": "He hurt [[himself]].", "ko": "그는 다쳤어. (스스로를 다치게 했어)" }
+    ]
+  },
+  {
+    "id": "rf-2",
+    "unit": "pronouns/reflexive",
+    "q": "hisself는 왜 틀려요?",
+    "alts": ["theirselves 맞아요", "재귀대명사 만드는 법", "셀프 셀브즈"],
+    "keys": ["hisself", "theirselves", "themselves", "selves"],
+    "a": "1·2인칭은 소유격(my, your, our)에, 3인칭은 목적격(him, it, them)에 -self를 붙여요. 그래서 himself, themselves가 맞고 hisself, theirselves는 없는 말이에요. 여럿이면 -selves예요.",
+    "ex": [{ "en": "They enjoyed [[themselves]].", "ko": "그들은 즐거운 시간을 보냈어." }]
+  },
+  {
+    "id": "rf-3",
+    "unit": "pronouns/reflexive",
+    "q": "재귀대명사를 빼도 될 때가 있어요?",
+    "alts": ["재귀 용법 강조 용법", "생략 가능한 재귀대명사", "직접이라는 뜻"],
+    "keys": ["생략", "강조", "직접"],
+    "a": "'직접, 스스로'를 **강조**할 때는 빼도 문장이 성립해요(I made this cake myself). 하지만 목적어가 주어 자신일 때(He hurt himself)는 빼면 안 돼요.",
+    "ex": [{ "en": "I made this cake [[myself]].", "ko": "이 케이크는 내가 직접 만들었어." }],
+    "level": "middle"
+  },
+  {
+    "id": "rf-4",
+    "unit": "pronouns/reflexive",
+    "q": "by myself는 무슨 뜻이에요?",
+    "alts": ["혼자서 영어로", "enjoy yourself", "help yourself 뜻"],
+    "keys": ["by myself", "enjoy", "help yourself"],
+    "a": "by myself는 '**혼자서, 혼자 힘으로**'예요. enjoy yourself는 '즐거운 시간을 보내다', help yourself는 '(음식을) 마음껏 먹다'예요.",
+    "ex": [{ "en": "I finished the puzzle [[{by myself|숙어:혼자서}]].", "ko": "나는 혼자서 퍼즐을 다 맞췄어." }],
+    "level": "middle"
+  },
+  {
+    "id": "id-1",
+    "unit": "pronouns/indefinite",
+    "q": "one이랑 it은 뭐가 달라요?",
+    "alts": ["a new one", "원 잇 차이", "같은 종류 하나"],
+    "keys": ["one", "it"],
+    "a": "**it**은 '바로 그것'이고, **one**은 '같은 종류의 아무거나 하나'예요. 펜을 잃어버렸다면 새로 살 건 그 펜이 아니라 펜 하나(a new one)예요.",
+    "ex": [
+      { "en": "I lost my pen. I need a new [[one]].", "ko": "펜을 잃어버렸어. 새 거 하나 필요해." },
+      { "en": "I found my pen. [[It]] was under the desk.", "ko": "펜을 찾았어. 책상 아래 있었어." }
+    ]
+  },
+  {
+    "id": "id-2",
+    "unit": "pronouns/indefinite",
+    "q": "another랑 the other는 뭐가 달라요?",
+    "alts": ["the other another 차이", "어나더 디 아더", "둘 중에 나머지 하나", "셋 중에 하나"],
+    "keys": ["another", "the other", "other"],
+    "a": "**the other**는 남은 게 딱 하나로 **정해졌을 때**(둘 중 나머지), **another**는 **아직 더 남아 있을 때** 고르는 '또 하나'예요. 셋 중에서는 one, another, the other 순서예요.",
+    "ex": [
+      { "en": "I have two pets. [[One]] is a dog, and [[the other]] is a cat.", "ko": "반려동물이 둘이야. 하나는 개, 나머지는 고양이." },
+      { "en": "Can I have [[another]] cookie?", "ko": "쿠키 하나 더 먹어도 돼요?" }
+    ],
+    "check": "I have two sisters. One is tall, and ___ is short. 빈칸엔?",
+    "level": "middle"
+  },
+  {
+    "id": "id-3",
+    "unit": "pronouns/indefinite",
+    "q": "others랑 the others는 뭐가 달라요?",
+    "alts": ["아더스 디 아더스", "나머지 전부", "some others"],
+    "keys": ["others", "the others", "some"],
+    "a": "여럿 중 일부를 말하고 나머지를 **다 말하지 않으면** others, 정해진 무리에서 **나머지 전부**면 the others예요. 마지막 남은 것이 정해지면 늘 the가 붙어요.",
+    "ex": [
+      { "en": "[[Some]] people like summer, and [[others]] like winter.", "ko": "어떤 사람들은 여름을, 다른 사람들은 겨울을 좋아해." },
+      { "en": "There are ten students. [[Some]] are boys, and [[the others]] are girls.", "ko": "학생 열 명 중 몇 명은 남자, 나머지는 모두 여자야." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "id-4",
+    "unit": "pronouns/indefinite",
+    "q": "some이랑 any는 언제 써요?",
+    "alts": ["썸 애니 차이", "부정문 any", "의문문 some"],
+    "keys": ["some", "any"],
+    "a": "**some**은 긍정문과 무언가를 **권하는** 의문문(Would you like some tea?)에, **any**는 부정문과 의문문에 써요.",
+    "ex": [
+      { "en": "I have [[some]] money.", "ko": "돈이 좀 있어." },
+      { "en": "I don't have [[any]] money.", "ko": "돈이 하나도 없어." }
+    ]
+  },
+  {
+    "id": "id-5",
+    "unit": "pronouns/indefinite",
+    "q": "every 뒤에는 단수예요 복수예요?",
+    "alts": ["every students", "each 단수", "every 동사 s"],
+    "keys": ["every", "each", "단수"],
+    "a": "every와 each 뒤에는 **단수 명사 + 단수 동사**가 와요. '모든'이라는 뜻이지만 하나하나를 가리키기 때문이에요: Every student has a phone.",
+    "ex": [{ "en": "[[Every]] child likes presents.", "ko": "모든 아이는 선물을 좋아해." }],
+    "level": "middle"
+  }
+]

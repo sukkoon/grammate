@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WordTooltipLayer } from "@/components/lesson/WordTooltipLayer";
 import { LevelLayer } from "@/components/level/LevelLayer";
+import { Helper } from "@/components/tutor/Helper";
 import { levelScript } from "@/lib/level";
 import "./globals.css";
 
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <WordTooltipLayer />
         <LevelLayer />
+        <Helper />
       </body>
     </html>
   );

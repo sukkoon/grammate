@@ -1,0 +1,173 @@
+[
+  {
+    "id": "aa-1",
+    "unit": "articles/a-an",
+    "q": "a랑 an은 언제 써요?",
+    "alts": ["a an 차이", "왜 an apple이에요", "모음 앞에 an", "에이 언 차이", "an 쓰는 법"],
+    "keys": ["a", "an", "모음", "자음"],
+    "a": "뒤에 오는 단어의 **첫 소리**가 모음 소리(아, 에, 이, 오, 우, 어)면 **an**, 아니면 **a**예요. 철자가 아니라 **소리**가 기준이에요.\n모음 소리 앞에서 a를 쓰면 소리가 부딪혀서, n을 넣어 부드럽게 이어 주는 거예요.",
+    "ex": [
+      { "en": "[[an]] apple", "ko": "사과 하나 (애플: 모음 소리)" },
+      { "en": "[[a]] cat", "ko": "고양이 한 마리 (캣: 자음 소리)" }
+    ],
+    "check": "egg 앞에는 a와 an 중 뭘 쓸까요?"
+  },
+  {
+    "id": "aa-2",
+    "unit": "articles/a-an",
+    "q": "university는 u인데 왜 a예요?",
+    "alts": ["a university 이유", "an hour 이유", "h로 시작하는데 an", "유니버시티 아워"],
+    "keys": ["university", "hour", "uniform", "honest"],
+    "a": "기준은 철자가 아니라 **첫 소리**예요. university는 [유니버시티]로 '유' 소리라서 자음 소리 취급이에요. 그래서 a university.\nhour는 h 소리가 나지 않고 [아워]로 시작해서 an hour예요. honest[아니스트]도 an honest boy.",
+    "ex": [
+      { "en": "[[a]] university", "ko": "대학교 하나" },
+      { "en": "[[an]] hour", "ko": "한 시간" }
+    ]
+  },
+  {
+    "id": "aa-3",
+    "unit": "articles/a-an",
+    "q": "water 앞에 a를 써도 돼요?",
+    "alts": ["a water 맞아요", "셀 수 없는 명사 a", "a milk", "물 한 잔 영어로"],
+    "keys": ["water", "milk", "셀 수 없는", "불가산"],
+    "a": "안 돼요. a/an에는 '하나'라는 뜻이 있어서 **셀 수 있는 명사 하나** 앞에만 써요. water, milk, money처럼 셀 수 없는 명사에는 a를 쓰지 않아요.\n세고 싶으면 그릇을 세요: a glass of water(물 한 잔), a cup of tea(차 한 잔).",
+    "ex": [
+      { "en": "I drink [[water]] every day.", "ko": "나는 매일 물을 마셔." },
+      { "en": "Give me [[{a glass of}]] water, please.", "ko": "물 한 잔 주세요." }
+    ]
+  },
+  {
+    "id": "aa-4",
+    "unit": "articles/a-an",
+    "q": "복수에도 a를 붙여요?",
+    "alts": ["a books 맞아요", "a 뒤에 복수", "두 개면 a"],
+    "keys": ["복수", "books", "a"],
+    "a": "아니요. a는 '하나'라서 복수 명사 앞에는 쓰지 않아요. a book(책 한 권), books(책들), two books(책 두 권)처럼 써요.",
+    "ex": [{ "en": "I have two [[books]].", "ko": "나는 책이 두 권 있어." }]
+  },
+  {
+    "id": "aa-5",
+    "unit": "articles/a-an",
+    "q": "old man 앞에는 a예요 an이에요?",
+    "alts": ["형용사 있을 때 a an", "a big apple", "an old"],
+    "keys": ["형용사", "old", "big"],
+    "a": "a/an 바로 뒤에 오는 단어의 첫 소리를 봐요. 형용사가 있으면 **형용사의 첫 소리**가 기준이에요. old[올드]는 모음 소리라서 an old man, big[빅]은 자음 소리라서 a big apple이에요.",
+    "ex": [
+      { "en": "[[an]] old man", "ko": "한 노인" },
+      { "en": "[[a]] big apple", "ko": "큰 사과 하나" }
+    ]
+  },
+  {
+    "id": "aa-6",
+    "unit": "articles/a-an",
+    "q": "twice a week의 a는 무슨 뜻이에요?",
+    "alts": ["a 마다", "a의 다른 뜻", "일주일에 두 번"],
+    "keys": ["마다", "twice", "week"],
+    "a": "여기서 a는 '**~마다, ~에**'라는 뜻이에요. twice a week는 '일주일에(일주일마다) 두 번'이에요. three times a day는 '하루에 세 번'.",
+    "ex": [{ "en": "I swim twice [[a]] week.", "ko": "나는 일주일에 두 번 수영해." }],
+    "level": "middle"
+  },
+  {
+    "id": "th-1",
+    "unit": "articles/the",
+    "q": "a랑 the는 뭐가 달라요?",
+    "alts": ["the 언제 써요", "정관사 부정관사 차이", "더 에이 차이", "the 뜻"],
+    "keys": ["the", "a", "정관사", "부정관사"],
+    "a": "a는 '**아무거나 하나**', the는 '**우리 둘 다 아는 바로 그것**'이에요.\n처음 이야기에 나오면 a, 이미 말했거나 상황상 둘 다 아는 것이면 the를 써요.",
+    "ex": [
+      { "en": "I saw [[a]] cat. [[The]] cat was black.", "ko": "고양이 한 마리를 봤어. 그 고양이는 까매." }
+    ],
+    "check": "Close ___ door, please. 빈칸에는 a와 the 중 뭘 쓸까요?"
+  },
+  {
+    "id": "th-2",
+    "unit": "articles/the",
+    "q": "sun 앞에 왜 the를 써요?",
+    "alts": ["the sun the moon", "하나뿐인 것 the", "the earth 이유"],
+    "keys": ["sun", "moon", "earth", "하나뿐"],
+    "a": "태양, 달, 지구, 하늘처럼 **세상에 하나뿐인 것**은 누구나 무엇을 가리키는지 알아요. 그래서 the를 써요.",
+    "ex": [{ "en": "[[The]] sun rises in the east.", "ko": "해는 동쪽에서 떠." }]
+  },
+  {
+    "id": "th-3",
+    "unit": "articles/the",
+    "q": "피아노 칠 때는 the 쓰고 축구할 때는 안 써요?",
+    "alts": ["play the piano play soccer", "악기 the 운동 관사", "play the soccer 맞아요"],
+    "keys": ["악기", "운동", "piano", "soccer", "play"],
+    "a": "네! **악기**를 연주할 때는 the를 쓰고(play the piano), **운동**을 할 때는 관사를 쓰지 않아요(play soccer). 내신에 자주 나오는 비교예요.",
+    "ex": [
+      { "en": "I play [[the]] guitar.", "ko": "나는 기타를 쳐." },
+      { "en": "I play [[soccer]].", "ko": "나는 축구를 해." }
+    ]
+  },
+  {
+    "id": "th-4",
+    "unit": "articles/the",
+    "q": "the는 더예요 디예요?",
+    "alts": ["the 발음", "디 애플", "더 발음"],
+    "keys": ["발음", "the"],
+    "a": "자음 소리 앞에서는 [더], 모음 소리 앞에서는 [디]로 읽어요. the cat [더 캣], the apple [디 애플]. a와 an처럼 소리가 부딪히지 않게 바뀌는 거예요."
+  },
+  {
+    "id": "th-5",
+    "unit": "articles/the",
+    "q": "the young은 무슨 뜻이에요?",
+    "alts": ["the 형용사", "the rich the poor", "the + 형용사"],
+    "keys": ["the", "형용사", "사람들", "young", "poor"],
+    "a": "the + 형용사는 '**~한 사람들**'이라는 뜻이에요. the young은 젊은 사람들, the poor는 가난한 사람들이에요. 여러 사람이라 복수로 취급해요.",
+    "ex": [{ "en": "We should help [[the poor]].", "ko": "우리는 가난한 사람들을 도와야 해." }],
+    "level": "high"
+  },
+  {
+    "id": "na-1",
+    "unit": "articles/no-article",
+    "q": "관사를 안 쓸 때는 언제예요?",
+    "alts": ["관사 생략", "관사 없는 경우", "a the 안 붙이는 경우"],
+    "keys": ["관사", "안 쓰", "생략"],
+    "a": "사람·도시·나라·요일 같은 **이름**, **운동·식사·과목·언어**, **by + 탈것**(by bus), 그리고 **원래 목적으로 가는 장소**(go to school, go to bed)에는 관사를 쓰지 않아요.",
+    "ex": [
+      { "en": "Let's play [[soccer]] after [[lunch]].", "ko": "점심 먹고 축구하자." },
+      { "en": "I go to school [[by bus]].", "ko": "나는 버스로 학교에 가." }
+    ]
+  },
+  {
+    "id": "na-2",
+    "unit": "articles/no-article",
+    "q": "by the bus는 틀려요?",
+    "alts": ["by bus 관사", "버스 타고 영어로", "교통수단 관사"],
+    "keys": ["by", "bus", "교통"],
+    "a": "네. '무엇을 타고'를 말할 때 by 뒤에는 관사를 쓰지 않아요: by bus, by train, by bike. 걸어서는 on foot이에요. 하지만 특정한 버스를 가리키면 get on the bus처럼 the를 써요.",
+    "ex": [{ "en": "He travels [[by train]].", "ko": "그는 기차로 여행해." }]
+  },
+  {
+    "id": "na-3",
+    "unit": "articles/no-article",
+    "q": "go to school이랑 go to the school은 달라요?",
+    "alts": ["the school 차이", "학교 관사", "go to bed 관사"],
+    "keys": ["school", "bed", "the school"],
+    "a": "go to school은 **공부하러**(원래 목적) 학교에 가는 거예요. go to the school은 공부가 아니라 **그 학교 건물에** 볼일이 있어서 가는 거예요. 예를 들어 엄마가 선생님을 만나러 가실 때요.",
+    "ex": [
+      { "en": "I go to [[school]] at eight.", "ko": "나는 8시에 학교에 가." },
+      { "en": "My mom went to [[the school]] to meet my teacher.", "ko": "엄마가 선생님을 만나러 학교에 가셨어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "na-4",
+    "unit": "articles/no-article",
+    "q": "점심 먹다가 have a lunch예요?",
+    "alts": ["have lunch", "식사 관사", "아침 먹다 영어"],
+    "keys": ["lunch", "breakfast", "dinner", "식사"],
+    "a": "식사 이름(breakfast, lunch, dinner) 앞에는 보통 관사를 쓰지 않아요: have lunch, eat breakfast.",
+    "ex": [{ "en": "I have [[lunch]] at twelve.", "ko": "나는 12시에 점심을 먹어." }]
+  },
+  {
+    "id": "na-5",
+    "unit": "articles/no-article",
+    "q": "사람 이름 앞에 the 써요?",
+    "alts": ["the Minsu", "이름 관사", "고유명사 관사"],
+    "keys": ["이름", "고유명사"],
+    "a": "사람, 도시, 나라, 요일 이름은 이미 세상에 하나뿐이라 관사를 쓰지 않아요: Minsu, Seoul, Korea, Monday.",
+    "ex": [{ "en": "[[Minsu]] lives in [[Seoul]].", "ko": "민수는 서울에 살아." }]
+  }
+]

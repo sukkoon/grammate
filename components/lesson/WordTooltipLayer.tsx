@@ -131,11 +131,12 @@ export function WordTooltipLayer() {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(place);
     };
-    window.addEventListener("scroll", onMove, { passive: true });
+    // capture: 질문 도우미 패널처럼 안쪽에서 스크롤해도 따라간다
+    window.addEventListener("scroll", onMove, { passive: true, capture: true });
     window.addEventListener("resize", onMove);
     return () => {
       cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onMove);
+      window.removeEventListener("scroll", onMove, { capture: true });
       window.removeEventListener("resize", onMove);
     };
   }, [anchor, place]);

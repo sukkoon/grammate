@@ -1,0 +1,191 @@
+[
+  {
+    "id": "pos-1",
+    "unit": "parts-of-speech/what-is-pos",
+    "q": "품사가 뭐예요?",
+    "alts": ["품사 뜻", "8품사가 뭐예요", "품사는 왜 배워요", "단어 종류"],
+    "keys": ["품사", "8품사"],
+    "a": "품사는 단어를 **문장에서 하는 일에 따라 나눈 종류**예요. 단어의 직업이라고 생각하면 돼요.\n영어에는 명사, 대명사, 동사, 형용사, 부사, 전치사, 접속사, 감탄사 8가지가 있어요.",
+    "ex": [{ "en": "[[Oh]], the little [[dog]] and [[I]] [[run]] very fast [[in]] the park!", "ko": "오, 그 작은 강아지와 나는 공원에서 아주 빨리 달려!" }],
+    "check": "happy는 어떤 품사일까요?"
+  },
+  {
+    "id": "pos-2",
+    "unit": "parts-of-speech/what-is-pos",
+    "q": "사전에 [명] [동] 이런 게 뭐예요?",
+    "alts": ["n. v. adj. 뜻", "사전 기호", "품사 줄임말", "adj adv 뭐예요"],
+    "keys": ["사전", "기호", "n.", "adj", "adv", "줄임말"],
+    "a": "사전의 [명], [동], [형], [부]는 품사 표시예요. 영어로는 n.(명사), v.(동사), adj.(형용사), adv.(부사), prep.(전치사), conj.(접속사)로 줄여 써요.\n뜻과 함께 품사를 보면 그 단어가 문장에서 무슨 일을 하는지 보여요."
+  },
+  {
+    "id": "pos-3",
+    "unit": "parts-of-speech/what-is-pos",
+    "q": "관사는 품사 몇 개 중에 어디 들어가요?",
+    "alts": ["관사 품사", "a the 품사", "관사는 형용사예요"],
+    "keys": ["관사", "품사"],
+    "a": "8품사로 나눌 때 관사(a, an, the)는 명사 앞에서 명사를 꾸며 주기 때문에 보통 **형용사 가족**에 넣어요. 워낙 중요해서 따로 '관사' 장에서 자세히 배워요."
+  },
+  {
+    "id": "c4-1",
+    "unit": "parts-of-speech/core-four",
+    "q": "형용사랑 부사는 뭐가 달라요?",
+    "alts": ["형용사 부사 차이", "부사가 뭐예요", "꾸미는 말 두 개 차이", "happy happily 차이"],
+    "keys": ["형용사", "부사", "꾸미", "차이"],
+    "a": "**형용사**는 명사를 꾸며요(a happy boy). **부사**는 명사 말고 나머지, 즉 동사·형용사·다른 부사·문장 전체를 꾸며요(smile happily).\n'누구/무엇이 어떤지'는 형용사, '어떻게, 얼마나'는 부사라고 기억하세요.",
+    "ex": [
+      { "en": "She is a [[happy]] girl.", "ko": "그녀는 행복한 소녀야. (형용사 → 명사 girl)" },
+      { "en": "She smiles [[happily]].", "ko": "그녀는 행복하게 웃어. (부사 → 동사 smiles)" }
+    ],
+    "check": "He runs ___. 빈칸에 fast와 quick 중 뭐가 올까요?"
+  },
+  {
+    "id": "c4-2",
+    "unit": "parts-of-speech/core-four",
+    "q": "be동사 뒤에는 형용사예요 부사예요?",
+    "alts": ["is 뒤에 형용사", "The dog is cutely 맞아요", "look 뒤에 형용사", "보어 자리 형용사"],
+    "keys": ["be동사", "형용사", "look", "보어"],
+    "a": "be동사(am, is, are) 뒤에서 **주어의 상태를 설명**할 때는 **형용사**를 써요. look, feel, sound, taste, smell 뒤도 마찬가지예요.\nThe dog is cutely가 아니라 The dog is cute예요.",
+    "ex": [
+      { "en": "The dog is [[cute]].", "ko": "그 강아지는 귀여워." },
+      { "en": "You look [[happy]].", "ko": "너 행복해 보여." }
+    ]
+  },
+  {
+    "id": "c4-3",
+    "unit": "parts-of-speech/core-four",
+    "q": "부사는 다 -ly로 끝나요?",
+    "alts": ["ly 붙이면 부사", "fastly 맞아요", "hard 부사예요", "ly로 끝나는 형용사"],
+    "keys": ["ly", "fast", "hard", "friendly"],
+    "a": "많은 부사가 형용사 + -ly로 만들어지지만 전부는 아니에요. fast, hard, early, late는 모양 그대로 부사로도 써요. fastly라는 말은 없어요.\n반대로 friendly(다정한), lovely(사랑스러운)는 -ly로 끝나도 형용사예요. 모양보다 **무엇을 꾸미는지**를 보세요.",
+    "ex": [
+      { "en": "He runs [[fast]].", "ko": "그는 빨리 달려. (부사 fast)" },
+      { "en": "She works [[hard]].", "ko": "그녀는 열심히 일해. (부사 hard)" }
+    ]
+  },
+  {
+    "id": "c4-4",
+    "unit": "parts-of-speech/core-four",
+    "q": "명사인지 어떻게 알아요?",
+    "alts": ["명사 찾는 법", "눈에 안 보이는 것도 명사예요", "사랑도 명사예요"],
+    "keys": ["명사", "찾"],
+    "a": "사람·사물·장소뿐 아니라 사랑, 음악, 시간처럼 눈에 안 보이는 것도 이름이 있으면 명사예요.\n요령: 앞에 a, the, my를 붙여 봐서 말이 되면 명사일 가능성이 커요. my idea, the music은 자연스럽죠.",
+    "ex": [{ "en": "I love [[music]].", "ko": "나는 음악을 사랑해. (music: 명사)" }]
+  },
+  {
+    "id": "c4-5",
+    "unit": "parts-of-speech/core-four",
+    "q": "동사에는 어떤 종류가 있어요?",
+    "alts": ["동작 동사 상태 동사", "be동사도 동사예요", "상태 동사가 뭐예요"],
+    "keys": ["동사", "상태", "동작"],
+    "a": "움직임을 나타내는 **동작 동사**(run, eat, write)와, 움직임은 없지만 상태를 나타내는 **상태 동사**(be, have, like, know)가 있어요. 둘 다 문장의 진짜 동사 자리에 설 수 있어요.",
+    "ex": [
+      { "en": "Birds [[fly]].", "ko": "새들은 난다. (동작)" },
+      { "en": "She [[knows]] my name.", "ko": "그녀는 내 이름을 알아. (상태)" }
+    ]
+  },
+  {
+    "id": "hp-1",
+    "unit": "parts-of-speech/helpers",
+    "q": "전치사 뒤에는 왜 me를 써요?",
+    "alts": ["with I 맞아요", "전치사 뒤 대명사", "for me for I", "전치사 다음에 뭐 와요"],
+    "keys": ["전치사", "me", "목적격", "with"],
+    "a": "전치사 뒤는 **목적어 자리**라서 대명사도 목적격(me, him, her, us, them)을 써요. with I가 아니라 with me예요.",
+    "ex": [
+      { "en": "Come with [[me]].", "ko": "나랑 같이 가자." },
+      { "en": "This gift is for [[him]].", "ko": "이 선물은 그를 위한 거야." }
+    ]
+  },
+  {
+    "id": "hp-2",
+    "unit": "parts-of-speech/helpers",
+    "q": "because랑 because of는 뭐가 달라요?",
+    "alts": ["because of 차이", "because 뒤에 명사", "비코즈 오브"],
+    "keys": ["because", "because of", "접속사", "전치사"],
+    "a": "because는 **접속사**라서 뒤에 문장(주어 + 동사)이 와요. because of는 **전치사**처럼 쓰여서 뒤에 명사가 와요.",
+    "ex": [
+      { "en": "I stayed home [[because]] it rained.", "ko": "비가 와서 집에 있었어. (because + 문장)" },
+      { "en": "I stayed home [[{because of|전치사:~ 때문에}]] the rain.", "ko": "비 때문에 집에 있었어. (because of + 명사)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "hp-3",
+    "unit": "parts-of-speech/helpers",
+    "q": "접속사는 뭐가 있어요?",
+    "alts": ["and but or so", "접속사 종류", "이어주는 말"],
+    "keys": ["접속사", "and", "but", "so", "or"],
+    "a": "and(그리고), but(그러나), or(또는), so(그래서), because(~ 때문에)가 가장 많이 써요. 단어와 단어, 문장과 문장을 이어 줘요. 접속사가 문장을 이으면 진짜 동사도 하나 더 쓸 수 있어요.",
+    "ex": [{ "en": "I was hungry, [[so]] I ate some bread.", "ko": "배가 고파서 빵을 좀 먹었어." }]
+  },
+  {
+    "id": "hp-4",
+    "unit": "parts-of-speech/helpers",
+    "q": "in on under 같은 거 위치 헷갈려요",
+    "alts": ["전치사 위치", "안에 위에 아래에", "next to behind"],
+    "keys": ["in", "on", "under", "위치", "전치사"],
+    "a": "in은 ~ 안에, on은 ~ 위에(붙어서), under는 ~ 아래에, next to는 ~ 옆에, behind는 ~ 뒤에예요. 상자와 고양이 그림을 떠올려 보세요.",
+    "ex": [
+      { "en": "The cat is [[in]] the box.", "ko": "고양이가 상자 안에 있어." },
+      { "en": "The cat is [[under]] the chair.", "ko": "고양이가 의자 아래에 있어." }
+    ]
+  },
+  {
+    "id": "hp-5",
+    "unit": "parts-of-speech/helpers",
+    "q": "감탄사가 뭐예요?",
+    "alts": ["wow oops 품사", "감탄사 뜻"],
+    "keys": ["감탄사", "wow", "oops"],
+    "a": "감탄사는 놀람, 기쁨, 아픔 같은 느낌을 짧게 외치는 말이에요. wow(와!), oops(앗!), ouch(아야!)처럼요. 보통 느낌표나 쉼표와 함께 써요.",
+    "ex": [{ "en": "[[Oops]], I dropped my pen.", "ko": "앗, 펜을 떨어뜨렸어." }]
+  },
+  {
+    "id": "wj-1",
+    "unit": "parts-of-speech/one-word-many-jobs",
+    "q": "like가 좋아하다가 아닐 때도 있어요?",
+    "alts": ["like 뜻이 이상해요", "sings like a bird 해석", "like 처럼", "라이크 전치사"],
+    "keys": ["like", "처럼", "전치사"],
+    "a": "네! like는 동사일 때 '좋아하다', 명사 앞에 놓인 **전치사**일 때 '**~처럼, ~ 같은**'이에요.\nShe sings like a bird는 '그녀는 새처럼 노래해'예요. 자리를 보면 알 수 있어요.",
+    "ex": [
+      { "en": "I [[like]] you.", "ko": "나는 너를 좋아해. (동사)" },
+      { "en": "She sings [[{like|전치사:~처럼, ~같이}]] a bird.", "ko": "그녀는 새처럼 노래해. (전치사)" }
+    ],
+    "check": "It looks like rain.의 like는 무슨 뜻일까요?"
+  },
+  {
+    "id": "wj-2",
+    "unit": "parts-of-speech/one-word-many-jobs",
+    "q": "fast는 형용사예요 부사예요?",
+    "alts": ["fast 품사", "패스트 형용사 부사", "빠른 빨리"],
+    "keys": ["fast", "형용사", "부사"],
+    "a": "둘 다예요. 명사 앞에서 꾸미면 형용사 '빠른'(a fast car), 동사를 꾸미면 부사 '빨리'(He runs fast)예요. 품사는 단어가 아니라 **자리**가 정해요.",
+    "ex": [
+      { "en": "It is a [[{fast|형용사:빠른}]] car.", "ko": "그건 빠른 차야." },
+      { "en": "He runs [[fast]].", "ko": "그는 빨리 달려." }
+    ]
+  },
+  {
+    "id": "wj-3",
+    "unit": "parts-of-speech/one-word-many-jobs",
+    "q": "같은 단어인데 품사가 왜 달라요?",
+    "alts": ["품사 어떻게 알아요", "자리로 품사 찾기", "한 단어 여러 품사"],
+    "keys": ["품사", "자리", "같은 단어"],
+    "a": "영어 단어는 여러 직업을 가질 수 있어요. 그래서 품사는 **문장 속 자리**를 보고 판단해요.\na, the, my 뒤면 명사, 주어 뒤면 동사, 명사 앞에서 꾸미면 형용사, 동사를 꾸미면 부사, 명사 앞에서 관계를 나타내면 전치사예요.",
+    "ex": [
+      { "en": "I drink [[water]] every day.", "ko": "나는 매일 물을 마셔. (명사)" },
+      { "en": "Please [[{water|동사:(식물에) 물을 주다}]] the flowers.", "ko": "꽃에 물 좀 줘. (동사)" }
+    ]
+  },
+  {
+    "id": "wj-4",
+    "unit": "parts-of-speech/one-word-many-jobs",
+    "q": "well은 잘이에요 건강한이에요?",
+    "alts": ["well 뜻", "I am well 해석", "웰 품사"],
+    "keys": ["well", "건강"],
+    "a": "동사를 꾸미면 부사 '잘'(He speaks English well), be동사나 feel 뒤에서 주어 상태를 설명하면 형용사 '건강한'(I feel well), 말을 시작할 때는 감탄사 '음, 글쎄'예요.",
+    "ex": [
+      { "en": "He speaks English [[well]].", "ko": "그는 영어를 잘해." },
+      { "en": "I am not [[{well|형용사:건강한, 몸이 좋은}]] today.", "ko": "나 오늘 몸이 안 좋아." }
+    ],
+    "level": "middle"
+  }
+]
