@@ -1,0 +1,120 @@
+[
+  {
+    "id": "nn-1",
+    "unit": "nouns/countable",
+    "q": "셀 수 있는 명사랑 셀 수 없는 명사는 어떻게 구별해요?",
+    "alts": ["셀 수 없는 명사가 뭐예요", "가산 불가산 차이", "물은 왜 못 세요", "명사 셀 수 있는지"],
+    "keys": ["셀 수 있는", "셀 수 없는", "가산", "불가산"],
+    "a": "**모양이 뚜렷해서 하나씩 떼어 셀 수 있으면** 셀 수 있는 명사(apple, book), 모양이 정해지지 않은 **재료**(water, bread), **눈에 안 보이는 것**(love, advice), **이름**(Seoul)이면 셀 수 없는 명사예요.\n셀 수 없는 명사에는 a도 -s도 붙이지 않고 늘 단수로 취급해요.",
+    "ex": [
+      { "en": "I have [[two apples]].", "ko": "나는 사과가 두 개 있어. (셀 수 있음)" },
+      { "en": "I drink [[water]] every day.", "ko": "나는 매일 물을 마셔. (셀 수 없음)" }
+    ],
+    "check": "homework는 셀 수 있을까요?"
+  },
+  {
+    "id": "nn-2",
+    "unit": "nouns/countable",
+    "q": "homework에 s를 붙이면 왜 틀려요?",
+    "alts": ["homeworks 틀려요", "advice 셀 수 있어요", "information s 붙여요", "숙제 여러 개 영어로"],
+    "keys": ["homework", "advice", "information", "news"],
+    "a": "homework, advice, information, furniture, news는 우리말로는 셀 수 있을 것 같지만 영어에서는 **셀 수 없는 명사**예요. 그래서 -s나 a를 붙이지 않아요. 많다고 할 때는 a lot of나 much를 써요.",
+    "ex": [{ "en": "I have [[{a lot of}]] homework today.", "ko": "오늘 숙제가 많아." }]
+  },
+  {
+    "id": "nn-3",
+    "unit": "nouns/countable",
+    "q": "many랑 much는 뭐가 달라요?",
+    "alts": ["매니 머치 차이", "많은 영어로", "much many 언제"],
+    "keys": ["many", "much"],
+    "a": "**many**는 셀 수 있는 명사(many books), **much**는 셀 수 없는 명사(much time)에 써요. 헷갈리면 둘 다 쓸 수 있는 **a lot of**를 쓰면 돼요.",
+    "ex": [
+      { "en": "I have [[many]] books.", "ko": "나는 책이 많아." },
+      { "en": "I don't have [[much]] time.", "ko": "나는 시간이 별로 없어." }
+    ]
+  },
+  {
+    "id": "nn-4",
+    "unit": "nouns/countable",
+    "q": "paper는 셀 수 있어요 없어요?",
+    "alts": ["a paper 뜻", "time 셀 수 있어요", "glass 셀 수", "뜻에 따라 셀 수"],
+    "keys": ["paper", "time", "glass"],
+    "a": "뜻에 따라 달라요. 재료인 '종이'는 셀 수 없지만, '신문'이라는 뜻의 a paper는 셀 수 있어요. time도 '시간'은 셀 수 없고 '~번'은 셀 수 있어요(three times).",
+    "ex": [{ "en": "My dad reads [[{a paper|명사:신문 한 부}]] every morning.", "ko": "아빠는 매일 아침 신문을 읽으셔." }],
+    "level": "middle"
+  },
+  {
+    "id": "nn-5",
+    "unit": "nouns/plurals",
+    "q": "복수형은 어떻게 만들어요?",
+    "alts": ["s 붙이는 규칙", "es 언제 붙여요", "ies 규칙", "복수 만드는 법"],
+    "keys": ["복수", "es", "ies"],
+    "a": "대부분 **-s**를 붙여요. s·sh·ch·x·o로 끝나면 **-es**(buses, boxes), 자음 + y는 y를 i로 바꾸고 **-es**(babies), 모음 + y는 그냥 -s(boys), f·fe는 **-ves**(leaves, knives)예요.",
+    "ex": [
+      { "en": "There are three [[buses]].", "ko": "버스가 세 대 있어." },
+      { "en": "The [[babies]] are sleeping.", "ko": "아기들이 자고 있어." }
+    ],
+    "check": "city의 복수형은 뭘까요?"
+  },
+  {
+    "id": "nn-6",
+    "unit": "nouns/plurals",
+    "q": "child 복수가 왜 children이에요?",
+    "alts": ["childs 틀려요", "불규칙 복수", "man men", "foot feet", "tooth teeth"],
+    "keys": ["children", "men", "feet", "teeth", "불규칙"],
+    "a": "아주 오래전부터 쓰던 말이라 규칙을 따르지 않고 모양이 확 바뀌어요. man → men, woman → women, child → children, foot → feet, tooth → teeth, mouse → mice, person → people. 자주 쓰는 말이라 금방 익숙해져요.",
+    "ex": [{ "en": "The [[children]] are playing in the park.", "ko": "아이들이 공원에서 놀고 있어." }]
+  },
+  {
+    "id": "nn-7",
+    "unit": "nouns/plurals",
+    "q": "fish 복수는 fishes예요?",
+    "alts": ["sheep 복수", "단수 복수 같은 거", "물고기 여러 마리 영어로"],
+    "keys": ["fish", "sheep", "deer"],
+    "a": "보통 fish, sheep, deer는 **단수와 복수 모양이 같아요**. one fish, two fish처럼 써요.",
+    "ex": [{ "en": "I saw five [[{fish|명사:물고기 (복수)}]] in the pond.", "ko": "연못에서 물고기 다섯 마리를 봤어." }]
+  },
+  {
+    "id": "nn-8",
+    "unit": "nouns/plurals",
+    "q": "바지는 왜 pants처럼 늘 s가 붙어요?",
+    "alts": ["glasses 안경 복수", "scissors 가위", "a pair of 뜻", "바지 한 벌 영어로"],
+    "keys": ["pants", "glasses", "scissors", "a pair of"],
+    "a": "바지, 안경, 가위처럼 **두 쪽이 한 벌**인 것은 늘 복수로 써요. 동사도 복수(are)예요. 하나, 둘 셀 때는 **a pair of**(한 벌, 한 켤레)를 써요.",
+    "ex": [{ "en": "I need [[{a pair of}]] shoes.", "ko": "신발 한 켤레가 필요해." }]
+  },
+  {
+    "id": "nn-9",
+    "unit": "nouns/quantity",
+    "q": "물 한 잔은 영어로 어떻게 말해요?",
+    "alts": ["a glass of", "커피 한 잔 영어로", "셀 수 없는 거 세는 법", "케이크 한 조각"],
+    "keys": ["a glass of", "a cup of", "a piece of", "잔", "조각"],
+    "a": "셀 수 없는 명사는 **그릇이나 조각**을 세요. 물 한 잔은 a glass of water, 커피 한 잔은 a cup of coffee, 케이크 한 조각은 a piece of cake, 밥 한 그릇은 a bowl of rice예요.",
+    "ex": [
+      { "en": "Can I have [[{a glass of}]] milk?", "ko": "우유 한 잔 마셔도 돼요?" },
+      { "en": "She gave me [[{a piece of}]] cake.", "ko": "그녀가 케이크 한 조각을 줬어." }
+    ]
+  },
+  {
+    "id": "nn-10",
+    "unit": "nouns/quantity",
+    "q": "물 두 잔은 two glasses of waters예요?",
+    "alts": ["두 잔 영어로", "복수 어디에 붙여요", "two cups of tea"],
+    "keys": ["glasses", "cups", "두 잔"],
+    "a": "복수가 되는 건 **그릇 쪽**이에요. two glasses of water, two cups of tea. water나 tea에는 -s를 붙이지 않아요.",
+    "ex": [{ "en": "I drank [[two glasses of]] water.", "ko": "나는 물 두 잔을 마셨어." }]
+  },
+  {
+    "id": "nn-11",
+    "unit": "nouns/quantity",
+    "q": "a few랑 a little은 뭐가 달라요?",
+    "alts": ["어 퓨 어 리틀", "few little 차이", "조금 있는 영어로"],
+    "keys": ["a few", "a little", "few", "little"],
+    "a": "**a few**는 셀 수 있는 명사(a few friends), **a little**은 셀 수 없는 명사(a little milk)에 써요. 둘 다 '조금 있는'이에요. a를 빼면 '거의 없는'이라는 부정적인 뜻이 돼요.",
+    "ex": [
+      { "en": "I have [[a few]] friends in this town.", "ko": "이 동네에 친구가 몇 명 있어." },
+      { "en": "There is [[a little]] milk in the fridge.", "ko": "냉장고에 우유가 조금 있어." }
+    ],
+    "level": "middle"
+  }
+]

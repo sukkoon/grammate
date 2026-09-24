@@ -127,9 +127,9 @@ export const curriculum: Part[] = [
         title: "명사",
         hook: "셀 수 있을까, 없을까? 명사의 첫 질문.",
         units: [
-          u("countable", "셀 수 있는 명사와 셀 수 없는 명사", "an apple vs water", ["초등", "중1"]),
-          u("plurals", "복수형 만들기", "-s, -es, 불규칙 복수", ["초등"]),
-          u("quantity", "물질명사의 수량 표현", "a glass of, a piece of", ["초등", "중1"]),
+          u("countable", "셀 수 있는 명사와 셀 수 없는 명사", "an apple vs water", ["초등", "중1"], true),
+          u("plurals", "복수형 만들기", "-s, -es, 불규칙 복수", ["초등"], true),
+          u("quantity", "물질명사의 수량 표현", "a glass of, a piece of", ["초등", "중1"], true),
         ],
       },
       {

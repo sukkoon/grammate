@@ -1,0 +1,31 @@
+[
+  {
+    "id": "plural",
+    "term": "복수",
+    "parts": [
+      { "c": "복", "m": "겹치다, 여럿 ('복사', '중복'의 복)" },
+      { "c": "수", "m": "수, 개수" }
+    ],
+    "result": "둘 이상. 명사가 여럿일 때의 모양 (books, children)",
+    "myth": "'복수(원수를 갚음)'가 아니에요! 여럿이라는 뜻이에요.",
+    "english": "plural",
+    "englishNote": "라틴어 plus(더 많은)와 뿌리가 같아요.",
+    "example": "I have two [[cats]].",
+    "group": "명사·관사",
+    "href": "/learn/nouns/plurals"
+  },
+  {
+    "id": "singular",
+    "term": "단수",
+    "parts": [
+      { "c": "단", "m": "하나, 홑 ('단독', '단일'의 단)" },
+      { "c": "수", "m": "수, 개수" }
+    ],
+    "result": "하나. 명사가 하나일 때의 모양 (a book, a child)",
+    "english": "singular",
+    "englishNote": "single(하나의)과 뿌리가 같아요.",
+    "example": "I have [[a cat]].",
+    "group": "명사·관사",
+    "href": "/learn/nouns/plurals"
+  }
+]

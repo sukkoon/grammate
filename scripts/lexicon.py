@@ -8,6 +8,7 @@
 
 import json
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "content" / "lexicon"
@@ -28,7 +29,16 @@ def load(path: Path) -> dict:
 def write(path: Path, data: dict) -> None:
     keys = sorted(data, key=lambda k: (k.lower(), k))
     lines = [f"  {json.dumps(k, ensure_ascii=False)}: {json.dumps(data[k], ensure_ascii=False)}" for k in keys]
-    path.write_text("{\n" + ",\n".join(lines) + "\n}\n", encoding="utf-8")
+    text = "{\n" + ",\n".join(lines) + "\n}\n"
+    # 검사 도구 같은 다른 프로그램이 잠깐 파일을 쥐고 있으면 실패할 수 있어서 몇 번 다시 시도한다.
+    for attempt in range(5):
+        try:
+            path.write_text(text, encoding="utf-8")
+            break
+        except OSError:
+            if attempt == 4:
+                raise
+            time.sleep(1)
     print(f"{path.name}: {len(keys)}개 항목")
 
 

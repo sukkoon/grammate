@@ -33,11 +33,15 @@ function sentencesIn(file: string): string[] {
   return out.map(stripHunt);
 }
 
-const sources = [
-  ...walk(join(ROOT, "content", "lessons"), [".mdx"]),
-  ...walk(join(ROOT, "components", "illustrations"), [".tsx"]),
-  join(ROOT, "app", "page.tsx"),
+// 공개된 단원과 연결된 그림만 검사한다. 쓰는 중인 초안은 tests/draft.test.ts로 따로 검사한다.
+const readyMdx = readyUnits().map((r) => join(ROOT, "content", "lessons", r.chapter.slug, `${r.unit.slug}.mdx`));
+const linkedIllustrations = [
+  join(ROOT, "components", "illustrations", "index.tsx"),
+  ...[...readFileSync(join(ROOT, "components", "illustrations", "index.tsx"), "utf8").matchAll(/export \* from "\.\/([^"]+)"/g)].map((m) =>
+    join(ROOT, "components", "illustrations", `${m[1]}.tsx`),
+  ),
 ];
+const sources = [...readyMdx, ...linkedIllustrations, join(ROOT, "app", "page.tsx")];
 
 describe("모든 예문의 단어에 뜻이 있다", () => {
   it("단원·그림·홈 화면", () => {
@@ -72,7 +76,7 @@ describe("단원 파일", () => {
 
   it("용어 뜻풀이 카드의 id가 용어 사전에 있다", () => {
     const bad: string[] = [];
-    for (const f of walk(join(ROOT, "content", "lessons"), [".mdx"]))
+    for (const f of readyMdx)
       for (const m of readFileSync(f, "utf8").matchAll(/<TermAnatomy id="([^"]+)"/g))
         if (!termById(m[1])) bad.push(`${relative(ROOT, f)}: ${m[1]}`);
     expect(bad).toEqual([]);
@@ -80,7 +84,7 @@ describe("단원 파일", () => {
 
   it("확인 문제 정답 번호가 보기 안에 있다", () => {
     const bad: string[] = [];
-    for (const f of walk(join(ROOT, "content", "lessons"), [".mdx"])) {
+    for (const f of readyMdx) {
       const src = readFileSync(f, "utf8");
       for (const m of src.matchAll(/options:\s*\[([^\]]*)\][\s\S]*?answer:\s*(\d+)/g)) {
         const count = (m[1].match(/"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'/g) ?? []).length;
