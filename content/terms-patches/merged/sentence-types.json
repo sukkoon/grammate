@@ -1,0 +1,121 @@
+[
+  {
+    "id": "declarative",
+    "term": "평서문",
+    "parts": [
+      { "c": "평", "m": "평범한, 보통의 ('평소', '평일'의 평)" },
+      { "c": "서", "m": "차례대로 풀어 말하다 ('서술'의 서)" },
+      { "c": "문", "m": "문장" }
+    ],
+    "result": "사실이나 생각을 있는 그대로 전하는 보통 문장. 마침표(.)로 끝나요.",
+    "myth": "'평평한 문장'이 아니에요. 묻거나 시키거나 감탄하지 않는 '보통' 문장이라는 뜻이에요.",
+    "english": "declarative sentence",
+    "englishNote": "declare(밝히다, 알리다): 사실을 밝혀 알리는 문장",
+    "example": "I [[live]] in Seoul.",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/exclamations"
+  },
+  {
+    "id": "wh-word",
+    "term": "의문사",
+    "parts": [
+      { "c": "의문", "m": "궁금해서 묻다 ('의문점'의 의문)" },
+      { "c": "사", "m": "말" }
+    ],
+    "result": "궁금한 것을 물어볼 때 질문 맨 앞에 서는 말: who, what, when, where, why, how, which, whose",
+    "english": "question word (wh-word)",
+    "englishNote": "how만 빼고 모두 wh로 시작해서 wh-word라고도 해요.",
+    "example": "[[Where]] do you live?",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/wh-questions"
+  },
+  {
+    "id": "imperative",
+    "term": "명령문",
+    "parts": [
+      { "c": "명령", "m": "하라고 시키다" },
+      { "c": "문", "m": "문장" }
+    ],
+    "result": "상대에게 무엇을 하라고(하지 말라고) 시키는 문장. 주어 you 없이 동사원형으로 시작해요.",
+    "myth": "무섭게 호통치는 말만이 아니에요. please를 붙인 부탁, 길 안내, 요리법도 모두 명령문이에요.",
+    "english": "imperative sentence",
+    "englishNote": "라틴어 imperare(명령하다)",
+    "example": "[[Open]] the window, please.",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/imperatives"
+  },
+  {
+    "id": "suggestion",
+    "term": "제안문",
+    "parts": [
+      { "c": "제안", "m": "생각을 내놓아 권하다" },
+      { "c": "문", "m": "문장" }
+    ],
+    "result": "'우리 같이 ~하자'라고 함께 하기를 권하는 문장: Let's + 동사원형",
+    "english": "suggestion (Let's ~)",
+    "englishNote": "suggest(제안하다). Let's는 Let us를 줄인 말이에요.",
+    "example": "[[Let's play]] soccer after school.",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/imperatives"
+  },
+  {
+    "id": "exclamatory",
+    "term": "감탄문",
+    "parts": [
+      { "c": "감탄", "m": "크게 느껴서 외치다 ('감탄사'의 감탄)" },
+      { "c": "문", "m": "문장" }
+    ],
+    "result": "놀람, 기쁨, 감동을 크게 나타내는 문장. What이나 How로 시작하고 느낌표(!)로 끝나요.",
+    "myth": "감탄사(Wow, Oh)는 한 단어, 감탄문은 What·How로 만든 문장이에요.",
+    "english": "exclamatory sentence",
+    "englishNote": "exclaim(외치다): ex(밖으로) + claim(소리치다)",
+    "example": "[[How cute]] your cat is!",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/exclamations"
+  },
+  {
+    "id": "introductory-there",
+    "term": "유도부사 there",
+    "parts": [
+      { "c": "유도", "m": "이끌어 들이다 ('유도'의 뜻 그대로)" },
+      { "c": "부사", "m": "곁에서 꾸며 주는 말" }
+    ],
+    "result": "뜻 없이 문장 맨 앞 자리를 채우고, be동사 뒤의 진짜 주어를 이끌어 오는 there",
+    "myth": "'거기에'라는 뜻이 아니에요! There is a cat.은 '거기에 고양이가 있다'가 아니라 '고양이가 있다'예요.",
+    "english": "introductory there",
+    "englishNote": "introduce(이끌어 들이다, 소개하다): 뒤의 주어를 소개하는 there",
+    "example": "[[{There is}]] a park near my house.",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/there-is"
+  },
+  {
+    "id": "tag-question",
+    "term": "부가의문문",
+    "parts": [
+      { "c": "부가", "m": "덧붙이다 ('부가 서비스'의 부가)" },
+      { "c": "의문문", "m": "묻는 문장" }
+    ],
+    "result": "평서문이나 명령문 끝에 짧게 덧붙여 '그렇지?', '알았지?' 하고 확인하는 꼬리 질문",
+    "myth": "부사의 '부'(곁에서 돕다)나 부정의 '부'(아니다)가 아니에요. 덧붙인다는 뜻의 '부'예요.",
+    "english": "tag question",
+    "englishNote": "tag(꼬리표): 문장 끝에 꼬리표처럼 달려요.",
+    "example": "You are hungry, [[aren't you]]?",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/tag-questions"
+  },
+  {
+    "id": "negative-question",
+    "term": "부정의문문",
+    "parts": [
+      { "c": "부정", "m": "아니라고 하다 (not)" },
+      { "c": "의문문", "m": "묻는 문장" }
+    ],
+    "result": "not이 붙은 줄임말로 시작하는 의문문: Aren't you ~? Don't you ~? ('~하지 않니?')",
+    "myth": "이번 '부정'은 not이 맞아요! 부정관사·부정사의 '부정'(정해지지 않은)과는 다른 말이에요.",
+    "english": "negative question",
+    "englishNote": "negative(부정의, 아니라고 하는)",
+    "example": "[[Aren't you]] hungry?",
+    "group": "문장 구조",
+    "href": "/learn/sentence-types/tag-questions"
+  }
+]

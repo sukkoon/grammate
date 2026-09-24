@@ -1,0 +1,341 @@
+[
+  {
+    "id": "st-1",
+    "unit": "sentence-types/wh-questions",
+    "q": "의문사가 뭐예요?",
+    "alts": ["의문사 뜻", "who what 같은 거 뭐라고 불러요", "의문사 종류 알려 주세요", "wh 단어가 뭐예요", "후 왓 웬 웨어"],
+    "keys": ["의문사", "who", "what", "how"],
+    "a": "**궁금한 것을 물어볼 때 질문 맨 앞에 서는 말**이에요. 의문(궁금해서 묻다) + 사(말)라서 '물어보는 말'이죠.\nwho(누구), what(무엇), when(언제), where(어디), why(왜), how(어떻게), which(어느 것), whose(누구의) 여덟 개를 먼저 외워요.",
+    "ex": [
+      { "en": "[[Where]] is my bag?", "ko": "내 가방 어디 있지?" },
+      { "en": "[[Why]] are you sad?", "ko": "너 왜 슬퍼?" }
+    ],
+    "check": "'왜'를 묻는 의문사는 무엇일까요?"
+  },
+  {
+    "id": "st-2",
+    "unit": "sentence-types/wh-questions",
+    "q": "Where you live?는 왜 틀려요?",
+    "alts": ["의문사 의문문 어순", "의문사 다음에 뭐 와요", "의문사 뒤에 do 넣어요", "웨어 두 유 리브", "where does she lives 맞아요"],
+    "keys": ["어순", "do", "does", "did", "동사원형"],
+    "a": "의문사 뒤에는 **의문문 순서**가 와요. 일반동사면 의문사 + do/does/did + 주어 + **동사원형**, be동사면 의문사 + be + 주어예요.\nWhere you live?에는 do가 빠졌어요. Where do you live?가 맞아요. does나 did를 쓰면 동사는 꼭 원형으로 돌아가요.",
+    "ex": [
+      { "en": "[[Where do]] you live?", "ko": "너 어디 살아?" },
+      { "en": "[[Where does]] she [[live]]?", "ko": "그녀는 어디 살아? (does 뒤에는 동사원형 live)" }
+    ]
+  },
+  {
+    "id": "st-3",
+    "unit": "sentence-types/wh-questions",
+    "q": "How many랑 How much는 뭐가 달라요?",
+    "alts": ["하우 매니 하우 머치 차이", "몇 개 있어 영어로", "가격 물어볼 때 뭐 써요", "how much 뜻", "how many water 맞아요"],
+    "keys": ["how many", "how much", "가격", "개수"],
+    "a": "**How many**는 셀 수 있는 것의 **개수**를 물어요. 뒤에 복수 명사가 와요.\n**How much**는 셀 수 없는 것의 **양**이나 물건의 **가격**을 물어요.",
+    "ex": [
+      { "en": "[[How many]] pencils do you have?", "ko": "연필 몇 자루 있어?" },
+      { "en": "[[How much]] is this cap?", "ko": "이 모자 얼마예요?" }
+    ],
+    "check": "How ___ water do you drink? 빈칸에는 many와 much 중 뭘 쓸까요?"
+  },
+  {
+    "id": "st-4",
+    "unit": "sentence-types/wh-questions",
+    "q": "Who made this?에는 왜 did가 없어요?",
+    "alts": ["의문사가 주어일 때", "who did make 맞아요", "누가 했어 영어로", "의문사 주어면 do 안 써요"],
+    "keys": ["주어", "who", "did", "do"],
+    "a": "여기서 Who가 **주어**(누가)이기 때문이에요. 의문사가 주어면 이미 '주어 + 동사' 순서가 되니까 do/does/did가 필요 없어요.\n동사는 바로 써요. 과거면 Who made, 현재면 Who lives처럼 3인칭 단수로 써요.",
+    "ex": [
+      { "en": "[[Who made]] this cake?", "ko": "누가 이 케이크를 만들었어?" },
+      { "en": "[[Who did]] you [[call]]?", "ko": "너는 누구한테 전화했어? (Who가 목적어라서 did가 필요해요)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-5",
+    "unit": "sentence-types/wh-questions",
+    "q": "의문사로 물어보면 Yes No로 대답하면 안 돼요?",
+    "alts": ["의문사 의문문 대답", "where 질문에 yes", "예스 노로 대답해도 돼요", "의문사 대답하는 법"],
+    "keys": ["대답", "yes", "no"],
+    "a": "안 돼요. 의문사 의문문은 **정보**를 묻는 질문이라서 그 정보를 말해 줘야 해요. Where do you live?에 Yes, I do.라고 하면 대답이 안 되죠.\nYes/No 대답은 Do you ~?, Are you ~?처럼 **의문사가 없는 의문문**에만 써요.",
+    "ex": [
+      { "en": "Where do you live? — I live [[in Busan]].", "ko": "어디 살아? — 부산에 살아." }
+    ],
+    "check": "When is your birthday?에 알맞은 대답은 Yes일까요, 날짜일까요?"
+  },
+  {
+    "id": "st-6",
+    "unit": "sentence-types/wh-questions",
+    "q": "what이랑 which는 뭐가 달라요?",
+    "alts": ["왓 위치 차이", "어느 것 영어로", "which 언제 써요", "what which 구별"],
+    "keys": ["what", "which", "보기", "고르"],
+    "a": "**what**은 보기 없이 '무엇'을 넓게 묻고, **which**는 **정해진 보기 중에서** '어느 것'을 고르라고 물어요.\n'뭐 먹을래?'는 what, '피자랑 밥 중에 뭐 먹을래?'는 which예요.",
+    "ex": [
+      { "en": "[[What]] do you want for lunch?", "ko": "점심으로 뭐 먹고 싶어?" },
+      { "en": "[[Which]] do you want, pizza or rice?", "ko": "피자랑 밥 중에 어느 걸 먹을래?" }
+    ]
+  },
+  {
+    "id": "st-7",
+    "unit": "sentence-types/imperatives",
+    "q": "명령문은 왜 주어가 없어요?",
+    "alts": ["명령문 you 생략", "명령문 만드는 법", "주어 없는 문장", "오픈 더 도어 주어", "명령문 뭐로 시작해요"],
+    "keys": ["명령문", "you", "동사원형", "주어"],
+    "a": "명령은 언제나 **눈앞의 너(you)**에게 하는 말이라서, you를 말하지 않아도 누구에게 하는 말인지 알아요. 그래서 you를 빼고 **동사원형**으로 바로 시작해요.",
+    "ex": [
+      { "en": "[[Open]] the window, please.", "ko": "창문 좀 열어 주세요." },
+      { "en": "[[Wash]] your hands.", "ko": "손 씻어." }
+    ]
+  },
+  {
+    "id": "st-8",
+    "unit": "sentence-types/imperatives",
+    "q": "조심해, 조용히 해는 영어로 어떻게 해요?",
+    "alts": ["be quiet 뜻", "형용사로 명령할 때", "be 명령문", "비 케어풀", "careful 앞에 be 왜 붙어요"],
+    "keys": ["be", "형용사", "quiet", "careful"],
+    "a": "quiet(조용한), careful(조심하는) 같은 **형용사**는 동사가 아니라서 혼자 명령문을 시작할 수 없어요. 그래서 be동사의 원형 **Be**를 앞에 세워요: Be quiet. Be careful.\nam, are, is가 아니라 꼭 **원형 be**예요.",
+    "ex": [
+      { "en": "[[Be]] careful!", "ko": "조심해!" },
+      { "en": "[[Don't be]] late.", "ko": "늦지 마." }
+    ]
+  },
+  {
+    "id": "st-9",
+    "unit": "sentence-types/imperatives",
+    "q": "하지 마는 영어로 어떻게 해요?",
+    "alts": ["부정 명령문", "don't 명령문", "never 명령문", "~하지 마라 영어로", "돈트 네버 차이"],
+    "keys": ["don't", "never", "부정", "하지 마"],
+    "a": "동사원형 앞에 **Don't**를 붙여요. '절대 ~하지 마'처럼 더 세게 말할 때는 **Never**를 써요.\n형용사면 Don't be ~예요: Don't be sad.",
+    "ex": [
+      { "en": "[[Don't run]] in the classroom.", "ko": "교실에서 뛰지 마." },
+      { "en": "[[Never {give up}]]!", "ko": "절대 포기하지 마!" }
+    ]
+  },
+  {
+    "id": "st-10",
+    "unit": "sentence-types/imperatives",
+    "q": "Let's 뒤에는 뭐가 와요?",
+    "alts": ["렛츠 뒤에", "let's 부정문", "~하지 말자 영어로", "let's not", "let's going 맞아요"],
+    "keys": ["let's", "let's not", "동사원형", "제안"],
+    "a": "Let's 뒤에는 **동사원형**이 와요: Let's go. Let's play.\n'~하지 말자'는 **Let's not + 동사원형**이에요. Let's don't는 틀려요.",
+    "ex": [
+      { "en": "[[Let's play]] soccer after school.", "ko": "방과 후에 축구하자." },
+      { "en": "[[Let's not]] fight.", "ko": "싸우지 말자." }
+    ],
+    "check": "'같이 노래하자'를 Let's로 말해 볼까요?"
+  },
+  {
+    "id": "st-11",
+    "unit": "sentence-types/imperatives",
+    "q": "명령문 뒤에 and랑 or는 무슨 뜻이에요?",
+    "alts": ["명령문 and or", "그러면 그렇지 않으면 영어로", "명령문 and 해석", "명령문 or if 바꾸기"],
+    "keys": ["and", "or", "그러면", "그렇지 않으면"],
+    "a": "명령문, **and** ~는 '…해라, **그러면** ~할 거야', 명령문, **or** ~는 '…해라, **그렇지 않으면** ~할 거야'예요.\nif로 바꿔 쓸 수 있어요. and는 If you ~, or는 If you don't ~예요.",
+    "ex": [
+      { "en": "{Get up} early, [[and]] you will catch the bus.", "ko": "일찍 일어나, 그러면 버스를 탈 거야." },
+      { "en": "{Get up} early, [[or]] you will miss the bus.", "ko": "일찍 일어나, 그렇지 않으면 버스를 놓칠 거야." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-12",
+    "unit": "sentence-types/exclamations",
+    "q": "감탄문은 어떻게 만들어요?",
+    "alts": ["감탄문 만드는 법", "what how 감탄문", "왓 어 감탄문", "감탄문 공식", "정말 귀엽다 영어로"],
+    "keys": ["감탄문", "what", "how"],
+    "a": "두 가지 틀이 있어요.\n**What + (a/an) + 형용사 + 명사 (+ 주어 + 동사)!** 그리고 **How + 형용사·부사 (+ 주어 + 동사)!**\n끝에는 느낌표(!)를 찍어요. 주어 + 동사는 빼도 돼요.",
+    "ex": [
+      { "en": "[[{What|의문사:(감탄문) 정말 ~한} a cute dog]] it is!", "ko": "정말 귀여운 강아지구나!" },
+      { "en": "[[{How|의문사:(감탄문) 정말, 얼마나} cute]] it is!", "ko": "정말 귀엽구나!" }
+    ]
+  },
+  {
+    "id": "st-13",
+    "unit": "sentence-types/exclamations",
+    "q": "What이랑 How 중에 뭘 써야 할지 모르겠어요",
+    "alts": ["감탄문 what how 구별", "감탄문 what how 차이", "명사 있으면 what", "왓이야 하우야"],
+    "keys": ["what", "how", "명사", "형용사"],
+    "a": "**명사가 있으면 What, 없으면 How**예요. 형용사 뒤에 명사(dog, day, girl…)가 따라오면 What, 형용사나 부사만 있으면 How를 써요.",
+    "ex": [
+      { "en": "[[{What|의문사:(감탄문) 정말 ~한} a beautiful day]]!", "ko": "정말 아름다운 날이다! (명사 day가 있어요)" },
+      { "en": "[[{How|의문사:(감탄문) 정말, 얼마나} beautiful]]!", "ko": "정말 아름답다! (형용사만 있어요)" }
+    ],
+    "check": "___ tall the tree is! 빈칸은 What일까요, How일까요?"
+  },
+  {
+    "id": "st-14",
+    "unit": "sentence-types/exclamations",
+    "q": "What a nice weather!는 왜 틀려요?",
+    "alts": ["감탄문 a 빼는 경우", "what 뒤에 복수", "셀 수 없는 명사 감탄문", "왓 어 나이스 웨더"],
+    "keys": ["a", "weather", "복수", "셀 수 없는"],
+    "a": "weather는 **셀 수 없는 명사**라서 a를 붙이지 않아요. 복수 명사도 마찬가지예요.\na는 '하나'라는 뜻이니까 셀 수 있는 명사 **하나**일 때만 써요.",
+    "ex": [
+      { "en": "[[{What|의문사:(감탄문) 정말 ~한} nice weather]]!", "ko": "날씨 정말 좋다!" },
+      { "en": "[[{What|의문사:(감탄문) 정말 ~한} cute cats]]!", "ko": "고양이들 정말 귀엽다!" }
+    ]
+  },
+  {
+    "id": "st-15",
+    "unit": "sentence-types/exclamations",
+    "q": "평서문을 감탄문으로 어떻게 바꿔요?",
+    "alts": ["평서문 감탄문 바꾸기", "very 있는 문장 감탄문", "감탄문 전환 문제", "감탄문으로 고치기"],
+    "keys": ["평서문", "very", "바꾸"],
+    "a": "① **very**를 지우고, ② 명사가 있으면 What, 없으면 How를 맨 앞에 세우고, ③ 남은 **주어 + 동사**를 맨 뒤로 보내요.\nIt is a very old house. → What an old house it is! very가 빠지면서 a가 an으로 바뀌는 것도 조심하세요.",
+    "ex": [
+      { "en": "[[{What|의문사:(감탄문) 정말 ~한} an old house]] it is!", "ko": "정말 오래된 집이구나!" },
+      { "en": "[[{How|의문사:(감탄문) 정말, 얼마나} funny]] the movie is!", "ko": "그 영화 정말 웃기다!" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-16",
+    "unit": "sentence-types/exclamations",
+    "q": "How tall he is!랑 How tall is he?는 뭐가 달라요?",
+    "alts": ["감탄문 의문문 차이", "감탄문 어순", "하우 톨 히 이즈", "감탄문 주어 동사 순서"],
+    "keys": ["어순", "의문문", "감탄문"],
+    "a": "**How tall is he?**는 '그는 키가 얼마야?'라고 묻는 의문문이에요. 동사 + 주어 순서죠.\n**How tall he is!**는 '그는 정말 키가 크구나!'라는 감탄문이에요. 감탄문은 뒤가 **주어 + 동사**, 평서문 순서예요.",
+    "ex": [
+      { "en": "[[How tall is he]]?", "ko": "그는 키가 얼마나 돼?" },
+      { "en": "[[{How|의문사:(감탄문) 정말, 얼마나} tall he is]]!", "ko": "그는 정말 키가 크구나!" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-17",
+    "unit": "sentence-types/there-is",
+    "q": "There is에서 there는 거기라는 뜻 아니에요?",
+    "alts": ["데어 이즈 뜻", "there 해석", "there is 거기에", "유도부사가 뭐예요", "there 해석 안 해요"],
+    "keys": ["there", "해석", "유도부사"],
+    "a": "There is/are의 there는 **해석하지 않아요**. 문장 맨 앞 자리를 채우고 뒤의 진짜 주어를 이끌어 오는 말이라서, 문장 전체를 '~이 있다'로만 읽어요.\n'거기에, 저기에'라는 뜻의 there는 보통 문장 **뒤쪽**에 와요: over there(저기에).",
+    "ex": [
+      { "en": "[[{There is}]] a cat under the bed.", "ko": "침대 밑에 고양이가 있어." },
+      { "en": "Look {over there}.", "ko": "저기 좀 봐." }
+    ]
+  },
+  {
+    "id": "st-18",
+    "unit": "sentence-types/there-is",
+    "q": "There is랑 There are는 어떻게 골라요?",
+    "alts": ["데어 이즈 데어 아 차이", "there are 언제 써요", "there is 뒤에 복수", "there is two 맞아요"],
+    "keys": ["is", "are", "단수", "복수"],
+    "a": "be동사 **뒤에 오는 명사**(진짜 주어)를 보고 골라요. 하나이거나 셀 수 없는 명사면 **is**, 둘 이상이면 **are**예요.",
+    "ex": [
+      { "en": "[[{There is}]] a pen on the desk.", "ko": "책상 위에 펜이 하나 있어." },
+      { "en": "[[{There are}]] two pens on the desk.", "ko": "책상 위에 펜이 두 개 있어." }
+    ],
+    "check": "There ___ some milk in the cup. 빈칸은 is일까요, are일까요?"
+  },
+  {
+    "id": "st-19",
+    "unit": "sentence-types/there-is",
+    "q": "There is 의문문이랑 부정문은 어떻게 만들어요?",
+    "alts": ["is there 대답", "there is 부정문", "there is 대답 it is", "이즈 데어", "there isn't"],
+    "keys": ["is there", "are there", "부정", "대답"],
+    "a": "be동사를 there 앞으로 보내면 의문문이에요: **Is there ~? / Are there ~?**\n대답도 there로 해요: Yes, there is. / No, there isn't. 부정문은 be동사 뒤에 not을 붙여요: There isn't ~, There aren't ~.",
+    "ex": [
+      { "en": "[[{Is there}]] a library near here? — Yes, [[{there is}]].", "ko": "이 근처에 도서관이 있나요? — 네, 있어요." },
+      { "en": "[[{There aren't}]] any cookies in the box.", "ko": "상자에 쿠키가 하나도 없어." }
+    ]
+  },
+  {
+    "id": "st-20",
+    "unit": "sentence-types/there-is",
+    "q": "There is랑 It is는 어떻게 달라요?",
+    "alts": ["비인칭 it there 차이", "it is there is 차이", "있다를 it is로 해도 돼요", "고양이가 있다 영어로"],
+    "keys": ["it", "there", "있다", "비인칭"],
+    "a": "둘 다 해석하지 않는 자리 채움 말이지만 하는 일이 달라요. **It is**는 날씨·시간·거리를 말할 때, **There is**는 무언가가 **있다**고 말할 때 써요.\n'고양이가 있다'를 It is a cat.이라고 하면 '그건 고양이야'가 돼요.",
+    "ex": [
+      { "en": "[[It]] is cold today.", "ko": "오늘 추워. (날씨)" },
+      { "en": "[[{There is}]] a cat on the sofa.", "ko": "소파 위에 고양이가 있어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-21",
+    "unit": "sentence-types/there-is",
+    "q": "몇 개 있어?는 영어로 어떻게 물어요?",
+    "alts": ["how many are there", "몇 명 있어 영어로", "how many there are 순서", "하우 매니 아 데어"],
+    "keys": ["how many", "are there", "몇"],
+    "a": "**How many + 복수 명사 + are there (+ 장소)?**예요. 대답은 There are ~.로 해요.\n셀 수 없는 것의 양은 How much + 명사 + is there ~?로 물어요.",
+    "ex": [
+      { "en": "[[How many]] students [[{are there}]] in your class?", "ko": "너희 반에는 학생이 몇 명 있어?" },
+      { "en": "{There are} thirty students.", "ko": "30명 있어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-22",
+    "unit": "sentence-types/tag-questions",
+    "q": "부가의문문은 어떻게 만들어요?",
+    "alts": ["부가의문문 공식", "꼬리 질문 만드는 법", "~지 그렇지 영어로", "태그 퀘스천", "isn't he 어떻게 붙여요"],
+    "keys": ["부가의문문", "긍정", "부정", "대명사"],
+    "a": "세 가지만 기억해요.\n① 앞 문장의 동사 종류를 따라가요(be → be, 조동사 → 조동사, 일반동사 → do/does/did).\n② 앞이 긍정이면 꼬리는 **부정**, 앞이 부정이면 꼬리는 **긍정**.\n③ 주어는 **대명사**로 바꿔요.",
+    "ex": [
+      { "en": "Minsu likes soccer, [[doesn't he]]?", "ko": "민수는 축구 좋아하지, 그렇지?" },
+      { "en": "She isn't busy, [[is she]]?", "ko": "그녀는 안 바쁘지, 그렇지?" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-23",
+    "unit": "sentence-types/tag-questions",
+    "q": "명령문이랑 Let's 뒤에는 어떤 꼬리를 붙여요?",
+    "alts": ["명령문 부가의문문", "let's shall we", "will you 부가의문문", "렛츠 쉘 위"],
+    "keys": ["will you", "shall we", "let's", "명령문"],
+    "a": "명령문 뒤에는 **will you?**, Let's 뒤에는 **shall we?**를 붙여요. 긍정 명령문이든 부정 명령문이든 꼬리는 will you?예요.",
+    "ex": [
+      { "en": "Open the door, [[will you]]?", "ko": "문 좀 열어 줄래?" },
+      { "en": "Let's go home, [[shall we]]?", "ko": "우리 집에 갈까?" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-24",
+    "unit": "sentence-types/tag-questions",
+    "q": "I am 부가의문문은 amn't I예요?",
+    "alts": ["I am 부가의문문", "aren't I 맞아요", "아런트 아이", "나 늦었지 그렇지 영어로"],
+    "keys": ["aren't i", "i am", "amn't"],
+    "a": "amn't라는 말은 없어요. I am ~의 꼬리는 **aren't I?**예요. 조금 특이하니까 따로 외워 두세요.",
+    "ex": [
+      { "en": "I'm late, [[aren't I]]?", "ko": "나 늦었지, 그렇지?" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-25",
+    "unit": "sentence-types/tag-questions",
+    "q": "부가의문문에 대답할 때 Yes No가 헷갈려요",
+    "alts": ["부가의문문 대답", "is she 대답 no", "꼬리 질문 대답하는 법", "부가의문문 예스 노"],
+    "keys": ["대답", "yes", "no", "부가의문문"],
+    "a": "꼬리는 신경 쓰지 말고 **사실만** 봐요. 대답하는 내용이 긍정이면 **Yes**, 부정이면 **No**예요.\nShe isn't busy, is she?에 그녀가 정말 안 바쁘면 No, she isn't.(응, 안 바빠)예요.",
+    "ex": [
+      { "en": "She isn't busy, is she? — [[{No|부사:아니(요)}, she isn't]].", "ko": "그녀는 안 바쁘지? — 응, 안 바빠." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "st-26",
+    "unit": "sentence-types/tag-questions",
+    "q": "Aren't you hungry?에 배고프면 뭐라고 해요?",
+    "alts": ["부정의문문 대답", "아런트 유 대답", "네 아니요 반대", "부정 의문문 yes no", "안 먹었어 물어보면 뭐라고 해요"],
+    "keys": ["부정의문문", "yes", "no", "대답"],
+    "a": "배가 고프면 **Yes, I am.**(아니, 배고파), 안 고프면 **No, I'm not.**(응, 안 고파)예요.\n영어는 질문의 모양과 상관없이 **내 대답 내용이 긍정이면 Yes, 부정이면 No**예요. 우리말 '네/아니요'와 거꾸로라서 헷갈리죠. not을 지우고 Are you hungry?에 대답한다고 생각하면 쉬워요.",
+    "ex": [
+      { "en": "[[Aren't you]] hungry? — Yes, I am.", "ko": "배 안 고파? — 아니, 배고파." },
+      { "en": "[[Aren't you]] hungry? — {No|부사:아니(요)}, I'm not.", "ko": "배 안 고파? — 응, 안 고파." }
+    ],
+    "check": "Don't you like cats?에 고양이를 좋아하면 Yes일까요, No일까요?",
+    "level": "middle"
+  },
+  {
+    "id": "st-27",
+    "unit": "sentence-types/tag-questions",
+    "q": "Do you mind 질문에 No라고 하면 괜찮다는 거예요?",
+    "alts": ["mind 대답", "would you mind 대답", "do you mind no 뜻", "마인드 질문 대답"],
+    "keys": ["mind", "not at all", "괜찮"],
+    "a": "네. mind는 '**싫어하다, 꺼리다**'라는 뜻이라서, Do you mind if I sit here?는 '제가 여기 앉으면 싫으세요?'예요. 괜찮다면 '안 싫어요'니까 **No, not at all.**이나 **Of course not.**이라고 해요.\nYes라고 하면 '싫어요'라는 뜻이 되니 조심하세요.",
+    "ex": [
+      { "en": "Do you [[mind]] if I open the window? — {No|부사:아니(요)}, {not at all}.", "ko": "창문 열어도 될까요? — 그럼요, 괜찮아요." }
+    ],
+    "level": "high"
+  }
+]

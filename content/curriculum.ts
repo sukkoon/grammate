@@ -97,11 +97,11 @@ export const curriculum: Part[] = [
         title: "문장의 종류",
         hook: "묻고, 시키고, 제안하고, 감탄하는 문장.",
         units: [
-          u("wh-questions", "의문사 의문문", "who, what, when, where, why, how", ["초등", "중1"]),
-          u("imperatives", "명령문과 제안문", "Open the door. / Let's go.", ["초등"]),
-          u("exclamations", "감탄문", "What a day! / How nice!", ["초등", "중1"]),
-          u("there-is", "There is / There are", "~이 있다", ["중1"]),
-          u("tag-questions", "부가의문문과 부정의문문", "~지, 그렇지?", ["중1", "고2"]),
+          u("wh-questions", "의문사 의문문", "who, what, when, where, why, how", ["초등", "중1"], true),
+          u("imperatives", "명령문과 제안문", "Open the door. / Let's go.", ["초등"], true),
+          u("exclamations", "감탄문", "What a day! / How nice!", ["초등", "중1"], true),
+          u("there-is", "There is / There are", "~이 있다", ["중1"], true),
+          u("tag-questions", "부가의문문과 부정의문문", "~지, 그렇지?", ["중1", "고2"], true),
         ],
       },
       {

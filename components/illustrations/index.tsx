@@ -729,3 +729,4 @@ export function PrepositionBox() {
 export * from "./nouns";
 export * from "./tenses";
 export * from "./verbs-basics";
+export * from "./sentence-types";
