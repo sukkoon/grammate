@@ -122,10 +122,12 @@ export function lookup(raw: string, sentenceStart = false): Gloss | null {
     if (base) return { ...base, surface, meaning: `${base.meaning}의`, note: "'s: ~의 (소유격)", alts: undefined };
   }
   for (const { base, kind } of regularCandidates(lower)) {
-    const e = get(base);
-    if (!e) continue;
-    const note = noteFor(kind, base, e);
-    if (note) return fromEntry(surface, base, e, note);
+    // 요일·나라 이름처럼 대문자로 등록된 표제어도 본다 (Sundays → Sunday)
+    const key = get(base) ? base : get(base[0].toUpperCase() + base.slice(1)) ? base[0].toUpperCase() + base.slice(1) : null;
+    if (!key) continue;
+    const e = get(key)!;
+    const note = noteFor(kind, key, e);
+    if (note) return fromEntry(surface, key, e, note);
   }
   return null;
 }

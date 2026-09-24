@@ -44,6 +44,24 @@ function write(key: string, value: unknown) {
   } catch {}
 }
 
+/** useSyncExternalStore용: 저장된 원본 문자열(값이 같으면 같은 스냅샷) */
+export const rawSnapshot = (key: "words" | "quiz" | "read") => () => {
+  try {
+    return localStorage.getItem(key === "words" ? WORDS_KEY : key === "quiz" ? QUIZ_KEY : READ_KEY) ?? "";
+  } catch {
+    return "";
+  }
+};
+
+export function clearAll() {
+  for (const k of [WORDS_KEY, QUIZ_KEY, READ_KEY]) {
+    try {
+      localStorage.removeItem(k);
+    } catch {}
+  }
+  window.dispatchEvent(new Event(EVENT));
+}
+
 export const onStoreChange = (fn: () => void) => {
   window.addEventListener(EVENT, fn);
   window.addEventListener("storage", fn);

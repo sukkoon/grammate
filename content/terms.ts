@@ -298,7 +298,7 @@ export const terms: Term[] = [
     result: "다른 말을 꾸며 주는 말. 빼도 문장은 성립해요.",
     english: "modifier",
     englishNote: "modify(바꾸다, 꾸미다)",
-    example: "I read [[a lot of]] books [[at night]].",
+    example: "I read [[{a lot of}]] books [[at night]].",
     group: "문장 성분",
   },
 
