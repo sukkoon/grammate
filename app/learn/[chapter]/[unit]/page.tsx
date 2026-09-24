@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LevelBadges } from "@/components/lesson/blocks";
 import { ReadButton, ReadMark } from "@/components/lesson/ReadMark";
+import { LevelPrompt } from "@/components/level/LevelPrompt";
+import { LevelAbove } from "@/components/level/LevelAbove";
 import { findUnit, neighbors, readyUnits, unitHref, type UnitRef } from "@/content/curriculum";
 
 export const dynamicParams = false;
@@ -41,7 +43,10 @@ function ChapterNav({ at: r }: { at: UnitRef }) {
                   }`}
                 >
                   <span>{label}</span>
-                  <ReadMark unit={`${r.chapter.slug}/${u.slug}`} />
+                  <span className="flex shrink-0 flex-col items-end gap-1">
+                    <ReadMark unit={`${r.chapter.slug}/${u.slug}`} />
+                    <LevelAbove levels={u.levels} />
+                  </span>
                 </Link>
               ) : (
                 <span className="block border-l-2 border-transparent py-1.5 pl-3 text-ink-3">{label} · 준비 중</span>
@@ -86,6 +91,8 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
             <ChapterNav at={ref} />
           </div>
         </details>
+
+        <LevelPrompt />
 
         <header>
           <p className="text-[14px] font-bold text-ink-3">

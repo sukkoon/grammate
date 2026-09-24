@@ -3,6 +3,8 @@
 import { useState, type ReactNode } from "react";
 import { Mate } from "@/components/brand/Mate";
 import { saveQuiz } from "@/lib/local-store";
+import { bandLabel, bandRank, type Band } from "@/lib/level";
+import { useBand } from "@/lib/use-level";
 
 export interface PreparedItem {
   q: string;
@@ -11,13 +13,21 @@ export interface PreparedItem {
   options: string[];
   answer: number;
   why: string;
+  level?: Band;
 }
 
 export function QuizClient({ id, items }: { id: string; items: PreparedItem[] }) {
+  const band = useBand();
   const [picked, setPicked] = useState<Record<number, number>>({});
-  const answered = Object.keys(picked).length;
-  const done = answered === items.length;
-  const again = items.map((it, i) => (picked[i] !== undefined && picked[i] !== it.answer ? i + 1 : 0)).filter(Boolean);
+  const [showAll, setShowAll] = useState(false);
+  // 내 수준보다 높은 문제는 접어 둔다. (원래 번호 i는 기록 키로 그대로 쓴다)
+  const fits = (it: PreparedItem) => showAll || !band || bandRank(it.level ?? "elem") <= bandRank(band);
+  const visible = items.map((it, i) => ({ it, i })).filter(({ it }) => fits(it));
+  const hidden = items.length - visible.length;
+  const done = visible.length > 0 && visible.every(({ i }) => picked[i] !== undefined);
+  const again = visible
+    .map(({ it, i }, n) => (picked[i] !== undefined && picked[i] !== it.answer ? n + 1 : 0))
+    .filter(Boolean);
 
   function choose(i: number, o: number) {
     if (picked[i] !== undefined) return;
@@ -35,15 +45,20 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
         점수를 매기는 시험이 아니에요. 내가 정말 이해했는지 스스로 확인하는 시간이에요.
       </p>
       <ol className="space-y-4">
-        {items.map((it, i) => {
+        {visible.map(({ it, i }, n) => {
           const p = picked[i];
           const answeredThis = p !== undefined;
           const right = p === it.answer;
           return (
             <li key={i} className="rounded-2xl border border-line bg-card px-4 py-4 sm:px-5">
               <p className="font-bold">
-                <span className="mr-2 text-coral-ink">{i + 1}.</span>
+                <span className="mr-2 text-coral-ink">{n + 1}.</span>
                 {it.q}
+                {it.level && it.level !== "elem" && (
+                  <span className="ml-2 rounded-full bg-sky-soft px-2 py-0.5 align-middle text-[11.5px] font-extrabold text-sky-ink">
+                    {bandLabel[it.level]}
+                  </span>
+                )}
               </p>
               {it.enNode && <p className="mt-2 text-[1.1em] font-medium">{it.enNode}</p>}
               <div className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -82,6 +97,15 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
           );
         })}
       </ol>
+      {hidden > 0 && (
+        <button
+          type="button"
+          onClick={() => setShowAll(true)}
+          className="mt-3 w-full rounded-2xl border border-dashed border-line px-4 py-3 text-[14.5px] text-ink-2 hover:border-ink-3"
+        >
+          더 높은 수준의 문제가 {hidden}개 더 있어요 · <b className="text-coral-ink">도전해 보기</b>
+        </button>
+      )}
       {done && (
         <div className="fade-in mt-5 rounded-2xl bg-ink px-5 py-5 text-on-ink">
           <div className="flex items-start gap-3">

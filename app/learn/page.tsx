@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LevelBadges } from "@/components/lesson/blocks";
 import { ReadMark } from "@/components/lesson/ReadMark";
+import { LevelAbove } from "@/components/level/LevelAbove";
 import { curriculum, unitHref, readyUnits, allUnits } from "@/content/curriculum";
 
 export const metadata: Metadata = {
@@ -46,7 +47,10 @@ export default function LearnPage() {
                               <span className="font-extrabold group-hover:text-coral-ink">
                                 {i + 1}. {u.title}
                               </span>
-                              <ReadMark unit={`${c.slug}/${u.slug}`} />
+                              <span className="flex shrink-0 flex-col items-end gap-1">
+                                <ReadMark unit={`${c.slug}/${u.slug}`} />
+                                <LevelAbove levels={u.levels} />
+                              </span>
                             </span>
                             <span className="mt-1 text-[14px] text-ink-2">{u.summary}</span>
                             <span className="mt-2">

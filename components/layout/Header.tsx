@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/brand/Mate";
 import { ThemeToggle } from "./ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
+import { LevelSwitch } from "@/components/level/LevelSwitch";
 
 export const navItems = [
   { href: "/learn", label: "전체 목차" },
@@ -26,9 +27,13 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <span className="ml-1">
+            <LevelSwitch />
+          </span>
           <ThemeToggle />
         </nav>
         <div className="flex items-center gap-1 md:hidden">
+          <LevelSwitch />
           <ThemeToggle />
           <MobileMenu items={navItems} />
         </div>

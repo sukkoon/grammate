@@ -4,6 +4,8 @@ import { changa, nanumSquare } from "./fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WordTooltipLayer } from "@/components/lesson/WordTooltipLayer";
+import { LevelLayer } from "@/components/level/LevelLayer";
+import { levelScript } from "@/lib/level";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko" className={`${changa.variable} ${nanumSquare.variable}`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: themeScript + levelScript }} />
       </head>
       <body className="flex min-h-dvh flex-col">
         <a
@@ -52,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <WordTooltipLayer />
+        <LevelLayer />
       </body>
     </html>
   );

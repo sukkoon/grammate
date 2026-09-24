@@ -1,3 +1,4 @@
+import type { Band } from "@/lib/level";
 import { En } from "./En";
 import { QuizClient, type PreparedItem } from "./QuizClient";
 
@@ -11,6 +12,8 @@ export interface QuizItem {
   answer: number;
   /** 해설 */
   why: string;
+  /** 이 문제가 필요한 수준 (없으면 모두에게) */
+  level?: Band;
 }
 
 /** 확인 문제. 영어 문장은 서버에서 단어 뜻까지 붙여서 넘긴다. */

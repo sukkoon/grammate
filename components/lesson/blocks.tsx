@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 import { plain } from "@/lib/lexicon";
 import { Mate, type Mood } from "@/components/brand/Mate";
 import type { Level } from "@/content/curriculum";
+import { bandOf, type Band } from "@/lib/level";
+import { Lv } from "@/components/level/Lv";
 import { En } from "./En";
 import { Speak } from "./Speak";
 
@@ -62,9 +64,18 @@ export function Mistake({ wrong, right, why }: { wrong: string; right: string; w
   );
 }
 
-/** 내신·수능 포인트 */
-export function ExamPoint({ title = "내신 포인트", children }: { title?: string; children: ReactNode }) {
+/** 내신·수능 포인트. level은 이 포인트가 필요한 수준 (내신은 중등, 수능은 고등) */
+export function ExamPoint({
+  title = "내신 포인트",
+  level = "middle",
+  children,
+}: {
+  title?: string;
+  level?: Band;
+  children: ReactNode;
+}) {
   return (
+    <Lv min={level}>
     <aside className="my-6 rounded-2xl bg-amber-soft px-4 py-4 sm:px-5">
       <p className="flex items-center gap-2 text-[14px] font-extrabold text-amber-ink">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -75,6 +86,7 @@ export function ExamPoint({ title = "내신 포인트", children }: { title?: st
       </p>
       <div className="mt-2 text-[0.97em] [&>p]:my-1.5 [&_ul]:list-disc [&_ul]:pl-5">{children}</div>
     </aside>
+    </Lv>
   );
 }
 
@@ -94,6 +106,7 @@ export function Tip({ mood = "wink", title, children }: { mood?: Mood; title?: s
 /** 접히는 심화 상자 */
 export function DeepDive({ level = "고1", title, children }: { level?: Level; title: string; children: ReactNode }) {
   return (
+    <Lv min={bandOf(level)}>
     <details className="group my-6 rounded-2xl border border-line bg-card [&[open]>summary]:border-b [&[open]>summary]:border-line">
       <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3.5 sm:px-5 [&::-webkit-details-marker]:hidden">
         <span className="rounded-full bg-sky-soft px-2 py-0.5 text-[12px] font-extrabold text-sky-ink">심화 · {level}</span>
@@ -104,6 +117,7 @@ export function DeepDive({ level = "고1", title, children }: { level?: Level; t
       </summary>
       <div className="px-4 pb-4 pt-1 sm:px-5 [&>p]:my-3">{children}</div>
     </details>
+    </Lv>
   );
 }
 

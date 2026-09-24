@@ -16,6 +16,7 @@ import { TermAnatomy } from "@/components/lesson/TermAnatomy";
 import { Quiz } from "@/components/lesson/Quiz";
 import { VerbHunt } from "@/components/lesson/VerbHunt";
 import * as illustrations from "@/components/illustrations";
+import { Easy, Lv, More } from "@/components/level/Lv";
 
 // 단원 MDX에서 import 없이 바로 쓸 수 있는 컴포넌트들
 const components = {
@@ -37,6 +38,9 @@ const components = {
   TermAnatomy,
   Quiz,
   VerbHunt,
+  Lv,
+  Easy,
+  More,
   ...illustrations,
 } satisfies MDXComponents;
 

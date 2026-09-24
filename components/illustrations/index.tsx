@@ -448,19 +448,19 @@ export function ThisThat() {
       <path d="M92 96 H150" stroke="var(--coral)" strokeWidth="4" strokeLinecap="round" />
       <path d="M142 88 L152 96 L142 104" fill="none" stroke="var(--coral)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
       <rect x="160" y="80" width="40" height="40" rx="8" style={{ fill: "var(--coral)" }} />
-      <text x="180" y="150" textAnchor="middle" fontSize="20" fontWeight="700" style={{ fill: "var(--ink)" }}>
+      <text x="180" y="150" textAnchor="middle" fontSize="24" fontWeight="700" style={{ fill: "var(--ink)" }}>
         this
       </text>
-      <text x="180" y="68" textAnchor="middle" fontSize="13" style={{ fill: "var(--ink-2)" }}>
+      <text x="180" y="68" textAnchor="middle" fontSize="17" style={{ fill: "var(--ink-2)" }}>
         가까이
       </text>
       <path d="M92 110 H410" stroke="var(--ink-3)" strokeWidth="3" strokeDasharray="6 7" strokeLinecap="round" />
       <path d="M402 102 L412 110 L402 118" fill="none" stroke="var(--ink-3)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
       <rect x="425" y="92" width="36" height="36" rx="8" style={{ fill: "var(--sky-ink)" }} />
-      <text x="443" y="158" textAnchor="middle" fontSize="20" fontWeight="700" style={{ fill: "var(--ink)" }}>
+      <text x="443" y="158" textAnchor="middle" fontSize="24" fontWeight="700" style={{ fill: "var(--ink)" }}>
         that
       </text>
-      <text x="443" y="80" textAnchor="middle" fontSize="13" style={{ fill: "var(--ink-2)" }}>
+      <text x="443" y="80" textAnchor="middle" fontSize="17" style={{ fill: "var(--ink-2)" }}>
         멀리
       </text>
     </svg>
@@ -517,22 +517,25 @@ export function ReflexiveMirror() {
       <path d="M282 52 L294 62 L280 66" fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" style={{ stroke: "var(--coral)" }} />
       <path d="M292 120 C250 150 210 150 162 118" fill="none" strokeWidth="4" strokeDasharray="7 7" strokeLinecap="round" style={{ stroke: "var(--coral)" }} />
       <path d="M172 112 L160 116 L168 127" fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" style={{ stroke: "var(--coral)" }} />
-      <text x="226" y="100" textAnchor="middle" fontSize="14" style={{ fill: "var(--ink-2)" }}>
+      <text x="226" y="100" textAnchor="middle" fontSize="18" style={{ fill: "var(--ink-2)" }}>
         되돌아와요
       </text>
     </svg>
   );
 }
 
-/** one / another / the other / others / the others */
-export function OtherGroups() {
-  const Dot = ({ tone }: { tone: "a" | "b" | "c" | "g" }) => (
+function Dot({ tone }: { tone: "a" | "b" | "c" | "g" }) {
+  return (
     <span
       className={`inline-block size-6 rounded-full ${
         tone === "a" ? "bg-coral" : tone === "b" ? "bg-amber-ink/70" : tone === "c" ? "bg-sky-ink/80" : "bg-line"
       }`}
     />
   );
+}
+
+/** one / another / the other / others / the others */
+export function OtherGroups() {
   const rows: { title: string; dots: ("a" | "b" | "c" | "g")[]; label: ReactNode }[] = [
     { title: "둘 중에서", dots: ["a", "c"], label: <>one ➊ · the other ➋ (남은 하나)</> },
     { title: "셋 중에서", dots: ["a", "b", "c"], label: <>one ➊ · another ➋ (또 하나) · the other ➌ (마지막 하나)</> },
@@ -596,5 +599,130 @@ export function WordJobs() {
         </div>
       ))}
     </div>
+  );
+}
+
+/** 꾸밈 화살표: 형용사는 명사를, 부사는 나머지(동사·형용사·부사)를 꾸민다 */
+export function ModifyArrows() {
+  const rows: { from: [string, string]; to: [string, string]; ex: string; ko: string }[] = [
+    { from: ["형용사", "little"], to: ["명사", "dog"], ex: "a [[little]] dog", ko: "작은 강아지" },
+    { from: ["부사", "fast"], to: ["동사", "runs"], ex: "He runs [[fast]].", ko: "그는 빨리 달린다." },
+    { from: ["부사", "very"], to: ["형용사", "cute"], ex: "It is [[very]] cute.", ko: "그건 아주 귀엽다." },
+    { from: ["부사", "very"], to: ["부사", "fast"], ex: "He runs [[very]] fast.", ko: "그는 아주 빨리 달린다." },
+  ];
+  return (
+    <ul className="space-y-2.5">
+      {rows.map((r, i) => (
+        <li key={i} className="flex flex-col gap-2 rounded-2xl border border-line px-3 py-3 sm:flex-row sm:items-center sm:gap-4">
+          <span className="flex shrink-0 items-center gap-2">
+            <span className={`rounded-lg px-2 py-1 text-[13px] font-extrabold ${POS_STYLE[r.from[0]]}`}>
+              {r.from[0]} <span lang="en">{r.from[1]}</span>
+            </span>
+            <ArrowRight size={18} className="text-ink-3" />
+            <span className={`rounded-lg px-2 py-1 text-[13px] font-extrabold ${POS_STYLE[r.to[0]]}`}>
+              {r.to[0]} <span lang="en">{r.to[1]}</span>
+            </span>
+          </span>
+          <span className="min-w-0 text-[1.05em] font-medium">
+            <En en={r.ex} />
+            <span className="ml-2 text-[13px] font-normal text-ink-2">{r.ko}</span>
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function BoxCat({ x, y, s = 1, faded = false }: { x: number; y: number; s?: number; faded?: boolean }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s})`} opacity={faded ? 0.45 : 1}>
+      <path d="M8 16 L10 4 L17.5 11 H22.5 L30 4 L32 16 A12.5 11.5 0 1 1 8 16 Z" style={{ fill: "var(--coral)" }} />
+      <circle cx="15" cy="21.5" r="1.9" style={{ fill: "var(--card)" }} />
+      <circle cx="25" cy="21.5" r="1.9" style={{ fill: "var(--card)" }} />
+    </g>
+  );
+}
+
+function BoxLabel({ t, ko }: { t: string; ko: string }) {
+  return (
+    <>
+      <text x="65" y="128" textAnchor="middle" fontSize="19" fontWeight="700" style={{ fill: "var(--ink)" }}>
+        {t}
+      </text>
+      <text x="65" y="148" textAnchor="middle" fontSize="14" style={{ fill: "var(--ink-2)" }}>
+        {ko}
+      </text>
+    </>
+  );
+}
+
+const boxStroke = { stroke: "var(--ink-2)" } as const;
+
+/** 전치사 상자: 상자와 고양이의 위치. 휴대폰에서는 줄을 바꿔 크게 보인다. */
+export function PrepositionBox() {
+  const scenes: { t: string; ko: string; draw: ReactNode }[] = [
+    {
+      t: "in",
+      ko: "~ 안에",
+      draw: (
+        <>
+          <rect x="30" y="40" width="70" height="56" rx="6" fill="none" strokeWidth="3" style={boxStroke} />
+          <BoxCat x={45} y={54} s={1} />
+        </>
+      ),
+    },
+    {
+      t: "on",
+      ko: "~ 위에",
+      draw: (
+        <>
+          <rect x="30" y="58" width="70" height="44" rx="6" fill="none" strokeWidth="3" style={boxStroke} />
+          <BoxCat x={45} y={22} s={1} />
+        </>
+      ),
+    },
+    {
+      t: "under",
+      ko: "~ 아래에",
+      draw: (
+        <>
+          <rect x="22" y="30" width="86" height="8" rx="3" style={{ fill: "var(--ink-2)" }} />
+          <path d="M30 38 V100 M100 38 V100" strokeWidth="3" style={boxStroke} />
+          <BoxCat x={45} y={62} s={1} />
+        </>
+      ),
+    },
+    {
+      t: "next to",
+      ko: "~ 옆에",
+      draw: (
+        <>
+          <rect x="10" y="46" width="62" height="54" rx="6" fill="none" strokeWidth="3" style={boxStroke} />
+          <BoxCat x={80} y={70} s={0.9} />
+        </>
+      ),
+    },
+    {
+      t: "behind",
+      ko: "~ 뒤에",
+      draw: (
+        <>
+          <BoxCat x={45} y={24} s={1} faded />
+          <rect x="28" y="48" width="74" height="54" rx="6" strokeWidth="3" style={{ fill: "var(--card)", ...boxStroke }} />
+        </>
+      ),
+    },
+  ];
+  return (
+    <ul className="grid grid-cols-3 gap-2 sm:grid-cols-5" aria-label="상자 안, 위, 아래, 옆, 뒤에 있는 고양이">
+      {scenes.map((sc) => (
+        <li key={sc.t}>
+          <svg viewBox="0 0 130 156" className="w-full" role="img" aria-label={`${sc.t}: ${sc.ko}`}>
+            {sc.draw}
+            <BoxLabel t={sc.t} ko={sc.ko} />
+          </svg>
+        </li>
+      ))}
+    </ul>
   );
 }

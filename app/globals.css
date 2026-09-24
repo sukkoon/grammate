@@ -270,3 +270,35 @@ body {
     }
   }
 }
+
+/* ───────── 수준별 보기 (html[data-level] = elem | middle | high) ───────── */
+.lv-peek,
+.lv-above {
+  display: none;
+}
+/* 내 수준보다 높은 내용은 접고 '살짝 보기' 단추만 보인다 */
+html[data-level="elem"] [data-lv-min="middle"]:not([data-open]) > .lv-body,
+html[data-level="elem"] [data-lv-min="high"]:not([data-open]) > .lv-body,
+html[data-level="middle"] [data-lv-min="high"]:not([data-open]) > .lv-body {
+  display: none;
+}
+html[data-level="elem"] [data-lv-min="middle"]:not([data-open]) > .lv-peek,
+html[data-level="elem"] [data-lv-min="high"]:not([data-open]) > .lv-peek,
+html[data-level="middle"] [data-lv-min="high"]:not([data-open]) > .lv-peek {
+  display: flex;
+}
+/* 쉬운 풀이는 초등에게만, 중등 이상 설명은 초등에게 숨긴다 (대체 설명이 있을 때) */
+html[data-level="middle"] [data-lv-max="elem"],
+html[data-level="high"] [data-lv-max="elem"],
+html[data-level="high"] [data-lv-max="middle"],
+html[data-level="elem"] [data-lv-only-min="middle"],
+html[data-level="elem"] [data-lv-only-min="high"],
+html[data-level="middle"] [data-lv-only-min="high"] {
+  display: none;
+}
+/* 목차: 내 수준보다 높은 단원 표시 */
+html[data-level="elem"] .lv-above[data-need="middle"],
+html[data-level="elem"] .lv-above[data-need="high"],
+html[data-level="middle"] .lv-above[data-need="high"] {
+  display: inline-block;
+}
