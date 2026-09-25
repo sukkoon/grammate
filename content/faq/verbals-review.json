@@ -1,0 +1,77 @@
+[
+  {
+    "id": "vr-1",
+    "unit": "verbals-review/verb-or-verbal",
+    "q": "동사인지 준동사인지 어떻게 구별해요?",
+    "alts": ["동사 준동사 구별법", "진짜 동사 찾는 법", "밑줄 친 동사 어법 문제", "동사 자리인지 어떻게 알아요"],
+    "keys": ["준동사", "진짜 동사", "구별"],
+    "a": "네 가지를 차례로 물어요.\n① 접속사·관계사가 몇 개? → 진짜 동사 자리 = 개수 + 1\n② 진짜 동사 자리가 남았나? → 남았으면 진짜 동사, 다 찼으면 준동사\n③ 준동사라면 어느 자리? → 명사 자리, 명사 꾸밈, 문장에 덧붙임\n④ 하는 쪽인가 당하는 쪽인가? → -ing / p.p.",
+    "ex": [
+      { "en": "The boy [[playing]] soccer over there [[is]] my cousin.", "ko": "접속사가 없으니 진짜 동사는 is 하나, play는 playing으로 변장" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "vr-2",
+    "unit": "verbals-review/verb-or-verbal",
+    "q": "접속사가 안 보이는데 동사가 두 개예요",
+    "alts": ["생략된 that", "관계대명사 생략", "명사 뒤에 주어 동사", "I think 뒤에 동사가 또 있어요"],
+    "keys": ["생략", "that", "관계대명사"],
+    "a": "that이나 목적격 관계대명사가 **생략**되어 있을 거예요. 보이지 않아도 하나로 세요.\nI think (that) …, the book (which) I borrowed …처럼 명사 바로 뒤에 '주어 + 동사'가 붙어 있으면 관계대명사가 숨어 있다는 신호예요.",
+    "ex": [
+      { "en": "The book I borrowed [[was]] really interesting.", "ko": "book 뒤에 which가 생략 → 진짜 동사 borrowed, was" },
+      { "en": "I think the plan [[sounds]] great.", "ko": "think 뒤에 that이 생략 → 진짜 동사 think, sounds" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "vr-3",
+    "unit": "verbals-review/verb-or-verbal",
+    "q": "분사를 -ing로 쓸지 p.p.로 쓸지 모르겠어요",
+    "alts": ["현재분사 과거분사 고르기", "능동 수동 분사", "ing 피피 구별", "broken broking 뭐가 맞아요"],
+    "keys": ["분사", "-ing", "p.p.", "능동", "수동"],
+    "a": "꾸밈을 받는 말(분사구문이면 주절의 주어)이 그 동작을 **하면 -ing**, **당하면 p.p.**예요. 그 말을 주어로 세우고 be + p.p.를 붙여 봐서 말이 되면 p.p.예요.",
+    "ex": [
+      { "en": "the girl [[singing]] on the stage", "ko": "소녀가 노래함 → -ing" },
+      { "en": "the song [[sung]] by the girl", "ko": "노래가 불림 → p.p. (The song is sung. ○)" }
+    ]
+  },
+  {
+    "id": "vr-4",
+    "unit": "verbals-review/verb-or-verbal",
+    "q": "주어가 길면 진짜 동사를 어떻게 찾아요?",
+    "alts": ["주어 동사 수일치 긴 주어", "주어 뒤에 전치사구", "관계절 뒤 동사", "is are 고르기 문제"],
+    "keys": ["주어", "수일치", "진짜 동사"],
+    "a": "주어를 꾸미는 전치사구, 관계절, 분사구를 괄호로 묶어 지워 보세요. 남은 **맨 앞의 명사**가 진짜 주어이고, 괄호 뒤에 오는 동사가 진짜 동사예요. 그 둘의 수를 맞춰요.",
+    "ex": [
+      { "en": "The key (to good grades) [[is]] steady effort.", "ko": "주어는 key(단수) → is" },
+      { "en": "Students ({who|관계대명사:~하는 (사람)} {exercise|동사:운동하다} regularly) [[sleep]] better.", "ko": "주어는 students(복수) → sleep" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "vr-5",
+    "unit": "verbals-review/verb-or-verbal",
+    "q": "주격 관계대명사도 생략할 수 있어요?",
+    "alts": ["who 생략 돼요", "I have a friend lives 맞아요", "주격 관계대명사 생략", "which 빼도 돼요"],
+    "keys": ["주격", "관계대명사", "생략"],
+    "a": "아니요. **목적격** 관계대명사는 생략할 수 있지만 **주격**은 생략할 수 없어요. 주격을 빼고 싶으면 뒤의 동사를 **분사로 바꿔야** 해요.\nI have a friend lives in Busan ✕ → a friend who lives ○ / a friend living ○",
+    "ex": [
+      { "en": "I have a friend [[{who|관계대명사:~하는 (사람)} lives]] in Busan.", "ko": "부산에 사는 친구가 있어." },
+      { "en": "I have a friend [[living]] in Busan.", "ko": "관계사를 빼면 분사로 변장" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "vr-6",
+    "unit": "verbals-review/verb-or-verbal",
+    "q": "to 뒤에 동사원형이에요, -ing예요?",
+    "alts": ["look forward to ing", "전치사 to 뒤에 ing", "to부정사 to 전치사 to 구별", "be used to 뒤"],
+    "keys": ["to", "전치사", "동명사", "look forward to"],
+    "a": "to부정사의 to면 동사원형, **전치사 to**면 -ing예요. 확인법: to 뒤에 명사를 넣어 봐서 말이 되면 전치사예요. look forward to, be used to, object to, when it comes to의 to는 전치사라 -ing가 와요.",
+    "ex": [
+      { "en": "I'm looking forward to [[seeing]] you.", "ko": "너를 만나기를 고대하고 있어. (to 뒤에 명사 you도 가능 → 전치사)" }
+    ],
+    "level": "middle"
+  }
+]

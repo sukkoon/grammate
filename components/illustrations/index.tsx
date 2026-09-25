@@ -35,8 +35,8 @@ function Tagged({ w, tag, sub }: { w: string; tag?: string; sub?: string }) {
       <span className="text-[1.3em] font-medium leading-none">
         <En en={w} />
       </span>
-      <span className={`rounded-lg px-2 py-1 text-[12.5px] font-extrabold leading-none ${POS_STYLE[tag] ?? "bg-chip"}`}>{tag}</span>
-      {sub && <span className="text-[11.5px] text-ink-3">{sub}</span>}
+      <span className={`rounded-lg px-2 py-1 text-[14px] font-extrabold leading-none ${POS_STYLE[tag] ?? "bg-chip"}`}>{tag}</span>
+      {sub && <span className="text-[14px] text-ink-3">{sub}</span>}
     </span>
   );
 }
@@ -69,7 +69,7 @@ export function PosSentence() {
       <p className="mt-4 text-center text-[14px] text-ink-2">
         오, 그 작은 강아지와 나는 공원에서 아주 빨리 달려요!
       </p>
-      <ul className="mt-4 flex flex-wrap justify-center gap-2 text-[12.5px]">
+      <ul className="mt-4 flex flex-wrap justify-center gap-2 text-[14px]">
         <li className="rounded-full bg-sky-soft px-2.5 py-1 font-bold text-sky-ink">이름 가족</li>
         <li className="rounded-full bg-coral px-2.5 py-1 font-bold text-white">움직임</li>
         <li className="rounded-full bg-mint-soft px-2.5 py-1 font-bold text-mint-ink">명사 꾸미기</li>
@@ -87,15 +87,15 @@ export function JobVsRole() {
       <div className="rounded-2xl bg-chip px-4 py-4 text-center">
         <PersonIcon size={40} className="mx-auto text-ink-2" />
         <p className="mt-2 font-extrabold">지수의 직업: 학생</p>
-        <p className="text-[13px] text-ink-2">어디에 있든 변하지 않아요</p>
-        <p className="mt-2 rounded-lg bg-card px-2 py-1.5 text-[13.5px] font-bold">= 품사 (-사)</p>
+        <p className="text-[14px] text-ink-2">어디에 있든 변하지 않아요</p>
+        <p className="mt-2 rounded-lg bg-card px-2 py-1.5 text-[14px] font-bold">= 품사 (-사)</p>
       </div>
       <ArrowRight className="mx-auto rotate-90 text-ink-3 sm:rotate-0" />
       <div className="rounded-2xl bg-coral-soft px-4 py-4 text-center">
         <CrownIcon size={34} className="mx-auto text-coral" />
         <p className="mt-2 font-extrabold">연극에서 맡은 역할: 왕</p>
-        <p className="text-[13px] text-ink-2">무대(문장)마다 달라져요</p>
-        <p className="mt-2 rounded-lg bg-card px-2 py-1.5 text-[13.5px] font-bold">= 문장 성분 (-어)</p>
+        <p className="text-[14px] text-ink-2">무대(문장)마다 달라져요</p>
+        <p className="mt-2 rounded-lg bg-card px-2 py-1.5 text-[14px] font-bold">= 문장 성분 (-어)</p>
       </div>
     </div>
   );
@@ -106,7 +106,7 @@ export function PhraseClause() {
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-4 py-4">
-        <p className="text-[13px] font-extrabold text-ink-3">구 · 단어 묶음</p>
+        <p className="text-[14px] font-extrabold text-ink-3">구 · 단어 묶음</p>
         <p className="mt-2 text-[1.2em] font-medium">
           <span className="rounded-md border-2 border-dashed border-ink-3 px-1.5 py-0.5">
             <En en="in the morning" />
@@ -115,7 +115,7 @@ export function PhraseClause() {
         <p className="mt-2 text-[14px] text-ink-2">주어도 동사도 없어요. 그냥 한 덩어리예요.</p>
       </div>
       <div className="rounded-2xl border border-line px-4 py-4">
-        <p className="text-[13px] font-extrabold text-coral-ink">절 · 주어 + 동사가 있는 마디</p>
+        <p className="text-[14px] font-extrabold text-coral-ink">절 · 주어 + 동사가 있는 마디</p>
         <p className="mt-2 text-[1.2em] font-medium">
           <span className="rounded-md border-2 border-coral px-1.5 py-0.5">
             <En en="when [[I]] [[woke]] up" />
@@ -140,12 +140,12 @@ export function OneVerbBlueprint() {
         <span className="flex flex-col items-center gap-1">
           <CrownIcon size={26} className="text-coral" />
           <span className="rounded-xl bg-coral px-3 py-2 text-white">want</span>
-          <span className="text-[12px] font-extrabold text-coral-ink">진짜 동사</span>
+          <span className="text-[14px] font-extrabold text-coral-ink">진짜 동사</span>
         </span>
         <span className="flex flex-col items-center gap-1">
           <MaskIcon size={28} className="text-amber-ink" />
           <span className="rounded-xl bg-amber-soft px-3 py-2 text-amber-ink">to eat</span>
-          <span className="text-[12px] font-extrabold text-amber-ink">변장한 동사</span>
+          <span className="text-[14px] font-extrabold text-amber-ink">변장한 동사</span>
         </span>
         <span className="rounded-xl border border-line px-3 py-2">
           <En en="pizza" />
@@ -172,11 +172,11 @@ export function VerbCostumes() {
         <div key={it.name} className="rounded-2xl border border-line px-4 py-4 text-center">
           <MaskIcon size={34} className={`mx-auto ${it.tone.split(" ")[1]}`} />
           <p className="mt-2 font-extrabold">{it.name}</p>
-          <p className="text-[13px] text-ink-2">{it.how}</p>
+          <p className="text-[14px] text-ink-2">{it.how}</p>
           <p lang="en" className={`mx-auto mt-2 w-fit rounded-lg px-2.5 py-1 font-medium ${it.tone}`}>
             {it.ex}
           </p>
-          <p className="mt-2 text-[13px] text-ink-2">{it.role}</p>
+          <p className="mt-2 text-[14px] text-ink-2">{it.role}</p>
         </div>
       ))}
     </div>
@@ -199,18 +199,18 @@ export function VerbFormula() {
         </span>
         <span className="flex flex-col items-center">
           <span className="rounded-lg bg-coral px-2 py-1 text-white">think</span>
-          <span className="text-[11.5px] font-extrabold text-coral-ink">동사 1</span>
+          <span className="text-[14px] font-extrabold text-coral-ink">동사 1</span>
         </span>
         <span className="flex flex-col items-center">
           <span className="rounded-lg bg-sky-soft px-2 py-1 text-sky-ink">that</span>
-          <span className="text-[11.5px] font-extrabold text-sky-ink">접속사</span>
+          <span className="text-[14px] font-extrabold text-sky-ink">접속사</span>
         </span>
         <span>
           <En en="she" />
         </span>
         <span className="flex flex-col items-center">
           <span className="rounded-lg bg-coral px-2 py-1 text-white">likes</span>
-          <span className="text-[11.5px] font-extrabold text-coral-ink">동사 2</span>
+          <span className="text-[14px] font-extrabold text-coral-ink">동사 2</span>
         </span>
         <span>
           <En en="you." />
@@ -240,7 +240,7 @@ export function TermLego() {
           </span>
           <span className="text-ink-3">=</span>
           <span className="font-extrabold">{r.out}</span>
-          <span className="ml-auto text-[12.5px] text-ink-3">{r.kind}</span>
+          <span className="ml-auto text-[14px] text-ink-3">{r.kind}</span>
         </div>
       ))}
     </div>
@@ -252,7 +252,7 @@ export function PronounSwap() {
   return (
     <div className="space-y-4">
       <div>
-        <p className="text-[13px] font-extrabold text-ink-3">대명사가 없다면…</p>
+        <p className="text-[14px] font-extrabold text-ink-3">대명사가 없다면…</p>
         <p lang="en" className="mt-1.5 text-[1.2em] font-medium">
           <En en="Minsu is my friend." />{" "}
           <span className="rounded-md border-2 border-dashed border-coral/70 px-1">
@@ -264,15 +264,15 @@ export function PronounSwap() {
           </span>{" "}
           <En en="likes soccer." />
         </p>
-        <p className="mt-1 text-[13.5px] text-coral-ink">같은 이름이 자꾸 나와서 답답해요.</p>
+        <p className="mt-1 text-[14px] text-coral-ink">같은 이름이 자꾸 나와서 답답해요.</p>
       </div>
       <div className="rounded-2xl bg-chip px-4 py-3">
-        <p className="text-[13px] font-extrabold text-ink-3">대명사가 대신 뛰면</p>
+        <p className="text-[14px] font-extrabold text-ink-3">대명사가 대신 뛰면</p>
         <p lang="en" className="mt-1.5 text-[1.2em] font-medium">
           <En en="Minsu is my friend." /> <span className="rounded-md bg-coral px-1.5 text-white">He</span>{" "}
           <En en="is kind." /> <span className="rounded-md bg-coral px-1.5 text-white">He</span> <En en="likes soccer." />
         </p>
-        <p className="mt-1 text-[13.5px] text-ink-2">
+        <p className="mt-1 text-[14px] text-ink-2">
           he가 Minsu 대신 경기장에 들어갔어요. 교체 선수처럼요!
         </p>
       </div>
@@ -340,14 +340,14 @@ export function AAnSound() {
   const col = (title: string, sub: string, list: [string, string][], tone: string) => (
     <div className="rounded-2xl border border-line px-4 py-4">
       <p className="font-extrabold">{title}</p>
-      <p className="text-[13px] text-ink-2">{sub}</p>
+      <p className="text-[14px] text-ink-2">{sub}</p>
       <ul className="mt-3 space-y-2">
         {list.map(([en, sound]) => (
           <li key={en} className="flex items-baseline justify-between gap-3">
             <span className="text-[1.15em] font-medium">
               <En en={en} />
             </span>
-            <span className={`rounded-md px-2 py-0.5 text-[13px] font-bold ${tone}`}>{sound}</span>
+            <span className={`rounded-md px-2 py-0.5 text-[14px] font-bold ${tone}`}>{sound}</span>
           </li>
         ))}
       </ul>
@@ -380,7 +380,7 @@ export function TheReasons() {
           <p className="mt-2 text-[1.08em] font-medium">
             <En en={it.en} />
           </p>
-          <p className="text-[13.5px] text-ink-2">{it.ko}</p>
+          <p className="text-[14px] text-ink-2">{it.ko}</p>
         </div>
       ))}
     </div>
@@ -422,14 +422,14 @@ export function CaseOutfits() {
     <ol className="space-y-2">
       {rows.map((r, i) => (
         <li key={r.seat} className="flex flex-col gap-1 rounded-2xl border border-line px-4 py-3 sm:flex-row sm:items-center sm:gap-4">
-          <span className="w-fit shrink-0 rounded-lg bg-chip px-2.5 py-1 text-[13px] font-extrabold sm:w-44">
+          <span className="w-fit shrink-0 rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold sm:w-44">
             {i + 1}. {r.seat}
           </span>
           <span className="min-w-0">
             <span className="text-[1.12em] font-medium">
               <En en={r.en} />
             </span>
-            <span className="ml-2 text-[13.5px] text-ink-2">{r.ko}</span>
+            <span className="ml-2 text-[14px] text-ink-2">{r.ko}</span>
           </span>
         </li>
       ))}
@@ -482,11 +482,11 @@ export function ItFiller() {
         <li key={r.label} className="flex items-center gap-3 rounded-2xl border border-line px-3 py-3">
           <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-chip text-ink-2">{r.icon}</span>
           <span className="min-w-0">
-            <span className="text-[12.5px] font-extrabold text-ink-3">{r.label}</span>
+            <span className="text-[14px] font-extrabold text-ink-3">{r.label}</span>
             <span className="block text-[1.08em] font-medium">
               <En en={r.en} />
             </span>
-            <span className="block text-[13px] text-ink-2">{r.ko}</span>
+            <span className="block text-[14px] text-ink-2">{r.ko}</span>
           </span>
         </li>
       ))}
@@ -546,7 +546,7 @@ export function OtherGroups() {
     <ul className="space-y-3">
       {rows.map((r) => (
         <li key={r.title} className="rounded-2xl border border-line px-4 py-3">
-          <p className="text-[13px] font-extrabold text-ink-3">{r.title}</p>
+          <p className="text-[14px] font-extrabold text-ink-3">{r.title}</p>
           <div className="mt-2 flex flex-wrap items-center gap-1.5">
             {r.dots.map((d, i) => (
               <Dot key={i} tone={d} />
@@ -589,7 +589,7 @@ export function WordJobs() {
           <ul className="mt-3 space-y-2.5">
             {r.uses.map((u) => (
               <li key={u.en} className="flex items-center gap-2">
-                <span className={`shrink-0 rounded-lg px-2 py-1 text-[12.5px] font-extrabold ${POS_STYLE[u.job]}`}>{u.job}</span>
+                <span className={`shrink-0 rounded-lg px-2 py-1 text-[14px] font-extrabold ${POS_STYLE[u.job]}`}>{u.job}</span>
                 <span className="min-w-0 text-[1.05em] font-medium">
                   <En en={u.en} />
                 </span>
@@ -615,17 +615,17 @@ export function ModifyArrows() {
       {rows.map((r, i) => (
         <li key={i} className="flex flex-col gap-2 rounded-2xl border border-line px-3 py-3 sm:flex-row sm:items-center sm:gap-4">
           <span className="flex shrink-0 items-center gap-2">
-            <span className={`rounded-lg px-2 py-1 text-[13px] font-extrabold ${POS_STYLE[r.from[0]]}`}>
+            <span className={`rounded-lg px-2 py-1 text-[14px] font-extrabold ${POS_STYLE[r.from[0]]}`}>
               {r.from[0]} <span lang="en">{r.from[1]}</span>
             </span>
             <ArrowRight size={18} className="text-ink-3" />
-            <span className={`rounded-lg px-2 py-1 text-[13px] font-extrabold ${POS_STYLE[r.to[0]]}`}>
+            <span className={`rounded-lg px-2 py-1 text-[14px] font-extrabold ${POS_STYLE[r.to[0]]}`}>
               {r.to[0]} <span lang="en">{r.to[1]}</span>
             </span>
           </span>
           <span className="min-w-0 text-[1.05em] font-medium">
             <En en={r.ex} />
-            <span className="ml-2 text-[13px] font-normal text-ink-2">{r.ko}</span>
+            <span className="ml-2 text-[14px] font-normal text-ink-2">{r.ko}</span>
           </span>
         </li>
       ))}
@@ -742,3 +742,4 @@ export * from "./gerunds";
 export * from "./to-infinitive";
 export * from "./participial-constructions";
 export * from "./participles";
+export * from "./verbals-review";

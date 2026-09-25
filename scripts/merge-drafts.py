@@ -34,7 +34,8 @@ ONLY: set[str] = set(sys.argv[1:])
 # curriculum.ts의 장 하나: slug, title, hook, units: [ ... ],
 CHAPTER_RE = re.compile(r'slug: "([^"]+)",\s*title: "[^"]*",\s*hook: "[^"]*",\s*units: \[(.*?)\n\s*\],', re.S)
 # 장의 마지막 단원은 줄바꿈 없이 블록이 끝나므로 뒤를 내다보기로 확인한다
-UNIT_RE = re.compile(r'u\("([^"]+)",([^\n]*?)\)(,?)(?=\n|$)')
+# u("slug", "제목", "요약", ["학년"], true): 한 줄에 여러 개가 있어도 하나씩 잡는다
+UNIT_RE = re.compile(r'u\("([^"]+)",((?:\s*"[^"]*",){2}\s*\[[^\]]*\](?:,\s*true)?)\)')
 
 
 def wanted(stem: str) -> bool:
@@ -119,11 +120,11 @@ def publish_units() -> None:
             continue
         new_block = block
         for m in UNIT_RE.finditer(block):
-            unit, args, comma = m.group(1), m.group(2), m.group(3)
+            unit, args = m.group(1), m.group(2)
             exists = (LESSONS / slug / f"{unit}.mdx").exists()
             ready = args.rstrip().endswith(", true")
             if exists and not ready:
-                new_block = new_block.replace(m.group(0), f'u("{unit}",{args}, true){comma}', 1)
+                new_block = new_block.replace(m.group(0), f'u("{unit}",{args}, true)', 1)
                 count += 1
         src = src.replace(block, new_block, 1)
     CURR.write_text(src, encoding="utf-8")

@@ -107,13 +107,13 @@ export function TnPerfectBridge() {
       <ul className="mt-2 grid gap-2 sm:grid-cols-2">
         {uses.map((u) => (
           <li key={u.name} className="rounded-xl border border-line px-3 py-2.5">
-            <p className="text-[13.5px] font-extrabold text-coral-ink">
+            <p className="text-[14px] font-extrabold text-coral-ink">
               {u.name} <span className="font-normal text-ink-3">· {u.words}</span>
             </p>
             <p className="text-[15.5px] font-medium">
               <En en={u.en} />
             </p>
-            <p className="text-[13.5px] text-ink-2">{u.ko}</p>
+            <p className="text-[14px] text-ink-2">{u.ko}</p>
           </li>
         ))}
       </ul>
@@ -178,14 +178,14 @@ export function TnTimeClause() {
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl bg-mint-soft px-4 py-3 text-mint-ink">
         <p className="font-extrabold">부사절 (언제? 만약?)</p>
-        <p className="text-[13.5px]">미래 일이어도 현재형으로</p>
+        <p className="text-[14px]">미래 일이어도 현재형으로</p>
         <p className="mt-2 text-[15.5px] font-medium text-ink">
           <En en="If it [[rains]] tomorrow, we will stay home." />
         </p>
       </div>
       <div className="rounded-2xl bg-sky-soft px-4 py-3 text-sky-ink">
         <p className="font-extrabold">명사절 (~인지, 언제 ~인지)</p>
-        <p className="text-[13.5px]">미래 일이면 will 그대로</p>
+        <p className="text-[14px]">미래 일이면 will 그대로</p>
         <p className="mt-2 text-[15.5px] font-medium text-ink">
           <En en="I don't know if it [[will rain]] tomorrow." />
         </p>

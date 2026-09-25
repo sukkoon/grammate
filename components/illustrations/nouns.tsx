@@ -7,7 +7,7 @@ function Bin({ title, sub, tone, words }: { title: string; sub: string; tone: st
   return (
     <div className={`rounded-2xl px-4 py-4 ${tone}`}>
       <p className="font-extrabold">{title}</p>
-      <p className="text-[13px] opacity-80">{sub}</p>
+      <p className="text-[14px] opacity-80">{sub}</p>
       <p className="mt-2 flex flex-wrap gap-1.5">
         {words.map((w) => (
           <span key={w} className="rounded-lg bg-card px-2 py-1 text-[15px] font-medium text-ink">
@@ -37,7 +37,7 @@ function RuleCard({ rule, how, pairs }: { rule: string; how: string; pairs: [str
   return (
     <div className="rounded-2xl border border-line px-4 py-3">
       <p className="font-extrabold">{rule}</p>
-      <p className="text-[13px] text-ink-2">{how}</p>
+      <p className="text-[14px] text-ink-2">{how}</p>
       <ul className="mt-2 space-y-1">
         {pairs.map(([a, b]) => (
           <li key={a} className="flex items-center gap-2 text-[15px] font-medium">
@@ -78,7 +78,7 @@ function Vessel({ children, label, en }: { children: ReactNode; label: string; e
       <p className="mt-1.5 text-[15px] font-medium">
         <En en={en} />
       </p>
-      <p className="text-[13px] text-ink-2">{label}</p>
+      <p className="text-[14px] text-ink-2">{label}</p>
     </div>
   );
 }

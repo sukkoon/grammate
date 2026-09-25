@@ -277,7 +277,7 @@ export const curriculum: Part[] = [
         slug: "verbals-review",
         title: "준동사 종합",
         hook: "진짜 동사와 변장한 동사 가려내기.",
-        units: [u("verb-or-verbal", "동사 vs 준동사", "수능 어법 단골!", ["고1", "고2"])],
+        units: [u("verb-or-verbal", "동사 vs 준동사", "수능 어법 단골!", ["고1", "고2"], true)],
       },
     ],
   },

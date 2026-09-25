@@ -107,7 +107,11 @@ Quiz 문제 하나의 필드는 다음과 같다.
 | `{like\|전치사:~처럼, ~같이}` | 이 문장에서의 뜻으로 덮어쓰기. 품사 없이 `{light\|가벼운}`도 된다 |
 | `[[{by myself\|숙어:혼자서}]]` | 형광 + 덮어쓰기 |
 
-**사전의 대표 뜻이 문맥과 다르면 반드시 덮어쓴다.** 예: like(전치사), well(형용사 '건강한'), light(가벼운). 사전에 없는 단어는 5장의 사전 패치로 추가한다.
+**사전의 대표 뜻이 문맥과 다르면 반드시 덮어쓴다.** 예: like(전치사), well(형용사 '건강한'), light(가벼운). 사전에 없는 단어는 8장의 사전 패치로 추가한다.
+
+- 덮어쓰기의 품사 이름은 **괄호 없는 한글**만 된다: `{broken|과거분사:깨진}` ○, `{broken|형용사(분사):깨진}` ✕
+- 가주어·가목적어 it은 `{It|대명사:가주어 (뜻 없이 자리만 채워요)}`, 의미상 주어의 for는 `{for|전치사:(to부정사의 주어) ~가}`처럼 쓴다.
+- 대화문은 `A: … B: …`를 한 문장에 넣지 말고 예문을 나눈다. Quiz의 `en`에는 영어만 쓴다(우리말 문장은 q에).
 
 ## 5. 진짜 동사 찾기(VerbHunt) 표기
 
@@ -115,6 +119,7 @@ Quiz 문제 하나의 필드는 다음과 같다.
 - `~to eat|to부정사~`: 변장한 동사와 변장 이름(to부정사 / 동명사 / 분사)
 - 예: `"I *want* ~to eat|to부정사~ pizza."`
 - 조동사 + 동사처럼 한 덩어리면 `*can swim*`처럼 묶는다.
+- VerbHunt 문장에는 `{…}` 덮어쓰기와 `[[…]]`를 쓸 수 없다(게임 화면에 그대로 보인다). 대표 뜻이 문맥과 다른 단어(when 접속사, like 전치사 등)는 되도록 피한다.
 
 ## 6. 수준 표시
 
@@ -157,6 +162,8 @@ Quiz 문제 하나의 필드는 다음과 같다.
 - **어떤 단어를 넣나**: 예문에 쓴 모든 단어 중 기존 words.json에 없는 표제어를 넣는다. 규칙 변화형(-s, -ed, -ing, -er, -est)은 원형만 넣으면 자동으로 찾는다.
 - **품사 표기**: 명사, 동사, 형용사, 부사, 전치사, 접속사, 대명사, 감탄사, 조동사, 구동사, 숙어, 이름, 수사
 - **뜻**: 네이버 영한사전의 가장 대표적인 뜻을 우리말로 짧게 쓴다.
+- **이미 있는 단어는 다시 적지 않는다.** 패치는 기존 항목을 통째로 덮어쓴다. 뜻을 더해야 할 때만 기존 뜻을 모두 살린 채 뒤에 덧붙이고, 기존 뜻을 줄이거나 바꾸지 않는다. 기존 뜻과 다르면 문장 안에서 덮어쓴다.
+- -ed, -ing형은 대표 품사가 명사여도 다른 뜻에 `동사: …`가 있으면 동사 뜻으로 찾는다(promised → 약속하다).
 - **불규칙 변화형**: forms 패치 파일 `content/lexicon/patches/<chapter-slug>.forms.json`에 적는다. 형식은 `"went": ["go", "과거형"]`이고, 기존 forms.json에 없는 것만 넣는다.
 
 ## 9. 용어 사전 패치
@@ -178,7 +185,7 @@ Quiz 문제 하나의 필드는 다음과 같다.
 }
 ```
 
-- 이미 있는 용어 id: pos, noun, pronoun, verb, adjective, adverb, preposition, conjunction, interjection, article, indefinite-article, definite-article, countable, uncountable, proper-noun, subject, predicate, object, complement, modifier, phrase, clause, finite-verb, person, personal-pronoun, case, demonstrative, impersonal-it, reflexive, indefinite-pronoun, auxiliary, intransitive, transitive, tense, active, passive, verbal, infinitive, gerund, participle, relative-pronoun, antecedent, subjunctive, comparative.
+- 이미 있는 용어는 `content/terms.ts`에서 `id`를 검색해 확인한다(100개가 넘는다. 예: noun-clause, adverb-clause, subordinate-clause, coordinating-conjunction, subordinating-conjunction, relative-pronoun, antecedent, subjunctive, semantic-subject, dummy-subject, past-participle, participial-construction).
 - 이미 있는 id는 새로 만들지 말고 그대로 쓴다.
 
 ## 10. 그림
@@ -191,12 +198,15 @@ Quiz 문제 하나의 필드는 다음과 같다.
 - **그림 속 영어**: `import { En } from "@/components/lesson/En"`로 `<En en="…" />`를 쓰면 뜻 풍선이 된다. 이렇게 쓴 영어도 사전 검사를 받는다.
 - **아이콘**: `components/illustrations/icons.tsx`의 아이콘을 쓸 수 있다: CatIcon, CrownIcon, MaskIcon, HatIcon, PersonIcon, BoxIcon, SunIcon, ClockIcon, RoadIcon, CalendarIcon, MoonIcon, ArrowRight.
 - **React 규칙**: 컴포넌트 안에서 다른 컴포넌트를 정의하지 않는다. 도우미 컴포넌트는 파일 최상단에 둔다.
-- **이미 있는 그림**(index.tsx): PosSentence, JobVsRole, PhraseClause, OneVerbBlueprint, VerbCostumes, VerbFormula, TermLego, PronounSwap, ArticleHats, AAnSound, TheReasons, PersonCircles, CaseOutfits, ThisThat, ItFiller, ReflexiveMirror, OtherGroups, WordJobs, ModifyArrows, PrepositionBox.
+- **이미 있는 그림**: `components/illustrations/index.tsx`와 각 장 파일(`components/illustrations/*.tsx`)의 export를 본다. 다른 장의 그림도 MDX에서 그대로 쓸 수 있다(예: VerbFormula, OneVerbBlueprint, PhraseClause).
+- 그림 속 영어 문장은 `en: "…"` 또는 `en="…"` 이름으로 적어야 사전 검사를 받는다(다른 이름의 필드는 검사되지 않는다).
 
 ## 11. 하지 않을 것
 
 - `content/curriculum.ts`, `words.json`, `forms.json`, `terms.ts`, `components/illustrations/index.tsx`, `mdx-components.tsx`는 고치지 않는다(합칠 때 한 사람이 한다).
 - 개발 서버를 띄우거나 git 커밋을 하지 않는다.
+- 아직 공개되지 않은 단원(curriculum.ts에서 `true`가 없는 단원)으로 링크하지 않는다.
+- 임시 검사 파일은 scratchpad에 만들고, 꼭 tests/에 둬야 하면 `tests/zz-<장>-….test.ts`로 만든 뒤 끝나면 지운다.
 
 ## 12. 스스로 검사하기
 
