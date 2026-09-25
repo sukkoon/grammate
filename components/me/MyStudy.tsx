@@ -52,7 +52,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
           <Mate mood="thinking" size={56} className="text-ink" />
           <p className="mt-3 font-extrabold">아직 기록이 없어요</p>
           <p className="mt-1 text-[14.5px] text-ink-2">예문에서 단어를 누르고 ★를 눌러 담거나, 단원 끝의 확인 문제를 풀어 보세요.</p>
-          <Link href="/learn" className="mt-4 rounded-full bg-ink px-5 py-2.5 font-bold text-on-ink">
+          <Link href="/learn" className="mt-4 rounded-lg bg-ink px-5 py-2.5 font-bold text-on-ink">
             공부하러 가기
           </Link>
         </div>
@@ -60,7 +60,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
 
       {again.length > 0 && (
         <section aria-labelledby="again">
-          <h2 id="again" className="text-[1.2rem] font-extrabold">
+          <h2 id="again" className="text-[1.3rem] font-extrabold">
             다시 볼 문제
           </h2>
           <p className="mt-1 text-[14px] text-ink-2">헷갈렸던 문제예요. 다시 풀어서 맞히면 여기서 사라져요.</p>
@@ -86,7 +86,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
 
       {words.length > 0 && (
         <section aria-labelledby="words">
-          <h2 id="words" className="text-[1.2rem] font-extrabold">
+          <h2 id="words" className="text-[1.3rem] font-extrabold">
             내 단어장 <span className="text-ink-3">{words.length}</span>
           </h2>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -97,7 +97,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
                     {w.lemma}
                   </p>
                   <p className="text-[14px] text-ink-2">
-                    <span className="mr-1.5 rounded-full bg-chip px-1.5 py-0.5 text-[12px] font-bold">{w.pos}</span>
+                    <span className="mr-1.5 rounded-lg bg-chip px-1.5 py-0.5 text-[12px] font-bold">{w.pos}</span>
                     {w.meaning}
                   </p>
                 </div>
@@ -130,7 +130,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
 
       {read.length > 0 && (
         <section aria-labelledby="read">
-          <h2 id="read" className="text-[1.2rem] font-extrabold">
+          <h2 id="read" className="text-[1.3rem] font-extrabold">
             다 읽은 단원
           </h2>
           <ul className="mt-4 divide-y divide-line rounded-2xl border border-line bg-card">
@@ -156,7 +156,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
             onClick={() => {
               if (confirm("이 기기에 저장된 내 공부 기록을 모두 지울까요?")) clearAll();
             }}
-            className="mt-3 rounded-full px-4 py-2 font-bold ring-1 ring-line hover:bg-chip"
+            className="mt-3 rounded-lg px-4 py-2 font-bold ring-1 ring-line hover:bg-chip"
           >
             기록 모두 지우기
           </button>

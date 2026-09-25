@@ -159,11 +159,11 @@ export function WordTooltipLayer() {
       />
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <p lang="en" className="text-[1.15rem] font-bold leading-tight">
+          <p lang="en" className="text-[1.25rem] font-bold leading-tight">
             {info.word}
           </p>
           {info.pos && (
-            <span className="mt-1 inline-block rounded-full bg-chip px-2 py-0.5 text-[12px] font-bold text-ink-2">
+            <span className="mt-1 inline-block rounded-lg bg-chip px-2 py-0.5 text-[12px] font-bold text-ink-2">
               {info.pos}
             </span>
           )}
@@ -203,7 +203,7 @@ export function WordTooltipLayer() {
         <p className="mt-2 text-[14.5px] text-ink-2">이 단어의 뜻은 곧 채워 넣을게요.</p>
       ) : (
         <>
-          <p className="mt-2 text-[1.05rem] font-extrabold leading-snug">{info.meaning}</p>
+          <p className="mt-2 text-[1.12rem] font-extrabold leading-snug">{info.meaning}</p>
           {info.note && <p className="mt-1 text-[13.5px] text-ink-2">{info.note}</p>}
           {info.alts.length > 0 && (
             <div className="mt-2 border-t border-line pt-2 text-[13.5px] text-ink-2">

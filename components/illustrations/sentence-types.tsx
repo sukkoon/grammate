@@ -586,7 +586,7 @@ export function StLetsWho() {
         <div className="rounded-2xl border-2 border-coral px-4 py-3">
           <p className="w-fit rounded-lg bg-coral-soft px-2.5 py-1 text-[14.5px] font-extrabold text-coral-ink">제안문: 우리 같이 하자</p>
           <p className="mt-3 flex justify-center" aria-label="나와 너가 함께 해요">
-            <span className="flex items-center gap-0.5 rounded-full bg-coral-soft px-3 py-0.5">
+            <span className="flex items-center gap-0.5 rounded-lg bg-coral-soft px-3 py-0.5">
               <PersonIcon size={40} className="text-coral" />
               <PersonIcon size={40} className="text-coral" />
             </span>

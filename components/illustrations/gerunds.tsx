@@ -416,8 +416,8 @@ export function GdFormGrid() {
       {GD_FORMS.map((f) => (
         <li key={f.key} className="rounded-2xl border border-line px-3.5 py-3">
           <p className="flex flex-wrap gap-1.5 text-[13.5px] font-bold">
-            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.time}</span>
-            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
+            <span className="rounded-lg bg-chip px-2.5 py-0.5 text-ink-2">{f.time}</span>
+            <span className="rounded-lg bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
           </p>
           <p lang="en" className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[1.1em] font-extrabold ${f.tone}`}>
             {f.form}

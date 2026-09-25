@@ -286,7 +286,7 @@ export function PoConjBridge() {
       <div className="grid items-center gap-2 sm:grid-cols-[1fr_auto_1fr]">
         <PoIsland words={PO_LEFT} label="문장 1" />
         <div className="flex flex-col items-center gap-1 py-1">
-          <span className="rounded-full bg-sky-soft px-4 py-1.5 text-[1.15em] font-bold text-sky-ink">
+          <span className="rounded-lg bg-sky-soft px-4 py-1.5 text-[1.15em] font-bold text-sky-ink">
             <En en={PO_BRIDGE.en} />
           </span>
           <span className="text-[13.5px] font-extrabold text-sky-ink">접속사 다리</span>

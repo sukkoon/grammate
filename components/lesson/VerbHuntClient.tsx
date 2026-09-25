@@ -118,7 +118,7 @@ export function VerbHuntClient({ rounds, title }: { rounds: HuntRound[]; title: 
               <p className="mt-2 text-[0.93em]">
                 변장한 동사:{" "}
                 {verbals.map((v, i) => (
-                  <span key={i} className="mr-2 inline-block rounded-full bg-amber-soft px-2 py-0.5 font-bold text-amber-ink">
+                  <span key={i} className="mr-2 inline-block rounded-lg bg-amber-soft px-2 py-0.5 font-bold text-amber-ink">
                     {v.text} → {v.disguise}
                   </span>
                 ))}
@@ -127,11 +127,11 @@ export function VerbHuntClient({ rounds, title }: { rounds: HuntRound[]; title: 
             {round.why && <p className="mt-2 text-[0.93em] text-ink-2">{round.why}</p>}
             <div className="mt-3">
               {r < rounds.length - 1 ? (
-                <button type="button" onClick={() => go(r + 1)} className="rounded-full bg-ink px-5 py-2.5 text-[14.5px] font-bold text-on-ink">
+                <button type="button" onClick={() => go(r + 1)} className="rounded-lg bg-ink px-5 py-2.5 text-[14.5px] font-bold text-on-ink">
                   다음 문장
                 </button>
               ) : (
-                <button type="button" onClick={() => go(0)} className="rounded-full border border-line bg-card px-5 py-2.5 text-[14.5px] font-bold">
+                <button type="button" onClick={() => go(0)} className="rounded-lg border border-line bg-card px-5 py-2.5 text-[14.5px] font-bold">
                   처음부터 다시
                 </button>
               )}

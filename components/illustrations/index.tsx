@@ -70,11 +70,11 @@ export function PosSentence() {
         오, 그 작은 강아지와 나는 공원에서 아주 빨리 달려요!
       </p>
       <ul className="mt-4 flex flex-wrap justify-center gap-2 text-[13.5px]">
-        <li className="rounded-full bg-sky-soft px-2.5 py-1 font-bold text-sky-ink">이름 가족</li>
-        <li className="rounded-full bg-coral px-2.5 py-1 font-bold text-white">움직임</li>
-        <li className="rounded-full bg-mint-soft px-2.5 py-1 font-bold text-mint-ink">명사 꾸미기</li>
-        <li className="rounded-full bg-amber-soft px-2.5 py-1 font-bold text-amber-ink">나머지 꾸미기</li>
-        <li className="rounded-full bg-chip px-2.5 py-1 font-bold text-ink-2">잇기·외치기</li>
+        <li className="rounded-lg bg-sky-soft px-2.5 py-1 font-bold text-sky-ink">이름 가족</li>
+        <li className="rounded-lg bg-coral px-2.5 py-1 font-bold text-white">움직임</li>
+        <li className="rounded-lg bg-mint-soft px-2.5 py-1 font-bold text-mint-ink">명사 꾸미기</li>
+        <li className="rounded-lg bg-amber-soft px-2.5 py-1 font-bold text-amber-ink">나머지 꾸미기</li>
+        <li className="rounded-lg bg-chip px-2.5 py-1 font-bold text-ink-2">잇기·외치기</li>
       </ul>
     </div>
   );

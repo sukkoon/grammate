@@ -2,6 +2,7 @@
 
 import { Fragment, useEffect, useRef, useState, type ReactNode } from "react";
 import { Mate, type Mood } from "@/components/brand/Mate";
+import { Phrases } from "@/components/text/Phrases";
 
 export type Feature = { mood: Mood; title: string; body: string; demo: ReactNode };
 
@@ -55,13 +56,15 @@ export function FeatureCards({ items }: { items: Feature[] }) {
               }`}
             >
               <Mate mood={f.mood} size={36} className="text-ink" />
-              <h2 className="mt-3 text-[15px] font-extrabold leading-snug sm:text-[1.02rem]">{f.title}</h2>
-              <p className="mt-1.5 flex-1 text-[13.5px] leading-relaxed text-ink-2 sm:text-[14.5px]">{f.body}</p>
+              <h2 className="mt-3 text-[15px] font-extrabold leading-snug sm:text-[1.1rem]">{f.title}</h2>
+              <p className="mt-1.5 flex-1 text-[13.5px] leading-relaxed text-ink-2 sm:text-[14.5px]">
+                <Phrases text={f.body} />
+              </p>
               <button
                 type="button"
                 aria-expanded={on}
                 aria-controls={`feature-demo-${i}`}
-                className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-chip px-2.5 py-1 text-[12.5px] font-bold text-ink-2"
+                className="mt-3 inline-flex w-fit items-center gap-1 rounded-lg bg-chip px-2.5 py-1 text-[12.5px] font-bold text-ink-2"
               >
                 예시 보기
                 <span aria-hidden className={`transition-transform ${on ? "rotate-90" : ""}`}>
@@ -94,7 +97,7 @@ export function WordDemo() {
   return (
     <div>
       <p className="text-[12.5px] font-extrabold text-coral-ink">단어 뜻풀이</p>
-      <p lang="en" className="mt-2 text-[1.15rem] font-medium">
+      <p lang="en" className="mt-2 text-[1.25rem] font-medium">
         {WORDS.map((x, i) => (
           <Fragment key={x.w}>
             {i > 0 && " "}
@@ -121,7 +124,7 @@ export function WordDemo() {
               <span lang="en" className="text-[1rem]">
                 {cur.w}
               </span>
-              <span className="rounded-full bg-card px-2 py-0.5 text-[12px] font-bold text-ink-2">{cur.pos}</span>
+              <span className="rounded-lg bg-card px-2 py-0.5 text-[12px] font-bold text-ink-2">{cur.pos}</span>
             </p>
             <p className="mt-0.5 font-bold">{cur.m}</p>
           </>

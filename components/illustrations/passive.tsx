@@ -252,9 +252,9 @@ export function PsTenseGrid() {
         ))}
       </div>
       <ul className="mt-3 flex flex-wrap gap-2 text-[13.5px]">
-        <li className="rounded-full bg-coral px-2.5 py-1 font-bold text-white">맨 앞 조각: 주어·시제 담당</li>
-        <li className="rounded-full bg-amber-soft px-2.5 py-1 font-bold text-amber-ink">가운데: be의 여러 모양</li>
-        <li className="rounded-full bg-mint-soft px-2.5 py-1 font-bold text-mint-ink">끝: 늘 p.p.</li>
+        <li className="rounded-lg bg-coral px-2.5 py-1 font-bold text-white">맨 앞 조각: 주어·시제 담당</li>
+        <li className="rounded-lg bg-amber-soft px-2.5 py-1 font-bold text-amber-ink">가운데: be의 여러 모양</li>
+        <li className="rounded-lg bg-mint-soft px-2.5 py-1 font-bold text-mint-ink">끝: 늘 p.p.</li>
       </ul>
     </div>
   );

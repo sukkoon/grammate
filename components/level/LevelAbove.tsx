@@ -6,7 +6,7 @@ export function LevelAbove({ levels }: { levels: Level[] }) {
   const need = minBand(levels);
   if (need === "elem") return null;
   return (
-    <span data-need={need} className="lv-above shrink-0 rounded-full bg-sky-soft px-2 py-0.5 text-[11.5px] font-extrabold text-sky-ink">
+    <span data-need={need} className="lv-above shrink-0 rounded-lg bg-sky-soft px-2 py-0.5 text-[11.5px] font-extrabold text-sky-ink">
       {bandLabel[need]} 과정
     </span>
   );

@@ -6,6 +6,7 @@ import { ReadButton, ReadMark } from "@/components/lesson/ReadMark";
 import { LevelTabs } from "@/components/level/LevelTabs";
 import { LevelAbove } from "@/components/level/LevelAbove";
 import { findUnit, neighbors, readyUnits, unitHref, type UnitRef } from "@/content/curriculum";
+import { Phrases } from "@/components/text/Phrases";
 
 export const dynamicParams = false;
 
@@ -96,8 +97,10 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
           <p className="text-[13.5px] font-bold text-ink-3">
             {ref.part.label} {ref.part.title} · {ref.chapter.title}
           </p>
-          <h1 className="mt-2 text-[1.7rem] font-extrabold leading-snug tracking-[-0.02em] sm:text-[2rem]">{ref.unit.title}</h1>
-          <p className="mt-2 text-[1rem] text-ink-2">{ref.unit.summary}</p>
+          <h1 className="mt-2 text-[1.85rem] font-extrabold leading-snug tracking-[-0.02em] sm:text-[2.2rem]">{ref.unit.title}</h1>
+          <p className="mt-2 text-[1rem] text-ink-2">
+            <Phrases text={ref.unit.summary} />
+          </p>
           <div className="mt-3">
             <LevelBadges levels={ref.unit.levels} />
           </div>

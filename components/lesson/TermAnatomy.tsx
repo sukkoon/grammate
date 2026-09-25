@@ -44,7 +44,7 @@ export function TermCard({ t, compact = false }: { t: Term; compact?: boolean })
               </span>
             )}
             <span className="rounded-xl bg-chip px-3 py-2 text-center leading-tight">
-              <span className="block text-[1.08rem] font-extrabold">{p.c}</span>
+              <span className="block text-[1.2rem] font-extrabold">{p.c}</span>
               <span className="mt-0.5 block text-[12.5px] text-ink-2">{p.m}</span>
             </span>
           </Fragment>
@@ -97,12 +97,12 @@ export function TermAnatomy({ id }: { id: string }) {
   return (
     <section aria-label={`${t.term} 뜻풀이`} className="my-7 rounded-2xl border border-line bg-card px-4 py-5 sm:px-6">
       <div className="mb-3 flex items-center justify-between gap-2">
-        <span className="rounded-full bg-coral-soft px-2.5 py-0.5 text-[12.5px] font-extrabold text-coral-ink">용어 뜻풀이</span>
+        <span className="rounded-lg bg-coral-soft px-2.5 py-0.5 text-[12.5px] font-extrabold text-coral-ink">용어 뜻풀이</span>
         <Link href={`/terms#${t.id}`} className="text-[13px] font-bold text-ink-3 hover:text-ink">
           용어 사전 ›
         </Link>
       </div>
-      <p className="mb-3 text-[1.55rem] font-extrabold leading-tight tracking-[-0.01em]">{t.term}</p>
+      <p className="mb-3 text-[1.7rem] font-extrabold leading-tight tracking-[-0.01em]">{t.term}</p>
       <TermCard t={t} />
     </section>
   );

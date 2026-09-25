@@ -514,13 +514,13 @@ export function TiFixedTo() {
   return (
     <div className="mx-auto max-w-xl">
       <p className="flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
-        <span className="rounded-full bg-coral px-2.5 py-1 text-white">진짜 동사: 주어·때 따라 바뀌어요</span>
-        <span className="rounded-full bg-sky-soft px-2.5 py-1 text-sky-ink">to부정사: 늘 그대로</span>
+        <span className="rounded-lg bg-coral px-2.5 py-1 text-white">진짜 동사: 주어·때 따라 바뀌어요</span>
+        <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">to부정사: 늘 그대로</span>
       </p>
       <ul className="mt-3 grid gap-2">
         {FIXED_ROWS.map((r) => (
           <li key={r.tag} className="flex flex-wrap items-center gap-1.5 rounded-2xl border border-line px-3.5 py-2.5 text-[1.08em]">
-            <span className="mr-1 rounded-full bg-chip px-2.5 py-0.5 text-[13.5px] font-bold text-ink-2">{r.tag}</span>
+            <span className="mr-1 rounded-lg bg-chip px-2.5 py-0.5 text-[13.5px] font-bold text-ink-2">{r.tag}</span>
             <span className="font-medium">
               <En en={r.subj.en} />
             </span>
@@ -694,8 +694,8 @@ export function TiFormGrid() {
       {TI_FORMS.map((f) => (
         <li key={f.key} className="rounded-2xl border border-line px-3.5 py-3">
           <p className="flex flex-wrap gap-1.5 text-[13.5px] font-bold">
-            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">진짜 동사와 {f.time}</span>
-            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
+            <span className="rounded-lg bg-chip px-2.5 py-0.5 text-ink-2">진짜 동사와 {f.time}</span>
+            <span className="rounded-lg bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
           </p>
           <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[1.1em] font-extrabold ${TONE[f.tone]}`}>
             {f.form}

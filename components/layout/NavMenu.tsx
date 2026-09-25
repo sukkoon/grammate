@@ -7,7 +7,7 @@ import { useEffect, useId, useRef, useState } from "react";
 /**
  * 머리글 오른쪽의 드롭다운 목차.
  * - 단추에는 지금 보고 있는 페이지 이름이 보인다. 누르면 아래로 메뉴가 펼쳐진다.
- * - 여러 메뉴의 주소가 겹치면(기초 다지기 ⊂ 전체 목차) 가장 길게 맞는 것 하나만 지금 페이지로 본다.
+ * - 여러 메뉴의 주소가 겹치면(주소가 겹치는 경우) 가장 길게 맞는 것 하나만 지금 페이지로 본다.
  * - 바깥을 누르거나 Esc를 누르거나 다른 페이지로 가면 닫힌다.
  */
 export function NavMenu({ items, className = "" }: { items: { href: string; label: string }[]; className?: string }) {

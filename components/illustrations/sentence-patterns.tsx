@@ -66,7 +66,7 @@ function Legend() {
   return (
     <ul className="mt-4 flex flex-wrap gap-2">
       {items.map((it) => (
-        <li key={it.role} className={`rounded-full px-2.5 py-1 text-[13.5px] font-bold ${ROLE_STYLE[it.role]}`}>
+        <li key={it.role} className={`rounded-lg px-2.5 py-1 text-[13.5px] font-bold ${ROLE_STYLE[it.role]}`}>
           {it.text}
         </li>
       ))}

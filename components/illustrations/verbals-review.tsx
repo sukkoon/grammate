@@ -276,8 +276,8 @@ export function VrHiddenLink() {
             ))}
           </p>
           <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[13.5px] font-bold">
-            <span className="rounded-full border-2 border-dashed border-ink-3 px-2.5 py-0.5 text-ink-2">{h.hidden}</span>
-            <span className="rounded-full bg-coral-soft px-2.5 py-0.5 text-coral-ink">{h.count}</span>
+            <span className="rounded-lg border-2 border-dashed border-ink-3 px-2.5 py-0.5 text-ink-2">{h.hidden}</span>
+            <span className="rounded-lg bg-coral-soft px-2.5 py-0.5 text-coral-ink">{h.count}</span>
           </p>
           <p className="mt-1.5 text-[13.5px] text-ink-2">{h.hint}</p>
         </li>

@@ -37,7 +37,7 @@ export function LevelTabs({ variant = "page" }: { variant?: "page" | "compact" }
   const { refs, onKeyDown, tabIndex } = useTabKeys(band);
 
   const tabs = (
-    <div role="tablist" aria-label="설명 수준 고르기" className={`grid grid-cols-3 gap-1 rounded-full bg-chip p-1 ${variant === "compact" ? "w-[11.5rem]" : ""}`}>
+    <div role="tablist" aria-label="설명 수준 고르기" className={`grid grid-cols-3 gap-1 rounded-xl bg-chip p-1 ${variant === "compact" ? "w-[11.5rem]" : ""}`}>
       {BANDS.map((b, i) => {
         const on = band === b;
         return (
@@ -52,7 +52,7 @@ export function LevelTabs({ variant = "page" }: { variant?: "page" | "compact" }
             tabIndex={tabIndex(b, i)}
             onClick={() => setBand(b)}
             onKeyDown={(e) => onKeyDown(e, i)}
-            className={`rounded-full font-extrabold transition-colors ${
+            className={`rounded-lg font-extrabold transition-colors ${
               variant === "compact" ? "h-8 text-[13.5px]" : "h-10 text-[15px]"
             } ${on ? "bg-ink text-on-ink shadow-sm" : "text-ink-2 hover:bg-card hover:text-ink"}`}
           >

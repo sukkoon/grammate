@@ -8,8 +8,8 @@ import { NavMenu } from "./NavMenu";
 export const navItems = [
   { href: "/", label: "그래머랑 소개" },
   { href: "/learn", label: "전체 목차" },
-  { href: "/learn/intro/reading-terms", label: "기초 다지기" },
   { href: "/terms", label: "용어 사전" },
+  { href: "/start", label: "각 단원별 학습" },
   { href: "/roadmap", label: "필수 문법" },
   { href: "/me", label: "내 공부" },
 ];

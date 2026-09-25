@@ -81,7 +81,7 @@ function TimeLayerBox({ layer, children }: { layer: TimeLayer; children?: ReactN
         <span lang="en" className="text-[1.5em] font-bold leading-none">
           {layer.p}
         </span>
-        <span className="inline-flex items-center gap-1 rounded-full bg-card px-2 py-0.5 text-[13.5px] font-extrabold">
+        <span className="inline-flex items-center gap-1 rounded-lg bg-card px-2 py-0.5 text-[13.5px] font-extrabold">
           <ShapeMark kind={layer.shape} />
           {layer.shapeKo}
         </span>
@@ -771,7 +771,7 @@ export function PrForDuring() {
         <div key={r.key} className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span className="font-extrabold">{r.title}</span>
-            <span className="rounded-full bg-chip px-2 py-0.5 text-[13.5px] font-bold text-ink-2">{r.q}</span>
+            <span className="rounded-lg bg-chip px-2 py-0.5 text-[13.5px] font-bold text-ink-2">{r.q}</span>
           </p>
           <div className="mt-2">{r.bar}</div>
           <p className="mt-1 text-[1.05em] font-medium">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mate } from "@/components/brand/Mate";
 import { MyStudy } from "@/components/me/MyStudy";
 import { allUnits } from "@/content/curriculum";
+import { chunkNodes } from "@/components/text/Phrases";
 
 export const metadata: Metadata = {
   title: "내 공부",
@@ -15,7 +16,7 @@ export default function MePage() {
   );
   return (
     <div className="mx-auto max-w-4xl px-4 pb-10 pt-10 sm:px-6">
-      <h1 className="text-[1.8rem] font-extrabold tracking-[-0.02em]">내 공부</h1>
+      <h1 className="text-[2rem] font-extrabold tracking-[-0.02em]">내 공부</h1>
       <div className="mt-4 flex gap-3 rounded-2xl bg-card px-4 py-4 ring-1 ring-line sm:px-5">
         <Mate mood="happy" size={40} className="shrink-0 text-ink" />
         <p className="text-[14.5px] text-ink-2">

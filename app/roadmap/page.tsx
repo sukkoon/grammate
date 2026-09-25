@@ -5,6 +5,7 @@ import { ReadMark } from "@/components/lesson/ReadMark";
 import { Lv } from "@/components/level/Lv";
 import { LevelTabs } from "@/components/level/LevelTabs";
 import { roadmap, type RoadmapLevel } from "@/content/roadmap";
+import { Phrases } from "@/components/text/Phrases";
 
 export const metadata: Metadata = {
   title: "수준별 필수 문법",
@@ -22,17 +23,19 @@ function LevelSection({ lv }: { lv: RoadmapLevel }) {
   return (
     <section id={`lv-${lv.band}`} aria-labelledby={`h-${lv.band}`} className="scroll-mt-24">
       <div className="flex flex-wrap items-center gap-2 border-b-2 border-ink pb-2">
-        <span className={`rounded-full px-2.5 py-0.5 text-[13.5px] font-extrabold ${TONE[lv.band]}`}>{LABEL[lv.band]}</span>
-        <h2 id={`h-${lv.band}`} className="text-[1.3rem] font-extrabold">
+        <span className={`rounded-lg px-2.5 py-0.5 text-[13.5px] font-extrabold ${TONE[lv.band]}`}>{LABEL[lv.band]}</span>
+        <h2 id={`h-${lv.band}`} className="text-[1.45rem] font-extrabold">
           {lv.title}
         </h2>
       </div>
-      <p className="mt-3 text-ink-2">{lv.intro}</p>
+      <p className="mt-3 text-ink-2">
+        <Phrases text={lv.intro} />
+      </p>
       <p className="mt-1 text-[13.5px] text-ink-3">참고 교재: {lv.books.join(" · ")}</p>
       <div className="mt-5 space-y-6">
         {lv.groups.map((g) => (
           <div key={g.name}>
-            <h3 className="text-[1.02rem] font-extrabold">{g.name}</h3>
+            <h3 className="text-[1.1rem] font-extrabold">{g.name}</h3>
             <ul className="mt-2 grid gap-2 sm:grid-cols-2">
               {g.items.map((it) => (
                 <li key={it.title} className="flex flex-col rounded-2xl border border-line bg-card px-4 py-3">
@@ -40,13 +43,15 @@ function LevelSection({ lv }: { lv: RoadmapLevel }) {
                     <span className="font-extrabold">{it.title}</span>
                     {it.links[0].href.startsWith("/learn/") && <ReadMark unit={it.links[0].href.replace("/learn/", "")} />}
                   </span>
-                  <span className="mt-1 text-[14px] text-ink-2">{it.know}</span>
+                  <span className="mt-1 text-[14px] text-ink-2">
+                    <Phrases text={it.know} />
+                  </span>
                   <span className="mt-2 flex flex-wrap gap-1.5">
                     {it.links.map((l) => (
                       <Link
                         key={l.href}
                         href={l.href}
-                        className="rounded-full bg-chip px-2.5 py-1 text-[13.5px] font-bold text-coral-ink hover:bg-line"
+                        className="rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-bold text-coral-ink hover:bg-line"
                       >
                         {l.label} ›
                       </Link>
@@ -66,13 +71,13 @@ export default function RoadmapPage() {
   const [elem, middle, high] = roadmap;
   return (
     <div className="mx-auto max-w-4xl px-4 pb-10 pt-10 sm:px-6">
-      <h1 className="text-[1.8rem] font-extrabold tracking-[-0.02em]">수준별 필수 문법</h1>
+      <h1 className="text-[2rem] font-extrabold tracking-[-0.02em]">수준별 필수 문법</h1>
       <p className="mt-2 text-ink-2">
-        참고한 베스트셀러 문법 교재들이 학년마다 공통으로 다루는 내용을 골라, 초등·중등·고등에서 꼭 알아야 할 문법만 추렸어요. 교재마다 학년 배치가 조금씩 다르니, 앞 단계부터 차근차근 다지면 돼요.
+        <Phrases text="참고한 베스트셀러 문법 교재들이 학년마다 공통으로 다루는 내용을 골라, 초등·중등·고등에서 꼭 알아야 할 문법만 추렸어요. 교재마다 학년 배치가 조금씩 다르니, 앞 단계부터 차근차근 다지면 돼요." />
       </p>
       <nav aria-label="수준 바로가기" className="mt-5 flex flex-wrap gap-2">
         {roadmap.map((lv) => (
-          <a key={lv.band} href={`#lv-${lv.band}`} className="rounded-full bg-card px-3.5 py-1.5 text-[13.5px] font-bold ring-1 ring-line hover:bg-chip">
+          <a key={lv.band} href={`#lv-${lv.band}`} className="rounded-lg bg-card px-3.5 py-1.5 text-[13.5px] font-bold ring-1 ring-line hover:bg-chip">
             {LABEL[lv.band]}
           </a>
         ))}

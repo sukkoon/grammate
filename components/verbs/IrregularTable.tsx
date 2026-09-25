@@ -28,7 +28,7 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
       type="button"
       aria-pressed={on}
       onClick={onClick}
-      className={`rounded-full px-3.5 py-1.5 text-[13.5px] font-bold ring-1 transition-colors ${
+      className={`rounded-lg px-3.5 py-1.5 text-[13.5px] font-bold ring-1 transition-colors ${
         on ? "bg-ink text-bg ring-ink" : "bg-card text-ink-2 ring-line hover:bg-chip"
       }`}
     >

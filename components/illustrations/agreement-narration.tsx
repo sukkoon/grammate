@@ -642,7 +642,7 @@ export function AnSingleLumps() {
       </div>
       <div className="rounded-2xl bg-chip px-3 py-3">
         <p className="flex items-center gap-2 text-[14.5px] font-extrabold">
-          <span className="grid h-7 place-items-center rounded-full bg-ink px-2 text-[13.5px] text-on-ink">여럿</span>
+          <span className="grid h-7 place-items-center rounded-lg bg-ink px-2 text-[13.5px] text-on-ink">여럿</span>
           헷갈리는 반대편 → 복수 동사
         </p>
         <ul className="mt-2 grid gap-2 sm:grid-cols-2">

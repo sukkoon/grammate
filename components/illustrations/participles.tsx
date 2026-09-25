@@ -353,8 +353,8 @@ export function PtEmotionPairs() {
         ))}
       </ul>
       <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
-        <span className="rounded-full bg-coral-soft px-2.5 py-1 text-coral-ink">-ing: 감정을 일으키는 쪽</span>
-        <span className="rounded-full bg-sky-soft px-2.5 py-1 text-sky-ink">p.p.: 감정을 느끼는 쪽</span>
+        <span className="rounded-lg bg-coral-soft px-2.5 py-1 text-coral-ink">-ing: 감정을 일으키는 쪽</span>
+        <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">p.p.: 감정을 느끼는 쪽</span>
       </p>
     </div>
   );

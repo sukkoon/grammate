@@ -10,7 +10,7 @@ export function ReadMark({ unit }: { unit: string }) {
   const read = useSyncExternalStore(onStoreChange, isRead(unit), () => false);
   if (!read) return null;
   return (
-    <span className="shrink-0 rounded-full bg-mint-soft px-2 py-0.5 text-[12px] font-extrabold text-mint-ink">다 읽음</span>
+    <span className="shrink-0 rounded-lg bg-mint-soft px-2 py-0.5 text-[12px] font-extrabold text-mint-ink">다 읽음</span>
   );
 }
 
@@ -22,7 +22,7 @@ export function ReadButton({ unit }: { unit: string }) {
       type="button"
       onClick={() => markRead(unit, !read)}
       aria-pressed={read}
-      className={`inline-flex min-h-12 items-center gap-2 rounded-full px-5 font-bold transition-colors ${
+      className={`inline-flex min-h-12 items-center gap-2 rounded-lg px-5 font-bold transition-colors ${
         read ? "bg-mint-soft text-mint-ink" : "bg-card ring-1 ring-line hover:bg-chip"
       }`}
     >

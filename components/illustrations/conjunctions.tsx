@@ -200,7 +200,7 @@ export function CjTwoKingdoms() {
         <p className="text-[14.5px] font-extrabold">접속사 and 1개 → 왕국 둘, 진짜 동사 2개</p>
         <div className="mt-2.5 flex flex-wrap items-stretch gap-2">
           <Kingdom pieces={TWO_KINGDOMS_A} tag="절 1" />
-          <span className="self-center rounded-full bg-amber-soft px-3 py-1 text-[14.5px] font-extrabold text-amber-ink">
+          <span className="self-center rounded-lg bg-amber-soft px-3 py-1 text-[14.5px] font-extrabold text-amber-ink">
             <En en="and" />
           </span>
           <Kingdom pieces={TWO_KINGDOMS_B} tag="절 2" />
@@ -231,7 +231,7 @@ function CauseBox({ en, role }: { en: string; role: "cause" | "result" }) {
 
 function LinkPill({ word }: { word: string }) {
   return (
-    <span className="rounded-full border-2 border-ink px-3 py-1 text-[14.5px] font-extrabold sm:self-center">
+    <span className="rounded-lg border-2 border-ink px-3 py-1 text-[14.5px] font-extrabold sm:self-center">
       <En en={word} />
     </span>
   );
@@ -850,7 +850,7 @@ function Coupler({ word }: { word: string }) {
   return (
     <span className="inline-flex items-center pb-3">
       <span className="h-1 w-2.5 bg-ink-3" aria-hidden />
-      <span lang="en" className="rounded-full border-2 border-ink px-2 text-[13.5px] font-extrabold">
+      <span lang="en" className="rounded-lg border-2 border-ink px-2 text-[13.5px] font-extrabold">
         {word}
       </span>
       <span className="h-1 w-2.5 bg-ink-3" aria-hidden />

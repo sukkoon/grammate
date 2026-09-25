@@ -43,7 +43,7 @@ export function PickClient({ id, title, items }: { id: string; title?: string; i
     <section aria-label={title ?? "네모 고르기"} className="my-8">
       <div className="mb-3 flex items-center gap-2">
         <Mate mood="thinking" size={30} className="text-ink" />
-        <h2 className="text-[1.15rem] font-extrabold">{title ?? "네모 고르기"}</h2>
+        <h2 className="text-[1.25rem] font-extrabold">{title ?? "네모 고르기"}</h2>
       </div>
       <p className="mb-4 text-[0.93em] text-ink-2">괄호 안에서 어법에 맞는 것을 눌러요. 고르기 전에 진짜 동사 개수부터 세어 보세요.</p>
       <ol className="space-y-3">
@@ -55,7 +55,7 @@ export function PickClient({ id, title, items }: { id: string; title?: string; i
               <p className="text-[1.08em] font-medium leading-[2.3]">
                 <span className="mr-2 font-bold text-coral-ink">{n + 1}.</span>
                 {it.level && it.level !== "elem" && (
-                  <span className="mr-2 rounded-full bg-sky-soft px-2 py-0.5 align-middle text-[12.5px] font-extrabold text-sky-ink">{bandLabel[it.level]}</span>
+                  <span className="mr-2 rounded-lg bg-sky-soft px-2 py-0.5 align-middle text-[12.5px] font-extrabold text-sky-ink">{bandLabel[it.level]}</span>
                 )}
                 {it.parts.map((p, pi) => {
                   if (p.kind === "text") return <Fragment key={pi}>{p.node}</Fragment>;
@@ -116,7 +116,7 @@ export function PickClient({ id, title, items }: { id: string; title?: string; i
       {allDone && (
         <div className="fade-in mt-4 flex items-center justify-between gap-3 rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
           <span>끝까지 골라 봤어요. 틀린 문장은 &lsquo;내 공부&rsquo;에 모아 둘게요.</span>
-          <button type="button" onClick={() => setPicked({})} className="shrink-0 rounded-full border border-line bg-card px-3.5 py-1.5 text-[13.5px] font-bold hover:bg-bg">
+          <button type="button" onClick={() => setPicked({})} className="shrink-0 rounded-lg border border-line bg-card px-3.5 py-1.5 text-[13.5px] font-bold hover:bg-bg">
             다시 풀기
           </button>
         </div>

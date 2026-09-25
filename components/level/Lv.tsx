@@ -51,7 +51,7 @@ export function Lv({
           펼치기 +
         </span>
       </button>
-      <button type="button" className="lv-fold mb-1 ml-auto items-center gap-1 rounded-full px-2.5 py-1 text-[13.5px] font-bold text-ink-3 hover:bg-chip hover:text-ink">
+      <button type="button" className="lv-fold mb-1 ml-auto items-center gap-1 rounded-lg px-2.5 py-1 text-[13.5px] font-bold text-ink-3 hover:bg-chip hover:text-ink">
         {who} 내용 · 접기 −
       </button>
       <div className="lv-body">{children}</div>

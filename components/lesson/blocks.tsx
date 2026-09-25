@@ -109,7 +109,7 @@ export function DeepDive({ level = "고1", title, children }: { level?: Level; t
     <Lv min={bandOf(level)} topic={`심화: ${title}`}>
     <details className="group my-6 rounded-2xl border border-line bg-card [&[open]>summary]:border-b [&[open]>summary]:border-line">
       <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3.5 sm:px-5 [&::-webkit-details-marker]:hidden">
-        <span className="rounded-full bg-sky-soft px-2 py-0.5 text-[12px] font-extrabold text-sky-ink">심화 · {level}</span>
+        <span className="rounded-lg bg-sky-soft px-2 py-0.5 text-[12px] font-extrabold text-sky-ink">심화 · {level}</span>
         <span className="flex-1 font-bold">{title}</span>
         <svg className="shrink-0 transition-transform group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden>
           <path d="m6 9 6 6 6-6" />
@@ -148,7 +148,7 @@ export function Figure({ caption, children }: { caption?: ReactNode; children: R
 export function KeyIdea({ children }: { children: ReactNode }) {
   return (
     <p className="my-6 rounded-2xl bg-ink px-5 py-4 text-[1.08em] font-bold leading-relaxed text-on-ink">
-      <span className="mr-2 rounded-full bg-coral px-2 py-0.5 text-[12px] font-extrabold align-middle text-white">한 줄 핵심</span>
+      <span className="mr-2 rounded-lg bg-coral px-2 py-0.5 text-[12px] font-extrabold align-middle text-white">한 줄 핵심</span>
       {children}
     </p>
   );

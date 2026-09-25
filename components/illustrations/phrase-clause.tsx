@@ -87,7 +87,7 @@ function PcClauseBox({ parts, tag, dashed = false }: { parts: PcPart[]; tag: str
 
 function PcLink({ word }: { word: string }) {
   return (
-    <span className="self-center rounded-full bg-sky-soft px-3 py-1 text-[14.5px] font-extrabold text-sky-ink">
+    <span className="self-center rounded-lg bg-sky-soft px-3 py-1 text-[14.5px] font-extrabold text-sky-ink">
       <En en={word} />
     </span>
   );
@@ -258,7 +258,7 @@ function PcHitch({ word }: { word?: string }) {
   return word ? (
     <span className="flex flex-col items-center self-center sm:flex-row sm:pb-2">
       <span className="h-2 w-0.5 bg-ink-3 sm:h-0.5 sm:w-2" aria-hidden />
-      <span className="rounded-full bg-sky-soft px-2.5 py-0.5 text-[14.5px] font-extrabold text-sky-ink">
+      <span className="rounded-lg bg-sky-soft px-2.5 py-0.5 text-[14.5px] font-extrabold text-sky-ink">
         <En en={word} />
       </span>
       <span className="h-2 w-0.5 bg-ink-3 sm:h-0.5 sm:w-2" aria-hidden />

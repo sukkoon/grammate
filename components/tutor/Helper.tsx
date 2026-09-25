@@ -55,7 +55,7 @@ function AnswerCard({ item, speaking, onSpeak }: { item: FaqPayload; speaking: b
         <p className="text-[13px] font-bold text-coral-ink">
           {item.q}
           {item.level && item.level !== "elem" && (
-            <span className="ml-1.5 rounded-full bg-sky-soft px-1.5 py-0.5 align-middle text-[11px] font-extrabold text-sky-ink">
+            <span className="ml-1.5 rounded-lg bg-sky-soft px-1.5 py-0.5 align-middle text-[11px] font-extrabold text-sky-ink">
               {bandLabel[item.level]}
             </span>
           )}
@@ -258,7 +258,7 @@ export function Helper() {
                       <button
                         type="button"
                         onClick={() => ask(s.q)}
-                        className="rounded-full bg-card px-3 py-1.5 text-left text-[13.5px] font-bold ring-1 ring-line hover:bg-chip"
+                        className="rounded-lg bg-card px-3 py-1.5 text-left text-[13.5px] font-bold ring-1 ring-line hover:bg-chip"
                       >
                         {s.q}
                       </button>
@@ -297,7 +297,7 @@ export function Helper() {
                         <button
                           type="button"
                           onClick={() => choose(o)}
-                          className="rounded-full bg-card px-3 py-1.5 text-left text-[13.5px] font-bold ring-1 ring-line hover:bg-chip"
+                          className="rounded-lg bg-card px-3 py-1.5 text-left text-[13.5px] font-bold ring-1 ring-line hover:bg-chip"
                         >
                           {o.q}
                         </button>
@@ -363,12 +363,12 @@ export function Helper() {
             onChange={(e) => setText(e.target.value)}
             placeholder={speech.supported ? "말하거나 적어 주세요" : "궁금한 것을 적어 주세요"}
             aria-label="질문"
-            className="h-12 min-w-0 flex-1 rounded-full border border-line bg-card px-4 text-[15px] outline-none focus:border-ink-3"
+            className="h-12 min-w-0 flex-1 rounded-lg border border-line bg-card px-4 text-[15px] outline-none focus:border-ink-3"
           />
           <button
             type="submit"
             disabled={!text.trim()}
-            className="h-12 shrink-0 rounded-full bg-coral px-4 font-extrabold text-white disabled:opacity-40"
+            className="h-12 shrink-0 rounded-lg bg-coral px-4 font-extrabold text-white disabled:opacity-40"
           >
             묻기
           </button>
