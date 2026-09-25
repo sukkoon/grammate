@@ -92,7 +92,7 @@ export function Mate({
 
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`font-extrabold tracking-[-0.035em] ${className}`}>
+    <span className={`whitespace-nowrap font-extrabold tracking-[-0.035em] ${className}`}>
       gram<span className="text-coral">mate</span>
     </span>
   );
@@ -100,7 +100,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
 
 export function Logo({ size = 34, className = "" }: { size?: number; className?: string }) {
   return (
-    <span className={`inline-flex items-center gap-2 text-ink ${className}`}>
+    <span className={`inline-flex shrink-0 items-center gap-2 text-ink ${className}`}>
       <Mate size={size} />
       <Wordmark className="text-[1.45rem] leading-none" />
     </span>

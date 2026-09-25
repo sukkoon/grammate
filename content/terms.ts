@@ -1876,6 +1876,308 @@ export const terms: Term[] = [
     "group": "동사",
     "href": "/learn/modals/special-should"
   },
+
+  // 추가된 용어
+  {
+    "id": "prepositional-object",
+    "term": "전치사의 목적어",
+    "parts": [
+      {
+        "c": "전치사",
+        "m": "명사 앞에 놓이는 말 ('앞'의 전 + '놓다'의 치)"
+      },
+      {
+        "c": "목적어",
+        "m": "동작이나 말이 겨냥하는 대상"
+      }
+    ],
+    "result": "전치사 바로 뒤에 와서 전치사와 한 덩어리가 되는 말. 명사·대명사·동명사만 올 수 있어요. 동사가 오려면 반드시 -ing로 변장해요.",
+    "myth": "동사만 목적어를 거느리는 게 아니에요. at, for, in 같은 전치사도 뒤에 목적어를 데리고 다녀요.",
+    "english": "object of a preposition",
+    "englishNote": "전치사(preposition)가 거느리는 목적어(object)라는 뜻이에요.",
+    "example": "I'm good at [[{cooking|동명사:요리하기}]].",
+    "group": "문장 성분",
+    "href": "/learn/gerunds/basic"
+  },
+  {
+    "id": "perfect-gerund",
+    "term": "완료 동명사",
+    "parts": [
+      {
+        "c": "완료",
+        "m": "다 마치다 ('완성', '완주'의 완)"
+      },
+      {
+        "c": "동명사",
+        "m": "-ing를 입고 명사로 변장한 동사"
+      }
+    ],
+    "result": "having + p.p. 모양의 동명사. 진짜 동사보다 먼저 일어난 일을 나타내요.",
+    "myth": "have p.p.(현재완료)처럼 생겼지만 진짜 동사가 아니에요. 여전히 명사로 변장한 동명사예요.",
+    "english": "perfect gerund",
+    "englishNote": "perfect(완전히 끝난): 진짜 동사보다 먼저 끝난 일이라는 뜻이에요.",
+    "example": "He is proud of [[having finished]] the marathon.",
+    "group": "준동사",
+    "href": "/learn/gerunds/advanced"
+  },
+  {
+    "id": "idiom",
+    "term": "관용 표현",
+    "parts": [
+      {
+        "c": "관",
+        "m": "익숙하다, 버릇이 되다 ('습관', '관습'의 관)"
+      },
+      {
+        "c": "용",
+        "m": "쓰다 ('사용'의 용)"
+      },
+      {
+        "c": "표현",
+        "m": "생각을 말로 드러내다"
+      }
+    ],
+    "result": "오랫동안 늘 써 와서 굳어진 말 덩어리. 낱말 뜻을 하나씩 더해서는 뜻을 알기 어려워서 덩어리째 익혀요.",
+    "myth": "'너그럽게 봐준다'는 뜻의 관용이 아니에요! 늘 써서 익숙해진 말이라는 뜻이에요.",
+    "english": "idiom (idiomatic expression)",
+    "englishNote": "그리스어 idios(자기만의, 독특한)에서 왔어요. 그 언어만의 독특한 말버릇이라는 뜻이에요.",
+    "example": "I [[{feel like|숙어:~하고 싶다} {eating|동명사:먹기}]] pizza.",
+    "group": "표현",
+    "href": "/learn/gerunds/advanced"
+  },
+  {
+    "id": "dummy-object",
+    "term": "가목적어",
+    "parts": [
+      {
+        "c": "가",
+        "m": "가짜, 임시로 세운 ('가짜', '가면'의 가)"
+      },
+      {
+        "c": "목적어",
+        "m": "동작을 받는 대상. '무엇을, 누구를'에 해당하는 말"
+      }
+    ],
+    "result": "5형식 문장에서 긴 진짜 목적어(to부정사, that절)를 문장 뒤로 보내고, 목적어 자리를 대신 채우는 it. 뒤로 간 진짜 목적어는 진목적어라고 해요.",
+    "myth": "가목적어 it은 빼면 안 돼요. I found to solve the puzzle hard ✕ → I found it hard to solve the puzzle ○",
+    "english": "dummy object (preparatory it)",
+    "englishNote": "dummy(자리만 채우는 가짜) + object(목적어)",
+    "example": "I found [[{it|대명사:가목적어 (뜻 없이 자리만 채워요)}]] easy [[to make pancakes]].",
+    "group": "문장 성분",
+    "href": "/learn/to-infinitive/noun-use"
+  },
+  {
+    "id": "semantic-subject",
+    "term": "의미상 주어",
+    "parts": [
+      {
+        "c": "의미상",
+        "m": "뜻으로 따져 보면 ('의미'의 의미 + '~에서 보면'의 상)"
+      },
+      {
+        "c": "주어",
+        "m": "문장의 주인. '누가, 무엇이'에 해당하는 말"
+      }
+    ],
+    "result": "문장의 주어는 아니지만, 뜻으로 따지면 준동사(to부정사·동명사)의 동작을 하는 사람. to부정사 앞에서는 for(of) + 목적격, 동명사 앞에서는 소유격(목적격)으로 써요.",
+    "myth": "문장 전체의 주어가 아니에요. 문장의 주어는 따로 있고, 변장한 동사의 동작을 누가 하는지만 알려 줘요.",
+    "english": "semantic subject",
+    "englishNote": "semantic(뜻의) + subject(주어)",
+    "example": "It is hard [[{for|전치사:(to부정사의 주어) ~가} me]] to swim.",
+    "group": "준동사",
+    "href": "/learn/to-infinitive/subject-tense"
+  },
+  {
+    "id": "perfect-infinitive",
+    "term": "완료부정사",
+    "parts": [
+      {
+        "c": "완료",
+        "m": "이미 다 끝남 ('완료', '완성'의 완)"
+      },
+      {
+        "c": "부정사",
+        "m": "모양이 정해지지 않은 동사의 모양 (to + 동사원형)"
+      }
+    ],
+    "result": "to have + 과거분사(p.p.). 진짜 동사가 나타내는 때보다 더 먼저 일어난 일을 말해요.",
+    "myth": "'완료'라서 현재완료 뜻만 있는 게 아니에요. 진짜 동사보다 한 칸 앞선 때라는 뜻이에요.",
+    "english": "perfect infinitive",
+    "englishNote": "perfect(완료된) + infinitive(부정사)",
+    "example": "He seems [[to have been]] sick last week.",
+    "group": "준동사",
+    "href": "/learn/to-infinitive/subject-tense"
+  },
+  {
+    "id": "independent-infinitive",
+    "term": "독립부정사",
+    "parts": [
+      {
+        "c": "독립",
+        "m": "홀로 섬, 남에게 기대지 않음 ('독립', '독자'의 독)"
+      },
+      {
+        "c": "부정사",
+        "m": "모양이 정해지지 않은 동사의 모양 (to + 동사원형)"
+      }
+    ],
+    "result": "문장의 다른 부분과 문법적으로 얽히지 않고 홀로 떨어져서, 말하는 사람의 태도를 덧붙이는 to부정사 표현. to be honest, to tell the truth, needless to say 등이 있어요.",
+    "myth": "뜻을 하나하나 따지기보다 숙어처럼 통째로 외우는 게 좋아요.",
+    "english": "independent infinitive",
+    "englishNote": "independent(홀로 선) + infinitive(부정사)",
+    "example": "[[{To be honest|숙어:솔직히 말하면}]], I didn't read the book.",
+    "group": "준동사",
+    "href": "/learn/to-infinitive/subject-tense"
+  },
+
+  // 추가된 용어
+  {
+    "id": "participial-construction",
+    "term": "분사구문",
+    "parts": [
+      {
+        "c": "분사",
+        "m": "동사와 형용사의 성질을 나누어 가진 말 ('분배', '분담'의 분)"
+      },
+      {
+        "c": "구문",
+        "m": "구(단어 묶음)로 짜인 글 ('구와 절'의 구 + '문장'의 문)"
+      }
+    ],
+    "result": "부사절에서 접속사와 (주절과 같은) 주어를 지우고 동사를 분사로 바꿔, 분사로 시작하는 구로 줄인 것. 때·이유·조건·양보·동시동작·연속동작을 나타내요.",
+    "myth": "이름에 '문'이 있지만 문장이 아니에요! 진짜 동사가 없는 구라서 혼자서는 문장이 될 수 없어요. 주절에 붙어서 뜻을 더해요.",
+    "english": "participial construction",
+    "englishNote": "construction(짜임, 구조): 분사로 짜인 덩어리라는 뜻이에요. participial phrase(분사구)라고도 해요.",
+    "example": "[[Walking to school]], I met Minsu.",
+    "group": "준동사",
+    "href": "/learn/participial-constructions/basic"
+  },
+  {
+    "id": "perfect-participle",
+    "term": "완료분사 (Having p.p.)",
+    "parts": [
+      {
+        "c": "완료",
+        "m": "다 마치다 ('완성', '완주'의 완)"
+      },
+      {
+        "c": "분사",
+        "m": "동사와 형용사의 성질을 나누어 가진 말"
+      }
+    ],
+    "result": "having + 과거분사. 분사구문의 일이 주절보다 먼저 일어났다는 것을 보여 주는 모양이에요.",
+    "myth": "과거분사(p.p.)와 헷갈리지 마세요. 완료분사는 having이 앞에 붙은 두 단어짜리 모양이에요.",
+    "english": "perfect participle",
+    "englishNote": "perfect(완전히 끝난) + participle(분사)",
+    "example": "[[{Having|조동사:완료형을 만드는 말 (have의 -ing형)} finished]] my homework, I went out to play.",
+    "group": "준동사",
+    "href": "/learn/participial-constructions/advanced"
+  },
+  {
+    "id": "absolute-participle",
+    "term": "독립분사구문",
+    "parts": [
+      {
+        "c": "독립",
+        "m": "남에게 기대지 않고 홀로 서다 ('독립운동'의 독립)"
+      },
+      {
+        "c": "분사구문",
+        "m": "부사절을 분사로 시작하는 구로 줄인 것"
+      }
+    ],
+    "result": "분사구문의 주어가 주절의 주어와 달라서, 주어를 지우지 않고 분사 앞에 남겨 둔 분사구문: It being fine, we went out.",
+    "myth": "주어가 다른데 지워 버리면 분사구문의 주인이 주절의 주어로 바뀌어 엉뚱한 뜻이 돼요.",
+    "english": "absolute participial construction",
+    "englishNote": "absolute(따로 떨어진, 독립된): 주절의 주어에 기대지 않고 자기 주어를 가져요.",
+    "example": "[[{It|비인칭 주어:날씨를 말하는 it} being]] cold, we stayed inside.",
+    "group": "준동사",
+    "href": "/learn/participial-constructions/advanced"
+  },
+  {
+    "id": "impersonal-absolute",
+    "term": "비인칭 독립분사구문",
+    "parts": [
+      {
+        "c": "비인칭",
+        "m": "특정한 사람을 가리키지 않는 ('비인칭 it'의 비인칭)"
+      },
+      {
+        "c": "독립분사구문",
+        "m": "주절과 다른 주어를 가진 분사구문"
+      }
+    ],
+    "result": "주어가 '우리, 사람들' 같은 막연한 일반 사람이라서, 주절의 주어와 달라도 생략하고 굳어진 표현처럼 쓰는 분사구문: generally speaking, frankly speaking, judging from, considering",
+    "myth": "주어를 지웠는데도 틀린 문장이 아니에요. 누가 말하든 상관없는 굳어진 표현이라 숙어처럼 외워요.",
+    "english": "impersonal absolute",
+    "englishNote": "impersonal(특정한 사람이 아닌) + absolute(독립된). 뜻이 굳어져서 idiomatic participle(관용 분사)이라고도 해요.",
+    "example": "[[{Frankly speaking}]], I didn't like the movie.",
+    "group": "준동사",
+    "href": "/learn/participial-constructions/advanced"
+  },
+  {
+    "id": "attendant-circumstances",
+    "term": "부대상황",
+    "parts": [
+      {
+        "c": "부대",
+        "m": "주된 것에 딸려 붙은 ('부대 비용', '부대시설'의 부대)"
+      },
+      {
+        "c": "상황",
+        "m": "그때의 모습이나 형편"
+      }
+    ],
+    "result": "주된 동작에 곁들여 함께 일어나는 모습. '~한 채로, ~하면서'라는 뜻으로, 동시동작 분사구문이나 with + 명사 + 분사로 나타내요.",
+    "myth": "군대의 '부대'가 아니에요! 주된 일에 딸려 붙어 있다는 뜻이에요.",
+    "english": "attendant circumstances",
+    "englishNote": "attendant(곁에 따라다니는) + circumstances(상황)",
+    "example": "He listened to music [[with his eyes {closed|과거분사:감긴}]].",
+    "group": "준동사",
+    "href": "/learn/participial-constructions/advanced"
+  },
+  {
+    "id": "present-participle",
+    "term": "현재분사 (-ing)",
+    "parts": [
+      {
+        "c": "현재",
+        "m": "지금, 한창 이어지고 있는 때"
+      },
+      {
+        "c": "분사",
+        "m": "동사와 형용사의 성질을 나누어 가진 말 ('분배', '분담'의 분)"
+      }
+    ],
+    "result": "동사원형 + -ing. '~하는, ~하고 있는'이라는 능동·진행의 뜻으로 명사를 꾸미거나 보어가 돼요. be와 함께 진행형(be + -ing)도 만들어요.",
+    "myth": "이름에 '현재'가 들어 있지만 현재에만 쓰는 게 아니에요! was sleeping(과거), will be sleeping(미래)처럼 어느 때에나 써요. '지금 한창 하고 있는' 느낌이라는 뜻이에요.",
+    "english": "present participle",
+    "englishNote": "present(지금의, 진행 중인) + participle(분사)",
+    "example": "Who is the girl [[{singing|현재분사:노래하고 있는}]] on the stage?",
+    "group": "준동사",
+    "href": "/learn/participles/present-past"
+  },
+  {
+    "id": "emotion-verb",
+    "term": "감정동사",
+    "parts": [
+      {
+        "c": "감정",
+        "m": "기쁨, 슬픔, 놀람 같은 마음의 느낌"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "남에게 어떤 감정을 '느끼게 만드는' 동사: surprise(놀라게 하다), interest(흥미를 느끼게 하다), bore(지루하게 하다). 그래서 -ing는 감정을 일으키는 쪽, p.p.는 감정을 느끼는 쪽이 돼요.",
+    "myth": "surprise는 '놀라다'가 아니라 '놀라게 하다'예요! 그래서 내가 놀랐으면 놀라게 '된' 것, 곧 I was surprised예요.",
+    "english": "emotive verb",
+    "englishNote": "emotive(감정을 일으키는)는 emotion(감정)에서 온 말이에요. 마음(psych)을 움직인다고 psych verb라고도 해요.",
+    "example": "The news [[surprised]] me. I was [[{surprised|형용사:놀란}]].",
+    "group": "동사",
+    "href": "/learn/participles/emotion"
+  },
 ];
 
 export const termById = (id: string) => terms.find((t) => t.id === id);

@@ -738,3 +738,7 @@ export * from "./passive";
 export * from "./prepositions";
 export * from "./adjectives-adverbs";
 export * from "./modals";
+export * from "./gerunds";
+export * from "./to-infinitive";
+export * from "./participial-constructions";
+export * from "./participles";

@@ -1,0 +1,293 @@
+[
+  {
+    "id": "ti-1",
+    "unit": "to-infinitive/noun-use",
+    "q": "to부정사는 문장에서 무슨 일을 해요?",
+    "alts": ["투부정사 쓰임", "to 붙은 동사는 뭐 하는 거예요", "to 다음에 동사 오는 거 왜 써요", "to부정사 용법 세 가지"],
+    "keys": ["to부정사", "용법", "쓰임"],
+    "a": "to부정사는 **to + 동사원형**으로 변장한 동사예요. 한 문장에 진짜 동사는 하나라서, 다른 동사가 들어오려면 to를 쓰고 변장하거든요.\n변장한 to부정사는 자리에 따라 세 가지 일을 해요. **명사**(~하는 것), **형용사**(~할), **부사**(~하기 위해, ~해서).",
+    "ex": [
+      { "en": "I want [[to eat]] pizza.", "ko": "나는 피자 먹는 것을 원해. (명사)" },
+      { "en": "I need something [[to eat]].", "ko": "나는 먹을 무언가가 필요해. (형용사)" },
+      { "en": "I went to the kitchen [[to eat]] pizza.", "ko": "나는 피자를 먹으려고 부엌에 갔어. (부사)" }
+    ],
+    "check": "I want to drink water.에서 진짜 동사는 무엇일까요?"
+  },
+  {
+    "id": "ti-2",
+    "unit": "to-infinitive/noun-use",
+    "q": "주어가 he면 to 뒤 동사에도 s를 붙여요?",
+    "alts": ["to plays 맞아요", "투 다음에 동사원형", "to 뒤에 과거형 써도 돼요", "to 다음 동사 모양"],
+    "keys": ["to", "동사원형", "3인칭"],
+    "a": "아니요. to 뒤에는 **언제나 동사원형**이에요. 주어가 he여도, 과거여도 to 뒤는 그대로예요. -s, -ed를 입는 건 **진짜 동사**뿐이에요.",
+    "ex": [
+      { "en": "He wants [[to play]] soccer.", "ko": "그는 축구를 하고 싶어 해. (to plays ✕)" },
+      { "en": "She decided [[to join]] the club.", "ko": "그녀는 동아리에 들어가기로 했어. (to joined ✕)" }
+    ],
+    "check": "She hopes to becomes a nurse.에서 틀린 곳은?"
+  },
+  {
+    "id": "ti-3",
+    "unit": "to-infinitive/noun-use",
+    "q": "It is fun to ~에서 it은 무슨 뜻이에요?",
+    "alts": ["가주어 it이 뭐예요", "잇 이즈 펀 투", "it을 그것이라고 해석해요", "가짜 주어 it", "진주어 가주어"],
+    "keys": ["가주어", "진주어", "it"],
+    "a": "그 it은 **가주어**예요. 주어인 to부정사가 너무 길어서 문장 뒤로 보내고, 비어 있는 주어 자리를 it이 채운 거예요.\n그래서 '그것'이라고 해석하지 않고, **뒤에 있는 to부정사를 주어로** 해석해요.",
+    "ex": [
+      { "en": "[[{It|대명사:가주어 (뜻 없이 자리만 채워요)}]] is fun [[to learn English]].", "ko": "영어를 배우는 것은 재미있어." },
+      { "en": "[[To learn English]] is fun.", "ko": "같은 뜻이지만 머리가 무거운 문장이에요." }
+    ],
+    "check": "It is important to eat breakfast.에서 진짜 주어는?"
+  },
+  {
+    "id": "ti-4",
+    "unit": "to-infinitive/noun-use",
+    "q": "to부정사를 부정할 때 not은 어디에 써요?",
+    "alts": ["낫 투", "~하지 않기로 영어로", "not to 순서", "to not 써도 돼요", "to부정사 부정문"],
+    "keys": ["not to", "not", "부정"],
+    "a": "not(never)은 **to 바로 앞**에 둬요. not의 자리에 따라 뜻이 달라져요.\ndecided not to go는 '안 가기로 결심했다', didn't decide to go는 '가기로 결심하지는 않았다'예요.",
+    "ex": [
+      { "en": "I decided [[not to eat]] snacks at night.", "ko": "나는 밤에 간식을 먹지 않기로 결심했어." },
+      { "en": "She promised [[never to be]] late again.", "ko": "그녀는 다시는 늦지 않겠다고 약속했어." }
+    ]
+  },
+  {
+    "id": "ti-5",
+    "unit": "to-infinitive/noun-use",
+    "q": "I found it easy to ~에서 it은 왜 넣어요?",
+    "alts": ["가목적어", "find it 형용사 to", "make it possible to", "가목적어 it 빼도 돼요"],
+    "keys": ["가목적어", "find", "make", "it"],
+    "a": "그 it은 **가목적어**예요. find, make, think 뒤에 '목적어 + 형용사'가 올 때, 목적어가 to부정사면 너무 길어서 뒤로 보내고 it이 자리를 채워요.\n이 it은 **빼면 틀려요**. I found to solve it easy ✕",
+    "ex": [
+      { "en": "I {found|동사:~라고 느꼈다, 알게 되었다} [[{it|대명사:가목적어 (뜻 없이 자리만 채워요)}]] easy [[to make pancakes]].", "ko": "나는 팬케이크 만드는 게 쉽다고 느꼈어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ti-6",
+    "unit": "to-infinitive/adjective-adverb",
+    "q": "명사 뒤에 to부정사가 오면 어떻게 해석해요?",
+    "alts": ["something to drink 해석", "to부정사 형용사 용법", "~할 이라고 해석하는 거", "homework to do 뜻"],
+    "keys": ["형용사", "명사 뒤", "something", "~할"],
+    "a": "명사 바로 뒤의 to부정사는 **형용사처럼** 그 명사를 꾸며요. '**~할, ~하는**'으로 해석하면 돼요.\n형용사는 보통 명사 앞에 오지만, to부정사는 길어서 명사 뒤에 꼬리표처럼 붙어요.",
+    "ex": [
+      { "en": "I have a lot of homework [[to do]].", "ko": "나는 해야 할 숙제가 많아." },
+      { "en": "Do you have anything [[to eat]]?", "ko": "먹을 거 좀 있어?" }
+    ]
+  },
+  {
+    "id": "ti-7",
+    "unit": "to-infinitive/adjective-adverb",
+    "q": "a chair to sit on에서 on은 왜 붙어요?",
+    "alts": ["to부정사 끝에 전치사", "to live in 왜 in", "a friend to talk with", "전치사 빼면 안 돼요"],
+    "keys": ["전치사", "on", "with", "in"],
+    "a": "원래 문장으로 되돌려 보면 보여요. 의자에 앉는 건 **sit on a chair**라서 on이 필요해요. 그래서 a chair to sit on처럼 **전치사를 끝에 남겨요**.\n빼 버리면 '의자를 앉다'처럼 이상한 말이 돼요.",
+    "ex": [
+      { "en": "I need a chair [[to sit on]].", "ko": "나는 앉을 의자가 필요해. (sit on a chair)" },
+      { "en": "Can you give me a pen [[to write with]]?", "ko": "쓸 펜 좀 줄래? (write with a pen)" }
+    ],
+    "check": "a house to live ___ 빈칸에 들어갈 전치사는?",
+    "level": "middle"
+  },
+  {
+    "id": "ti-8",
+    "unit": "to-infinitive/adjective-adverb",
+    "q": "to부정사가 '~하기 위해'인지 '~해서'인지 어떻게 구별해요?",
+    "alts": ["부사적 용법 뜻 구별", "목적 감정 결과 구별", "부사적 용법 다섯 가지", "to부정사 해석이 헷갈려요"],
+    "keys": ["부사", "목적", "감정", "결과", "판단"],
+    "a": "앞에 무엇이 있는지 힌트를 봐요.\n- 동작 뒤 → **목적**(~하기 위해)\n- glad, sad, sorry 같은 기분 뒤 → **감정의 원인**(~해서)\n- must be, 칭찬·비난 뒤 → **판단의 근거**(~하다니)\n- grow up, live, only to → **결과**(결국 ~하게 되다)\n- easy, hard 뒤 → **형용사 꾸미기**(~하기에)",
+    "ex": [
+      { "en": "I went to the library [[to borrow]] books.", "ko": "책을 빌리려고 도서관에 갔어. (목적)" },
+      { "en": "I'm glad [[to meet]] you.", "ko": "만나서 반가워. (감정의 원인)" }
+    ]
+  },
+  {
+    "id": "ti-9",
+    "unit": "to-infinitive/adjective-adverb",
+    "q": "in order to랑 그냥 to는 뭐가 달라요?",
+    "alts": ["인오더투", "so as to 뜻", "~하기 위해서 영어로", "목적 to부정사"],
+    "keys": ["in order to", "so as to", "목적"],
+    "a": "뜻은 같아요. 둘 다 '**~하기 위해**'라는 목적이에요. in order to, so as to는 목적이라는 걸 **더 분명하게** 보여 줄 때 써요.\n부정은 in order not to, so as not to예요.",
+    "ex": [
+      { "en": "He studied hard [[{in order to} {pass|동사:(시험에) 합격하다}]] the test.", "ko": "그는 시험에 합격하기 위해 열심히 공부했어." },
+      { "en": "I left early [[{so as not to} miss]] the bus.", "ko": "나는 버스를 놓치지 않으려고 일찍 나왔어." }
+    ]
+  },
+  {
+    "id": "ti-10",
+    "unit": "to-infinitive/adjective-adverb",
+    "q": "grew up to be는 왜 '되기 위해 자랐다'가 아니에요?",
+    "alts": ["to부정사 결과 용법", "only to 뜻", "자라서 ~가 되었다 영어로", "lived to be 해석"],
+    "keys": ["결과", "grow up", "only to"],
+    "a": "grow up, live, wake up 뒤의 to부정사는 **결과**예요. 목적으로 해석하면 말이 이상해지죠. **앞에서부터 순서대로** '자라서 → ~가 되었다'로 읽어요.\nonly to는 '애썼지만 결국 ~하고 말았다'는 실망스러운 결과예요.",
+    "ex": [
+      { "en": "He {grew up} [[to be]] a famous singer.", "ko": "그는 자라서 유명한 가수가 되었어." },
+      { "en": "He ran to the station, [[{only to|숙어:(그러나) 결국 ~하고 말았다} miss]] the train.", "ko": "그는 역으로 달려갔지만 결국 기차를 놓쳤어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ti-11",
+    "unit": "to-infinitive/adjective-adverb",
+    "q": "차가운 마실 것은 cold something to drink예요?",
+    "alts": ["something cold to drink 순서", "-thing 형용사 순서", "anything interesting 순서", "cold something 틀려요"],
+    "keys": ["something", "-thing", "형용사", "순서"],
+    "a": "아니요. something, anything, nothing처럼 **-thing으로 끝나는 말은 형용사가 뒤에** 와요. 순서는 **-thing → 형용사 → to부정사**예요.",
+    "ex": [
+      { "en": "I want something cold [[to drink]].", "ko": "나는 시원한 마실 것을 원해." },
+      { "en": "Is there anything interesting [[to watch]]?", "ko": "볼 만한 재미있는 거 있어?" }
+    ]
+  },
+  {
+    "id": "ti-12",
+    "unit": "to-infinitive/patterns",
+    "q": "too ~ to는 무슨 뜻이에요?",
+    "alts": ["투 형용사 투", "너무 ~해서 할 수 없다 영어로", "too to 해석", "too hot to eat 뜻"],
+    "keys": ["too", "too ~ to"],
+    "a": "too + 형용사 + to는 '**너무 ~해서 …할 수 없다**'예요. too는 '지나치게'라서, 정도가 선을 넘어 못 한다는 뜻이 돼요. 문장에 not이 없어도 뜻은 부정이에요.",
+    "ex": [
+      { "en": "This soup is [[too hot to eat]].", "ko": "이 수프는 너무 뜨거워서 먹을 수 없어." },
+      { "en": "She is [[too young to watch]] this movie.", "ko": "그녀는 너무 어려서 이 영화를 볼 수 없어." }
+    ],
+    "check": "I'm too tired to walk.를 우리말로 옮기면?"
+  },
+  {
+    "id": "ti-13",
+    "unit": "to-infinitive/patterns",
+    "q": "too ~ to를 so ~ that으로 어떻게 바꿔요?",
+    "alts": ["so that can't 바꾸기", "쏘 댓 바꿔쓰기", "too to 전환", "couldn't 언제 써요", "enough to 바꿔쓰기"],
+    "keys": ["so that", "too", "can't", "enough"],
+    "a": "too ~ to = **so ~ that + 주어 + can't**, ~ enough to = **so ~ that + 주어 + can**이에요. 과거면 couldn't, could로 맞춰요.\nthat 뒤는 완전한 문장이라서, too ~ to에서 빠져 있던 **목적어 it이 돌아와요**.",
+    "ex": [
+      { "en": "This soup is [[so hot that I can't eat it]].", "ko": "= This soup is too hot to eat." },
+      { "en": "My sister is [[so tall that she can reach]] the shelf.", "ko": "= My sister is tall enough to reach the shelf." }
+    ]
+  },
+  {
+    "id": "ti-14",
+    "unit": "to-infinitive/patterns",
+    "q": "enough는 형용사 앞에 와요, 뒤에 와요?",
+    "alts": ["enough old 맞아요", "이너프 위치", "enough to 뜻", "old enough to"],
+    "keys": ["enough"],
+    "a": "**형용사·부사 뒤**예요(old enough, fast enough). 반대로 **명사는 enough 뒤**에 와요(enough money, enough time). 뜻은 '**…할 만큼 충분히 ~한**'이에요.",
+    "ex": [
+      { "en": "I'm not [[old enough]] to {vote|동사:투표하다} yet.", "ko": "나는 아직 투표할 수 있는 나이가 아니야." },
+      { "en": "We have [[enough time]] to finish it.", "ko": "우리는 그걸 끝낼 시간이 충분해." }
+    ]
+  },
+  {
+    "id": "ti-15",
+    "unit": "to-infinitive/patterns",
+    "q": "how to, what to는 무슨 뜻이에요?",
+    "alts": ["의문사 to부정사", "하우 투", "what to do 뜻", "어떻게 ~할지 영어로", "why to 써요"],
+    "keys": ["how to", "what to", "의문사"],
+    "a": "의문사 + to부정사는 '**무엇을(어떻게, 어디로) ~할지**'예요. how to는 '~하는 방법'으로 옮기면 자연스러워요.\n의문사 + 주어 + **should** + 동사원형으로 바꿀 수 있어요. 단, **why to는 쓰지 않아요**.",
+    "ex": [
+      { "en": "I don't know [[what to do]].", "ko": "무엇을 해야 할지 모르겠어. (= what I should do)" },
+      { "en": "Can you tell me [[how to use]] this machine?", "ko": "이 기계를 어떻게 쓰는지 알려 줄래?" }
+    ]
+  },
+  {
+    "id": "ti-16",
+    "unit": "to-infinitive/patterns",
+    "q": "It takes 시간 to는 무슨 뜻이에요?",
+    "alts": ["시간이 걸리다 영어로", "잇 테이크스", "~하는 데 몇 분 걸려", "it took me 뜻"],
+    "keys": ["takes", "took", "걸리다"],
+    "a": "It takes + 시간 + to부정사는 '**~하는 데 (시간이) 걸리다**'예요. it은 가주어라서 해석하지 않아요. 누가 걸리는지는 takes 뒤에 넣어요.",
+    "ex": [
+      { "en": "[[{It|대명사:가주어 (뜻 없이 자리만 채워요)}]] {takes|동사:(시간이) 걸리다} ten minutes [[to walk]] to school.", "ko": "학교까지 걸어가는 데 10분이 걸려." },
+      { "en": "[[{It|대명사:가주어 (뜻 없이 자리만 채워요)}]] {took|동사:(시간이) 걸렸다} me an hour [[to finish]] it.", "ko": "내가 그걸 끝내는 데 한 시간이 걸렸어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ti-17",
+    "unit": "to-infinitive/subject-tense",
+    "q": "It is hard for me to에서 for me는 뭐예요?",
+    "alts": ["의미상 주어가 뭐예요", "포 미 투", "to부정사 주어 표시", "for 사람 to"],
+    "keys": ["의미상 주어", "for", "for me"],
+    "a": "for me는 to부정사의 **의미상 주어**예요. to부정사의 동작을 **누가 하는지** 알려 줘요. 문장의 주어는 가주어 It이지만, 일어나는 사람은 me예요.\n대명사는 목적격으로 써요(for he ✕ → for him).",
+    "ex": [
+      { "en": "It is {hard|형용사:어려운} [[{for|전치사:(to부정사의 주어) ~가} me]] to {wake up} early.", "ko": "내가 일찍 일어나는 것은 어려워." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "ti-18",
+    "unit": "to-infinitive/subject-tense",
+    "q": "의미상 주어에 for를 써요, of를 써요?",
+    "alts": ["kind of you to", "for of 구별", "나이스 오브 유", "it is kind of you", "의미상 주어 of 언제"],
+    "keys": ["of", "for", "kind", "성격"],
+    "a": "kind, nice, wise, careless, rude, brave처럼 **사람의 성격**을 평가하는 형용사면 **of**, 나머지(easy, hard, important, dangerous)는 **for**예요.\n헷갈리면 사람을 주어로 바꿔 보세요. You were kind.처럼 말이 되면 of예요.",
+    "ex": [
+      { "en": "It was kind [[{of|전치사:(to부정사의 주어) ~가} you]] to help me.", "ko": "네가 나를 도와주다니 친절했어." },
+      { "en": "It is important [[{for|전치사:(to부정사의 주어) ~가} us]] to recycle.", "ko": "우리가 재활용하는 것은 중요해." }
+    ],
+    "check": "It was careless ___ him to lose the key. 빈칸에는 for? of?",
+    "level": "high"
+  },
+  {
+    "id": "ti-19",
+    "unit": "to-infinitive/subject-tense",
+    "q": "to have p.p.는 언제 써요?",
+    "alts": ["완료부정사", "seems to have been", "투 해브 피피", "to부정사 시제", "to have been 뜻"],
+    "keys": ["to have", "완료부정사", "seem"],
+    "a": "**진짜 동사보다 더 먼저 일어난 일**을 말할 때 써요. to + 동사원형은 진짜 동사와 같은 때, to have p.p.는 한 칸 앞선 때예요.",
+    "ex": [
+      { "en": "He seems [[to be]] busy.", "ko": "그는 (지금) 바쁜 것 같아." },
+      { "en": "He seems [[to have been]] busy yesterday.", "ko": "그는 어제 바빴던 것 같아." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "ti-20",
+    "unit": "to-infinitive/subject-tense",
+    "q": "It seems that을 seem to로 어떻게 바꿔요?",
+    "alts": ["seem to 바꿔쓰기", "씸즈 투", "It seems that 전환", "seemed to have been"],
+    "keys": ["seem", "seems", "that"],
+    "a": "that절의 주어를 문장 앞으로 꺼내고 seem 뒤에 to부정사를 써요. 이때 **that절의 때**와 **seem의 때**를 비교해요. 같으면 to + 동사원형, that절이 더 먼저면 to have p.p.예요.",
+    "ex": [
+      { "en": "It seems that he is sick. = He seems [[to be]] sick.", "ko": "그는 아픈 것 같아. (같은 때)" },
+      { "en": "It seems that he was sick. = He seems [[to have been]] sick.", "ko": "그는 아팠던 것 같아. (더 먼저)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "ti-21",
+    "unit": "to-infinitive/subject-tense",
+    "q": "to be p.p.는 뭐예요?",
+    "alts": ["to부정사 수동태", "to be invited 뜻", "투 비 피피", "~받고 싶다 영어로"],
+    "keys": ["to be", "수동", "p.p."],
+    "a": "to부정사의 **수동** 모양이에요. 그 동작을 **당하는 쪽**이면 to be + p.p.를 써요. '~되다, ~받다'로 해석이 자연스러운지 확인해 보세요.",
+    "ex": [
+      { "en": "I want [[to be invited]] to the party.", "ko": "나는 그 파티에 초대받고 싶어." },
+      { "en": "Nobody likes [[to be {laughed at}]].", "ko": "비웃음을 당하고 싶은 사람은 없어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "ti-22",
+    "unit": "to-infinitive/subject-tense",
+    "q": "be to 용법이 뭐예요?",
+    "alts": ["be to 뜻", "is to visit 해석", "비 투 용법", "예정 의무 가능 운명 의도"],
+    "keys": ["be to"],
+    "a": "be + to부정사가 조동사처럼 쓰이는 거예요. 뜻은 다섯 가지예요. **예정**(will), **의무**(should), **가능**(can), **운명**(결국 ~하게 되다), **의도**(want to, 주로 if절).\n외우기보다 조동사 하나로 바꿔서 말이 되는지 보면 돼요.",
+    "ex": [
+      { "en": "The singer [[is to visit]] Korea next month.", "ko": "그 가수는 다음 달에 한국을 방문할 예정이야. (예정)" },
+      { "en": "You [[are to finish]] this by tomorrow.", "ko": "너는 이걸 내일까지 끝내야 해. (의무)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "ti-23",
+    "unit": "to-infinitive/subject-tense",
+    "q": "to be honest 같은 표현은 뭐예요?",
+    "alts": ["독립부정사", "to tell the truth 뜻", "needless to say 뜻", "솔직히 말하면 영어로"],
+    "keys": ["독립부정사", "honest", "truth"],
+    "a": "**독립부정사**예요. 문장과 따로 떨어져서 말하는 사람의 태도를 덧붙여요. 뜻을 따지기보다 **숙어처럼 통째로** 익혀요.\nto be honest(솔직히 말하면), to tell the truth(사실대로 말하면), needless to say(말할 필요도 없이), to make matters worse(설상가상으로), so to speak(말하자면)",
+    "ex": [
+      { "en": "[[{To be honest|숙어:솔직히 말하면}]], I didn't like the movie.", "ko": "솔직히 말하면, 나는 그 영화가 별로였어." }
+    ],
+    "level": "high"
+  }
+]

@@ -239,10 +239,10 @@ export const curriculum: Part[] = [
         title: "to부정사",
         hook: "to를 쓰고 변장하면 명사도, 형용사도, 부사도 될 수 있어요.",
         units: [
-          u("noun-use", "명사처럼 쓰이는 to부정사", "", ["초등", "중1"]),
-          u("adjective-adverb", "형용사·부사처럼 쓰이는 to부정사", "", ["중1", "중2"]),
-          u("patterns", "too ~ to, enough to와 의문사 + to부정사", "", ["중2"]),
-          u("subject-tense", "의미상 주어와 시제·태", "", ["고1", "고2"]),
+          u("noun-use", "명사처럼 쓰이는 to부정사", "", ["초등", "중1"], true),
+          u("adjective-adverb", "형용사·부사처럼 쓰이는 to부정사", "", ["중1", "중2"], true),
+          u("patterns", "too ~ to, enough to와 의문사 + to부정사", "", ["중2"], true),
+          u("subject-tense", "의미상 주어와 시제·태", "", ["고1", "고2"], true),
         ],
       },
       {
@@ -250,9 +250,9 @@ export const curriculum: Part[] = [
         title: "동명사",
         hook: "-ing를 붙여 명사로 변장한 동사.",
         units: [
-          u("basic", "동명사의 역할", "", ["초등", "중1"]),
-          u("vs-infinitive", "동명사 vs to부정사", "enjoy -ing, want to", ["중2"]),
-          u("advanced", "의미상 주어와 관용 표현", "", ["중3", "고2"]),
+          u("basic", "동명사의 역할", "", ["초등", "중1"], true),
+          u("vs-infinitive", "동명사 vs to부정사", "enjoy -ing, want to", ["중2"], true),
+          u("advanced", "의미상 주어와 관용 표현", "", ["중3", "고2"], true),
         ],
       },
       {
@@ -260,8 +260,8 @@ export const curriculum: Part[] = [
         title: "분사",
         hook: "동사가 형용사로 변장하면 분사.",
         units: [
-          u("present-past", "현재분사와 과거분사", "", ["중2"]),
-          u("emotion", "감정을 나타내는 분사", "interesting vs interested", ["중3", "고1"]),
+          u("present-past", "현재분사와 과거분사", "", ["중2"], true),
+          u("emotion", "감정을 나타내는 분사", "interesting vs interested", ["중3", "고1"], true),
         ],
       },
       {
@@ -269,8 +269,8 @@ export const curriculum: Part[] = [
         title: "분사구문",
         hook: "접속사와 주어를 떼고 분사로 줄인 문장.",
         units: [
-          u("basic", "분사구문 만들기", "", ["중3"]),
-          u("advanced", "완료·수동 분사구문과 with + 명사 + 분사", "", ["고1", "고2"]),
+          u("basic", "분사구문 만들기", "", ["중3"], true),
+          u("advanced", "완료·수동 분사구문과 with + 명사 + 분사", "", ["고1", "고2"], true),
         ],
       },
       {

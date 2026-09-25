@@ -45,6 +45,14 @@ function get(key: string): Entry | undefined {
 
 const hasPos = (e: Entry, p: string) => e[0].includes(p);
 
+/** 대표 품사가 달라도 다른 뜻에 그 품사가 있으면 그 뜻을 앞세운다 (promise는 명사가 먼저지만 promised는 동사 뜻) */
+function asPos(e: Entry, p: string): Entry | null {
+  if (hasPos(e, p)) return e;
+  const i = e.findIndex((x, j) => j >= 2 && x.startsWith(`${p}:`));
+  if (i < 0) return null;
+  return [p, e[i].slice(p.length + 1).trim(), `${e[0]}: ${e[1]}`, ...e.slice(2).filter((_, j) => j + 2 !== i)];
+}
+
 /** 규칙 변화(-s, -ed, -ing, -er, -est)를 되돌려 원형 후보를 만든다. */
 function regularCandidates(w: string): { base: string; kind: "s" | "ed" | "ing" | "er" | "est" }[] {
   const out: { base: string; kind: "s" | "ed" | "ing" | "er" | "est" }[] = [];
@@ -131,7 +139,8 @@ export function lookup(raw: string, sentenceStart = false): Gloss | null {
     // 요일·나라 이름처럼 대문자로 등록된 표제어도 본다 (Sundays → Sunday)
     const key = get(base) ? base : get(base[0].toUpperCase() + base.slice(1)) ? base[0].toUpperCase() + base.slice(1) : null;
     if (!key) continue;
-    const e = get(key)!;
+    const e = kind === "ed" || kind === "ing" ? asPos(get(key)!, "동사") : get(key)!;
+    if (!e) continue;
     const note = noteFor(kind, key, e);
     if (note) return fromEntry(surface, key, e, note);
   }

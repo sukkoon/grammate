@@ -1,0 +1,128 @@
+[
+  {
+    "id": "pt-1",
+    "unit": "participles/present-past",
+    "q": "분사가 뭐예요?",
+    "alts": ["분사 뜻", "분사가 왜 분사예요", "분사 쉽게 설명해 주세요", "파티시플이 뭐예요"],
+    "keys": ["분사", "participle", "형용사"],
+    "a": "분사는 **동사와 형용사의 성질을 나누어 가진 말**이에요. 동사가 명사를 꾸미고 싶을 때 형용사로 변장한 모양이죠.\n-ing를 붙이면 현재분사(~하는), p.p.로 바꾸면 과거분사(~된)예요.",
+    "ex": [
+      { "en": "Look at the [[{sleeping|현재분사:자고 있는}]] baby.", "ko": "자고 있는 아기를 봐. (현재분사)" },
+      { "en": "Don't touch the [[{broken|과거분사:깨진}]] glass.", "ko": "깨진 유리 만지지 마. (과거분사)" }
+    ],
+    "check": "a sleeping baby에서 sleeping은 무엇을 꾸미고 있을까요?",
+    "level": "middle"
+  },
+  {
+    "id": "pt-2",
+    "unit": "participles/present-past",
+    "q": "현재분사랑 과거분사는 어떻게 골라요?",
+    "alts": ["ing랑 pp 차이", "현재분사 과거분사 구별", "잉이랑 피피 언제 써요", "broken이랑 breaking 차이"],
+    "keys": ["현재분사", "과거분사", "ing", "p.p.", "능동", "수동"],
+    "a": "꾸밈받는 명사를 주어로 놓고 작은 문장을 만들어 보세요.\n명사가 그 동작을 **직접 하면 -ing**(아기가 잔다 → sleeping), **당하면 p.p.**(유리가 깨졌다 → broken)예요.",
+    "ex": [
+      { "en": "[[{boiling|현재분사:끓고 있는}]] water", "ko": "끓는 물 (물이 끓는다)" },
+      { "en": "a [[{stolen|과거분사:도난당한}]] bike", "ko": "도둑맞은 자전거 (자전거가 도둑맞았다)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pt-3",
+    "unit": "participles/present-past",
+    "q": "분사는 명사 앞에 와요, 뒤에 와요?",
+    "alts": ["분사 위치", "분사 뒤에서 꾸미기", "the boy playing soccer 왜 뒤에", "후치 수식"],
+    "keys": ["위치", "앞", "뒤", "꾸미"],
+    "a": "분사가 **한 단어**면 명사 **앞**, 목적어나 장소 같은 **딸린 말**이 있으면 명사 **뒤**에서 꾸며요.\n해석은 분사 덩어리부터 해서 '축구하고 있는 소년'처럼 옮기면 돼요.",
+    "ex": [
+      { "en": "a [[{smiling|현재분사:웃고 있는}]] girl", "ko": "웃고 있는 여자아이 (한 단어 → 앞)" },
+      { "en": "The boy [[playing soccer]] is my brother.", "ko": "축구하고 있는 소년이 내 남동생이야. (딸린 말 → 뒤)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pt-4",
+    "unit": "participles/present-past",
+    "q": "sleeping bag이랑 sleeping baby는 둘 다 분사예요?",
+    "alts": ["동명사랑 현재분사 구별", "ing 명사 앞 동명사 분사", "swimming pool 동명사예요", "슬리핑 백"],
+    "keys": ["동명사", "현재분사", "ing", "sleeping"],
+    "a": "아니에요. a sleeping bag의 sleeping은 '잠자기 위한'이라는 **용도**를 나타내는 **동명사**예요. 가방이 자는 게 아니잖아요.\na sleeping baby는 아기가 직접 자고 있으니 **현재분사**예요. '명사가 그 동작을 하나?'로 구별해요.",
+    "ex": [
+      { "en": "a [[{sleeping|동명사:잠자기}]] bag", "ko": "침낭 (잠자기 위한 가방: 동명사)" },
+      { "en": "a [[{sleeping|현재분사:자고 있는}]] baby", "ko": "자고 있는 아기 (현재분사)" }
+    ],
+    "check": "a swimming pool의 swimming은 동명사일까요, 현재분사일까요?",
+    "level": "middle"
+  },
+  {
+    "id": "pt-5",
+    "unit": "participles/present-past",
+    "q": "is sleeping의 sleeping도 분사예요?",
+    "alts": ["진행형 ing 분사", "수동태 pp 분사", "be ing 동사 몇 개", "완료형 과거분사"],
+    "keys": ["진행형", "수동태", "완료형", "분사", "be"],
+    "a": "네, 모양은 분사예요. 하지만 be나 have와 붙으면 **한 덩어리의 진짜 동사**가 돼요. 진행형(be + -ing), 완료형(have + p.p.), 수동태(be + p.p.)가 모두 그래요.\n분사 **혼자** 명사를 꾸밀 때만 변장한 동사(준동사)예요.",
+    "ex": [
+      { "en": "The baby [[is sleeping]].", "ko": "아기가 자고 있어. (진짜 동사 한 덩어리)" },
+      { "en": "The [[{sleeping|현재분사:자고 있는}]] baby is cute.", "ko": "자고 있는 아기가 귀여워. (분사 혼자, 진짜 동사는 is)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pt-6",
+    "unit": "participles/emotion",
+    "q": "interesting이랑 interested는 뭐가 달라요?",
+    "alts": ["인터레스팅 인터레스티드 차이", "exciting excited 차이", "감정 분사 ing ed", "재미있다 영어로 뭐 써요"],
+    "keys": ["interesting", "interested", "exciting", "excited", "감정"],
+    "a": "감정을 **일으키는 쪽**(원인)은 -ing, 감정을 **느끼는 쪽**(사람)은 p.p.예요.\n영화가 흥미를 주면 The movie is interesting, 내가 흥미를 느끼면 I am interested예요.",
+    "ex": [
+      { "en": "The movie is [[{interesting|형용사:흥미로운}]].", "ko": "그 영화는 흥미로워. (흥미를 주는 쪽)" },
+      { "en": "I am [[{interested|형용사:관심 있는}]] in the movie.", "ko": "나는 그 영화에 관심이 있어. (흥미를 느끼는 쪽)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pt-7",
+    "unit": "participles/emotion",
+    "q": "I am boring이라고 하면 틀려요?",
+    "alts": ["아이 엠 보링", "나 지루해 영어로", "boring bored 차이", "보링 보어드 뭐가 달라요", "심심하다 영어로"],
+    "keys": ["boring", "bored", "지루"],
+    "a": "문법은 맞지만 뜻이 달라져요. I am boring은 '나는 (남을 지루하게 하는) 지루한 사람이야'라는 뜻이에요.\n내가 지루함을 **느끼는** 거라면 **I am bored**라고 해야 해요.",
+    "ex": [
+      { "en": "I'm [[{bored|형용사:지루해하는}]].", "ko": "나 지루해. (내가 느낌)" },
+      { "en": "This class is [[{boring|형용사:지루한}]].", "ko": "이 수업은 지루해. (수업이 지루하게 함)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pt-8",
+    "unit": "participles/emotion",
+    "q": "사람은 무조건 -ed, 사물은 -ing예요?",
+    "alts": ["사람 주어 pp 사물 주어 ing", "사람한테 ing 써도 돼요", "he is interesting 맞아요", "사물은 잉 사람은 이디"],
+    "keys": ["사람", "사물", "ing", "p.p."],
+    "a": "대부분은 맞지만 무조건은 아니에요. **사람이 감정의 원인**이면 사람에게도 -ing를 써요. Mr. Kim is interesting은 '김 선생님은 (남에게 흥미를 주는) 재미있는 분이야'예요.\n기준은 늘 '누가 감정을 **일으키고**, 누가 **느끼나**'예요.",
+    "ex": [{ "en": "Mr. Kim is an [[{interesting|형용사:흥미로운}]] teacher.", "ko": "김 선생님은 재미있는 선생님이셔." }],
+    "level": "high"
+  },
+  {
+    "id": "pt-9",
+    "unit": "participles/emotion",
+    "q": "surprise는 놀라다 아니에요? 왜 surprised를 써요?",
+    "alts": ["서프라이즈 뜻", "놀라다 영어로", "surprise 놀라게 하다", "왜 수동으로 써요"],
+    "keys": ["surprise", "surprised", "놀라"],
+    "a": "surprise는 '놀라다'가 아니라 **'놀라게 하다'**예요. 그래서 내가 놀랐다는 건 '놀라게 된' 것, 곧 수동의 p.p. **surprised**예요.\ninterest, excite, bore, tire, shock도 모두 '~하게 만들다'라는 감정동사예요.",
+    "ex": [
+      { "en": "The news [[surprised]] me.", "ko": "그 소식이 나를 놀라게 했어." },
+      { "en": "I was [[{surprised|형용사:놀란}]] at the news.", "ko": "나는 그 소식에 놀랐어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "pt-10",
+    "unit": "participles/emotion",
+    "q": "tired of는 피곤하다는 뜻이에요?",
+    "alts": ["타이어드 오브 뜻", "be tired of", "싫증 나다 영어로", "질렸다 영어로"],
+    "keys": ["tired", "tired of", "싫증"],
+    "a": "be tired of는 '피곤하다'가 아니라 **'~에 싫증이 나다, 질리다'**예요. 그냥 be tired는 '피곤하다'예요.\n감정을 느끼는 사람 쪽 p.p.는 interested in, satisfied with처럼 전치사와 짝을 이루는 경우가 많아요.",
+    "ex": [{ "en": "I'm [[{tired of}]] eating {instant noodles}.", "ko": "나는 라면 먹는 데 질렸어." }],
+    "level": "high"
+  }
+]

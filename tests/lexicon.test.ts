@@ -18,6 +18,14 @@ describe("lookup", () => {
     expect(lookup("taller")?.note).toBe("tall의 비교급");
   });
 
+  it("명사가 대표 뜻이어도 -ed, -ing형은 동사 뜻을 쓴다", () => {
+    const g = lookup("promised");
+    expect(g?.pos).toBe("동사");
+    expect(g?.meaning).toBe("약속하다");
+    expect(g?.note).toBe("promise의 과거형");
+    expect(g?.alts).toContain("명사: 약속");
+  });
+
   it("소유격 's", () => {
     expect(lookup("Minsu's")?.meaning).toBe("민수 (사람 이름)의");
   });

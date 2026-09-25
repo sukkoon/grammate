@@ -32,7 +32,7 @@ export function LevelSwitch() {
         aria-expanded={open}
         aria-haspopup="menu"
         aria-label={`설명 수준: ${band ? bandLabel[band] : "선택"}. 바꾸기`}
-        className="inline-flex h-10 items-center gap-1.5 rounded-full bg-card px-3.5 text-[14px] font-extrabold ring-1 ring-line hover:bg-chip"
+        className="inline-flex h-10 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-card px-3 text-[14px] font-extrabold ring-1 ring-line hover:bg-chip sm:px-3.5"
       >
         <span className="size-2 rounded-full bg-coral" aria-hidden />
         {band ? bandLabel[band] : "수준"}

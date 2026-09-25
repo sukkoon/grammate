@@ -1,0 +1,44 @@
+[
+  {
+    "id": "present-participle",
+    "term": "현재분사 (-ing)",
+    "parts": [
+      {
+        "c": "현재",
+        "m": "지금, 한창 이어지고 있는 때"
+      },
+      {
+        "c": "분사",
+        "m": "동사와 형용사의 성질을 나누어 가진 말 ('분배', '분담'의 분)"
+      }
+    ],
+    "result": "동사원형 + -ing. '~하는, ~하고 있는'이라는 능동·진행의 뜻으로 명사를 꾸미거나 보어가 돼요. be와 함께 진행형(be + -ing)도 만들어요.",
+    "myth": "이름에 '현재'가 들어 있지만 현재에만 쓰는 게 아니에요! was sleeping(과거), will be sleeping(미래)처럼 어느 때에나 써요. '지금 한창 하고 있는' 느낌이라는 뜻이에요.",
+    "english": "present participle",
+    "englishNote": "present(지금의, 진행 중인) + participle(분사)",
+    "example": "Who is the girl [[{singing|현재분사:노래하고 있는}]] on the stage?",
+    "group": "준동사",
+    "href": "/learn/participles/present-past"
+  },
+  {
+    "id": "emotion-verb",
+    "term": "감정동사",
+    "parts": [
+      {
+        "c": "감정",
+        "m": "기쁨, 슬픔, 놀람 같은 마음의 느낌"
+      },
+      {
+        "c": "동사",
+        "m": "움직임·상태를 나타내는 말"
+      }
+    ],
+    "result": "남에게 어떤 감정을 '느끼게 만드는' 동사: surprise(놀라게 하다), interest(흥미를 느끼게 하다), bore(지루하게 하다). 그래서 -ing는 감정을 일으키는 쪽, p.p.는 감정을 느끼는 쪽이 돼요.",
+    "myth": "surprise는 '놀라다'가 아니라 '놀라게 하다'예요! 그래서 내가 놀랐으면 놀라게 '된' 것, 곧 I was surprised예요.",
+    "english": "emotive verb",
+    "englishNote": "emotive(감정을 일으키는)는 emotion(감정)에서 온 말이에요. 마음(psych)을 움직인다고 psych verb라고도 해요.",
+    "example": "The news [[surprised]] me. I was [[{surprised|형용사:놀란}]].",
+    "group": "동사",
+    "href": "/learn/participles/emotion"
+  }
+]

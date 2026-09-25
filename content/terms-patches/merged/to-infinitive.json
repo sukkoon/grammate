@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dummy-object",
+    "term": "가목적어",
+    "parts": [
+      { "c": "가", "m": "가짜, 임시로 세운 ('가짜', '가면'의 가)" },
+      { "c": "목적어", "m": "동작을 받는 대상. '무엇을, 누구를'에 해당하는 말" }
+    ],
+    "result": "5형식 문장에서 긴 진짜 목적어(to부정사, that절)를 문장 뒤로 보내고, 목적어 자리를 대신 채우는 it. 뒤로 간 진짜 목적어는 진목적어라고 해요.",
+    "myth": "가목적어 it은 빼면 안 돼요. I found to solve the puzzle hard ✕ → I found it hard to solve the puzzle ○",
+    "english": "dummy object (preparatory it)",
+    "englishNote": "dummy(자리만 채우는 가짜) + object(목적어)",
+    "example": "I found [[{it|대명사:가목적어 (뜻 없이 자리만 채워요)}]] easy [[to make pancakes]].",
+    "group": "문장 성분",
+    "href": "/learn/to-infinitive/noun-use"
+  },
+  {
+    "id": "semantic-subject",
+    "term": "의미상 주어",
+    "parts": [
+      { "c": "의미상", "m": "뜻으로 따져 보면 ('의미'의 의미 + '~에서 보면'의 상)" },
+      { "c": "주어", "m": "문장의 주인. '누가, 무엇이'에 해당하는 말" }
+    ],
+    "result": "문장의 주어는 아니지만, 뜻으로 따지면 준동사(to부정사·동명사)의 동작을 하는 사람. to부정사 앞에서는 for(of) + 목적격, 동명사 앞에서는 소유격(목적격)으로 써요.",
+    "myth": "문장 전체의 주어가 아니에요. 문장의 주어는 따로 있고, 변장한 동사의 동작을 누가 하는지만 알려 줘요.",
+    "english": "semantic subject",
+    "englishNote": "semantic(뜻의) + subject(주어)",
+    "example": "It is hard [[{for|전치사:(to부정사의 주어) ~가} me]] to swim.",
+    "group": "준동사",
+    "href": "/learn/to-infinitive/subject-tense"
+  },
+  {
+    "id": "perfect-infinitive",
+    "term": "완료부정사",
+    "parts": [
+      { "c": "완료", "m": "이미 다 끝남 ('완료', '완성'의 완)" },
+      { "c": "부정사", "m": "모양이 정해지지 않은 동사의 모양 (to + 동사원형)" }
+    ],
+    "result": "to have + 과거분사(p.p.). 진짜 동사가 나타내는 때보다 더 먼저 일어난 일을 말해요.",
+    "myth": "'완료'라서 현재완료 뜻만 있는 게 아니에요. 진짜 동사보다 한 칸 앞선 때라는 뜻이에요.",
+    "english": "perfect infinitive",
+    "englishNote": "perfect(완료된) + infinitive(부정사)",
+    "example": "He seems [[to have been]] sick last week.",
+    "group": "준동사",
+    "href": "/learn/to-infinitive/subject-tense"
+  },
+  {
+    "id": "independent-infinitive",
+    "term": "독립부정사",
+    "parts": [
+      { "c": "독립", "m": "홀로 섬, 남에게 기대지 않음 ('독립', '독자'의 독)" },
+      { "c": "부정사", "m": "모양이 정해지지 않은 동사의 모양 (to + 동사원형)" }
+    ],
+    "result": "문장의 다른 부분과 문법적으로 얽히지 않고 홀로 떨어져서, 말하는 사람의 태도를 덧붙이는 to부정사 표현. to be honest, to tell the truth, needless to say 등이 있어요.",
+    "myth": "뜻을 하나하나 따지기보다 숙어처럼 통째로 외우는 게 좋아요.",
+    "english": "independent infinitive",
+    "englishNote": "independent(홀로 선) + infinitive(부정사)",
+    "example": "[[{To be honest|숙어:솔직히 말하면}]], I didn't read the book.",
+    "group": "준동사",
+    "href": "/learn/to-infinitive/subject-tense"
+  }
+]

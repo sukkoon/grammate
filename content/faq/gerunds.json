@@ -1,0 +1,198 @@
+[
+  {
+    "id": "gd-1",
+    "unit": "gerunds/basic",
+    "q": "동명사가 뭐예요?",
+    "alts": ["동명사 뜻", "ing 붙이면 명사예요?", "제런드가 뭐예요", "동사에 ing 붙이는 거 뭐라고 해요", "하기 하는 것 영어로"],
+    "keys": ["동명사", "ing", "gerund", "명사"],
+    "a": "동명사는 **동사원형 + -ing**로 만든, **명사로 변장한 동사**예요. 뜻은 '~하기, ~하는 것'이에요.\n명사가 되었으니 주어·목적어·보어·전치사 뒤처럼 명사가 서는 자리라면 어디든 설 수 있어요. 진짜 동사는 따로 있어요.",
+    "ex": [
+      { "en": "[[{Swimming|동명사:수영하기}]] is fun.", "ko": "수영은 재미있어. (진짜 동사는 is)" },
+      { "en": "I enjoy [[{reading|동명사:읽기, 읽는 것}]].", "ko": "나는 독서를 즐겨. (진짜 동사는 enjoy)" }
+    ],
+    "check": "My hobby is drawing.에서 진짜 동사는 무엇일까요?"
+  },
+  {
+    "id": "gd-2",
+    "unit": "gerunds/basic",
+    "q": "동명사가 주어면 is예요, are예요?",
+    "alts": ["Watching movies are 틀려요?", "동명사 주어 단수", "동명사 주어 동사 수일치", "ing 주어 뒤에 is"],
+    "keys": ["단수", "주어", "is", "are"],
+    "a": "동명사 주어는 '~하는 일' **하나**라서 **단수** 취급해요. 그래서 is, was, makes처럼 써요.\n동명사 뒤에 movies, games 같은 복수 명사가 붙어 있어도 주어는 '영화 보기'라는 일 하나예요.",
+    "ex": [{ "en": "[[{Watching|동명사:보기} movies]] [[is]] fun.", "ko": "영화 보는 건 재미있어. (are ✕)" }]
+  },
+  {
+    "id": "gd-3",
+    "unit": "gerunds/basic",
+    "q": "전치사 뒤에는 왜 꼭 -ing를 써요?",
+    "alts": ["good at cook 틀려요?", "thank you for help me", "전치사 뒤에 동사원형", "전치사 뒤 to부정사 돼요?", "for 뒤에 ing"],
+    "keys": ["전치사", "ing", "at", "for"],
+    "a": "전치사 뒤는 **명사 자리**예요. 게다가 진짜 동사 자리는 이미 차 있죠. 그래서 동사가 전치사 뒤에 오려면 명사로 변장한 **동명사(-ing)**가 되어야 해요.\n동사원형이나 to부정사는 전치사 뒤에 올 수 없어요.",
+    "ex": [
+      { "en": "I'm good at [[{cooking|동명사:요리하기}]].", "ko": "나는 요리를 잘해. (at cook ✕)" },
+      { "en": "Thank you for [[{helping|동명사:도와주기} me]].", "ko": "도와줘서 고마워. (for help ✕)" }
+    ]
+  },
+  {
+    "id": "gd-4",
+    "unit": "gerunds/basic",
+    "q": "동명사랑 진행형 -ing는 어떻게 구별해요?",
+    "alts": ["is drawing 동명사예요 진행형이에요", "현재분사 동명사 차이", "ing 두 가지", "be동사 뒤 ing"],
+    "keys": ["진행형", "현재분사", "ing", "구별"],
+    "a": "'**~하는 것**'으로 읽히면 동명사, '**~하고 있다**'로 읽히면 진행형이에요.\nbe동사 뒤에 -ing가 오면 주어와 -ing가 같은 것(=)인지 보세요. '내 취미 = 그리기'처럼 말이 되면 동명사예요.",
+    "ex": [
+      { "en": "My hobby is [[{drawing|동명사:그리기}]].", "ko": "내 취미는 그리기야. (동명사)" },
+      { "en": "My sister [[is drawing]] now.", "ko": "언니는 지금 그림을 그리고 있어. (진행형)" }
+    ],
+    "check": "My dream is flying a plane.의 flying은 동명사일까요, 진행형일까요?",
+    "level": "middle"
+  },
+  {
+    "id": "gd-5",
+    "unit": "gerunds/basic",
+    "q": "동명사를 부정할 때 not은 어디에 넣어요?",
+    "alts": ["안 하는 것 영어로", "not ing 순서", "동명사 부정", "for not calling"],
+    "keys": ["not", "부정", "동명사"],
+    "a": "**not을 -ing 바로 앞에** 놓아요. not + -ing가 '~하지 않는 것'이에요.\ndon't, doesn't는 진짜 동사를 부정할 때 쓰는 거라서 동명사 앞에는 쓰지 않아요.",
+    "ex": [{ "en": "I'm sorry for [[not {calling|동명사:전화하기} you]].", "ko": "전화 안 해서 미안해." }]
+  },
+  {
+    "id": "gd-6",
+    "unit": "gerunds/vs-infinitive",
+    "q": "enjoy 뒤에는 왜 to를 못 써요?",
+    "alts": ["enjoy to 틀려요?", "동명사만 목적어로 쓰는 동사", "ing만 오는 동사", "finish to 돼요?", "엔조이 투"],
+    "keys": ["enjoy", "finish", "동명사", "목적어"],
+    "a": "목적어의 모양은 **앞의 진짜 동사가 정해요.** enjoy는 동명사만 받는 동사예요.\n동명사만 받는 대표 동사: enjoy, finish, mind, avoid, give up, keep, practice, quit, consider, suggest. 즐기고, 끝내고, 그만두려면 그 일을 **이미 하고 있어야** 하니까 -ing가 어울려요.",
+    "ex": [{ "en": "I enjoy [[{playing|동명사:하기} soccer]].", "ko": "나는 축구하는 걸 즐겨. (enjoy to play ✕)" }],
+    "level": "middle"
+  },
+  {
+    "id": "gd-7",
+    "unit": "gerunds/vs-infinitive",
+    "q": "to부정사만 목적어로 쓰는 동사는 뭐예요?",
+    "alts": ["want going 틀려요?", "to만 오는 동사", "decide ing 돼요?", "투부정사만 쓰는 동사"],
+    "keys": ["want", "decide", "to부정사", "목적어"],
+    "a": "want, hope, plan, decide, expect, promise, agree, refuse, learn, need예요.\n모두 **아직 하지 않은 앞으로의 일**을 향하는 동사라서, '~ 쪽으로'라는 방향의 to가 어울려요.",
+    "ex": [{ "en": "She [[decided to join]] the soccer club.", "ko": "그녀는 축구부에 들어가기로 결심했어." }],
+    "level": "middle"
+  },
+  {
+    "id": "gd-8",
+    "unit": "gerunds/vs-infinitive",
+    "q": "remember -ing랑 remember to는 뭐가 달라요?",
+    "alts": ["forget ing forget to 차이", "리멤버 투", "잊지 말고 ~해 영어로", "기억하다 뒤에 ing"],
+    "keys": ["remember", "forget", "ing", "to"],
+    "a": "**-ing는 이미 한 일**, **to는 앞으로 할 일**이에요.\nremember -ing는 '(예전에) ~한 것을 기억하다', remember to는 '(앞으로) ~할 것을 기억하다, 잊지 않고 ~하다'예요. forget도 똑같아요.",
+    "ex": [
+      { "en": "I remember [[{meeting|동명사:만난 것}]] her at the {camp|명사:캠프, 야영지}.", "ko": "캠프에서 그녀를 만났던 게 기억나." },
+      { "en": "[[Remember to lock]] the door.", "ko": "잊지 말고 문 잠가." }
+    ],
+    "check": "'숙제 가져오는 거 잊지 마.'는 Don't forget ___ your homework. 빈칸에 무엇이 올까요?",
+    "level": "middle"
+  },
+  {
+    "id": "gd-9",
+    "unit": "gerunds/vs-infinitive",
+    "q": "stop to는 왜 '~하려고 멈추다'예요?",
+    "alts": ["stop ing stop to 차이", "스탑 투", "멈추다 뒤에 to", "stop to drink 뜻"],
+    "keys": ["stop", "ing", "to", "목적"],
+    "a": "stop -ing는 '**하던 것을** 멈추다'예요. -ing가 stop의 목적어예요.\nstop to의 to부정사는 목적어가 아니라 '**왜** 멈췄는지', 곧 **목적**(~하기 위해)을 나타내요. 그래서 멈춘 다음에 하는 일이에요.",
+    "ex": [
+      { "en": "He [[stopped {playing|동명사:하기}]] games.", "ko": "그는 게임하던 걸 멈췄어." },
+      { "en": "He [[stopped]] [[to tie]] his shoes.", "ko": "그는 신발 끈을 묶으려고 멈춰 섰어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "gd-10",
+    "unit": "gerunds/vs-infinitive",
+    "q": "try -ing랑 try to는 뭐가 달라요?",
+    "alts": ["트라이 투", "해 보다 영어로", "애쓰다 영어로", "try ing 뜻"],
+    "keys": ["try", "ing", "to"],
+    "a": "try -ing는 '**시험 삼아 (실제로) ~해 보다**', try to는 '**~하려고 애쓰다**'예요.\ntry -ing는 실제로 해 본 일, try to는 아직 이루지 못한 목표를 향해 애쓰는 거예요.",
+    "ex": [
+      { "en": "Try [[{adding|동명사:넣기}]] some honey.", "ko": "꿀을 좀 넣어 봐." },
+      { "en": "I [[tried to open]] the jar.", "ko": "나는 병을 열려고 애썼어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "gd-11",
+    "unit": "gerunds/vs-infinitive",
+    "q": "like -ing랑 like to는 뜻이 달라요?",
+    "alts": ["like ing like to 차이", "start ing start to", "둘 다 쓰는 동사", "begin ing 돼요?"],
+    "keys": ["like", "start", "begin", "둘 다"],
+    "a": "like, love, hate, begin, start, continue는 -ing도 to도 받고, 뜻도 **거의 같아요.**\n다만 **would like**(~하고 싶다)는 to부정사만 받아요.",
+    "ex": [
+      { "en": "It started [[{raining|동명사:비가 오기}]]. = It started [[to rain]].", "ko": "비가 오기 시작했어." },
+      { "en": "I'd like [[to order]] pizza.", "ko": "피자를 주문하고 싶어요. (would like ordering ✕)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "gd-12",
+    "unit": "gerunds/advanced",
+    "q": "Do you mind my opening the window?에서 my는 왜 들어가요?",
+    "alts": ["동명사 의미상 주어", "동명사 앞에 소유격", "my ing", "me ing 돼요?", "의미상 주어가 뭐예요"],
+    "keys": ["의미상 주어", "소유격", "mind", "my"],
+    "a": "동명사의 행동을 하는 사람이 문장의 주어와 **다를 때** 동명사 앞에 그 사람을 밝혀요. 이것을 **의미상 주어**라고 해요.\n꺼리는 사람은 you, 여는 사람은 나라서 my를 붙였어요. 소유격이 기본이고, 말할 때는 목적격(me)도 많이 써요.",
+    "ex": [{ "en": "Do you mind [[my {opening|동명사:여는 것}]] the window?", "ko": "제가 창문을 열어도 될까요?" }],
+    "level": "middle"
+  },
+  {
+    "id": "gd-13",
+    "unit": "gerunds/advanced",
+    "q": "Do you mind ~?에 괜찮다고 할 때 Yes예요, No예요?",
+    "alts": ["두 유 마인드 대답", "mind 대답 no", "창문 열어도 돼요 대답", "not at all 뜻"],
+    "keys": ["mind", "대답", "no", "허락"],
+    "a": "mind는 '**꺼리다**'라서, 괜찮다고 허락할 때는 **No**라고 해요. No, not at all. / Of course not. (전혀 안 꺼려요)\nYes라고 하면 '네, 꺼려요', 곧 하지 말아 달라는 뜻이 돼요.",
+    "ex": [{ "en": "Do you mind [[me {sitting|동명사:앉는 것}]] here? No, not at all.", "ko": "여기 앉아도 될까요? 네, 앉으세요." }],
+    "level": "middle"
+  },
+  {
+    "id": "gd-14",
+    "unit": "gerunds/advanced",
+    "q": "look forward to 뒤에는 왜 동사원형이 아니라 -ing예요?",
+    "alts": ["룩 포워드 투 잉", "to 뒤에 ing", "전치사 to", "look forward to see 틀려요?", "when it comes to 뒤에"],
+    "keys": ["look forward to", "전치사", "to", "ing"],
+    "a": "look forward to의 **to는 전치사**예요. 전치사 뒤는 명사 자리라서 동사는 **-ing**로 변장해요.\n구별법: to 뒤에 명사를 넣어 보세요. look forward to the trip처럼 말이 되면 전치사 to예요. be used to, object to, when it comes to도 같아요.",
+    "ex": [{ "en": "I'm [[{looking forward to} {seeing|동명사:보는 것}]] you.", "ko": "너를 만나기를 손꼽아 기다리고 있어. (to see ✕)" }],
+    "level": "high"
+  },
+  {
+    "id": "gd-15",
+    "unit": "gerunds/advanced",
+    "q": "used to랑 be used to는 뭐가 달라요?",
+    "alts": ["유즈드 투", "익숙하다 영어로", "used to ing", "be used to 동사원형", "예전에 했다 영어로"],
+    "keys": ["used to", "be used to", "익숙하다"],
+    "a": "**used to + 동사원형**은 '예전에는 ~했다(지금은 아니다)'예요.\n**be used to + -ing**는 '~에 익숙하다'예요. 여기서 to는 전치사라서 -ing가 와요.",
+    "ex": [
+      { "en": "I [[{used to} walk]] to school.", "ko": "나는 예전에 걸어서 학교에 다녔어." },
+      { "en": "I [[{am used to} {walking|동명사:걷기}]] to school.", "ko": "나는 걸어서 학교에 가는 데 익숙해." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "gd-16",
+    "unit": "gerunds/advanced",
+    "q": "cannot help -ing가 무슨 뜻이에요?",
+    "alts": ["캔낫 헬프 잉", "couldn't help laughing 뜻", "도울 수 없다?", "하지 않을 수 없다 영어로"],
+    "keys": ["cannot help", "help", "ing", "관용"],
+    "a": "'**~하지 않을 수 없다**'라는 관용 표현이에요. 여기서 help는 '돕다'가 아니라 '피하다, 참다'에 가까워요.\n덩어리째 외워 두면 편해요. How about -ing?, be busy -ing, feel like -ing도 같이 익혀 두세요.",
+    "ex": [{ "en": "I [[{couldn't help} {laughing|동명사:웃기}]] at his joke.", "ko": "그의 농담에 웃지 않을 수 없었어." }],
+    "level": "middle"
+  },
+  {
+    "id": "gd-17",
+    "unit": "gerunds/advanced",
+    "q": "having p.p. 동명사는 언제 써요?",
+    "alts": ["완료 동명사", "해빙 피피", "being p.p. 뜻", "수동 동명사", "동명사 시제"],
+    "keys": ["having", "being", "완료", "수동"],
+    "a": "동명사의 일이 진짜 동사보다 **먼저** 일어났으면 **having p.p.**(완료 동명사)예요.\n동명사의 주인이 그 일을 **당하는** 쪽이면 **being p.p.**(수동 동명사)예요. 둘 다 진짜 동사가 아니라 여전히 동명사예요.",
+    "ex": [
+      { "en": "He is proud of [[having finished]] the marathon.", "ko": "그는 마라톤을 끝까지 달린 게 자랑스러워." },
+      { "en": "Nobody likes [[being ignored]].", "ko": "무시당하는 걸 좋아하는 사람은 없어." }
+    ],
+    "level": "high"
+  }
+]
