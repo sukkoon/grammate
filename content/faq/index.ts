@@ -14,6 +14,7 @@ import passive from "./passive.json";
 import phrase_clause from "./phrase-clause.json";
 import prepositions from "./prepositions.json";
 import pronouns from "./pronouns.json";
+import relatives from "./relatives.json";
 import sentence_elements from "./sentence-elements.json";
 import sentence_patterns from "./sentence-patterns.json";
 import sentence_types from "./sentence-types.json";
@@ -24,4 +25,4 @@ import verbals_review from "./verbals-review.json";
 import verbs_basics from "./verbs-basics.json";
 
 /** 질문 도우미의 질문 은행. scripts/merge-drafts.py가 공개된 장의 content/faq/*.json을 모아 만든다. */
-export const faq: FaqItem[] = [...intro, ...parts_of_speech, ...adjectives_adverbs, ...agreement_narration, ...articles, ...comparison, ...gerunds, ...modals, ...nouns, ...participial_constructions, ...participles, ...passive, ...phrase_clause, ...prepositions, ...pronouns, ...sentence_elements, ...sentence_patterns, ...sentence_types, ...suneung, ...tenses, ...to_infinitive, ...verbals_review, ...verbs_basics] as FaqItem[];
+export const faq: FaqItem[] = [...intro, ...parts_of_speech, ...adjectives_adverbs, ...agreement_narration, ...articles, ...comparison, ...gerunds, ...modals, ...nouns, ...participial_constructions, ...participles, ...passive, ...phrase_clause, ...prepositions, ...pronouns, ...relatives, ...sentence_elements, ...sentence_patterns, ...sentence_types, ...suneung, ...tenses, ...to_infinitive, ...verbals_review, ...verbs_basics] as FaqItem[];

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "relative-clause",
+    "term": "관계절 (관계사절)",
+    "parts": [
+      { "c": "관계", "m": "둘을 이어 관계를 맺다" },
+      { "c": "절", "m": "주어와 동사를 갖춘 문장의 한 마디" }
+    ],
+    "result": "관계사(who, which, that, where …)가 이끄는 절. 대부분 앞의 명사(선행사)를 뒤에서 꾸미는 형용사절이에요. 관계사 안에 접속사가 들어 있어서 관계절에도 진짜 동사가 하나 있어요.",
+    "myth": "관계절이 모두 형용사절은 아니에요! what이나 whoever가 이끄는 절은 꾸밀 선행사가 없어서 명사절이나 부사절이 돼요.",
+    "english": "relative clause",
+    "englishNote": "relative(관계를 맺는) + clause(절): 앞의 명사와 관계를 맺는 절",
+    "example": "I have a friend [[{who|관계대명사:~하는 (사람)} lives in Jeju]].",
+    "group": "문장 구조",
+    "href": "/learn/relatives/pronouns"
+  },
+  {
+    "id": "relative-adverb",
+    "term": "관계부사",
+    "parts": [
+      { "c": "관계", "m": "둘을 이어 관계를 맺다" },
+      { "c": "부사", "m": "동사나 문장 전체에 때·장소·이유·방법을 더해 주는 말" }
+    ],
+    "result": "두 문장을 이어 주면서, 뒤 절에서 there(거기에서)·then(그때) 같은 부사 일을 하는 말. 장소 where, 때 when, 이유 why, 방법 how가 있고, 모두 전치사 + which로 바꿀 수 있어요.",
+    "myth": "선행사가 장소라고 무조건 where가 아니에요! 뒤 절에 주어나 목적어가 빠져 있으면 관계대명사 which를 써요. 관계부사 뒤에는 완전한 절이 와요.",
+    "english": "relative adverb",
+    "englishNote": "relative(관계를 맺는) + adverb(부사)",
+    "example": "This is the park [[{where|관계부사:~하는 (곳)}]] we play soccer.",
+    "group": "연결",
+    "href": "/learn/relatives/adverbs"
+  },
+  {
+    "id": "nonrestrictive",
+    "term": "계속적 용법",
+    "parts": [
+      { "c": "계속", "m": "끊지 않고 이어 가다" },
+      { "c": "용법", "m": "쓰는 법 ('사용법'의 용법)" }
+    ],
+    "result": "관계사 앞에 쉼표를 찍어서, 앞의 명사를 좁히지 않고 설명을 이어 붙이는 쓰임. 앞에서부터 차례로 '그리고 그 사람은, 그런데 그것은'처럼 이어서 해석해요. 쉼표 없이 범위를 좁히는 보통의 쓰임은 한정적 용법이라고 해요.",
+    "myth": "쉼표는 쉬어 읽는 자리일 뿐이라고요? 관계사 앞의 쉼표는 뜻을 바꿔요. two cousins who live in Busan은 '부산에 사는 사촌 둘', two cousins, who live in Busan은 '사촌이 딱 둘인데 둘 다 부산에 산다'예요.",
+    "english": "non-restrictive (non-defining) use",
+    "englishNote": "restrict(범위를 좁히다) 앞에 non(아니다)이 붙어서 '범위를 좁히지 않는' 쓰임",
+    "example": "I have two cousins, [[{who|관계대명사:그리고 그 사람들은} live in Busan]].",
+    "group": "연결",
+    "href": "/learn/relatives/advanced"
+  },
+  {
+    "id": "compound-relative",
+    "term": "복합관계사",
+    "parts": [
+      { "c": "복합", "m": "둘 이상이 합쳐지다 ('복합기'의 복합)" },
+      { "c": "관계사", "m": "두 문장을 이어 주는 관계대명사·관계부사" }
+    ],
+    "result": "관계사에 -ever가 붙은 말. whoever, whatever, whichever(복합관계대명사)와 whenever, wherever, however(복합관계부사)가 있어요. 선행사를 품고 있어서 '~하는 누구든지'나 '누가 ~하더라도(양보)'라는 뜻이 돼요.",
+    "myth": "however가 늘 '그러나'인 건 아니에요! However tired I am처럼 바로 뒤에 형용사 + 주어 + 동사가 오면 '아무리 ~해도'예요.",
+    "english": "compound relative (-ever words)",
+    "englishNote": "관계사에 ever(언제나, 어떤 경우든)가 붙어서 '어떤 ~든지'라는 뜻이 더해져요",
+    "example": "[[{Whoever|복합관계대명사:~하는 사람은 누구든지} finishes {first|부사:먼저}]] can choose the game.",
+    "group": "연결",
+    "href": "/learn/relatives/advanced"
+  }
+]

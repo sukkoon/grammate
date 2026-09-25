@@ -745,3 +745,4 @@ export * from "./participles";
 export * from "./verbals-review";
 export * from "./agreement-narration";
 export * from "./suneung";
+export * from "./relatives";
