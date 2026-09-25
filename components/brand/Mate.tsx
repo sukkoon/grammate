@@ -8,15 +8,15 @@ function Face({ mood }: { mood: Mood }) {
     case "happy":
       return (
         <>
-          <path d="M21.5 28 Q25 24 28.5 28" stroke="currentColor" strokeWidth="3.4" />
-          <path d="M33 28 Q36.5 24 40 28" style={coral} strokeWidth="3.4" />
+          <path d="M20.5 26 Q24 22 27.5 26" stroke="currentColor" strokeWidth="3.4" />
+          <path d="M30.5 26 Q34 22 37.5 26" style={coral} strokeWidth="3.4" />
         </>
       );
     case "thinking":
       return (
         <>
-          <circle cx="26.5" cy="24.5" r="2.7" fill="currentColor" stroke="none" />
-          <circle cx="36.5" cy="24.5" r="2.7" fill="currentColor" stroke="none" />
+          <circle cx="24" cy="24.5" r="2.8" fill="currentColor" stroke="none" />
+          <circle cx="34" cy="24.5" r="2.8" fill="currentColor" stroke="none" />
           <circle cx="56" cy="12" r="3.2" style={coralFill} stroke="none" />
           <circle cx="60.5" cy="5.5" r="2" style={coralFill} stroke="none" />
         </>
@@ -24,8 +24,8 @@ function Face({ mood }: { mood: Mood }) {
     case "listening":
       return (
         <>
-          <circle cx="25" cy="27" r="2.7" fill="currentColor" stroke="none" />
-          <circle cx="36" cy="27" r="2.7" fill="currentColor" stroke="none" />
+          <circle cx="24" cy="25.5" r="2.8" fill="currentColor" stroke="none" />
+          <circle cx="34" cy="25.5" r="2.8" fill="currentColor" stroke="none" />
           <path d="M55 13.5 Q58.5 18.5 55 23.5" style={coral} strokeWidth="3" />
           <path d="M59.5 9.5 Q64 18.5 59.5 27.5" style={coral} strokeWidth="3" />
         </>
@@ -33,16 +33,16 @@ function Face({ mood }: { mood: Mood }) {
     case "oops":
       return (
         <>
-          <path d="M22 27 H28" stroke="currentColor" strokeWidth="3.2" />
-          <path d="M33 27 H39" stroke="currentColor" strokeWidth="3.2" />
+          <path d="M20.5 25.5 H26.5" stroke="currentColor" strokeWidth="3.2" />
+          <path d="M30.5 25.5 H36.5" stroke="currentColor" strokeWidth="3.2" />
           <path d="M10 3 Q15 10 10 13 Q5 10 10 3 Z" style={coralFill} stroke="none" />
         </>
       );
     case "cheer":
       return (
         <>
-          <path d="M21.5 28 Q25 24 28.5 28" stroke="currentColor" strokeWidth="3.4" />
-          <path d="M33 28 Q36.5 24 40 28" style={coral} strokeWidth="3.4" />
+          <path d="M20.5 26 Q24 22 27.5 26" stroke="currentColor" strokeWidth="3.4" />
+          <path d="M30.5 26 Q34 22 37.5 26" style={coral} strokeWidth="3.4" />
           <path
             d="M56 3 L57.7 9.3 L64 11 L57.7 12.7 L56 19 L54.3 12.7 L48 11 L54.3 9.3 Z"
             style={coralFill}
@@ -53,8 +53,8 @@ function Face({ mood }: { mood: Mood }) {
     default:
       return (
         <>
-          <circle cx="25" cy="27" r="3" fill="currentColor" stroke="none" />
-          <path d="M33 27.5 Q36.5 23.5 40 27.5" style={coral} strokeWidth="3.4" />
+          <circle cx="24" cy="25" r="3.2" fill="currentColor" stroke="none" />
+          <path d="M30 25.5 Q33.5 21.5 37 25.5" style={coral} strokeWidth="3.6" />
         </>
       );
   }
@@ -84,7 +84,8 @@ export function Mate({
       aria-label={title}
       aria-hidden={title ? undefined : true}
     >
-      <path d="M48 17 A21 21 0 1 0 53 33 H38" stroke="currentColor" strokeWidth="7" />
+      {/* 가로획(입)은 표정과 겹치지 않게 조금 낮고 짧게: 작은 크기에서도 G가 한 덩어리로 보인다 */}
+      <path d="M48.5 16.5 A21 21 0 1 0 53 34 H42" stroke="currentColor" strokeWidth="7" />
       <Face mood={mood} />
     </svg>
   );

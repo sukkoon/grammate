@@ -500,3 +500,212 @@ export function TiTenseShift() {
     </div>
   );
 }
+
+/* ───────── 9. to 뒤는 언제나 동사원형 ───────── */
+
+const FIXED_ROWS: { tag: string; subj: { en: string }; verb: { en: string } }[] = [
+  { tag: "나 · 지금", subj: { en: "I" }, verb: { en: "want" } },
+  { tag: "그녀 · 지금", subj: { en: "She" }, verb: { en: "wants" } },
+  { tag: "그녀 · 과거", subj: { en: "She" }, verb: { en: "wanted" } },
+];
+
+/** 주어와 때가 바뀌면 진짜 동사만 모양이 바뀌고, to부정사는 그대로 */
+export function TiFixedTo() {
+  return (
+    <div className="mx-auto max-w-xl">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+        <span className="rounded-full bg-coral px-2.5 py-1 text-white">진짜 동사: 주어·때 따라 바뀌어요</span>
+        <span className="rounded-full bg-sky-soft px-2.5 py-1 text-sky-ink">to부정사: 늘 그대로</span>
+      </p>
+      <ul className="mt-3 grid gap-2">
+        {FIXED_ROWS.map((r) => (
+          <li key={r.tag} className="flex flex-wrap items-center gap-1.5 rounded-2xl border border-line px-3.5 py-2.5 text-[1.08em]">
+            <span className="mr-1 rounded-full bg-chip px-2.5 py-0.5 text-[14px] font-bold text-ink-2">{r.tag}</span>
+            <span className="font-medium">
+              <En en={r.subj.en} />
+            </span>
+            <Chip className="bg-coral text-white">
+              <En en={r.verb.en} />
+            </Chip>
+            <Chip className="bg-sky-soft text-sky-ink">
+              <En en="to be" />
+            </Chip>
+            <span className="font-medium">
+              <En en="a vet." />
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 flex items-center justify-center gap-1.5 text-center text-[14.5px] font-bold text-ink-2">
+        <CrownIcon size={18} className="shrink-0 text-coral" />
+        옷을 갈아입는 건 진짜 동사뿐, to 뒤는 언제나 동사원형이에요.
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 10. 목적어 자리의 to부정사: 앞을 바라봐요 ───────── */
+
+const AHEAD_VERBS: { en: string; ko: string }[] = [
+  { en: "want", ko: "원하다" },
+  { en: "hope", ko: "바라다" },
+  { en: "plan", ko: "계획하다" },
+  { en: "decide", ko: "결심하다" },
+  { en: "{promise|동사:약속하다}", ko: "약속하다" },
+  { en: "expect", ko: "기대하다" },
+];
+
+/** want, hope, plan… 은 아직 하지 않은 일을 향하고, to가 그쪽으로 이어 준다 */
+export function TiLookAhead() {
+  return (
+    <div>
+      <div className="grid gap-2 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+        <div className="rounded-2xl bg-coral-soft px-4 py-3 text-center">
+          <p className="flex items-center justify-center gap-1.5 font-extrabold text-coral-ink">
+            <CrownIcon size={18} />
+            지금: 진짜 동사
+          </p>
+          <p className="text-[14px] text-ink-2">바라고, 정하고, 약속해요</p>
+        </div>
+        <div className="flex flex-col items-center gap-0.5">
+          <ArrowRight size={30} className="rotate-90 text-amber-ink sm:rotate-0" />
+          <span className="text-[14px] font-bold text-amber-ink">to = ~ 쪽으로</span>
+        </div>
+        <div className="rounded-2xl bg-amber-soft px-4 py-3 text-center">
+          <p className="font-extrabold text-amber-ink">앞으로: to + 동사원형</p>
+          <p className="text-[14px] text-ink-2">아직 하지 않은 일</p>
+        </div>
+      </div>
+      <ul className="mt-3 grid grid-cols-2 gap-2 min-[420px]:grid-cols-3">
+        {AHEAD_VERBS.map((v) => (
+          <li key={v.en} className="rounded-xl border border-line px-3 py-2">
+            <span className="block text-[1.05em] font-bold">
+              <En en={v.en} />
+            </span>
+            <span className="block text-[14px] text-ink-2">{v.ko}</span>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 rounded-2xl border border-line px-4 py-3">
+        <span className="block text-[1.05em] font-medium">
+          <En en="We plan [[to visit]] Grandma this Sunday." />
+        </span>
+        <span className="block text-[14px] text-ink-2">우리는 이번 일요일에 할머니 댁에 가려고 계획하고 있어. (가는 건 아직 앞으로의 일)</span>
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 11. enough의 자리 ───────── */
+
+/** 형용사·부사는 enough 앞, 명사는 enough 뒤 */
+export function TiEnoughSpot() {
+  return (
+    <div className="grid gap-2.5 sm:grid-cols-2">
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">형용사·부사 + enough</p>
+        <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.08em]">
+          <Chip className="bg-mint-soft text-mint-ink">
+            <En en="warm" />
+          </Chip>
+          <Chip className="bg-coral text-white">
+            <En en="enough" />
+          </Chip>
+          <Mark ok />
+        </p>
+        <p className="mt-1.5 text-[14px] font-bold text-ink-2">형용사·부사가 enough 앞에 서요</p>
+        <p className="mt-2 text-[1.04em] font-medium">
+          <En en="The soup is [[warm enough]] to eat now." />
+        </p>
+        <p className="text-[14px] text-ink-2">수프가 이제 먹기 딱 좋을 만큼 따뜻해.</p>
+        <p className="mt-2 flex items-center gap-2 text-[14px] text-ink-3">
+          <Mark ok={false} />
+          <span lang="en" className="font-bold line-through decoration-coral decoration-2">
+            enough warm
+          </span>
+        </p>
+      </div>
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">enough + 명사</p>
+        <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.08em]">
+          <Chip className="bg-coral text-white">
+            <En en="enough" />
+          </Chip>
+          <Chip className="bg-sky-soft text-sky-ink">
+            <En en="eggs" />
+          </Chip>
+          <Mark ok />
+        </p>
+        <p className="mt-1.5 text-[14px] font-bold text-ink-2">명사는 enough 뒤에 와요</p>
+        <p className="mt-2 text-[1.04em] font-medium">
+          <En en="Do we have [[enough eggs]] to make a cake?" />
+        </p>
+        <p className="text-[14px] text-ink-2">케이크를 만들 만큼 달걀이 충분히 있어?</p>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 12. to부정사의 모양 네 가지: 때 × 관계 ───────── */
+
+const TI_FORMS: { key: string; time: string; rel: string; form: string; en: string; ko: string; tone: Tone }[] = [
+  {
+    key: "same-active",
+    time: "같은 때",
+    rel: "하는 쪽",
+    form: "to + 동사원형",
+    en: "She seems [[to know]] the {answer|명사:답, 정답}.",
+    ko: "그녀는 답을 아는 것 같아.",
+    tone: "sky",
+  },
+  {
+    key: "same-passive",
+    time: "같은 때",
+    rel: "당하는 쪽",
+    form: "to be p.p.",
+    en: "He seems [[to be loved]] by everyone.",
+    ko: "그는 모두에게 사랑받는 것 같아.",
+    tone: "sky",
+  },
+  {
+    key: "before-active",
+    time: "더 먼저",
+    rel: "하는 쪽",
+    form: "to have p.p.",
+    en: "She seems [[to {have|조동사:완료형을 만드는 말} lost]] her key.",
+    ko: "그녀는 열쇠를 잃어버린 것 같아.",
+    tone: "amber",
+  },
+  {
+    key: "before-passive",
+    time: "더 먼저",
+    rel: "당하는 쪽",
+    form: "to have been p.p.",
+    en: "The bridge seems [[to {have|조동사:완료형을 만드는 말} been built]] long ago.",
+    ko: "그 다리는 오래전에 지어진 것 같아.",
+    tone: "amber",
+  },
+];
+
+/** 진짜 동사와의 때(같은 때 / 더 먼저)와 관계(하는 쪽 / 당하는 쪽)로 to부정사 모양이 정해진다 */
+export function TiFormGrid() {
+  return (
+    <ul className="grid gap-2.5 sm:grid-cols-2">
+      {TI_FORMS.map((f) => (
+        <li key={f.key} className="rounded-2xl border border-line px-3.5 py-3">
+          <p className="flex flex-wrap gap-1.5 text-[14px] font-bold">
+            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">진짜 동사와 {f.time}</span>
+            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
+          </p>
+          <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[1.1em] font-extrabold ${TONE[f.tone]}`}>
+            {f.form}
+          </p>
+          <p className="mt-2 text-[1.02em] font-medium">
+            <En en={f.en} />
+          </p>
+          <p className="text-[14px] text-ink-2">{f.ko}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}

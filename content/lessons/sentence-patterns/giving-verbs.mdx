@@ -8,11 +8,17 @@
 
 선물을 건네면 손에 곧바로 닿는 건 **선물**이에요. 사람은 그 선물을 거쳐서 받는 쪽이죠. 그래서 물건을 **직접목적어**, 사람을 **간접목적어**라고 불러요.
 
+<Figure caption="주는 동작이 곧바로 닿는 건 물건이라 직접목적어, 사람은 물건을 거쳐 받으니 간접목적어예요. 하지만 문장에서는 사람을 먼저 써요.">
+  <SpHandOver />
+</Figure>
+
 <TermAnatomy id="indirect-object" />
 
 간접목적어는 우리말 &lsquo;~에게&rsquo;, 직접목적어는 &lsquo;~을/를&rsquo;에 해당해요. 4형식에서는 늘 **사람(간접목적어) 먼저, 물건(직접목적어) 나중**이에요.
 
 <TermAnatomy id="direct-object" />
+
+<Formula caption="4형식 순서" parts={["~sky:주어", "*수여동사", "~mint:간접목적어 (사람, ~에게)", "~mint:직접목적어 (물건, ~을)"]} en="Tom lent [[me]] [[his umbrella]]." ko="톰이 나에게 우산을 빌려줬어." />
 
 <Examples>
   <Ex en="My mom gave [[me]] [[a present]]." ko="엄마가 나에게 선물을 주셨어." note="me = 간접목적어(~에게), a present = 직접목적어(~을)" />
@@ -77,12 +83,27 @@ ask는 of를 써요. 말할 때는 4형식(ask you a question)을 더 자주 쓰
 </Examples>
 
 <Tip mood="thinking" title="to일까, for일까? 혼자서 해 보기">
-그 동작을 **혼자서도 할 수 있는지** 생각해 보세요. give(주다)는 받는 사람이 없으면 할 수 없어요 → to. buy(사다)는 나 혼자 사서 나 혼자 가질 수도 있어요. 누군가에게 주려면 &lsquo;그 사람을 위해&rsquo;라는 말이 더 필요해요 → for.
+그 동작을 **혼자서도 할 수 있는지** 생각해 보세요.
 </Tip>
+
+<Compare
+  caption="받는 사람 없이 그 동작을 할 수 있나요?"
+  items={[
+    { title: "to", sub: "받는 사람이 없으면 못 해요", tone: "sky", en: "I gave a book [[to Jisu]].", points: ["give: 받는 사람이 있어야 '주기'가 끝나요", "send, show, tell, lend도 같아요"] },
+    { title: "for", sub: "혼자서도 할 수 있어요", tone: "coral", en: "Dad bought a new bike [[for me]].", points: ["buy: 혼자 사서 혼자 가질 수도 있어요", "남에게 해 주려면 '~을 위해' for가 필요해요"] },
+  ]}
+/>
 
 <DeepDive level="중2" title="직접목적어가 대명사면 4형식으로 못 써요">
 
 직접목적어(물건)가 it, them 같은 **대명사**면 4형식으로 쓰지 않고 **3형식**으로 써요. 대명사는 이미 아는 정보라서 동사 바로 뒤에 두고, 받는 사람을 뒤로 보내요.
+
+<Compare
+  items={[
+    { title: "4형식 give you it", mark: "no", tone: "coral", en: "I will give you it.", points: ["물건 자리에 대명사 it"] },
+    { title: "3형식 give it to you", mark: "ok", tone: "mint", en: "I will give [[it to you]].", points: ["it은 동사 바로 뒤", "받는 사람은 to와 함께 뒤로"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="I have a pen. I will give [[it to you]]." ko="나 펜 있어. 너한테 줄게." note="give you it ✗ (말로는 가끔 들려도 시험에서는 틀린 문장으로 봐요)" />
@@ -97,6 +118,8 @@ ask는 of를 써요. 말할 때는 4형식(ask you a question)을 더 자주 쓰
 <DeepDive level="중2" title="4형식으로 쓸 수 없는 동사: explain, say, introduce">
 
 우리말로는 &lsquo;~에게 ~을 설명하다, 말하다, 소개하다&rsquo;라서 4형식처럼 보여요. 하지만 이 동사들은 **목적어를 하나만** 가질 수 있어요. 사람은 반드시 **to + 사람**으로 써요.
+
+<Formula caption="이 동사들은 이 모양 하나뿐이에요" parts={["*explain · say · introduce · suggest", "+", "~mint:물건 (목적어 하나)", "+", "~sky:to + 사람"]} en="Can you explain [[the rule to me]]?" ko="explain me the rule ✕" />
 
 <Examples>
   <Ex en="Can you explain [[the rule to me]]?" ko="나에게 규칙 좀 설명해 줄래?" note="explain me the rule ✗" />

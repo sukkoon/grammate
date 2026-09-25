@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { En } from "@/components/lesson/En";
-import { ArrowRight } from "./icons";
+import { ArrowRight, CrownIcon, MaskIcon, MoonIcon, SunIcon } from "./icons";
 
-/* 가정법 장 그림: 한 칸 물러서는 시제, 단순 조건 vs 가정법, 가정법 공식, I wish, as if의 시제, 혼합가정법, if 생략 도치, 숨은 if */
+/* 가정법 장 그림: 한 칸 물러서는 시제, 단순 조건 vs 가정법, 가정법 공식, I wish, as if의 시제, 혼합가정법, if 생략 도치, 숨은 if,
+   현실 모드와 상상 모드, 진짜 동사 세기 */
 
 /* ───────── 공통 도우미 ───────── */
 
@@ -646,6 +647,257 @@ export function SjHiddenIf() {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+/* ───────── 9. 말하는 방식 두 가지: 현실 모드와 상상 모드 ───────── */
+
+/** 직설법은 사실 그대로, 가정법은 동사를 한 칸 옛날로 보내 '상상 모드'를 켠다 */
+export function SjTwoModes() {
+  return (
+    <div>
+      <div className="mx-auto flex max-w-md items-stretch overflow-hidden rounded-full border-2 border-line text-[14.5px] font-extrabold" aria-hidden>
+        <span className="flex flex-1 items-center justify-center gap-1.5 bg-mint-soft px-3 py-2 text-mint-ink">
+          <SunIcon size={20} />
+          현실 모드
+        </span>
+        <span className="flex flex-1 items-center justify-center gap-1.5 bg-coral px-3 py-2 text-white">
+          <MoonIcon size={18} />
+          상상 모드
+        </span>
+      </div>
+      <p className="mt-2 text-center text-[14px] font-bold text-ink-2">상상 모드 스위치 = 동사를 한 칸 옛날로</p>
+      <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
+        <div className="rounded-2xl border border-line">
+          <div className="flex items-center gap-2 rounded-t-2xl bg-mint-soft px-4 py-2.5 text-mint-ink">
+            <SunIcon size={22} />
+            <span>
+              <span className="block text-[16px] font-extrabold">직설법</span>
+              <span className="block text-[14px] font-bold">있는 그대로의 사실을 말해요</span>
+            </span>
+          </div>
+          <div className="px-4 py-3">
+            <p className="text-[1.04em] font-medium">
+              <En en="I [[don't have]] a puppy." />
+            </p>
+            <p className="text-[14px] text-ink-2">나는 강아지가 없어.</p>
+            <p className="mt-1.5 text-[14px] font-bold text-ink-3">지금 이야기 → 현재형 그대로</p>
+          </div>
+        </div>
+        <div className="rounded-2xl border-2 border-coral">
+          <div className="flex items-center gap-2 rounded-t-2xl bg-coral-soft px-4 py-2.5 text-coral-ink">
+            <MoonIcon size={20} />
+            <span>
+              <span className="block text-[16px] font-extrabold">가정법</span>
+              <span className="block text-[14px] font-bold">사실이 아닌 일을 잠깐 사실처럼 정해요</span>
+            </span>
+          </div>
+          <div className="px-4 py-3">
+            <p className="text-[1.04em] font-medium">
+              <En en="If I [[had]] a puppy, I [[{would|조동사:~할 텐데} {walk|동사:산책시키다}]] it every day." />
+            </p>
+            <p className="text-[14px] text-ink-2">강아지가 있다면 날마다 산책시킬 텐데.</p>
+            <p className="mt-1.5 text-[14px] font-bold text-coral-ink">지금 이야기인데 과거형 had → 상상이라는 신호</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 10. 동사 1개의 법칙으로 보면: 진짜 동사 세기 ───────── */
+
+type VcKind = "link" | "verb" | "hidden" | "verbal" | "prep" | "plain";
+type VcBit = { en: string; k: VcKind; sub?: string };
+type VcRow = { key: string; title: string; bits: VcBit[]; count: string; one?: boolean };
+
+const VC_LOOK: Record<Exclude<VcKind, "plain">, { box: string; label: string }> = {
+  link: { box: "bg-amber-soft text-amber-ink", label: "text-amber-ink" },
+  verb: { box: "bg-coral text-white", label: "text-coral-ink" },
+  hidden: { box: "border-2 border-dashed border-amber-ink/70 text-amber-ink", label: "text-amber-ink" },
+  verbal: { box: "bg-sky-soft text-sky-ink", label: "text-sky-ink" },
+  prep: { box: "bg-chip text-ink-2", label: "text-ink-3" },
+};
+
+const VC_SETS: Record<"basic" | "wish" | "advanced", VcRow[]> = {
+  basic: [
+    {
+      key: "bird",
+      title: "가정법 과거",
+      bits: [
+        { en: "If", k: "link", sub: "접속사" },
+        { en: "I", k: "plain" },
+        { en: "{were|동사:(가정법) ~라면}", k: "verb", sub: "동사 1" },
+        { en: "a bird,", k: "plain" },
+        { en: "I", k: "plain" },
+        { en: "{could|조동사:~할 수 있을 텐데} fly", k: "verb", sub: "동사 2" },
+        { en: "to you.", k: "plain" },
+      ],
+      count: "접속사 if 1개 + 1 = 진짜 동사 2개. 달라진 건 두 동사의 시제뿐이에요.",
+    },
+    {
+      key: "known",
+      title: "가정법 과거완료",
+      bits: [
+        { en: "If", k: "link", sub: "접속사" },
+        { en: "I", k: "plain" },
+        { en: "{had|조동사:과거완료를 만드는 말} known,", k: "verb", sub: "동사 1" },
+        { en: "I", k: "plain" },
+        { en: "{would|조동사:~했을 텐데} {have|조동사:완료형을 만드는 말} told", k: "verb", sub: "동사 2" },
+        { en: "you.", k: "plain" },
+      ],
+      count: "had known, would have told는 각각 한 덩어리 진짜 동사예요.",
+    },
+  ],
+  wish: [
+    {
+      key: "wish",
+      title: "I wish",
+      bits: [
+        { en: "I", k: "plain" },
+        { en: "wish", k: "verb", sub: "동사 1" },
+        { en: "(that)", k: "hidden", sub: "숨은 접속사" },
+        { en: "I", k: "plain" },
+        { en: "{were|동사:(가정법) ~라면}", k: "verb", sub: "동사 2 · 한 칸 뒤로" },
+        { en: "taller.", k: "plain" },
+      ],
+      count: "보이지 않는 that 1개 + 1 = 진짜 동사 2개",
+    },
+    {
+      key: "asif",
+      title: "as if",
+      bits: [
+        { en: "He", k: "plain" },
+        { en: "talks", k: "verb", sub: "동사 1" },
+        { en: "{as if}", k: "link", sub: "접속사" },
+        { en: "he", k: "plain" },
+        { en: "knew", k: "verb", sub: "동사 2 · 한 칸 뒤로" },
+        { en: "everything.", k: "plain" },
+      ],
+      count: "접속사 as if 1개 + 1 = 진짜 동사 2개",
+    },
+    {
+      key: "hope",
+      title: "hope + to부정사",
+      bits: [
+        { en: "I", k: "plain" },
+        { en: "hope", k: "verb", sub: "동사 1" },
+        { en: "to see", k: "verbal", sub: "to부정사" },
+        { en: "you again.", k: "plain" },
+      ],
+      count: "접속사가 없으니 see는 변장해요 → 진짜 동사 1개",
+      one: true,
+    },
+  ],
+  advanced: [
+    {
+      key: "mixed",
+      title: "혼합가정법",
+      bits: [
+        { en: "If", k: "link", sub: "접속사" },
+        { en: "I", k: "plain" },
+        { en: "{had|조동사:과거완료를 만드는 말} gone", k: "verb", sub: "동사 1 · 과거 쪽" },
+        { en: "to bed earlier,", k: "plain" },
+        { en: "I", k: "plain" },
+        { en: "{wouldn't|조동사:~하지 않을 텐데} be", k: "verb", sub: "동사 2 · 지금 쪽" },
+        { en: "tired now.", k: "plain" },
+      ],
+      count: "if 1개 → 진짜 동사 2개. 두 동사가 각자 자기 때에서 한 칸씩 물러서요.",
+    },
+    {
+      key: "inversion",
+      title: "if 생략 도치",
+      bits: [
+        { en: "{Were|동사:(가정법) ~라면}", k: "verb", sub: "동사 1 · if의 흔적" },
+        { en: "I", k: "plain" },
+        { en: "rich,", k: "plain" },
+        { en: "I", k: "plain" },
+        { en: "{would|조동사:~할 텐데} buy", k: "verb", sub: "동사 2" },
+        { en: "a big house.", k: "plain" },
+      ],
+      count: "if는 사라졌지만 앞으로 나온 Were가 if절의 동사예요 → 여전히 2개",
+    },
+    {
+      key: "without",
+      title: "without · but for",
+      bits: [
+        { en: "{Without|전치사:~이 없다면}", k: "prep", sub: "전치사" },
+        { en: "your help,", k: "plain" },
+        { en: "I", k: "plain" },
+        { en: "{would|조동사:~했을 텐데} {have|조동사:완료형을 만드는 말} failed.", k: "verb", sub: "동사 1" },
+      ],
+      count: "전치사 뒤에는 명사만 와요 → 진짜 동사 1개로 줄어요",
+      one: true,
+    },
+    {
+      key: "friend",
+      title: "주어 속 조건",
+      bits: [
+        { en: "A true friend", k: "plain" },
+        { en: "{would|조동사:~할 텐데} help", k: "verb", sub: "동사 1" },
+        { en: "you.", k: "plain" },
+      ],
+      count: "조건이 주어 속에 숨었어요 (= If he were a true friend) → 진짜 동사 1개",
+      one: true,
+    },
+  ],
+};
+
+function VcChip({ b }: { b: VcBit }) {
+  if (b.k === "plain")
+    return (
+      <span className="self-start py-1">
+        <En en={b.en} />
+      </span>
+    );
+  const look = VC_LOOK[b.k];
+  return (
+    <span className="inline-flex flex-col items-center gap-1">
+      <span className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 font-bold ${look.box}`}>
+        {b.k === "verb" && <CrownIcon size={15} />}
+        {b.k === "verbal" && <MaskIcon size={16} />}
+        <En en={b.en} />
+      </span>
+      {b.sub && <span className={`text-[14px] font-extrabold ${look.label}`}>{b.sub}</span>}
+    </span>
+  );
+}
+
+/** 가정법 문장도 진짜 동사 개수 = 접속사 개수 + 1. set으로 단원별 예문을 고른다 */
+export function SjVerbCount({ set = "basic" }: { set?: "basic" | "wish" | "advanced" }) {
+  return (
+    <div>
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[1.02em] font-extrabold">
+        <Chip className="bg-coral text-white">진짜 동사 개수</Chip>
+        <span>=</span>
+        <Chip className="bg-amber-soft text-amber-ink">접속사 개수</Chip>
+        <span>+ 1</span>
+      </p>
+      <ul className="mt-3 grid gap-2.5">
+        {VC_SETS[set].map((r) => (
+          <li key={r.key} className={`rounded-2xl px-4 py-3 ${r.one ? "border-2 border-dashed border-line" : "border border-line"}`}>
+            <p className="text-[14px] font-extrabold text-ink-3">{r.title}</p>
+            <p className="mt-2 flex flex-wrap items-start gap-x-1.5 gap-y-2.5 text-[1.06em] font-medium">
+              {r.bits.map((b, i) => (
+                <VcChip key={i} b={b} />
+              ))}
+            </p>
+            <p className={`mt-2 text-[14px] font-bold ${r.one ? "text-sky-ink" : "text-coral-ink"}`}>{r.count}</p>
+          </li>
+        ))}
+      </ul>
+      {set === "basic" && (
+        <p className="mt-3 flex flex-wrap items-center justify-center gap-1.5 text-[14.5px] font-bold">
+          <span>한 덩어리로 세요:</span>
+          {["would buy", "had known", "would have told"].map((w) => (
+            <span key={w} lang="en" className="inline-flex items-center gap-1 rounded-md bg-coral-soft px-2 py-0.5 text-coral-ink">
+              <CrownIcon size={13} />
+              {w}
+            </span>
+          ))}
+        </p>
+      )}
     </div>
   );
 }

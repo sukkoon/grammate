@@ -213,3 +213,134 @@ export function PcClauseCheck() {
     </div>
   );
 }
+
+/* ───────── 절은 엔진 달린 칸, 구는 짐칸 ───────── */
+
+function PcWheels() {
+  return (
+    <span className="-mt-1.5 flex w-full justify-around px-3" aria-hidden>
+      <span className="size-3.5 rounded-full border-2 border-card bg-ink-3" />
+      <span className="size-3.5 rounded-full border-2 border-card bg-ink-3" />
+    </span>
+  );
+}
+
+function PcCar({ tag, parts, cargo = false }: { tag: string; parts: PcPart[]; cargo?: boolean }) {
+  return (
+    <span className="inline-flex flex-col items-center">
+      <span
+        className={`flex flex-col gap-1.5 rounded-xl px-3 py-2 ${
+          cargo ? "border-2 border-dashed border-ink-3 bg-card" : "border-2 border-coral bg-coral-soft"
+        }`}
+      >
+        <span className={`text-[14px] font-extrabold ${cargo ? "text-ink-3" : "text-coral-ink"}`}>{tag}</span>
+        <span lang="en" className="flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
+          {parts.map((p) =>
+            p.verb ? (
+              <span key={p.en} className="rounded-md bg-coral px-1.5 text-white">
+                <En en={p.en} />
+              </span>
+            ) : (
+              <span key={p.en}>
+                <En en={p.en} />
+              </span>
+            ),
+          )}
+        </span>
+      </span>
+      <PcWheels />
+    </span>
+  );
+}
+
+/** 칸 사이 연결 고리: 휴대폰에서는 세로로, 넓은 화면에서는 가로로 잇는다 */
+function PcHitch({ word }: { word?: string }) {
+  return word ? (
+    <span className="flex flex-col items-center self-center sm:flex-row sm:pb-2">
+      <span className="h-2 w-0.5 bg-ink-3 sm:h-0.5 sm:w-2" aria-hidden />
+      <span className="rounded-full bg-sky-soft px-2.5 py-0.5 text-[15px] font-extrabold text-sky-ink">
+        <En en={word} />
+      </span>
+      <span className="h-2 w-0.5 bg-ink-3 sm:h-0.5 sm:w-2" aria-hidden />
+    </span>
+  ) : (
+    <span className="h-3 w-0.5 self-center bg-ink-3 sm:mb-2 sm:h-0.5 sm:w-4" aria-hidden />
+  );
+}
+
+const PC_TRAIN_COUNT: { label: string; tone: string }[] = [
+  { label: "엔진 칸(절) 2개 = 진짜 동사 2개", tone: "bg-coral-soft text-coral-ink" },
+  { label: "연결 고리(접속사) 1개", tone: "bg-sky-soft text-sky-ink" },
+  { label: "짐칸(구)은 절로 세지 않아요", tone: "bg-chip text-ink" },
+];
+
+/** 진짜 동사(엔진)가 있으면 절, 없으면 구(짐칸). 엔진 칸끼리는 접속사로 잇는다 */
+export function PcTrain() {
+  return (
+    <div>
+      <div className="flex flex-col items-center gap-0.5 sm:flex-row sm:flex-wrap sm:items-end sm:justify-center sm:gap-y-3">
+        <PcCar tag="절 · 엔진 칸" parts={[{ en: "I" }, { en: "was", verb: true }, { en: "late" }]} />
+        <PcHitch word="because" />
+        <PcCar tag="절 · 엔진 칸" parts={[{ en: "I" }, { en: "missed", verb: true }, { en: "the bus" }]} />
+        <PcHitch />
+        <PcCar tag="구 · 짐칸" parts={[{ en: "in the morning." }]} cargo />
+      </div>
+      <p className="mt-2 text-center text-[14px] text-ink-2">나는 아침에 버스를 놓쳐서 늦었어.</p>
+      <ul className="mt-3 flex flex-wrap justify-center gap-2 text-[14px] font-bold">
+        {PC_TRAIN_COUNT.map((c) => (
+          <li key={c.label} className={`rounded-lg px-2.5 py-1 ${c.tone}`}>
+            {c.label}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ───────── 형용사절은 뒤에서 선행사를 가리켜요 ───────── */
+
+const PC_ANTECEDENT_ROWS: { noun: { en: string }; clause: { en: string }; ask: string }[] = [
+  {
+    noun: { en: "a friend" },
+    clause: { en: "{who|관계대명사:~하는 (사람)} plays the violin" },
+    ask: "어떤 친구?",
+  },
+  {
+    noun: { en: "the bag" },
+    clause: { en: "{that|관계대명사:~하는 (앞의 명사를 꾸며요)} I bought yesterday" },
+    ask: "어떤 가방?",
+  },
+  {
+    noun: { en: "the day" },
+    clause: { en: "{when|관계부사:~하는 (때)} we {first|부사:처음으로} met" },
+    ask: "어떤 날?",
+  },
+];
+
+/** 선행사(앞의 명사) ← 형용사절: 절이 뒤에서 명사를 꾸민다 */
+export function PcAntecedent() {
+  return (
+    <div>
+      <div className="grid grid-cols-2 gap-2 text-center text-[14px] font-extrabold">
+        <span className="rounded-lg border-2 border-mint-ink/50 py-1 text-mint-ink">선행사 · 먼저 나온 명사</span>
+        <span className="rounded-lg bg-mint-soft py-1 text-mint-ink">형용사절 · 뒤에서 꾸며요</span>
+      </div>
+      <ul className="mt-3 space-y-2.5">
+        {PC_ANTECEDENT_ROWS.map((r) => (
+          <li key={r.noun.en} className="rounded-2xl border border-line px-3 py-3">
+            <p lang="en" className="flex flex-wrap items-center gap-2 text-[1.08em] font-medium">
+              <span className="rounded-lg border-2 border-mint-ink/50 px-2 py-0.5">
+                <En en={r.noun.en} />
+              </span>
+              <ArrowRight size={20} className="shrink-0 rotate-180 text-mint-ink" />
+              <span className="rounded-lg bg-mint-soft px-2 py-0.5 text-mint-ink">
+                <En en={r.clause.en} />
+              </span>
+            </p>
+            <p className="mt-1.5 w-fit rounded-lg bg-chip px-2 py-0.5 text-[14px] font-bold">{r.ask}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

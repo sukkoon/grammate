@@ -28,8 +28,10 @@
 </Examples>
 
 <Tip mood="thinking" title="명사절 알아보는 법: '그것'으로 바꿔 보기">
-절을 통째로 &lsquo;그것(it)&rsquo;으로 바꿔 보세요. I believe that you can do it → I believe it. 말이 되면 명사절이에요. 명사처럼 일하니까 대명사로 바꿀 수 있는 거예요.
+절을 통째로 &lsquo;그것(it)&rsquo;으로 바꿔 보세요. 말이 되면 명사절이에요. 명사처럼 일하니까 대명사로 바꿀 수 있는 거예요.
 </Tip>
+
+<Formula caption="절을 통째로 it으로 바꿔도 말이 되면 명사절" parts={["~sky:that you can do it", "→", "~sky:it"]} en="I believe [[{that|접속사:~라는 것} you can do it]]. → I believe [[it]]." ko="나는 네가 할 수 있다고 믿어. → 나는 그것을 믿어." />
 
 ## 형용사절: 명사를 뒤에서 꾸며요
 
@@ -38,6 +40,10 @@
 형용사절은 **바로 앞에 있는 명사**를 꾸며요. 꾸밈을 받는 이 명사를 **선행사**라고 해요. 형용사절은 who, which, that 같은 관계대명사나 when, where 같은 관계부사가 이끌어서 **관계사절**이라고도 불러요.
 
 <TermAnatomy id="antecedent" />
+
+<Figure caption="형용사절은 바로 앞의 명사(선행사)를 뒤에서 가리키며 꾸며요. '어떤 ○○?'에 답하는 절이에요.">
+  <PcAntecedent />
+</Figure>
 
 <Examples>
   <Ex en="I have a friend [[{who|관계대명사:~하는 (사람)} plays the violin]]." ko="나는 바이올린을 켜는 친구가 있어." note="선행사 a friend를 꾸며요: 어떤 친구?" />
@@ -71,8 +77,16 @@
 </Examples>
 
 <Tip mood="wink" title="부사절은 자리를 옮겨도 돼요">
-If it rains tomorrow, we will stay home. = We will stay home if it rains tomorrow. 부사절은 문장 앞에도 뒤에도 올 수 있어요. 앞에 올 때만 쉼표를 찍으면 돼요.
+부사절은 문장 앞에도 뒤에도 올 수 있어요. 앞에 올 때만 쉼표를 찍으면 돼요.
 </Tip>
+
+<Compare
+  caption="같은 뜻, 부사절 자리만 달라요"
+  items={[
+    { title: "부사절이 앞에", sub: "쉼표를 찍어요", tone: "amber", en: "[[If {it|대명사:(날씨를 말할 때 자리를 채우는 말)} rains tomorrow]], we will stay home." },
+    { title: "부사절이 뒤에", sub: "쉼표 없이", tone: "sky", en: "We will stay home [[if {it|대명사:(날씨를 말할 때 자리를 채우는 말)} rains tomorrow]]." },
+  ]}
+/>
 
 ## 세 가지 절 가려내기
 
@@ -94,8 +108,16 @@ If it rains tomorrow, we will stay home. = We will stay home if it rains tomorro
 </Examples>
 
 <Tip mood="oops" title="시제가 다른 것도 눈치챘나요?">
-첫 문장은 will come, 셋째 문장은 comes예요. 둘 다 미래의 일인데 모양이 달라요. 명사절에서는 미래를 will로 그대로 쓰지만, 때·조건을 나타내는 부사절에서는 미래의 일도 **현재시제**로 써요.
+첫 문장은 will come, 셋째 문장은 comes예요. 둘 다 미래의 일인데 모양이 달라요.
 </Tip>
+
+<Compare
+  caption="둘 다 미래의 일이지만 절의 종류에 따라 시제가 달라요"
+  items={[
+    { title: "명사절", sub: "미래는 will 그대로", tone: "sky", en: "I know [[when he will come]].", ko: "나는 그가 언제 올지 알아.", points: ["know의 목적어 자리", "know when, wonder if"] },
+    { title: "때·조건 부사절", sub: "미래의 일도 현재시제", tone: "amber", en: "Call me [[{when|접속사:~할 때} he comes]].", ko: "그가 오면 나한테 전화해.", points: ["when, if, until, before 뒤", "when he will come ✕"] },
+  ]}
+/>
 
 <DeepDive level="고1" title="같은 that, 같은 if가 다른 절을 이끌 때">
 

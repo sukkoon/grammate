@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { En } from "@/components/lesson/En";
-import { ArrowRight, CrownIcon, MaskIcon, PersonIcon } from "./icons";
+import { ArrowRight, CatIcon, CrownIcon, MaskIcon, PersonIcon } from "./icons";
 
-/* 관계사 장 그림: 두 문장 잇기, 격 고르기, 진짜 동사 세기, what의 속, 네 갈래 고르기, 관계부사 카드, 쉼표의 차이, 전치사 옮기기, -ever 가족 */
+/* 관계사 장 그림: 두 문장 잇기, 격 고르기, 진짜 동사 세기, what의 속, 네 갈래 고르기, 관계부사 카드, 쉼표의 차이, 전치사 옮기기, -ever 가족,
+   that만 쓰는 경우, 부사 → 관계부사, 선행사 다시 넣기, 빈자리 찾기, , which가 받는 것 */
 
 /* ───────── 공통 도우미 ───────── */
 
@@ -787,6 +788,301 @@ export function RlEverTable() {
       <p className="text-center text-[14px] text-ink-2">
         -ever절을 빼 보세요. 문장이 무너지면 명사절, 멀쩡하면 양보나 때·장소를 더하는 부사절이에요.
       </p>
+    </div>
+  );
+}
+
+/* ───────── 10. 이럴 때는 that: 선행사를 콕 집는 말 ───────── */
+
+const THAT_TRIGGERS: { title: string; words: string[]; en: string }[] = [
+  {
+    title: "최상급 · 서수",
+    words: ["the best", "the tallest", "the first", "the last"],
+    en: "the best pizza [[{that|관계대명사:~하는}]] I {have|조동사:완료형을 만드는 말} ever eaten",
+  },
+  {
+    title: "하나뿐인 것을 짚는 말",
+    words: ["the only", "the very", "the same"],
+    en: "the {only|형용사:유일한} student [[{that|관계대명사:~하는}]] solved the puzzle",
+  },
+  {
+    title: "all · every · no · any · -thing",
+    words: ["all", "everything", "nothing", "anything"],
+    en: "anything [[{that|관계대명사:~하는}]] I can do for you",
+  },
+];
+
+/** 선행사를 '딱 그것'으로 콕 집는 말이 붙으면 that. 사람 + 동물을 한꺼번에 받을 때도 that */
+export function RlThatOnly() {
+  return (
+    <div>
+      <ul className="grid gap-2.5 sm:grid-cols-3">
+        {THAT_TRIGGERS.map((t) => (
+          <li key={t.title} className="flex flex-col rounded-2xl border border-line px-4 py-3">
+            <p className="text-[15px] font-extrabold">{t.title}</p>
+            <p lang="en" className="mt-1.5 flex flex-wrap gap-1.5 text-[14.5px]">
+              {t.words.map((w) => (
+                <span key={w} className="rounded-md bg-amber-soft px-2 py-0.5 font-bold text-amber-ink">
+                  {w}
+                </span>
+              ))}
+            </p>
+            <p className="mt-auto pt-2 text-[1.03em] font-medium">
+              <En en={t.en} />
+            </p>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-2.5 rounded-2xl border-2 border-coral px-4 py-3">
+        <p className="text-[15px] font-extrabold">사람 + 동물·사물이 함께 선행사일 때</p>
+        <div className="mt-2 grid gap-2 sm:grid-cols-3">
+          <div className="flex items-center gap-2 rounded-xl bg-chip px-3 py-2">
+            <Mark ok={false} />
+            <span className="text-[14.5px] font-bold">
+              <span lang="en">who</span> → 소년만 받아요
+            </span>
+          </div>
+          <div className="flex items-center gap-2 rounded-xl bg-chip px-3 py-2">
+            <Mark ok={false} />
+            <span className="text-[14.5px] font-bold">
+              <span lang="en">which</span> → 고양이만 받아요
+            </span>
+          </div>
+          <div className="flex items-center gap-2 rounded-xl bg-coral-soft px-3 py-2 text-coral-ink">
+            <Mark ok />
+            <span className="flex items-center gap-1 rounded-lg border-2 border-coral bg-card px-1.5 py-0.5" aria-hidden>
+              <PersonIcon size={24} />
+              <CatIcon size={24} />
+            </span>
+            <span className="text-[14.5px] font-extrabold">
+              <span lang="en">that</span> → 둘 다
+            </span>
+          </div>
+        </div>
+        <p className="mt-2 text-[1.04em] font-medium">
+          <En en="the boy and his cat [[{that|관계대명사:~하는}]] are playing in the park" />
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 11. 겹치는 부사가 관계부사로 ───────── */
+
+const ADVERB_SWAPS: { kind: string; tone: string; from: { en: string }; to: { en: string }; prep: string; warn?: string }[] = [
+  {
+    kind: "장소",
+    tone: "bg-sky-soft text-sky-ink",
+    from: { en: "My mom {grew up} [[there]]." },
+    to: { en: "the town [[{where|관계부사:~하는 (곳)}]] my mom {grew up}" },
+    prep: "in which",
+  },
+  {
+    kind: "때",
+    tone: "bg-mint-soft text-mint-ink",
+    from: { en: "I got my puppy [[then]]." },
+    to: { en: "the day [[{when|관계부사:~하는 (때)}]] I got my puppy" },
+    prep: "on which",
+  },
+  {
+    kind: "이유",
+    tone: "bg-amber-soft text-amber-ink",
+    from: { en: "You were late [[for {that|대명사:그 (앞에서 말한)} reason]]." },
+    to: { en: "the reason [[{why|관계부사:~하는 (이유)}]] you were late" },
+    prep: "for which",
+  },
+  {
+    kind: "방법",
+    tone: "bg-coral-soft text-coral-ink",
+    from: { en: "I solved the puzzle [[in {that|대명사:그 (앞에서 말한)} way]]." },
+    to: { en: "[[{how|관계부사:~하는 (방법)}]] I solved the puzzle" },
+    prep: "in which",
+    warn: "the way how ✕",
+  },
+];
+
+/** 둘째 문장의 there·then 같은 부사가 관계부사로 바뀌어 두 문장을 잇는다 */
+export function RlAdverbSwap() {
+  return (
+    <div>
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+        <span className="rounded-md border-2 border-dashed border-ink-3 px-2 py-0.5">겹치는 부사</span>
+        <ArrowRight size={18} className="text-coral" />
+        <span className="rounded-md bg-sky-soft px-2 py-0.5 text-sky-ink">관계부사</span>
+        <span className="text-ink-2">= 접속사 + 부사 = 전치사 + which</span>
+      </p>
+      <ul className="mt-3 grid gap-2">
+        {ADVERB_SWAPS.map((a) => (
+          <li key={a.kind} className="rounded-2xl border border-line px-4 py-2.5">
+            <p className="flex flex-wrap items-center gap-2">
+              <span className={`rounded-lg px-2.5 py-0.5 text-[14.5px] font-extrabold ${a.tone}`}>{a.kind}</span>
+              <span lang="en" className="text-[14px] font-bold text-ink-3">
+                = {a.prep}
+              </span>
+              {a.warn && (
+                <span lang="en" className="rounded-md bg-coral-soft px-2 py-0.5 text-[14px] font-extrabold text-coral-ink">
+                  {a.warn}
+                </span>
+              )}
+            </p>
+            <div className="mt-1.5 grid items-center gap-1.5 sm:grid-cols-[1fr_auto_1fr]">
+              <p className="rounded-xl border border-dashed border-ink-3 px-3 py-1.5 text-[1.02em] font-medium">
+                <En en={a.from.en} />
+              </p>
+              <ArrowRight size={18} className="mx-auto rotate-90 text-coral sm:rotate-0" />
+              <p className="rounded-xl bg-sky-soft/60 px-3 py-1.5 text-[1.02em] font-medium">
+                <En en={a.to.en} />
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ───────── 12. 선행사를 다시 넣어 보기: which일까 where일까 ───────── */
+
+const PUT_BACKS: { key: string; head: string; en: string; fits: string; answer: string; ok: boolean }[] = [
+  {
+    key: "which",
+    head: "the house ___ my grandpa built",
+    en: "my grandpa built [[the house]]",
+    fits: "전치사 없이 쏙 들어가요 → 목적어 자리가 비어 있었어요",
+    answer: "관계대명사 which (that)",
+    ok: true,
+  },
+  {
+    key: "where",
+    head: "the house ___ my grandpa lives",
+    en: "my grandpa lives [[in the house]]",
+    fits: "in이 있어야 들어가요 → 빈자리가 없는 완전한 절이에요",
+    answer: "관계부사 where (= in which)",
+    ok: false,
+  },
+];
+
+/** 선행사를 관계절 빈 곳에 다시 넣어 보면 which인지 where인지 보인다 */
+export function RlPutBack() {
+  return (
+    <div className="grid gap-2.5 sm:grid-cols-2">
+      {PUT_BACKS.map((p) => (
+        <div key={p.key} className={`flex flex-col rounded-2xl px-4 py-3 ${p.ok ? "border border-line" : "border-2 border-coral"}`}>
+          <p lang="en" className="text-[1.05em] font-bold">
+            {p.head}
+          </p>
+          <div className="mt-2 flex items-center gap-2 text-[14px] font-bold text-ink-2">
+            <ArrowRight size={18} className="rotate-90 text-coral" />
+            선행사를 다시 넣어 보면
+          </div>
+          <p className="mt-1 text-[1.05em] font-medium">
+            <En en={p.en} />
+          </p>
+          <p className="mt-1 text-[14px] text-ink-2">{p.fits}</p>
+          <p className="mt-auto pt-2">
+            <span className={`inline-block rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${p.ok ? "bg-sky-soft text-sky-ink" : "bg-coral-soft text-coral-ink"}`}>
+              {p.answer}
+            </span>
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ───────── 13. what일까 that일까: 뒤에 빈자리가 있나 ───────── */
+
+const GAP_ROWS: { key: string; en: string; slots: { en?: string; label: string }[]; verdict: string; strong: boolean }[] = [
+  {
+    key: "that",
+    en: "I know [[{that|접속사:~라는 것}]] …",
+    slots: [
+      { en: "Jisu", label: "주어" },
+      { en: "likes", label: "동사" },
+      { en: "cats.", label: "목적어" },
+    ],
+    verdict: "빠진 것 없음 → 접속사 that",
+    strong: false,
+  },
+  {
+    key: "what",
+    en: "I know [[{what|관계대명사:~하는 것}]] …",
+    slots: [{ en: "Jisu", label: "주어" }, { en: "likes", label: "동사" }, { label: "목적어" }],
+    verdict: "목적어가 빔 → what이 그 자리를 맡아요",
+    strong: true,
+  },
+];
+
+/** 선행사가 없을 때: 뒤가 완전하면 접속사 that, 한 자리가 비면 what */
+export function RlGapCheck() {
+  return (
+    <div className="grid gap-2.5 sm:grid-cols-2">
+      {GAP_ROWS.map((r) => (
+        <div key={r.key} className={`rounded-2xl px-4 py-3 ${r.strong ? "border-2 border-coral" : "border border-line"}`}>
+          <p className="text-[1.06em] font-medium">
+            <En en={r.en} />
+          </p>
+          <p className="mt-2 text-[14px] font-bold text-ink-3">뒤를 뜯어 보면</p>
+          <p className="mt-1 flex flex-wrap items-end gap-1.5">
+            {r.slots.map((s) => (
+              <span key={s.label} className="inline-flex flex-col items-center gap-1">
+                {s.en ? (
+                  <span className="rounded-lg border border-line px-2.5 py-1 font-medium">
+                    <En en={s.en} />
+                  </span>
+                ) : (
+                  <span className="rounded-lg border-2 border-dashed border-coral px-4 py-1 font-extrabold text-coral-ink" aria-label="빈자리">
+                    ?
+                  </span>
+                )}
+                <span className="text-[14px] font-bold text-ink-3">{s.label}</span>
+              </span>
+            ))}
+          </p>
+          <p className={`mt-2 text-[14.5px] font-extrabold ${r.strong ? "text-coral-ink" : "text-sky-ink"}`}>{r.verdict}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ───────── 14. , which가 받는 것: 명사 하나 또는 앞 문장 전체 ───────── */
+
+/** 계속적 용법의 which는 앞의 명사 하나를 받기도 하고, 앞 문장 전체를 받기도 한다 */
+export function RlWhichWhole() {
+  return (
+    <div className="grid gap-2.5">
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">명사 하나를 받을 때</p>
+        <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
+          <En en="We visited" />
+          <span className="rounded-lg border-2 border-dashed border-amber-ink/60 bg-amber-soft px-2 py-0.5 text-amber-ink">
+            <En en="Jeonju," />
+          </span>
+          <span className="rounded-lg bg-sky-soft px-2 py-0.5 font-bold text-sky-ink">
+            <En en="{which|관계대명사:그리고 그곳은}" />
+          </span>
+          <En en="is famous for bibimbap." />
+        </p>
+        <p className="mt-1.5 text-[14px] font-bold text-amber-ink">which = Jeonju (그곳)</p>
+      </div>
+      <div className="rounded-2xl border-2 border-coral px-4 py-3">
+        <p className="text-[14px] font-extrabold text-coral-ink">앞 문장 전체를 받을 때</p>
+        <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
+          <span className="rounded-lg border-2 border-dashed border-coral/70 bg-coral-soft px-2 py-0.5 text-coral-ink">
+            <En en="Minho {fell asleep} in class," />
+          </span>
+          <span className="rounded-lg bg-sky-soft px-2 py-0.5 font-bold text-sky-ink">
+            <En en="{which|관계대명사:그리고 그 일은 (앞 문장 전체)}" />
+          </span>
+          <span className="inline-flex items-center gap-1 rounded-lg bg-coral px-2 py-0.5 text-white">
+            <CrownIcon size={15} />
+            <En en="made" />
+          </span>
+          <En en="everyone laugh." />
+        </p>
+        <p className="mt-1.5 text-[14px] font-bold text-coral-ink">which = 민호가 수업 중에 잠든 일 (한 가지 일 → 단수 취급)</p>
+      </div>
     </div>
   );
 }

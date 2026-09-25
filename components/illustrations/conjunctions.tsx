@@ -2,7 +2,8 @@ import type { ReactNode } from "react";
 import { En } from "@/components/lesson/En";
 import { ArrowRight, CrownIcon, MaskIcon } from "./icons";
 
-/* 접속사 장 그림: 네 가지 고리, 왕국 둘, so vs because, 명사절 자리, 간접의문문, 부사절 지도, so·such, 짝 접속사, 수 일치, 병렬 */
+/* 접속사 장 그림: 네 가지 고리, 왕국 둘, so vs because, 명사절 자리, 간접의문문, 부사절 지도, so·such, 짝 접속사, 수 일치, 병렬,
+   병렬 기차, either·neither, 짝 접속사 동사 세기, that 덩어리, think류 의문사, if의 두 얼굴 */
 
 /* ───────── 공통 도우미 ───────── */
 
@@ -825,6 +826,444 @@ export function CjSameShape() {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+/* ───────── 11. 병렬: 같은 모양 칸끼리 이은 기차 ───────── */
+
+function Car({ en, bad = false }: { en: string; bad?: boolean }) {
+  return (
+    <span className={`inline-flex flex-col items-center ${bad ? "translate-y-1 -rotate-6" : ""}`}>
+      <span className={`rounded-xl px-3 py-2 text-[1.05em] font-medium ${bad ? "bg-coral-soft text-coral-ink" : "bg-sky-soft text-sky-ink"}`}>
+        <En en={en} />
+      </span>
+      <span className="-mt-1.5 flex gap-7" aria-hidden>
+        <span className="size-3.5 rounded-full bg-ink" />
+        <span className="size-3.5 rounded-full bg-ink" />
+      </span>
+    </span>
+  );
+}
+
+function Coupler({ word }: { word: string }) {
+  return (
+    <span className="inline-flex items-center pb-3">
+      <span className="h-1 w-2.5 bg-ink-3" aria-hidden />
+      <span lang="en" className="rounded-full border-2 border-ink px-2 text-[14px] font-extrabold">
+        {word}
+      </span>
+      <span className="h-1 w-2.5 bg-ink-3" aria-hidden />
+    </span>
+  );
+}
+
+const MATCHED: { shape: string; a: string; b: string; link: string }[] = [
+  { shape: "과거형 = 과거형", a: "cleaned his room", link: "and", b: "fed the cat" },
+  { shape: "형용사 = 형용사", a: "short", link: "but", b: "difficult" },
+  { shape: "to부정사 = to부정사", a: "to watch a movie", link: "or", b: "to play games" },
+];
+
+/** 접속사 고리 양쪽에는 같은 모양의 칸을 이어야 기차가 똑바로 달린다 */
+export function CjTrainMatch() {
+  return (
+    <div className="grid gap-3">
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="flex items-center gap-2 text-[15px] font-extrabold">
+          <Mark ok />
+          동명사 칸 + 동명사 칸
+        </p>
+        <p className="mt-2 text-[1.04em] font-medium">
+          <En en="I like [[swimming]] and [[riding]] my bike." />
+        </p>
+        <p className="mt-2 flex flex-wrap items-end gap-y-2 text-[1.02em]">
+          <Car en="swimming" />
+          <Coupler word="and" />
+          <Car en="riding" />
+        </p>
+      </div>
+      <div className="rounded-2xl border-2 border-dashed border-coral px-4 py-3">
+        <p className="flex items-center gap-2 text-[15px] font-extrabold text-coral-ink">
+          <Mark ok={false} />
+          동명사 칸 + 동사원형 칸 → 탈선!
+        </p>
+        <p lang="en" className="mt-2 text-[1.04em] font-medium text-ink-2">
+          I like swimming and <span className="text-coral-ink line-through decoration-coral decoration-2">ride</span> my bike.
+        </p>
+        <p className="mt-2 flex flex-wrap items-end gap-y-2 text-[1.02em]">
+          <Car en="swimming" />
+          <Coupler word="and" />
+          <Car en="ride" bad />
+        </p>
+        <p className="mt-2 text-[14px] text-ink-2">like의 목적어 두 칸이니까 뒤 칸도 -ing로 맞춰요.</p>
+      </div>
+      <ul className="grid gap-2 sm:grid-cols-3">
+        {MATCHED.map((m) => (
+          <li key={m.shape} className="rounded-2xl bg-chip px-3.5 py-2.5">
+            <p className="text-[14px] font-extrabold text-sky-ink">{m.shape}</p>
+            <p lang="en" className="mt-1 flex flex-wrap items-center gap-1.5 text-[14.5px] font-bold">
+              <span className="rounded-md bg-card px-1.5 py-0.5">{m.a}</span>
+              <span className="text-amber-ink">{m.link}</span>
+              <span className="rounded-md bg-card px-1.5 py-0.5">{m.b}</span>
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ───────── 12. either는 둘 중 하나, neither는 둘 다 아니다 ───────── */
+
+function Pick2({ en, state }: { en: string; state: "maybe" | "no" }) {
+  return (
+    <span
+      className={`relative inline-flex min-w-20 justify-center rounded-xl px-3 py-2 text-[1.05em] font-bold ${
+        state === "no" ? "bg-chip text-ink-3 line-through decoration-coral decoration-2" : "border-2 border-mint-ink/60 bg-mint-soft text-mint-ink"
+      }`}
+    >
+      <En en={en} />
+    </span>
+  );
+}
+
+/** either A or B는 둘 중 하나를 고르고, neither A nor B는 둘 다 지운다. neither = not + either */
+export function CjEitherNeither() {
+  return (
+    <div>
+      <div className="grid gap-2.5 sm:grid-cols-2">
+        <div className="rounded-2xl border border-line px-4 py-3">
+          <p className="flex flex-wrap items-center gap-2">
+            <Chip className="bg-mint-soft text-[15px] text-mint-ink">either A or B</Chip>
+            <span className="text-[15px] font-extrabold">둘 중 하나</span>
+          </p>
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            <Pick2 en="a cat" state="maybe" />
+            <span className="text-[15px] font-extrabold text-ink-3">또는</span>
+            <Pick2 en="a dog" state="maybe" />
+          </div>
+          <p className="mt-1.5 text-[14px] font-bold text-mint-ink">이 중 하나를 골라요</p>
+          <p className="mt-2 text-[1.03em] font-medium">
+            <En en="We can {get|동사:(동물을) 데려오다, 들이다} [[{either|접속사:(either A or B) A나 B 둘 중 하나}]] a cat [[or]] a dog." />
+          </p>
+          <p className="text-[14px] text-ink-2">우리는 고양이나 개 중 한 마리를 데려올 수 있어.</p>
+        </div>
+        <div className="rounded-2xl border-2 border-coral px-4 py-3">
+          <p className="flex flex-wrap items-center gap-2">
+            <Chip className="bg-coral-soft text-[15px] text-coral-ink">neither A nor B</Chip>
+            <span className="text-[15px] font-extrabold">둘 다 아니에요</span>
+          </p>
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            <Pick2 en="coffee" state="no" />
+            <span className="text-[15px] font-extrabold text-ink-3">도</span>
+            <Pick2 en="tea" state="no" />
+          </div>
+          <p className="mt-1.5 text-[14px] font-bold text-coral-ink">둘 다 지워요</p>
+          <p className="mt-2 text-[1.03em] font-medium">
+            <En en="My dad drinks [[{neither|접속사:(neither A nor B) A도 B도 아닌}]] coffee [[{nor|접속사:(neither A nor B) ~도 아닌}]] tea." />
+          </p>
+          <p className="text-[14px] text-ink-2">아빠는 커피도 차도 안 드셔.</p>
+        </div>
+      </div>
+      <div className="mt-3 grid gap-2 text-[14.5px] font-bold sm:grid-cols-2">
+        <p className="flex flex-wrap items-center gap-1.5 rounded-xl bg-chip px-3 py-2">
+          <span lang="en" className="rounded-md bg-coral-soft px-1.5 text-coral-ink">
+            neither
+          </span>
+          =
+          <span lang="en" className="rounded-md bg-card px-1.5">
+            not
+          </span>
+          +
+          <span lang="en" className="rounded-md bg-card px-1.5">
+            either
+          </span>
+          <span className="text-ink-3">·</span>
+          <span lang="en" className="rounded-md bg-coral-soft px-1.5 text-coral-ink">
+            nor
+          </span>
+          =
+          <span lang="en" className="rounded-md bg-card px-1.5">
+            not
+          </span>
+          +
+          <span lang="en" className="rounded-md bg-card px-1.5">
+            or
+          </span>
+        </p>
+        <p className="flex items-center gap-2 rounded-xl bg-coral-soft px-3 py-2 text-coral-ink">
+          <Mark ok={false} />
+          <span>
+            <span lang="en">doesn&apos;t drink neither</span>: 부정이 두 번
+          </span>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 13. 짝 접속사도 접속사 하나: 무엇을 잇느냐에 따라 ───────── */
+
+const PAIR_COUNTS: { key: string; title: string; pieces: Piece[]; count: string; plus: boolean }[] = [
+  {
+    key: "words",
+    title: "단어·구를 이으면 → 진짜 동사 그대로",
+    pieces: [
+      { en: "{Both|접속사:(both A and B) A와 B 둘 다}", kind: "link", sub: "짝 앞" },
+      { en: "Jisu" },
+      { en: "and", kind: "link", sub: "짝 뒤" },
+      { en: "I" },
+      { en: "are", kind: "verb", sub: "동사 1" },
+      { en: "in the drama club." },
+    ],
+    count: "주어 두 개를 이었을 뿐이라 진짜 동사는 1개",
+    plus: false,
+  },
+  {
+    key: "verbs",
+    title: "동사·절을 이으면 → 진짜 동사 + 1",
+    pieces: [
+      { en: "Minsu" },
+      { en: "{not only}", kind: "link", sub: "짝 앞" },
+      { en: "plays", kind: "verb", sub: "동사 1" },
+      { en: "the guitar" },
+      { en: "{but also}", kind: "link", sub: "짝 뒤" },
+      { en: "(Minsu)", kind: "hidden", sub: "숨은 주어" },
+      { en: "sings.", kind: "verb", sub: "동사 2" },
+    ],
+    count: "짝 접속사 1개 + 1 = 진짜 동사 2개",
+    plus: true,
+  },
+];
+
+/** 상관접속사는 두 단어지만 접속사 하나로 센다. 동사·절을 이을 때만 진짜 동사가 하나 는다 */
+export function CjPairCount() {
+  return (
+    <div className="grid gap-2.5">
+      {PAIR_COUNTS.map((r) => (
+        <div key={r.key} className={`rounded-2xl px-3.5 py-3 ${r.plus ? "border-2 border-coral" : "border border-line"}`}>
+          <p className="text-[15px] font-extrabold">{r.title}</p>
+          <div className="mt-2.5">
+            <PieceRow pieces={r.pieces} />
+          </div>
+          <p className={`mt-2 text-[14px] font-bold ${r.plus ? "text-coral-ink" : "text-ink-2"}`}>{r.count}</p>
+        </div>
+      ))}
+      <p className="text-center text-[14px] font-bold text-ink-2">
+        <span className="rounded-md bg-amber-soft px-1.5 text-amber-ink">짝 앞 + 짝 뒤</span> = 접속사 1개로 세요
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 14. that은 문장을 '~라는 것' 한 덩어리로 묶어요 ───────── */
+
+function LabeledBox({ en, label }: { en: string; label: string }) {
+  return (
+    <span className="inline-flex flex-col items-center gap-1">
+      <span className="rounded-lg border border-line px-2 py-1">
+        <En en={en} />
+      </span>
+      <span className="text-[14px] font-extrabold text-ink-3">{label}</span>
+    </span>
+  );
+}
+
+/** 완전한 문장 앞에 that을 붙이면 명사 덩어리가 되어 목적어 자리에 들어간다 */
+export function CjThatWrap() {
+  return (
+    <div className="mx-auto grid max-w-xl gap-2.5">
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">① 빠진 것 없는 완전한 문장</p>
+        <p className="mt-2 flex flex-wrap items-start gap-x-2 gap-y-2 text-[1.08em] font-medium">
+          <LabeledBox en="you" label="주어" />
+          <PieceChip p={{ en: "feel", kind: "verb", sub: "동사" }} />
+          <LabeledBox en="{better|형용사:(몸이) 나아진} soon" label="나머지" />
+        </p>
+      </div>
+      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+        <ArrowRight className="rotate-90 text-coral" />
+        앞에 that을 붙이면
+      </div>
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">② &lsquo;~라는 것&rsquo; 명사 덩어리</p>
+        <p className="mt-2 flex flex-wrap items-center gap-2">
+          <span className="inline-flex flex-wrap items-center gap-1.5 rounded-xl border-2 border-sky-ink/60 bg-sky-soft px-2.5 py-1.5 text-[1.08em] font-medium text-sky-ink">
+            <span className="rounded-md bg-amber-soft px-1.5 font-bold text-amber-ink">
+              <En en="{that|접속사:~라는 것}" />
+            </span>
+            <En en="you feel {better|형용사:(몸이) 나아진} soon" />
+          </span>
+        </p>
+        <p className="mt-1.5 text-[14px] text-ink-2">
+          = &lsquo;네가 곧 낫는 것&rsquo;. <span className="font-bold text-amber-ink">that</span>은 절 안에서 주어도 목적어도 아닌 이음새예요.
+        </p>
+      </div>
+      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+        <ArrowRight className="rotate-90 text-coral" />
+        명사 자리에 쏙
+      </div>
+      <div className="rounded-2xl border-2 border-coral px-4 py-3">
+        <p className="text-[14px] font-extrabold text-coral-ink">③ hope의 목적어 자리</p>
+        <p className="mt-2 flex flex-wrap items-center gap-2 text-[1.08em] font-medium">
+          <En en="I" />
+          <span className="inline-flex items-center gap-1 rounded-lg bg-coral px-2 py-1 text-white">
+            <CrownIcon size={15} />
+            <En en="hope" />
+          </span>
+          <span className="rounded-xl border-2 border-sky-ink/60 bg-sky-soft px-2.5 py-1 text-sky-ink">
+            <En en="{that|접속사:~라는 것} you feel {better|형용사:(몸이) 나아진} soon." />
+          </span>
+        </p>
+        <p className="mt-1.5 text-[14px] text-ink-2">네가 빨리 낫기를 바라. 진짜 동사는 hope, feel 2개 = 접속사 that 1개 + 1</p>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 15. think류는 의문사가 맨 앞으로 ───────── */
+
+const THINK_VERBS = ["think", "believe", "guess", "suppose", "imagine"];
+
+/** '응/아니'로 답할 수 있으면 Do you know + 의문사, 정보로만 답하면 의문사 + do you think */
+export function CjWhJump() {
+  return (
+    <div className="grid gap-2.5 sm:grid-cols-2">
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">know: 응/아니로 대답할 수 있어요</p>
+        <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
+          <Chip className="bg-chip">
+            <En en="Do you know" />
+          </Chip>
+          <Chip className="bg-sky-soft text-sky-ink">
+            <En en="what" />
+          </Chip>
+          <En en="Minsu wants?" />
+        </p>
+        <p className="mt-2 w-fit rounded-xl bg-mint-soft px-3 py-1.5 text-[14.5px] font-bold text-mint-ink">대답: &ldquo;응, 알아. 운동화래.&rdquo;</p>
+        <p className="mt-2 text-[14px] text-ink-2">Do you know가 맨 앞, 의문사는 제자리예요.</p>
+      </div>
+      <div className="rounded-2xl border-2 border-coral px-4 py-3">
+        <p className="text-[14px] font-extrabold text-coral-ink">think: 정보로만 대답할 수 있어요</p>
+        <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.02em] text-ink-3">
+          <Mark ok={false} />
+          <span lang="en" className="line-through decoration-coral decoration-2">
+            Do you think what Minsu wants?
+          </span>
+        </p>
+        <p className="mt-1 flex items-center gap-1.5 text-[14px] font-bold text-coral-ink">
+          <ArrowRight size={18} className="-rotate-90" />
+          의문사가 맨 앞으로 점프
+        </p>
+        <p className="mt-1 flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
+          <Chip className="bg-sky-soft text-sky-ink">
+            <En en="What" />
+          </Chip>
+          <Chip className="bg-chip">
+            <En en="do you think" />
+          </Chip>
+          <En en="Minsu wants?" />
+        </p>
+        <p className="mt-2 w-fit rounded-xl bg-coral-soft px-3 py-1.5 text-[14.5px] font-bold text-coral-ink">대답: &ldquo;운동화일 것 같아.&rdquo;</p>
+      </div>
+      <p lang="en" className="flex flex-wrap items-center justify-center gap-1.5 text-[14.5px] font-bold sm:col-span-2">
+        <span lang="ko">의문사를 맨 앞으로 보내는 동사:</span>
+        {THINK_VERBS.map((v) => (
+          <span key={v} className="rounded-md bg-chip px-2 py-0.5">
+            {v}
+          </span>
+        ))}
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 16. if의 두 얼굴: 빼 보면 알아요 ───────── */
+
+const IF_FACES: {
+  key: string;
+  name: string;
+  meaning: string;
+  strong: boolean;
+  main: { en: string };
+  clause: { en: string };
+  clauseFirst: boolean;
+  slot: string;
+  left: { en: string };
+  leftOk: boolean;
+  verdict: string;
+  tense: string;
+}[] = [
+  {
+    key: "noun",
+    name: "명사절 if",
+    meaning: "~인지",
+    strong: false,
+    main: { en: "I don't know" },
+    clause: { en: "{if|접속사:~인지} {it|대명사:(날씨를 말할 때 자리를 채우는 말)} [[will snow]] tomorrow." },
+    clauseFirst: false,
+    slot: "know의 목적어",
+    left: { en: "I don't know." },
+    leftOk: false,
+    verdict: "'뭘?'이 궁금해져요. 목적어가 빠졌어요.",
+    tense: "미래의 일이면 will 그대로",
+  },
+  {
+    key: "adverb",
+    name: "부사절 if",
+    meaning: "만약 ~라면",
+    strong: true,
+    main: { en: "we'll build a snowman." },
+    clause: { en: "{If|접속사:만약 ~라면} {it|대명사:(날씨를 말할 때 자리를 채우는 말)} [[snows]] tomorrow," },
+    clauseFirst: true,
+    slot: "조건 (꾸미는 말)",
+    left: { en: "We'll build a snowman." },
+    leftOk: true,
+    verdict: "빼도 문장이 멀쩡해요.",
+    tense: "미래라도 현재형 snows",
+  },
+];
+
+function IfBox({ en, slot }: { en: string; slot: string }) {
+  return (
+    <span className="inline-flex flex-col items-start gap-1">
+      <span className="rounded-xl border-2 border-dashed border-sky-ink/60 bg-sky-soft px-2.5 py-1 text-[1.05em] font-medium text-sky-ink">
+        <En en={en} />
+      </span>
+      <span className="text-[14px] font-bold text-sky-ink">{slot}</span>
+    </span>
+  );
+}
+
+/** if절을 빼 보면 목적어가 사라지는 명사절(~인지)인지, 멀쩡한 부사절(만약)인지 보인다 */
+export function CjIfTwoFaces() {
+  return (
+    <div className="grid gap-2.5 sm:grid-cols-2">
+      {IF_FACES.map((f) => (
+        <div key={f.key} className={`flex flex-col rounded-2xl px-4 py-3 ${f.strong ? "border-2 border-coral" : "border border-line"}`}>
+          <p className="flex flex-wrap items-center gap-2">
+            <Chip className={`text-[15px] ${f.strong ? TONE.coral : TONE.sky}`}>{f.name}</Chip>
+            <span className="text-[15px] font-extrabold">&lsquo;{f.meaning}&rsquo;</span>
+          </p>
+          <p className="mt-2 flex flex-wrap items-start gap-1.5">
+            {f.clauseFirst && <IfBox en={f.clause.en} slot={f.slot} />}
+            <span className="py-1 text-[1.05em] font-medium">
+              <En en={f.main.en} />
+            </span>
+            {!f.clauseFirst && <IfBox en={f.clause.en} slot={f.slot} />}
+          </p>
+          <div className="mt-2 flex items-center gap-2 text-[14px] font-bold text-ink-2">
+            <ArrowRight size={18} className="rotate-90 text-coral" />
+            if절을 빼 보면
+          </div>
+          <p className="mt-1 flex items-center gap-2 text-[1.04em] font-medium">
+            <Mark ok={f.leftOk} />
+            <En en={f.left.en} />
+          </p>
+          <p className="mt-1 text-[14px] text-ink-2">{f.verdict}</p>
+          <p className={`mt-auto pt-2 text-[14px] font-extrabold ${f.strong ? "text-coral-ink" : "text-sky-ink"}`}>시제: {f.tense}</p>
+        </div>
+      ))}
     </div>
   );
 }

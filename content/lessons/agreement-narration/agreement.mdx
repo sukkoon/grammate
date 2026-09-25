@@ -2,20 +2,24 @@
 
 <TermAnatomy id="agreement" />
 
-영어 문장에서 맞춰야 할 것은 두 가지예요.
+영어 문장에서 맞춰야 할 것은 두 가지예요. **수**는 하나인 **단수**와 둘 이상인 **복수**로 나누고, **시제**는 동작이 일어난 때를 나타내는 동사의 모양이에요.
 
-- **수의 일치**: 주어의 **수**에 동사를 맞춰요. 수는 하나인 **단수**와 둘 이상인 **복수**로 나눠요.
-- **시제 일치**: 주절의 동사가 과거면, 뒤에 이어지는 절의 동사도 과거 쪽으로 맞춰요. **시제**는 동작이 일어난 때를 나타내는 동사의 모양이에요.
+<Compare
+  items={[
+    { title: "수의 일치", sub: "주어의 수 ↔ 동사", tone: "sky", en: "My sister [[likes]] cats. / My sisters [[like]] cats.", points: ["주어가 단수인지 복수인지에 동사를 맞춰요"] },
+    { title: "시제 일치", sub: "주절의 시제 ↔ 이어지는 절", tone: "coral", en: "I [[thought]] he [[was]] busy.", points: ["주절의 동사가 과거면 이어지는 절도 과거 쪽으로 맞춰요"] },
+  ]}
+/>
 
 <KeyIdea>동사를 쓰기 전에 &lsquo;이 진짜 동사의 진짜 주어는 누구지?&rsquo;부터 찾아요. 수는 그 진짜 주어에 맞추고, 주절이 과거면 이어지는 절의 시제도 과거 쪽으로 한 칸 물러서요.</KeyIdea>
 
 ## 수를 드러내는 동사는 진짜 동사뿐
 
-모든 동사가 수를 드러내지는 않아요. 과거형 played는 주어가 I든 they든 모양이 같죠. 수의 일치가 문제가 되는 건 주로 세 가지예요.
+모든 동사가 수를 드러내지는 않아요. 과거형 played는 주어가 I든 they든 모양이 같죠. 수의 일치가 문제가 되는 건 주로 **be동사**(is / are, was / were), **have**(has / have), **현재형 일반동사**(likes / like) 세 가지예요.
 
-- **be동사**: is / are, was / were
-- **have**: has / have
-- **현재형 일반동사**: 3인칭 단수 주어면 likes, 나머지는 like
+<Figure caption="주어가 하나일 때와 여럿일 때 모양이 달라지는 동사만 수를 드러내요. 과거형, 조동사 뒤의 동사원형, 변장한 동사는 주어가 누구든 그대로예요.">
+  <AnNumberVerbs />
+</Figure>
 
 그리고 수를 맞추는 건 **진짜 동사**뿐이에요. [동사 1개의 법칙](/learn/intro/one-verb-rule)을 떠올려 보세요. 한 절에 진짜 동사는 하나이고, to부정사·동명사·분사로 변장한 동사는 주어가 누구든 모양이 그대로예요. 그러니 수의 일치는 결국 **진짜 동사 하나를 찾아서 그 진짜 주어와 짝지어 주는 일**이에요.
 
@@ -49,6 +53,12 @@ who, which, that 같은 관계대명사는 **앞의 명사(선행사)를 대신�
 
 ## 수의 일치 ②: 늘 단수로 맞추는 주어
 
+여럿처럼 보여도 **하나로 보는** 주어들이 있어요. 먼저 한눈에 모아 보고, 하나씩 살펴볼게요.
+
+<Figure caption="하나씩 따로 보거나, 숫자 하나·일 하나·양 하나로 보면 단수 동사예요. 아래 칸의 두 가지는 거꾸로 복수로 받아요.">
+  <AnSingleLumps />
+</Figure>
+
 ### each, every + 단수 명사
 
 each(각각의)와 every(모든)는 여럿을 말하는 것 같지만, 사실은 **하나씩 따로따로** 보는 말이에요. &lsquo;학생마다 한 명씩, 선수마다 한 명씩&rsquo;처럼요. 그래서 뒤에 단수 명사가 오고, 동사도 단수예요. [부정대명사](/learn/pronouns/indefinite) 단원에서 잠깐 봤던 내용이에요.
@@ -62,8 +72,12 @@ each(각각의)와 every(모든)는 여럿을 말하는 것 같지만, 사실은
 
 number가 들어간 두 표현은 모양이 비슷한데 뜻도, 동사도 달라요.
 
-- **the number of + 복수 명사**: &lsquo;~의 수&rsquo;. 주어는 number(수) 하나라서 **단수** 동사
-- **a number of + 복수 명사**: &lsquo;많은 ~&rsquo;(= many). 주어는 뒤의 복수 명사라서 **복수** 동사
+<Compare
+  items={[
+    { title: "the number of + 복수 명사", sub: "'~의 수'", tone: "sky", points: ["주어는 number(수) 하나", "→ 단수 동사 is, was", "얼마나 많은지, 그 숫자를 말해요"] },
+    { title: "a number of + 복수 명사", sub: "'많은 ~' (= many)", tone: "coral", points: ["주어는 뒤의 복수 명사", "→ 복수 동사 are, were", "many students와 같은 뜻이에요"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="[[{The number of}]] students in our school [[is]] {about|부사:약, ~쯤} 600." ko="우리 학교 학생 수는 600명쯤이야." note="얼마나 많은지, 그 수를 말해요 → is" />
@@ -87,6 +101,10 @@ the number of를 보면 계산기에 찍힌 **숫자 하나**를 떠올려요. �
 ### 시간·거리·돈은 한 덩어리
 
 10분, 5킬로미터, 30달러처럼 모양이 복수여도 **하나의 양**으로 보면 단수 동사를 써요. 10분을 &lsquo;1분짜리 열 개&rsquo;가 아니라 &lsquo;10분이라는 시간 한 덩어리&rsquo;로 보는 거예요.
+
+<Figure caption="minutes는 복수 모양이지만, 10분을 통째로 한 덩어리로 보니까 is예요.">
+  <AnTimeLump />
+</Figure>
 
 <Examples>
   <Ex en="Ten [[minutes]] [[is]] enough for a short {break|명사:휴식, 쉬는 시간}." ko="10분이면 잠깐 쉬기에 충분해." />
@@ -121,12 +139,23 @@ most(대부분), some(일부), half(절반), all(전부), the rest(나머지)처
 
 [There is / There are](/learn/sentence-types/there-is) 단원에서 배운 것처럼, there는 자리만 채우는 말이고 **진짜 주어는 be동사 뒤**에 와요. 주어가 동사보다 뒤에 오는 드문 경우라서 시험에 자주 나와요.
 
+<Formula caption="there는 자리만 채워요. be동사는 뒤에 오는 진짜 주어에 맞춰요." parts={["There", "+", "*be동사", "+", "~sky:진짜 주어"]} />
+
 - <E en="[[{There is}]] {a lot of} [[homework]] today." /> homework는 셀 수 없는 명사 → is
 - <E en="[[{There were}]] many [[people]] at the festival." /> people은 복수 → were
 
 ### 둘을 이을 때: B에 맞춰요
 
 either A or B(A나 B 둘 중 하나), neither A nor B(A도 B도 아닌), not only A but also B(A뿐 아니라 B도)처럼 **두 말을 짝지어 잇는 접속사**가 주어에 들어오면, 동사는 **B**에 맞춰요. 동사와 가까운 쪽이 B이고, 뜻의 무게도 B에 실리거든요. 이런 접속사를 상관접속사라고 하는데, 접속사 장에서 자세히 배워요.
+
+<Compare
+  caption="두 말을 이은 주어: 동사는 누구에게 맞출까"
+  items={[
+    { title: "B에 맞춰요", sub: "동사와 가까운 쪽", tone: "coral", points: ["either A or B", "neither A nor B", "not only A but also B"] },
+    { title: "맨 앞의 A에 맞춰요", sub: "B뿐 아니라 A도", tone: "amber", points: ["A as well as B"] },
+    { title: "늘 복수", sub: "둘을 더해요", tone: "sky", points: ["both A and B"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="{Either|접속사:(either A or B) A나 B 둘 중 하나} you or [[Minsu]] [[{has|동사:(has to) ~해야 한다}]] to clean the classroom." ko="너나 민수 둘 중 한 명은 교실을 청소해야 해." note="B = Minsu → has" />
@@ -163,9 +192,13 @@ I thought that Minsu was at home.을 우리말로 옮기면 &lsquo;민수가 집
 
 주절이 과거여도 종속절의 시제를 그대로 두는 때가 있어요. 내용이 **언제의 일인지**가 분명하기 때문이에요.
 
-1. **변하지 않는 진리·과학적 사실**: 언제나 사실이니까 **현재**
-2. **지금도 이어지는 습관·사실**: 지금도 그러니까 **현재**
-3. **역사적 사실**: 이미 끝난 옛일이라 **늘 과거**. 주절보다 먼저 일어났어도 과거완료로 바꾸지 않아요.
+<Compare
+  items={[
+    { title: "① 진리·과학적 사실", sub: "언제나 사실 → 현재", tone: "mint", points: ["물은 100도에서 끓어요", "빛은 소리보다 빨라요"] },
+    { title: "② 지금도 이어지는 습관·사실", sub: "지금도 그래요 → 현재", tone: "sky", points: ["매일 아침 개를 산책시켜요"] },
+    { title: "③ 역사적 사실", sub: "끝난 옛일 → 늘 과거", tone: "amber", points: ["주절보다 먼저 일어났어도 과거완료로 바꾸지 않아요"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="Our science teacher said {that|접속사:~라고} light [[{travels|동사:(빛·소리가) 이동하다}]] faster than {sound|명사:소리}." ko="과학 선생님은 빛이 소리보다 빠르게 이동한다고 하셨어." note="과학적 사실 → 현재 travels" />

@@ -13,7 +13,11 @@
   <Ex en="Jisu said {that|접속사:~라고} [[she was]] hungry." ko="지수는 배고프다고 말했어." note="간접화법: I → she, am → was" />
 </Examples>
 
-직접화법은 전달동사 뒤에 **쉼표**를 찍고, 한 말을 **따옴표** 안에 그대로 써요. 따옴표 안은 대문자로 시작해요. 간접화법은 따옴표를 떼고 that으로 이어서, 전하는 사람의 입장에 맞게 **인칭과 시제**를 바꿔요. 지수가 말한 I는 내가 전하면 she가 되죠.
+<Figure caption="직접화법은 말풍선을 쉼표·따옴표로 그대로 붙이고, 간접화법은 말풍선을 풀어서 전하는 사람의 말로 다시 말해요.">
+  <AnSpeechBubble />
+</Figure>
+
+직접화법은 전달동사 뒤에 **쉼표**를 찍고, 한 말을 **따옴표** 안에 그대로 써요. 간접화법은 따옴표를 떼고 that으로 이어서, 전하는 사람의 입장에 맞게 **인칭과 시제**를 바꿔요. 지수가 말한 I는 내가 전하면 she가 되죠.
 
 <TermAnatomy id="reporting-verb" />
 
@@ -59,9 +63,13 @@ tell 뒤에는 **꼭 듣는 사람**이 와요. told me ○, told that ✕. 반�
 
 따옴표 안이 의문문이면 전달동사는 **ask**(묻다)예요. say to + 사람은 ask + 사람이 돼요. 의문사는 그대로 두고, 그 뒤를 **평서문 순서(주어 + 동사)**로 바꿔요. do, does, did는 사라지고 물음표도 없어져요.
 
-**ask (+ 사람) + 의문사 + 주어 + 동사**
+<Formula caption="의문사가 있는 의문문 옮기기" parts={["ask", "(+ 사람)", "+", "*의문사", "+", "주어", "+", "동사"]} />
 
 [의문사 의문문](/learn/sentence-types/wh-questions) 단원에서 본 간접의문문과 같은 순서예요. 의문사가 접속사처럼 절을 이어 주니까 진짜 동사가 하나 늘어요.
+
+<Figure caption="의문사는 그대로 두고, do가 빠지면서 주어 + 동사 순서로 풀려요. 인칭과 시제도 전하는 사람에 맞춰요.">
+  <AnQuestionFlip />
+</Figure>
 
 <Examples>
   <Ex en="Jisu said to me, 'Where do you live?'" ko="지수가 나에게 '너 어디 살아?'라고 물었어." />
@@ -74,7 +82,17 @@ tell 뒤에는 **꼭 듣는 사람**이 와요. told me ○, told that ✕. 반�
 
 Do you ~?, Are you ~?, Can you ~?처럼 Yes/No로 대답하는 의문문에는 옮겨 올 의문사가 없어요. 그래서 **if나 whether**(~인지)를 데려와서 절을 이어요. 이 if는 &lsquo;만약 ~라면&rsquo;이 아니에요.
 
-**ask (+ 사람) + if / whether + 주어 + 동사**
+<Formula caption="의문사가 없는 의문문 옮기기" parts={["ask", "(+ 사람)", "+", "*if / whether", "+", "주어", "+", "동사"]} />
+
+<Steps
+  caption="Minho said to me, 'Do you like K-pop?'을 옮겨 볼게요"
+  steps={[
+    { title: "전달동사: said to me → asked me", en: "Minho [[asked me]] …", note: "물어본 말이니까 ask예요." },
+    { title: "이음말: 의문사가 없으니 if나 whether를 데려와요", en: "Minho asked me [[{if|접속사:~인지}]] …", note: "that은 쓰지 않아요." },
+    { title: "순서: Do를 빼고 주어 + 동사, 물음표도 빼요", en: "… {if|접속사:~인지} [[I like]] K-pop", note: "you → I (전하는 내 입장)" },
+    { title: "시제: 전달동사가 과거라 한 칸 물러서요", en: "Minho asked me {if|접속사:~인지} I [[liked]] K-pop.", note: "like → liked" },
+  ]}
+/>
 
 <Examples>
   <Ex en="Minho said to me, 'Do you like K-pop?'" ko="민호가 나에게 '너 케이팝 좋아해?'라고 물었어." />
@@ -90,7 +108,7 @@ Do you ~?, Are you ~?, Can you ~?처럼 Yes/No로 대답하는 의문문에는 �
 
 따옴표 안이 명령문이면 **주어가 없어요**(Clean your room.). that절을 만들 주어가 없으니, 명령한 동작을 **to부정사로 변장**시켜요. [5형식과 목적격보어](/learn/sentence-patterns/object-complements) 단원에서 본 tell + 목적어 + to부정사 모양 그대로예요.
 
-**tell / ask / order / advise + 사람 + to부정사**, 하지 말라는 명령은 **not to**
+<Formula caption="명령문 옮기기" parts={["tell · ask · order · advise", "+", "사람", "+", "*to부정사"]} ko="하지 말라는 명령은 not + to부정사 (Don't run → not to run)" />
 
 전달동사는 명령의 느낌에 따라 골라요.
 
@@ -115,14 +133,23 @@ Mom told me to clean my room.의 진짜 동사는 **told 하나**예요. to clea
 
 ## 제안문 옮기기: Let's → suggest
 
-Let's ~(같이 ~하자)는 **suggest**(제안하다)로 옮겨요. 뒤에는 **that + 주어 + (should) + 동사원형**이 와요. [should의 특별한 쓰임](/learn/modals/special-should) 단원에서 본 것처럼, 제안하는 that절에서는 should를 빼도 동사원형을 그대로 써요. 과거 문장이어도 과거형으로 바꾸지 않아요.
+Let's ~(같이 ~하자)는 **suggest**(제안하다)로 옮겨요. [should의 특별한 쓰임](/learn/modals/special-should) 단원에서 본 것처럼, 제안하는 that절에서는 should를 빼도 동사원형을 그대로 써요. 과거 문장이어도 과거형으로 바꾸지 않아요.
+
+<Formula caption="제안문 옮기기" parts={["suggest", "+", "that", "+", "주어", "+", "(should)", "+", "*동사원형"]} ko="suggested여도 뒤는 동사원형 그대로 (played ✕)" />
 
 <Examples>
   <Ex en="Minsu said, 'Let's play badminton after school.'" ko="민수가 '방과 후에 배드민턴 치자'라고 했어." />
   <Ex en="Minsu [[suggested]] {that|접속사:~라고} we [[(should) play]] badminton after school." ko="민수가 방과 후에 배드민턴을 치자고 제안했어." note="Let's → suggest that we (should) + 동사원형. played ✕" />
 </Examples>
 
-suggest 뒤에 동명사를 써서 Minsu suggested playing badminton.이라고 해도 돼요. 하지만 suggest + 사람 + to부정사는 쓰지 않아요.
+<Compare
+  caption="suggest 뒤에 올 수 있는 모양"
+  items={[
+    { title: "that + 주어 + (should) 동사원형", tone: "mint", mark: "ok", en: "Minsu suggested {that|접속사:~라고} we [[play]] badminton." },
+    { title: "동명사", tone: "sky", mark: "ok", en: "Minsu [[suggested playing]] badminton." },
+    { title: "사람 + to부정사", tone: "coral", mark: "no", sub: "suggest는 이 모양을 쓰지 않아요", points: ["Minsu suggested us to play ✕"] },
+  ]}
+/>
 
 ## 한눈에: 진짜 동사가 늘까, 그대로일까
 

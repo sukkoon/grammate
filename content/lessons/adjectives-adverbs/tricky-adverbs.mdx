@@ -38,9 +38,13 @@ hardly, rarely, seldom에는 이미 &lsquo;거의 …않다&rsquo;라는 부정�
 
 셋 다 우리말로는 &lsquo;대부분, 거의&rsquo;처럼 들려서 헷갈려요. **품사**를 보면 풀려요.
 
-- **most**: 형용사(대부분의) → 명사 앞에 바로 와요. most students, most of the students
-- **almost**: 부사(거의) → 명사를 바로 꾸밀 수 없어요. almost all the students, almost every student
-- **mostly**: 부사(주로) → 동사나 문장 전체를 꾸며요.
+<Compare
+  items={[
+    { title: "most", sub: "형용사 · 대부분의", tone: "mint", en: "[[{Most|형용사:대부분의}]] students walk to school.", points: ["명사 앞에 바로 와요", "most of the students"] },
+    { title: "almost", sub: "부사 · 거의", tone: "amber", en: "[[Almost all]] the students came.", points: ["명사를 바로 못 꾸며요", "almost every student"] },
+    { title: "mostly", sub: "부사 · 주로", tone: "sky", en: "We [[mostly]] talk about games.", points: ["동사나 문장 전체를 꾸며요"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="[[{Most|형용사:대부분의}]] students have a phone." ko="대부분의 학생이 휴대폰을 가지고 있어." />
@@ -54,6 +58,14 @@ hardly, rarely, seldom에는 이미 &lsquo;거의 …않다&rsquo;라는 부정�
 ## -ly로 끝나는 형용사
 
 **명사 + -ly는 형용사**, **형용사 + -ly는 부사**. 이 공식 하나면 friendly가 왜 형용사인지 풀려요. friend(친구)라는 명사에 -ly가 붙어서 &lsquo;친구 같은, 다정한&rsquo;이라는 형용사가 된 거예요.
+
+<Compare
+  caption="-ly 앞에 무엇이 있었나요?"
+  items={[
+    { title: "명사 + ly → 형용사", sub: "명사를 꾸미거나 보어 자리에", tone: "mint", en: "friend → [[friendly]], love → [[lovely]]", ko: "다정한, 사랑스러운" },
+    { title: "형용사 + ly → 부사", sub: "동사·형용사·문장을 꾸며요", tone: "amber", en: "quick → [[quickly]], sad → [[sadly]]", ko: "빨리, 슬프게" },
+  ]}
+/>
 
 | 명사 | + ly | 뜻 |
 |---|---|---|
@@ -118,6 +130,8 @@ look, sound, smell, taste, feel 같은 감각동사와 become, get, go, turn, gr
 
 keep, make, find, leave 같은 동사는 **목적어 뒤에 목적어의 상태**를 설명하는 말이 와요. 이 자리도 보어 자리(목적격보어)라서 형용사를 써요. 목적어와 보어 사이에 &lsquo;=&rsquo;를 넣어 보면 확인할 수 있어요.
 
+<Formula parts={["*keep · make · find · leave", "~sky:목적어", "=", "~mint:형용사 (목적격보어)"]} en="Please keep [[the room]] [[{clean|형용사:깨끗한}]]." ko="the room = clean. cleanly ✕" />
+
 <Examples>
   <Ex en="Please keep the room [[{clean|형용사:깨끗한}]]." ko="방을 깨끗하게 유지해 주세요." note="the room = clean (방이 깨끗한 상태)" />
   <Ex en="This song makes me [[happy]]." ko="이 노래는 나를 행복하게 해." note="me = happy" />
@@ -146,8 +160,13 @@ keep, make, find, leave 같은 동사는 **목적어 뒤에 목적어의 상태*
 
 enough는 얼굴이 둘이에요.
 
-- **형용사 enough**: 명사 **앞** → enough time, enough chairs
-- **부사 enough**: 형용사·부사 **뒤** → old enough, fast enough
+<Compare
+  caption="enough의 두 얼굴: 명사 앞이냐, 형용사·부사 뒤냐"
+  items={[
+    { title: "형용사 enough", sub: "명사 앞 · 충분한", tone: "mint", en: "[[enough]] time, [[enough]] chairs", points: ["enough + 명사"] },
+    { title: "부사 enough", sub: "형용사·부사 뒤 · 충분히", tone: "amber", en: "[[{old|형용사:나이가 든} {enough|부사:충분히}]], [[fast {enough|부사:충분히}]]", points: ["형용사·부사 + enough", "enough old ✕"] },
+  ]}
+/>
 
 부사 enough 뒤에는 to부정사가 자주 따라와요. **형용사 + enough + to부정사**는 &lsquo;…할 만큼 충분히 …한&rsquo;이라는 뜻이에요.
 
@@ -162,8 +181,15 @@ enough는 얼굴이 둘이에요.
 
 둘 다 &lsquo;정말, 그렇게&rsquo;라는 뜻이지만 뒤에 오는 말이 달라요. **뒤에 명사가 있으면 such**를 떠올리세요.
 
-- **so** + 형용사·부사: so cute, so fast
-- **such** + (a/an) + 형용사 + 명사: such a cute dog, such nice weather
+<Compare
+  caption="끝에 명사가 보이면 such"
+  items={[
+    { title: "so", sub: "+ 형용사·부사", tone: "sky", en: "[[{so|부사:정말, 아주} cute]], [[{so|부사:정말, 아주} fast]]", points: ["뒤에 명사가 없어요"] },
+    { title: "such", sub: "+ (a/an) + 형용사 + 명사", tone: "amber", en: "[[such a cute dog]], [[such nice weather]]", points: ["셀 수 없는 명사(weather) 앞에는 a 없이"] },
+  ]}
+/>
+
+<Formula caption="so·such + that: 너무 …해서 ~하다" parts={["~sky:so + 형용사", "/", "~amber:such + a + 형용사 + 명사", "+", "*that + 주어 + 동사"]} />
 
 <Examples>
   <Ex en="The puppy is [[{so|부사:정말, 아주}]] cute." ko="그 강아지는 정말 귀여워." note="so + 형용사" />
@@ -187,8 +213,12 @@ enough는 얼굴이 둘이에요.
 
 우리말 &lsquo;…도&rsquo;는 하나인데, 영어는 문장이 긍정이냐 부정이냐에 따라 나뉘어요.
 
-- **긍정문** 끝: too (also는 빈도부사처럼 일반동사 앞, be동사 뒤)
-- **부정문** 끝: either
+<Compare
+  items={[
+    { title: "too", sub: "긍정문 끝", tone: "mint", en: "My sister likes cats, [[too]].", points: ["also는 빈도부사처럼 일반동사 앞, be동사 뒤"] },
+    { title: "either", sub: "부정문 끝", tone: "coral", en: "My brother doesn't like them, [[{either|부사:(부정문에서) …도 또한}]].", points: ["부정문에 too ✕"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="I like cats. My sister likes cats, [[too]]." ko="나는 고양이가 좋아. 우리 언니도 고양이를 좋아해." note="긍정문: too" />

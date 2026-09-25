@@ -61,6 +61,8 @@ if절에 **yesterday, last night, as a child** 같은 과거 표시가 있고, �
 
 should가 if절에 들어가면 &lsquo;**혹시라도** ~한다면&rsquo;이라는 뜻이 돼요. 일어날 가능성은 낮지만 아예 없지는 않은 일이라, 주절에 will이나 명령문도 올 수 있어요. 이 should도 if를 빼고 앞으로 나올 수 있어요.
 
+<Formula caption="혹시라도 ~한다면" parts={["If", "+", "주어", "+", "*should", "+", "동사원형", "=", "*Should", "+", "주어", "+", "동사원형"]} ko="주절에는 will이나 명령문도 와요. should 뒤는 늘 동사원형이에요." />
+
 <Examples>
   <Ex en="If you [[{should|조동사:(혹시라도) ~한다면} see]] Minho, tell him to call me." ko="혹시 민호를 보면 나한테 전화하라고 전해 줘." note="주절에 명령문" />
   <Ex en="[[{Should|조동사:(혹시라도) ~한다면} you need]] any help, {just|부사:그냥} call me." ko="혹시라도 도움이 필요하면 그냥 나한테 전화해." note="= If you should need any help" />
@@ -81,8 +83,13 @@ should가 if절에 들어가면 &lsquo;**혹시라도** ~한다면&rsquo;이라�
 
 **without**과 **but for**는 &lsquo;~이 없다면, ~이 없었다면&rsquo;이라는 뜻이에요. 둘 다 **전치사**라서 뒤에 명사만 와요. 지금 이야기인지 과거 이야기인지는 **주절의 모양**을 보고 판단해요.
 
-- 주절이 would + 동사원형 → 지금: = If it were not for ~ = Were it not for ~
-- 주절이 would have p.p. → 과거: = If it had not been for ~ = Had it not been for ~
+<Compare
+  caption="without · but for를 if절로 바꾸면"
+  items={[
+    { title: "주절이 would + 동사원형", sub: "지금: ~이 없다면", tone: "sky", points: ["= If it were not for ~", "= Were it not for ~"] },
+    { title: "주절이 would have p.p.", sub: "과거: ~이 없었다면", tone: "amber", points: ["= If it had not been for ~", "= Had it not been for ~"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="[[{Without|전치사:~이 없다면}]] my phone, I [[{would|조동사:~할 텐데} be]] {lost|형용사:길을 잃은} in this city." ko="휴대폰이 없다면 나는 이 도시에서 길을 잃을 거야." note="= If it were not for my phone" />
@@ -115,10 +122,13 @@ if가 전혀 없는데 would, could가 나오면 **어딘가에 조건이 숨어
 
 이 단원의 문장들을 공식으로 세어 봐요. **진짜 동사 개수 = 접속사·관계사 개수 + 1**이에요.
 
-- **혼합가정법**: 접속사 if 1개 → 진짜 동사 2개. 두 동사가 **각자** 자기 때에서 한 칸 물러서요.
-- **if 생략 도치**: if가 사라졌는데도 진짜 동사는 2개예요. 주어 앞으로 나온 **were, had, should가 if의 흔적**이기 때문이에요. 문장 맨 앞의 &lsquo;동사 + 주어&rsquo; 순서를 보면 &lsquo;if가 빠졌구나&rsquo; 하고 읽어요.
-- **without, but for**: 전치사라서 뒤에 절이 아니라 명사가 와요. 그래서 진짜 동사가 **1개로 줄어요**. If it were not for music(절, 동사 were) → But for music(구, 동사 없음).
-- **to부정사, 주어 속 조건**: 조건이 변장한 동사나 명사 속에 들어가 있어서, 그 부분에는 진짜 동사가 없어요.
+<Figure caption="혼합가정법과 도치는 진짜 동사 2개, without과 주어 속 조건은 1개예요. 문장 맨 앞의 '동사 + 주어' 순서는 if가 빠진 흔적이에요.">
+  <SjVerbCount set="advanced" />
+</Figure>
+
+- **if 생략 도치**: 주어 앞으로 나온 **were, had, should가 if의 흔적**이에요. 문장 맨 앞의 &lsquo;동사 + 주어&rsquo; 순서를 보면 &lsquo;if가 빠졌구나&rsquo; 하고 읽어요.
+- **without, but for**: If it were not for music(절, 동사 were) → But for music(구, 동사 없음). 절이 구로 바뀌니 진짜 동사가 **1개로 줄어요**.
+- **to부정사 속 조건**: 조건이 변장한 동사(To hear her sing) 속에 들어가 있어서, 그 부분에는 진짜 동사가 없어요.
 
 <VerbHunt
   items={[

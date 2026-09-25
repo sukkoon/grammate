@@ -50,14 +50,33 @@
 </Examples>
 
 <Tip mood="thinking" title="느끼는 걸까, 느껴지는 걸까?">
-I feel sleepy는 내가 졸음을 느끼는 거예요. 그런데 The blanket feels soft는 담요가 무언가를 느끼는 게 아니라, 담요를 만져 보니 **부드럽게 느껴진다**는 뜻이에요. 감각동사의 주어는 느끼는 사람일 수도, 느껴지는 대상일 수도 있어요. 어느 쪽이든 뒤에는 **주어의 상태**를 말하는 형용사가 와요.
+감각동사의 주어는 느끼는 사람일 수도, 느껴지는 대상일 수도 있어요. 어느 쪽이든 뒤에는 **주어의 상태**를 말하는 형용사가 와요.
 </Tip>
+
+<Compare
+  items={[
+    { title: "주어가 느끼는 사람", sub: "내가 졸음을 느껴요", tone: "sky", en: "I feel [[sleepy]].", ko: "나 졸려." },
+    { title: "주어가 느껴지는 대상", sub: "만져 보니 부드럽게 느껴져요", tone: "amber", en: "The blanket {feels|동사:~한 느낌이 나다} [[soft]].", ko: "이 담요는 부드러워. (담요가 무언가를 느끼는 게 아니에요)" },
+  ]}
+/>
 
 ## 보어 자리는 형용사 자리
 
 우리말로는 &lsquo;행복**하게** 보여&rsquo;, &lsquo;달**게** 느껴져&rsquo;처럼 &lsquo;~하게&rsquo;로 해석될 때가 많아요. 그래서 happily, sweetly 같은 부사를 쓰고 싶어지죠. 하지만 보어는 **주어가 어떤지**를 말하는 자리예요. 주어(명사)를 설명하는 건 형용사의 일이에요.
 
+<Figure caption="2형식 동사는 주어와 보어를 등호로 잇는 다리예요. 다리 건너편에는 주어의 상태, 곧 형용사가 서요. 헷갈리면 동사를 is로 바꿔 보세요.">
+  <SpEqualBridge />
+</Figure>
+
 같은 동사라도 어떻게 쓰였는지에 따라 형용사가 올 수도, 부사가 올 수도 있어요.
+
+<Compare
+  caption="보어일까, 동작을 꾸미는 말일까?"
+  items={[
+    { title: "2형식: 형용사 보어", sub: "주어가 어떤 상태인지", tone: "amber", en: "She looks [[happy]].", ko: "그녀는 행복해 보여. (그녀 = 행복한 상태)" },
+    { title: "1형식: 부사 수식어", sub: "동작을 어떻게 하는지", tone: "sky", en: "She smiled [[happily]].", ko: "그녀는 행복하게 웃었어. (웃는 방법)" },
+  ]}
+/>
 
 <Examples title="형용사 보어 vs 부사">
   <Ex en="She looks [[happy]]." ko="그녀는 행복해 보여." note="그녀 = 행복한 상태 → 형용사 보어" />
@@ -67,17 +86,20 @@ I feel sleepy는 내가 졸음을 느끼는 거예요. 그런데 The blanket fee
 </Examples>
 
 <Tip mood="wink" title="등호 테스트">
-헷갈리면 동사를 **is**로 바꿔 보세요. She looks happy → She is happy. 말이 되니까 형용사가 맞아요. She looks happily → She is happily. 어색하죠? 그러면 틀린 거예요.
+헷갈리면 동사를 **is**로 바꿔 보세요. 위 그림처럼 She is happy는 말이 되고, She is happily는 어색하죠? 어색하면 틀린 거예요.
 </Tip>
 
 ## look like + 명사
 
 감각동사 뒤에 **명사**를 쓰고 싶을 때는 like(~처럼)를 붙여요. 여기서 like는 &lsquo;좋아하다&rsquo;가 아니라 **전치사**라서 뒤에 명사가 와요.
 
-| 뒤에 오는 말 | 모양 | 예 |
-|---|---|---|
-| 형용사 | 감각동사 + 형용사 | You look happy. |
-| 명사 | 감각동사 + like + 명사 | You look like a movie star. |
+<Compare
+  caption="뒤에 오는 말이 형용사냐 명사냐에 따라 like가 붙어요"
+  items={[
+    { title: "감각동사 + 형용사", sub: "like 없이", tone: "amber", en: "You look [[happy]].", ko: "너 행복해 보여.", points: ["look like happy ✕"] },
+    { title: "감각동사 + like + 명사", sub: "like = ~처럼 (전치사)", tone: "sky", en: "You [[{look like}]] a movie star.", ko: "너 영화배우 같아.", points: ["look a movie star ✕"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="You [[{look like}]] your mom." ko="너 엄마 닮았다." note="엄마처럼 보인다 → 닮았다" />
@@ -89,6 +111,14 @@ I feel sleepy는 내가 졸음을 느끼는 거예요. 그런데 The blanket fee
 <DeepDive level="중1" title="변화 동사 get, turn, grow, go, come의 차이">
 
 모두 &lsquo;~해지다, ~이 되다&rsquo;라는 뜻이지만, 잘 어울리는 짝이 있어요.
+
+| 동사 | 어울리는 변화 | 짝 |
+|---|---|---|
+| get | 날씨·기분·몸 상태 | get cold, get tired |
+| turn | 색이 바뀔 때 | turn red, turn yellow |
+| grow | 천천히 변할 때 | grow old, grow tall |
+| go | 나쁜 쪽으로 | go bad, go wrong |
+| come | 좋은 쪽으로 | come true |
 
 <Examples>
   <Ex en="It {gets|동사:~해지다} [[cold]] in November." ko="11월에는 추워져." note="get: 날씨·기분·몸 상태가 변할 때 가장 흔히 써요." />

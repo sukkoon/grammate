@@ -75,7 +75,7 @@ export function ExamPoint({
   children: ReactNode;
 }) {
   return (
-    <Lv min={level}>
+    <Lv min={level} topic={title}>
     <aside className="my-6 rounded-2xl bg-amber-soft px-4 py-4 sm:px-5">
       <p className="flex items-center gap-2 text-[14px] font-extrabold text-amber-ink">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -106,7 +106,7 @@ export function Tip({ mood = "wink", title, children }: { mood?: Mood; title?: s
 /** 접히는 심화 상자 */
 export function DeepDive({ level = "고1", title, children }: { level?: Level; title: string; children: ReactNode }) {
   return (
-    <Lv min={bandOf(level)}>
+    <Lv min={bandOf(level)} topic={`심화: ${title}`}>
     <details className="group my-6 rounded-2xl border border-line bg-card [&[open]>summary]:border-b [&[open]>summary]:border-line">
       <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3.5 sm:px-5 [&::-webkit-details-marker]:hidden">
         <span className="rounded-full bg-sky-soft px-2 py-0.5 text-[12px] font-extrabold text-sky-ink">심화 · {level}</span>

@@ -36,6 +36,8 @@
 
 동사 혼자서도 뜻이 완성되는 문장이에요. 이런 동사를 **자동사**라고 해요. 뒤에 말이 더 붙어 있어도, 빼도 되는 수식어라면 여전히 1형식이에요.
 
+<Formula caption="1형식 설계도" parts={["~sky:S 주어", "*V 자동사", "(M 수식어: 있어도, 없어도)"]} en="My dog [[runs]] fast in the park." ko="뼈대는 My dog runs. fast와 in the park는 점선 칸이에요." />
+
 <Examples>
   <Ex en="Birds [[fly]]." ko="새들은 날아." note="S + V. 가장 짧은 문장이에요." />
   <Ex en="The baby [[is sleeping]]." ko="아기가 자고 있어." note="is sleeping은 한 덩어리의 진짜 동사예요." />
@@ -48,6 +50,8 @@
 <TermAnatomy id="complement" />
 
 be동사 뒤에 아무것도 없으면 어떨까요? &lsquo;She is.&rsquo;만으로는 그녀가 &lsquo;무엇&rsquo;인지, &lsquo;어떤지&rsquo; 알 수 없어요. 이렇게 모자란 뜻을 **채워 주는 말**이 보어(C)예요. 2형식의 보어는 주어를 설명하니까 **주어 = 보어** 관계가 돼요.
+
+<Formula caption="2형식 설계도: 동사를 사이에 두고 주어 = 보어" parts={["~sky:S 주어", "*V", "~amber:C 보어 (명사·형용사)"]} en="My sister became [[a nurse]]." ko="언니 = 간호사" />
 
 <Examples>
   <Ex en="I am [[a student]]." ko="나는 학생이야." note="I = a student. 명사 보어" />
@@ -64,6 +68,14 @@ love, like, need, have처럼 &lsquo;누구를, 무엇을&rsquo;이 꼭 있어야
 
 <TermAnatomy id="object" />
 
+<Compare
+  caption="동사 뒤에서 멈춰 보면 자동사와 타동사가 갈려요"
+  items={[
+    { title: "자동사 (1형식)", sub: "혼자서도 뜻이 끝나요", tone: "sky", en: "Birds [[fly]].", ko: "새들은 날아.", points: ["sleep, run, arrive, cry"] },
+    { title: "타동사 (3형식)", sub: "'무엇을'이 꼭 있어야 해요", tone: "mint", en: "I need [[a new pen]].", ko: "I need.에서 멈추면 뭐가 필요한지 몰라요.", points: ["love, like, need, have"] },
+  ]}
+/>
+
 <Examples>
   <Ex en="I love [[my cat]]." ko="나는 우리 고양이를 사랑해." />
   <Ex en="Minsu plays [[soccer]] after school." ko="민수는 방과 후에 축구를 해." note="after school은 수식어예요." />
@@ -78,6 +90,8 @@ love, like, need, have처럼 &lsquo;누구를, 무엇을&rsquo;이 꼭 있어야
 ## 4형식: S + V + IO + DO
 
 give, send, show처럼 &lsquo;주다&rsquo;의 뜻이 있는 동사는 목적어를 **두 개** 데려와요. 앞의 것은 &lsquo;~에게&rsquo;(받는 사람), 뒤의 것은 &lsquo;~을&rsquo;(주는 물건)이에요. 앞의 것을 **간접목적어**(IO), 뒤의 것을 **직접목적어**(DO)라고 해요.
+
+<Formula caption="4형식 설계도: 목적어가 두 칸" parts={["~sky:S", "*V (주다)", "~mint:IO ~에게 (사람)", "~mint:DO ~을 (물건)"]} en="Jisu showed [[us]] [[her new phone]]." ko="us ≠ her new phone: 사람과 물건이라 서로 달라요" />
 
 <Examples>
   <Ex en="Mom gave [[me]] [[a gift]]." ko="엄마가 나에게 선물을 주셨어." note="me = ~에게, a gift = ~을" />
@@ -99,11 +113,23 @@ give, send, show처럼 &lsquo;주다&rsquo;의 뜻이 있는 동사는 목적어
 
 2형식의 보어(C)는 **주어**를, 5형식의 목적격보어(OC)는 **목적어**를 설명해요. 5형식은 &lsquo;5형식과 목적격보어&rsquo; 단원에서 더 깊이 배워요.
 
+<Compare
+  caption="같은 happy, 누구를 설명하나요?"
+  items={[
+    { title: "2형식 보어 C", sub: "주어 = 보어", tone: "sky", en: "[[She]] is [[happy]].", ko: "그녀 = 행복한 상태" },
+    { title: "5형식 목적격보어 OC", sub: "목적어 = 목적격보어", tone: "amber", en: "The song makes [[me]] [[happy]].", ko: "나 = 행복한 상태" },
+  ]}
+/>
+
 ## 수식어는 형식에 넣지 않아요
 
 <TermAnatomy id="modifier" />
 
 문장이 길어 보여도 겁먹지 마세요. 대부분은 **수식어**가 길게 붙은 거예요. 시간·장소·방법을 알려 주는 부사나 &lsquo;전치사 + 명사&rsquo; 덩어리는 빼도 문장이 성립해요. 그래서 형식을 셀 때 넣지 않아요.
+
+<Figure caption="점선 상자(수식어)는 괄호를 쳐서 걷어 내요. 괄호 밖에 남은 뼈대로만 형식을 세요. 보어(C)는 뼈대라서 남아요.">
+  <SpBracketOff />
+</Figure>
 
 <Examples title="수식어를 걷어 내면 뼈대가 보여요">
   <Ex en="[[My brother sleeps]] on the sofa every Sunday." ko="우리 형은 일요일마다 소파에서 자." note="on the sofa, every Sunday를 빼면 S + V → 1형식" />
@@ -145,17 +171,27 @@ get은 뜻이 아주 많은 동사예요. 뜻이 바뀌면 형식도 바뀌어�
   <SpPatternSteps />
 </Figure>
 
-직접 해 볼까요? <E en="My grandma sent me a letter last week." />
+직접 해 볼까요?
 
-1. **진짜 동사**: sent
-2. **수식어 괄호**: (last week)
-3. **동사 뒤 덩어리**: me, a letter → 2개. &lsquo;나에게 + 편지를&rsquo;이고 me ≠ a letter → **4형식**
+<Steps
+  caption="My grandma sent me a letter last week."
+  steps={[
+    { title: "진짜 동사: sent", en: "My grandma [[sent]] me a letter last week." },
+    { title: "수식어 괄호: (last week)", en: "My grandma sent me a letter [[last week]].", note: "때를 말하는 수식어라서 걷어 내요." },
+    { title: "동사 뒤 덩어리: me, a letter → 2개", en: "My grandma sent [[me]] [[a letter]].", note: "'나에게 + 편지를'이고 me ≠ a letter → 4형식" },
+  ]}
+/>
 
-하나 더요. <E en="The movie made everyone sad." />
+하나 더요.
 
-1. **진짜 동사**: made
-2. **수식어 괄호**: 없음
-3. **동사 뒤 덩어리**: everyone, sad → 2개. everyone = sad(모두가 슬퍼졌어요) → **5형식**
+<Steps
+  caption="The movie made everyone sad."
+  steps={[
+    { title: "진짜 동사: made", en: "The movie [[made]] everyone sad." },
+    { title: "수식어 괄호: 없음", note: "걷어 낼 말이 없어요." },
+    { title: "동사 뒤 덩어리: everyone, sad → 2개", en: "The movie made [[everyone]] [[sad]].", note: "everyone = sad(모두가 슬퍼졌어요) → 5형식" },
+  ]}
+/>
 
 <DeepDive level="중1" title="4형식일까, 5형식일까? 등호를 넣어 보세요">
 

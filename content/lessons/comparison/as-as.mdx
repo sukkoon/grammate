@@ -8,6 +8,8 @@
 
 앞의 as는 &lsquo;그만큼, 똑같이&rsquo;, 뒤의 as는 &lsquo;~만큼&rsquo;이에요. 가운데에는 -er도 more도 붙이지 않은 **원급**을 넣어요. 똑같다는 말이니까 &lsquo;더&rsquo;가 필요 없거든요.
 
+<Formula caption="원급 비교의 틀" parts={["A", "~coral:as (그만큼)", "~sky:원급", "~coral:as (~만큼)", "B"]} en="Today is [[{as|부사:그만큼} warm {as|접속사:…만큼}]] yesterday." ko="오늘은 어제만큼 따뜻해. warmer ✕" />
+
 <Figure caption="수평이면 as ~ as, 한쪽으로 기울면 not as ~ as예요. 기운 쪽(더 무거운 쪽)을 주어로 하면 비교급 문장이 돼요.">
   <CpSeesaw />
 </Figure>
@@ -25,8 +27,9 @@
 
 as ~ as 가운데에 형용사를 쓸지 부사를 쓸지 헷갈리면 **as 두 개를 지우고** 문장을 읽어 보세요.
 
-- She looks ( ) → look 뒤 보어 자리라서 **형용사** happy
-- He runs ( ) → 일반동사 runs를 꾸미니까 **부사** quickly
+<Figure caption="as 두 개를 지우면 평범한 문장이 남아요. 보어 자리면 형용사, 동사를 꾸미면 부사예요.">
+  <CpEraseAs />
+</Figure>
 
 <Examples>
   <Ex en="She looks [[{as|부사:그만큼} happy {as|접속사:…만큼}]] a child." ko="그녀는 아이만큼 행복해 보여." note="She looks happy.가 맞으니 형용사" />
@@ -36,6 +39,8 @@ as ~ as 가운데에 형용사를 쓸지 부사를 쓸지 헷갈리면 **as 두 
 ## as many / as much + 명사 + as: ~만큼 많은
 
 &lsquo;~만큼 많은 …&rsquo;은 명사를 as와 as 사이에 함께 넣어요. 셀 수 있는 명사면 many, 셀 수 없는 명사면 much예요.
+
+<Formula parts={["~coral:as", "~sky:many + 셀 수 있는 명사", "/", "~amber:much + 셀 수 없는 명사", "~coral:as"]} />
 
 <Examples>
   <Ex en="I have [[{as|부사:그만큼} many books {as|접속사:…만큼}]] you." ko="나는 너만큼 책이 많아." note="books는 셀 수 있어요 → many" />
@@ -57,9 +62,30 @@ as ~ as 가운데에 형용사를 쓸지 부사를 쓸지 헷갈리면 **as 두 
 not as ~ as 문장에서는 **뒤에 있는 쪽이 더** …해요. My cat is not as big as your dog.에서 더 큰 건 뒤에 있는 your dog이에요. &lsquo;고양이가 더 크지 않다&rsquo;가 아니라 &lsquo;고양이는 개만큼 크지 않다&rsquo;, 즉 &lsquo;개가 더 크다&rsquo;예요.
 </Tip>
 
+<Steps
+  caption="not as ~ as를 비교급으로 바꾸기"
+  steps={[
+    { title: "원래 문장", en: "My cat is [[not {as|부사:그만큼} big {as|접속사:…만큼}]] your dog.", ko: "우리 고양이는 너희 개만큼 크지 않아." },
+    { title: "뒤쪽(your dog)이 더 커요 → 뒤쪽을 주어로", en: "Your dog is [[bigger than]] my cat.", ko: "너희 개가 우리 고양이보다 커." },
+    { title: "앞쪽을 그대로 주어로 두려면 반대말 비교급", en: "My cat is [[smaller than]] your dog.", ko: "우리 고양이가 너희 개보다 작아.", note: "big ↔ small, old ↔ young, fast ↔ slow" },
+  ]}
+/>
+
 ## as ~ as possible, as ~ as 주어 + can: 될 수 있는 한 …하게
 
-possible은 &lsquo;가능한&rsquo;이에요. as ~ as possible은 &lsquo;가능한 만큼 …하게&rsquo;, 즉 **될 수 있는 한 …하게**예요. possible 자리에 **주어 + can**을 넣어도 같은 뜻이에요. 이때 문장이 과거면 can도 **could**로 바꿔요.
+possible은 &lsquo;가능한&rsquo;이에요. as ~ as possible은 &lsquo;가능한 만큼 …하게&rsquo;, 즉 **될 수 있는 한 …하게**예요.
+
+<Formula caption="possible 자리에 주어 + can을 넣어도 같은 뜻" parts={["as + 원급 + as", "*possible", "=", "as + 원급 + as", "*주어 + can"]} en="Finish your homework [[{as|부사:그만큼} soon {as|접속사:…만큼} possible]]. = Finish it [[{as|부사:그만큼} soon {as|접속사:…만큼} you can]]." ko="숙제를 될 수 있는 한 빨리 끝내." />
+
+이때 문장이 과거면 can도 **could**로 바꿔요.
+
+<Compare
+  caption="can이냐 could냐는 문장의 시제가 정해요"
+  items={[
+    { title: "지금·앞으로", sub: "주어 + can", tone: "sky", en: "I will run [[{as|부사:그만큼} fast {as|접속사:…만큼} I can]].", ko: "나는 할 수 있는 한 빨리 달릴 거야." },
+    { title: "과거", sub: "주어 + could", tone: "amber", en: "She finished the test [[{as|부사:그만큼} quickly {as|접속사:…만큼} she could]].", ko: "그녀는 할 수 있는 한 빨리 시험 문제를 다 풀었어.", points: ["finished가 과거라서 could"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="Come {home|부사:집으로} [[{as|부사:그만큼} soon {as|접속사:…만큼} possible]]." ko="될 수 있는 한 빨리 집에 와." />

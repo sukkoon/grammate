@@ -196,3 +196,320 @@ export function SeSlotMenu() {
     </div>
   );
 }
+
+/* ───────── 서술어는 지도의 '현재 위치' ───────── */
+
+function SePin({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className="shrink-0" aria-hidden>
+      <path d="M12 22.5 C12 22.5 4.5 14.5 4.5 9.2 A7.5 7.5 0 0 1 19.5 9.2 C19.5 14.5 12 22.5 12 22.5 Z" fill="currentColor" />
+      <circle cx="12" cy="9.2" r="2.8" style={{ fill: "var(--card)" }} />
+    </svg>
+  );
+}
+
+type SeChunkData = { en: string; role: SeRole; label?: string };
+
+const SE_PIN_ROWS: { chunks: SeChunkData[]; ko: string; note?: string }[] = [
+  {
+    chunks: [
+      { en: "My sister", role: "s" },
+      { en: "became", role: "v" },
+      { en: "a teacher.", role: "c" },
+    ],
+    ko: "우리 언니는 선생님이 되었어.",
+  },
+  {
+    chunks: [
+      { en: "Jisu", role: "s" },
+      { en: "ate", role: "v" },
+      { en: "two sandwiches.", role: "o" },
+    ],
+    ko: "지수는 샌드위치 두 개를 먹었어.",
+  },
+  {
+    chunks: [
+      { en: "I", role: "s" },
+      { en: "want", role: "v" },
+      { en: "to eat pizza.", role: "o" },
+    ],
+    ko: "나는 피자를 먹고 싶어.",
+    note: "to eat은 변장한 동사라서 서술어가 못 돼요. 서술어는 want 하나예요.",
+  },
+];
+
+/** 서술어(진짜 동사)를 먼저 찾으면 앞은 주어, 뒤는 목적어·보어 */
+export function SeVerbPin() {
+  return (
+    <div>
+      <div className="grid grid-cols-[1fr_auto_1fr] items-stretch gap-1.5 text-center text-[14px] font-extrabold">
+        <span className="grid place-items-center rounded-lg bg-sky-soft px-2 py-1.5 text-sky-ink">앞: 누가? 무엇이?</span>
+        <span className="flex items-center gap-1 rounded-lg bg-coral px-2 py-1.5 text-white">
+          <SePin size={18} />
+          서술어
+        </span>
+        <span className="grid place-items-center rounded-lg bg-chip px-2 py-1.5 text-ink">뒤: 무엇을? 어떤 상태?</span>
+      </div>
+      <ol className="mt-3 space-y-2.5">
+        {SE_PIN_ROWS.map((row) => (
+          <li key={row.ko} className="rounded-2xl border border-line px-3 py-3">
+            <p lang="en" className="flex flex-wrap items-end justify-center gap-x-2 gap-y-3">
+              {row.chunks.map((c) =>
+                c.role === "v" ? (
+                  <span key={c.en} className="inline-flex flex-col items-center gap-0.5">
+                    <span className="text-coral">
+                      <SePin />
+                    </span>
+                    <SeChunk en={c.en} role={c.role} label="서술어 · 현재 위치" />
+                  </span>
+                ) : (
+                  <SeChunk key={c.en} en={c.en} role={c.role} label={c.label} />
+                ),
+              )}
+            </p>
+            <p className="mt-2 text-center text-[14px] text-ink-2">{row.ko}</p>
+            {row.note && <p className="mt-1 text-center text-[14px] font-bold text-coral-ink">{row.note}</p>}
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+/* ───────── 보어: 모자란 뜻을 채우는 빈칸 ───────── */
+
+const SE_FILLED: { chunks: SeChunkData[]; eq: string; kind: string }[] = [
+  {
+    chunks: [
+      { en: "My dad", role: "s" },
+      { en: "is", role: "v" },
+      { en: "a nurse.", role: "c", label: "주격보어" },
+    ],
+    eq: "아빠 = 간호사",
+    kind: "명사 보어",
+  },
+  {
+    chunks: [
+      { en: "You", role: "s" },
+      { en: "look", role: "v" },
+      { en: "tired.", role: "c", label: "주격보어" },
+    ],
+    eq: "너 = 피곤한 상태",
+    kind: "형용사 보어",
+  },
+];
+
+/** be·become·look 뒤의 빈칸: 채우지 않으면 뜻이 모자란다 */
+export function SeFillGap() {
+  return (
+    <div className="mx-auto max-w-xl">
+      <div className="rounded-2xl border border-line px-3 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">여기서 끝나면?</p>
+        <p lang="en" className="mt-2 flex flex-wrap items-end justify-center gap-x-2 gap-y-3">
+          <SeChunk en="My dad" role="s" />
+          <SeChunk en="is" role="v" />
+          <span className="inline-flex flex-col items-center gap-1.5">
+            <span className="rounded-xl border-2 border-dashed border-amber-ink px-6 py-1.5 text-[1.12em] font-extrabold leading-snug text-amber-ink">
+              ?
+            </span>
+            <span className="text-[14px] font-extrabold leading-none text-ink-2">빈자리</span>
+          </span>
+        </p>
+        <p className="mt-2.5 text-center text-[14px] font-bold text-coral-ink">&ldquo;아빠가 뭐?&rdquo; 뜻이 모자라요</p>
+      </div>
+      <p className="my-2.5 flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+        <ArrowRight size={18} className="rotate-90 text-amber-ink" />
+        빈자리를 채우는 말 = 보어
+      </p>
+      <ul className="grid gap-2.5 sm:grid-cols-2">
+        {SE_FILLED.map((row) => (
+          <li key={row.eq} className="rounded-2xl border-2 border-amber-soft px-3 py-3">
+            <p lang="en" className="flex flex-wrap items-end justify-center gap-x-2 gap-y-3">
+              {row.chunks.map((c) => (
+                <SeChunk key={c.en} en={c.en} role={c.role} label={c.label} />
+              ))}
+            </p>
+            <p className="mt-2.5 flex flex-wrap items-center justify-center gap-2 text-[14px]">
+              <span className="rounded-md bg-amber-soft px-2 py-0.5 font-extrabold text-amber-ink">{row.kind}</span>
+              <span className="font-bold text-ink-2">{row.eq}</span>
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ───────── 자리는 그대로, 모양만 바뀐다 ───────── */
+
+const SE_SAME_SLOT: { form: string; chunks: SeChunkData[] }[] = [
+  {
+    form: "명사구",
+    chunks: [
+      { en: "My {older|형용사:나이가 더 많은} brother", role: "s" },
+      { en: "plays", role: "v" },
+      { en: "the drums.", role: "o" },
+    ],
+  },
+  {
+    form: "동명사구",
+    chunks: [
+      { en: "{Walking|동명사:산책시키기} the dog", role: "s" },
+      { en: "is", role: "v" },
+      { en: "my job.", role: "c" },
+    ],
+  },
+  {
+    form: "to부정사구",
+    chunks: [
+      { en: "To learn a new language", role: "s" },
+      { en: "{takes|동사:(시간이) 걸리다}", role: "v" },
+      { en: "time.", role: "o" },
+    ],
+  },
+  {
+    form: "명사절",
+    chunks: [
+      { en: "{That|접속사:~라는 것} Minsu won the race", role: "s" },
+      { en: "surprised", role: "v" },
+      { en: "everyone.", role: "o" },
+    ],
+  },
+];
+
+/** 주어 자리 하나에 명사구·동명사구·to부정사구·명사절이 번갈아 들어간다 */
+export function SeSameSlot() {
+  return (
+    <div>
+      <ol className="space-y-2.5">
+        {SE_SAME_SLOT.map((row) => (
+          <li key={row.form} className="rounded-2xl border border-line px-3 py-3">
+            <p lang="en" className="flex flex-wrap items-end gap-x-2 gap-y-3">
+              {row.chunks.map((c) => (
+                <SeChunk key={c.en} en={c.en} role={c.role} label={c.role === "s" ? `주어 · ${row.form}` : undefined} />
+              ))}
+            </p>
+          </li>
+        ))}
+      </ol>
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+        <SeRoleChip role="s" />
+        <span>자리는 그대로</span>
+        <ArrowRight size={16} className="text-ink-3" />
+        <span>들어가는 모양만 점점 길어져요</span>
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 가주어 it: 긴 주어는 뒤로 ───────── */
+
+const SE_REAL_SUBJECTS = ["to부정사", "that절", "whether절"];
+
+/** 머리가 무거운 문장 → it을 먼저 세우고 진짜 주어는 뒤로 */
+export function SeDummyIt() {
+  return (
+    <div className="mx-auto grid max-w-xl gap-3">
+      <div className="rounded-2xl border border-line px-3 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">머리가 무거운 문장</p>
+        <p lang="en" className="mt-2 flex flex-wrap items-end gap-x-2 gap-y-3">
+          <SeChunk en="To {wake up} early on Mondays" role="s" label="주어 (길어요)" />
+          <SeChunk en="is" role="v" />
+          <SeChunk en="not" role="m" />
+          <SeChunk en="easy." role="c" />
+        </p>
+        <p className="mt-2 text-[14px] text-ink-2">주어가 길어서 서술어 is가 한참 뒤에 나와요.</p>
+      </div>
+      <p className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+        <ArrowRight size={18} className="rotate-90 text-sky-ink" />
+        긴 주어는 뒤로, 빈자리에는 it
+      </p>
+      <div className="rounded-2xl border-2 border-sky-ink/50 px-3 py-3">
+        <p className="text-[14px] font-extrabold text-sky-ink">가볍게 시작하는 문장</p>
+        <p lang="en" className="mt-2 flex flex-wrap items-end gap-x-2 gap-y-3">
+          <span className="inline-flex flex-col items-center gap-1.5">
+            <span className="rounded-xl border-2 border-dashed border-sky-ink px-2.5 py-1 text-[1.12em] font-medium leading-snug text-sky-ink">
+              <En en="{It|대명사:가주어 (뜻 없이 자리만 채워요)}" />
+            </span>
+            <span className="text-[14px] font-extrabold leading-none text-ink-2">가주어</span>
+          </span>
+          <SeChunk en="is" role="v" />
+          <SeChunk en="not" role="m" />
+          <SeChunk en="easy" role="c" />
+          <SeChunk en="to {wake up} early on Mondays." role="s" label="진주어" />
+        </p>
+        <p className="mt-2 text-[14px] text-ink-2">
+          <b>It</b>은 &lsquo;그것&rsquo;이라고 해석하지 않아요. 뒤로 간 진주어를 주어로 해석해요.
+        </p>
+      </div>
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+        <span className="text-ink-2">진주어가 될 수 있는 것</span>
+        {SE_REAL_SUBJECTS.map((s) => (
+          <span key={s} className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">
+            {s}
+          </span>
+        ))}
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 긴 문장 읽기: 수식어에 괄호 치기 ───────── */
+
+const SE_BRACKET_ROWS: { chunks: SeChunkData[]; bone: { en: string }; ko: string }[] = [
+  {
+    chunks: [
+      { en: "The boy", role: "s" },
+      { en: "playing the guitar", role: "m", label: "(형용사구)" },
+      { en: "is", role: "v" },
+      { en: "Minsu.", role: "c" },
+    ],
+    bone: { en: "The boy is Minsu." },
+    ko: "기타를 치고 있는 소년이 민수야.",
+  },
+  {
+    chunks: [
+      { en: "The cake", role: "s" },
+      { en: "{that|관계대명사:~하는 (앞의 명사를 꾸며요)} my mom made", role: "m", label: "(형용사절)" },
+      { en: "was", role: "v" },
+      { en: "delicious.", role: "c" },
+    ],
+    bone: { en: "The cake was delicious." },
+    ko: "엄마가 만드신 케이크는 맛있었어.",
+  },
+  {
+    chunks: [
+      { en: "{When|접속사:~할 때} I {got home},", role: "m", label: "(부사절)" },
+      { en: "my dog", role: "s" },
+      { en: "was waiting", role: "v" },
+      { en: "for me.", role: "m", label: "(부사구)" },
+    ],
+    bone: { en: "My dog was waiting." },
+    ko: "내가 집에 왔을 때, 우리 개가 나를 기다리고 있었어.",
+  },
+];
+
+/** 수식어(점선)에 괄호를 치면 S·V·O·C 뼈대만 남는다 */
+export function SeBracketSkeleton() {
+  return (
+    <ol className="space-y-2.5">
+      {SE_BRACKET_ROWS.map((row) => (
+        <li key={row.bone.en} className="rounded-2xl border border-line px-3 py-3">
+          <p lang="en" className="flex flex-wrap items-end gap-x-2 gap-y-3">
+            {row.chunks.map((c) => (
+              <SeChunk key={c.en} en={c.en} role={c.role} label={c.label} />
+            ))}
+          </p>
+          <p className="mt-1.5 text-[14px] text-ink-2">{row.ko}</p>
+          <p className="mt-2 flex flex-wrap items-center gap-2 border-t border-line pt-2">
+            <span className="rounded-md bg-chip px-2 py-0.5 text-[14px] font-extrabold">괄호 밖 뼈대</span>
+            <ArrowRight size={16} className="text-ink-3" />
+            <span className="text-[1.05em] font-medium">
+              <En en={row.bone.en} />
+            </span>
+          </p>
+        </li>
+      ))}
+    </ol>
+  );
+}

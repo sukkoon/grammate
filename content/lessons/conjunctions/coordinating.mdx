@@ -50,9 +50,13 @@ Jisu and I에도 and가 있지만 진짜 동사는 are 하나예요. and가 **�
 
 쉼표 규칙은 세 가지만 알면 충분해요.
 
-- **단어 두 개**를 이을 때: 쉼표 없이 A and B
-- **셋 이상**을 늘어놓을 때: A, B, and C처럼 쉼표로 나누고, 마지막 앞에만 and를 써요.
-- **절 두 개**를 이을 때: 접속사 앞에 쉼표를 찍는 게 보통이에요. 두 절이 아주 짧으면 빼기도 해요.
+<Compare
+  items={[
+    { title: "단어 두 개", sub: "A and B", tone: "sky", en: "Jisu [[and]] I", points: ["쉼표 없이 이어요"] },
+    { title: "셋 이상", sub: "A, B, and C", tone: "mint", en: "pizza, chicken, [[and]] {tteokbokki|명사:떡볶이}", points: ["쉼표로 나누고", "마지막 앞에만 and"] },
+    { title: "절 두 개", sub: "절, 접속사 + 절", tone: "amber", en: "{It|대명사:(날씨를 말할 때 자리를 채우는 말)} was cold, [[so]] we stayed inside.", points: ["접속사 앞에 쉼표가 보통", "아주 짧은 절이면 빼기도 해요"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="I like pizza, chicken, [[and]] {tteokbokki|명사:떡볶이}." ko="나는 피자, 치킨, 떡볶이를 좋아해." note="셋 이상: A, B, and C" />
@@ -108,8 +112,12 @@ because는 사실 등위접속사가 아니라 **종속접속사**예요. becaus
 
 명령문 뒤에 쉼표와 and, or를 붙이면 뜻이 조금 특별해져요. [명령문과 제안문](/learn/sentence-types/imperatives) 단원에서 잠깐 봤죠?
 
-- 명령문, **and** ~: ~해, **그러면** …할 거야 (좋은 결과)
-- 명령문, **or** ~: ~해, **그렇지 않으면** …할 거야 (나쁜 결과)
+<Compare
+  items={[
+    { title: "명령문, and ~", sub: "~해, 그러면 …할 거야", tone: "mint", points: ["시키는 대로 하면 생기는 좋은 결과"] },
+    { title: "명령문, or ~", sub: "~해, 그렇지 않으면 …할 거야", tone: "coral", points: ["하지 않으면 생기는 나쁜 결과", "= If you don't ~"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="{Hurry up}, [[or]] you'll be late." ko="서둘러, 그렇지 않으면 늦을 거야." />
@@ -131,7 +139,11 @@ if로 바꿔 쓸 수 있어요. or는 &lsquo;하지 않으면&rsquo;이라서 if
 
 <TermAnatomy id="parallel-structure" />
 
-접속사로 이은 양쪽은 **같은 모양**이어야 해요. 한쪽이 -ing면 다른 쪽도 -ing, 한쪽이 과거형이면 다른 쪽도 과거형이에요. 저울 양쪽에 같은 무게를 올려야 균형이 맞는 것과 같아요. 병렬 구조는 상관접속사 단원에서 한 번 더 만나요.
+접속사로 이은 양쪽은 **같은 모양**이어야 해요. 한쪽이 -ing면 다른 쪽도 -ing, 한쪽이 과거형이면 다른 쪽도 과거형이에요. 병렬 구조는 상관접속사 단원에서 한 번 더 만나요.
+
+<Figure caption="접속사 고리 양쪽에는 같은 모양의 칸을 이어요. 한 칸만 모양이 다르면 기차가 탈선해요.">
+  <CjTrainMatch />
+</Figure>
 
 <Examples>
   <Ex en="I like [[swimming]] and [[riding]] my bike." ko="나는 수영하는 것과 자전거 타는 것을 좋아해." note="동명사 + 동명사 (ride ✕)" />

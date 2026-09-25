@@ -159,20 +159,21 @@ body {
 .lesson > ol {
   margin: 0.9rem 0;
 }
-.lesson ul,
-.lesson ol {
+/* 마크다운으로 쓴 목록(class가 없는 ul·ol)만 꾸민다. 그림 속 목록(class가 있는 ul·ol)은 건드리지 않는다 */
+.lesson ul:not([class]),
+.lesson ol:not([class]) {
   padding-left: 1.3rem;
 }
-.lesson ul {
+.lesson ul:not([class]) {
   list-style: disc;
 }
-.lesson ol {
+.lesson ol:not([class]) {
   list-style: decimal;
 }
-.lesson li {
+.lesson :is(ul, ol):not([class]) > li {
   margin: 0.35rem 0;
 }
-.lesson li::marker {
+.lesson :is(ul, ol):not([class]) > li::marker {
   color: var(--coral);
 }
 .lesson strong {
@@ -273,8 +274,16 @@ body {
 
 /* ───────── 수준별 보기 (html[data-level] = elem | middle | high) ───────── */
 .lv-peek,
+.lv-fold,
 .lv-above {
   display: none;
+}
+/* 펼친 뒤에는 '접기' 단추를 보여 준다 (내 수준보다 높은 상자에서만) */
+html[data-level="elem"] [data-lv-min="middle"][data-open] > .lv-fold,
+html[data-level="elem"] [data-lv-min="high"][data-open] > .lv-fold,
+html[data-level="middle"] [data-lv-min="high"][data-open] > .lv-fold {
+  display: flex;
+  width: fit-content;
 }
 /* 내 수준보다 높은 내용은 접고 '살짝 보기' 단추만 보인다 */
 html[data-level="elem"] [data-lv-min="middle"]:not([data-open]) > .lv-body,

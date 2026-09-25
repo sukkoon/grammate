@@ -6,6 +6,10 @@
 
 &lsquo;조금 더&rsquo;가 아니라 &lsquo;**훨씬** 더&rsquo;라고 하고 싶을 때는 비교급 앞에 **much, even, far, a lot, still**을 써요. 뜻은 모두 &lsquo;훨씬&rsquo;이에요.
 
+<Figure caption="비교급만 쓰면 '조금이라도 더', 앞에 much를 붙이면 '훨씬 더'예요. 막대 사이의 차이가 확 벌어져요.">
+  <CpMuchGap />
+</Figure>
+
 <Examples>
   <Ex en="Your bike is [[{much|부사:훨씬} faster]] than mine." ko="네 자전거가 내 것보다 훨씬 빨라." />
   <Ex en="This puzzle is [[{even|부사:훨씬} {harder|형용사:더 어려운}]] than the last one." ko="이 퍼즐은 지난번 것보다 훨씬 어려워." />
@@ -16,12 +20,27 @@
 </Examples>
 
 <Tip mood="oops" title="very는 원급 전용이에요">
-very는 원급만 꾸며요. very tall은 되지만 very taller는 안 돼요. 거꾸로 much는 비교급을 꾸며요. 짝으로 외워 두세요. **very + 원급**, **much + 비교급**.
+very는 원급만 꾸미고, much는 비교급을 꾸며요. 짝으로 외워 두세요.
 </Tip>
+
+<Compare
+  items={[
+    { title: "very + 원급", sub: "아주 …한", tone: "sky", en: "My brother is [[very tall]].", points: ["very taller ✕"] },
+    { title: "much + 비교급", sub: "훨씬 더 …한", tone: "coral", en: "My brother is [[{much|부사:훨씬} taller]] than me.", points: ["much tall ✕", "even, far, a lot, still도 같아요"] },
+  ]}
+/>
 
 ## 비교급 and 비교급: 점점 더
 
 같은 비교급을 and로 두 번 이으면 **점점 더** …해진다는 뜻이에요. get, become, grow(~해지다) 같은 동사와 자주 함께 써요. more가 붙는 긴 말은 **more and more + 원급**이에요.
+
+<Compare
+  caption="점점 더: 짧은 말과 긴 말의 모양"
+  items={[
+    { title: "짧은 말", sub: "비교급 and 비교급", tone: "sky", en: "The days are {getting|동사:…해지는} [[longer and longer]].", ko: "낮이 점점 길어지고 있어." },
+    { title: "긴 말", sub: "more and more + 원급", tone: "amber", en: "The game is {getting|동사:…해지는} [[more and more exciting]].", ko: "경기가 점점 더 흥미진진해지고 있어.", points: ["more exciting and more exciting ✕"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="It is {getting|동사:…해지는} [[colder and colder]]." ko="날씨가 점점 추워지고 있어." />
@@ -40,8 +59,14 @@ very는 원급만 꾸며요. very tall은 되지만 very taller는 안 돼요. �
 
 만드는 방법은 간단해요. 원래 문장에서 비교급을 the와 함께 **맨 앞으로** 꺼내면 돼요.
 
-- You practice much. You play well.
-- → **The more** you practice, **the better** you play.
+<Steps
+  caption="~할수록 더 … 만들기"
+  steps={[
+    { title: "원래 두 문장", en: "You practice much. You play well." },
+    { title: "much, well을 비교급으로", en: "much → [[{more|부사:더 많이}]], well → [[{better|부사:더 잘}]]" },
+    { title: "the + 비교급을 각 절의 맨 앞으로", en: "[[The {more|부사:더 많이}]] you practice, [[the {better|부사:더 잘}]] you play.", note: "뒤에는 주어 + 동사 순서 그대로" },
+  ]}
+/>
 
 <Examples>
   <Ex en="[[The {higher|부사:더 높이}]] we climbed, [[the colder]] it {got|동사:…해졌다}." ko="높이 올라갈수록 더 추워졌어." />
@@ -73,6 +98,8 @@ The more you practice, the better you play.에는 진짜 동사가 practice와 p
 ## less + 원급 + than: ~보다 덜 …한
 
 less는 little의 비교급으로 &lsquo;덜&rsquo;이라는 뜻이에요. more의 반대쪽이죠. less 뒤에는 **원급**을 써요. not as ~ as와 뜻이 같아요.
+
+<Formula parts={["~amber:less", "+", "~sky:원급", "+", "than", "=", "not as + 원급 + as"]} en="My room is [[{less|부사:덜} messy than]] yours." ko="내 방은 네 방보다 덜 지저분해. = My room is not as messy as yours." />
 
 <Examples>
   <Ex en="This soup is [[{less|부사:덜} spicy than]] that one." ko="이 수프는 저 수프보다 덜 매워." note="= This soup is not as spicy as that one." />

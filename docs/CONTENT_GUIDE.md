@@ -66,11 +66,11 @@
 
 | 컴포넌트 | 쓰는 법 |
 |---|---|
-| `<DeepDive level="중1\|중2\|중3\|고1\|고2" title="…">…</DeepDive>` | 접히는 심화 상자. 수준보다 높으면 '살짝 보기'로 접힌다 |
+| `<DeepDive level="중1\|중2\|중3\|고1\|고2" title="…">…</DeepDive>` | 접히는 심화 상자. 수준보다 높으면 '○○ 문법까지 더 학습하기' 단추로 접힌다 |
 | `<ExamPoint title="…" level="middle\|high">…</ExamPoint>` | 시험 포인트. 기본값은 middle(내신), 수능은 high |
 | `<Easy>…</Easy>` | 초등에게만 보이는 쉬운 풀이 |
 | `<More from="middle\|high">…</More>` | 중등·고등에게만 보이는 설명. Easy와 짝으로 쓴다 |
-| `<Lv min="middle\|high">…</Lv>` | 아무 내용이나 수준 이상에서만 펼치고, 아래 수준에는 '살짝 보기'로 접는다 |
+| `<Lv min="middle\|high">…</Lv>` | 아무 내용이나 수준 이상에서만 펼치고, 아래 수준에는 '더 학습하기' 단추로 접는다 |
 
 ### 3-4. 문제와 게임
 
@@ -89,7 +89,18 @@ Quiz 문제 하나의 필드는 다음과 같다.
 - `why`: 해설
 - `level`: `"middle"`이나 `"high"`. 초등도 풀 수 있는 문제는 적지 않는다
 
-### 3-5. MDX 주의
+### 3-5. 작은 도식 (그림 파일 없이 바로 쓰는 시각화)
+
+| 컴포넌트 | 쓰는 법 |
+|---|---|
+| `<Formula caption="…" parts={["주어", "*be + p.p.", "(by + 행위자)"]} en="…" ko="…" />` | 문장 공식 띠. `*`는 강조 칸, `( )`는 생략 가능 칸, `"~sky:동사원형"`처럼 색(sky, mint, amber, coral) 지정. `"+"`, `","`, `"→"`, `"="`, `"/"`는 기호로 그린다 |
+| `<Compare caption="…" items={[{ title, sub?, tone?, en?, ko?, points?, mark? }]} />` | 두세 가지를 나란히 비교하는 카드. tone은 sky, mint, amber, coral. mark는 "ok"/"no" |
+| `<Steps caption="…" steps={[{ title, en?, ko?, note? }]} />` | 순서대로 따라 하는 단계 (바꿔 쓰기, 만드는 법) |
+
+- 설명 문단이 길어지면(3~4문장 이상) 그림, 표, Formula, Compare, Steps 중 하나로 **보이게** 만든다.
+- 공식은 Formula, 두 가지 비교는 Compare, 절차는 Steps, 여러 항목 정리는 마크다운 표, 개념의 핵심 비유는 직접 그린 그림(Figure).
+
+### 3-6. MDX 주의
 
 - **본문 글에 `{` `}` `<` `>`를 쓰지 않는다**(코드로 읽힌다). 화살표는 `→`를 쓴다.
 - **따옴표**: 본문에서는 `&lsquo;…&rsquo;`, `&ldquo;…&rdquo;`나 '…'를 쓴다.

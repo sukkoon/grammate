@@ -266,3 +266,323 @@ export function CpFiveWays() {
     </div>
   );
 }
+
+/* ───────── 공통: 맞음·틀림 표시 ───────── */
+
+function CpMark({ ok }: { ok: boolean }) {
+  return (
+    <span
+      aria-label={ok ? "맞는 문장" : "틀린 문장"}
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+        ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
+      }`}
+    >
+      {ok ? "✓" : "✕"}
+    </span>
+  );
+}
+
+/* ───────── 7. the + 최상급 + in / of ───────── */
+
+const CLASS_HEIGHTS = [28, 34, 44, 30, 36];
+const BROTHER_HEIGHTS = [44, 36, 28];
+
+/** in + 무리·장소(울타리 하나) / of + 여럿(하나씩 셀 수 있는 사람들) */
+export function CpInOf() {
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      <div className="rounded-2xl border border-line px-3 py-3">
+        <p className="flex flex-wrap items-center gap-2">
+          <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-[15px] font-extrabold text-sky-ink">in + 장소·무리</span>
+          <span className="text-[14px] text-ink-2">울타리 하나 안에서</span>
+        </p>
+        <div className="mt-3 rounded-2xl border-2 border-sky-ink/50 px-2 pb-1 pt-2" role="img" aria-label="한 반 울타리 안의 다섯 명 가운데 가장 큰 사람에게 왕관">
+          <p lang="en" className="text-[14px] font-extrabold text-sky-ink">
+            our class
+          </p>
+          <div className="flex items-end justify-center gap-1.5">
+            {CLASS_HEIGHTS.map((h) => (
+              <span key={h} className="flex flex-col items-center">
+                {h === 44 && <CrownIcon size={18} className="text-coral" />}
+                <PersonIcon size={h} className={h === 44 ? "text-coral" : "text-ink-3"} />
+              </span>
+            ))}
+          </div>
+        </div>
+        <p className="mt-2.5 text-[1.03em] font-medium">
+          <En en="He is [[the tallest]] boy [[in]] our class." />
+        </p>
+        <p lang="en" className="text-[14px] text-ink-2">in my family, in Korea, in the world</p>
+      </div>
+      <div className="rounded-2xl border border-line px-3 py-3">
+        <p className="flex flex-wrap items-center gap-2">
+          <span className="rounded-lg bg-amber-soft px-2.5 py-1 text-[15px] font-extrabold text-amber-ink">of + 여럿</span>
+          <span className="text-[14px] text-ink-2">하나씩 세는 사람들 가운데</span>
+        </p>
+        <div className="mt-3 flex items-end justify-center gap-3 pb-1 pt-2" role="img" aria-label="삼 형제 가운데 가장 어린 막내에게 왕관">
+          {BROTHER_HEIGHTS.map((h, i) => (
+            <span key={h} className="flex flex-col items-center">
+              {h === 28 && <CrownIcon size={18} className="text-coral" />}
+              <PersonIcon size={h} className={h === 28 ? "text-coral" : "text-ink-3"} />
+              <span className="mt-1 grid size-6 place-items-center rounded-full bg-amber-soft text-[14px] font-extrabold text-amber-ink">{i + 1}</span>
+            </span>
+          ))}
+        </div>
+        <p className="mt-2.5 text-[1.03em] font-medium">
+          <En en="Minsu is [[the youngest]] [[of]] the three brothers." />
+        </p>
+        <p lang="en" className="text-[14px] text-ink-2">of the three, of all, of my friends</p>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 8. 음절로 재요: -er일까, more일까 ───────── */
+
+const SYLLABLE_ROWS: { parts: string[]; en: string; how: string; tone: string }[] = [
+  { parts: ["tall"], en: "tall → [[taller]]", how: "1음절: -er", tone: "bg-chip text-ink" },
+  { parts: ["fa", "mous"], en: "famous → [[more famous]]", how: "2음절: more", tone: "bg-sky-soft text-sky-ink" },
+  { parts: ["beau", "ti", "ful"], en: "beautiful → [[more beautiful]]", how: "3음절: more", tone: "bg-sky-soft text-sky-ink" },
+  { parts: ["hap", "py"], en: "happy → [[happier]]", how: "2음절이지만 -y로 끝나서 -er", tone: "bg-amber-soft text-amber-ink" },
+];
+
+/** 모음 소리 덩어리(음절)를 세어 -er/-est와 more/most를 고른다 */
+export function CpSyllables() {
+  return (
+    <ul className="space-y-2">
+      {SYLLABLE_ROWS.map((r) => (
+        <li key={r.en} className="flex flex-col gap-2 rounded-2xl border border-line px-3 py-2.5 sm:flex-row sm:items-center sm:gap-4">
+          <span className="flex items-center gap-2 sm:w-44 sm:shrink-0">
+            <span lang="en" className="flex items-center gap-0.5 text-[1.08em] font-bold">
+              {r.parts.map((p, i) => (
+                <span key={p} className="flex items-center gap-0.5">
+                  {i > 0 && <span className="text-ink-3">·</span>}
+                  <span className="rounded-md bg-chip px-1.5">{p}</span>
+                </span>
+              ))}
+            </span>
+            <span className="flex gap-1" aria-label={`${r.parts.length}음절`}>
+              {r.parts.map((p) => (
+                <span key={p} className="size-2.5 rounded-full bg-coral" />
+              ))}
+            </span>
+          </span>
+          <span className="flex flex-wrap items-center gap-2">
+            <span className="text-[1.05em] font-medium">
+              <En en={r.en} />
+            </span>
+            <span className={`rounded-md px-2 py-0.5 text-[14px] font-extrabold ${r.tone}`}>{r.how}</span>
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* ───────── 9. as 두 개를 지워 보면 형용사·부사가 보여요 ───────── */
+
+type ErasePiece = { en: string; hl?: boolean } | { off: string };
+
+const ERASE_ROWS: { pieces: ErasePiece[]; left: { en: string }; verdict: string; tone: string }[] = [
+  {
+    pieces: [{ en: "She looks" }, { off: "as" }, { en: "happy", hl: true }, { off: "as" }, { en: "a child." }],
+    left: { en: "She looks [[happy]]." },
+    verdict: "look 뒤 보어 자리 → 형용사",
+    tone: "bg-mint-soft text-mint-ink",
+  },
+  {
+    pieces: [{ en: "He runs" }, { off: "as" }, { en: "quickly", hl: true }, { off: "as" }, { en: "a rabbit." }],
+    left: { en: "He runs [[quickly]]." },
+    verdict: "동사 runs를 꾸며요 → 부사",
+    tone: "bg-amber-soft text-amber-ink",
+  },
+];
+
+/** as ~ as 사이가 헷갈리면 as 두 개를 지우고 남은 문장을 읽는다 */
+export function CpEraseAs() {
+  return (
+    <ul className="space-y-2.5">
+      {ERASE_ROWS.map((r) => (
+        <li key={r.left.en} className="rounded-2xl border border-line px-3 py-3">
+          <p lang="en" className="flex flex-wrap items-center gap-1.5 text-[1.08em] font-medium">
+            {r.pieces.map((p, i) =>
+              "off" in p ? (
+                <span key={i} className="relative rounded-md border-2 border-dashed border-coral/60 px-1.5 text-ink-3" aria-label="지운 as">
+                  {p.off}
+                  <span className="absolute -right-1.5 -top-2 grid size-5 place-items-center rounded-full bg-coral text-[14px] font-extrabold leading-none text-white" aria-hidden>
+                    ✕
+                  </span>
+                </span>
+              ) : (
+                <span key={i} className={p.hl ? "rounded-md bg-sky-soft px-1.5 font-bold text-sky-ink" : ""}>
+                  <En en={p.en} />
+                </span>
+              ),
+            )}
+          </p>
+          <p className="mt-2 flex flex-wrap items-center gap-2 border-t border-line pt-2">
+            <span className="text-[14px] font-extrabold text-ink-3">지우고 읽기</span>
+            <ArrowRight size={16} className="text-ink-3" />
+            <span className="font-medium">
+              <En en={r.left.en} />
+            </span>
+            <span className={`rounded-md px-2 py-0.5 text-[14px] font-extrabold ${r.tone}`}>{r.verdict}</span>
+          </p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* ───────── 10. 훨씬 더: much + 비교급 ───────── */
+
+const GAP_ROWS: { title: string; sub: string; mine: number; yours: number; en: string }[] = [
+  { title: "비교급", sub: "조금이라도 더", mine: 58, yours: 68, en: "Your bike is [[faster]] than mine." },
+  { title: "much + 비교급", sub: "차이가 훨씬 커요", mine: 30, yours: 96, en: "Your bike is [[{much|부사:훨씬} faster]] than mine." },
+];
+
+const MUCH_WORDS = ["much", "even", "far", "a lot", "still"];
+
+/** 두 막대의 차이: 비교급은 조금이라도 더, much + 비교급은 훨씬 더 */
+export function CpMuchGap() {
+  return (
+    <div>
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {GAP_ROWS.map((r) => (
+          <li key={r.title} className="rounded-2xl border border-line px-3 py-3">
+            <p className="flex flex-wrap items-baseline gap-2">
+              <span className="font-extrabold">{r.title}</span>
+              <span className="text-[14px] text-ink-2">{r.sub}</span>
+            </p>
+            <div className="mt-2 grid grid-cols-[4.5rem_1fr] items-center gap-x-2 gap-y-1.5 text-[14px] font-bold" aria-hidden>
+              <span className="text-ink-2">내 자전거</span>
+              <span className="h-3.5 rounded-full bg-ink-3/50" style={{ width: `${r.mine}%` }} />
+              <span className="text-coral-ink">네 자전거</span>
+              <span className="h-3.5 rounded-full bg-coral" style={{ width: `${r.yours}%` }} />
+            </div>
+            <p className="mt-2.5 font-medium">
+              <En en={r.en} />
+            </p>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-1.5 text-[14px] font-bold">
+        <span className="text-ink-2">&lsquo;훨씬&rsquo; 자리에 오는 말</span>
+        {MUCH_WORDS.map((w) => (
+          <span key={w} lang="en" className="rounded-lg bg-coral-soft px-2 py-0.5 text-coral-ink">
+            {w}
+          </span>
+        ))}
+        <span lang="en" className="rounded-lg border-2 border-dashed border-ink-3 px-2 py-0.5 text-ink-3">
+          very ✕
+        </span>
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 11. 왜 other를 넣을까: 자기 자신은 빼고 견줘요 ───────── */
+
+const SEASONS = ["봄", "여름", "가을", "겨울"];
+
+function SeasonChip({ name }: { name: string }) {
+  const summer = name === "여름";
+  return (
+    <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${summer ? "bg-coral text-white" : "bg-chip text-ink"}`}>{name}</span>
+  );
+}
+
+/** any season에는 여름 자신도 들어 있다. any other season은 여름을 뺀 나머지 */
+export function CpOtherGroup() {
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      <div className="rounded-2xl border border-line px-3 py-3">
+        <p className="flex items-center gap-2">
+          <CpMark ok={false} />
+          <span className="font-medium">
+            <En en="Summer is hotter than [[{any|형용사:어떤 …라도} season]]." />
+          </span>
+        </p>
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5 rounded-2xl border-2 border-dashed border-coral/60 px-2 py-2.5">
+          {SEASONS.map((s) => (
+            <SeasonChip key={s} name={s} />
+          ))}
+        </div>
+        <p className="mt-2 text-[14px] text-ink-2">견주는 무리 안에 여름도 들어 있어요. 여름이 여름보다 더워야 하니 말이 안 돼요.</p>
+      </div>
+      <div className="rounded-2xl border-2 border-mint-ink/50 px-3 py-3">
+        <p className="flex items-center gap-2">
+          <CpMark ok />
+          <span className="font-medium">
+            <En en="Summer is hotter than [[{any|형용사:어떤 …라도} other season]]." />
+          </span>
+        </p>
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+          <SeasonChip name="여름" />
+          <span className="text-[14px] font-extrabold text-ink-3">vs</span>
+          <span className="flex flex-wrap gap-1.5 rounded-2xl border-2 border-dashed border-mint-ink/60 px-2 py-2">
+            {SEASONS.filter((s) => s !== "여름").map((s) => (
+              <SeasonChip key={s} name={s} />
+            ))}
+          </span>
+        </div>
+        <p className="mt-2 text-[14px] text-ink-2">
+          <b lang="en">other</b>가 여름을 무리 밖으로 빼 줘요. 남은 계절 하나하나와 견줘요.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 12. have ever p.p.: 지금까지 겪은 것 중 최고 ───────── */
+
+function Pizza({ best = false }: { best?: boolean }) {
+  return (
+    <svg width={best ? 34 : 26} height={best ? 34 : 26} viewBox="0 0 24 24" aria-hidden>
+      <circle cx="12" cy="12" r="10.5" style={{ fill: "var(--amber-soft)", stroke: "var(--amber-ink)", strokeWidth: 1.8 }} />
+      <circle cx="8.5" cy="9" r="1.9" style={{ fill: "var(--coral)" }} />
+      <circle cx="15" cy="8.5" r="1.9" style={{ fill: "var(--coral)" }} />
+      <circle cx="12" cy="15" r="1.9" style={{ fill: "var(--coral)" }} />
+    </svg>
+  );
+}
+
+const PIZZA_DOTS = [false, false, true, false];
+
+/** 처음부터 지금까지 먹어 본 피자들 가운데 최고 하나 */
+export function CpEverTimeline() {
+  return (
+    <div className="mx-auto max-w-xl">
+      <div className="px-1 pt-7" role="img" aria-label="과거부터 지금까지 먹어 본 피자 네 판 가운데 하나에 왕관">
+        <div className="relative flex items-center justify-between">
+          <span className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-ink-3/40" aria-hidden />
+          <span className="relative rounded-lg bg-chip px-2 py-0.5 text-[14px] font-extrabold text-ink-2">처음</span>
+          {PIZZA_DOTS.map((best, i) => (
+            <span key={i} className="relative flex flex-col items-center">
+              {best && (
+                <span className="absolute -top-6">
+                  <CrownIcon size={20} className="text-coral" />
+                </span>
+              )}
+              <Pizza best={best} />
+            </span>
+          ))}
+          <span className="relative flex items-center gap-1 rounded-lg bg-coral px-2 py-0.5 text-[14px] font-extrabold text-white">
+            지금
+            <ArrowRight size={14} />
+          </span>
+        </div>
+      </div>
+      <div className="mt-3 flex items-center gap-2 px-1">
+        <span className="h-2.5 flex-1 rounded-b-lg border-x-2 border-b-2 border-sky-ink" aria-hidden />
+      </div>
+      <p className="mt-1 text-center text-[14px] font-bold text-sky-ink">
+        <span lang="en">have ever eaten</span> = 지금까지 먹어 본 (현재완료)
+      </p>
+      <p className="mt-3 text-center text-[1.05em] font-medium">
+        <En en="This is [[the most delicious]] pizza I [[{have|조동사:완료형을 만드는 말} ever eaten]]." />
+      </p>
+      <p className="text-center text-[14px] text-ink-2">이건 내가 지금까지 먹어 본 피자 중 가장 맛있어.</p>
+    </div>
+  );
+}

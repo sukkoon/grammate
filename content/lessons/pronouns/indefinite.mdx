@@ -12,6 +12,10 @@ one은 &lsquo;같은 종류의 하나&rsquo;예요. 펜을 잃어버렸으면 &l
 
 ## one과 it: 같은 종류냐, 바로 그것이냐
 
+<Figure caption="it은 잃어버렸던 바로 그 펜을, one은 펜이라는 종류 가운데 아무거나 하나를 가리켜요.">
+  <PnOneOrIt />
+</Figure>
+
 <Examples>
   <Ex en="I lost my pen. I need a new [[one]]." ko="펜을 잃어버렸어. 새 거 하나가 필요해." note="one = 같은 종류(펜)의 다른 하나" />
   <Ex en="I found my pen. [[It]] was under the desk." ko="펜을 찾았어. 책상 아래에 있었어." note="it = 잃어버렸던 바로 그 펜" />
@@ -39,12 +43,18 @@ one은 &lsquo;같은 종류의 하나&rsquo;예요. 펜을 잃어버렸으면 &l
 another는 &lsquo;an + other&rsquo;, 즉 &lsquo;다른 하나&rsquo;예요. 아직 더 남아 있을 때 &ldquo;또 하나&rdquo;를 고르는 말이에요. Can I have another cookie? (쿠키 하나 더 먹어도 돼요?)
 </Tip>
 
+<Formula caption="another를 쪼개 보면" parts={["an (하나)", "+", "other (다른)", "=", "*another (또 다른 하나)"]} ko="an이 들어 있어서 뒤에는 단수 명사가 와요: another cookie" />
+
 ## some과 any
 
 둘 다 &lsquo;몇몇, 약간&rsquo;이라는 뜻이지만 쓰는 문장이 달라요.
 
-- **some**: 긍정문. 그리고 무언가를 **권하거나 부탁**하는 의문문
-- **any**: 부정문과 의문문
+<Compare
+  items={[
+    { title: "some", sub: "긍정문, 그리고 권하거나 부탁하는 의문문", tone: "mint", en: "I have [[some]] candy.", ko: "나는 사탕이 좀 있어." },
+    { title: "any", sub: "부정문과 의문문", tone: "sky", en: "Is there [[any]] milk?", ko: "우유 좀 있어?" },
+  ]}
+/>
 
 <Examples>
   <Ex en="I have [[some]] money." ko="나는 돈이 조금 있어." note="긍정문: some" />
@@ -54,6 +64,14 @@ another는 &lsquo;an + other&rsquo;, 즉 &lsquo;다른 하나&rsquo;예요. 아�
 </Examples>
 
 <DeepDive level="중3" title="each, every, all, both와 동사의 짝">
+
+<Compare
+  caption="단수 짝과 복수 짝"
+  items={[
+    { title: "each, every", sub: "+ 단수 명사 + 단수 동사", tone: "amber", points: ["each: 하나하나 모두", "every: 모든 (뜻은 '모든'이어도 단수!)"] },
+    { title: "all, both", sub: "+ 복수 명사 + 복수 동사", tone: "sky", points: ["all: 모두", "both: 둘 다"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="[[Each]] student has a locker." ko="학생마다 사물함이 있어." note="each + 단수 명사 + 단수 동사 (has)" />

@@ -5,7 +5,7 @@ import { ArrowRight, CrownIcon, MaskIcon } from "./icons";
 
 /* ───────── 만드는 3단계 ───────── */
 
-type Pc2Kind = "plain" | "cut" | "conj" | "verb" | "verbal";
+type Pc2Kind = "plain" | "cut" | "conj" | "verb" | "verbal" | "keep";
 type Pc2Bit = { en: string; kind: Pc2Kind };
 
 function Pc2Word({ bit }: { bit: Pc2Bit }) {
@@ -37,6 +37,13 @@ function Pc2Word({ bit }: { bit: Pc2Bit }) {
           <En en={bit.en} />
         </span>
       );
+    case "keep":
+      // 지우지 않고 남기는 주어: 형광 표시
+      return (
+        <span className="rounded-lg bg-marker px-1.5 py-0.5 text-ink">
+          <En en={bit.en} />
+        </span>
+      );
     default:
       return (
         <span className="py-0.5">
@@ -46,7 +53,9 @@ function Pc2Word({ bit }: { bit: Pc2Bit }) {
   }
 }
 
-const PC2_STEPS: { key: string; step: string; title: string; bits: Pc2Bit[]; note: string; last?: boolean }[] = [
+type Pc2StepData = { key: string; step: string; title: string; bits: Pc2Bit[]; note: string; last?: boolean };
+
+const PC2_STEPS: Pc2StepData[] = [
   {
     key: "start",
     step: "처음",
@@ -107,11 +116,11 @@ const PC2_STEPS: { key: string; step: string; title: string; bits: Pc2Bit[]; not
   },
 ];
 
-/** 부사절 → 분사구문: 접속사 지우기 → 같은 주어 지우기 → 동사를 -ing로 */
-export function Pc2ThreeSteps() {
+/** 단계별로 문장이 바뀌는 모습을 차례로 보여 주는 목록 */
+function Pc2StepList({ steps }: { steps: Pc2StepData[] }) {
   return (
     <ol className="space-y-2.5">
-      {PC2_STEPS.map((s) => (
+      {steps.map((s) => (
         <li key={s.key} className={`rounded-2xl px-4 py-3 ${s.last ? "bg-mint-soft/60 ring-2 ring-mint-ink/40" : "border border-line"}`}>
           <p className="flex flex-wrap items-baseline gap-x-2">
             <span className={`rounded-lg px-2 py-0.5 text-[14px] font-extrabold ${s.key === "start" ? "bg-chip text-ink-2" : "bg-ink text-on-ink"}`}>
@@ -129,6 +138,80 @@ export function Pc2ThreeSteps() {
       ))}
     </ol>
   );
+}
+
+/** 부사절 → 분사구문: 접속사 지우기 → 같은 주어 지우기 → 동사를 -ing로 */
+export function Pc2ThreeSteps() {
+  return <Pc2StepList steps={PC2_STEPS} />;
+}
+
+/* ───────── 독립분사구문: 주어가 다르면 남겨요 ───────── */
+
+const PC2_ABS_STEPS: Pc2StepData[] = [
+  {
+    key: "start",
+    step: "처음",
+    title: "부사절 + 주절",
+    bits: [
+      { en: "Because", kind: "conj" },
+      { en: "{it|비인칭 주어:날씨를 말하는 it}", kind: "plain" },
+      { en: "was", kind: "verb" },
+      { en: "{fine|형용사:(날씨가) 맑은},", kind: "plain" },
+      { en: "we", kind: "plain" },
+      { en: "went", kind: "verb" },
+      { en: "on a picnic.", kind: "plain" },
+    ],
+    note: "접속사 1개 → 진짜 동사 2개 (was, went)",
+  },
+  {
+    key: "s1",
+    step: "1단계",
+    title: "접속사를 지워요",
+    bits: [
+      { en: "Because", kind: "cut" },
+      { en: "{it|비인칭 주어:날씨를 말하는 it}", kind: "plain" },
+      { en: "was", kind: "verb" },
+      { en: "{fine|형용사:(날씨가) 맑은},", kind: "plain" },
+      { en: "we", kind: "plain" },
+      { en: "went", kind: "verb" },
+      { en: "on a picnic.", kind: "plain" },
+    ],
+    note: "접속사가 0개가 되면 진짜 동사도 1개만 남아야 해요.",
+  },
+  {
+    key: "s2",
+    step: "2단계",
+    title: "두 주어를 견줘 봐요: 다르면 남겨요",
+    bits: [
+      { en: "{it|비인칭 주어:날씨를 말하는 it}", kind: "keep" },
+      { en: "was", kind: "verb" },
+      { en: "{fine|형용사:(날씨가) 맑은},", kind: "plain" },
+      { en: "we", kind: "keep" },
+      { en: "went", kind: "verb" },
+      { en: "on a picnic.", kind: "plain" },
+    ],
+    note: "날씨의 it과 우리(we)는 달라요. it을 지우면 주인이 we로 읽혀서 '우리가 맑아서'가 돼 버려요. 그래서 남겨요.",
+  },
+  {
+    key: "s3",
+    step: "3단계",
+    title: "동사를 -ing로 바꿔요",
+    bits: [
+      { en: "{It|비인칭 주어:날씨를 말하는 it}", kind: "keep" },
+      { en: "being", kind: "verbal" },
+      { en: "{fine|형용사:(날씨가) 맑은},", kind: "plain" },
+      { en: "we", kind: "plain" },
+      { en: "went", kind: "verb" },
+      { en: "on a picnic.", kind: "plain" },
+    ],
+    note: "was → being. 주어 It이 분사 앞에 그대로 남은 모양이 독립분사구문이에요.",
+    last: true,
+  },
+];
+
+/** 부사절의 주어가 주절의 주어와 다르면 지우지 않고 분사 앞에 남긴다 */
+export function Pc2AbsoluteSteps() {
+  return <Pc2StepList steps={PC2_ABS_STEPS} />;
 }
 
 /* ───────── 분사구문의 여섯 가지 뜻 ───────── */

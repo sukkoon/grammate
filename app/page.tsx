@@ -63,6 +63,11 @@ export default function Home() {
               전체 목차 보기
             </Link>
           </div>
+          <p className="mt-4 text-[15px]">
+            <Link href="/roadmap" className="font-bold text-coral-ink hover:underline">
+              초등·중등·고등 수준별 필수 문법 보기 ›
+            </Link>
+          </p>
         </div>
 
         <div className="relative">

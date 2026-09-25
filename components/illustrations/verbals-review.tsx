@@ -206,3 +206,82 @@ export function VrActivePassive() {
     </div>
   );
 }
+
+/* ───────── 4. 생략된 접속사·관계사도 센다 ───────── */
+
+type VrKind = "plain" | "verb" | "ghost";
+
+function VrWord({ en, kind }: { en: string; kind: VrKind }) {
+  if (kind === "ghost")
+    // 생략된 말: 점선 칸에 흐리게 (뜻 풍선 없이)
+    return (
+      <span className="rounded-lg border-2 border-dashed border-ink-3 px-1.5 py-0.5 text-ink-3" title="생략된 말">
+        ({en})
+      </span>
+    );
+  if (kind === "verb")
+    return (
+      <span className="inline-flex items-center gap-1 rounded-lg bg-coral px-1.5 py-0.5 text-white">
+        <CrownIcon size={16} />
+        <En en={en} />
+      </span>
+    );
+  return (
+    <span className="py-0.5">
+      <En en={en} />
+    </span>
+  );
+}
+
+const VR_HIDDEN: { key: string; bits: { en: string; kind: VrKind }[]; hidden: string; count: string; hint: string }[] = [
+  {
+    key: "that",
+    bits: [
+      { en: "I", kind: "plain" },
+      { en: "think", kind: "verb" },
+      { en: "that", kind: "ghost" },
+      { en: "the plan", kind: "plain" },
+      { en: "sounds", kind: "verb" },
+      { en: "great.", kind: "plain" },
+    ],
+    hidden: "숨은 접속사 that",
+    count: "1 + 1 = 진짜 동사 2개 (think, sounds)",
+    hint: "think, know, say 뒤에서 that이 자주 숨어요.",
+  },
+  {
+    key: "which",
+    bits: [
+      { en: "The book", kind: "plain" },
+      { en: "which", kind: "ghost" },
+      { en: "I", kind: "plain" },
+      { en: "borrowed", kind: "verb" },
+      { en: "was", kind: "verb" },
+      { en: "really interesting.", kind: "plain" },
+    ],
+    hidden: "숨은 관계대명사 which(that)",
+    count: "1 + 1 = 진짜 동사 2개 (borrowed, was)",
+    hint: "명사 바로 뒤에 '주어 + 동사'가 붙으면 관계대명사가 숨은 신호예요.",
+  },
+];
+
+/** 보이지 않는 that·관계대명사도 하나로 세면 진짜 동사 자리가 하나 늘어난다 */
+export function VrHiddenLink() {
+  return (
+    <ul className="grid gap-2.5">
+      {VR_HIDDEN.map((h) => (
+        <li key={h.key} className="rounded-2xl border border-line px-4 py-3">
+          <p lang="en" className="flex flex-wrap items-center gap-x-1.5 gap-y-2 text-[1.1em] font-medium">
+            {h.bits.map((b, i) => (
+              <VrWord key={i} en={b.en} kind={b.kind} />
+            ))}
+          </p>
+          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[14px] font-bold">
+            <span className="rounded-full border-2 border-dashed border-ink-3 px-2.5 py-0.5 text-ink-2">{h.hidden}</span>
+            <span className="rounded-full bg-coral-soft px-2.5 py-0.5 text-coral-ink">{h.count}</span>
+          </p>
+          <p className="mt-1.5 text-[14px] text-ink-2">{h.hint}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}

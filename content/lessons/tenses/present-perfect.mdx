@@ -6,10 +6,17 @@
 
 ## 과거와 지금을 잇는 다리
 
+<Formula
+  caption="현재완료의 공식: 주어가 3인칭 단수면 has"
+  parts={["주어", "+", "*have / has", "+", "~sky:p.p. (과거분사)"]}
+  en="Jisu [[has finished]] her homework."
+  ko="지수는 숙제를 다 끝냈어."
+/>
+
 과거형은 과거의 한 점만 말해요. &ldquo;그때 그랬어.&rdquo; 지금은 어떤지 관심이 없어요. 현재완료는 과거의 일을 **지금의 눈으로** 봐요. &ldquo;그 일 때문에 지금 이래.&rdquo;
 
-<Figure caption="현재완료는 과거에서 출발해 '지금'에 닿는 화살표예요. 이 화살표가 무엇을 말하느냐에 따라 네 가지 쓰임이 있어요.">
-  <TnPerfectBridge />
+<Figure caption="같은 '잃어버렸어'라도 과거형은 어제의 한 점에서 끝나고, 현재완료는 지금까지 화살표가 이어져요.">
+  <TnPastVsPerfect />
 </Figure>
 
 <Examples title="과거형과 현재완료 비교">
@@ -19,7 +26,15 @@
 
 ## 현재완료의 네 가지 쓰임
 
+<Figure caption="현재완료는 과거에서 출발해 '지금'에 닿는 화살표예요. 이 화살표가 무엇을 말하느냐에 따라 네 가지 쓰임이 있어요.">
+  <TnPerfectBridge />
+</Figure>
+
+네 가지 쓰임은 모두 지금에 닿지만, 시간선 위에 그리는 모양이 저마다 달라요. 소제목마다 모양을 먼저 보고 예문을 읽어 보세요.
+
 ### ① 완료: 막 ~했다, 벌써 ~했다
+
+<TnPerfectShapes only="done" />
 
 <Examples>
   <Ex en="I [[have just finished]] my homework." ko="나 방금 숙제 끝냈어." note="just: 방금" />
@@ -29,6 +44,8 @@
 
 ### ② 경험: ~해 본 적 있다
 
+<TnPerfectShapes only="times" />
+
 <Examples>
   <Ex en="I [[have been]] to Jeju twice." ko="나는 제주도에 두 번 가 봤어." />
   <Ex en="[[Have]] you [[ever seen]] a real panda?" ko="진짜 판다를 본 적 있니?" note="ever: 지금까지 한 번이라도" />
@@ -37,13 +54,21 @@
 
 ### ③ 계속: 지금까지 쭉 ~해 왔다
 
+<TnPerfectShapes only="span" />
+
 <Examples>
   <Ex en="We [[have lived]] in Seoul for ten years." ko="우리는 10년 동안 서울에 살고 있어." note="for + 기간: ~ 동안" />
   <Ex en="I [[have known]] Minsu since 2020." ko="나는 2020년부터 민수를 알고 지냈어." note="since + 시작한 때: ~ 이후로" />
   <Ex en="How long [[have]] you [[studied]] English?" ko="영어를 얼마나 오래 공부했어?" />
 </Examples>
 
+<Figure caption="since는 시작한 때에 꽂는 깃발, for는 그 깃발부터 지금까지의 길이예요. 같은 일을 두 가지로 말할 수 있어요.">
+  <TnForSince />
+</Figure>
+
 ### ④ 결과: ~해 버렸다 (그래서 지금 ~하다)
+
+<TnPerfectShapes only="result" />
 
 <Examples>
   <Ex en="He [[has gone]] to London." ko="그는 런던에 가 버렸어. (그래서 지금 여기 없어)" />
@@ -58,6 +83,14 @@ for 뒤에는 **기간**(얼마 동안: for three days, for a year), since 뒤�
 
 현재완료는 **지금**과 이어진 이야기라서, **분명한 과거 시간**(yesterday, last week, ago, in 2019, When…?)과 함께 쓸 수 없어요. 이런 말이 있으면 과거형을 써요.
 
+<Compare
+  caption="시간 표현을 보고 현재완료와 과거형을 골라요"
+  items={[
+    { title: "현재완료와 어울려요", sub: "지금과 이어진 말", tone: "mint", mark: "ok", points: ["just, already, yet", "ever, never, before", "for + 기간, since + 시작점", "how long"] },
+    { title: "과거형만 써요", sub: "과거의 한 점을 딱 찍는 말", tone: "coral", mark: "no", points: ["yesterday, last week", "two days ago", "in 2019", "When…?"] },
+  ]}
+/>
+
 <Examples>
   <Ex en="I [[saw]] the movie last week." ko="나는 지난주에 그 영화를 봤어." note="last week → 과거형" />
   <Ex en="When [[did]] you [[arrive]]?" ko="언제 도착했어?" note="When…?으로 묻는 건 과거의 한 점이라 과거형" />
@@ -66,6 +99,14 @@ for 뒤에는 **기간**(얼마 동안: for three days, for a year), since 뒤�
 <DeepDive level="중2" title="have been to와 have gone to">
 
 둘 다 &lsquo;~에 갔다&rsquo; 같지만 뜻이 전혀 달라요.
+
+<Compare
+  caption="지금 그 사람이 어디 있는지 보면 구별돼요"
+  items={[
+    { title: "have been to", sub: "경험: 갔다가 돌아왔어요", tone: "sky", en: "Minsu [[has been to]] Busan.", ko: "민수는 부산에 가 본 적이 있어.", points: ["민수는 지금 여기 있어요"] },
+    { title: "have gone to", sub: "결과: 가 버렸어요", tone: "coral", en: "Minsu [[has gone to]] Busan.", ko: "민수는 부산에 가 버렸어.", points: ["민수는 지금 여기 없어요"] },
+  ]}
+/>
 
 <Examples>
   <Ex en="I [[have been to]] Japan." ko="나는 일본에 가 본 적이 있어." note="경험: 지금은 돌아와서 여기 있어요." />

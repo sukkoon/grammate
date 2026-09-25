@@ -11,13 +11,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${brand.nameKo} · ${brand.tagline}`,
-    template: `%s · ${brand.nameKo}`,
+    default: `${brand.appName} · 내 문법 짝꿍`,
+    template: `%s · ${brand.appName}`,
   },
   description: brand.description,
-  applicationName: brand.nameKo,
+  applicationName: brand.appName,
+  appleWebApp: { capable: true, title: brand.appName, statusBarStyle: "default" },
   openGraph: {
-    title: `${brand.nameKo} (${brand.name})`,
+    title: `${brand.appName} (${brand.nameKo})`,
+    siteName: brand.appName,
     description: brand.description,
     locale: "ko_KR",
     type: "website",

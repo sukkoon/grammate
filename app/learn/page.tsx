@@ -20,6 +20,11 @@ export default function LearnPage() {
         베스트셀러 문법책 9종의 목차를 모두 모아 순서를 다시 짰어요.{" "}
         {ready === total ? `모두 ${total}개 단원을 지금 바로 공부할 수 있어요.` : `지금 ${ready}개 단원을 공부할 수 있고, 모두 ${total}개 단원을 차례로 채우고 있어요.`}
       </p>
+      <p className="mt-3">
+        <Link href="/roadmap" className="inline-flex items-center rounded-full bg-coral-soft px-4 py-2 text-[15px] font-bold text-coral-ink hover:bg-coral-soft/70">
+          내 수준에서 꼭 알아야 할 문법만 골라 보기 ›
+        </Link>
+      </p>
 
       <div className="mt-10 space-y-12">
         {curriculum.map((part) => (
@@ -82,6 +87,7 @@ export default function LearnPage() {
           </div>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {[
+              { href: "/roadmap", title: "수준별 필수 문법", sub: "초등·중등·고등에서 꼭 알아야 할 문법만 골랐어요" },
               { href: "/terms", title: "문법 용어 사전", sub: "용어를 글자 조각의 뜻으로 풀었어요" },
               { href: "/verbs", title: "불규칙 동사표", sub: "모양별로 찾고, 가리고 외우고, 들어 봐요" },
             ].map((a) => (

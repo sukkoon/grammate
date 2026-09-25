@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { En } from "@/components/lesson/En";
 import { ArrowRight, CrownIcon, PersonIcon } from "./icons";
 
-/* 조동사 장 그림: 도우미 조동사, 부정·의문 만들기, must not vs don't have to, 확신 사다리, 과거 돌아보기, should 공식, So do I */
+/* 조동사 장 그림: 도우미 조동사, 부정·의문 만들기, must not vs don't have to, 확신 사다리, 과거 돌아보기, should 공식, So do I, 충고의 세기, must의 두 얼굴, not이 붙을 때, have p.p.로 과거 밀기, 후회는 사실과 반대, can·must의 모양 바꾸기, used to, 대동사 */
 
 /* ───────── 공통 도우미 ───────── */
 
@@ -535,6 +535,566 @@ export function MdSoNeither() {
                 </p>
               ))}
             </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ───────── 8. 충고·의무의 세기: must → had better → should ───────── */
+
+const ADVICE: { modal: string; ko: string; feel: string; level: number; tone: string; en: string; enKo: string; full?: boolean }[] = [
+  {
+    modal: "must",
+    ko: "꼭 ~해야 한다",
+    feel: "안 하면 큰일 나요",
+    level: 100,
+    tone: "var(--coral)",
+    en: "You [[must]] stop at a {red light|명사:빨간불}.",
+    enKo: "빨간불에서는 꼭 멈춰야 해.",
+  },
+  {
+    modal: "had better",
+    ko: "~하는 게 좋을 거야",
+    feel: "안 하면 곤란해질걸 (경고)",
+    level: 72,
+    tone: "var(--amber-ink)",
+    en: "You [[{had better}]] hurry, {or|접속사:그렇지 않으면} you'll miss the bus.",
+    enKo: "서두르는 게 좋을 거야, 안 그러면 버스 놓쳐.",
+    full: true,
+  },
+  {
+    modal: "should",
+    ko: "~하는 게 좋겠다",
+    feel: "그러면 좋겠어 (부드러운 충고)",
+    level: 45,
+    tone: "var(--sky-ink)",
+    en: "You [[should]] ask your teacher.",
+    enKo: "선생님께 여쭤보는 게 좋겠어.",
+  },
+];
+
+/** 해야 한다는 말의 세기. withHadBetter를 주면 had better까지 세 칸 */
+export function MdAdviceScale({ withHadBetter = false }: { withHadBetter?: boolean }) {
+  const rows = ADVICE.filter((r) => withHadBetter || !r.full);
+  return (
+    <div>
+      <p className="flex items-center justify-between text-[14px] font-extrabold text-ink-2">
+        <span>세게</span>
+        <span aria-hidden className="mx-2 h-px flex-1 bg-line" />
+        <span>부드럽게</span>
+      </p>
+      <ol className="mt-2 space-y-2">
+        {rows.map((r) => (
+          <li key={r.modal} className="rounded-2xl border border-line px-4 py-3">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+              <span lang="en" className="text-[1.12em] font-extrabold">
+                {r.modal}
+              </span>
+              <span className="text-[14.5px] font-bold text-ink-2">{r.ko}</span>
+            </div>
+            <div className="mt-2 flex items-center gap-2.5">
+              <span className="h-3 flex-1 overflow-hidden rounded-full bg-chip" aria-hidden>
+                <span className="block h-3 rounded-full" style={{ width: `${r.level}%`, background: r.tone }} />
+              </span>
+              <span className="w-32 shrink-0 text-right text-[14px] text-ink-2">{r.feel}</span>
+            </div>
+            <p className="mt-1.5 text-[1.05em] font-medium">
+              <En en={r.en} />
+            </p>
+            <p className="text-[14px] text-ink-2">{r.enKo}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+/* ───────── 9. must의 두 얼굴: 의무 vs 추측 ───────── */
+
+function RuleBoardIcon() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden style={{ stroke: "var(--sky-ink)" }}>
+      <rect x="5" y="3.5" width="14" height="18" rx="2" />
+      <path d="M8.5 8.5h7M8.5 12.5h7M8.5 16.5h4" />
+    </svg>
+  );
+}
+
+function MagnifierIcon() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" strokeWidth="2.4" strokeLinecap="round" aria-hidden style={{ stroke: "var(--coral-ink)" }}>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="M15.5 15.5 20.5 20.5" />
+    </svg>
+  );
+}
+
+const TWO_MUSTS: {
+  key: string;
+  icon: ReactNode;
+  title: string;
+  ko: string;
+  tone: string;
+  clues: string[];
+  en: string;
+  enKo: string;
+  neg: { en: string; ko: string };
+}[] = [
+  {
+    key: "duty",
+    icon: <RuleBoardIcon />,
+    title: "의무의 must",
+    ko: "~해야 한다",
+    tone: "bg-sky-soft text-sky-ink",
+    clues: ["규칙, 꼭 할 일을 말해요", "뒤에 finish, wear, clean 같은 동작 동사가 많아요"],
+    en: "Students [[{must|조동사:~해야 한다} {turn off}]] their phones in class.",
+    enKo: "학생들은 수업 중에 휴대폰을 꺼야 해.",
+    neg: { en: "[[must not]]", ko: "~하면 안 된다 (금지)" },
+  },
+  {
+    key: "guess",
+    icon: <MagnifierIcon />,
+    title: "추측의 must",
+    ko: "틀림없이 ~이다",
+    tone: "bg-coral-soft text-coral-ink",
+    clues: ["눈앞의 증거를 보고 짐작해요", "뒤에 be, know, love, have(가지다) 같은 상태 동사가 많아요"],
+    en: "Her eyes are red. She [[{must|조동사:~임에 틀림없다} be]] sleepy.",
+    enKo: "눈이 빨개. 졸린 게 틀림없어.",
+    neg: { en: "[[{can't|조동사:~일 리가 없다} be]]", ko: "~일 리가 없다" },
+  },
+];
+
+/** must는 두 얼굴: 규칙을 말하면 의무, 증거로 짐작하면 추측. 반대말도 서로 달라요 */
+export function MdTwoMusts() {
+  return (
+    <div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {TWO_MUSTS.map((m) => (
+          <div key={m.key} className="flex flex-col rounded-2xl border border-line">
+            <div className={`flex items-center gap-2.5 rounded-t-2xl px-4 py-2.5 ${m.tone}`}>
+              {m.icon}
+              <span>
+                <span className="block font-extrabold">{m.title}</span>
+                <span className="block text-[14px] font-bold">{m.ko}</span>
+              </span>
+            </div>
+            <div className="grid flex-1 content-start gap-2 px-4 py-3">
+              <ul className="grid gap-1 text-[14.5px]">
+                {m.clues.map((c) => (
+                  <li key={c} className="flex gap-1.5">
+                    <span aria-hidden className="text-ink-3">
+                      ·
+                    </span>
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="rounded-xl bg-chip px-3 py-2">
+                <span className="block text-[1.03em] font-medium">
+                  <En en={m.en} />
+                </span>
+                <span className="block text-[14px] text-ink-2">{m.enKo}</span>
+              </p>
+              <p className="text-[14.5px]">
+                <span className="mr-1.5 rounded-md bg-chip px-1.5 py-0.5 text-[14px] font-extrabold text-ink-2">반대말</span>
+                <span className="font-medium">
+                  <En en={m.neg.en} />
+                </span>{" "}
+                <span className="text-[14px] text-ink-2">{m.neg.ko}</span>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 text-center text-[14px] text-ink-2">마지막 판단은 언제나 문맥이에요. be가 와도 규칙을 말하면 의무예요.</p>
+    </div>
+  );
+}
+
+/* ───────── 10. not이 붙으면: may not be는 그대로 약하게, couldn't be는 확 세게 ───────── */
+
+type NotStep = { form: string; ko: string; level: number; tone: string };
+
+const NOT_SHIFTS: { key: string; title: string; from: NotStep; to: NotStep; en: string; enKo: string }[] = [
+  {
+    key: "may",
+    title: "may + not: 여전히 약해요",
+    from: { form: "may be", ko: "~일지도 몰라", level: 45, tone: "var(--sky-ink)" },
+    to: { form: "may not be", ko: "~이 아닐지도 몰라", level: 45, tone: "var(--sky-ink)" },
+    en: "It [[{may|조동사:~일지도 모른다} not be]] true.",
+    enKo: "그건 사실이 아닐지도 몰라.",
+  },
+  {
+    key: "could",
+    title: "could + not: 확 세져요",
+    from: { form: "could be", ko: "~일 수도 있어", level: 40, tone: "var(--sky-ink)" },
+    to: { form: "couldn't be", ko: "~일 리가 없어 (= can't be)", level: 95, tone: "var(--coral)" },
+    en: "It [[{couldn't|조동사:~일 리가 없다} be]] true.",
+    enKo: "그게 사실일 리가 없어.",
+  },
+];
+
+function NotBar({ step }: { step: NotStep }) {
+  return (
+    <div>
+      <p className="flex flex-wrap items-baseline justify-between gap-x-2">
+        <span lang="en" className="font-extrabold">
+          {step.form}
+        </span>
+        <span className="text-[14px] text-ink-2">{step.ko}</span>
+      </p>
+      <span className="mt-1 block h-3 overflow-hidden rounded-full bg-chip" aria-hidden>
+        <span className="block h-3 rounded-full" style={{ width: `${step.level}%`, background: step.tone }} />
+      </span>
+    </div>
+  );
+}
+
+/** not 하나로 확신의 세기가 달라지는 두 경우. 막대는 확신의 세기 */
+export function MdNotShift() {
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      {NOT_SHIFTS.map((s) => (
+        <div key={s.key} className="rounded-2xl border border-line px-4 py-3">
+          <p className="font-extrabold">{s.title}</p>
+          <div className="mt-2.5 grid gap-1.5">
+            <NotBar step={s.from} />
+            <p className="text-center text-[14px] font-extrabold text-ink-3">↓ not</p>
+            <NotBar step={s.to} />
+          </div>
+          <p className="mt-3 text-[1.03em] font-medium">
+            <En en={s.en} />
+          </p>
+          <p className="text-[14px] text-ink-2">{s.enKo}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ───────── 11. 왜 have p.p.? be 자리를 have been으로 ───────── */
+
+type ShiftChip = { en: string; kind?: "modal" | "have" };
+
+const SHIFT_TONE: Record<NonNullable<ShiftChip["kind"]> | "plain", string> = {
+  modal: "bg-sky-soft text-sky-ink",
+  have: "bg-amber-soft text-amber-ink",
+  plain: "border border-line",
+};
+
+const PAST_SHIFT: { label: string; chips: ShiftChip[]; ko: string }[] = [
+  {
+    label: "지금에 대한 추측",
+    chips: [{ en: "She" }, { en: "{must|조동사:~임에 틀림없다}", kind: "modal" }, { en: "be", kind: "have" }, { en: "busy." }],
+    ko: "그녀는 (지금) 바쁜 게 틀림없어.",
+  },
+  {
+    label: "과거에 대한 추측",
+    chips: [
+      { en: "She" },
+      { en: "{must|조동사:~였음에 틀림없다}", kind: "modal" },
+      { en: "{have|조동사:완료형을 만드는 말} been", kind: "have" },
+      { en: "busy." },
+    ],
+    ko: "그녀는 (그때) 바빴던 게 틀림없어.",
+  },
+];
+
+const PAST_WRONG: { en: string }[] = [{ en: "She must was busy." }, { en: "It must rained." }];
+
+function ShiftRow({ row }: { row: (typeof PAST_SHIFT)[number] }) {
+  return (
+    <div className="rounded-2xl border border-line px-4 py-3">
+      <p className="text-[14px] font-extrabold text-ink-2">{row.label}</p>
+      <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.15em] font-medium">
+        {row.chips.map((c, i) => (
+          <span key={i} className={`rounded-lg px-2.5 py-1 ${SHIFT_TONE[c.kind ?? "plain"]}`}>
+            <En en={c.en} />
+          </span>
+        ))}
+      </p>
+      <p className="mt-1.5 text-[14px] text-ink-2">{row.ko}</p>
+    </div>
+  );
+}
+
+/** 조동사 뒤에는 과거형을 못 쓰니, 원형 have + p.p.로 시간을 한 칸 과거로 민다 */
+export function MdPastShift() {
+  return (
+    <div>
+      <ShiftRow row={PAST_SHIFT[0]} />
+      <p className="my-2 text-center text-[14.5px] font-extrabold text-amber-ink">↓ be → have been · 시간을 한 칸 과거로</p>
+      <ShiftRow row={PAST_SHIFT[1]} />
+      <div className="mt-3 rounded-2xl bg-coral-soft px-4 py-3 text-coral-ink">
+        <p className="text-[14px] font-extrabold">과거형을 바로 붙이면 ✕</p>
+        <ul className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
+          {PAST_WRONG.map((w) => (
+            <li key={w.en} className="text-[1.03em] font-medium text-ink-2 line-through decoration-coral/60">
+              <En en={w.en} />
+            </li>
+          ))}
+        </ul>
+        <p className="mt-1 text-[14px]">조동사 뒤에는 원형만 와요. 그래서 원형 have를 세우고 p.p.를 붙여요.</p>
+      </div>
+    </div>
+  );
+}
+
+/* ───────── 12. 후회·아쉬움은 사실과 반대 ───────── */
+
+const REGRET_FLIPS: { form: string; en: string; ko: string; real: string; did: boolean }[] = [
+  {
+    form: "should have p.p.",
+    en: "I [[{should|조동사:~했어야 했는데} {have|조동사:완료형을 만드는 말} brought]] a jacket.",
+    ko: "재킷을 가져왔어야 했는데.",
+    real: "안 가져왔어요. 그래서 추웠어요.",
+    did: false,
+  },
+  {
+    form: "shouldn't have p.p.",
+    en: "I [[{shouldn't|조동사:~하지 말았어야 했는데} {have|조동사:완료형을 만드는 말} watched]] the scary movie.",
+    ko: "그 무서운 영화를 보지 말았어야 했는데.",
+    real: "봤어요. 그래서 잠을 설쳤어요.",
+    did: true,
+  },
+  {
+    form: "could have p.p.",
+    en: "We [[{could|조동사:~할 수도 있었는데} {have|조동사:완료형을 만드는 말} {caught|동사:(버스를) 잡아탔다 (catch의 과거분사)}]] the bus.",
+    ko: "우리가 그 버스를 탈 수도 있었는데.",
+    real: "못 탔어요. 조금 늦었거든요.",
+    did: false,
+  },
+];
+
+/** 말은 '그랬어야 했는데', 실제는 그 반대 */
+export function MdRegretFlip() {
+  return (
+    <ul className="space-y-2.5">
+      {REGRET_FLIPS.map((r) => (
+        <li key={r.form} className="grid gap-2 rounded-2xl border border-line px-3 py-3 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,0.8fr)] sm:items-center">
+          <div className="rounded-xl bg-coral-soft px-3 py-2">
+            <p lang="en" className="text-[14px] font-extrabold text-coral-ink">
+              말: {r.form}
+            </p>
+            <p className="text-[1.03em] font-medium">
+              <En en={r.en} />
+            </p>
+            <p className="text-[14px] text-ink-2">{r.ko}</p>
+          </div>
+          <p className="text-center text-[14px] font-extrabold text-ink-3">
+            <span className="sm:hidden">↓ </span>반대<span className="hidden sm:inline"> ⇄</span>
+          </p>
+          <div className="flex items-center gap-2.5 rounded-xl bg-chip px-3 py-2">
+            <Mark ok={r.did} />
+            <span>
+              <span className="block text-[14px] font-extrabold text-ink-2">실제로는</span>
+              <span className="block text-[14.5px] font-bold">{r.real}</span>
+            </span>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* ───────── 13. can·must는 그대로, be able to·have to는 모양이 바뀐다 ───────── */
+
+type FormCell = { en?: string; ok?: boolean; note?: string };
+
+function FormGrid({ heads, rows }: { heads: [string, string, string, string]; rows: { label: string; a: FormCell; b: FormCell }[] }) {
+  return (
+    <div>
+      <div className="grid grid-cols-2 gap-2 text-center">
+        <p className="rounded-2xl bg-sky-soft px-2 py-2 text-sky-ink">
+          <span lang="en" className="block font-extrabold">
+            {heads[0]}
+          </span>
+          <span className="block text-[14px] font-bold">{heads[1]}</span>
+        </p>
+        <p className="rounded-2xl bg-mint-soft px-2 py-2 text-mint-ink">
+          <span lang="en" className="block font-extrabold">
+            {heads[2]}
+          </span>
+          <span className="block text-[14px] font-bold">{heads[3]}</span>
+        </p>
+      </div>
+      <ul className="mt-2 space-y-2">
+        {rows.map((r) => (
+          <li key={r.label} className="rounded-2xl border border-line px-3 py-2.5">
+            <p className="text-center text-[14px] font-extrabold text-ink-2">{r.label}</p>
+            <div className="mt-1 grid grid-cols-2 gap-2">
+              {[r.a, r.b].map((c, i) => (
+                <p key={i} className="text-[1.02em] font-medium">
+                  {c.ok === false && (
+                    <span aria-label="틀린 문장" className="mr-1 font-extrabold text-coral-ink">
+                      ✕
+                    </span>
+                  )}
+                  {c.en && (
+                    <span className={c.ok === false ? "text-ink-2 line-through decoration-coral/60" : ""}>
+                      <En en={c.en} />
+                    </span>
+                  )}
+                  {c.note && <span className="block text-[14px] font-normal text-ink-2">{c.note}</span>}
+                </p>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/** can은 모양이 그대로, be able to는 be가 주어·시제에 맞춰 바뀌어 will 뒤에도 선다 */
+export function MdCanForms() {
+  return (
+    <FormGrid
+      heads={["can", "조동사: 모양이 그대로", "be able to", "be가 주어·시제에 맞춰 바뀌어요"]}
+      rows={[
+        { label: "지금 · 주어 he", a: { en: "He [[can]] swim." }, b: { en: "He [[{is able to}]] swim." } },
+        { label: "과거", a: { en: "He [[could]] swim." }, b: { en: "He [[{was able to}]] swim." } },
+        {
+          label: "미래",
+          a: { en: "He will can swim.", ok: false, note: "조동사 두 개는 ✕" },
+          b: { en: "He [[will {be able to}]] swim." },
+        },
+      ]}
+    />
+  );
+}
+
+/** must는 모양이 그대로, have to는 일반동사처럼 has to · had to · do 의문문 */
+export function MdMustForms() {
+  return (
+    <FormGrid
+      heads={["must", "조동사: 모양이 그대로", "have to", "일반동사처럼 바뀌어요"]}
+      rows={[
+        { label: "지금 · 주어 she", a: { en: "She [[must]] go." }, b: { en: "She [[{has to}]] go." } },
+        {
+          label: "과거",
+          a: { note: "과거형이 없어요. had to를 빌려 써요" },
+          b: { en: "She [[{had to}]] go." },
+        },
+        {
+          label: "미래",
+          a: { en: "She will must go.", ok: false, note: "조동사 두 개는 ✕" },
+          b: { en: "She [[will {have to}]] go." },
+        },
+        {
+          label: "의문문",
+          a: { en: "[[Must]] she go?" },
+          b: { en: "[[{Does|조동사:의문문을 만드는 말}]] she [[{have to}]] go?" },
+        },
+      ]}
+    />
+  );
+}
+
+/* ───────── 14. used to: 예전엔 그랬고 지금은 아니다 ───────── */
+
+const USED_TO_ROWS: { en: string; ko: string; then: string; now: string; kind: string }[] = [
+  {
+    en: "I [[{used to} {get up}]] {late|부사:늦게} on weekends.",
+    ko: "나는 예전엔 주말마다 늦게 일어났어.",
+    then: "주말마다 늦잠",
+    now: "지금은 일찍 일어나요",
+    kind: "습관 (동작)",
+  },
+  {
+    en: "I [[{used to} have]] long hair.",
+    ko: "나는 예전에 머리가 길었어.",
+    then: "머리가 길었어요",
+    now: "지금은 짧아요",
+    kind: "상태",
+  },
+];
+
+/** used to는 예전(✓)과 지금(✕) 사이에 선을 긋는다 */
+export function MdUsedTo() {
+  return (
+    <div>
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-center">
+        <p className="rounded-2xl bg-mint-soft px-2 py-2.5 text-mint-ink">
+          <span className="block font-extrabold">예전 ✓</span>
+          <span className="block text-[14px] font-bold">그랬어요</span>
+        </p>
+        <ArrowRight size={20} className="text-ink-3" />
+        <p className="rounded-2xl bg-coral-soft px-2 py-2.5 text-coral-ink">
+          <span className="block font-extrabold">지금 ✕</span>
+          <span className="block text-[14px] font-bold">지금은 아니에요</span>
+        </p>
+      </div>
+      <ul className="mt-3 space-y-2">
+        {USED_TO_ROWS.map((r) => (
+          <li key={r.kind} className="rounded-2xl border border-line px-4 py-3">
+            <p className="w-fit rounded-md bg-chip px-2 py-0.5 text-[14px] font-extrabold text-ink-2">{r.kind}</p>
+            <p className="mt-1.5 text-[1.05em] font-medium">
+              <En en={r.en} />
+            </p>
+            <p className="text-[14px] text-ink-2">{r.ko}</p>
+            <div className="mt-2 grid grid-cols-2 gap-2 text-[14px] font-bold">
+              <span className="rounded-lg bg-mint-soft px-2 py-1 text-mint-ink">예전: {r.then}</span>
+              <span className="rounded-lg bg-coral-soft px-2 py-1 text-coral-ink">{r.now}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ───────── 15. 대동사 do: 앞의 동사 덩어리를 대신 ───────── */
+
+const STAND_IN_RULES: { from: string; to: string; en: string; ko: string }[] = [
+  { from: "be동사", to: "be동사로", en: "I'm tired, and Jisu [[is]], too.", ko: "나 피곤해. 지수도 그래." },
+  { from: "조동사", to: "조동사로", en: "I can whistle, and my brother [[can]], too.", ko: "나는 휘파람을 불 수 있어. 형도 그래." },
+  {
+    from: "일반동사",
+    to: "do · does · did로",
+    en: "I walked to school, and Minsu [[{did|대동사:= walked to school}]], too.",
+    ko: "나는 걸어서 학교에 갔어. 민수도 그랬어.",
+  },
+];
+
+/** 되풀이되는 동사 덩어리를 대동사 한 단어가 받는다. 받는 말은 앞 동사의 종류를 따라간다 */
+export function MdStandIn() {
+  return (
+    <div>
+      <div className="rounded-2xl border border-line px-4 py-3">
+        <p className="text-[14px] font-extrabold text-ink-3">되풀이하면 길어요</p>
+        <p className="mt-1 text-[1.05em] font-medium">
+          <En en="My dad drinks coffee, and my mom drinks coffee, too." />
+        </p>
+        <p className="mt-3 text-[14px] font-extrabold text-ink-3">대동사로 받으면</p>
+        <p className="mt-1 text-[1.05em] font-medium leading-loose">
+          <En en="My dad" />{" "}
+          <span className="rounded-lg bg-sky-soft px-1.5 py-0.5 text-sky-ink">
+            <En en="drinks coffee" />
+          </span>
+          <En en=", and my mom" />{" "}
+          <span className="rounded-lg bg-coral px-1.5 py-0.5 text-white">
+            <En en="{does|대동사:= drinks coffee}" />
+          </span>
+          <En en=", too." />
+        </p>
+        <p className="mt-2 w-fit rounded-lg bg-chip px-2.5 py-1 text-[14px] font-bold">
+          does = drinks coffee · 주어 my mom(3인칭 단수)과 현재에 맞춰 does
+        </p>
+      </div>
+      <p className="mt-3 text-center text-[14.5px] font-extrabold text-ink-2">받는 말은 앞 동사의 종류를 따라가요</p>
+      <ul className="mt-2 grid gap-2 sm:grid-cols-3">
+        {STAND_IN_RULES.map((r) => (
+          <li key={r.from} className="rounded-2xl border border-line px-3 py-2.5">
+            <p className="text-[14px] font-extrabold">
+              <span className="text-ink-2">앞이 {r.from}</span> → <span className="text-coral-ink">{r.to}</span>
+            </p>
+            <p className="mt-1 text-[1.02em] font-medium">
+              <En en={r.en} />
+            </p>
+            <p className="text-[14px] text-ink-2">{r.ko}</p>
           </li>
         ))}
       </ul>

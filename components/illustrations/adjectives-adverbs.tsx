@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { En } from "@/components/lesson/En";
 import { ArrowRight } from "./icons";
 
@@ -457,6 +457,107 @@ export function AaRemoveTest() {
           </p>
         </div>
       ))}
+    </div>
+  );
+}
+
+/* ───────── 한정적 용법: 형용사가 범위를 좁혀요 ───────── */
+
+function AaDog({ size, className = "" }: { size: number; className?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 40 40" className={className} aria-hidden>
+      <ellipse cx="8" cy="16" rx="5" ry="9" fill="currentColor" />
+      <ellipse cx="32" cy="16" rx="5" ry="9" fill="currentColor" />
+      <circle cx="20" cy="21" r="12.5" fill="currentColor" />
+      <circle cx="15.5" cy="19" r="1.9" style={{ fill: "var(--card)" }} />
+      <circle cx="24.5" cy="19" r="1.9" style={{ fill: "var(--card)" }} />
+      <ellipse cx="20" cy="25" rx="3" ry="2.2" style={{ fill: "var(--card)" }} />
+    </svg>
+  );
+}
+
+const dogSizes = [46, 22, 38, 18, 42, 24];
+
+const narrowCards: { en: string; note: string; pick: (size: number) => boolean }[] = [
+  { en: "a dog", note: "이 중에서 아무 개나 돼요.", pick: () => true },
+  { en: "a [[small]] dog", note: "작은 개로 범위가 확 좁혀져요.", pick: (size) => size <= 24 },
+];
+
+/** a dog → a small dog: 명사 앞 형용사는 가리키는 범위를 좁힌다 */
+export function AaNarrowDown() {
+  return (
+    <div className="grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+      {narrowCards.map((c, i) => (
+        <Fragment key={c.en}>
+          {i > 0 && <ArrowRight className="mx-auto rotate-90 text-mint-ink sm:rotate-0" />}
+          <div className={`rounded-2xl px-4 py-3 ${i > 0 ? "border-2 border-mint-ink/50" : "border border-line"}`}>
+            <p className="text-[1.15em] font-medium">
+              <En en={c.en} />
+            </p>
+            <p className="mt-2 flex h-14 items-end justify-center gap-2" role="img" aria-label={i > 0 ? "크기가 다른 개 여섯 마리 가운데 작은 개 세 마리만 색칠한 그림" : "크기가 다른 개 여섯 마리"}>
+              {dogSizes.map((s) => (
+                <AaDog key={s} size={s} className={c.pick(s) ? (i > 0 ? "text-mint-ink" : "text-amber-ink") : "text-ink-3 opacity-25"} />
+              ))}
+            </p>
+            <p className="mt-2 text-[14px] text-ink-2">{c.note}</p>
+          </div>
+        </Fragment>
+      ))}
+    </div>
+  );
+}
+
+/* ───────── 같은 양, 다른 마음: a little / little ───────── */
+
+const moodCards: { title: string; mood: string; tone: string; border: string; rows: { en: string; kind: "count" | "mass" }[] }[] = [
+  {
+    title: "다행이다, 조금 있네!",
+    mood: "a가 있으면 '조금 있다' (긍정)",
+    tone: "text-mint-ink",
+    border: "border-2 border-mint-ink/50",
+    rows: [
+      { en: "[[{a little}]] milk", kind: "mass" },
+      { en: "[[{a few}]] cookies", kind: "count" },
+    ],
+  },
+  {
+    title: "아이고, 거의 없네.",
+    mood: "a가 없으면 '거의 없다' (부정)",
+    tone: "text-coral-ink",
+    border: "border-2 border-coral/50",
+    rows: [
+      { en: "[[{little|형용사:(양이) 거의 없는}]] milk", kind: "mass" },
+      { en: "[[few]] cookies", kind: "count" },
+    ],
+  },
+];
+
+/** 컵에 남은 우유, 접시에 남은 쿠키는 똑같다. 말하는 사람의 마음이 a를 붙일지 정한다 */
+export function AaGlassMood() {
+  return (
+    <div>
+      <p className="text-center text-[14px] font-extrabold text-ink-2">남은 양은 똑같아요. 말하는 사람의 마음이 달라요.</p>
+      <div className="mt-3 grid gap-3 sm:grid-cols-2">
+        {moodCards.map((c) => (
+          <div key={c.title} className={`rounded-2xl px-4 py-3 ${c.border}`}>
+            <p className={`w-fit rounded-2xl rounded-bl-sm bg-chip px-3 py-1.5 text-[15px] font-extrabold ${c.tone}`}>&ldquo;{c.title}&rdquo;</p>
+            <ul className="mt-3 space-y-2">
+              {c.rows.map((r) => (
+                <li key={r.en} className="flex items-center gap-2">
+                  {r.kind === "count" ? <Cookies n={2} /> : <Glass level={0.18} />}
+                  <span className="min-w-0">
+                    <span className="block text-[14px] text-ink-3">{r.kind === "count" ? "셀 수 있어요" : "셀 수 없어요"}</span>
+                    <span className="block text-[1.05em] font-medium">
+                      <En en={r.en} />
+                    </span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className={`mt-2.5 text-[14px] font-bold ${c.tone}`}>{c.mood}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -52,8 +52,16 @@
 </Examples>
 
 <Tip mood="thinking" title="자음을 두 번 쓰는 건 언제?">
-끝이 **짧은 모음 하나 + 자음 하나**일 때만이에요. big, hot, thin, sad는 모음(i, o, a)이 하나고 자음이 하나라서 bigger, hotter, thinner, sadder. 그런데 cool은 모음이 둘(oo)이라 cooler, fast는 자음이 둘(st)이라 faster예요. 자음을 두 번 쓰지 않으면 [비거]가 [바이거]처럼 읽힐 수 있어서 한 번 더 써 주는 거예요.
+끝이 **짧은 모음 하나 + 자음 하나**일 때만이에요. 자음을 두 번 쓰지 않으면 [비거]가 [바이거]처럼 읽힐 수 있어서 한 번 더 써 주는 거예요.
 </Tip>
+
+<Compare
+  caption="끝 글자 모양을 세어 보세요"
+  items={[
+    { title: "모음 하나 + 자음 하나", sub: "끝 자음을 한 번 더", tone: "coral", en: "big → [[bigger]], hot → [[hotter]], thin → [[thinner]], sad → [[sadder]]", points: ["i, o, a가 하나, 끝 자음도 하나"] },
+    { title: "모음 둘, 또는 자음 둘", sub: "그대로 + er", tone: "sky", en: "cool → [[cooler]], fast → [[faster]]", points: ["cool: 모음이 둘(oo)", "fast: 자음이 둘(st)"] },
+  ]}
+/>
 
 ## 긴 말은 more, most
 
@@ -66,6 +74,10 @@
 </Easy>
 
 <TermAnatomy id="syllable" />
+
+<Figure caption="모음 소리 덩어리(음절)를 손뼉 치듯 세어 보세요. 한 번이면 -er, 두세 번이면 more예요. 다만 -y로 끝나는 2음절 말은 -er이에요.">
+  <CpSyllables />
+</Figure>
 
 - **1음절**: 거의 다 -er, -est. tall, fast, big
 - **2음절**: 대부분 more, most. 특히 -ful, -ous, -ive, -ing, -ed, -less로 끝나는 말. useful, careful, famous, boring
@@ -134,9 +146,13 @@ little이 &lsquo;(양이) 적은&rsquo;일 때는 less, least예요. 하지만 &
 
 모양을 만들었으면 이제 문장에 넣어 봐요.
 
-- **비교급 + than ~**: ~보다 더 …한. than이 &lsquo;~보다&rsquo;예요.
-- **the + 최상급 + in ~**: ~ 안에서 가장 …한. in 뒤에는 **장소나 무리**(in my class, in Korea, in my family)
-- **the + 최상급 + of ~**: ~ 가운데 가장 …한. of 뒤에는 **여럿을 나타내는 말**(of the three, of all, of my friends)
+<Formula caption="둘을 견줄 때: than이 '~보다'예요" parts={["A", "+", "~sky:비교급", "+", "*than", "+", "B"]} en="My brother is [[taller than]] my dad." ko="우리 형은 아빠보다 키가 커." />
+
+<Formula caption="셋 이상에서 가장: 뒤에 범위를 붙여요" parts={["*the + 최상급", "+", "~sky:in + 장소·무리", "/", "~amber:of + 여럿"]} />
+
+<Figure caption="in은 울타리 하나(반, 가족, 나라) 안에서, of는 하나씩 셀 수 있는 여럿(셋, 친구들) 가운데서 가장이에요.">
+  <CpInOf />
+</Figure>
 
 <Examples title="비교급 + than">
   <Ex en="Jisu is [[taller than]] her mom." ko="지수는 엄마보다 키가 커." />

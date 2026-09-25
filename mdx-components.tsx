@@ -15,6 +15,7 @@ import {
 import { TermAnatomy } from "@/components/lesson/TermAnatomy";
 import { Quiz } from "@/components/lesson/Quiz";
 import { Pick } from "@/components/lesson/Pick";
+import { Compare, Formula, Steps } from "@/components/lesson/visuals";
 import { VerbHunt } from "@/components/lesson/VerbHunt";
 import * as illustrations from "@/components/illustrations";
 import { Easy, Lv, More } from "@/components/level/Lv";
@@ -39,6 +40,9 @@ const components = {
   TermAnatomy,
   Quiz,
   Pick,
+  Formula,
+  Compare,
+  Steps,
   VerbHunt,
   Lv,
   Easy,

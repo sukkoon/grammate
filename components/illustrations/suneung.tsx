@@ -2,7 +2,8 @@ import type { ReactNode } from "react";
 import { En } from "@/components/lesson/En";
 import { ArrowRight, CrownIcon } from "./icons";
 
-/* 수능 어법 종합 그림: 주어 괄호 치기, 수일치 규칙, 대명사 짝 찾기, 태 판단, 수동이 안 되는 동사, 목적격보어 표, 완전·불완전, 헷갈리는 짝 */
+/* 수능 어법 종합 그림: 주어 괄호 치기, 수일치 규칙, 대명사 짝 찾기, 태 판단, 수동이 안 되는 동사, 목적격보어 표, 완전·불완전, 헷갈리는 짝,
+   관계절 동사와 선행사, 자리 × 태 네 칸 */
 
 /* ───────── 공통 도우미 ───────── */
 
@@ -330,5 +331,159 @@ export function SnWhichWord() {
         </li>
       ))}
     </ul>
+  );
+}
+
+/* ───────── 9. 관계절 속 동사는 선행사를 가리켜요 ───────── */
+
+type WpBit = { en: string; k: "ante" | "rel" | "verb" | "plain" | "decoy" };
+
+const WP_LOOK: Record<WpBit["k"], string> = {
+  ante: "bg-amber-soft text-amber-ink font-bold",
+  rel: "bg-sky-soft text-sky-ink font-bold",
+  verb: "bg-coral text-white font-bold",
+  decoy: "border border-dashed border-ink-3 text-ink-3",
+  plain: "",
+};
+
+const WHO_POINTS: { key: string; bits: WpBit[]; rule: string; tricky?: boolean }[] = [
+  {
+    key: "friend",
+    bits: [
+      { en: "I have", k: "plain" },
+      { en: "a friend", k: "ante" },
+      { en: "{who|관계대명사:~하는 (사람)}", k: "rel" },
+      { en: "speaks", k: "verb" },
+      { en: "three languages.", k: "plain" },
+    ],
+    rule: "who = a friend (단수) → speaks",
+  },
+  {
+    key: "shoes",
+    bits: [
+      { en: "These are", k: "plain" },
+      { en: "the shoes", k: "ante" },
+      { en: "{that|관계대명사:~하는}", k: "rel" },
+      { en: "were", k: "verb" },
+      { en: "{on sale}.", k: "plain" },
+    ],
+    rule: "that = the shoes (복수) → were",
+  },
+  {
+    key: "one",
+    bits: [
+      { en: "She is", k: "plain" },
+      { en: "one", k: "decoy" },
+      { en: "of", k: "plain" },
+      { en: "the students", k: "ante" },
+      { en: "{who|관계대명사:~하는 (사람)}", k: "rel" },
+      { en: "help", k: "verb" },
+      { en: "the teacher.", k: "plain" },
+    ],
+    rule: "who = 바로 앞 the students (복수) → help. one에 맞추지 않아요",
+    tricky: true,
+  },
+];
+
+/** 주격 관계대명사 뒤의 동사는 관계대명사가 가리키는 선행사의 수에 맞춘다 */
+export function SnWhoPoints() {
+  return (
+    <div>
+      <ul className="grid gap-2">
+        {WHO_POINTS.map((r) => (
+          <li key={r.key} className={`rounded-2xl px-4 py-2.5 ${r.tricky ? "border-2 border-coral" : "border border-line"}`}>
+            <p className="flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
+              {r.bits.map((b, i) =>
+                b.k === "plain" ? (
+                  <span key={i}>
+                    <En en={b.en} />
+                  </span>
+                ) : (
+                  <span key={i} className={`inline-flex items-center gap-1 rounded-lg px-2 py-0.5 ${WP_LOOK[b.k]}`}>
+                    {b.k === "verb" && <CrownIcon size={14} />}
+                    <En en={b.en} />
+                  </span>
+                ),
+              )}
+            </p>
+            <p className={`mt-1 text-[14px] font-bold ${r.tricky ? "text-coral-ink" : "text-ink-2"}`}>{r.rule}</p>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+        <span className="rounded-md bg-amber-soft px-2 py-0.5 text-amber-ink">선행사</span>
+        <ArrowRight size={16} className="rotate-180 text-ink-3" />
+        <span className="rounded-md bg-sky-soft px-2 py-0.5 text-sky-ink">관계대명사</span>
+        <ArrowRight size={16} className="text-ink-3" />
+        <span className="rounded-md bg-coral px-2 py-0.5 text-white">관계절 동사</span>
+        <span className="text-ink-2">: 선행사의 수를 그대로 받아요</span>
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 10. 자리 × 태: 네 칸 중 어디일까 ───────── */
+
+const FOUR_ROWS: { place: string; when: string; active: { form: string; en: string }; passive: { form: string; en: string } }[] = [
+  {
+    place: "진짜 동사",
+    when: "자리가 남았을 때",
+    active: { form: "동사 (시제·수 맞추기)", en: "My uncle [[built]] it." },
+    passive: { form: "be + p.p.", en: "It [[was built]] in 1990." },
+  },
+  {
+    place: "준동사",
+    when: "자리가 다 찼을 때",
+    active: { form: "-ing · to 동사원형", en: "the man [[standing]] at the gate" },
+    passive: { form: "p.p. · to be p.p. · being p.p.", en: "a letter [[hidden]] under the book" },
+  },
+];
+
+function FourRow({ r }: { r: (typeof FOUR_ROWS)[number] }) {
+  return (
+    <>
+      <span className="grid place-items-center rounded-xl border-2 border-coral px-1.5 py-2">
+        <span className="text-[15px] font-extrabold text-coral-ink">{r.place}</span>
+        <span className="text-[14px] font-bold text-ink-3">{r.when}</span>
+      </span>
+      {[r.active, r.passive].map((c) => (
+        <span key={c.form} className="flex flex-col items-center justify-center gap-1 rounded-xl border border-line px-1.5 py-2">
+          <span className="text-[14px] font-extrabold">
+            {c.form}
+          </span>
+          <span className="text-[14.5px] font-medium">
+            <En en={c.en} />
+          </span>
+        </span>
+      ))}
+    </>
+  );
+}
+
+/** 밑줄 친 동사는 ① 자리(진짜 동사/준동사) ② 태(능동/수동)로 네 칸 중 하나에 들어간다 */
+export function SnFourBoxes() {
+  return (
+    <div>
+      <div className="grid grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)_minmax(0,1fr)] gap-1.5 text-center">
+        <span className="grid place-items-center rounded-xl bg-chip px-1.5 py-2 text-[14px] font-extrabold text-ink-2">
+          ① 자리
+          <br />② 태
+        </span>
+        <span className="grid place-items-center rounded-xl bg-mint-soft px-1.5 py-2 text-[14.5px] font-extrabold text-mint-ink">
+          능동
+          <span className="block text-[14px] font-bold">하는 쪽</span>
+        </span>
+        <span className="grid place-items-center rounded-xl bg-amber-soft px-1.5 py-2 text-[14.5px] font-extrabold text-amber-ink">
+          수동
+          <span className="block text-[14px] font-bold">당하는 쪽</span>
+        </span>
+        {FOUR_ROWS.map((r) => (
+          <FourRow key={r.place} r={r} />
+        ))}
+      </div>
+      <p className="mt-3 text-center text-[14px] font-bold text-ink-2">
+        자리는 접속사·관계사 개수 + 1로, 태는 &lsquo;하나, 당하나&rsquo;와 목적어로 정해요.
+      </p>
+    </div>
   );
 }

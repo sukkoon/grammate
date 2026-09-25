@@ -386,3 +386,170 @@ export function PtCostume() {
     </ul>
   );
 }
+
+/* ───────── 사람도 감정의 원인이 될 수 있어요 ───────── */
+
+type PtActorKind = "person" | "people" | "screen";
+
+/** 감정 화살의 양 끝에 서는 그림 조각 (그, 친구들, 영화) */
+function PtActor({ kind, label, focus }: { kind: PtActorKind; label: string; focus: boolean }) {
+  return (
+    <span
+      className={`inline-flex min-w-[72px] flex-col items-center gap-1 rounded-xl px-2 py-1.5 ${
+        focus ? "bg-card ring-2 ring-coral" : "bg-card"
+      }`}
+    >
+      {kind === "screen" ? (
+        <PtScreenIcon />
+      ) : kind === "people" ? (
+        <span className="flex">
+          <PersonIcon size={30} className="text-ink-2" />
+          <PersonIcon size={30} className="-ml-2 text-ink-2" />
+        </span>
+      ) : (
+        <PersonIcon size={34} className="text-ink" />
+      )}
+      <span className="text-[14px] font-extrabold">{label}</span>
+    </span>
+  );
+}
+
+const PT_CAUSE: {
+  key: string;
+  tag: string;
+  tone: string;
+  from: { kind: PtActorKind; label: string; focus: boolean };
+  to: { kind: PtActorKind; label: string; focus: boolean };
+  en: string;
+  ko: string;
+  who: string;
+}[] = [
+  {
+    key: "cause",
+    tag: "그가 감정을 일으키면 → -ing",
+    tone: "bg-coral-soft text-coral-ink",
+    from: { kind: "person", label: "그", focus: true },
+    to: { kind: "people", label: "친구들", focus: false },
+    en: "He is [[{boring|형용사:지루한 (남을 지루하게 하는)}]].",
+    ko: "그는 지루한 사람이야.",
+    who: "그가 화살을 쏘는 쪽이에요.",
+  },
+  {
+    key: "feel",
+    tag: "그가 감정을 느끼면 → p.p.",
+    tone: "bg-sky-soft text-sky-ink",
+    from: { kind: "screen", label: "긴 영화", focus: false },
+    to: { kind: "person", label: "그", focus: true },
+    en: "He is [[{bored|형용사:지루해하는}]].",
+    ko: "그는 지루해하고 있어.",
+    who: "그가 화살을 맞는 쪽이에요.",
+  },
+];
+
+/** 같은 사람 주어라도 감정을 주면 -ing, 느끼면 p.p. */
+export function PtPersonCause() {
+  return (
+    <div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {PT_CAUSE.map((c) => (
+          <div key={c.key} className="rounded-2xl border border-line px-4 py-4">
+            <p className={`w-fit rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${c.tone}`}>{c.tag}</p>
+            <div className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-chip px-2 py-2.5">
+              <PtActor {...c.from} />
+              <span className="flex flex-col items-center">
+                <ArrowRight size={28} className="text-coral" />
+                <span className="text-[14px] font-bold text-ink-2">지루함</span>
+              </span>
+              <PtActor {...c.to} />
+            </div>
+            <p className="mt-3 text-[1.15em] font-medium">
+              <En en={c.en} />
+            </p>
+            <p className="text-[14px] text-ink-2">{c.ko}</p>
+            <p className="mt-1 text-[14px] font-bold text-ink-3">{c.who}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 rounded-xl bg-chip px-3 py-2.5 text-center text-[14px] font-bold">
+        사람이냐 사물이냐가 아니라, 감정의 화살을 쏘느냐 맞느냐로 정해요.
+      </p>
+    </div>
+  );
+}
+
+/* ───────── 목적격보어 자리의 분사: 숨은 문장으로 판단 ───────── */
+
+type PtBitTone = "plain" | "noun" | "ing" | "pp";
+
+function PtBit({ en, tone }: { en: string; tone: PtBitTone }) {
+  const cls =
+    tone === "noun"
+      ? "bg-marker text-ink"
+      : tone === "ing"
+        ? "bg-mint-soft text-mint-ink"
+        : tone === "pp"
+          ? "bg-sky-soft text-sky-ink"
+          : "text-ink";
+  return (
+    <span className={`rounded-lg px-1.5 py-0.5 font-medium ${cls}`}>
+      <En en={en} />
+    </span>
+  );
+}
+
+const PT_HIDDEN: { key: string; bits: { en: string; tone: PtBitTone }[]; hidden: { en: string }; judge: string; tone: string }[] = [
+  {
+    key: "ing",
+    bits: [
+      { en: "I saw", tone: "plain" },
+      { en: "Minsu", tone: "noun" },
+      { en: "crossing", tone: "ing" },
+      { en: "the street.", tone: "plain" },
+    ],
+    hidden: { en: "Minsu is crossing the street." },
+    judge: "민수가 건너요 → 하는 쪽 → -ing",
+    tone: "bg-mint-soft text-mint-ink",
+  },
+  {
+    key: "pp",
+    bits: [
+      { en: "I heard", tone: "plain" },
+      { en: "my name", tone: "noun" },
+      { en: "{called|과거분사:불린}.", tone: "pp" },
+    ],
+    hidden: { en: "My name is called." },
+    judge: "이름이 불려요 → 당하는 쪽 → p.p.",
+    tone: "bg-sky-soft text-sky-ink",
+  },
+];
+
+/** 목적어 + 분사 사이의 숨은 문장: 목적어가 하면 -ing, 당하면 p.p. */
+export function PtHiddenSentence() {
+  return (
+    <div>
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[15px] font-extrabold">
+        <span className="rounded-lg bg-marker px-2.5 py-1">목적어</span>
+        <span aria-hidden>+</span>
+        <span className="rounded-lg bg-mint-soft px-2.5 py-1 text-mint-ink">-ing</span>
+        <span className="text-ink-3">또는</span>
+        <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">p.p.</span>
+      </p>
+      <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+        {PT_HIDDEN.map((h) => (
+          <li key={h.key} className="rounded-2xl border border-line px-4 py-3.5">
+            <p className="flex flex-wrap items-center gap-1 text-[1.1em]">
+              {h.bits.map((b) => (
+                <PtBit key={b.en} en={b.en} tone={b.tone} />
+              ))}
+            </p>
+            <p className="mt-2 text-[14px] text-ink-3">숨은 문장</p>
+            <p className="text-[1.02em] font-medium">
+              <En en={h.hidden.en} />
+            </p>
+            <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${h.tone}`}>{h.judge}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

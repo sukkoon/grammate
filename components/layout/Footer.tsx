@@ -15,6 +15,7 @@ export function Footer() {
         </div>
         <nav aria-label="바닥글" className="flex flex-wrap gap-x-5 gap-y-2">
           <Link href="/learn" className="hover:text-ink">전체 목차</Link>
+          <Link href="/roadmap" className="hover:text-ink">수준별 필수 문법</Link>
           <Link href="/terms" className="hover:text-ink">용어 사전</Link>
           <Link href="/verbs" className="hover:text-ink">불규칙 동사표</Link>
           <Link href="/policy/privacy" className="font-bold hover:text-ink">개인정보처리방침</Link>

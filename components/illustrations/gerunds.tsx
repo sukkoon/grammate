@@ -367,3 +367,97 @@ export function GdToTwoFaces() {
     </div>
   );
 }
+
+/* ───────── 동명사의 때와 태: 네 가지 모양 ───────── */
+
+const GD_FORMS: { key: string; time: string; rel: string; form: string; en: string; ko: string; tone: string }[] = [
+  {
+    key: "same-active",
+    time: "진짜 동사와 같은 때",
+    rel: "주인이 한다",
+    form: "-ing",
+    en: "I enjoy [[{helping|동명사:돕기}]] my mom.",
+    ko: "나는 엄마를 돕는 걸 즐겨.",
+    tone: "bg-sky-soft text-sky-ink",
+  },
+  {
+    key: "same-passive",
+    time: "진짜 동사와 같은 때",
+    rel: "주인이 당한다",
+    form: "being p.p.",
+    en: "My cat hates [[being washed]].",
+    ko: "우리 고양이는 씻겨지는 걸 싫어해.",
+    tone: "bg-mint-soft text-mint-ink",
+  },
+  {
+    key: "before-active",
+    time: "진짜 동사보다 먼저",
+    rel: "주인이 한다",
+    form: "having p.p.",
+    en: "He is proud of [[{having|조동사:완료형을 만드는 말 (have의 -ing형)} finished]] the marathon.",
+    ko: "그는 마라톤을 끝까지 달린 게 자랑스러워.",
+    tone: "bg-sky-soft text-sky-ink",
+  },
+  {
+    key: "before-passive",
+    time: "진짜 동사보다 먼저",
+    rel: "주인이 당한다",
+    form: "having been p.p.",
+    en: "I'm proud of [[{having|조동사:완료형을 만드는 말 (have의 -ing형)} been chosen]] for the team.",
+    ko: "나는 그 팀에 뽑혔던 게 자랑스러워.",
+    tone: "bg-mint-soft text-mint-ink",
+  },
+];
+
+/** 때(같은 때 / 더 먼저)와 관계(하는 쪽 / 당하는 쪽)를 보면 동명사의 모양이 정해진다 */
+export function GdFormGrid() {
+  return (
+    <ul className="grid gap-2.5 sm:grid-cols-2">
+      {GD_FORMS.map((f) => (
+        <li key={f.key} className="rounded-2xl border border-line px-3.5 py-3">
+          <p className="flex flex-wrap gap-1.5 text-[14px] font-bold">
+            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.time}</span>
+            <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
+          </p>
+          <p lang="en" className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[1.1em] font-extrabold ${f.tone}`}>
+            {f.form}
+          </p>
+          <p className="mt-2 text-[1.02em] font-medium">
+            <En en={f.en} />
+          </p>
+          <p className="text-[14px] text-ink-2">{f.ko}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* ───────── 완료 동명사: 진짜 동사보다 한 칸 먼저 ───────── */
+
+const GD_BEFORE = { en: "[[{having|조동사:완료형을 만드는 말 (have의 -ing형)} finished]] the marathon", ko: "마라톤을 끝까지 달렸어요" };
+const GD_NOW = { en: "He [[is]] proud.", ko: "지금 자랑스러워요" };
+
+/** having p.p.는 진짜 동사보다 먼저 일어난 일 */
+export function GdHavingTimeline() {
+  return (
+    <div className="grid gap-2 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+      <div className="rounded-2xl bg-sky-soft px-4 py-3">
+        <p className="text-[14px] font-extrabold text-sky-ink">① 먼저 (작년) · having p.p.</p>
+        <p className="mt-1 text-[1.05em] font-medium">
+          <En en={GD_BEFORE.en} />
+        </p>
+        <p className="text-[14px] text-ink-2">{GD_BEFORE.ko}</p>
+      </div>
+      <ArrowRight size={26} className="mx-auto rotate-90 text-ink-3 sm:rotate-0" />
+      <div className="rounded-2xl bg-coral-soft px-4 py-3">
+        <p className="flex items-center gap-1.5 text-[14px] font-extrabold text-coral-ink">
+          <CrownIcon size={16} />② 나중 (지금) · 진짜 동사
+        </p>
+        <p className="mt-1 text-[1.05em] font-medium">
+          <En en={GD_NOW.en} />
+        </p>
+        <p className="text-[14px] text-ink-2">{GD_NOW.ko}</p>
+      </div>
+    </div>
+  );
+}

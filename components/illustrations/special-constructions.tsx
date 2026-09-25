@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { En } from "@/components/lesson/En";
-import { ArrowRight, CrownIcon, PersonIcon } from "./icons";
+import { ArrowRight, CrownIcon, MaskIcon, PersonIcon } from "./icons";
 
-/* 특수구문 장 그림: 강조구문 조명, 강조구문 vs 가주어, 도치 어순, 주어 + be 생략, 동격 that vs 관계대명사 that, 삽입절 괄호, 부분부정, 병렬 */
+/* 특수구문 장 그림: 강조구문 조명, 강조구문 vs 가주어, 도치 어순, 주어 + be 생략, 동격 that vs 관계대명사 that, 삽입절 괄호, 부분부정, 병렬,
+   ~하자마자 시간선, 되풀이 생략 채우기, 동격 =, 병렬과 진짜 동사, 준부정어 눈금 */
 
 /* ───────── 공통 도우미 ───────── */
 
@@ -611,6 +612,275 @@ export function ScParallelRails() {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+/* ───────── 9. ~하자마자: 먼저 일어난 일은 had p.p. ───────── */
+
+const SOONER_ROWS: { key: string; parts: { t: string; tone: string }[] }[] = [
+  {
+    key: "hardly",
+    parts: [
+      { t: "Hardly", tone: "bg-amber-soft text-amber-ink" },
+      { t: "had + 주어 + p.p.", tone: "bg-sky-soft text-sky-ink" },
+      { t: "when", tone: "bg-amber-soft text-amber-ink" },
+      { t: "주어 + 과거형", tone: "bg-coral-soft text-coral-ink" },
+    ],
+  },
+  {
+    key: "sooner",
+    parts: [
+      { t: "No sooner", tone: "bg-amber-soft text-amber-ink" },
+      { t: "had + 주어 + p.p.", tone: "bg-sky-soft text-sky-ink" },
+      { t: "than", tone: "bg-amber-soft text-amber-ink" },
+      { t: "주어 + 과거형", tone: "bg-coral-soft text-coral-ink" },
+    ],
+  },
+];
+
+/** 거의 동시에 일어난 두 일: 먼저 일어난 쪽은 had p.p., 뒤따른 쪽은 과거형 */
+export function ScSoonerTimeline() {
+  return (
+    <div>
+      <div className="relative grid grid-cols-2 gap-3 rounded-2xl border border-line px-4 pb-3 pt-4">
+        <span className="absolute left-8 right-8 top-[26px] h-1 rounded-full bg-line" aria-hidden />
+        <div className="relative flex flex-col items-center text-center">
+          <span className="z-10 size-5 rounded-full border-4 border-card bg-sky-ink" aria-hidden />
+          <span className="mt-1.5 text-[14px] font-extrabold text-sky-ink">① 먼저 · had p.p.</span>
+          <span className="mt-1 text-[1.02em] font-medium">
+            <En en="I {had|조동사:과거완료를 만드는 말} sat down" />
+          </span>
+          <span className="text-[14px] text-ink-2">내가 앉았다</span>
+        </div>
+        <div className="relative flex flex-col items-center text-center">
+          <span className="z-10 size-5 rounded-full border-4 border-card bg-coral" aria-hidden />
+          <span className="mt-1.5 text-[14px] font-extrabold text-coral-ink">② 바로 뒤 · 과거형</span>
+          <span className="mt-1 text-[1.02em] font-medium">
+            <En en="the phone rang" />
+          </span>
+          <span className="text-[14px] text-ink-2">전화가 울렸다</span>
+        </div>
+      </div>
+      <ul className="mt-3 grid gap-2">
+        {SOONER_ROWS.map((r) => (
+          <li key={r.key} lang="en" className="flex flex-wrap items-center gap-1.5 text-[14.5px] font-bold">
+            {r.parts.map((p, i) => (
+              <span key={p.t} className="inline-flex items-center gap-1.5">
+                {i === 2 && <span className="text-ink-3">~</span>}
+                <span className={`rounded-lg px-2 py-1 ${p.tone}`}>{p.t}</span>
+              </span>
+            ))}
+          </li>
+        ))}
+      </ul>
+      <p className="mt-2 text-center text-[14px] font-bold text-ink-2">앞 절은 도치(had + 주어), 뒤 절은 보통 순서예요.</p>
+    </div>
+  );
+}
+
+/* ───────── 10. 되풀이 생략: 빈자리는 앞에서 가져와 채워요 ───────── */
+
+const FILL_ROWS: { key: string; pre: { en: string }; ghost: { en: string }; post?: { en: string }; from: string }[] = [
+  {
+    key: "ordered",
+    pre: { en: "Minsu ordered pizza, and Jisu" },
+    ghost: { en: "ordered" },
+    post: { en: "spaghetti." },
+    from: "앞 절의 동사 ordered",
+  },
+  {
+    key: "guitar",
+    pre: { en: "I can play the guitar, but my brother can't" },
+    ghost: { en: "play the guitar" },
+    from: "앞 절의 play the guitar",
+  },
+  {
+    key: "to",
+    pre: { en: "You can come with us if you want to" },
+    ghost: { en: "come with us" },
+    from: "대부정사: to만 남기고 동사 부분을 빼요",
+  },
+];
+
+/** 앞에 나온 말이 되풀이되면 빼고, 읽을 때는 빈자리를 앞 절에서 찾아 채운다 */
+export function ScFillGap() {
+  return (
+    <ul className="grid gap-2">
+      {FILL_ROWS.map((r) => (
+        <li key={r.key} className="rounded-2xl border border-line px-4 py-2.5">
+          <p className="flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
+            <En en={r.pre.en} />
+            <span className="rounded-lg border-2 border-dashed border-coral/70 px-2 py-0.5 text-ink-3 italic">
+              <En en={r.ghost.en} />
+            </span>
+            {r.post && <En en={r.post.en} />}
+          </p>
+          <p className="mt-1 flex items-center gap-1.5 text-[14px] font-bold text-coral-ink">
+            <ArrowRight size={16} className="rotate-180" />
+            빈자리 = {r.from}
+          </p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* ───────── 11. 동격: 같은 대상을 나란히, = 를 넣어 읽기 ───────── */
+
+const SAME_ROWS: { kind: string; a: { en: string }; b: { en: string }; ko: string }[] = [
+  { kind: "명사, 명사", a: { en: "my best friend," }, b: { en: "Jisu," }, ko: "내 가장 친한 친구 = 지수" },
+  { kind: "명사 + that절", a: { en: "the fact" }, b: { en: "{that|접속사:(동격) ~라는} Minsu moved to Canada" }, ko: "그 사실 = 민수가 캐나다로 이사 갔다는 것" },
+  { kind: "명사 + of", a: { en: "a dream" }, b: { en: "{of|전치사:(동격) ~라는} becoming a vet" }, ko: "꿈 = 수의사가 되는 것" },
+];
+
+/** 동격은 앞 명사와 뒤의 말이 같은 대상이다. 둘 사이에 = 를 넣어 읽는다 */
+export function ScSameThing() {
+  return (
+    <ul className="grid gap-2">
+      {SAME_ROWS.map((r) => (
+        <li key={r.kind} className="rounded-2xl border border-line px-4 py-2.5">
+          <p className="text-[14px] font-extrabold text-ink-3">{r.kind}</p>
+          <p className="mt-1.5 flex flex-wrap items-center gap-2 text-[1.05em] font-medium">
+            <span className="rounded-lg bg-amber-soft px-2.5 py-1 text-amber-ink">
+              <En en={r.a.en} />
+            </span>
+            <span className="grid size-7 place-items-center rounded-full bg-ink text-[15px] font-extrabold text-on-ink" aria-label="같은 대상">
+              =
+            </span>
+            <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">
+              <En en={r.b.en} />
+            </span>
+          </p>
+          <p className="mt-1 text-[14px] text-ink-2">{r.ko}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* ───────── 12. 병렬과 진짜 동사 개수 ───────── */
+
+type ScKind = "verb" | "verbal" | "link" | "hidden" | "plain";
+type ScBit = { en: string; k: ScKind; sub?: string };
+
+const SC_LOOK: Record<Exclude<ScKind, "plain">, { box: string; label: string }> = {
+  verb: { box: "bg-coral text-white", label: "text-coral-ink" },
+  verbal: { box: "bg-sky-soft text-sky-ink", label: "text-sky-ink" },
+  link: { box: "bg-amber-soft text-amber-ink", label: "text-amber-ink" },
+  hidden: { box: "border-2 border-dashed border-ink-3 text-ink-3", label: "text-ink-3" },
+};
+
+function ScChip({ b }: { b: ScBit }) {
+  if (b.k === "plain")
+    return (
+      <span className="self-start py-1">
+        <En en={b.en} />
+      </span>
+    );
+  const look = SC_LOOK[b.k];
+  return (
+    <span className="inline-flex flex-col items-center gap-1">
+      <span className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 font-bold ${look.box}`}>
+        {b.k === "verb" && <CrownIcon size={15} />}
+        {b.k === "verbal" && <MaskIcon size={16} />}
+        <En en={b.en} />
+      </span>
+      {b.sub && <span className={`text-[14px] font-extrabold ${look.label}`}>{b.sub}</span>}
+    </span>
+  );
+}
+
+const PARALLEL_COUNTS: { key: string; title: string; bits: ScBit[]; count: string; plus: boolean }[] = [
+  {
+    key: "real",
+    title: "진짜 동사끼리 이으면",
+    bits: [
+      { en: "She", k: "plain" },
+      { en: "opened", k: "verb", sub: "동사 1" },
+      { en: "the window", k: "plain" },
+      { en: "and", k: "link", sub: "접속사" },
+      { en: "(she)", k: "hidden", sub: "숨은 주어" },
+      { en: "{turned on}", k: "verb", sub: "동사 2" },
+      { en: "the {fan|명사:선풍기}.", k: "plain" },
+    ],
+    count: "and 1개 → 진짜 동사 2개. 둘 다 주어·시제에 맞춰 과거형",
+    plus: true,
+  },
+  {
+    key: "verbal",
+    title: "준동사끼리 이으면",
+    bits: [
+      { en: "I", k: "plain" },
+      { en: "like", k: "verb", sub: "동사 1" },
+      { en: "reading", k: "verbal", sub: "동명사" },
+      { en: "comics", k: "plain" },
+      { en: "and", k: "link", sub: "접속사" },
+      { en: "playing", k: "verbal", sub: "동명사" },
+      { en: "badminton.", k: "plain" },
+    ],
+    count: "and가 동명사 둘을 이었을 뿐 → 진짜 동사는 like 1개 그대로",
+    plus: false,
+  },
+];
+
+/** and가 진짜 동사끼리 이으면 진짜 동사 +1, 준동사끼리 이으면 개수 그대로 */
+export function ScParallelCount() {
+  return (
+    <div className="grid gap-2.5">
+      {PARALLEL_COUNTS.map((r) => (
+        <div key={r.key} className={`rounded-2xl px-4 py-3 ${r.plus ? "border-2 border-coral" : "border border-line"}`}>
+          <p className="text-[15px] font-extrabold">{r.title}</p>
+          <p className="mt-2 flex flex-wrap items-start gap-x-1.5 gap-y-2.5 text-[1.05em] font-medium">
+            {r.bits.map((b, i) => (
+              <ScChip key={i} b={b} />
+            ))}
+          </p>
+          <p className={`mt-2 text-[14px] font-bold ${r.plus ? "text-coral-ink" : "text-sky-ink"}`}>{r.count}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ───────── 13. 준부정어: 0은 아니지만 거의 0 ───────── */
+
+const ZERO_SCALE: { label: string; sub: string; fill: number; words: string[]; strong: boolean }[] = [
+  { label: "0", sub: "전혀 없다", fill: 0, words: ["no", "none", "never"], strong: false },
+  { label: "거의 0", sub: "거의 ~않다 (준부정어)", fill: 12, words: ["hardly", "scarcely", "rarely", "seldom", "few", "little"], strong: true },
+  { label: "조금", sub: "조금 있다", fill: 40, words: ["a few", "a little"], strong: false },
+  { label: "많이", sub: "많다", fill: 90, words: ["many", "much"], strong: false },
+];
+
+/** 준부정어는 완전한 0은 아니지만 '거의 없다' 쪽이라 부정문으로 본다 */
+export function ScAlmostZero() {
+  return (
+    <div>
+      <ul className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+        {ZERO_SCALE.map((z) => (
+          <li key={z.label} className={`flex flex-col rounded-2xl px-3 py-2.5 ${z.strong ? "border-2 border-coral" : "border border-line"}`}>
+            <p className={`text-[16px] font-extrabold ${z.strong ? "text-coral-ink" : ""}`}>{z.label}</p>
+            <p className="text-[14px] font-bold text-ink-2">{z.sub}</p>
+            <div className="mt-2 h-3 rounded-full bg-chip" aria-hidden>
+              <div className="h-3 rounded-full" style={{ width: `${z.fill}%`, background: z.strong ? "var(--coral)" : "var(--ink-3)" }} />
+            </div>
+            <p lang="en" className="mt-2 flex flex-wrap gap-1 text-[14px] font-bold">
+              {z.words.map((w) => (
+                <span key={w} className={`rounded-md px-1.5 py-0.5 ${z.strong ? "bg-coral-soft text-coral-ink" : "bg-chip"}`}>
+                  {w}
+                </span>
+              ))}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+        <Mark ok={false} />
+        <span lang="en" className="line-through decoration-coral decoration-2">
+          can&apos;t hardly
+        </span>
+        <span className="text-ink-2">준부정어에는 not을 또 붙이지 않아요</span>
+      </p>
     </div>
   );
 }

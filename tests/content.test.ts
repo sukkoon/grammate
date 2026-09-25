@@ -8,6 +8,8 @@ import { describe, expect, it } from "vitest";
 import { missingWords } from "@/lib/lexicon";
 import { stripHunt } from "@/lib/verbhunt";
 import { readyUnits } from "@/content/curriculum";
+import { roadmap } from "@/content/roadmap";
+import voices from "@/content/term-voices.json";
 import { terms, termById } from "@/content/terms";
 
 const ROOT = join(__dirname, "..");
@@ -58,6 +60,31 @@ describe("모든 예문의 단어에 뜻이 있다", () => {
   it("용어 사전 예문", () => {
     const missing = terms.flatMap((t) => (t.example ? missingWords(t.example).map((w) => `${t.id}: ${w}`) : []));
     expect(missing).toEqual([]);
+  });
+});
+
+describe("수준별 필수 문법", () => {
+  it("모든 링크가 공개된 단원이나 부록을 가리킨다", () => {
+    const ok = new Set(readyUnits().map((r) => `/learn/${r.chapter.slug}/${r.unit.slug}`));
+    ok.add("/verbs");
+    ok.add("/terms");
+    const bad = roadmap.flatMap((lv) => lv.groups.flatMap((g) => g.items.flatMap((it) => it.links.filter((l) => !ok.has(l.href)).map((l) => `${it.title}: ${l.href}`))));
+    expect(bad).toEqual([]);
+  });
+});
+
+describe("수준별 용어 말투", () => {
+  it("말투가 있는 용어는 용어 사전에 있고, 초등·고등 설명이 모두 있다", () => {
+    const ids = new Set(terms.map((t) => t.id));
+    const bad = Object.entries(voices as Record<string, { elem?: string; high?: string }>)
+      .filter(([id, v]) => !ids.has(id) || !v.elem?.trim() || !v.high?.trim() || /[\u4e00-\u9fff]/.test(v.elem + v.high))
+      .map(([id]) => id);
+    expect(bad).toEqual([]);
+  });
+
+  it("모든 용어에 수준별 설명이 있다 (docs/TERM_VOICE_GUIDE.md)", () => {
+    const has = voices as Record<string, unknown>;
+    expect(terms.filter((t) => !has[t.id]).map((t) => t.id)).toEqual([]);
   });
 });
 

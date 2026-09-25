@@ -50,6 +50,10 @@
 
 서술어는 주어가 **무엇을 하는지**, **어떤지**를 말해 주는 역할이에요. 영어에서는 이 자리를 언제나 **동사**가 맡아요. 서장에서 배운 &lsquo;동사 1개의 법칙&rsquo; 기억나죠? 서술어 자리에 서는 동사가 바로 **진짜 동사**예요. 그래서 한 절에는 서술어도 하나예요.
 
+<Figure caption="서술어는 지도의 '현재 위치' 표시예요. 서술어를 찾으면 그 앞은 주어, 뒤는 목적어나 보어예요. 변장한 동사(to eat)는 서술어가 못 돼요.">
+  <SeVerbPin />
+</Figure>
+
 <Examples>
   <Ex en="Birds [[fly]]." ko="새들은 날아." note="주어 + 서술어만으로도 문장이 돼요." />
   <Ex en="We [[are]] classmates." ko="우리는 같은 반 친구야." note="be동사도 서술어예요: ~이다" />
@@ -67,6 +71,8 @@
 
 목적어는 동작을 **받는 대상**이에요. 서술어 뒤에서 &ldquo;무엇을?&rdquo;, &ldquo;누구를?&rdquo;에 답해요. like, eat, need처럼 대상이 꼭 있어야 하는 동사 뒤에 와요.
 
+<Formula caption="목적어는 서술어 바로 뒤, 동작을 받는 자리예요" parts={["~sky:주어 (누가)", "*서술어 (한다)", "~mint:목적어 (무엇을? 누구를?)"]} en="I love [[my grandma]]." ko="나는 우리 할머니를 사랑해. 동작 love를 받는 대상이 my grandma예요." />
+
 <Examples>
   <Ex en="I love [[my grandma]]." ko="나는 우리 할머니를 사랑해." note="누구를 사랑해? → my grandma" />
   <Ex en="Jisu ate [[two sandwiches]] {for|전치사:~으로 (식사로)} lunch." ko="지수는 점심으로 샌드위치 두 개를 먹었어." note="무엇을 먹었어? → two sandwiches" />
@@ -76,6 +82,8 @@
 <DeepDive level="중1" title="목적어가 두 개인 문장">
 
 give, send, show, tell처럼 &lsquo;주다&rsquo;라는 뜻이 들어 있는 동사는 목적어를 두 개 가질 수 있어요. **누구에게**(간접목적어)와 **무엇을**(직접목적어)이에요.
+
+<Formula parts={["~sky:주어", "*give · send · show · tell", "~mint:누구에게 (간접목적어)", "~mint:무엇을 (직접목적어)"]} />
 
 <Examples>
   <Ex en="My mom gave [[me]] [[a new bag]]." ko="엄마가 나에게 새 가방을 주셨어." note="me: ~에게 (간접목적어) / a new bag: ~을 (직접목적어)" />
@@ -95,6 +103,10 @@ give, send, show, tell처럼 &lsquo;주다&rsquo;라는 뜻이 들어 있는 동
 
 주어를 채우는 보어를 **주격보어**라고 해요. 주격보어 자리에는 **명사**나 **형용사**가 와요.
 
+<Figure caption="be·become·look 뒤에서 멈추면 뜻이 모자라요. 그 빈자리를 채우는 말이 보어예요. 명사도, 형용사도 들어갈 수 있어요.">
+  <SeFillGap />
+</Figure>
+
 <Examples>
   <Ex en="My dad is [[a nurse]]." ko="우리 아빠는 간호사야." note="명사 보어: 아빠 = 간호사" />
   <Ex en="Minsu became [[a soccer player]]." ko="민수는 축구 선수가 되었어." note="명사 보어: 민수 = 축구 선수" />
@@ -106,16 +118,21 @@ give, send, show, tell처럼 &lsquo;주다&rsquo;라는 뜻이 들어 있는 동
 
 목적어와 보어는 둘 다 동사 뒤에 와서 헷갈려요. 이럴 때는 **주어와 = 관계가 되는지** 확인하세요. =가 되면 보어, 주어와 다른 대상이면 목적어예요.
 
-<Examples>
-  <Ex en="My sister became [[a teacher]]." ko="우리 언니는 선생님이 되었어." note="언니 = 선생님 → 보어" />
-  <Ex en="My sister met [[a teacher]]." ko="우리 언니는 선생님 한 분을 만났어." note="언니 ≠ 선생님 → 목적어" />
-</Examples>
+<Compare
+  caption="같은 a teacher, 등호를 넣어 보면 역할이 갈려요"
+  items={[
+    { title: "보어", sub: "언니 = 선생님", tone: "amber", en: "My sister became [[a teacher]].", ko: "우리 언니는 선생님이 되었어.", points: ["주어와 같은 사람이에요", "모자란 뜻을 채워요"] },
+    { title: "목적어", sub: "언니 ≠ 선생님", tone: "mint", en: "My sister met [[a teacher]].", ko: "우리 언니는 선생님 한 분을 만났어.", points: ["주어와 다른 사람이에요", "동작 met을 받는 대상이에요"] },
+  ]}
+/>
 
 <DeepDive level="중2" title="목적격보어 맛보기">
 
 <TermAnatomy id="object-complement" />
 
 보어는 **목적어**를 채우기도 해요. 이때는 **목적어 = 보어** 관계가 돼요.
+
+<Formula parts={["~sky:주어", "*서술어", "~mint:목적어", "=", "~amber:목적격보어"]} en="The movie made [[me]] [[sad]]." ko="그 영화는 나를 슬프게 했어. (나 = 슬픈 상태)" />
 
 <Examples>
   <Ex en="The movie made me [[sad]]." ko="그 영화는 나를 슬프게 했어." note="나 = 슬픈 상태" />
@@ -177,10 +194,15 @@ kind는 a kind boy에서는 boy를 꾸미는 **수식어**지만, She is kind.�
 
 긴 문장을 만나도 순서만 지키면 역할이 보여요.
 
-1. **서술어**(진짜 동사)를 찾아요. 주어와 시제에 맞춰 모양이 바뀐 동사예요.
-2. 그 앞에서 &ldquo;누가? 무엇이?&rdquo; → **주어**
-3. 그 뒤에서 &ldquo;무엇을? 누구를?&rdquo; → **목적어**, &ldquo;누구? 어떤 상태?&rdquo; → **보어**
-4. 남은 건 빼 보세요. 빼도 괜찮으면 → **수식어**
+<Steps
+  caption="역할 찾기 네 걸음: My dad always reads the news after dinner."
+  steps={[
+    { title: "서술어(진짜 동사)부터 찾아요", en: "My dad always [[reads]] the news after dinner.", note: "주어와 시제에 맞춰 모양이 바뀐 동사예요. reads에 -s가 붙었죠." },
+    { title: "그 앞에서 '누가? 무엇이?' → 주어", en: "[[My dad]] always reads the news after dinner." },
+    { title: "그 뒤에서 '무엇을? 누구를?' → 목적어, '누구? 어떤 상태?' → 보어", en: "My dad always reads [[the news]] after dinner.", note: "무엇을 읽어? 뉴스를 → 목적어" },
+    { title: "남은 건 빼 보세요. 빼도 괜찮으면 → 수식어", en: "My dad [[always]] reads the news [[after dinner]].", note: "빼도 My dad reads the news.가 남아요." },
+  ]}
+/>
 
 ## 게임: 서술어를 찾아라
 

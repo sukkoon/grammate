@@ -8,6 +8,10 @@
 
 </Easy>
 
+<Figure caption="모자(관사)를 벗는 다섯 자리예요. 이름 그 자체, 하는 일 그 자체, 무엇을 통틀어 말할 때는 모자가 필요 없어요.">
+  <ArNoHat />
+</Figure>
+
 ## 이름 그 자체: 고유명사
 
 <TermAnatomy id="proper-noun" />
@@ -35,6 +39,8 @@
 
 &lsquo;무엇을 타고&rsquo; 가는지 말할 때 by 뒤에는 관사를 쓰지 않아요. 걸어갈 때만 on foot이에요.
 
+<Formula caption="무엇을 타고 가나요?" parts={["by", "+", "*탈것 (관사 없이)", "/", "~amber:걸어서는 on foot"]} en="by bus, by car, by subway" />
+
 <Examples>
   <Ex en="I go to school [[by bus]]." ko="나는 버스를 타고 학교에 가." />
   <Ex en="He travels [[by train]]." ko="그는 기차로 여행해." />
@@ -55,6 +61,13 @@
 
 관사를 붙이면 &lsquo;원래 목적&rsquo;이 아니라 **그 건물, 그 장소**를 뜻해요.
 
+<Compare
+  items={[
+    { title: "go to school", sub: "원래 목적: 배우러", tone: "mint", en: "go to [[school]]", points: ["관사 없음 = 그곳에서 원래 하는 일", "go to bed: 자러 가다"] },
+    { title: "go to the school", sub: "그 건물에 볼일이 있어서", tone: "coral", en: "go to [[the school]]", points: ["관사 있음 = 건물, 장소 그 자체", "학생이 아니어도 들를 수 있어요"] },
+  ]}
+/>
+
 <Examples>
   <Ex en="My brother goes to [[school]]." ko="우리 형은 학교에 다녀." note="학생으로서 공부하러" />
   <Ex en="My mom went to [[the school]] to meet my teacher." ko="엄마가 선생님을 만나러 학교에 가셨어." note="공부하러가 아니라, 학교라는 건물에" />
@@ -65,6 +78,13 @@
 ## 무엇을 &lsquo;통틀어&rsquo; 말할 때
 
 셀 수 없는 명사나 복수 명사로 **그것 전체, 일반적인 것**을 말할 때도 관사를 쓰지 않아요. 하지만 특정한 것을 가리키면 the를 써요.
+
+<Compare
+  items={[
+    { title: "통틀어 말해요", sub: "관사 없음: 그 종류 전체", tone: "sky", en: "[[music]], [[cats]], [[milk]]" },
+    { title: "콕 집어 말해요", sub: "the: 특정한 바로 그것", tone: "coral", en: "[[the music]] in this movie" },
+  ]}
+/>
 
 <Examples>
   <Ex en="I like [[music]]." ko="나는 음악을 좋아해." note="음악이라는 것 전체" />
@@ -80,6 +100,10 @@
 <Mistake wrong="The Minsu is my friend." right="[[Minsu]] is my friend." why="사람 이름 앞에는 관사를 쓰지 않아요." />
 
 <ExamPoint title="관사 한눈에 비교">
+
+<Figure caption="같은 명사라도 '바로 그것'이면 the를 쓰고, 활동·방법·원래 목적·전체를 말하면 모자를 벗어요.">
+  <ArHatPairs />
+</Figure>
 
 <Examples>
   <Ex en="I play [[the]] piano." ko="나는 피아노를 쳐." note="악기 → the" />

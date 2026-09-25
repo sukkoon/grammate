@@ -2,31 +2,57 @@ import type { ReactNode } from "react";
 import { Mate } from "@/components/brand/Mate";
 import type { Band } from "@/lib/level";
 
-const peekText: Record<Exclude<Band, "elem">, string> = {
-  middle: "중학생 과정이에요",
-  high: "고등학생 과정이에요",
+const bandWho: Record<Exclude<Band, "elem">, string> = {
+  middle: "중학생",
+  high: "고등학생",
 };
 
 /**
  * 내 수준보다 높은 내용을 접어 둔다.
- * - 초등이 중등 내용을 만나면: '중학생 과정이에요 · 살짝 보기'
+ * - 초등이 중등 내용을 만나면: '중학생 문법까지 더 학습하기' 단추. 누르면 펼치고, '접기'로 다시 접는다.
+ * - label로 단추 글을 바꿀 수 있다 (용어 카드: '중학생 설명까지 더 보기').
  * - peek={false}면 접지 않고 아예 숨긴다 (쉬운 풀이가 따로 있을 때)
  */
-export function Lv({ min, peek = true, children }: { min: Band; peek?: boolean; children: ReactNode }) {
+export function Lv({
+  min,
+  peek = true,
+  label,
+  topic,
+  compact = false,
+  children,
+}: {
+  min: Band;
+  peek?: boolean;
+  label?: string;
+  /** 접힌 내용의 제목 (심화 상자·시험 포인트) */
+  topic?: string;
+  compact?: boolean;
+  children: ReactNode;
+}) {
   if (min === "elem") return <>{children}</>;
   if (!peek) return <div data-lv-only-min={min}>{children}</div>;
+  const who = bandWho[min];
   return (
     <div data-lv-min={min}>
       <button
         type="button"
-        className="lv-peek my-4 w-full items-center gap-2.5 rounded-2xl border border-dashed border-line bg-card/60 px-4 py-3 text-left hover:border-ink-3"
+        className={`lv-peek w-full items-center gap-2.5 rounded-2xl border border-dashed border-coral/50 bg-coral-soft/40 text-left transition-colors hover:border-coral hover:bg-coral-soft/70 ${
+          compact ? "mt-3 px-3 py-2" : "my-4 px-4 py-3"
+        }`}
       >
-        <Mate mood="thinking" size={28} className="shrink-0 text-ink-3" />
-        <span className="min-w-0 flex-1 text-[14.5px] text-ink-2">
-          <b className="text-ink">{peekText[min]}</b>
-          <span className="hidden sm:inline"> · 궁금하면 살짝 볼 수 있어요</span>
+        {!compact && <Mate mood="cheer" size={28} className="shrink-0 text-ink" />}
+        <span className="min-w-0 flex-1">
+          <b className="block text-[15px] text-ink">{label ?? `${who} 문법까지 더 학습하기`}</b>
+          {!compact && (
+            <span className="text-[14px] text-ink-2">{topic ? `${topic} · 궁금하면 펼쳐 봐요` : "지금 고른 수준보다 높은 내용이에요. 궁금하면 펼쳐 봐요."}</span>
+          )}
         </span>
-        <span className="shrink-0 text-[13.5px] font-bold text-coral-ink">살짝 보기</span>
+        <span aria-hidden className="shrink-0 text-[15px] font-extrabold text-coral-ink">
+          펼치기 +
+        </span>
+      </button>
+      <button type="button" className="lv-fold mb-1 ml-auto items-center gap-1 rounded-full px-2.5 py-1 text-[13.5px] font-bold text-ink-3 hover:bg-chip hover:text-ink">
+        {who} 내용 · 접기 −
       </button>
       <div className="lv-body">{children}</div>
     </div>
