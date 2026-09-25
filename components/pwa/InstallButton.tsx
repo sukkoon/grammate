@@ -15,7 +15,7 @@ let registered = false;
  * 앱 설치 단추. 크롬·엣지·삼성 브라우저는 바로 설치 창이 뜨고,
  * 아이폰 사파리는 '공유 → 홈 화면에 추가' 안내를 보여 준다. 이미 설치해서 앱으로 열었으면 숨긴다.
  */
-export function InstallButton({ className = "" }: { className?: string }) {
+export function InstallButton({ className = "", iconOnlyOnMobile = false }: { className?: string; iconOnlyOnMobile?: boolean }) {
   const [ready, setReady] = useState(false);
   const [standalone, setStandalone] = useState(false);
   const [ios, setIos] = useState(false);
@@ -70,12 +70,12 @@ export function InstallButton({ className = "" }: { className?: string }) {
         type="button"
         onClick={install}
         aria-label={`${brand.appName} 앱 설치`}
-        className={`inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg bg-coral px-3 text-[13.5px] font-extrabold text-white transition-colors hover:bg-coral-ink ${className}`}
+        className={`inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg bg-coral text-[13.5px] font-extrabold text-white transition-colors hover:bg-coral-ink ${iconOnlyOnMobile ? "w-9 justify-center px-0 sm:w-auto sm:px-3" : "px-3"} ${className}`}
       >
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M12 3v12M6 9l6 6 6-6M4 21h16" />
         </svg>
-        앱 설치
+        <span className={iconOnlyOnMobile ? "hidden sm:inline" : ""}>앱 설치</span>
       </button>
       {guide && (
         <div

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { LoginCard } from "@/components/auth/LoginCard";
 import { BrandStory } from "@/components/brand/BrandStory";
-import { InstallButton } from "@/components/pwa/InstallButton";
 import { Phrases } from "@/components/text/Phrases";
 
 export const metadata: Metadata = {
@@ -13,10 +12,7 @@ export const metadata: Metadata = {
 export default function LoginPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-14 pt-6 sm:px-6 sm:pt-8">
-      <div className="flex justify-end sm:hidden">
-        <InstallButton />
-      </div>
-      <div className="mt-4 grid gap-10 lg:grid-cols-[1.1fr_minmax(20rem,26rem)] lg:items-start lg:gap-14">
+      <div className="grid gap-10 lg:grid-cols-[1.1fr_minmax(20rem,26rem)] lg:items-start lg:gap-14">
         <section aria-label="그래머랑 소개">
           <h1 className="mt-2 text-[1.9rem] font-extrabold leading-[1.3] tracking-[-0.02em] sm:text-[2.3rem]">
             문법 용어,

@@ -24,13 +24,11 @@ export function Header() {
         <Link href="/" aria-label="그래머랑 홈" className="shrink-0 rounded-lg">
           <Logo size={36} tagline={brand.tagline} />
         </Link>
-        <div className="flex min-w-0 items-center gap-1.5 sm:gap-2">
+        <div className="flex min-w-0 shrink-0 items-center gap-1 sm:gap-2">
           <NavMenu items={navItems} />
-          <span className="hidden sm:contents">
-            <InstallButton />
-          </span>
           <AuthStatus />
           <ThemeToggle />
+          <InstallButton iconOnlyOnMobile />
         </div>
       </div>
     </header>
