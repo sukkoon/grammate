@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LevelBadges } from "@/components/lesson/blocks";
 import { ReadMark } from "@/components/lesson/ReadMark";
 import { LevelAbove } from "@/components/level/LevelAbove";
-import { curriculum, unitHref, readyUnits, allUnits } from "@/content/curriculum";
+import { curriculum, unitHref, allUnits } from "@/content/curriculum";
 
 export const metadata: Metadata = {
   title: "전체 목차",
@@ -11,14 +11,16 @@ export const metadata: Metadata = {
 };
 
 export default function LearnPage() {
-  const ready = readyUnits().length;
   const total = allUnits().length;
   return (
     <div className="mx-auto max-w-4xl px-4 pb-10 pt-10 sm:px-6">
       <h1 className="text-[2rem] font-extrabold tracking-[-0.02em]">전체 목차</h1>
       <p className="mt-2 text-ink-2">
-        베스트셀러 문법책 9종의 목차를 모두 모아 순서를 다시 짰어요.{" "}
-        {ready === total ? `모두 ${total}개 단원을 지금 바로 공부할 수 있어요.` : `지금 ${ready}개 단원을 공부할 수 있고, 모두 ${total}개 단원을 차례로 채우고 있어요.`}
+        다양한 문법책의 목차와 구성을 하나하나 살펴봤어요.
+        <br />
+        그중 먼저 배워야 할 것과 나중에 익혀도 될 것을 나누고, 단계별로 다시 엮어 {total}개 단원을 만들었어요.
+        <br />
+        지금 바로 시작해 보세요.
       </p>
       <p className="mt-3">
         <Link href="/roadmap" className="inline-flex items-center rounded-full bg-coral-soft px-4 py-2 text-[15px] font-bold text-coral-ink hover:bg-coral-soft/70">
