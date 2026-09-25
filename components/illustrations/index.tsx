@@ -743,3 +743,5 @@ export * from "./to-infinitive";
 export * from "./participial-constructions";
 export * from "./participles";
 export * from "./verbals-review";
+export * from "./agreement-narration";
+export * from "./suneung";

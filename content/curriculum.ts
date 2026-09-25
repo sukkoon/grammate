@@ -330,8 +330,8 @@ export const curriculum: Part[] = [
         title: "일치와 화법",
         hook: "주어와 동사의 짝, 남의 말을 옮기는 법.",
         units: [
-          u("agreement", "수의 일치와 시제 일치", "", ["중3", "고1"]),
-          u("narration", "직접화법과 간접화법", "", ["중3", "고1"]),
+          u("agreement", "수의 일치와 시제 일치", "", ["중3", "고1"], true),
+          u("narration", "직접화법과 간접화법", "", ["중3", "고1"], true),
         ],
       },
       {
@@ -356,9 +356,9 @@ export const curriculum: Part[] = [
         title: "수능 어법 포인트",
         hook: "시험에 꼭 나오는 구별 문제를 한곳에.",
         units: [
-          u("agreement", "수일치와 대명사 일치", "", ["고1", "고2"]),
-          u("verb-verbal", "동사 vs 준동사, 능동 vs 수동", "", ["고1", "고2"]),
-          u("which-word", "that/what/관계부사, 형용사/부사, 전치사/접속사", "", ["고1", "고2"]),
+          u("agreement", "수일치와 대명사 일치", "", ["고1", "고2"], true),
+          u("verb-verbal", "동사 vs 준동사, 능동 vs 수동", "", ["고1", "고2"], true),
+          u("which-word", "that/what/관계부사, 형용사/부사, 전치사/접속사", "", ["고1", "고2"], true),
         ],
       },
     ],

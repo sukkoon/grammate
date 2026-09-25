@@ -1,0 +1,170 @@
+[
+  {
+    "id": "an-1",
+    "unit": "agreement-narration/agreement",
+    "q": "주어가 길면 동사는 뭐에 맞춰요?",
+    "alts": ["동사 바로 앞 명사에 맞추면 돼요", "수일치 주어 찾는 법", "on the desk 때문에 is인지 are인지 헷갈려요", "주어 뒤에 꾸미는 말 있을 때 수일치", "진짜 주어 찾기"],
+    "keys": ["수일치", "주어", "수식어", "괄호"],
+    "a": "동사 바로 앞의 명사가 아니라 **진짜 주어**에 맞춰요.\n주어와 동사 사이에 끼어든 전치사구(on, with, of ~), 관계사절(who, which, that ~), 분사구(-ing, p.p. ~)를 **괄호로 묶어서 빼 보세요.** 괄호 밖에 남은 명사가 진짜 주어예요.",
+    "ex": [
+      { "en": "[[The books]] on the desk [[are]] mine.", "ko": "책상 위에 있는 책들은 내 거야. (desk가 아니라 books에 맞춰 are)" },
+      { "en": "[[The girl]] with two dogs [[lives]] {next door}.", "ko": "개 두 마리를 키우는 그 여자아이는 옆집에 살아. (dogs가 아니라 girl에 맞춰 lives)" }
+    ],
+    "check": "The price of these shoes ___ high.에서 빈칸에는 is와 are 중 무엇이 올까요?",
+    "level": "middle"
+  },
+  {
+    "id": "an-2",
+    "unit": "agreement-narration/agreement",
+    "q": "the number of랑 a number of는 뭐가 달라요?",
+    "alts": ["더 넘버 오브 어 넘버 오브 차이", "a number of 뒤에 동사 복수예요", "the number of 단수 동사", "넘버 오브 수일치"],
+    "keys": ["number", "the number of", "a number of", "수일치"],
+    "a": "**the number of + 복수 명사**는 '~의 수'예요. 주어가 number(숫자) 하나라서 **단수** 동사를 써요.\n**a number of + 복수 명사**는 '많은 ~'이라서 many와 같아요. 주어가 뒤의 복수 명사라서 **복수** 동사를 써요.",
+    "ex": [
+      { "en": "[[{The number of}]] students in our school [[is]] {about|부사:약, ~쯤} 600.", "ko": "우리 학교 학생 수는 600명쯤이야." },
+      { "en": "[[{A number of}]] students [[were]] late.", "ko": "많은 학생이 지각했어. (= Many students were late.)" }
+    ],
+    "check": "A number of cats ___ in the park.에서 빈칸에는 is와 are 중 무엇이 올까요?",
+    "level": "middle"
+  },
+  {
+    "id": "an-3",
+    "unit": "agreement-narration/agreement",
+    "q": "every는 '모든'인데 왜 단수 동사를 써요?",
+    "alts": ["에브리 뒤에 복수 아니에요", "every student are 틀려요", "each 뒤 동사", "each of 수일치", "모든 학생인데 왜 has"],
+    "keys": ["every", "each", "단수", "수일치"],
+    "a": "every와 each는 여럿을 한꺼번에 묶는 말이 아니라 **하나씩 따로따로** 보는 말이에요. '학생마다 한 명씩'이라는 느낌이죠.\n그래서 뒤에 **단수 명사**가 오고 동사도 **단수**예요. each of + 복수 명사도 주어는 each라서 단수예요.",
+    "ex": [
+      { "en": "[[Every]] student in our school [[wears]] a uniform.", "ko": "우리 학교 학생은 모두 교복을 입어." },
+      { "en": "[[Each of]] the players [[has]] a locker.", "ko": "선수들은 저마다 사물함이 있어." }
+    ],
+    "check": "Every classroom ___ a clock.에서 빈칸에는 have와 has 중 무엇이 올까요?",
+    "level": "middle"
+  },
+  {
+    "id": "an-4",
+    "unit": "agreement-narration/agreement",
+    "q": "most of 뒤에 오는 동사는 단수예요, 복수예요?",
+    "alts": ["모스트 오브 수일치", "half of 뒤 동사", "some of the 뒤에 is are", "부분 표현 수일치", "all of 뒤에 단수"],
+    "keys": ["most", "half", "some", "of", "부분"],
+    "a": "most, some, half, all, the rest처럼 **전체 중 얼마만큼**을 말하는 표현은 혼자서 수를 못 정해요. **of 뒤의 명사**를 보고 정해요.\nof 뒤가 복수 명사면 복수, 단수나 셀 수 없는 명사면 단수예요. 단, one of, each of, the number of는 앞을 봐서 늘 단수예요.",
+    "ex": [
+      { "en": "{Most|대명사:대부분} of [[the students]] [[have]] smartphones.", "ko": "학생들 대부분은 스마트폰이 있어. (students → have)" },
+      { "en": "{Most|대명사:대부분} of [[the cake]] [[was]] {gone|형용사:없어진}.", "ko": "케이크가 거의 다 없어졌어. (cake → was)" }
+    ],
+    "check": "Half of the pizza ___ left.에서 빈칸에는 is와 are 중 무엇이 올까요?",
+    "level": "high"
+  },
+  {
+    "id": "an-5",
+    "unit": "agreement-narration/agreement",
+    "q": "시제 일치가 뭐예요? 왜 뒤에 동사도 과거로 바꿔요?",
+    "alts": ["시제일치 뜻", "I thought that he was 왜 was예요", "앞이 과거면 뒤도 과거", "would로 바뀌는 이유", "said 뒤에 will 쓰면 틀려요"],
+    "keys": ["시제 일치", "과거", "would", "that"],
+    "a": "that 같은 접속사가 들어오면 진짜 동사가 두 개가 되고, 두 동사는 저마다 시제를 가져요. 그래서 둘의 때가 어울려야 해요.\n**주절이 과거면** 종속절도 같은 때는 **과거**, 더 먼저는 **과거완료**, 그 뒤의 일은 **would**로 맞춰요. 우리말로는 '바쁘다고 생각했어'처럼 현재로 들려도 영어는 was를 써요.",
+    "ex": [
+      { "en": "I [[thought]] {that|접속사:~라고} he [[was]] busy.", "ko": "나는 그가 바쁘다고 생각했어." },
+      { "en": "Jisu [[said]] she [[would]] come.", "ko": "지수는 오겠다고 했어. (will → would)" }
+    ],
+    "check": "I knew that she ___ the answer.에서 빈칸에 knows와 knew 중 무엇이 알맞을까요?",
+    "level": "middle"
+  },
+  {
+    "id": "an-6",
+    "unit": "agreement-narration/agreement",
+    "q": "주절이 과거인데도 현재를 쓰는 경우가 있어요?",
+    "alts": ["시제 일치 예외", "과학적 사실은 현재", "역사적 사실은 과거", "said that water boils 왜 현재예요", "세종대왕 had created 틀려요"],
+    "keys": ["예외", "진리", "습관", "역사", "시제 일치"],
+    "a": "네, 세 가지 예외가 있어요.\n① **변하지 않는 진리·과학적 사실**은 언제나 사실이라서 **현재** ② **지금도 이어지는 습관**도 **현재** ③ **역사적 사실**은 **늘 과거**예요. 역사적 사실은 주절보다 먼저 일어났어도 과거완료로 바꾸지 않아요.",
+    "ex": [
+      { "en": "Our teacher said {that|접속사:~라고} light [[{travels|동사:(빛·소리가) 이동하다}]] faster than {sound|명사:소리}.", "ko": "선생님은 빛이 소리보다 빠르다고 하셨어. (과학적 사실 → 현재)" },
+      { "en": "We learned {that|접속사:~라는 것을} King Sejong [[created]] Hangeul.", "ko": "우리는 세종대왕이 한글을 만들었다는 것을 배웠어. (역사 → 과거)" }
+    ],
+    "check": "He said that he ___ up at six every day.에서 지금도 그렇다면 gets와 had got 중 무엇이 알맞을까요?",
+    "level": "high"
+  },
+  {
+    "id": "an-7",
+    "unit": "agreement-narration/narration",
+    "q": "직접화법이랑 간접화법이 뭐예요?",
+    "alts": ["화법이 뭐예요", "간접화법 뜻", "따옴표 문장 바꾸기", "직접화법 간접화법 차이", "리포티드 스피치"],
+    "keys": ["직접화법", "간접화법", "화법", "따옴표"],
+    "a": "**화법**은 남의 말을 옮기는 방법이에요.\n**직접화법**은 따옴표 안에 들은 그대로 옮기고, **간접화법**은 따옴표를 떼고 전하는 내 입장에서 바꿔 말해요. 간접화법에서는 인칭(I → she), 시제(am → was), 때·곳(now → then)이 바뀌어요.",
+    "ex": [
+      { "en": "Jisu said, 'I am hungry.'", "ko": "지수는 '나 배고파'라고 말했어. (직접화법)" },
+      { "en": "Jisu said {that|접속사:~라고} [[she was]] hungry.", "ko": "지수는 배고프다고 말했어. (간접화법)" }
+    ],
+    "check": "Minsu said, 'I am tired.'를 간접화법으로 바꾸면 I와 am은 각각 무엇이 될까요?",
+    "level": "middle"
+  },
+  {
+    "id": "an-8",
+    "unit": "agreement-narration/narration",
+    "q": "say랑 tell은 뭐가 달라요? said me라고 해도 돼요?",
+    "alts": ["세이 텔 차이", "said to me told me", "told that 맞아요", "텔 뒤에 사람", "said me 틀린 이유"],
+    "keys": ["say", "tell", "said", "told", "전달동사"],
+    "a": "뜻은 비슷하지만 뒤에 오는 모양이 달라요.\n**tell 뒤에는 꼭 듣는 사람**이 와요: told me that ~. **say 뒤에는 듣는 사람을 바로 못 써서** to를 붙여요: said to me that ~. 그래서 said me ✕, told that ✕예요.",
+    "ex": [
+      { "en": "Minsu [[told me]] {that|접속사:~라고} he was tired.", "ko": "민수는 나에게 피곤하다고 말했어." },
+      { "en": "Minsu [[said]] {that|접속사:~라고} he was tired.", "ko": "민수는 피곤하다고 말했어. (듣는 사람 없이)" }
+    ],
+    "check": "She ___ me that she was busy.에서 빈칸에 said와 told 중 무엇이 알맞을까요?",
+    "level": "middle"
+  },
+  {
+    "id": "an-9",
+    "unit": "agreement-narration/narration",
+    "q": "간접화법에서 tomorrow는 왜 the next day로 바꿔요?",
+    "alts": ["now를 then으로", "yesterday the day before", "간접화법 시간 표현 바꾸기", "here there 바꾸는 이유", "ago before"],
+    "keys": ["tomorrow", "the next day", "yesterday", "now", "then"],
+    "a": "말한 날과 전하는 날이 다르기 때문이에요. 지수가 어제 '내일'이라고 했다면, 그 내일은 전하는 오늘 입장에서 '그다음 날'이죠.\n그래서 말한 사람의 '지금·여기'를 **그때·거기**로 바꿔요: now → then, today → that day, yesterday → the day before, tomorrow → the next day, here → there.",
+    "ex": [
+      { "en": "Jisu said to me, 'I will meet you here tomorrow.'", "ko": "지수가 나에게 '내일 여기서 만나자'고 했어." },
+      { "en": "Jisu told me {that|접속사:~라고} she would meet me [[there {the next day}]].", "ko": "지수가 나에게 그다음 날 거기서 만나자고 했어." }
+    ],
+    "check": "간접화법에서 ago는 무엇으로 바뀔까요?",
+    "level": "middle"
+  },
+  {
+    "id": "an-10",
+    "unit": "agreement-narration/narration",
+    "q": "의문문을 간접화법으로 바꾸면 어순이 어떻게 돼요?",
+    "alts": ["asked me where did I live 맞아요", "간접의문문 어순", "의문사 있는 의문문 간접화법", "애스크 뒤에 의문사", "do가 왜 없어져요"],
+    "keys": ["ask", "의문사", "어순", "간접의문문"],
+    "a": "전달동사는 **ask**를 쓰고, 의문사 뒤를 **평서문 순서(주어 + 동사)**로 바꿔요. do, does, did는 사라지고 물음표도 없어요.\n**ask (+ 사람) + 의문사 + 주어 + 동사**. 의문사가 주어(who ~?)면 의문사 + 동사 순서 그대로예요.",
+    "ex": [
+      { "en": "Jisu said to me, 'Where do you live?'", "ko": "지수가 나에게 '너 어디 살아?'라고 물었어." },
+      { "en": "Jisu asked me [[where I lived]].", "ko": "지수가 나에게 어디 사는지 물었어. (where did I live ✕)" }
+    ],
+    "check": "He asked me, 'What are you doing?'를 옮기면 He asked me what ___ doing.의 빈칸은?",
+    "level": "high"
+  },
+  {
+    "id": "an-11",
+    "unit": "agreement-narration/narration",
+    "q": "간접화법에서 if는 왜 '만약'이 아니라 '~인지'예요?",
+    "alts": ["asked me if 뜻", "이프 인지", "whether 간접화법", "yes no 의문문 간접화법", "의문사 없는 의문문 바꾸기"],
+    "keys": ["if", "whether", "ask", "의문문"],
+    "a": "Do you ~?처럼 Yes/No로 대답하는 의문문에는 옮겨 올 의문사가 없어요. 그래서 **if나 whether**를 데려와서 절을 이어요. 이때 뜻은 '**~인지**'예요.\n물어본 말이라 that은 쓰지 않아요: asked me that ✕.",
+    "ex": [
+      { "en": "Minho said to me, 'Do you like K-pop?'", "ko": "민호가 나에게 '너 케이팝 좋아해?'라고 물었어." },
+      { "en": "Minho asked me [[{if|접속사:~인지}]] I liked K-pop.", "ko": "민호가 나에게 케이팝을 좋아하는지 물었어." }
+    ],
+    "check": "She said to me, 'Are you busy?'를 옮기면 She asked me ___ I was busy.의 빈칸에 알맞은 말은?",
+    "level": "high"
+  },
+  {
+    "id": "an-12",
+    "unit": "agreement-narration/narration",
+    "q": "명령문은 간접화법으로 어떻게 바꿔요? Let's는요?",
+    "alts": ["told me to 간접화법", "don't 간접화법", "not to 위치", "명령문 전달", "Let's 간접화법 suggest"],
+    "keys": ["명령문", "to부정사", "not to", "tell", "suggest"],
+    "a": "명령문에는 주어가 없어서 that절 대신 **to부정사**로 옮겨요. **tell / ask / order / advise + 사람 + to부정사**, 하지 말라는 말은 **not to**예요. to부정사는 변장한 동사라 진짜 동사가 늘지 않아요.\nLet's ~는 **suggest that + 주어 + (should) 동사원형**으로 옮겨요.",
+    "ex": [
+      { "en": "Mom {told|동사:(~하라고) 말했다} me [[to clean]] my room.", "ko": "엄마가 나에게 방을 청소하라고 하셨어. ('Clean your room.')" },
+      { "en": "The teacher {told|동사:(~하라고) 말했다} us [[not to run]] in the hallway.", "ko": "선생님이 우리에게 복도에서 뛰지 말라고 하셨어. ('Don't run.')" }
+    ],
+    "check": "Mom said to me, 'Don't be late.'를 옮기면 Mom told me ___ late.의 빈칸은?",
+    "level": "middle"
+  }
+]

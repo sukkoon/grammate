@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sn-1",
+    "unit": "suneung/agreement",
+    "q": "수능 어법 문제는 어떻게 풀어요?",
+    "alts": ["어법 문제 푸는 순서", "수능 영어 어법 요령", "밑줄 친 부분 어법 틀린 것 고르기", "어법 문제 너무 어려워요"],
+    "keys": ["수능", "어법", "밑줄"],
+    "a": "밑줄 친 말이 무엇인지부터 봐요.\n- **동사**면 → 접속사·관계사를 세어 진짜 동사 자리인지 보고, 주어의 수와 태(능동·수동)를 확인\n- **대명사**면 → 가리키는 명사의 수와 모양 확인\n- **that, what, which, where**면 → 선행사가 있는지, 뒤가 완전한지 확인\n- **형용사·부사**면 → 보어 자리인지 확인\n- **전치사·접속사**면 → 뒤에 명사가 오는지 절이 오는지 확인",
+    "ex": [
+      { "en": "The boy [[playing]] soccer over there [[is]] my cousin.", "ko": "진짜 동사는 is 하나, play는 분사로 변장" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sn-2",
+    "unit": "suneung/agreement",
+    "q": "동사에 밑줄이 있으면 뭐부터 봐요?",
+    "alts": ["is are 고르는 문제", "주어 동사 수일치 찾기", "주어가 멀리 있어요", "수일치 문제 푸는 법"],
+    "keys": ["수일치", "주어", "괄호"],
+    "a": "주어를 꾸미는 말(전치사구, 분사구, 관계절, to부정사구)에 **괄호**를 쳐서 지워 보세요. 괄호 밖에 남은 **핵심 명사**가 진짜 주어예요. 그 명사가 단수면 단수 동사, 복수면 복수 동사예요.",
+    "ex": [
+      { "en": "The keys (to the classroom) [[are]] in my bag.", "ko": "주어는 keys(복수) → are" },
+      { "en": "The color (of these flowers) [[is]] beautiful.", "ko": "주어는 color(단수) → is" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sn-3",
+    "unit": "suneung/verb-verbal",
+    "q": "수능에서 능동 수동은 어떻게 구별해요?",
+    "alts": ["능동태 수동태 고르는 문제", "be p.p.를 써야 하는지", "was built built 고르기", "목적어가 없으면 수동이에요?"],
+    "keys": ["능동", "수동", "태"],
+    "a": "먼저 **주어가 그 동작을 하는지 당하는지** 봐요. 당하면 be + p.p.예요. 헷갈리면 **동사 뒤에 목적어가 있는지** 확인해요. 타동사인데 목적어가 없으면 수동일 가능성이 커요.\n단, happen, occur, appear, disappear, remain, consist of, belong to는 **수동태로 쓰지 않아요**.",
+    "ex": [
+      { "en": "This house [[was built]] in 1990.", "ko": "집은 지어지는 쪽 → 수동" },
+      { "en": "A strange thing [[happened]] last night.", "ko": "happen은 수동 ✕" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sn-4",
+    "unit": "suneung/which-word",
+    "q": "which랑 where는 어떻게 골라요?",
+    "alts": ["관계대명사 관계부사 구별", "위치 웨어 고르는 법", "장소 뒤에 where 아니에요", "the place which where"],
+    "keys": ["which", "where", "관계부사", "완전"],
+    "a": "선행사보다 **뒤의 절**을 봐요. 뒤의 절에 **목적어나 주어가 비어 있으면** 관계대명사 which, **빠진 게 없이 완전하면** 관계부사 where예요. 장소 명사 뒤라고 무조건 where가 아니에요.",
+    "ex": [
+      { "en": "This is the town {where|관계부사:~하는 (곳)} my grandma was born.", "ko": "뒤가 완전 → where" },
+      { "en": "This is the town {which|관계대명사:~하는 (것)} I visited last summer.", "ko": "visited의 목적어가 빔 → which" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sn-5",
+    "unit": "suneung/which-word",
+    "q": "완전한 문장, 불완전한 문장이 뭐예요?",
+    "alts": ["완전한 절 불완전한 절", "뒤가 완전하다는 게 무슨 말", "불완전한 문장 찾는 법", "빠진 성분"],
+    "keys": ["완전", "불완전", "성분"],
+    "a": "**완전한 절**은 주어·목적어·보어 가운데 필요한 것이 다 있는 절이에요. **불완전한 절**은 그중 하나가 빠진 절이에요. 동사 뒤에 목적어가 없거나, 주어가 없거나, 전치사 뒤에 명사가 없으면 불완전이에요.\n불완전하면 관계대명사나 what, 완전하면 접속사 that이나 관계부사가 와요.",
+    "ex": [
+      { "en": "I know {that|접속사:~라는 것} he likes pizza.", "ko": "he likes pizza: 완전" },
+      { "en": "This is the pizza {which|관계대명사:~하는 (것)} he likes.", "ko": "he likes ___: 목적어가 빔 → 불완전" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sn-6",
+    "unit": "suneung/which-word",
+    "q": "despite랑 although는 어떻게 골라요?",
+    "alts": ["전치사 접속사 고르는 문제", "because of because 고르기", "during while 수능", "디스파이트 올도"],
+    "keys": ["despite", "although", "전치사", "접속사"],
+    "a": "뒤에 오는 것을 봐요. **명사(구)나 동명사**가 오면 전치사(despite, because of, during), **주어 + 동사**가 오면 접속사(although, because, while)예요. despite of라고는 쓰지 않아요.",
+    "ex": [
+      { "en": "[[Despite]] the rain, we went out.", "ko": "뒤에 명사 → 전치사" },
+      { "en": "[[Although]] it rained, we went out.", "ko": "뒤에 주어 + 동사 → 접속사" }
+    ],
+    "level": "high"
+  }
+]

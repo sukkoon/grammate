@@ -1,0 +1,77 @@
+[
+  {
+    "id": "agreement",
+    "term": "일치",
+    "parts": [
+      { "c": "일", "m": "하나 ('통일', '일등'의 일)" },
+      { "c": "치", "m": "이르다, 다다르다" }
+    ],
+    "result": "하나로 딱 맞아떨어짐, 서로 맞춤. 문법에서는 주어의 수(단수·복수)에 동사를 맞추는 수의 일치와, 주절의 시제에 종속절의 시제를 맞추는 시제 일치가 있어요.",
+    "myth": "동사 바로 앞의 명사에 맞추는 게 아니에요. 꾸미는 말을 빼고 남은 진짜 주어에 맞춰요.",
+    "english": "agreement",
+    "englishNote": "agree(서로 맞다, 동의하다) + -ment(~하는 것). 주어와 동사가 서로 '맞장구'친다는 뜻이에요.",
+    "example": "The books on the desk [[are]] mine.",
+    "group": "문장 구조",
+    "href": "/learn/agreement-narration/agreement"
+  },
+  {
+    "id": "sequence-of-tenses",
+    "term": "시제 일치",
+    "parts": [
+      { "c": "시제", "m": "동작이 일어난 때를 나타내는 동사의 모양 틀" },
+      { "c": "일치", "m": "서로 딱 맞춤" }
+    ],
+    "result": "주절의 동사가 과거면, 뒤에 이어지는 종속절의 동사도 과거(같은 때)나 과거완료(더 먼저)로 맞추는 규칙. will, can은 would, could가 돼요.",
+    "myth": "주절이 과거라고 언제나 바꾸는 건 아니에요. 변하지 않는 진리와 지금도 이어지는 습관은 현재, 역사적 사실은 늘 과거로 써요.",
+    "english": "sequence of tenses",
+    "englishNote": "sequence(차례, 이어짐) + of tenses(시제들의). 앞 동사의 시제에 따라 뒤 동사의 시제가 차례로 정해진다는 뜻이에요.",
+    "example": "I thought {that|접속사:~라고} he [[was]] busy.",
+    "group": "동사",
+    "href": "/learn/agreement-narration/agreement"
+  },
+  {
+    "id": "direct-speech",
+    "term": "직접화법",
+    "parts": [
+      { "c": "직접", "m": "중간에 거치는 것 없이 바로 ('직접 만나다'의 직접)" },
+      { "c": "화법", "m": "말을 옮기는 방법 ('대화'의 화 + '방법'의 법)" }
+    ],
+    "result": "남이 한 말을 따옴표 안에 들은 그대로 옮기는 방법. 전달동사 뒤에 쉼표를 찍고 따옴표를 써요.",
+    "myth": "따옴표 속 말은 하나도 바꾸지 않아요. 인칭·시제를 바꾸는 건 간접화법이에요.",
+    "english": "direct speech",
+    "englishNote": "direct(곧바른) + speech(말)",
+    "example": "Jisu said, [['I am hungry.']]",
+    "group": "표현",
+    "href": "/learn/agreement-narration/narration"
+  },
+  {
+    "id": "indirect-speech",
+    "term": "간접화법",
+    "parts": [
+      { "c": "간접", "m": "중간에 다른 것을 거쳐서 ('간접 경험'의 간접)" },
+      { "c": "화법", "m": "말을 옮기는 방법 ('대화'의 화 + '방법'의 법)" }
+    ],
+    "result": "남이 한 말을 따옴표 없이, 전하는 사람의 입장에서 내 말로 바꿔 옮기는 방법. 인칭, 시제, 때·곳을 나타내는 말이 바뀌어요.",
+    "myth": "뜻을 바꾸는 게 아니에요. 같은 내용을 '누가, 언제, 어디서 전하느냐'에 맞게 다시 말하는 거예요.",
+    "english": "indirect speech (reported speech)",
+    "englishNote": "indirect(곧바르지 않은) + speech(말). reported speech(전해진 말)라고도 해요.",
+    "example": "Jisu said {that|접속사:~라고} [[she was hungry]].",
+    "group": "표현",
+    "href": "/learn/agreement-narration/narration"
+  },
+  {
+    "id": "reporting-verb",
+    "term": "전달동사",
+    "parts": [
+      { "c": "전달", "m": "받은 것을 남에게 옮겨 줌 ('소식을 전달하다'의 전달)" },
+      { "c": "동사", "m": "움직임·상태를 나타내는 말" }
+    ],
+    "result": "남의 말을 옮길 때 쓰는 동사. 평서문은 say·tell, 의문문은 ask, 명령문은 tell·ask·order·advise, 제안문은 suggest를 써요.",
+    "myth": "say와 tell은 뜻이 비슷해도 쓰는 모양이 달라요. tell 뒤에는 꼭 듣는 사람이 와요: told me ○, said me ✕",
+    "english": "reporting verb",
+    "englishNote": "report(전하다, 알리다) + verb(동사)",
+    "example": "Minsu [[told]] me {that|접속사:~라고} he was tired.",
+    "group": "동사",
+    "href": "/learn/agreement-narration/narration"
+  }
+]
