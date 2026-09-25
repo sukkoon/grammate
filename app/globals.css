@@ -371,3 +371,14 @@ html[data-level="middle"] [data-voice="middle"],
 html[data-level="high"] [data-voice="high"] {
   display: block;
 }
+
+/* 가로로 넘치는 요소가 있어도 화면이 옆으로 밀리지 않게 (휴대폰·태블릿) */
+html,
+body {
+  overflow-x: clip;
+}
+.lesson svg,
+.lesson img {
+  max-width: 100%;
+  height: auto;
+}
