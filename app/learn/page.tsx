@@ -17,8 +17,8 @@ export default function LearnPage() {
     <div className="mx-auto max-w-4xl px-4 pb-10 pt-10 sm:px-6">
       <h1 className="text-[2rem] font-extrabold tracking-[-0.02em]">전체 목차</h1>
       <p className="mt-2 text-ink-2">
-        베스트셀러 문법책 9종의 목차를 모두 모아 순서를 다시 짰어요. 지금 {ready}개 단원을 공부할 수 있고, 모두 {total}개 단원을 차례로
-        채우고 있어요.
+        베스트셀러 문법책 9종의 목차를 모두 모아 순서를 다시 짰어요.{" "}
+        {ready === total ? `모두 ${total}개 단원을 지금 바로 공부할 수 있어요.` : `지금 ${ready}개 단원을 공부할 수 있고, 모두 ${total}개 단원을 차례로 채우고 있어요.`}
       </p>
 
       <div className="mt-10 space-y-12">

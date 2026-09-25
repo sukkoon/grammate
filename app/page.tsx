@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mate, type Mood } from "@/components/brand/Mate";
 import { En } from "@/components/lesson/En";
 import { TermCard } from "@/components/lesson/TermAnatomy";
-import { curriculum, unitHref } from "@/content/curriculum";
+import { allUnits, curriculum, readyUnits, unitHref } from "@/content/curriculum";
 import { termById } from "@/content/terms";
 import { brand } from "@/lib/brand";
 
@@ -136,7 +136,11 @@ export default function Home() {
             </li>
           ))}
         </ol>
-        <p className="mt-3 text-[13.5px] text-ink-3">진한 색 단원은 지금 바로 공부할 수 있어요. 나머지는 차례로 채워 가고 있어요.</p>
+        <p className="mt-3 text-[14px] text-ink-3">
+          {readyUnits().length === allUnits().length
+            ? `모두 ${allUnits().length}개 단원을 지금 바로 공부할 수 있어요. 장 이름을 누르면 첫 단원으로 가요.`
+            : "진한 색 단원은 지금 바로 공부할 수 있어요. 나머지는 차례로 채워 가고 있어요."}
+        </p>
       </section>
 
       {/* 기록에 대한 약속 */}

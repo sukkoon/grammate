@@ -1,0 +1,293 @@
+[
+  {
+    "id": "cj-1",
+    "unit": "conjunctions/coordinating",
+    "q": "and 앞에 쉼표는 언제 찍어요?",
+    "alts": ["앤드 앞에 콤마 찍어요", "쉼표 찍는 법", "A, B, and C 쉼표", "but 앞에 쉼표 꼭 찍어요", "콤마 언제 넣어요"],
+    "keys": ["쉼표", "콤마", "and", "but"],
+    "a": "단어 두 개만 이을 때는 쉼표 없이 **A and B**예요. 셋 이상을 늘어놓을 때는 **A, B, and C**처럼 쉼표로 나누고 마지막 앞에만 and를 써요.\n**절 두 개**를 이을 때는 and, but, so 앞에 쉼표를 찍는 게 보통이에요. 단, 쉼표만 찍고 접속사를 빼면 안 돼요.",
+    "ex": [
+      { "en": "I like pizza, chicken, [[and]] {tteokbokki|명사:떡볶이}.", "ko": "나는 피자, 치킨, 떡볶이를 좋아해. (셋 이상 나열)" },
+      { "en": "I called Minsu, [[but]] he didn't answer.", "ko": "민수에게 전화했는데 받지 않았어. (절 + 쉼표 + 접속사 + 절)" }
+    ],
+    "check": "The movie was long, I fell asleep.에서 빠진 것은 무엇일까요?"
+  },
+  {
+    "id": "cj-2",
+    "unit": "conjunctions/coordinating",
+    "q": "because랑 so를 한 문장에 같이 쓰면 안 돼요?",
+    "alts": ["비코즈 쏘 같이 써도 돼요", "because so 둘 다 쓰면 틀려요", "왜냐하면 그래서 같이", "because 문장에 so 붙이면", "그래서랑 때문에 같이 써요"],
+    "keys": ["because", "so", "같이"],
+    "a": "같이 쓰면 틀려요. because와 so는 **둘 다 접속사**예요. 진짜 동사가 2개인 문장에는 접속사가 1개만 필요해요.\nbecause 뒤에는 **원인**, so 뒤에는 **결과**가 와요. 둘 중 하나만 골라 쓰세요.",
+    "ex": [
+      { "en": "I was sleepy, [[so]] I {took a nap}.", "ko": "나는 졸려서 낮잠을 잤어. (so + 결과)" },
+      { "en": "I {took a nap} [[because]] I was sleepy.", "ko": "나는 졸렸기 때문에 낮잠을 잤어. (because + 원인)" }
+    ],
+    "check": "Because it rained, so we stayed home.을 바르게 고치려면 무엇을 빼야 할까요?"
+  },
+  {
+    "id": "cj-3",
+    "unit": "conjunctions/coordinating",
+    "q": "He finished his homework and went to bed에서 went 앞에 주어가 없어도 돼요?",
+    "alts": ["and 뒤에 주어 생략", "앤드 뒤에 바로 동사 와도 돼요", "went도 진짜 동사예요", "and 뒤 동사 모양", "주어 없는데 동사 있어요"],
+    "keys": ["and", "주어", "생략", "went"],
+    "a": "괜찮아요. 앞 절과 **주어가 같으면** and 뒤의 주어는 한 번만 써요. went 앞에 he가 **숨어 있는** 거예요.\n그래서 went는 변장한 동사가 아니라 **진짜 동사**예요. 주어와 시제에 맞춰 앞의 finished처럼 과거형으로 써야 해요.",
+    "ex": [
+      { "en": "He finished his homework and [[went]] to bed.", "ko": "그는 숙제를 끝내고 잠자리에 들었어. (go ✕)" }
+    ],
+    "check": "She got up early and ___ breakfast. 빈칸에는 eat과 ate 중 무엇이 올까요?"
+  },
+  {
+    "id": "cj-4",
+    "unit": "conjunctions/coordinating",
+    "q": "and로 이으면 뒤에 오는 모양도 맞춰야 해요?",
+    "alts": ["병렬 구조가 뭐예요", "and 뒤에 ing 써요", "swimming and ride 틀려요", "병렬이 뭐야", "앤드 앞뒤 모양 같게"],
+    "keys": ["병렬", "and", "모양", "ing"],
+    "a": "네, 맞춰야 해요. 이걸 **병렬 구조**라고 해요. 접속사로 이은 양쪽은 저울처럼 **같은 모양**이어야 균형이 맞아요.\n앞이 -ing면 뒤도 -ing, 앞이 to부정사면 뒤도 to부정사, 앞이 과거형이면 뒤도 과거형이에요.",
+    "ex": [
+      { "en": "I like [[swimming]] and [[riding]] my bike.", "ko": "나는 수영하는 것과 자전거 타는 것을 좋아해. (ride ✕)" },
+      { "en": "The test was [[short]] but [[difficult]].", "ko": "시험은 짧았지만 어려웠어. (형용사 + 형용사)" }
+    ]
+  },
+  {
+    "id": "cj-5",
+    "unit": "conjunctions/coordinating",
+    "q": "당근도 양파도 안 좋아한다고 할 때 and를 써요, or를 써요?",
+    "alts": ["부정문에서 and or", "don't like A or B", "둘 다 싫어할 때 영어로", "안 좋아해 and 써요", "not 뒤에 or"],
+    "keys": ["부정문", "or", "and", "not"],
+    "a": "**or**를 써요. not과 함께 두 가지를 **모두 부정**할 때는 and 대신 or를 써요. I don't like carrots or onions.는 '당근도 양파도 안 좋아해'라는 뜻이에요.",
+    "ex": [
+      { "en": "I don't like carrots [[or]] onions.", "ko": "나는 당근도 양파도 안 좋아해." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-6",
+    "unit": "conjunctions/coordinating",
+    "q": "Jisu and I에도 and가 있는데 왜 진짜 동사는 하나예요?",
+    "alts": ["접속사 있는데 동사 하나", "공식이 안 맞아요", "and 있는데 동사가 왜 한 개", "진짜 동사 개수 접속사 공식 예외", "단어 잇는 and"],
+    "keys": ["공식", "and", "진짜 동사", "단어"],
+    "a": "and가 **단어**끼리 이었기 때문이에요. 접속사가 **절**(또는 동사)을 이을 때만 진짜 동사 자리가 하나 더 생겨요.\n그래서 '진짜 동사 개수 = 접속사 개수 + 1' 공식에서는 **절을 잇는 접속사**를 세면 돼요.",
+    "ex": [
+      { "en": "[[Jisu and I]] are in the same class.", "ko": "지수와 나는 같은 반이야. (단어 + 단어 → 진짜 동사 1개)" },
+      { "en": "I called Minsu, [[but]] he didn't answer.", "ko": "민수에게 전화했는데 받지 않았어. (절 + 절 → 진짜 동사 2개)" }
+    ]
+  },
+  {
+    "id": "cj-7",
+    "unit": "conjunctions/noun-clauses",
+    "q": "Do you know where does he live는 왜 틀려요?",
+    "alts": ["간접의문문 어순", "where does he live 앞에 do you know", "의문사 주어 동사 순서", "간접의문문이 뭐예요", "두 유 노우 웨어 어순"],
+    "keys": ["간접의문문", "어순", "where", "does"],
+    "a": "질문이 다른 문장 속에 들어가면 **평서문 순서(주어 + 동사)**로 돌아와요. 이걸 **간접의문문**이라고 해요.\ndoes는 빠지고, does가 가져갔던 -s는 동사에게 돌려줘요. 그래서 where he lives예요. 과거라면 did가 빠지고 동사가 과거형이 돼요.",
+    "ex": [
+      { "en": "Do you know [[where Minho lives]]?", "ko": "민호가 어디 사는지 알아?" },
+      { "en": "I forgot [[when the movie started]].", "ko": "영화가 언제 시작했는지 잊어버렸어. (did 빠지고 started)" }
+    ],
+    "check": "Where is the library?를 Can you tell me 뒤에 넣으면 어떻게 될까요?",
+    "level": "middle"
+  },
+  {
+    "id": "cj-8",
+    "unit": "conjunctions/noun-clauses",
+    "q": "What do you think he wants에서 what은 왜 맨 앞에 와요?",
+    "alts": ["두 유 띵크 왓", "Do you think what 틀려요", "think 의문사 맨 앞", "생각해 뭐 영어 어순", "guess believe 의문사 위치"],
+    "keys": ["think", "의문사", "맨 앞", "what"],
+    "a": "'그가 **뭘** 원한다고 생각해?'는 '응, 아니'로 대답할 수 없는 질문이죠. 상대가 알고 싶은 게 '무엇'이니까 **의문사를 맨 앞**에 세워요.\n**think, believe, guess, suppose, imagine**이 이렇게 써요. 반대로 Do you know ~?는 '응, 알아'가 가능해서 Do you know가 맨 앞이에요. 두 경우 모두 의문사 뒤는 주어 + 동사예요.",
+    "ex": [
+      { "en": "[[What]] do you think [[Minsu wants]] for his birthday?", "ko": "민수가 생일에 뭘 갖고 싶어 한다고 생각해?" },
+      { "en": "Do you know [[what Minsu wants]] for his birthday?", "ko": "민수가 생일에 뭘 갖고 싶어 하는지 알아?" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-9",
+    "unit": "conjunctions/noun-clauses",
+    "q": "whether랑 if는 똑같아요?",
+    "alts": ["웨더 이프 차이", "whether 대신 if 써도 돼요", "if를 못 쓰는 경우", "~인지 영어로", "whether or not if or not"],
+    "keys": ["whether", "if", "차이", "인지"],
+    "a": "'~인지'라는 뜻은 같아요. 하지만 if는 **동사의 목적어 자리**에서만 편하게 써요.\n**주어 자리(문장 맨 앞), 전치사 뒤, 바로 뒤에 or not, to부정사 앞**에서는 whether만 써요. 헷갈리면 whether를 쓰는 게 안전해요.",
+    "ex": [
+      { "en": "I wonder [[whether Jisu got my message]].", "ko": "지수가 내 메시지를 받았는지 궁금해. (if도 가능)" },
+      { "en": "[[Whether we win or {lose|동사:지다}]] doesn't {matter|동사:중요하다}.", "ko": "이기든 지든 중요하지 않아. (주어 자리 → whether만)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-10",
+    "unit": "conjunctions/noun-clauses",
+    "q": "의문사가 주어면 간접의문문 순서가 어떻게 돼요?",
+    "alts": ["who broke 간접의문문", "누가 했는지 영어로", "who did 써요", "의문사 주어 간접의문문", "what happened 순서"],
+    "keys": ["의문사", "주어", "who", "what"],
+    "a": "**그대로** 써요. Who ate my pudding?은 의문사 who가 이미 주어라서 '주어 + 동사' 순서예요. 문장 속에 넣어도 who ate my pudding 그대로예요.\ndid를 넣어서 who did eat처럼 쓰지 않아요.",
+    "ex": [
+      { "en": "I want to know [[who ate my {pudding|명사:푸딩}]].", "ko": "누가 내 푸딩을 먹었는지 알고 싶어." },
+      { "en": "Nobody knows [[what happened at the party]].", "ko": "파티에서 무슨 일이 있었는지 아무도 몰라." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-11",
+    "unit": "conjunctions/noun-clauses",
+    "q": "I think the answer is wrong에는 접속사가 없는데 왜 동사가 두 개예요?",
+    "alts": ["접속사 없는데 동사 두 개", "that 생략하면 동사 개수", "숨은 that", "I think 뒤에 that 없어요", "that 빼도 돼요"],
+    "keys": ["that", "생략", "think", "동사"],
+    "a": "**that이 생략**되어 있어요. 목적어 자리의 that은 자주 빼지만, 접속사 자리는 그대로 남아 있어요. 그래서 진짜 동사가 think, is 두 개예요.\n다만 문장 맨 앞 **주어 자리의 That**은 뺄 수 없어요.",
+    "ex": [
+      { "en": "I think [[the answer is wrong]].", "ko": "내 생각엔 그 답이 틀린 것 같아. (= I think that the answer is wrong.)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-12",
+    "unit": "conjunctions/noun-clauses",
+    "q": "Is Jisu at home? 같은 질문은 문장 속에 어떻게 넣어요?",
+    "alts": ["예스 노 질문 간접의문문", "의문사 없는 간접의문문", "if 인지 넣기", "집에 있는지 물어볼게 영어", "whether로 바꾸기"],
+    "keys": ["yes", "no", "if", "whether"],
+    "a": "의문사가 없는 질문은 **if나 whether**를 붙여서 넣어요. 이때 if는 '만약'이 아니라 **'~인지'**예요. 순서는 역시 주어 + 동사예요.",
+    "ex": [
+      { "en": "I'll ask [[{if|접속사:~인지} Jisu is at home]].", "ko": "지수가 집에 있는지 물어볼게." },
+      { "en": "I can't remember [[whether I locked the door]].", "ko": "내가 문을 잠갔는지 기억이 안 나." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-13",
+    "unit": "conjunctions/adverb-clauses",
+    "q": "unless랑 if not은 같은 뜻이에요?",
+    "alts": ["언레스 뜻", "unless 뒤에 not 써요", "unless you don't 틀려요", "~하지 않으면 영어로", "if not unless 바꾸기"],
+    "keys": ["unless", "if", "not"],
+    "a": "네, **unless = if ~ not**이에요. '~하지 않으면'이라는 뜻이죠.\nunless 안에 이미 not이 들어 있으니, unless 뒤에 not을 또 쓰면 안 돼요. Unless you don't hurry는 틀리고, Unless you hurry가 맞아요.",
+    "ex": [
+      { "en": "[[Unless you hurry]], you'll miss the bus.", "ko": "서두르지 않으면 버스를 놓칠 거야. (= If you don't hurry)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-14",
+    "unit": "conjunctions/adverb-clauses",
+    "q": "even though랑 even if는 뭐가 달라요?",
+    "alts": ["이븐 이프 이븐 도우 차이", "even though 뜻", "even if 뜻", "~하더라도 영어로", "비록 ~이지만 영어로"],
+    "keys": ["even though", "even if", "양보"],
+    "a": "**even though**는 실제로 일어난 **사실**에 써요. '실제로 ~인데도'예요.\n**even if**는 아직 모르는 일을 **가정**할 때 써요. '설령 ~하더라도'예요. 참고로 even 혼자서는 부사라서 절을 이을 수 없어요.",
+    "ex": [
+      { "en": "[[{Even though} I was {full|형용사:배부른}]], I ate {one|수사:하나의, 한} {more|형용사:더, 추가의} piece of cake.", "ko": "배가 불렀는데도 케이크를 한 조각 더 먹었어. (실제로 배가 불렀어요)" },
+      { "en": "[[{Even if} {it|대명사:(날씨를 말할 때 자리를 채우는 말)} rains tomorrow]], we'll play soccer.", "ko": "내일 비가 오더라도 우리는 축구를 할 거야. (비가 올지는 몰라요)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-15",
+    "unit": "conjunctions/adverb-clauses",
+    "q": "so that이랑 so ~ that은 어떻게 구별해요?",
+    "alts": ["쏘 댓 차이", "so that 목적", "so 형용사 that 결과", "~하도록 영어로", "너무 ~해서 영어로"],
+    "keys": ["so that", "so", "that", "목적", "결과"],
+    "a": "so와 that이 **붙어 있으면 목적**이에요. '~하도록, ~하기 위해'.\nso와 that 사이에 **형용사·부사가 끼어 있으면 결과**예요. '너무 ~해서 …하다'.",
+    "ex": [
+      { "en": "I {set|동사:(알람을) 맞추다} an alarm [[{so that} I can {wake up} early]].", "ko": "일찍 일어날 수 있도록 알람을 맞췄어. (목적)" },
+      { "en": "The soup was [[{so|부사:너무, 아주} hot {that|접속사:(so ~ that) 그래서 ~하다}]] I couldn't eat it.", "ko": "수프가 너무 뜨거워서 먹을 수가 없었어. (결과)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-16",
+    "unit": "conjunctions/adverb-clauses",
+    "q": "so hot이랑 such a hot day는 왜 모양이 달라요?",
+    "alts": ["쏘 서치 차이", "such a 순서", "so funny movie 틀려요", "such 뒤에 a", "so 뒤에 명사"],
+    "keys": ["so", "such", "a", "명사"],
+    "a": "so 뒤에는 **형용사·부사**만 와요(so hot). 명사가 들어가면 **such + a + 형용사 + 명사**로 써요(such a hot day).\n복수 명사나 셀 수 없는 명사면 a 없이 such kind neighbors처럼 써요.",
+    "ex": [
+      { "en": "It was [[{such|형용사:그렇게 …한} a funny movie {that|접속사:(such ~ that) 그래서 ~하다}]] we laughed the whole time.", "ko": "너무 웃긴 영화라서 우리는 내내 웃었어." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-17",
+    "unit": "conjunctions/adverb-clauses",
+    "q": "since가 '때문에'인지 '이후로'인지 어떻게 알아요?",
+    "alts": ["신스 뜻 두 개", "since 이유", "since 이후로 구별", "since 현재완료", "since 때문에"],
+    "keys": ["since", "이후로", "때문에", "현재완료"],
+    "a": "**주절의 시제**를 보세요. 주절이 현재완료(have p.p.)이거나 '~된 지 얼마'를 말하면 대부분 **'~한 이후로'**예요.\n그 밖에 이유를 말하는 흐름이면 **'~ 때문에'**예요. 해석해 보고 더 자연스러운 쪽을 고르면 돼요.",
+    "ex": [
+      { "en": "I've known Jisu [[{since|접속사:~한 이후로} we were in first grade]].", "ko": "나는 1학년 때부터 지수를 알고 지냈어. (현재완료 → 이후로)" },
+      { "en": "[[{Since|접속사:~ 때문에} today is Sunday]], the library closes early.", "ko": "오늘은 일요일이라서 도서관이 일찍 문을 닫아. (이유)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "cj-18",
+    "unit": "conjunctions/adverb-clauses",
+    "q": "in case는 if랑 같은 뜻이에요?",
+    "alts": ["인 케이스 뜻", "in case if 차이", "혹시 모르니까 영어로", "~할 경우에 대비해서", "in case 뒤에 will"],
+    "keys": ["in case", "if", "대비"],
+    "a": "조금 달라요. **if**는 '만약 ~하면 (그때) …한다'예요. **in case**는 '혹시 ~할지도 모르니까 **미리** …한다'예요.\nTake an umbrella in case it rains는 비가 오든 안 오든 지금 우산을 챙기라는 뜻이에요.",
+    "ex": [
+      { "en": "Take an umbrella [[{in case} {it|대명사:(날씨를 말할 때 자리를 채우는 말)} rains]].", "ko": "비가 올지도 모르니까 우산을 가져가." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-19",
+    "unit": "conjunctions/correlative",
+    "q": "상관접속사가 뭐예요?",
+    "alts": ["상관 접속사 뜻", "both and 이름", "짝으로 된 접속사", "either or 문법 이름", "not only but also 뭐라고 불러요"],
+    "keys": ["상관접속사", "both", "either", "neither"],
+    "a": "**두 단어가 떨어져서 짝으로 일하는 접속사**예요. '상관'은 서로 관계를 맺는다는 뜻이에요.\nboth A and B(둘 다), either A or B(둘 중 하나), neither A nor B(둘 다 아닌), not A but B(A가 아니라 B), not only A but also B(A뿐만 아니라 B도)가 있어요. 단어는 둘이지만 접속사 하나로 세요.",
+    "ex": [
+      { "en": "[[{Both|접속사:(both A and B) A와 B 둘 다}]] my mom [[and]] my dad like hiking.", "ko": "엄마와 아빠 두 분 다 등산을 좋아하셔." }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-20",
+    "unit": "conjunctions/correlative",
+    "q": "Neither my sister nor I 뒤에는 are예요, am이에요?",
+    "alts": ["니더 노어 수일치", "either or 동사", "neither nor 뒤 동사", "가까운 쪽에 맞추기", "or로 이은 주어 동사"],
+    "keys": ["neither", "nor", "either", "수 일치"],
+    "a": "**am**이에요. either A or B, neither A nor B는 동사에 **가까운 B**에 맞춰요. 여기서 B는 I라서 am이에요.\nboth A and B만 둘을 합쳐서 복수로 받아요.",
+    "ex": [
+      { "en": "{Neither|접속사:(neither A nor B) A도 B도 아닌} my sister nor I [[am]] {good at} math.", "ko": "언니도 나도 수학을 잘 못해." },
+      { "en": "{Both|접속사:(both A and B) A와 B 둘 다} Jisu and I [[are]] in the drama club.", "ko": "지수와 나는 둘 다 연극부야. (both → 복수)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-21",
+    "unit": "conjunctions/correlative",
+    "q": "B as well as A는 왜 앞의 B에 동사를 맞춰요?",
+    "alts": ["애즈 웰 애즈 수일치", "as well as 동사", "as well as 뒤에 복수", "The teacher as well as the students", "뿐만 아니라 수일치"],
+    "keys": ["as well as", "수 일치", "not only"],
+    "a": "as well as는 **앞에 오는 B에 무게**가 실리는 표현이에요. 'A뿐만 아니라 B도'의 B가 맨 앞에 서 있는 거죠. 그래서 동사도 B에 맞춰요.\nnot only A but also B는 B가 뒤에 있어서 뒤의 B에 맞춰요. **'힘주는 B에 맞춘다'**고 기억하면 둘 다 풀려요.",
+    "ex": [
+      { "en": "The teacher {as well as} the students [[was]] excited.", "ko": "학생들뿐만 아니라 선생님도 신이 나셨어. (students에 속지 않기)" },
+      { "en": "{Not only} the students {but also} the teacher [[was]] excited.", "ko": "학생들뿐만 아니라 선생님도 신이 나셨어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "cj-22",
+    "unit": "conjunctions/correlative",
+    "q": "neither 앞에 don't를 또 써도 돼요?",
+    "alts": ["don't like neither", "니더 부정 두 번", "neither not 같이", "이중 부정", "둘 다 싫어 neither"],
+    "keys": ["neither", "not", "either", "부정"],
+    "a": "안 돼요. neither에는 이미 **not의 뜻**이 들어 있어요. don't like neither라고 하면 부정이 두 번이 돼요.\nnot을 쓰고 싶으면 neither를 **either**로, nor를 **or**로 바꿔요.",
+    "ex": [
+      { "en": "I like [[{neither|접속사:(neither A nor B) A도 B도 아닌}]] carrots [[nor]] onions.", "ko": "나는 당근도 양파도 좋아하지 않아." },
+      { "en": "I don't like [[{either|접속사:(either A or B) A나 B 둘 중 하나}]] carrots [[or]] onions.", "ko": "나는 당근도 양파도 좋아하지 않아. (not + either ~ or)" }
+    ],
+    "level": "middle"
+  },
+  {
+    "id": "cj-23",
+    "unit": "conjunctions/correlative",
+    "q": "not only A but also B에서 A랑 B 모양을 꼭 맞춰야 해요?",
+    "alts": ["상관접속사 병렬", "not only to but also ing", "both 뒤에 모양", "smart but also kindness", "짝 접속사 뒤 모양 같게"],
+    "keys": ["병렬", "not only", "but also", "모양"],
+    "a": "네, **병렬 구조**라서 꼭 맞춰야 해요. 짝 단어 **바로 뒤**끼리 비교하면 쉬워요.\nA가 형용사면 B도 형용사, A가 to부정사면 B도 to부정사예요. 수능 어법에서 한쪽만 모양이 다른 게 자주 나와요.",
+    "ex": [
+      { "en": "She is {not only} [[smart]] {but also} [[kind]].", "ko": "그녀는 똑똑할 뿐만 아니라 친절하기도 해. (kindness ✕)" },
+      { "en": "My goal is {not only} [[to read]] {more|형용사:더 많은} books {but also} [[to write]] my own story.", "ko": "내 목표는 책을 더 많이 읽는 것뿐만 아니라 나만의 이야기를 쓰는 거야." }
+    ],
+    "level": "high"
+  }
+]

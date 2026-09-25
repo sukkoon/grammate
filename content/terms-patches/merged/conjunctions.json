@@ -1,0 +1,48 @@
+[
+  {
+    "id": "correlative-conjunction",
+    "term": "상관접속사",
+    "parts": [
+      { "c": "상", "m": "서로 ('상대', '상호'의 상)" },
+      { "c": "관", "m": "관계를 맺다 ('관계', '관련'의 관)" },
+      { "c": "접속사", "m": "이어 주는 말" }
+    ],
+    "result": "떨어져 있는 두 단어가 서로 짝을 이루어 A와 B를 잇는 접속사: both A and B, either A or B, neither A nor B, not A but B, not only A but also B",
+    "myth": "단어가 두 개라도 접속사 하나로 세요. 짝 중 하나만 쓰거나 짝을 바꿔 쓰면 틀려요(both A or B ✕).",
+    "english": "correlative conjunction",
+    "englishNote": "co(함께) + relative(관계 있는): 서로 관계를 맺고 함께 일하는 접속사",
+    "example": "[[{Both|접속사:(both A and B) A와 B 둘 다}]] Minsu [[and]] Jisu like pizza.",
+    "group": "연결",
+    "href": "/learn/conjunctions/correlative"
+  },
+  {
+    "id": "indirect-question",
+    "term": "간접의문문",
+    "parts": [
+      { "c": "간접", "m": "곧바로가 아니라 사이에 무언가를 두고 ('간접 경험'의 간접)" },
+      { "c": "의문문", "m": "궁금한 것을 묻는 문장" }
+    ],
+    "result": "질문이 다른 문장 속에 들어가 명사절이 된 것. 순서는 의문사 + 주어 + 동사, 의문사가 없으면 if·whether + 주어 + 동사예요.",
+    "myth": "물음표로 끝나지 않을 수도 있어요. I don't know where he lives.처럼 평서문 속에도 들어가요.",
+    "english": "indirect question",
+    "englishNote": "indirect(곧바로가 아닌) + question(질문). 문장 속에 끼워 넣었다고 embedded question이라고도 해요.",
+    "example": "Do you know [[where Minho lives]]?",
+    "group": "문장 구조",
+    "href": "/learn/conjunctions/noun-clauses"
+  },
+  {
+    "id": "parallel-structure",
+    "term": "병렬 구조",
+    "parts": [
+      { "c": "병", "m": "나란히 ('병행'의 병)" },
+      { "c": "렬", "m": "줄지어 늘어서다 ('일렬', '행렬'의 렬)" },
+      { "c": "구조", "m": "짜임새" }
+    ],
+    "result": "접속사로 이은 말끼리 같은 품사·같은 모양으로 맞춰 나란히 세우는 것. -ing는 -ing와, to부정사는 to부정사와, 과거형은 과거형과 짝을 이뤄요.",
+    "english": "parallel structure (parallelism)",
+    "englishNote": "parallel(평행한): 나란히 달리는 두 선처럼 같은 모양으로",
+    "example": "I like [[swimming]] and [[riding]] my bike.",
+    "group": "문장 구조",
+    "href": "/learn/conjunctions/coordinating"
+  }
+]

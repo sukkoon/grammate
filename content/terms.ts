@@ -2371,6 +2371,291 @@ export const terms: Term[] = [
     "group": "연결",
     "href": "/learn/relatives/advanced"
   },
+
+  // 추가된 용어
+  {
+    "id": "correlative-conjunction",
+    "term": "상관접속사",
+    "parts": [
+      {
+        "c": "상",
+        "m": "서로 ('상대', '상호'의 상)"
+      },
+      {
+        "c": "관",
+        "m": "관계를 맺다 ('관계', '관련'의 관)"
+      },
+      {
+        "c": "접속사",
+        "m": "이어 주는 말"
+      }
+    ],
+    "result": "떨어져 있는 두 단어가 서로 짝을 이루어 A와 B를 잇는 접속사: both A and B, either A or B, neither A nor B, not A but B, not only A but also B",
+    "myth": "단어가 두 개라도 접속사 하나로 세요. 짝 중 하나만 쓰거나 짝을 바꿔 쓰면 틀려요(both A or B ✕).",
+    "english": "correlative conjunction",
+    "englishNote": "co(함께) + relative(관계 있는): 서로 관계를 맺고 함께 일하는 접속사",
+    "example": "[[{Both|접속사:(both A and B) A와 B 둘 다}]] Minsu [[and]] Jisu like pizza.",
+    "group": "연결",
+    "href": "/learn/conjunctions/correlative"
+  },
+  {
+    "id": "indirect-question",
+    "term": "간접의문문",
+    "parts": [
+      {
+        "c": "간접",
+        "m": "곧바로가 아니라 사이에 무언가를 두고 ('간접 경험'의 간접)"
+      },
+      {
+        "c": "의문문",
+        "m": "궁금한 것을 묻는 문장"
+      }
+    ],
+    "result": "질문이 다른 문장 속에 들어가 명사절이 된 것. 순서는 의문사 + 주어 + 동사, 의문사가 없으면 if·whether + 주어 + 동사예요.",
+    "myth": "물음표로 끝나지 않을 수도 있어요. I don't know where he lives.처럼 평서문 속에도 들어가요.",
+    "english": "indirect question",
+    "englishNote": "indirect(곧바로가 아닌) + question(질문). 문장 속에 끼워 넣었다고 embedded question이라고도 해요.",
+    "example": "Do you know [[where Minho lives]]?",
+    "group": "문장 구조",
+    "href": "/learn/conjunctions/noun-clauses"
+  },
+  {
+    "id": "parallel-structure",
+    "term": "병렬 구조",
+    "parts": [
+      {
+        "c": "병",
+        "m": "나란히 ('병행'의 병)"
+      },
+      {
+        "c": "렬",
+        "m": "줄지어 늘어서다 ('일렬', '행렬'의 렬)"
+      },
+      {
+        "c": "구조",
+        "m": "짜임새"
+      }
+    ],
+    "result": "접속사로 이은 말끼리 같은 품사·같은 모양으로 맞춰 나란히 세우는 것. -ing는 -ing와, to부정사는 to부정사와, 과거형은 과거형과 짝을 이뤄요.",
+    "english": "parallel structure (parallelism)",
+    "englishNote": "parallel(평행한): 나란히 달리는 두 선처럼 같은 모양으로",
+    "example": "I like [[swimming]] and [[riding]] my bike.",
+    "group": "문장 구조",
+    "href": "/learn/conjunctions/coordinating"
+  },
+  {
+    "id": "emphasis",
+    "term": "강조",
+    "parts": [
+      {
+        "c": "강",
+        "m": "세게, 힘주어 ('강하다'의 강)"
+      },
+      {
+        "c": "조",
+        "m": "말의 가락, 말투 ('어조'의 조)"
+      }
+    ],
+    "result": "문장의 한 부분에 힘을 주어 두드러지게 하는 것. 영어에서는 do를 더하거나(I do like it), It is ~ that 틀에 넣거나, the very, 재귀대명사, on earth 같은 말을 붙여요.",
+    "myth": "크게 소리 내어 읽는 게 아니에요! 문장의 모양을 바꾸거나 말을 더해서 힘을 줘요.",
+    "english": "emphasis",
+    "englishNote": "그리스어에서 온 말로 '드러내 보이기'라는 뜻이에요. 동사는 emphasize(강조하다)예요.",
+    "example": "I [[{do|조동사:(강조) 정말 ~하다} like]] your new bag.",
+    "group": "표현",
+    "href": "/learn/special-constructions/emphasis-inversion"
+  },
+  {
+    "id": "cleft-sentence",
+    "term": "강조구문",
+    "parts": [
+      {
+        "c": "강조",
+        "m": "힘주어 두드러지게 하다"
+      },
+      {
+        "c": "구문",
+        "m": "문장의 짜임 ('구조'의 구 + '문장'의 문)"
+      }
+    ],
+    "result": "It is(was)와 that 사이에 강조할 말을 끼워 넣은 문장. '~한 것은 바로 ___이다'로 해석해요. It is(was)와 that을 지우면 완전한 문장이 남아요.",
+    "myth": "가주어 It ~ that과 겉모양이 같아요. It is와 that을 지웠을 때 형용사만 남으면 가주어예요.",
+    "english": "cleft sentence",
+    "englishNote": "cleft(쪼개진): 한 문장을 둘로 쪼개서 강조할 말을 가운데에 세워요.",
+    "example": "{It|대명사:(강조구문) 뜻 없이 틀을 만들어요} was [[Minsu]] {that|접속사:(강조구문) ~한 것은} broke the window.",
+    "group": "문장 구조",
+    "href": "/learn/special-constructions/emphasis-inversion"
+  },
+  {
+    "id": "inversion",
+    "term": "도치",
+    "parts": [
+      {
+        "c": "도",
+        "m": "뒤집다 ('전도'의 도)"
+      },
+      {
+        "c": "치",
+        "m": "자리에 두다 ('배치'의 치)"
+      }
+    ],
+    "result": "주어와 동사(조동사)의 자리를 뒤바꿔 두는 것. 부정어, only + 부사, 장소를 나타내는 말, 보어를 맨 앞으로 보내 힘을 줄 때 일어나요. 가정법에서 if를 빼면 Were I, Had I처럼 도치가 일어나요. 의문문과 같은 어순이 돼요.",
+    "myth": "순서가 바뀌어도 진짜 동사가 늘어나지 않아요. Never have I seen에서 have seen은 주어를 사이에 둔 한 덩어리예요.",
+    "english": "inversion",
+    "englishNote": "invert(뒤집다)에서 왔어요.",
+    "example": "[[Never {have|조동사:완료형을 만드는 말} I seen]] such a cute puppy.",
+    "group": "문장 구조",
+    "href": "/learn/special-constructions/emphasis-inversion"
+  },
+  {
+    "id": "ellipsis",
+    "term": "생략",
+    "parts": [
+      {
+        "c": "생",
+        "m": "덜다, 줄이다"
+      },
+      {
+        "c": "략",
+        "m": "간단하게 하다 ('간략'의 략)"
+      }
+    ],
+    "result": "없어도 뜻을 알 수 있는 말을 빼는 것. 앞에 나온 말의 되풀이, 부사절의 '주어 + be동사', 접속사 that, 목적격 관계대명사가 자주 빠져요.",
+    "myth": "빠진 말이 없어진 게 아니에요. 보이지 않을 뿐 뜻으로는 그 자리에 있어서, 채워 읽어야 해요.",
+    "english": "ellipsis",
+    "englishNote": "그리스어로 '빠뜨림'이라는 뜻이에요. 말줄임표(…)도 영어로 ellipsis예요.",
+    "example": "[[{When|접속사:~할 때} young]], my dad lived in Jeju.",
+    "group": "표현",
+    "href": "/learn/special-constructions/ellipsis-apposition"
+  },
+  {
+    "id": "apposition",
+    "term": "동격",
+    "parts": [
+      {
+        "c": "동",
+        "m": "같다 ('동일'의 동)"
+      },
+      {
+        "c": "격",
+        "m": "자격, 문장 속 자리 ('자격'의 격)"
+      }
+    ],
+    "result": "명사 옆에 같은 대상을 가리키는 말을 나란히 놓아 풀어 주는 것. 명사, 명사(my friend, Jisu), 명사 + that + 완전한 문장(the news that …), 명사 + of + 명사(the city of Busan)가 있어요.",
+    "myth": "동격 that은 관계대명사가 아니에요. 뒤에 빠진 것 없는 완전한 문장이 와요.",
+    "english": "apposition",
+    "englishNote": "ap(곁에) + position(두기): 곁에 나란히 둔다는 뜻이에요.",
+    "example": "I heard the news [[{that|접속사:(동격) ~라는}]] our team won.",
+    "group": "문장 구조",
+    "href": "/learn/special-constructions/ellipsis-apposition"
+  },
+  {
+    "id": "insertion",
+    "term": "삽입",
+    "parts": [
+      {
+        "c": "삽",
+        "m": "꽂다, 끼우다 ('삽화'의 삽)"
+      },
+      {
+        "c": "입",
+        "m": "들어가다, 넣다 ('입구'의 입)"
+      }
+    ],
+    "result": "문장 중간에 말을 끼워 넣는 것. I think, I believe 같은 삽입절이나 if any, so to speak 같은 삽입구가 있어요. 괄호로 빼고 읽으면 뼈대가 보여요.",
+    "myth": "삽입절 I think의 think는 관계절의 동사가 아니에요. who I think is에서 who는 여전히 is의 주어예요.",
+    "english": "insertion (parenthesis)",
+    "englishNote": "insert(끼워 넣다)에서 왔어요. 괄호 속 말이라는 뜻으로 parenthesis라고도 해요.",
+    "example": "Minsu is the student {who|관계대명사:~하는 (앞의 사람을 꾸며요)} [[I think]] is the funniest.",
+    "group": "문장 구조",
+    "href": "/learn/special-constructions/ellipsis-apposition"
+  },
+  {
+    "id": "partial-negation",
+    "term": "부분부정",
+    "parts": [
+      {
+        "c": "부분",
+        "m": "전체 가운데 일부"
+      },
+      {
+        "c": "부정",
+        "m": "아니라고 하다 (not)"
+      }
+    ],
+    "result": "not이 all, every, always, both, necessarily 같은 말과 함께 쓰여 전체 중 일부만 부정하는 것. '모두(항상, 꼭) ~인 것은 아니다'로 해석해요.",
+    "myth": "Not all은 '모두 아니다'가 아니에요! '모두 ~인 것은 아니다'예요. 하나도 아닐 때는 none, no, never를 써요.",
+    "english": "partial negation",
+    "englishNote": "partial(일부의) + negation(부정)",
+    "example": "[[Not all]] students like math.",
+    "group": "표현",
+    "href": "/learn/special-constructions/negation-parallel"
+  },
+  {
+    "id": "indicative",
+    "term": "직설법",
+    "parts": [
+      {
+        "c": "직",
+        "m": "곧다, 바로 ('직선', '정직'의 직)"
+      },
+      {
+        "c": "설",
+        "m": "말하다 ('설명'의 설)"
+      },
+      {
+        "c": "법",
+        "m": "말하는 방식"
+      }
+    ],
+    "result": "사실을 있는 그대로, 에두르지 않고 바로 말하는 방식. 가정법과 짝을 이루는 말이에요. 지금까지 배운 거의 모든 문장이 직설법이에요.",
+    "myth": "'직접 설명하는 법'이라는 특별한 문법이 아니에요. 평소에 쓰는 보통 문장이 모두 직설법이에요.",
+    "english": "indicative mood",
+    "englishNote": "indicate(가리키다): 사실을 그대로 가리켜 보이는 방식",
+    "example": "I am not a bird, so I can't fly to you.",
+    "group": "표현",
+    "href": "/learn/subjunctive/basic"
+  },
+  {
+    "id": "conditional",
+    "term": "조건문",
+    "parts": [
+      {
+        "c": "조건",
+        "m": "어떤 일이 이루어지려면 먼저 갖춰져야 하는 것 ('조건을 걸다'의 조건)"
+      },
+      {
+        "c": "문",
+        "m": "문장"
+      }
+    ],
+    "result": "'만약 ~라면'으로 조건을 걸고, 그 조건이 이루어졌을 때의 결과를 말하는 문장. 조건을 말하는 if절과 결과를 말하는 주절로 이루어져요. 일어날 수 있는 일이면 직설법, 현실과 반대인 일이면 가정법으로 말해요.",
+    "english": "conditional sentence",
+    "englishNote": "condition(조건) + -al(~의): 조건이 붙은 문장",
+    "example": "[[If it rains tomorrow]], I will stay home.",
+    "group": "표현",
+    "href": "/learn/subjunctive/basic"
+  },
+  {
+    "id": "mixed-conditional",
+    "term": "혼합가정법",
+    "parts": [
+      {
+        "c": "혼합",
+        "m": "섞어서 합치다 ('혼합 복식'의 혼합)"
+      },
+      {
+        "c": "가정법",
+        "m": "현실과 반대인 일을 상상하며 말하는 방식"
+      }
+    ],
+    "result": "if절과 주절이 서로 다른 때를 말하는 가정법. 주로 if절은 과거 사실의 반대(had p.p.), 주절은 지금 사실의 반대(would + 동사원형)예요. 두 절이 각자 자기 때에서 한 칸씩 물러서요.",
+    "myth": "새로운 모양이 있는 게 아니에요. 가정법 과거완료의 if절과 가정법 과거의 주절을 이어 붙인 거예요.",
+    "english": "mixed conditional",
+    "englishNote": "mixed(섞인): 두 시간이 섞인 조건문",
+    "example": "If I [[{had|조동사:과거완료를 만드는 말} gone]] to bed early, I [[{wouldn't|조동사:~하지 않을 텐데} be]] tired now.",
+    "group": "표현",
+    "href": "/learn/subjunctive/advanced"
+  },
 ];
 
 export const termById = (id: string) => terms.find((t) => t.id === id);

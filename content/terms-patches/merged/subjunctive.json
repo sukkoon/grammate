@@ -1,0 +1,47 @@
+[
+  {
+    "id": "indicative",
+    "term": "직설법",
+    "parts": [
+      { "c": "직", "m": "곧다, 바로 ('직선', '정직'의 직)" },
+      { "c": "설", "m": "말하다 ('설명'의 설)" },
+      { "c": "법", "m": "말하는 방식" }
+    ],
+    "result": "사실을 있는 그대로, 에두르지 않고 바로 말하는 방식. 가정법과 짝을 이루는 말이에요. 지금까지 배운 거의 모든 문장이 직설법이에요.",
+    "myth": "'직접 설명하는 법'이라는 특별한 문법이 아니에요. 평소에 쓰는 보통 문장이 모두 직설법이에요.",
+    "english": "indicative mood",
+    "englishNote": "indicate(가리키다): 사실을 그대로 가리켜 보이는 방식",
+    "example": "I am not a bird, so I can't fly to you.",
+    "group": "표현",
+    "href": "/learn/subjunctive/basic"
+  },
+  {
+    "id": "conditional",
+    "term": "조건문",
+    "parts": [
+      { "c": "조건", "m": "어떤 일이 이루어지려면 먼저 갖춰져야 하는 것 ('조건을 걸다'의 조건)" },
+      { "c": "문", "m": "문장" }
+    ],
+    "result": "'만약 ~라면'으로 조건을 걸고, 그 조건이 이루어졌을 때의 결과를 말하는 문장. 조건을 말하는 if절과 결과를 말하는 주절로 이루어져요. 일어날 수 있는 일이면 직설법, 현실과 반대인 일이면 가정법으로 말해요.",
+    "english": "conditional sentence",
+    "englishNote": "condition(조건) + -al(~의): 조건이 붙은 문장",
+    "example": "[[If it rains tomorrow]], I will stay home.",
+    "group": "표현",
+    "href": "/learn/subjunctive/basic"
+  },
+  {
+    "id": "mixed-conditional",
+    "term": "혼합가정법",
+    "parts": [
+      { "c": "혼합", "m": "섞어서 합치다 ('혼합 복식'의 혼합)" },
+      { "c": "가정법", "m": "현실과 반대인 일을 상상하며 말하는 방식" }
+    ],
+    "result": "if절과 주절이 서로 다른 때를 말하는 가정법. 주로 if절은 과거 사실의 반대(had p.p.), 주절은 지금 사실의 반대(would + 동사원형)예요. 두 절이 각자 자기 때에서 한 칸씩 물러서요.",
+    "myth": "새로운 모양이 있는 게 아니에요. 가정법 과거완료의 if절과 가정법 과거의 주절을 이어 붙인 거예요.",
+    "english": "mixed conditional",
+    "englishNote": "mixed(섞인): 두 시간이 섞인 조건문",
+    "example": "If I [[{had|조동사:과거완료를 만드는 말} gone]] to bed early, I [[{wouldn't|조동사:~하지 않을 텐데} be]] tired now.",
+    "group": "표현",
+    "href": "/learn/subjunctive/advanced"
+  }
+]

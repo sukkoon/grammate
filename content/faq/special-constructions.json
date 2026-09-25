@@ -1,0 +1,235 @@
+[
+  {
+    "id": "sc-1",
+    "unit": "special-constructions/emphasis-inversion",
+    "q": "강조구문 It is that이랑 가주어 It that은 어떻게 구별해요?",
+    "alts": ["강조구문 가주어 구별", "잇 이즈 댓 강조", "It was that 강조구문 찾는 법", "가주어랑 강조구문 똑같이 생겼어요", "It is ~ that 두 가지"],
+    "keys": ["강조구문", "가주어", "it", "that"],
+    "a": "**It is(was)와 that을 지워 보세요.** 남은 말이 빠진 것 없는 완전한 문장이면 강조구문이에요.\nIt was Minsu that broke the window. → Minsu broke the window. 완전하니까 강조구문. It is strange that he is late. → strange he is late. 형용사가 덩그러니 남으니까 가주어 It이에요.",
+    "ex": [
+      { "en": "{It|대명사:(강조구문) 뜻 없이 틀을 만들어요} was [[Minsu]] {that|접속사:(강조구문) ~한 것은} broke the window.", "ko": "창문을 깬 건 바로 민수였어. (강조구문)" },
+      { "en": "{It|대명사:가주어 (뜻 없이 자리만 채워요)} is strange {that|접속사:~라는 것} he is late.", "ko": "그가 늦다니 이상해. (가주어)" }
+    ],
+    "check": "It was yesterday that I met Jisu.는 강조구문일까요, 가주어일까요?",
+    "level": "high"
+  },
+  {
+    "id": "sc-2",
+    "unit": "special-constructions/emphasis-inversion",
+    "q": "도치가 뭐예요? 왜 순서를 바꿔요?",
+    "alts": ["도치 뜻", "주어 동사 순서 바뀌는 거", "인버전이 뭐예요", "평서문인데 의문문처럼 생겼어요", "Never have I 왜 이런 순서예요"],
+    "keys": ["도치", "순서", "never", "inversion"],
+    "a": "도치는 주어와 동사의 **자리를 뒤바꾸는** 거예요. 힘주고 싶은 말(부정어, only + 부사, 장소를 나타내는 말, 보어)을 문장 맨 앞으로 보내면, 뒤따르는 주어와 동사가 **의문문 어순**이 돼요.\n순서가 바뀌어도 진짜 동사는 하나예요. Never have I seen에서 have seen은 주어 I를 사이에 둔 한 덩어리예요.",
+    "ex": [
+      { "en": "[[Never {have|조동사:완료형을 만드는 말} I seen]] such a cute puppy.", "ko": "이렇게 귀여운 강아지는 본 적이 없어. (← I have never seen …)" }
+    ],
+    "check": "I have never been to Jeju.를 Never로 시작하게 바꿔 볼까요?",
+    "level": "high"
+  },
+  {
+    "id": "sc-3",
+    "unit": "special-constructions/emphasis-inversion",
+    "q": "Little did he know에서 did는 왜 들어가요?",
+    "alts": ["little did he know 뜻", "일반동사 도치하는 법", "도치할 때 did 넣어요", "Little he knew 틀려요", "리틀 디드 히 노우"],
+    "keys": ["little", "did", "도치", "일반동사"],
+    "a": "일반동사는 혼자서 주어 앞으로 나가지 못해요. 그래서 의문문처럼 **do, does, did를 불러와** 주어 앞에 세우고, 뒤의 동사는 **원형**으로 써요.\n문장 맨 앞의 little은 '작은'이 아니라 **'전혀 ~않다'**라는 부정어예요. 그래서 Little did he know는 '그는 전혀 몰랐다'예요.",
+    "ex": [
+      { "en": "[[{Little|부사:(부정) 전혀 ~않다} {did|조동사:(도치) 주어 앞으로 나온 조동사} he know]] about the party.", "ko": "그는 파티에 대해 전혀 몰랐어. (knew ✕, know ○)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-4",
+    "unit": "special-constructions/emphasis-inversion",
+    "q": "Here comes the bus는 되는데 Here comes it은 왜 안 돼요?",
+    "alts": ["here it comes here comes it", "대명사 도치", "Here you are 왜 순서 안 바뀌어요", "히어 컴스 더 버스", "장소 부사 도치"],
+    "keys": ["here", "도치", "대명사", "comes"],
+    "a": "Here, There, Down처럼 장소나 방향을 나타내는 말이 앞에 오면 동사가 주어 앞으로 나가요. 그런데 **주어가 대명사**(it, he, she, you …)면 도치하지 않아요.\n그래서 명사 주어는 Here comes the bus, 대명사 주어는 Here it comes예요. Here you are(여기 있어)도 같은 이유로 순서가 그대로예요.",
+    "ex": [
+      { "en": "[[Here comes]] the bus!", "ko": "버스 온다! (명사 주어 → 도치)" },
+      { "en": "[[Here it comes]]!", "ko": "(그게) 온다! (대명사 주어 → 그대로)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-5",
+    "unit": "special-constructions/emphasis-inversion",
+    "q": "도치된 문장은 수일치를 어떻게 해요?",
+    "alts": ["도치 수일치", "On the table was were", "도치하면 주어가 어디 있어요", "동사 뒤에 주어", "도치 어법 문제"],
+    "keys": ["도치", "수일치", "주어", "was"],
+    "a": "도치가 일어나면 주어가 **동사 뒤**로 가요. 그래서 동사 앞의 명사가 아니라 **동사 뒤에서 진짜 주어를 찾아** 수를 맞춰요.\nOn the table ___ two cups.에서 table은 전치사 뒤의 명사라 주어가 될 수 없어요. 주어는 two cups(복수)라서 were예요.",
+    "ex": [
+      { "en": "On the shelf [[are]] two old photo albums.", "ko": "선반 위에 오래된 사진 앨범 두 권이 있어. (주어: albums)" },
+      { "en": "Among the prizes [[was]] a new bike.", "ko": "상품 중에는 새 자전거가 있었어. (주어: a new bike)" }
+    ],
+    "check": "Under the tree ___ a small dog. 빈칸에는 is와 are 중 무엇이 알맞을까요?",
+    "level": "high"
+  },
+  {
+    "id": "sc-6",
+    "unit": "special-constructions/emphasis-inversion",
+    "q": "What on earth에서 on earth가 지구 위라는 뜻이에요?",
+    "alts": ["on earth 뜻", "in the world 뜻", "도대체 영어로", "의문사 강조", "왓 온 얼스"],
+    "keys": ["on earth", "in the world", "도대체", "의문사"],
+    "a": "아니에요. 의문사 바로 뒤에 붙은 **on earth, in the world**는 '도대체'라는 강조예요. 놀라거나 답답할 때 질문에 힘을 실어 줘요.\nWhat on earth, Where in the world, Why on earth처럼 **의문사 바로 뒤**에 써요.",
+    "ex": [
+      { "en": "What [[{on earth|숙어:(의문사 강조) 도대체}]] are you doing?", "ko": "너 도대체 뭐 하는 거야?" },
+      { "en": "Where [[{in the world|숙어:(의문사 강조) 도대체}]] is my phone?", "ko": "내 휴대폰은 도대체 어디 있지?" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-7",
+    "unit": "special-constructions/ellipsis-apposition",
+    "q": "동격 that이랑 관계대명사 that은 어떻게 구별해요?",
+    "alts": ["동격의 that", "the fact that 관계대명사예요", "that 뒤가 완전한 문장", "the news that 해석", "동격절 관계절 차이"],
+    "keys": ["동격", "that", "관계대명사", "완전한 문장"],
+    "a": "**that 뒤를 보세요.** 빠진 것 없는 **완전한 문장**이면 동격 that(~라는), 주어나 목적어가 빠진 **불완전한 문장**이면 관계대명사 that(~하는)이에요.\nthe news that our team won → our team won은 완전 → '우리 팀이 이겼다는 소식'. the news that I heard → I heard 뒤에 목적어가 빠짐 → '내가 들은 소식'.",
+    "ex": [
+      { "en": "The news [[{that|접속사:(동격) ~라는}]] our team won {surprised|동사:놀라게 했다} us.", "ko": "우리 팀이 이겼다는 소식에 우리는 놀랐어. (동격)" },
+      { "en": "The news [[{that|관계대명사:~한 (앞의 명사를 꾸며요)}]] I heard {surprised|동사:놀라게 했다} us.", "ko": "내가 들은 소식에 우리는 놀랐어. (관계대명사)" }
+    ],
+    "check": "the idea that he suggested의 that은 동격일까요, 관계대명사일까요?",
+    "level": "high"
+  },
+  {
+    "id": "sc-8",
+    "unit": "special-constructions/ellipsis-apposition",
+    "q": "When young처럼 주어도 동사도 없는데 맞는 문장이에요?",
+    "alts": ["when young 문법", "though tired 주어 생략", "if necessary 뜻", "접속사 뒤에 형용사만", "부사절 주어 be동사 생략"],
+    "keys": ["생략", "주어", "be동사", "부사절"],
+    "a": "맞아요. 부사절의 **주어가 주절의 주어와 같고 동사가 be동사**면, 주어와 be동사를 **함께** 뺄 수 있어요. When he was young → When young.\n주어와 be동사가 한꺼번에 빠지니 부사절에는 진짜 동사가 남지 않아요. 그래서 형용사, 분사(-ing, p.p.), 전치사구만 남아요. When was young처럼 be동사만 남기면 틀려요.",
+    "ex": [
+      { "en": "[[{When|접속사:~할 때} young]], my dad lived in Jeju.", "ko": "아빠는 어렸을 때 제주도에 사셨어. (← When he was young)" },
+      { "en": "[[{Though|접속사:비록 ~이지만} tired]], she finished her homework.", "ko": "피곤했지만 그녀는 숙제를 끝냈어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-9",
+    "unit": "special-constructions/ellipsis-apposition",
+    "q": "the boy who I think is honest에서 왜 whom이 아니에요?",
+    "alts": ["who I think is", "삽입절 관계대명사 격", "I think 끼어 있으면 whom", "관계대명사 뒤에 I think", "후 아이 띵크 이즈"],
+    "keys": ["삽입", "who", "whom", "i think"],
+    "a": "끼어든 **I think를 괄호로 빼 보세요.** the boy who (I think) is honest → the boy who is honest예요. 관계대명사가 is의 **주어**라서 주격 who예요.\nI think 바로 뒤에 온다고 목적격 whom으로 바꾸면 틀려요. think는 끼어든 말의 동사라서 관계절의 동사로 세지 않아요.",
+    "ex": [
+      { "en": "He is the boy [[{who|관계대명사:~하는 (앞의 사람을 꾸며요)}]] I think is honest.", "ko": "그는 내 생각에 정직한 소년이야. (whom ✕)" }
+    ],
+    "check": "She is the girl ___ I believe will win. 빈칸에는 who와 whom 중 무엇이 알맞을까요?",
+    "level": "high"
+  },
+  {
+    "id": "sc-10",
+    "unit": "special-constructions/ellipsis-apposition",
+    "q": "동격이 뭐예요?",
+    "alts": ["동격 뜻", "명사 쉼표 명사", "my friend Jisu 문법", "어포지션", "같은 대상 나란히"],
+    "keys": ["동격", "명사", "쉼표", "apposition"],
+    "a": "동격은 명사 옆에 **같은 대상**을 가리키는 말을 나란히 놓아 풀어 주는 거예요. 두 말 사이에 '='를 넣어 읽으면 돼요.\n모양은 세 가지예요. **명사, 명사**(my best friend, Jisu), **명사 + that + 완전한 문장**(the fact that he moved), **명사 + of + 명사**(the city of Busan).",
+    "ex": [
+      { "en": "My best friend, [[Jisu]], is {good at} dancing.", "ko": "내 가장 친한 친구인 지수는 춤을 잘 춰. (my best friend = Jisu)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-11",
+    "unit": "special-constructions/ellipsis-apposition",
+    "q": "the city of Seoul의 of는 '~의'예요?",
+    "alts": ["동격의 of", "the city of Busan 해석", "a dream of becoming 뜻", "of가 라는 뜻", "서울의 도시"],
+    "keys": ["of", "동격", "city", "dream"],
+    "a": "여기서 of는 '~의'가 아니라 **'~라는'**이에요. the city of Seoul은 '서울의 도시'가 아니라 '**서울이라는 도시**'예요. 앞 명사와 of 뒤의 말이 같은 대상이라서 동격의 of라고 불러요.\nof 뒤에 동명사가 오기도 해요. a dream of becoming a vet은 '수의사가 되겠다는 꿈'이에요.",
+    "ex": [
+      { "en": "Jisu has a dream [[{of|전치사:(동격) ~라는}]] becoming a vet.", "ko": "지수는 수의사가 되겠다는 꿈이 있어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-12",
+    "unit": "special-constructions/ellipsis-apposition",
+    "q": "few, if any랑 seldom, if ever는 무슨 뜻이에요?",
+    "alts": ["if any 뜻", "if ever 뜻", "이프 애니", "쉼표 사이 if any", "삽입구 뜻"],
+    "keys": ["if any", "if ever", "삽입", "few"],
+    "a": "둘 다 쉼표 사이에 끼어든 **삽입구**예요. **if any**는 '있다 해도', **if ever**는 '한다 해도'라는 뜻이에요.\nfew, if any는 '있다 해도 거의 없는', seldom, if ever는 '한다 해도 좀처럼 안 하는'이에요. 거의 0에 가깝다는 걸 한 번 더 못 박는 말이에요. if any는 수·양에, if ever는 횟수에 써요.",
+    "ex": [
+      { "en": "{There|부사:(There + be) ~이 있다} are few, [[{if any|숙어:(있다 해도) 설령 있더라도}]], mistakes in your essay.", "ko": "네 글에는 실수가 거의, 아니 아예 없어." },
+      { "en": "My grandpa seldom, [[{if ever|숙어:(한다 해도) 설령 하더라도}]], watches TV.", "ko": "할아버지는 TV를 거의, 아니 전혀 안 보셔." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-13",
+    "unit": "special-constructions/negation-parallel",
+    "q": "Not all은 '모두 아니다'예요?",
+    "alts": ["부분부정 뜻", "not all none 차이", "not always 해석", "낫 올 뜻", "전체부정 부분부정"],
+    "keys": ["부분부정", "not all", "none", "전체부정"],
+    "a": "아니에요. Not all은 **'모두 ~인 것은 아니다'**예요. 그런 것도 있고 아닌 것도 있다는 **부분부정**이에요.\n하나도 아닐 때는 **none, no, never, neither**를 써요. not all ↔ none, not always ↔ never, not both ↔ neither로 짝지어 기억하면 헷갈리지 않아요.",
+    "ex": [
+      { "en": "[[Not all]] students like math.", "ko": "모든 학생이 수학을 좋아하는 건 아니야. (부분부정)" },
+      { "en": "[[{None|대명사:아무도 ~ 않다}]] of us knew the {answer|명사:답, 정답}.", "ko": "우리 중 아무도 답을 몰랐어. (전체부정)" }
+    ],
+    "check": "Rich people are not always happy.를 우리말로 옮겨 볼까요?",
+    "level": "high"
+  },
+  {
+    "id": "sc-14",
+    "unit": "special-constructions/negation-parallel",
+    "q": "hardly에 not을 같이 써도 돼요?",
+    "alts": ["can't hardly 맞아요", "hardly never", "하들리 낫", "hardly 부정문", "준부정어 not"],
+    "keys": ["hardly", "not", "준부정어", "never"],
+    "a": "안 돼요. hardly, scarcely, rarely, seldom, few, little은 그 자체로 **'거의 ~않다'라는 부정의 뜻**이 있어요. not이나 never를 또 붙이면 틀려요.\ncan't hardly ✕ → can hardly ○. hardly never ✕ → hardly ever ○(거의 한 번도 ~않다).",
+    "ex": [
+      { "en": "I could [[hardly]] hear the teacher's voice.", "ko": "선생님 목소리가 거의 안 들렸어. (couldn't hardly ✕)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-15",
+    "unit": "special-constructions/negation-parallel",
+    "q": "never ~ without -ing는 무슨 뜻이에요?",
+    "alts": ["never without 해석", "이중부정", "~할 때마다 영어로", "네버 위다웃", "부정이 두 번"],
+    "keys": ["never", "without", "이중부정", "-ing"],
+    "a": "never A without B-ing는 'B하지 않고는 결코 A하지 않는다', 곧 **'A할 때마다 B한다'**예요. 부정이 두 번 겹쳐 강한 긍정이 된 **이중부정**이에요.\nwithout은 전치사라서 뒤에 **동명사**가 와요. Whenever A, B로 바꿔 쓸 수 있어요.",
+    "ex": [
+      { "en": "I [[never]] watch this movie [[without crying]].", "ko": "나는 이 영화를 볼 때마다 울어. (= Whenever I watch this movie, I cry.)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-16",
+    "unit": "special-constructions/negation-parallel",
+    "q": "You cannot be too careful은 조심하면 안 된다는 뜻이에요?",
+    "alts": ["cannot too 뜻", "캔낫 비 투 케어풀", "아무리 해도 지나치지 않다 영어로", "cannot 형용사 too", "cannot be too 해석"],
+    "keys": ["cannot", "too", "관용", "careful"],
+    "a": "정반대예요. cannot ~ too는 '너무 ~할 수는 없다', 곧 **'아무리 ~해도 지나치지 않다'**예요. You cannot be too careful.은 '아무리 조심해도 지나치지 않다', 그러니까 **꼭 조심하라**는 말이에요.\n낱말 뜻만 더하면 오해하기 쉬운 관용 표현이라 덩어리째 익혀요.",
+    "ex": [
+      { "en": "You [[cannot be too]] careful {when|접속사:~할 때} you cross the road.", "ko": "길을 건널 때는 아무리 조심해도 지나치지 않아." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sc-17",
+    "unit": "special-constructions/negation-parallel",
+    "q": "병렬이 뭐예요? and 뒤에는 뭘 써요?",
+    "alts": ["병렬 구조", "and 뒤에 동사 모양", "and 뒤에 ing 써요 ed 써요", "패럴렐", "and 앞뒤 모양 맞추기"],
+    "keys": ["병렬", "and", "준동사", "진짜 동사"],
+    "a": "병렬은 and, but, or로 이은 말을 **같은 모양으로 맞추는** 거예요. and 뒤의 모양이 헷갈리면 **앞에서 짝을 찾아요.**\n짝이 **진짜 동사**면 뒤도 진짜 동사(수·시제 맞추기), 짝이 **동명사·to부정사**면 뒤도 같은 준동사예요. 짝은 바로 앞 단어가 아니라 뜻과 구조로 찾아요.",
+    "ex": [
+      { "en": "She [[opened]] the window and [[cleaned]] the room.", "ko": "그녀는 창문을 열고 방을 청소했어. (진짜 동사끼리)" },
+      { "en": "I enjoy [[swimming]] and [[hiking]].", "ko": "나는 수영과 하이킹을 즐겨. (동명사끼리)" }
+    ],
+    "check": "My hobbies are reading and ___ (draw). 빈칸에 알맞은 모양은?",
+    "level": "high"
+  },
+  {
+    "id": "sc-18",
+    "unit": "special-constructions/negation-parallel",
+    "q": "anything but이랑 nothing but은 뜻이 같아요?",
+    "alts": ["anything but 뜻", "nothing but 뜻", "애니띵 벗", "결코 아닌 영어로", "오직 뿐 영어로"],
+    "keys": ["anything but", "nothing but", "관용", "but"],
+    "a": "정반대예요. 여기서 but은 **'~을 빼고'**라는 뜻이에요.\n**anything but** easy는 '쉬운 것만 빼고 무엇이든' → **결코 쉽지 않은**. **nothing but** games는 '게임 말고는 아무것도 아닌' → **오직 게임뿐**이에요.",
+    "ex": [
+      { "en": "The math test was [[{anything but|숙어:결코 ~이 아닌}]] easy.", "ko": "수학 시험은 결코 쉽지 않았어." },
+      { "en": "My brother does [[{nothing but|숙어:오직 ~뿐 (= only)}]] play games on Sundays.", "ko": "우리 형은 일요일마다 게임만 해." }
+    ],
+    "level": "high"
+  }
+]

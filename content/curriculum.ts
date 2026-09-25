@@ -291,10 +291,10 @@ export const curriculum: Part[] = [
         title: "접속사",
         hook: "접속사 하나가 들어오면 동사 자리도 하나 더 생겨요.",
         units: [
-          u("coordinating", "and, but, or, so", "", ["초등", "중1"]),
-          u("noun-clauses", "명사절과 간접의문문", "that, whether, if", ["중2", "중3"]),
-          u("adverb-clauses", "부사절", "시간·이유·조건·양보", ["중2", "고1"]),
-          u("correlative", "상관접속사", "both A and B, not only A but also B", ["중3", "고1"]),
+          u("coordinating", "and, but, or, so", "", ["초등", "중1"], true),
+          u("noun-clauses", "명사절과 간접의문문", "that, whether, if", ["중2", "중3"], true),
+          u("adverb-clauses", "부사절", "시간·이유·조건·양보", ["중2", "고1"], true),
+          u("correlative", "상관접속사", "both A and B, not only A but also B", ["중3", "고1"], true),
         ],
       },
       {
@@ -320,9 +320,9 @@ export const curriculum: Part[] = [
         title: "가정법",
         hook: "현실에서 한 발 물러서서 상상할 때, 시제도 한 칸 물러서요.",
         units: [
-          u("basic", "가정법 과거와 과거완료", "", ["중2", "중3"]),
-          u("wish-as-if", "I wish, as if", "", ["중3"]),
-          u("advanced", "혼합가정법과 if 생략", "", ["고2"]),
+          u("basic", "가정법 과거와 과거완료", "", ["중2", "중3"], true),
+          u("wish-as-if", "I wish, as if", "", ["중3"], true),
+          u("advanced", "혼합가정법과 if 생략", "", ["고2"], true),
         ],
       },
       {
@@ -339,9 +339,9 @@ export const curriculum: Part[] = [
         title: "특수구문",
         hook: "강조하고, 뒤집고, 생략하는 기술.",
         units: [
-          u("emphasis-inversion", "강조와 도치", "", ["중3", "고2"]),
-          u("ellipsis-apposition", "생략·동격·삽입", "", ["고1", "고2"]),
-          u("negation-parallel", "부정 표현과 병렬", "", ["고1", "고2"]),
+          u("emphasis-inversion", "강조와 도치", "", ["중3", "고2"], true),
+          u("ellipsis-apposition", "생략·동격·삽입", "", ["고1", "고2"], true),
+          u("negation-parallel", "부정 표현과 병렬", "", ["고1", "고2"], true),
         ],
       },
     ],
