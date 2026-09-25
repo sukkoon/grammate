@@ -95,7 +95,13 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 5rem;
+  /* 좁은 화면은 머리글 아래에 메뉴 탭 줄이 하나 더 있다 */
+  scroll-padding-top: 7.5rem;
+}
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
 }
 
 body {

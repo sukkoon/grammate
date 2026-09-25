@@ -1,47 +1,32 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Mate";
 import { ThemeToggle } from "./ThemeToggle";
-import { MobileMenu } from "./MobileMenu";
-import { LevelSwitch } from "@/components/level/LevelSwitch";
-import { LevelTabs } from "@/components/level/LevelTabs";
+import { NavTabs } from "./NavTabs";
 
 export const navItems = [
+  { href: "/core", label: "핵심 문법" },
   { href: "/learn", label: "전체 목차" },
+  { href: "/roadmap", label: "필수 문법" },
   { href: "/terms", label: "용어 사전" },
   { href: "/verbs", label: "불규칙 동사" },
   { href: "/me", label: "내 공부" },
 ];
 
+/** 넓은 화면: 로고 오른쪽에 탭. 좁은 화면: 로고 아래 줄에 탭(옆으로 밀어서 보기). */
 export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-16">
         <Link href="/" aria-label="그래머랑 홈" className="shrink-0 rounded-lg">
           <Logo size={32} />
         </Link>
-        <nav aria-label="주요 메뉴" className="hidden items-center gap-1 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-4 py-2 text-[15px] font-bold text-ink-2 transition-colors hover:bg-chip hover:text-ink"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <span className="ml-1 hidden lg:block">
-            <LevelTabs variant="compact" />
-          </span>
-          <span className="ml-1 lg:hidden">
-            <LevelSwitch />
-          </span>
+        <div className="flex min-w-0 items-center gap-2">
+          <NavTabs items={navItems} className="hidden lg:block" />
           <ThemeToggle />
-        </nav>
-        <div className="flex shrink-0 items-center gap-1 md:hidden">
-          <LevelSwitch />
-          <ThemeToggle />
-          <MobileMenu items={navItems} />
         </div>
+      </div>
+      <div className="mx-auto flex max-w-6xl justify-end px-4 pb-2.5 sm:px-6 lg:hidden">
+        <NavTabs items={navItems} className="min-w-0" />
       </div>
     </header>
   );
