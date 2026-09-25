@@ -16,7 +16,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" aria-label="그래메이트 홈" className="shrink-0 rounded-lg">
+        <Link href="/" aria-label="그래머랑 홈" className="shrink-0 rounded-lg">
           <Logo size={32} />
         </Link>
         <nav aria-label="주요 메뉴" className="hidden items-center gap-1 md:flex">

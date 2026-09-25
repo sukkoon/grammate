@@ -1,9 +1,9 @@
 export const brand = {
-  name: "grammate",
+  name: "grammarang",
   /** 브라우저 탭, 앱 설치(홈 화면 추가)에 보이는 이름 */
-  appName: "Grammate",
-  nameKo: "그래메이트",
-  tagline: "내 문법 짝꿍, 그래메이트",
+  appName: "Grammarang",
+  nameKo: "그래머랑",
+  tagline: "내 문법 짝꿍, 그래머랑",
   promise: "용어의 뜻부터 알려줄게. 외우지 말고, 이해하자.",
   helperLabel: "모르는 것이 있으면 이야기 해봐요",
   description:

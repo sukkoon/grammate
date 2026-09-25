@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { brand } from "@/lib/brand";
 
-/** 앱 설치(홈 화면에 추가) 정보: 이름은 Grammate로 보인다. */
+/** 앱 설치(홈 화면에 추가) 정보: 이름은 Grammarang로 보인다. */
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: brand.appName,

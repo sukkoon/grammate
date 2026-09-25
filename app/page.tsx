@@ -46,7 +46,7 @@ export default function Home() {
             <span className="marker">뜻부터 알면</span> 쉬워져요
           </h1>
           <p className="mt-5 max-w-xl text-[1.05rem] text-ink-2">
-            대명사의 &lsquo;대&rsquo;는 크다가 아니라 &lsquo;대신하다&rsquo;예요. 그래메이트는 초등 고학년부터 고2까지, 용어의 뜻부터
+            대명사의 &lsquo;대&rsquo;는 크다가 아니라 &lsquo;대신하다&rsquo;예요. 그래머랑은 초등 고학년부터 고2까지, 용어의 뜻부터
             풀어 주는 영어 문법 짝꿍이에요.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* 특징 */}
-      <section aria-label="그래메이트의 특징" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section aria-label="그래머랑의 특징" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((f) => (
           <div key={f.title} className="rounded-2xl border border-line bg-card px-5 py-5">
             <Mate mood={f.mood} size={40} className="text-ink" />

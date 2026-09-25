@@ -60,7 +60,7 @@ function Face({ mood }: { mood: Mood }) {
   }
 }
 
-/** 그래메이트 짝꿍: 윙크하는 G. 표정(mood)을 바꿔 사이트 곳곳의 이모지로 쓴다. */
+/** 그래머랑 짝꿍: 윙크하는 G. 표정(mood)을 바꿔 사이트 곳곳의 이모지로 쓴다. */
 export function Mate({
   mood = "wink",
   size = 40,
@@ -94,7 +94,7 @@ export function Mate({
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`whitespace-nowrap font-extrabold tracking-[-0.035em] ${className}`}>
-      gram<span className="text-coral">mate</span>
+      gramma<span className="text-coral">rang</span>
     </span>
   );
 }
@@ -103,7 +103,7 @@ export function Logo({ size = 34, className = "" }: { size?: number; className?:
   return (
     <span className={`inline-flex shrink-0 items-center gap-2 text-ink ${className}`}>
       <Mate size={size} />
-      <Wordmark className="text-[1.45rem] leading-none" />
+      <Wordmark className="text-[1.28rem] leading-none sm:text-[1.45rem]" />
     </span>
   );
 }

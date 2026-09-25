@@ -7,7 +7,7 @@ import { curriculum, unitHref, readyUnits, allUnits } from "@/content/curriculum
 
 export const metadata: Metadata = {
   title: "전체 목차",
-  description: "서장부터 수능 어법까지, 7부 24장으로 정리한 그래메이트 영어 문법 전체 목차.",
+  description: "서장부터 수능 어법까지, 7부 24장으로 정리한 그래머랑 영어 문법 전체 목차.",
 };
 
 export default function LearnPage() {
