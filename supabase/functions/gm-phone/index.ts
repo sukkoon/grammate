@@ -41,7 +41,7 @@ function maskMail(m: string): string {
   const [u, d] = m.split("@");
   return (u.length <= 2 ? u[0] + "*" : u.slice(0, 2) + "*".repeat(Math.min(6, u.length - 2))) + "@" + d;
 }
-const okPassword = (pw: unknown) => typeof pw === "string" && pw.length >= 8 && pw.length <= 72;
+const okPassword = (pw: unknown) => typeof pw === "string" && pw.length >= 6 && pw.length <= 72;
 const hex = (buf: ArrayBuffer) => [...new Uint8Array(buf)].map((x) => x.toString(16).padStart(2, "0")).join("");
 
 let SECRET: string | null = null;
@@ -102,7 +102,7 @@ Deno.serve(async (req) => {
     if (action === "signup") {
       const mail = normMail(body.email);
       if (!mail) return fail("email", "비밀번호를 잊었을 때 쓸 메일 주소를 정확히 적어 주세요");
-      if (!okPassword(body.password)) return fail("password", "비밀번호는 8자 이상으로 정해 주세요");
+      if (!okPassword(body.password)) return fail("password", "비밀번호는 6자 이상으로 정해 주세요");
       const name = String(body.name ?? "").trim().slice(0, 20);
       if (await findByPhone(phone)) return fail("dup", DUP_PHONE, 409);
       const since = new Date(Date.now() - 3600e3).toISOString();
@@ -117,6 +117,7 @@ Deno.serve(async (req) => {
       if (error || !data?.user) {
         if (await findByPhone(phone)) return fail("dup", DUP_PHONE, 409);
         if (error && /already|registered|exists/i.test(error.message)) return fail("dupmail", DUP_MAIL, 409);
+        if (error && /password/i.test(error.message)) return fail("password", "비밀번호가 너무 짧거나 쓸 수 없는 비밀번호예요. 6자 이상으로 정해 주세요", 400);
         throw error ?? new Error("createUser failed");
       }
       return json({ ok: true });
@@ -168,7 +169,7 @@ Deno.serve(async (req) => {
     }
 
     if (action === "verifyreset") {
-      if (!okPassword(body.password)) return fail("password", "새 비밀번호는 8자 이상으로 정해 주세요");
+      if (!okPassword(body.password)) return fail("password", "새 비밀번호는 6자 이상으로 정해 주세요");
       const code = String(body.code ?? "").replace(/[^0-9]/g, "");
       if (code.length !== 6) return fail("code", "메일로 받은 6자리 인증번호를 입력해 주세요");
       const prof = await findByPhone(phone);

@@ -77,8 +77,8 @@ export function LoginCard() {
         return;
       }
       if (mode === "signup") {
-        if (pw.length < 8) {
-          setMsg({ kind: "error", text: "비밀번호는 8자 이상으로 정해 주세요." });
+        if (pw.length < 6) {
+          setMsg({ kind: "error", text: "비밀번호는 6자 이상으로 정해 주세요." });
           return;
         }
         const r = await phoneAuth("signup", { phone: p, password: pw, email, name });
@@ -107,8 +107,8 @@ export function LoginCard() {
           setMsg({ kind: "ok", text: `${r.to ?? "가입할 때 적은 메일"}로 6자리 인증번호를 보냈어요.` });
           return;
         }
-        if (pw.length < 8) {
-          setMsg({ kind: "error", text: "새 비밀번호는 8자 이상으로 정해 주세요." });
+        if (pw.length < 6) {
+          setMsg({ kind: "error", text: "새 비밀번호는 6자 이상으로 정해 주세요." });
           return;
         }
         const r = await phoneAuth("verifyreset", { phone: p, code, password: pw });
@@ -199,7 +199,7 @@ export function LoginCard() {
                 id="login-pw"
                 type={showPw ? "text" : "password"}
                 autoComplete={mode === "login" ? "current-password" : "new-password"}
-                placeholder={mode === "login" ? "비밀번호" : "8자 이상"}
+                placeholder={mode === "login" ? "비밀번호" : "6자 이상"}
                 value={pw}
                 onChange={(e) => setPw(e.target.value)}
                 className={`${field} pr-12`}
