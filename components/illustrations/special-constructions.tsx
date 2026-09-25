@@ -20,7 +20,7 @@ function Mark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -93,14 +93,14 @@ export function ScSpotlight() {
         <Chip className="bg-chip">나머지</Chip>
       </p>
       <div className="mt-4 rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">원래 문장</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">원래 문장</p>
         <p className="mt-2 flex flex-wrap items-end gap-x-2 gap-y-2">
           {BASE_PARTS.map((p) => (
             <span key={p.role} className="inline-flex flex-col items-center gap-1">
               <span className={`rounded-lg px-2.5 py-1 text-[1.05em] font-medium ${p.tone ? TONE[p.tone] : "border border-line"}`}>
                 <En en={p.part.en} />
               </span>
-              <span className="text-[14px] font-bold text-ink-3">{p.role}</span>
+              <span className="text-[13.5px] font-bold text-ink-3">{p.role}</span>
             </span>
           ))}
         </p>
@@ -108,15 +108,15 @@ export function ScSpotlight() {
       <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
         {SPOTS.map((s) => (
           <li key={s.role} className="rounded-2xl border border-line px-4 py-3">
-            <Chip className={`text-[14px] ${TONE[s.tone]}`}>{s.role}에 조명</Chip>
+            <Chip className={`text-[13.5px] ${TONE[s.tone]}`}>{s.role}에 조명</Chip>
             <p className="mt-2 text-[1.04em] font-medium">
               <En en={s.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{s.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{s.ko}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 rounded-2xl bg-chip px-4 py-2.5 text-center text-[14.5px] font-bold">
+      <p className="mt-3 rounded-2xl bg-chip px-4 py-2.5 text-center text-[14px] font-bold">
         동사 found는 틀에 넣지 않아요. 동사는{" "}
         <span className="text-coral-ink">
           <En en="Jisu {did|조동사:(강조) 정말 ~했다} find my cat." />
@@ -166,13 +166,13 @@ const CLEFT_TESTS: {
 export function ScCleftTest() {
   return (
     <div>
-      <p className="text-center text-[15px] font-bold">
+      <p className="text-center text-[14.5px] font-bold">
         <span className="text-coral-ink">It is(was)</span>와 <span className="text-coral-ink">that</span>을 지워 보세요
       </p>
       <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
         {CLEFT_TESTS.map((t) => (
           <div key={t.kind} className={`rounded-2xl px-4 py-3 ${t.ok ? "border-2 border-coral" : "border border-line"}`}>
-            <p className="text-[14px] font-extrabold text-ink-3">{t.kind}일까?</p>
+            <p className="text-[13.5px] font-extrabold text-ink-3">{t.kind}일까?</p>
             <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.02em]">
               {t.pieces.map((p) =>
                 p.cut ? (
@@ -186,7 +186,7 @@ export function ScCleftTest() {
                 ),
               )}
             </p>
-            <div className="mt-2 flex items-center gap-2 text-[14px] font-bold text-ink-2">
+            <div className="mt-2 flex items-center gap-2 text-[13.5px] font-bold text-ink-2">
               <ArrowRight size={18} className="rotate-90 text-coral" />
               남은 말
             </div>
@@ -194,7 +194,7 @@ export function ScCleftTest() {
               <Mark ok={t.ok} />
               <En en={t.rest.en} />
             </p>
-            <p className={`mt-2 text-[14px] font-bold ${t.ok ? "text-coral-ink" : "text-ink-2"}`}>{t.verdict}</p>
+            <p className={`mt-2 text-[13.5px] font-bold ${t.ok ? "text-coral-ink" : "text-ink-2"}`}>{t.verdict}</p>
           </div>
         ))}
       </div>
@@ -259,7 +259,7 @@ export function ScInversionFlip() {
       <ul className="grid gap-2.5">
         {FLIPS.map((f) => (
           <li key={f.kind} className="rounded-2xl border border-line px-4 py-3">
-            <p className="text-[14px] font-extrabold text-ink-3">{f.kind}</p>
+            <p className="text-[13.5px] font-extrabold text-ink-3">{f.kind}</p>
             <p className="mt-1 text-[1em] text-ink-2">
               <En en={f.from.en} />
             </p>
@@ -272,11 +272,11 @@ export function ScInversionFlip() {
                 </span>
               ))}
             </p>
-            <p className="mt-1.5 text-[14px] font-bold text-ink-2">{f.note}</p>
+            <p className="mt-1.5 text-[13.5px] font-bold text-ink-2">{f.note}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
         <Chip className={ROLE_STYLE.neg}>앞으로 나온 말</Chip>
         <Chip className={ROLE_STYLE.aux}>주어 앞으로 간 (조)동사</Chip>
         <Chip className={ROLE_STYLE.subj}>주어</Chip>
@@ -319,11 +319,11 @@ export function ScShrinkClause() {
             <Chip className="bg-mint-soft font-medium text-mint-ink">
               <En en={s.keep.en} />
             </Chip>
-            <span className="text-[14px] font-bold text-ink-3">{s.kind}</span>
+            <span className="text-[13.5px] font-bold text-ink-3">{s.kind}</span>
           </li>
         ))}
       </ul>
-      <div className="mt-3 grid gap-2 text-[14.5px] font-bold sm:grid-cols-2">
+      <div className="mt-3 grid gap-2 text-[14px] font-bold sm:grid-cols-2">
         <p className="flex items-center gap-2 rounded-xl bg-mint-soft px-3 py-2 text-mint-ink">
           <Mark ok />
           진짜 동사 0개: 형용사·분사·전치사구만 남아요
@@ -386,11 +386,11 @@ export function ScThatTwins() {
       <div className="grid gap-2.5 sm:grid-cols-2">
         {THAT_TWINS.map((t) => (
           <div key={t.kind} className={`rounded-2xl px-4 py-3 ${t.strong ? "border-2 border-coral" : "border border-line"}`}>
-            <Chip className={`text-[15px] ${t.strong ? TONE.coral : TONE.sky}`}>{t.kind}</Chip>
+            <Chip className={`text-[14.5px] ${t.strong ? TONE.coral : TONE.sky}`}>{t.kind}</Chip>
             <p className="mt-2 text-[1.05em] font-medium">
               <En en={t.head.en} />
             </p>
-            <p className="mt-2 text-[14px] font-bold text-ink-3">that 뒤를 뜯어 보면</p>
+            <p className="mt-2 text-[13.5px] font-bold text-ink-3">that 뒤를 뜯어 보면</p>
             <p className="mt-1 flex flex-wrap items-end gap-1.5">
               {t.slots.map((s) => (
                 <span key={s.label} className="inline-flex flex-col items-center gap-1">
@@ -403,16 +403,16 @@ export function ScThatTwins() {
                       <En en={s.word?.en ?? ""} />
                     </span>
                   )}
-                  <span className="text-[14px] font-bold text-ink-3">{s.label}</span>
+                  <span className="text-[13.5px] font-bold text-ink-3">{s.label}</span>
                 </span>
               ))}
             </p>
-            <p className={`mt-2 text-[14.5px] font-extrabold ${t.strong ? "text-coral-ink" : "text-sky-ink"}`}>{t.verdict}</p>
-            <p className="text-[14px] text-ink-2">{t.meaning}</p>
+            <p className={`mt-2 text-[14px] font-extrabold ${t.strong ? "text-coral-ink" : "text-sky-ink"}`}>{t.verdict}</p>
+            <p className="text-[13.5px] text-ink-2">{t.meaning}</p>
           </div>
         ))}
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <span>동격절은 that으로만 써요</span>
         <span lang="en" className="text-ink-3">
           the news which our team won ✕
@@ -429,7 +429,7 @@ export function ScBracketOut() {
   return (
     <div className="mx-auto grid max-w-xl gap-3">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">끼어든 말이 있는 문장</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">끼어든 말이 있는 문장</p>
         <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.05em]">
           <Chip className="border border-line font-medium">
             <En en="Jisu is the student" />
@@ -444,9 +444,9 @@ export function ScBracketOut() {
             <En en="is the kindest in our class." />
           </Chip>
         </p>
-        <p className="mt-1.5 text-[14px] text-ink-2">지수는 내 생각에 우리 반에서 가장 친절한 학생이야.</p>
+        <p className="mt-1.5 text-[13.5px] text-ink-2">지수는 내 생각에 우리 반에서 가장 친절한 학생이야.</p>
       </div>
-      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <div className="flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight className="rotate-90 text-coral" />
         I think를 괄호로 빼면
       </div>
@@ -458,7 +458,7 @@ export function ScBracketOut() {
           <Chip className="bg-sky-soft text-sky-ink">
             <En en="{who|관계대명사:~하는 (앞의 사람을 꾸며요)}" />
           </Chip>
-          <span className="text-[14px] font-bold text-ink-3">( I think )</span>
+          <span className="text-[13.5px] font-bold text-ink-3">( I think )</span>
           <Chip className="border-2 border-coral bg-coral-soft text-coral-ink">
             <CrownIcon size={15} className="mr-1" />
             <En en="is" />
@@ -467,7 +467,7 @@ export function ScBracketOut() {
             <En en="the kindest in our class." />
           </Chip>
         </p>
-        <div className="mt-2 grid gap-1.5 text-[14px] sm:grid-cols-2">
+        <div className="mt-2 grid gap-1.5 text-[13.5px] sm:grid-cols-2">
           <p>
             <span className="font-extrabold text-sky-ink">who</span> = is의 주어. 그래서 주격 who예요.{" "}
             <span lang="en" className="text-ink-3">
@@ -479,7 +479,7 @@ export function ScBracketOut() {
           </p>
         </div>
       </div>
-      <p className="rounded-2xl bg-chip px-4 py-2.5 text-center text-[14.5px] font-bold">
+      <p className="rounded-2xl bg-chip px-4 py-2.5 text-center text-[14px] font-bold">
         괄호 속 think는 끼어든 말의 동사예요. 관계절의 동사로 세지 않아요.
       </p>
     </div>
@@ -512,10 +512,10 @@ export function ScNotAll() {
         {NEG_GROUPS.map((g) => (
           <li key={g.label} className={`flex flex-col rounded-2xl px-4 py-3 ${g.strong ? "border-2 border-coral" : "border border-line"}`}>
             <p className="flex flex-wrap items-center gap-2">
-              <span lang="en" className="text-[16px] font-extrabold">
+              <span lang="en" className="text-[15px] font-extrabold">
                 {g.label}
               </span>
-              <Chip className={`text-[14px] ${g.strong ? TONE.coral : "bg-chip"}`}>{g.tag}</Chip>
+              <Chip className={`text-[13.5px] ${g.strong ? TONE.coral : "bg-chip"}`}>{g.tag}</Chip>
             </p>
             <p className="mt-2 flex gap-1" aria-label={`다섯 명 중 ${g.liked}명이 좋아함`}>
               {FIVE.map((i) => (
@@ -525,11 +525,11 @@ export function ScNotAll() {
             <p className="mt-2 text-[1.02em] font-medium">
               <En en={g.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{g.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{g.ko}</p>
           </li>
         ))}
       </ul>
-      <div className="mt-3 overflow-hidden rounded-2xl border border-line text-[14.5px]">
+      <div className="mt-3 overflow-hidden rounded-2xl border border-line text-[14px]">
         <div className="grid grid-cols-2 bg-chip font-extrabold">
           <span className="px-3 py-2">부분부정 (일부만 아니다)</span>
           <span className="px-3 py-2">전체부정 (하나도 아니다)</span>
@@ -590,13 +590,13 @@ export function ScParallelRails() {
         <Chip className="bg-chip">A</Chip>
         <span className="font-bold">and · but · or</span>
         <Chip className="bg-chip">B</Chip>
-        <span className="text-[15px] font-bold text-ink-2">= A와 B는 같은 모양</span>
+        <span className="text-[14.5px] font-bold text-ink-2">= A와 B는 같은 모양</span>
       </p>
       <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
         {RAILS.map((r) => (
           <li key={r.kind} className={`rounded-2xl px-4 py-3 ${r.real ? "border-2 border-coral" : "border border-line"}`}>
             <p className="flex flex-wrap items-center gap-2">
-              <Chip className={`text-[14px] ${r.real ? "bg-coral text-white" : TONE.amber}`}>
+              <Chip className={`text-[13.5px] ${r.real ? "bg-coral text-white" : TONE.amber}`}>
                 {r.real && <CrownIcon size={15} className="mr-1" />}
                 {r.kind}
               </Chip>
@@ -604,9 +604,9 @@ export function ScParallelRails() {
             <p className="mt-2 text-[1.04em] font-medium">
               <En en={r.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{r.ko}</p>
-            <p className="mt-1.5 text-[14px] font-bold text-ink-3">{r.note}</p>
-            <p lang="en" className="mt-1 text-[14px] font-bold text-coral-ink">
+            <p className="text-[13.5px] text-ink-2">{r.ko}</p>
+            <p className="mt-1.5 text-[13.5px] font-bold text-ink-3">{r.note}</p>
+            <p lang="en" className="mt-1 text-[13.5px] font-bold text-coral-ink">
               {r.bad}
             </p>
           </li>
@@ -647,24 +647,24 @@ export function ScSoonerTimeline() {
         <span className="absolute left-8 right-8 top-[26px] h-1 rounded-full bg-line" aria-hidden />
         <div className="relative flex flex-col items-center text-center">
           <span className="z-10 size-5 rounded-full border-4 border-card bg-sky-ink" aria-hidden />
-          <span className="mt-1.5 text-[14px] font-extrabold text-sky-ink">① 먼저 · had p.p.</span>
+          <span className="mt-1.5 text-[13.5px] font-extrabold text-sky-ink">① 먼저 · had p.p.</span>
           <span className="mt-1 text-[1.02em] font-medium">
             <En en="I {had|조동사:과거완료를 만드는 말} sat down" />
           </span>
-          <span className="text-[14px] text-ink-2">내가 앉았다</span>
+          <span className="text-[13.5px] text-ink-2">내가 앉았다</span>
         </div>
         <div className="relative flex flex-col items-center text-center">
           <span className="z-10 size-5 rounded-full border-4 border-card bg-coral" aria-hidden />
-          <span className="mt-1.5 text-[14px] font-extrabold text-coral-ink">② 바로 뒤 · 과거형</span>
+          <span className="mt-1.5 text-[13.5px] font-extrabold text-coral-ink">② 바로 뒤 · 과거형</span>
           <span className="mt-1 text-[1.02em] font-medium">
             <En en="the phone rang" />
           </span>
-          <span className="text-[14px] text-ink-2">전화가 울렸다</span>
+          <span className="text-[13.5px] text-ink-2">전화가 울렸다</span>
         </div>
       </div>
       <ul className="mt-3 grid gap-2">
         {SOONER_ROWS.map((r) => (
-          <li key={r.key} lang="en" className="flex flex-wrap items-center gap-1.5 text-[14.5px] font-bold">
+          <li key={r.key} lang="en" className="flex flex-wrap items-center gap-1.5 text-[14px] font-bold">
             {r.parts.map((p, i) => (
               <span key={p.t} className="inline-flex items-center gap-1.5">
                 {i === 2 && <span className="text-ink-3">~</span>}
@@ -674,7 +674,7 @@ export function ScSoonerTimeline() {
           </li>
         ))}
       </ul>
-      <p className="mt-2 text-center text-[14px] font-bold text-ink-2">앞 절은 도치(had + 주어), 뒤 절은 보통 순서예요.</p>
+      <p className="mt-2 text-center text-[13.5px] font-bold text-ink-2">앞 절은 도치(had + 주어), 뒤 절은 보통 순서예요.</p>
     </div>
   );
 }
@@ -716,7 +716,7 @@ export function ScFillGap() {
             </span>
             {r.post && <En en={r.post.en} />}
           </p>
-          <p className="mt-1 flex items-center gap-1.5 text-[14px] font-bold text-coral-ink">
+          <p className="mt-1 flex items-center gap-1.5 text-[13.5px] font-bold text-coral-ink">
             <ArrowRight size={16} className="rotate-180" />
             빈자리 = {r.from}
           </p>
@@ -740,19 +740,19 @@ export function ScSameThing() {
     <ul className="grid gap-2">
       {SAME_ROWS.map((r) => (
         <li key={r.kind} className="rounded-2xl border border-line px-4 py-2.5">
-          <p className="text-[14px] font-extrabold text-ink-3">{r.kind}</p>
+          <p className="text-[13.5px] font-extrabold text-ink-3">{r.kind}</p>
           <p className="mt-1.5 flex flex-wrap items-center gap-2 text-[1.05em] font-medium">
             <span className="rounded-lg bg-amber-soft px-2.5 py-1 text-amber-ink">
               <En en={r.a.en} />
             </span>
-            <span className="grid size-7 place-items-center rounded-full bg-ink text-[15px] font-extrabold text-on-ink" aria-label="같은 대상">
+            <span className="grid size-7 place-items-center rounded-full bg-ink text-[14.5px] font-extrabold text-on-ink" aria-label="같은 대상">
               =
             </span>
             <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">
               <En en={r.b.en} />
             </span>
           </p>
-          <p className="mt-1 text-[14px] text-ink-2">{r.ko}</p>
+          <p className="mt-1 text-[13.5px] text-ink-2">{r.ko}</p>
         </li>
       ))}
     </ul>
@@ -786,7 +786,7 @@ function ScChip({ b }: { b: ScBit }) {
         {b.k === "verbal" && <MaskIcon size={16} />}
         <En en={b.en} />
       </span>
-      {b.sub && <span className={`text-[14px] font-extrabold ${look.label}`}>{b.sub}</span>}
+      {b.sub && <span className={`text-[13.5px] font-extrabold ${look.label}`}>{b.sub}</span>}
     </span>
   );
 }
@@ -830,13 +830,13 @@ export function ScParallelCount() {
     <div className="grid gap-2.5">
       {PARALLEL_COUNTS.map((r) => (
         <div key={r.key} className={`rounded-2xl px-4 py-3 ${r.plus ? "border-2 border-coral" : "border border-line"}`}>
-          <p className="text-[15px] font-extrabold">{r.title}</p>
+          <p className="text-[14.5px] font-extrabold">{r.title}</p>
           <p className="mt-2 flex flex-wrap items-start gap-x-1.5 gap-y-2.5 text-[1.05em] font-medium">
             {r.bits.map((b, i) => (
               <ScChip key={i} b={b} />
             ))}
           </p>
-          <p className={`mt-2 text-[14px] font-bold ${r.plus ? "text-coral-ink" : "text-sky-ink"}`}>{r.count}</p>
+          <p className={`mt-2 text-[13.5px] font-bold ${r.plus ? "text-coral-ink" : "text-sky-ink"}`}>{r.count}</p>
         </div>
       ))}
     </div>
@@ -859,12 +859,12 @@ export function ScAlmostZero() {
       <ul className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         {ZERO_SCALE.map((z) => (
           <li key={z.label} className={`flex flex-col rounded-2xl px-3 py-2.5 ${z.strong ? "border-2 border-coral" : "border border-line"}`}>
-            <p className={`text-[16px] font-extrabold ${z.strong ? "text-coral-ink" : ""}`}>{z.label}</p>
-            <p className="text-[14px] font-bold text-ink-2">{z.sub}</p>
+            <p className={`text-[15px] font-extrabold ${z.strong ? "text-coral-ink" : ""}`}>{z.label}</p>
+            <p className="text-[13.5px] font-bold text-ink-2">{z.sub}</p>
             <div className="mt-2 h-3 rounded-full bg-chip" aria-hidden>
               <div className="h-3 rounded-full" style={{ width: `${z.fill}%`, background: z.strong ? "var(--coral)" : "var(--ink-3)" }} />
             </div>
-            <p lang="en" className="mt-2 flex flex-wrap gap-1 text-[14px] font-bold">
+            <p lang="en" className="mt-2 flex flex-wrap gap-1 text-[13.5px] font-bold">
               {z.words.map((w) => (
                 <span key={w} className={`rounded-md px-1.5 py-0.5 ${z.strong ? "bg-coral-soft text-coral-ink" : "bg-chip"}`}>
                   {w}
@@ -874,7 +874,7 @@ export function ScAlmostZero() {
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <Mark ok={false} />
         <span lang="en" className="line-through decoration-coral decoration-2">
           can&apos;t hardly

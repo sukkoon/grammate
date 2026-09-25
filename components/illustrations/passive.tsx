@@ -98,8 +98,8 @@ export function PsCamera() {
       {PS_CAMERA_PANELS.map((p) => (
         <div key={p.focus} className="rounded-2xl border border-line px-4 py-4">
           <p className="flex flex-wrap items-baseline gap-x-2">
-            <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${p.tone}`}>{p.title}</span>
-            <span className="text-[14px] text-ink-2">{p.sub}</span>
+            <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${p.tone}`}>{p.title}</span>
+            <span className="text-[13.5px] text-ink-2">{p.sub}</span>
           </p>
           <div className="mt-2">
             <PsCameraScene focus={p.focus} />
@@ -107,8 +107,8 @@ export function PsCamera() {
           <p className="mt-2 text-[1.1em] font-medium">
             <En en={p.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{p.ko}</p>
-          <p className="mt-2 w-fit rounded-lg bg-chip px-2.5 py-1 text-[14px] font-bold">{p.who}</p>
+          <p className="text-[13.5px] text-ink-2">{p.ko}</p>
+          <p className="mt-2 w-fit rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-bold">{p.who}</p>
         </div>
       ))}
     </div>
@@ -132,7 +132,7 @@ function PsPiece({ en, role, label }: { en: string; role: PsRole; label?: string
       <span className={`rounded-xl px-2.5 py-1.5 text-[1.1em] font-medium leading-tight ${PS_ROLE_TONE[role]}`}>
         <En en={en} />
       </span>
-      {label && <span className="text-[14px] font-bold text-ink-2">{label}</span>}
+      {label && <span className="text-[13.5px] font-bold text-ink-2">{label}</span>}
     </span>
   );
 }
@@ -174,7 +174,7 @@ const PS_STEPS: { title: string; from: { en: string; role: PsRole }; to: { en: s
 export function PsThreeSteps() {
   return (
     <div>
-      <p className="text-[14px] font-extrabold text-ink-3">능동태</p>
+      <p className="text-[13.5px] font-extrabold text-ink-3">능동태</p>
       <p className="mt-1.5 flex flex-wrap items-start gap-2">
         {PS_ACTIVE.map((p) => (
           <PsPiece key={p.en} {...p} />
@@ -184,7 +184,7 @@ export function PsThreeSteps() {
         {PS_STEPS.map((s, i) => (
           <li key={s.title} className="rounded-2xl border border-line px-3 py-3">
             <p className="flex items-center gap-2 font-extrabold">
-              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-ink text-[14px] text-on-ink">{i + 1}</span>
+              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-ink text-[13.5px] text-on-ink">{i + 1}</span>
               {s.title}
             </p>
             <p className="mt-2 flex flex-wrap items-center gap-2">
@@ -192,17 +192,17 @@ export function PsThreeSteps() {
               <ArrowRight size={18} className="text-ink-3" />
               <PsPiece {...s.to} />
             </p>
-            <p className="mt-1.5 text-[14px] text-ink-2">{s.note}</p>
+            <p className="mt-1.5 text-[13.5px] text-ink-2">{s.note}</p>
           </li>
         ))}
       </ol>
-      <p className="mt-4 text-[14px] font-extrabold text-ink-3">수동태</p>
+      <p className="mt-4 text-[13.5px] font-extrabold text-ink-3">수동태</p>
       <p className="mt-1.5 flex flex-wrap items-start gap-2">
         {PS_PASSIVE.map((p) => (
           <PsPiece key={p.en} {...p} />
         ))}
       </p>
-      <p className="mt-3 text-[14px] text-ink-2">색을 따라가 보세요. 조각들이 자리만 바꿨을 뿐, 누가 누구를 청소했는지는 그대로예요.</p>
+      <p className="mt-3 text-[13.5px] text-ink-2">색을 따라가 보세요. 조각들이 자리만 바꿨을 뿐, 누가 누구를 청소했는지는 그대로예요.</p>
     </div>
   );
 }
@@ -233,7 +233,7 @@ export function PsTenseGrid() {
           <div key={t.name} className="rounded-2xl border border-line px-4 py-3">
             <p className="flex flex-wrap items-baseline justify-between gap-x-2">
               <span className="font-extrabold">{t.name}</span>
-              <span className="text-[14px] font-bold text-ink-2">
+              <span className="text-[13.5px] font-bold text-ink-2">
                 {t.formula}
               </span>
             </p>
@@ -247,11 +247,11 @@ export function PsTenseGrid() {
             <p className="mt-2 text-[1.02em] font-medium">
               <En en={t.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{t.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{t.ko}</p>
           </div>
         ))}
       </div>
-      <ul className="mt-3 flex flex-wrap gap-2 text-[14px]">
+      <ul className="mt-3 flex flex-wrap gap-2 text-[13.5px]">
         <li className="rounded-full bg-coral px-2.5 py-1 font-bold text-white">맨 앞 조각: 주어·시제 담당</li>
         <li className="rounded-full bg-amber-soft px-2.5 py-1 font-bold text-amber-ink">가운데: be의 여러 모양</li>
         <li className="rounded-full bg-mint-soft px-2.5 py-1 font-bold text-mint-ink">끝: 늘 p.p.</li>
@@ -289,7 +289,7 @@ const PS_PREPS: { prep: string; verbs: string; note: string }[] = [
 export function PsTwoWays() {
   return (
     <div>
-      <p className="text-[14px] font-extrabold text-ink-3">능동태 (4형식)</p>
+      <p className="text-[13.5px] font-extrabold text-ink-3">능동태 (4형식)</p>
       <p className="mt-1.5 flex flex-wrap items-start gap-2 text-[1.1em] font-medium">
         <span className="rounded-xl border border-line px-2.5 py-1.5">
           <En en="Mom" />
@@ -301,24 +301,24 @@ export function PsTwoWays() {
           <span className="rounded-xl bg-sky-soft px-2.5 py-1.5 text-sky-ink">
             <En en="me" />
           </span>
-          <span className="text-[14px] font-bold text-ink-2">간접목적어 (~에게)</span>
+          <span className="text-[13.5px] font-bold text-ink-2">간접목적어 (~에게)</span>
         </span>
         <span className="inline-flex flex-col items-center gap-1">
           <span className="rounded-xl bg-amber-soft px-2.5 py-1.5 text-amber-ink">
             <En en="a present" />
           </span>
-          <span className="text-[14px] font-bold text-ink-2">직접목적어 (~을)</span>
+          <span className="text-[13.5px] font-bold text-ink-2">직접목적어 (~을)</span>
         </span>
       </p>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {PS_TWO_WAYS.map((w) => (
           <div key={w.title} className="rounded-2xl border border-line px-4 py-3">
-            <p className={`w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${w.tone}`}>{w.title}</p>
+            <p className={`w-fit rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${w.tone}`}>{w.title}</p>
             <p className="mt-2 text-[1.08em] font-medium">
               <En en={w.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{w.ko}</p>
-            <p className="mt-1.5 text-[14px] font-bold">{w.note}</p>
+            <p className="text-[13.5px] text-ink-2">{w.ko}</p>
+            <p className="mt-1.5 text-[13.5px] font-bold">{w.note}</p>
           </div>
         ))}
       </div>
@@ -329,11 +329,11 @@ export function PsTwoWays() {
               <span lang="en" className="rounded-md bg-card px-2 py-0.5 text-[1.05em] font-extrabold">
                 {p.prep}
               </span>
-              <span lang="en" className="text-[15px] font-medium">
+              <span lang="en" className="text-[14.5px] font-medium">
                 {p.verbs}
               </span>
             </p>
-            <p className="mt-1 text-[14px] text-ink-2">{p.note}</p>
+            <p className="mt-1 text-[13.5px] text-ink-2">{p.note}</p>
           </li>
         ))}
       </ul>
@@ -385,8 +385,8 @@ export function PsMadeOfFrom() {
         <p className="mt-2 text-[1.08em] font-medium">
           <En en="This desk [[is {made of}]] wood." />
         </p>
-        <p className="text-[14px] text-ink-2">이 책상은 나무로 만들어졌어.</p>
-        <p className="mt-1.5 text-[14px] font-bold">나뭇결이 그대로 보여요. 모양만 바뀌었어요.</p>
+        <p className="text-[13.5px] text-ink-2">이 책상은 나무로 만들어졌어.</p>
+        <p className="mt-1.5 text-[13.5px] font-bold">나뭇결이 그대로 보여요. 모양만 바뀌었어요.</p>
       </div>
       <div className="rounded-2xl border border-line px-4 py-4">
         <p lang="en" className="w-fit rounded-lg bg-sky-soft px-2.5 py-1 text-[1.05em] font-extrabold text-sky-ink">
@@ -398,8 +398,8 @@ export function PsMadeOfFrom() {
         <p className="mt-2 text-[1.08em] font-medium">
           <En en="Cheese [[is {made from}]] milk." />
         </p>
-        <p className="text-[14px] text-ink-2">치즈는 우유로 만들어.</p>
-        <p className="mt-1.5 text-[14px] font-bold">치즈를 봐서는 우유인지 알 수 없어요. 성질까지 바뀌었어요.</p>
+        <p className="text-[13.5px] text-ink-2">치즈는 우유로 만들어.</p>
+        <p className="mt-1.5 text-[13.5px] font-bold">치즈를 봐서는 우유인지 알 수 없어요. 성질까지 바뀌었어요.</p>
       </div>
     </div>
   );
@@ -433,7 +433,7 @@ function PsTile({ chip }: { chip: PsChip }) {
   return (
     <span className="inline-flex flex-col items-center gap-1">
       {box}
-      <span className="text-[14px] font-bold text-ink-2">{chip.label}</span>
+      <span className="text-[13.5px] font-bold text-ink-2">{chip.label}</span>
     </span>
   );
 }
@@ -452,7 +452,7 @@ function PsWrong({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -492,12 +492,12 @@ export function PsNegQ() {
         {PS_NEG_Q.map((row) => (
           <li key={row.label} className="rounded-2xl border border-line px-4 py-3">
             <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold">{row.label}</span>
-              <span className="text-[14px] text-ink-2">{row.hint}</span>
+              <span className="rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold">{row.label}</span>
+              <span className="text-[13.5px] text-ink-2">{row.hint}</span>
             </p>
             <PsRow chips={row.chips} className="mt-2.5" />
             {row.answer && (
-              <p className="mt-2 text-[15px]">
+              <p className="mt-2 text-[14.5px]">
                 <span className="mr-1.5 font-extrabold text-ink-2">대답</span>
                 <En en={row.answer.en} />
               </p>
@@ -515,7 +515,7 @@ export function PsNegQ() {
               </li>
             ))}
           </ul>
-          <p className="mt-1 text-[14px]">맨 앞이 be동사라서 do, does, did가 들어갈 자리가 없어요.</p>
+          <p className="mt-1 text-[13.5px]">맨 앞이 be동사라서 do, does, did가 들어갈 자리가 없어요.</p>
         </div>
       </div>
     </div>
@@ -555,22 +555,22 @@ export function PsStackFrames() {
   return (
     <div>
       <div className="mx-auto w-fit rounded-2xl bg-chip px-4 py-2.5 text-center">
-        <p className="text-[14px] font-extrabold text-ink-2">끼워 넣을 수동태 조각</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">끼워 넣을 수동태 조각</p>
         <PsRow chips={PS_PASSIVE_PAIR} className="mt-1 justify-center" />
       </div>
       <ul className="mt-3 grid gap-2.5 sm:grid-cols-3">
         {PS_FRAMES.map((f) => (
           <li key={f.name} className="rounded-2xl border border-line px-3 py-3">
             <p className="font-extrabold">{f.name}</p>
-            <p className="mt-1.5 text-[14px] font-bold text-ink-3">틀</p>
+            <p className="mt-1.5 text-[13.5px] font-bold text-ink-3">틀</p>
             <PsRow chips={f.frame} className="mt-1" />
-            <p className="mt-2 text-[14px] font-bold text-ink-3">↓ 빈칸에 be를 넣으면</p>
+            <p className="mt-2 text-[13.5px] font-bold text-ink-3">↓ 빈칸에 be를 넣으면</p>
             <PsRow chips={f.result} className="mt-1" />
-            <p className="mt-2 w-fit rounded-lg bg-chip px-2 py-0.5 text-[14px] font-bold">{f.note}</p>
+            <p className="mt-2 w-fit rounded-lg bg-chip px-2 py-0.5 text-[13.5px] font-bold">{f.note}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-center text-[14px] text-ink-2">하늘색 틀 조각이 주어·시제를 맡고, 끝은 늘 p.p.예요.</p>
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">하늘색 틀 조각이 주어·시제를 맡고, 끝은 늘 p.p.예요.</p>
     </div>
   );
 }
@@ -618,15 +618,15 @@ export function PsComplementStays() {
     <div className="grid gap-3">
       {PS_COMPLEMENTS.map((c) => (
         <div key={c.kind} className="rounded-2xl border border-line px-4 py-3">
-          <p className="w-fit rounded-lg bg-amber-soft px-2.5 py-0.5 text-[14px] font-extrabold text-amber-ink">{c.kind}</p>
-          <p className="mt-2 text-[14px] font-extrabold text-ink-3">능동태</p>
+          <p className="w-fit rounded-lg bg-amber-soft px-2.5 py-0.5 text-[13.5px] font-extrabold text-amber-ink">{c.kind}</p>
+          <p className="mt-2 text-[13.5px] font-extrabold text-ink-3">능동태</p>
           <PsRow chips={c.active} className="mt-1" />
-          <p className="mt-3 text-[14px] font-extrabold text-ink-3">수동태</p>
+          <p className="mt-3 text-[13.5px] font-extrabold text-ink-3">수동태</p>
           <PsRow chips={c.passive} className="mt-1" />
-          <p className="mt-2 text-[14px] text-ink-2">{c.ko}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{c.ko}</p>
         </div>
       ))}
-      <p className="text-[14px] text-ink-2">민트 조각(목적어)만 앞으로 가고, 노란 조각(목적격보어)은 모양도 자리도 그대로예요.</p>
+      <p className="text-[13.5px] text-ink-2">민트 조각(목적어)만 앞으로 가고, 노란 조각(목적격보어)은 모양도 자리도 그대로예요.</p>
     </div>
   );
 }
@@ -660,25 +660,25 @@ export function PsToReturns() {
   return (
     <div>
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">능동태: 목적어 me가 사이에 있어서 원형 clean도 헷갈리지 않아요</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">능동태: 목적어 me가 사이에 있어서 원형 clean도 헷갈리지 않아요</p>
         <PsRow chips={PS_TO_ACTIVE} className="mt-2" />
       </div>
       <div className="mt-2.5 rounded-2xl border-2 border-coral-soft px-4 py-3">
-        <p className="flex items-center gap-2 text-[14px] font-extrabold text-coral-ink">
+        <p className="flex items-center gap-2 text-[13.5px] font-extrabold text-coral-ink">
           <PsWrong ok={false} />
           me가 주어로 떠나면 clean이 was made에 딱 붙어요
         </p>
         <PsRow chips={PS_TO_WRONG} className="mt-2" />
       </div>
       <div className="mt-2.5 rounded-2xl border-2 border-mint-soft px-4 py-3">
-        <p className="flex items-center gap-2 text-[14px] font-extrabold text-mint-ink">
+        <p className="flex items-center gap-2 text-[13.5px] font-extrabold text-mint-ink">
           <PsWrong ok />
           to를 붙여 &lsquo;변장한 동사&rsquo;라고 밝혀요
         </p>
         <PsRow chips={PS_TO_RIGHT} className="mt-2" />
-        <p className="mt-2 text-[14px] text-ink-2">나는 (엄마 때문에) 방 청소를 해야 했어.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">나는 (엄마 때문에) 방 청소를 해야 했어.</p>
       </div>
-      <p className="mt-3 text-[14px] text-ink-2">
+      <p className="mt-3 text-[13.5px] text-ink-2">
         지각동사도 똑같아요: <En en="He [[was seen to enter]] the building." /> 다만 -ing는 그대로 써도 돼요:{" "}
         <En en="He [[was seen entering]] the building." />
       </p>
@@ -704,16 +704,16 @@ const PS_PHRASAL_PASSIVE: PsChip[] = [
 export function PsPhrasalChunk() {
   return (
     <div>
-      <p className="text-[14px] font-extrabold text-ink-3">능동태</p>
+      <p className="text-[13.5px] font-extrabold text-ink-3">능동태</p>
       <PsRow chips={PS_PHRASAL_ACTIVE} className="mt-1" />
-      <p className="mt-4 text-[14px] font-extrabold text-ink-3">수동태</p>
+      <p className="mt-4 text-[13.5px] font-extrabold text-ink-3">수동태</p>
       <PsRow chips={PS_PHRASAL_PASSIVE} className="mt-1" />
-      <p className="mt-2 text-[14px] text-ink-2">아기는 할머니께서 돌봐 주셔.</p>
+      <p className="mt-2 text-[13.5px] text-ink-2">아기는 할머니께서 돌봐 주셔.</p>
       <div className="mt-3 grid gap-2 sm:grid-cols-2">
-        <p className="rounded-2xl bg-chip px-3 py-2 text-[14px]">
+        <p className="rounded-2xl bg-chip px-3 py-2 text-[13.5px]">
           <b>after by</b>처럼 전치사 둘이 나란히 와도 괜찮아요. after는 구동사의 일부, by는 행위자를 데려오는 말이에요.
         </p>
-        <p className="flex items-start gap-2 rounded-2xl bg-coral-soft px-3 py-2 text-[14px] text-coral-ink">
+        <p className="flex items-start gap-2 rounded-2xl bg-coral-soft px-3 py-2 text-[13.5px] text-coral-ink">
           <PsWrong ok={false} />
           <span>
             <span className="block font-medium text-ink-2 line-through decoration-coral/60">
@@ -770,11 +770,11 @@ export function PsSaidTwoWays() {
     <ul className="space-y-2.5">
       {PS_SAID.map((r) => (
         <li key={r.label} className="rounded-2xl border border-line px-4 py-3">
-          <p lang="en" className="text-[14px] font-extrabold text-ink-2">
+          <p lang="en" className="text-[13.5px] font-extrabold text-ink-2">
             {r.label}
           </p>
           <PsRow chips={r.chips} className="mt-2" />
-          <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${r.tone}`}>{r.count}</p>
+          <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${r.tone}`}>{r.count}</p>
         </li>
       ))}
     </ul>

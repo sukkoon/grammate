@@ -21,7 +21,7 @@ function SeChunk({ en, role, label }: { en: string; role: SeRole; label?: string
       <span className={`rounded-xl px-2.5 py-1.5 text-[1.12em] font-medium leading-snug ${r.tone}`}>
         <En en={en} />
       </span>
-      <span className="text-[14px] font-extrabold leading-none text-ink-2">{label ?? r.name}</span>
+      <span className="text-[13.5px] font-extrabold leading-none text-ink-2">{label ?? r.name}</span>
     </span>
   );
 }
@@ -29,7 +29,7 @@ function SeChunk({ en, role, label }: { en: string; role: SeRole; label?: string
 function SeRoleChip({ role, withAsk = false }: { role: SeRole; withAsk?: boolean }) {
   const r = SE_ROLE[role];
   return (
-    <span className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${r.tone}`}>
+    <span className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${r.tone}`}>
       {r.name}
       {withAsk && <span className="font-medium opacity-90">{r.ask}</span>}
     </span>
@@ -77,7 +77,7 @@ export function SeRoleColors() {
                 <SeChunk key={c.en} en={c.en} role={c.role} label={c.label} />
               ))}
             </p>
-            <p className="mt-2.5 text-center text-[14px] text-ink-2">{row.ko}</p>
+            <p className="mt-2.5 text-center text-[13.5px] text-ink-2">{row.ko}</p>
           </li>
         ))}
       </ol>
@@ -106,7 +106,7 @@ export function SeJobToRole() {
       {rows.map((r) => (
         <li key={r.pos} className="flex flex-col gap-2 rounded-2xl border border-line px-3 py-3 sm:flex-row sm:items-center sm:gap-4">
           <span className="flex flex-wrap items-center gap-2">
-            <span className="rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold text-ink">{r.pos}</span>
+            <span className="rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold text-ink">{r.pos}</span>
             <ArrowRight size={18} className="text-ink-3" />
             {r.roles.map((role) => (
               <SeRoleChip key={role} role={role} />
@@ -116,7 +116,7 @@ export function SeJobToRole() {
             <span className="text-[1.05em] font-medium">
               <En en={r.en} />
             </span>
-            <span className="ml-2 text-[14px] text-ink-2">{r.note}</span>
+            <span className="ml-2 text-[13.5px] text-ink-2">{r.note}</span>
           </span>
         </li>
       ))}
@@ -178,13 +178,13 @@ export function SeSlotMenu() {
       {slots.map((s) => (
         <div key={s.title} className="rounded-2xl border border-line px-4 py-4">
           <p className="flex flex-wrap items-center gap-2">
-            <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${SE_ROLE[s.role].tone}`}>{s.title}</span>
-            <span className="text-[14px] text-ink-2">{s.sub}</span>
+            <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${SE_ROLE[s.role].tone}`}>{s.title}</span>
+            <span className="text-[13.5px] text-ink-2">{s.sub}</span>
           </p>
           <ul className="mt-3 space-y-2">
             {s.items.map((it) => (
               <li key={it.form} className="flex flex-col gap-0.5">
-                <span className="text-[14px] font-extrabold text-ink-3">{it.form}</span>
+                <span className="text-[13.5px] font-extrabold text-ink-3">{it.form}</span>
                 <span className="text-[1.05em] font-medium">
                   <En en={it.en} />
                 </span>
@@ -242,7 +242,7 @@ const SE_PIN_ROWS: { chunks: SeChunkData[]; ko: string; note?: string }[] = [
 export function SeVerbPin() {
   return (
     <div>
-      <div className="grid grid-cols-[1fr_auto_1fr] items-stretch gap-1.5 text-center text-[14px] font-extrabold">
+      <div className="grid grid-cols-[1fr_auto_1fr] items-stretch gap-1.5 text-center text-[13.5px] font-extrabold">
         <span className="grid place-items-center rounded-lg bg-sky-soft px-2 py-1.5 text-sky-ink">앞: 누가? 무엇이?</span>
         <span className="flex items-center gap-1 rounded-lg bg-coral px-2 py-1.5 text-white">
           <SePin size={18} />
@@ -267,8 +267,8 @@ export function SeVerbPin() {
                 ),
               )}
             </p>
-            <p className="mt-2 text-center text-[14px] text-ink-2">{row.ko}</p>
-            {row.note && <p className="mt-1 text-center text-[14px] font-bold text-coral-ink">{row.note}</p>}
+            <p className="mt-2 text-center text-[13.5px] text-ink-2">{row.ko}</p>
+            {row.note && <p className="mt-1 text-center text-[13.5px] font-bold text-coral-ink">{row.note}</p>}
           </li>
         ))}
       </ol>
@@ -304,7 +304,7 @@ export function SeFillGap() {
   return (
     <div className="mx-auto max-w-xl">
       <div className="rounded-2xl border border-line px-3 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">여기서 끝나면?</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">여기서 끝나면?</p>
         <p lang="en" className="mt-2 flex flex-wrap items-end justify-center gap-x-2 gap-y-3">
           <SeChunk en="My dad" role="s" />
           <SeChunk en="is" role="v" />
@@ -312,12 +312,12 @@ export function SeFillGap() {
             <span className="rounded-xl border-2 border-dashed border-amber-ink px-6 py-1.5 text-[1.12em] font-extrabold leading-snug text-amber-ink">
               ?
             </span>
-            <span className="text-[14px] font-extrabold leading-none text-ink-2">빈자리</span>
+            <span className="text-[13.5px] font-extrabold leading-none text-ink-2">빈자리</span>
           </span>
         </p>
-        <p className="mt-2.5 text-center text-[14px] font-bold text-coral-ink">&ldquo;아빠가 뭐?&rdquo; 뜻이 모자라요</p>
+        <p className="mt-2.5 text-center text-[13.5px] font-bold text-coral-ink">&ldquo;아빠가 뭐?&rdquo; 뜻이 모자라요</p>
       </div>
-      <p className="my-2.5 flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <p className="my-2.5 flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight size={18} className="rotate-90 text-amber-ink" />
         빈자리를 채우는 말 = 보어
       </p>
@@ -329,7 +329,7 @@ export function SeFillGap() {
                 <SeChunk key={c.en} en={c.en} role={c.role} label={c.label} />
               ))}
             </p>
-            <p className="mt-2.5 flex flex-wrap items-center justify-center gap-2 text-[14px]">
+            <p className="mt-2.5 flex flex-wrap items-center justify-center gap-2 text-[13.5px]">
               <span className="rounded-md bg-amber-soft px-2 py-0.5 font-extrabold text-amber-ink">{row.kind}</span>
               <span className="font-bold text-ink-2">{row.eq}</span>
             </p>
@@ -392,7 +392,7 @@ export function SeSameSlot() {
           </li>
         ))}
       </ol>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <SeRoleChip role="s" />
         <span>자리는 그대로</span>
         <ArrowRight size={16} className="text-ink-3" />
@@ -411,38 +411,38 @@ export function SeDummyIt() {
   return (
     <div className="mx-auto grid max-w-xl gap-3">
       <div className="rounded-2xl border border-line px-3 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">머리가 무거운 문장</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">머리가 무거운 문장</p>
         <p lang="en" className="mt-2 flex flex-wrap items-end gap-x-2 gap-y-3">
           <SeChunk en="To {wake up} early on Mondays" role="s" label="주어 (길어요)" />
           <SeChunk en="is" role="v" />
           <SeChunk en="not" role="m" />
           <SeChunk en="easy." role="c" />
         </p>
-        <p className="mt-2 text-[14px] text-ink-2">주어가 길어서 서술어 is가 한참 뒤에 나와요.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">주어가 길어서 서술어 is가 한참 뒤에 나와요.</p>
       </div>
-      <p className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <p className="flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight size={18} className="rotate-90 text-sky-ink" />
         긴 주어는 뒤로, 빈자리에는 it
       </p>
       <div className="rounded-2xl border-2 border-sky-ink/50 px-3 py-3">
-        <p className="text-[14px] font-extrabold text-sky-ink">가볍게 시작하는 문장</p>
+        <p className="text-[13.5px] font-extrabold text-sky-ink">가볍게 시작하는 문장</p>
         <p lang="en" className="mt-2 flex flex-wrap items-end gap-x-2 gap-y-3">
           <span className="inline-flex flex-col items-center gap-1.5">
             <span className="rounded-xl border-2 border-dashed border-sky-ink px-2.5 py-1 text-[1.12em] font-medium leading-snug text-sky-ink">
               <En en="{It|대명사:가주어 (뜻 없이 자리만 채워요)}" />
             </span>
-            <span className="text-[14px] font-extrabold leading-none text-ink-2">가주어</span>
+            <span className="text-[13.5px] font-extrabold leading-none text-ink-2">가주어</span>
           </span>
           <SeChunk en="is" role="v" />
           <SeChunk en="not" role="m" />
           <SeChunk en="easy" role="c" />
           <SeChunk en="to {wake up} early on Mondays." role="s" label="진주어" />
         </p>
-        <p className="mt-2 text-[14px] text-ink-2">
+        <p className="mt-2 text-[13.5px] text-ink-2">
           <b>It</b>은 &lsquo;그것&rsquo;이라고 해석하지 않아요. 뒤로 간 진주어를 주어로 해석해요.
         </p>
       </div>
-      <p className="flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
         <span className="text-ink-2">진주어가 될 수 있는 것</span>
         {SE_REAL_SUBJECTS.map((s) => (
           <span key={s} className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">
@@ -500,9 +500,9 @@ export function SeBracketSkeleton() {
               <SeChunk key={c.en} en={c.en} role={c.role} label={c.label} />
             ))}
           </p>
-          <p className="mt-1.5 text-[14px] text-ink-2">{row.ko}</p>
+          <p className="mt-1.5 text-[13.5px] text-ink-2">{row.ko}</p>
           <p className="mt-2 flex flex-wrap items-center gap-2 border-t border-line pt-2">
-            <span className="rounded-md bg-chip px-2 py-0.5 text-[14px] font-extrabold">괄호 밖 뼈대</span>
+            <span className="rounded-md bg-chip px-2 py-0.5 text-[13.5px] font-extrabold">괄호 밖 뼈대</span>
             <ArrowRight size={16} className="text-ink-3" />
             <span className="text-[1.05em] font-medium">
               <En en={row.bone.en} />

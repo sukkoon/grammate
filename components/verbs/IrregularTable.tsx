@@ -28,7 +28,7 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
       type="button"
       aria-pressed={on}
       onClick={onClick}
-      className={`rounded-full px-3.5 py-1.5 text-[14px] font-bold ring-1 transition-colors ${
+      className={`rounded-full px-3.5 py-1.5 text-[13.5px] font-bold ring-1 transition-colors ${
         on ? "bg-ink text-bg ring-ink" : "bg-card text-ink-2 ring-line hover:bg-chip"
       }`}
     >
@@ -44,7 +44,7 @@ function Cover({ hidden, onReveal, children, label }: { hidden: boolean; onRevea
       type="button"
       onClick={onReveal}
       aria-label={`${label} 보기`}
-      className="h-7 w-full max-w-24 rounded-lg bg-chip text-[14px] font-bold text-ink-3 ring-1 ring-line hover:bg-line"
+      className="h-7 w-full max-w-24 rounded-lg bg-chip text-[13.5px] font-bold text-ink-3 ring-1 ring-line hover:bg-line"
     >
       ?
     </button>
@@ -80,13 +80,13 @@ export function IrregularTable() {
     <div>
       <div className="rounded-2xl border border-line bg-card p-4">
         <label className="block">
-          <span className="text-[14px] font-extrabold text-ink-2">찾기</span>
+          <span className="text-[13.5px] font-extrabold text-ink-2">찾기</span>
           <input
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="예: went, 가다"
-            className="mt-1.5 h-11 w-full rounded-xl bg-bg px-3.5 text-[16px] ring-1 ring-line outline-none focus:ring-2 focus:ring-coral"
+            className="mt-1.5 h-11 w-full rounded-xl bg-bg px-3.5 text-[15px] ring-1 ring-line outline-none focus:ring-2 focus:ring-coral"
           />
         </label>
         <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="모양으로 거르기">
@@ -110,13 +110,13 @@ export function IrregularTable() {
             </Chip>
           ))}
         </div>
-        {hide !== "none" && <p className="mt-2 text-[14px] text-ink-2">가려진 칸을 누르면 그 줄이 열려요. 소리 내어 말해 보고 확인해 봐요.</p>}
+        {hide !== "none" && <p className="mt-2 text-[13.5px] text-ink-2">가려진 칸을 누르면 그 줄이 열려요. 소리 내어 말해 보고 확인해 봐요.</p>}
       </div>
 
-      <p className="mt-4 text-[14px] font-bold text-ink-3" aria-live="polite">
+      <p className="mt-4 text-[13.5px] font-bold text-ink-3" aria-live="polite">
         {list.length}개
       </p>
-      <div className="mt-2 grid grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)_minmax(0,1fr)_2.25rem] gap-2 px-3 text-[14px] font-extrabold text-ink-3">
+      <div className="mt-2 grid grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)_minmax(0,1fr)_2.25rem] gap-2 px-3 text-[13.5px] font-extrabold text-ink-3">
         <span>원형</span>
         <span>과거형</span>
         <span>과거분사</span>
@@ -133,7 +133,7 @@ export function IrregularTable() {
                   <p lang="en" className="break-words text-[1.05em] font-extrabold">
                     {v.base}
                   </p>
-                  <div className="mt-0.5 text-[14px] text-ink-2">
+                  <div className="mt-0.5 text-[13.5px] text-ink-2">
                     <Cover hidden={hide === "meaning" && !open} onReveal={() => reveal(k)} label={`${v.base}의 뜻`}>
                       {v.ko}
                     </Cover>
@@ -161,12 +161,12 @@ export function IrregularTable() {
                   </svg>
                 </button>
               </div>
-              {v.note && open && <p className="mt-1.5 text-[14px] text-ink-3">{v.note}</p>}
+              {v.note && open && <p className="mt-1.5 text-[13.5px] text-ink-3">{v.note}</p>}
             </li>
           );
         })}
       </ul>
-      {list.length === 0 && <p className="mt-4 rounded-xl bg-chip px-4 py-3 text-[15px] text-ink-2">찾는 동사가 없어요. 규칙 동사라면 과거형과 과거분사 모두 -ed를 붙여요.</p>}
+      {list.length === 0 && <p className="mt-4 rounded-xl bg-chip px-4 py-3 text-[14.5px] text-ink-2">찾는 동사가 없어요. 규칙 동사라면 과거형과 과거분사 모두 -ed를 붙여요.</p>}
     </div>
   );
 }

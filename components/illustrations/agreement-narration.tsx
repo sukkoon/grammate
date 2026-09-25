@@ -22,7 +22,7 @@ function Chip({ children, className = "" }: { children: ReactNode; className?: s
 
 function VerbTag({ label }: { label: string }) {
   return (
-    <span className="inline-flex items-center gap-1 rounded-lg bg-coral px-2 py-1 text-[14px] font-extrabold text-white">
+    <span className="inline-flex items-center gap-1 rounded-lg bg-coral px-2 py-1 text-[13.5px] font-extrabold text-white">
       <CrownIcon size={15} />
       {label}
     </span>
@@ -90,7 +90,7 @@ function HuntChip({ part }: { part: HuntPart }) {
           <CrownIcon size={16} />
           <En en={part.en} />
         </span>
-        <span className="text-[14px] font-bold text-coral-ink">진짜 동사</span>
+        <span className="text-[13.5px] font-bold text-coral-ink">진짜 동사</span>
       </span>
     );
   if (part.role === "mod")
@@ -99,7 +99,7 @@ function HuntChip({ part }: { part: HuntPart }) {
         <span className="rounded-lg border-2 border-dashed border-ink-3 px-2.5 py-0.5 text-[1.06em] text-ink-2">
           ( <En en={part.en} /> )
         </span>
-        <span className="text-[14px] font-bold text-ink-3">{part.label} · 빼고 읽기</span>
+        <span className="text-[13.5px] font-bold text-ink-3">{part.label} · 빼고 읽기</span>
       </span>
     );
   return (
@@ -107,7 +107,7 @@ function HuntChip({ part }: { part: HuntPart }) {
       <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-[1.06em] font-bold text-sky-ink">
         <En en={part.en} />
       </span>
-      <span className="text-[14px] font-bold text-sky-ink">진짜 주어 · {part.label}</span>
+      <span className="text-[13.5px] font-bold text-sky-ink">진짜 주어 · {part.label}</span>
     </span>
   );
 }
@@ -123,8 +123,8 @@ export function AnSubjectHunt() {
               <HuntChip key={p.en} part={p} />
             ))}
           </p>
-          <p className="mt-2 text-[14px] text-ink-2">{r.ko}</p>
-          <p lang="en" className="mt-1 text-[14px] font-bold text-coral-ink">
+          <p className="mt-2 text-[13.5px] text-ink-2">{r.ko}</p>
+          <p lang="en" className="mt-1 text-[13.5px] font-bold text-coral-ink">
             {r.match}
           </p>
         </li>
@@ -156,8 +156,8 @@ export function AnOfLook() {
       <div className="grid gap-2.5 sm:grid-cols-2">
         <div className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-sky-soft text-[15px] text-sky-ink">of 앞을 봐요</Chip>
-            <span className="text-[15px] font-extrabold">늘 단수</span>
+            <Chip className="bg-sky-soft text-[14.5px] text-sky-ink">of 앞을 봐요</Chip>
+            <span className="text-[14.5px] font-extrabold">늘 단수</span>
           </p>
           <ul className="mt-2 grid gap-2">
             {FRONT_ROWS.map((r) => (
@@ -165,17 +165,17 @@ export function AnOfLook() {
                 <p className="text-[1.04em] font-medium">
                   <En en={r.en} />
                 </p>
-                <p className="text-[14px] font-bold text-ink-3">{r.ko}</p>
+                <p className="text-[13.5px] font-bold text-ink-3">{r.ko}</p>
               </li>
             ))}
           </ul>
         </div>
         <div className="rounded-2xl border-2 border-coral px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-coral-soft text-[15px] text-coral-ink">of 뒤를 봐요</Chip>
-            <span className="text-[15px] font-extrabold">뒤의 명사에 맞춰요</span>
+            <Chip className="bg-coral-soft text-[14.5px] text-coral-ink">of 뒤를 봐요</Chip>
+            <span className="text-[14.5px] font-extrabold">뒤의 명사에 맞춰요</span>
           </p>
-          <p lang="en" className="mt-2 flex flex-wrap gap-1.5 text-[14.5px]">
+          <p lang="en" className="mt-2 flex flex-wrap gap-1.5 text-[14px]">
             {BACK_WORDS.map((w) => (
               <span key={w} className="rounded-md bg-chip px-2 py-0.5">
                 {w} of
@@ -189,7 +189,7 @@ export function AnOfLook() {
                 <p className="text-[1.04em] font-medium">
                   <En en={r.en} />
                 </p>
-                <p lang="en" className="text-[14px] font-bold text-ink-3">
+                <p lang="en" className="text-[13.5px] font-bold text-ink-3">
                   {r.ko}
                 </p>
               </li>
@@ -197,7 +197,7 @@ export function AnOfLook() {
           </ul>
         </div>
       </div>
-      <div className="mt-3 flex flex-col gap-1.5 rounded-2xl bg-chip px-4 py-3 text-[14.5px] sm:flex-row sm:items-center sm:gap-3">
+      <div className="mt-3 flex flex-col gap-1.5 rounded-2xl bg-chip px-4 py-3 text-[14px] sm:flex-row sm:items-center sm:gap-3">
         <span className="font-extrabold">헷갈리는 짝</span>
         <span className="font-medium">
           <En en="[[{A number of}]] students [[were]] late." />
@@ -247,12 +247,12 @@ const TENSE_MOVES: [string, string][] = [
 export function AnTenseBack() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-2 text-[15px] font-bold">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
         <span>기준</span>
         <VerbTag label="thought" />
         <span className="text-ink-2">주절의 진짜 동사 (과거)</span>
       </p>
-      <div className="mt-3 hidden grid-cols-3 gap-2 text-center text-[14px] font-extrabold text-ink-2 sm:grid" aria-hidden>
+      <div className="mt-3 hidden grid-cols-3 gap-2 text-center text-[13.5px] font-extrabold text-ink-2 sm:grid" aria-hidden>
         <span className="rounded-lg bg-chip py-1">← 더 먼저</span>
         <span className="rounded-lg bg-chip py-1">thought와 같은 때</span>
         <span className="rounded-lg bg-chip py-1">그 뒤 →</span>
@@ -261,8 +261,8 @@ export function AnTenseBack() {
         {TENSE_SLOTS.map((s) => (
           <li key={s.when} className="flex flex-col rounded-2xl border border-line">
             <div className={`rounded-t-2xl px-4 py-2 ${TONE[s.tone]}`}>
-              <p className="text-[15px] font-extrabold">{s.when}</p>
-              <p lang="en" className="text-[14px] font-bold">
+              <p className="text-[14.5px] font-extrabold">{s.when}</p>
+              <p lang="en" className="text-[13.5px] font-bold">
                 {s.form}
               </p>
             </div>
@@ -270,14 +270,14 @@ export function AnTenseBack() {
               <p className="text-[1.04em] font-medium">
                 <En en={s.en} />
               </p>
-              <p className="text-[14px] text-ink-2">{s.ko}</p>
+              <p className="text-[13.5px] text-ink-2">{s.ko}</p>
             </div>
           </li>
         ))}
       </ul>
       <div className="mt-3 rounded-2xl bg-chip px-4 py-3">
-        <p className="text-[14.5px] font-extrabold">한 칸 물러서기</p>
-        <ul lang="en" className="mt-2 grid grid-cols-1 gap-1.5 text-[14.5px] min-[420px]:grid-cols-2 sm:grid-cols-3">
+        <p className="text-[14px] font-extrabold">한 칸 물러서기</p>
+        <ul lang="en" className="mt-2 grid grid-cols-1 gap-1.5 text-[14px] min-[420px]:grid-cols-2 sm:grid-cols-3">
           {TENSE_MOVES.map(([from, to]) => (
             <li key={to + from} className="flex flex-wrap items-center gap-1.5">
               <span className="rounded-md border border-line px-2 py-0.5">{from}</span>
@@ -306,20 +306,20 @@ export function AnReportSteps() {
   return (
     <div className="mx-auto max-w-2xl">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">직접화법 · 들은 그대로</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">직접화법 · 들은 그대로</p>
         <p className="mt-1.5 text-[1.08em] font-medium">
           <En en="Jisu said to me, 'I will meet you here tomorrow.'" />
         </p>
-        <p className="text-[14px] text-ink-2">지수가 나에게 &lsquo;내일 여기서 만나자&rsquo;고 말했어.</p>
+        <p className="text-[13.5px] text-ink-2">지수가 나에게 &lsquo;내일 여기서 만나자&rsquo;고 말했어.</p>
       </div>
       <ol className="mt-3 grid gap-2">
         {REPORT_STEPS.map((s, i) => (
           <li key={s.what} className="flex items-start gap-3 rounded-2xl bg-chip px-3.5 py-2.5">
-            <span className="grid size-7 shrink-0 place-items-center rounded-full bg-coral text-[14px] font-extrabold text-white">
+            <span className="grid size-7 shrink-0 place-items-center rounded-full bg-coral text-[13.5px] font-extrabold text-white">
               {i + 1}
             </span>
             <div className="min-w-0">
-              <p className="flex flex-wrap items-center gap-1.5 text-[14.5px]">
+              <p className="flex flex-wrap items-center gap-1.5 text-[14px]">
                 <span className="font-extrabold">{s.what}</span>
                 <span lang="en" className="rounded-md border border-line bg-card px-2 py-0.5">
                   {s.from}
@@ -329,17 +329,17 @@ export function AnReportSteps() {
                   {s.to}
                 </span>
               </p>
-              <p className="mt-0.5 text-[14px] text-ink-2">{s.tip}</p>
+              <p className="mt-0.5 text-[13.5px] text-ink-2">{s.tip}</p>
             </div>
           </li>
         ))}
       </ol>
       <div className="mt-3 rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">간접화법 · 내 말로 바꿔서</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">간접화법 · 내 말로 바꿔서</p>
         <p className="mt-1.5 text-[1.08em] font-medium">
           <En en="Jisu [[told me]] {that|접속사:~라고} [[she would meet me there {the next day}]]." />
         </p>
-        <p className="text-[14px] text-ink-2">지수가 나에게 그다음 날 거기서 만나자고 했어.</p>
+        <p className="text-[13.5px] text-ink-2">지수가 나에게 그다음 날 거기서 만나자고 했어.</p>
       </div>
     </div>
   );
@@ -377,7 +377,7 @@ export function AnWordShift() {
     <div className="grid gap-3">
       {WORD_SHIFTS.map((g) => (
         <div key={g.group}>
-          <p className="text-[14.5px] font-extrabold text-ink-2">{g.group}</p>
+          <p className="text-[14px] font-extrabold text-ink-2">{g.group}</p>
           <ul className="mt-1.5 grid grid-cols-1 gap-2 min-[420px]:grid-cols-2 sm:grid-cols-3">
             {g.rows.map((r) => (
               <li key={r.ko} className="rounded-2xl border border-line px-3.5 py-2.5">
@@ -390,7 +390,7 @@ export function AnWordShift() {
                     <En en={r.to.en} />
                   </span>
                 </p>
-                <p className="text-[14px] text-ink-2">{r.ko}</p>
+                <p className="text-[13.5px] text-ink-2">{r.ko}</p>
               </li>
             ))}
           </ul>
@@ -453,7 +453,7 @@ const REPORT_TYPES: { kind: string; verb: string; link: string; en: string; ko: 
 function VerbCount({ verbs }: { verbs: 1 | 2 }) {
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-[14px] font-extrabold ${
+      className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-[13.5px] font-extrabold ${
         verbs === 2 ? "bg-coral-soft text-coral-ink" : "bg-sky-soft text-sky-ink"
       }`}
     >
@@ -478,17 +478,17 @@ export function AnFourTypes() {
           className={`rounded-2xl px-4 py-3 ${t.verbs === 1 ? "border-2 border-coral sm:col-span-2" : "border border-line"}`}
         >
           <div className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-chip text-[15px]">{t.kind}</Chip>
+            <Chip className="bg-chip text-[14.5px]">{t.kind}</Chip>
             <VerbCount verbs={t.verbs} />
           </div>
-          <p className="mt-1.5 text-[14px] font-bold text-ink-2">
+          <p className="mt-1.5 text-[13.5px] font-bold text-ink-2">
             전달동사 <span lang="en">{t.verb}</span> · 이음말 <span lang="en">{t.link}</span>
           </p>
           <p className="mt-1.5 text-[1.04em] font-medium">
             <En en={t.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{t.ko}</p>
-          <p className="mt-1 text-[14px] font-bold text-ink-3">{t.note}</p>
+          <p className="text-[13.5px] text-ink-2">{t.ko}</p>
+          <p className="mt-1 text-[13.5px] font-bold text-ink-3">{t.note}</p>
         </li>
       ))}
     </ul>
@@ -501,7 +501,7 @@ function Mark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞아요" : "틀려요"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -527,7 +527,7 @@ export function AnNumberVerbs() {
   return (
     <div>
       <div className="overflow-hidden rounded-2xl border border-line">
-        <div className={`${NUM_GRID} bg-chip px-3 py-2 text-[14px] font-extrabold`}>
+        <div className={`${NUM_GRID} bg-chip px-3 py-2 text-[13.5px] font-extrabold`}>
           <span>동사 종류</span>
           <span className="text-center">
             주어 하나
@@ -545,8 +545,8 @@ export function AnNumberVerbs() {
         {NUMBER_ROWS.map((r) => (
           <div key={r.kind} className={`${NUM_GRID} border-t border-line px-3 py-2`}>
             <span className="min-w-0">
-              <span className="block text-[14.5px] font-extrabold">{r.kind}</span>
-              <span className={`text-[14px] font-bold ${r.shows ? "text-coral-ink" : "text-ink-3"}`}>
+              <span className="block text-[14px] font-extrabold">{r.kind}</span>
+              <span className={`text-[13.5px] font-bold ${r.shows ? "text-coral-ink" : "text-ink-3"}`}>
                 {r.shows ? "수가 보여요" : "모양이 같아요"}
               </span>
             </span>
@@ -554,7 +554,7 @@ export function AnNumberVerbs() {
               <span
                 key={i}
                 lang="en"
-                className={`justify-self-center rounded-lg px-2 py-1 text-center text-[15px] font-extrabold ${
+                className={`justify-self-center rounded-lg px-2 py-1 text-center text-[14.5px] font-extrabold ${
                   r.shows ? "bg-coral-soft text-coral-ink" : "text-ink-3"
                 }`}
               >
@@ -565,33 +565,33 @@ export function AnNumberVerbs() {
         ))}
       </div>
       <div className="mt-3 rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">한 문장 안에서도 수를 맞추는 건 진짜 동사 하나</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">한 문장 안에서도 수를 맞추는 건 진짜 동사 하나</p>
         <p className="mt-2 flex flex-wrap items-start gap-x-2 gap-y-2 text-[1.08em] font-medium">
           <span className="inline-flex flex-col items-start gap-1">
             <span className="rounded-lg bg-sky-soft px-2.5 py-1 font-bold text-sky-ink">
               <En en="My brothers" />
             </span>
-            <span className="text-[14px] font-bold text-sky-ink">진짜 주어 · 복수</span>
+            <span className="text-[13.5px] font-bold text-sky-ink">진짜 주어 · 복수</span>
           </span>
           <span className="inline-flex flex-col items-start gap-1">
             <span className="inline-flex items-center gap-1 rounded-lg bg-coral px-2.5 py-1 font-bold text-white">
               <CrownIcon size={16} />
               <En en="like" />
             </span>
-            <span className="text-[14px] font-bold text-coral-ink">복수에 맞춰요</span>
+            <span className="text-[13.5px] font-bold text-coral-ink">복수에 맞춰요</span>
           </span>
           <span className="inline-flex flex-col items-start gap-1">
             <span className="inline-flex items-center gap-1 rounded-lg bg-amber-soft px-2.5 py-1 font-bold text-amber-ink">
               <MaskIcon size={17} />
               <En en="to play" />
             </span>
-            <span className="text-[14px] font-bold text-amber-ink">변장 · 늘 그대로</span>
+            <span className="text-[13.5px] font-bold text-amber-ink">변장 · 늘 그대로</span>
           </span>
           <span className="py-1">
             <En en="soccer." />
           </span>
         </p>
-        <p className="mt-2 text-[14px] text-ink-2">우리 형들은 축구하는 걸 좋아해. 형이 한 명이면 like만 likes로 바뀌고, to play는 그대로예요.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">우리 형들은 축구하는 걸 좋아해. 형이 한 명이면 like만 likes로 바뀌고, to play는 그대로예요.</p>
       </div>
     </div>
   );
@@ -616,8 +616,8 @@ const MANY_LUMPS: Lump[] = [
 function LumpCard({ l, many = false }: { l: Lump; many?: boolean }) {
   return (
     <li className="rounded-2xl border border-line bg-card px-4 py-2.5">
-      <p className={`text-[15px] font-extrabold ${many ? "text-sky-ink" : "text-coral-ink"}`}>{l.title}</p>
-      <p className="text-[14px] font-bold text-ink-2">{l.why}</p>
+      <p className={`text-[14.5px] font-extrabold ${many ? "text-sky-ink" : "text-coral-ink"}`}>{l.title}</p>
+      <p className="text-[13.5px] font-bold text-ink-2">{l.why}</p>
       <p className="mt-1 text-[1.04em] font-medium">
         <En en={l.en} />
       </p>
@@ -630,8 +630,8 @@ export function AnSingleLumps() {
   return (
     <div className="grid gap-3">
       <div>
-        <p className="flex items-center gap-2 text-[15px] font-extrabold">
-          <span className="grid size-7 place-items-center rounded-full bg-coral text-[15px] text-white">1</span>
+        <p className="flex items-center gap-2 text-[14.5px] font-extrabold">
+          <span className="grid size-7 place-items-center rounded-full bg-coral text-[14.5px] text-white">1</span>
           하나로 보는 주어 → 단수 동사
         </p>
         <ul className="mt-2 grid gap-2 sm:grid-cols-2">
@@ -641,8 +641,8 @@ export function AnSingleLumps() {
         </ul>
       </div>
       <div className="rounded-2xl bg-chip px-3 py-3">
-        <p className="flex items-center gap-2 text-[15px] font-extrabold">
-          <span className="grid h-7 place-items-center rounded-full bg-ink px-2 text-[14px] text-on-ink">여럿</span>
+        <p className="flex items-center gap-2 text-[14.5px] font-extrabold">
+          <span className="grid h-7 place-items-center rounded-full bg-ink px-2 text-[13.5px] text-on-ink">여럿</span>
           헷갈리는 반대편 → 복수 동사
         </p>
         <ul className="mt-2 grid gap-2 sm:grid-cols-2">
@@ -664,7 +664,7 @@ export function AnTimeLump() {
   return (
     <div className="mx-auto grid max-w-xl gap-2.5">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="flex items-center gap-2 text-[14.5px] font-extrabold text-ink-2">
+        <p className="flex items-center gap-2 text-[14px] font-extrabold text-ink-2">
           <Mark ok={false} />
           1분짜리 열 개로 세면
         </p>
@@ -675,17 +675,17 @@ export function AnTimeLump() {
         </div>
       </div>
       <div className="rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="flex items-center gap-2 text-[14.5px] font-extrabold text-coral-ink">
+        <p className="flex items-center gap-2 text-[14px] font-extrabold text-coral-ink">
           <Mark ok />
           10분이라는 시간 한 덩어리로 보면
         </p>
-        <div className="mt-2 grid h-9 place-items-center rounded-lg bg-coral-soft text-[15px] font-extrabold text-coral-ink">10분</div>
+        <div className="mt-2 grid h-9 place-items-center rounded-lg bg-coral-soft text-[14.5px] font-extrabold text-coral-ink">10분</div>
         <p className="mt-2 text-[1.05em] font-medium">
           <En en="Ten [[minutes]] [[is]] enough." />
         </p>
-        <p className="text-[14px] text-ink-2">10분이면 충분해.</p>
+        <p className="text-[13.5px] text-ink-2">10분이면 충분해.</p>
       </div>
-      <p className="text-center text-[14px] font-bold text-ink-2">
+      <p className="text-center text-[13.5px] font-bold text-ink-2">
         돈(<span lang="en">thirty dollars</span>)과 거리(<span lang="en">five kilometers</span>)도 한 덩어리 → 단수
       </p>
     </div>
@@ -721,14 +721,14 @@ export function AnSpeechBubble() {
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">직접화법 · 말풍선을 그대로 붙여요</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">직접화법 · 말풍선을 그대로 붙여요</p>
         <div className="mt-3 flex flex-col items-start gap-1.5">
           <Bubble>
             <En en="I am hungry." />
           </Bubble>
           <span className="ml-2 flex items-center gap-1.5">
             <PersonIcon size={32} className="text-sky-ink" />
-            <span className="text-[14px] font-bold">지수 (말한 사람)</span>
+            <span className="text-[13.5px] font-bold">지수 (말한 사람)</span>
           </span>
         </div>
         <p className="mt-3 flex flex-wrap items-center gap-1.5 text-[1.06em] font-medium">
@@ -737,24 +737,24 @@ export function AnSpeechBubble() {
             <En en="'I am hungry.'" />
           </span>
         </p>
-        <p className="mt-2 flex flex-wrap gap-1.5 text-[14px] font-bold text-ink-2">
+        <p className="mt-2 flex flex-wrap gap-1.5 text-[13.5px] font-bold text-ink-2">
           <span className="rounded-md bg-chip px-2 py-0.5">쉼표</span>
           <span className="rounded-md bg-chip px-2 py-0.5">따옴표</span>
           <span className="rounded-md bg-chip px-2 py-0.5">따옴표 안은 대문자로 시작</span>
         </p>
       </div>
       <div className="rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">간접화법 · 말풍선을 풀어 내 말로</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">간접화법 · 말풍선을 풀어 내 말로</p>
         <div className="mt-3 flex flex-col items-start gap-1.5">
           <Bubble strong>
             <En en="Jisu said {that|접속사:~라고} [[she was]] hungry." />
           </Bubble>
           <span className="ml-2 flex items-center gap-1.5">
             <PersonIcon size={32} className="text-coral" />
-            <span className="text-[14px] font-bold">나 (전하는 사람)</span>
+            <span className="text-[13.5px] font-bold">나 (전하는 사람)</span>
           </span>
         </div>
-        <ul className="mt-3 grid gap-1.5 text-[14.5px]">
+        <ul className="mt-3 grid gap-1.5 text-[14px]">
           {SPEECH_CHANGES.map((c) => (
             <li key={c.what} className="flex flex-wrap items-center gap-1.5">
               <span className="w-14 shrink-0 font-extrabold">{c.what}</span>
@@ -824,24 +824,24 @@ export function AnQuestionFlip() {
   return (
     <div className="mx-auto grid max-w-xl gap-2.5">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">따옴표 속 질문 · 질문 순서</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">따옴표 속 질문 · 질문 순서</p>
         <div className="mt-2">
           <QRow bits={Q_BEFORE} />
         </div>
       </div>
-      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <div className="flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight className="rotate-90 text-coral" />
         내 말로 옮기면
       </div>
       <div className="rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">옮긴 질문 · 평서문 순서</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">옮긴 질문 · 평서문 순서</p>
         <div className="mt-2 flex flex-wrap items-center gap-2">
           <QRow bits={Q_AFTER} />
-          <span lang="en" className="rounded-lg px-2 py-1 text-[14px] font-bold text-ink-3 line-through decoration-coral decoration-2">
+          <span lang="en" className="rounded-lg px-2 py-1 text-[13.5px] font-bold text-ink-3 line-through decoration-coral decoration-2">
             do
           </span>
         </div>
-        <ul className="mt-2.5 grid gap-1.5 text-[14px] font-bold sm:grid-cols-2">
+        <ul className="mt-2.5 grid gap-1.5 text-[13.5px] font-bold sm:grid-cols-2">
           {Q_NOTES.map((n) => (
             <li key={n} className="rounded-lg bg-chip px-2.5 py-1">
               {n}
@@ -849,7 +849,7 @@ export function AnQuestionFlip() {
           ))}
         </ul>
       </div>
-      <p className="rounded-2xl bg-chip px-4 py-2.5 text-center text-[14.5px] font-bold">
+      <p className="rounded-2xl bg-chip px-4 py-2.5 text-center text-[14px] font-bold">
         의문사가 주어면 순서 그대로: <span lang="en">Who broke it? → asked who had broken it</span>
       </p>
     </div>

@@ -42,12 +42,12 @@ export function Lv({
       >
         {!compact && <Mate mood="cheer" size={28} className="shrink-0 text-ink" />}
         <span className="min-w-0 flex-1">
-          <b className="block text-[15px] text-ink">{label ?? `${who} 문법까지 더 학습하기`}</b>
+          <b className="block text-[14.5px] text-ink">{label ?? `${who} 문법까지 더 학습하기`}</b>
           {!compact && (
-            <span className="text-[14px] text-ink-2">{topic ? `${topic} · 궁금하면 펼쳐 봐요` : "지금 고른 수준보다 높은 내용이에요. 궁금하면 펼쳐 봐요."}</span>
+            <span className="text-[13.5px] text-ink-2">{topic ? `${topic} · 궁금하면 펼쳐 봐요` : "지금 고른 수준보다 높은 내용이에요. 궁금하면 펼쳐 봐요."}</span>
           )}
         </span>
-        <span aria-hidden className="shrink-0 text-[15px] font-extrabold text-coral-ink">
+        <span aria-hidden className="shrink-0 text-[14.5px] font-extrabold text-coral-ink">
           펼치기 +
         </span>
       </button>

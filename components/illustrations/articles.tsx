@@ -20,7 +20,7 @@ function ArMark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "써요" : "쓰지 않아요"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -56,9 +56,9 @@ export function ArCountCheck() {
       {AR_CHECKS.map((c) => (
         <div role="listitem" key={c.q} className="grid gap-2">
           <div className="rounded-2xl border border-line">
-            <p className="rounded-t-2xl bg-sky-soft px-4 py-2.5 text-[16px] font-extrabold text-sky-ink">{c.q}</p>
+            <p className="rounded-t-2xl bg-sky-soft px-4 py-2.5 text-[15px] font-extrabold text-sky-ink">{c.q}</p>
             <div className="px-4 py-3">
-              <p className="flex flex-wrap items-center gap-2 text-[15px] font-extrabold">
+              <p className="flex flex-wrap items-center gap-2 text-[14.5px] font-extrabold">
                 <ArMark ok={false} />
                 <span className="text-coral-ink">아니요라면</span>
                 <span>{c.noTitle}</span>
@@ -66,19 +66,19 @@ export function ArCountCheck() {
               <p className="mt-1.5 text-[1.05em] font-medium">
                 <En en={c.no.en} />
               </p>
-              <p className="mt-1 text-[14px] text-ink-2">
+              <p className="mt-1 text-[13.5px] text-ink-2">
                 {c.hint} {c.hintEn && <En en={c.hintEn.en} className="font-bold text-ink" />}
               </p>
             </div>
           </div>
-          <p className="flex items-center gap-1 pl-4 text-[14px] font-extrabold text-mint-ink">
+          <p className="flex items-center gap-1 pl-4 text-[13.5px] font-extrabold text-mint-ink">
             <ArrowRight size={18} className="rotate-90" />
             예라면 다음으로
           </p>
         </div>
       ))}
       <div role="listitem" className="rounded-2xl border-2 border-mint-ink/40 bg-mint-soft px-4 py-3 text-mint-ink">
-        <p className="flex items-center gap-2 text-[16px] font-extrabold">
+        <p className="flex items-center gap-2 text-[15px] font-extrabold">
           <HatIcon className="text-mint-ink" />a/an + 명사 한 개
         </p>
         <p className="mt-1.5 text-[1.05em] font-medium text-ink">
@@ -123,7 +123,7 @@ export function ArStory() {
         {AR_STORY.map((s, i) => (
           <div role="listitem" key={i} className="flex flex-col rounded-2xl border border-line px-4 py-3">
             <p className="flex items-center gap-2 text-ink-2">
-              <span className="grid size-7 place-items-center rounded-full bg-ink text-[14px] font-extrabold text-bg">{i + 1}</span>
+              <span className="grid size-7 place-items-center rounded-full bg-ink text-[13.5px] font-extrabold text-bg">{i + 1}</span>
               {s.icons.map((ic) =>
                 ic === "girl" ? <PersonIcon key={ic} size={28} className="text-sky-ink" /> : <CatIcon key={ic} size={28} className="text-coral" />,
               )}
@@ -131,12 +131,12 @@ export function ArStory() {
             <p className="mt-2 text-[1.08em] font-medium">
               <En en={s.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{s.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{s.ko}</p>
             <div role="list" className="mt-2 flex flex-wrap gap-1.5">
               {s.tags.map((t) => (
                 <div role="listitem"
                   key={t.t}
-                  className={`rounded-lg px-2 py-0.5 text-[14px] font-bold ${t.first ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"}`}
+                  className={`rounded-lg px-2 py-0.5 text-[13.5px] font-bold ${t.first ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"}`}
                 >
                   {t.t}
                 </div>
@@ -145,7 +145,7 @@ export function ArStory() {
           </div>
         ))}
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-extrabold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-extrabold">
         <span className="rounded-lg bg-mint-soft px-2.5 py-1 text-mint-ink">처음 나오면 a</span>
         <ArrowRight size={18} className="text-ink-3" />
         <span className="rounded-lg bg-coral-soft px-2.5 py-1 text-coral-ink">다시 나오면 the</span>
@@ -174,8 +174,8 @@ export function ArNoHat() {
             <ArHatOff />
           </span>
           <span className="min-w-0">
-            <span className="block text-[16px] font-extrabold">{c.title}</span>
-            <span className="block text-[14px] text-ink-2">{c.why}</span>
+            <span className="block text-[15px] font-extrabold">{c.title}</span>
+            <span className="block text-[13.5px] text-ink-2">{c.why}</span>
             <span className="mt-1 block text-[1.05em] font-medium">
               <En en={c.en} />
             </span>
@@ -199,7 +199,7 @@ const AR_PAIRS: { hat: { en: string; why: string }; bare: { en: string; why: str
 export function ArHatPairs() {
   return (
     <div className="rounded-2xl border border-line">
-      <div className="grid grid-cols-2 rounded-t-2xl text-[15px] font-extrabold">
+      <div className="grid grid-cols-2 rounded-t-2xl text-[14.5px] font-extrabold">
         <p className="flex items-center gap-2 rounded-tl-2xl bg-coral-soft px-3 py-2.5 text-coral-ink">
           <HatIcon className="text-coral" />
           the를 써요
@@ -216,13 +216,13 @@ export function ArHatPairs() {
               <span className="block text-[1.03em] font-medium">
                 <En en={p.hat.en} />
               </span>
-              <span className="block text-[14px] text-ink-2">{p.hat.why}</span>
+              <span className="block text-[13.5px] text-ink-2">{p.hat.why}</span>
             </p>
             <p className="border-l border-line px-3 py-2.5">
               <span className="block text-[1.03em] font-medium">
                 <En en={p.bare.en} />
               </span>
-              <span className="block text-[14px] text-ink-2">{p.bare.why}</span>
+              <span className="block text-[13.5px] text-ink-2">{p.bare.why}</span>
             </p>
           </div>
         ))}

@@ -21,7 +21,7 @@ function Mark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -65,7 +65,7 @@ function PieceChip({ p }: { p: Piece }) {
         {kind === "verbal" && <MaskIcon size={16} />}
         <En en={p.en} />
       </span>
-      {p.sub && <span className={`text-[14px] font-extrabold ${label[kind]}`}>{p.sub}</span>}
+      {p.sub && <span className={`text-[13.5px] font-extrabold ${label[kind]}`}>{p.sub}</span>}
     </span>
   );
 }
@@ -139,11 +139,11 @@ export function CjFourLinks() {
             <span lang="en" className="text-[1.3em] font-extrabold">
               {l.word}
             </span>
-            <span className="text-[15px] font-bold">{l.ko}</span>
-            <span className="ml-auto text-[14px] font-extrabold">{l.relation}</span>
+            <span className="text-[14.5px] font-bold">{l.ko}</span>
+            <span className="ml-auto text-[13.5px] font-extrabold">{l.relation}</span>
           </div>
           <div className="px-4 py-3">
-            <p className="flex items-center gap-2 text-[15px] font-extrabold" aria-hidden>
+            <p className="flex items-center gap-2 text-[14.5px] font-extrabold" aria-hidden>
               <span className="rounded-lg border border-line px-2.5 py-1">{l.a}</span>
               <span className={`grid size-8 place-items-center rounded-full ${TONE[l.tone]}`}>{l.sign}</span>
               <span className="rounded-lg border border-line px-2.5 py-1">{l.b}</span>
@@ -151,7 +151,7 @@ export function CjFourLinks() {
             <p className="mt-2.5 text-[1.05em] font-medium">
               <En en={l.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{l.enKo}</p>
+            <p className="text-[13.5px] text-ink-2">{l.enKo}</p>
           </div>
         </li>
       ))}
@@ -179,7 +179,7 @@ const TWO_KINGDOMS_B: Piece[] = [
 function Kingdom({ pieces, tag }: { pieces: Piece[]; tag: string }) {
   return (
     <div className="rounded-2xl border-2 border-ink-3 px-3 py-2.5">
-      <p className="mb-2 text-[14px] font-extrabold text-ink-3">{tag}</p>
+      <p className="mb-2 text-[13.5px] font-extrabold text-ink-3">{tag}</p>
       <PieceRow pieces={pieces} />
     </div>
   );
@@ -190,26 +190,26 @@ export function CjTwoKingdoms() {
   return (
     <div className="grid gap-3">
       <div className="rounded-2xl bg-chip px-3 py-3.5">
-        <p className="text-[15px] font-extrabold">접속사 0개 → 왕국 하나, 진짜 동사 1개</p>
+        <p className="text-[14.5px] font-extrabold">접속사 0개 → 왕국 하나, 진짜 동사 1개</p>
         <div className="mt-2.5">
           <Kingdom pieces={ONE_KINGDOM} tag="절 1" />
         </div>
-        <p className="mt-2 text-[14px] text-ink-2">왕(went)이 이미 있으니 buy는 to를 쓰고 변장해요. &lsquo;우유를 사려고&rsquo;</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">왕(went)이 이미 있으니 buy는 to를 쓰고 변장해요. &lsquo;우유를 사려고&rsquo;</p>
       </div>
       <div className="rounded-2xl bg-chip px-3 py-3.5">
-        <p className="text-[15px] font-extrabold">접속사 and 1개 → 왕국 둘, 진짜 동사 2개</p>
+        <p className="text-[14.5px] font-extrabold">접속사 and 1개 → 왕국 둘, 진짜 동사 2개</p>
         <div className="mt-2.5 flex flex-wrap items-stretch gap-2">
           <Kingdom pieces={TWO_KINGDOMS_A} tag="절 1" />
-          <span className="self-center rounded-full bg-amber-soft px-3 py-1 text-[15px] font-extrabold text-amber-ink">
+          <span className="self-center rounded-full bg-amber-soft px-3 py-1 text-[14.5px] font-extrabold text-amber-ink">
             <En en="and" />
           </span>
           <Kingdom pieces={TWO_KINGDOMS_B} tag="절 2" />
         </div>
-        <p className="mt-2 text-[14px] text-ink-2">
+        <p className="mt-2 text-[13.5px] text-ink-2">
           주어가 같아서 두 번째 he는 생략했어요. bought는 he에 맞춰 과거형이 된 진짜 동사예요. &lsquo;가게에 가서 우유를 샀다&rsquo;
         </p>
       </div>
-      <p className="text-center text-[14px] font-bold text-ink-2">
+      <p className="text-center text-[13.5px] font-bold text-ink-2">
         <span className="rounded-md bg-coral px-1.5 text-white">진짜 동사</span> 개수 = 절을 잇는 접속사 개수 + 1
       </p>
     </div>
@@ -221,7 +221,7 @@ export function CjTwoKingdoms() {
 function CauseBox({ en, role }: { en: string; role: "cause" | "result" }) {
   return (
     <span className={`inline-flex flex-col gap-1 rounded-2xl px-3 py-2 ${role === "cause" ? TONE.amber : TONE.mint}`}>
-      <span className="text-[14px] font-extrabold">{role === "cause" ? "원인" : "결과"}</span>
+      <span className="text-[13.5px] font-extrabold">{role === "cause" ? "원인" : "결과"}</span>
       <span className="text-[1.08em] font-medium text-ink">
         <En en={en} />
       </span>
@@ -231,7 +231,7 @@ function CauseBox({ en, role }: { en: string; role: "cause" | "result" }) {
 
 function LinkPill({ word }: { word: string }) {
   return (
-    <span className="rounded-full border-2 border-ink px-3 py-1 text-[15px] font-extrabold sm:self-center">
+    <span className="rounded-full border-2 border-ink px-3 py-1 text-[14.5px] font-extrabold sm:self-center">
       <En en={word} />
     </span>
   );
@@ -242,7 +242,7 @@ export function CjSoBecause() {
   return (
     <div className="grid gap-3">
       <div className="rounded-2xl border border-line px-3 py-3.5">
-        <p className="text-[15px] font-extrabold">so: 원인 → 결과 (앞에서부터 차례로)</p>
+        <p className="text-[14.5px] font-extrabold">so: 원인 → 결과 (앞에서부터 차례로)</p>
         <div className="mt-2.5 flex flex-col items-start gap-1.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-2">
           <CauseBox role="cause" en="I was sleepy," />
           <ArrowRight className="ml-5 shrink-0 rotate-90 text-ink-3 sm:ml-0 sm:rotate-0" />
@@ -252,7 +252,7 @@ export function CjSoBecause() {
         </div>
       </div>
       <div className="rounded-2xl border border-line px-3 py-3.5">
-        <p className="text-[15px] font-extrabold">because: 결과 ← 원인 (이유를 뒤에서 덧붙이기)</p>
+        <p className="text-[14.5px] font-extrabold">because: 결과 ← 원인 (이유를 뒤에서 덧붙이기)</p>
         <div className="mt-2.5 flex flex-col items-start gap-1.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-2">
           <CauseBox role="result" en="I {took a nap}" />
           <ArrowRight className="ml-5 shrink-0 -rotate-90 text-ink-3 sm:ml-0 sm:rotate-180" />
@@ -261,7 +261,7 @@ export function CjSoBecause() {
           <CauseBox role="cause" en="I was sleepy." />
         </div>
       </div>
-      <p className="flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <Mark ok={false} />
         <span lang="en" className="line-through decoration-coral decoration-2">
           Because I was sleepy, so I took a nap.
@@ -317,7 +317,7 @@ export function CjNounSlots() {
             <span lang="en" className="font-extrabold">
               {o.en}
             </span>
-            <span className="text-[14px] font-bold">{o.ko}</span>
+            <span className="text-[13.5px] font-bold">{o.ko}</span>
           </li>
         ))}
       </ul>
@@ -325,20 +325,20 @@ export function CjNounSlots() {
         {NOUN_SLOTS.map((s) => (
           <li key={s.slot} className="flex flex-col rounded-2xl border border-line px-4 py-3">
             <p className="flex flex-wrap items-center gap-2">
-              <Chip className="bg-sky-soft text-[15px] text-sky-ink">{s.slot}</Chip>
-              <span className="text-[14px] font-bold text-ink-3">{s.ask}</span>
+              <Chip className="bg-sky-soft text-[14.5px] text-sky-ink">{s.slot}</Chip>
+              <span className="text-[13.5px] font-bold text-ink-3">{s.ask}</span>
             </p>
             <p className="mt-2 text-[1.05em] font-medium">
               <En en={s.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{s.ko}</p>
-            <p className="mt-auto pt-2 text-[14px] font-bold text-coral-ink">
+            <p className="text-[13.5px] text-ink-2">{s.ko}</p>
+            <p className="mt-auto pt-2 text-[13.5px] font-bold text-coral-ink">
               여는 말 {s.opener} → 진짜 동사 {s.verbs}
             </p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         절을 통째로 &lsquo;그것&rsquo;으로 바꿔도 말이 되면 명사절이에요. 명사절 주어는 한 덩어리라 단수로 받아요.
       </p>
     </div>
@@ -376,14 +376,14 @@ export function CjQuestionInside() {
   return (
     <div className="grid gap-3">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">혼자 쓰는 질문</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">혼자 쓰는 질문</p>
         <p lang="en" className="mt-2 flex flex-wrap items-center gap-2 text-[1.1em] font-medium">
           <Chip className="bg-sky-soft text-sky-ink">Where</Chip>
           <Chip className="bg-chip">does</Chip>
           <Chip className="border border-line">Minho</Chip>
           <Chip className="border border-line">live?</Chip>
         </p>
-        <div className="mt-3 flex items-center gap-2 text-[14px] font-bold text-ink-2">
+        <div className="mt-3 flex items-center gap-2 text-[13.5px] font-bold text-ink-2">
           <ArrowRight className="rotate-90 text-coral" />
           문장 속으로 들어가면
         </div>
@@ -394,32 +394,32 @@ export function CjQuestionInside() {
           <Chip className="bg-sky-soft text-sky-ink">where</Chip>
           <Chip className="border border-line">Minho</Chip>
           <Chip className="bg-coral text-white">lives?</Chip>
-          <span className="rounded-lg px-2 py-1 text-[14px] text-ink-3 line-through">does</span>
+          <span className="rounded-lg px-2 py-1 text-[13.5px] text-ink-3 line-through">does</span>
         </p>
-        <p className="mt-2 text-[14px] text-ink-2">does가 빠지면서 가져갔던 -s를 동사에게 돌려줘요. 과거라면 did가 빠지고 동사가 과거형이 돼요.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">does가 빠지면서 가져갔던 -s를 동사에게 돌려줘요. 과거라면 did가 빠지고 동사가 과거형이 돼요.</p>
       </div>
       <ul className="grid gap-2.5 sm:grid-cols-3">
         {INSIDE_RULES.map((r) => (
           <li key={r.name} className="flex flex-col rounded-2xl border border-line">
             <div className={`rounded-t-2xl px-4 py-2 ${TONE[r.tone]}`}>
-              <p className="text-[15px] font-extrabold">{r.name}</p>
-              <p className="text-[14px] font-bold">{r.order}</p>
+              <p className="text-[14.5px] font-extrabold">{r.name}</p>
+              <p className="text-[13.5px] font-bold">{r.order}</p>
             </div>
             <div className="px-4 py-2.5">
               <p className="text-[1.04em] font-medium">
                 <En en={r.en} />
               </p>
-              <p className="text-[14px] text-ink-2">{r.ko}</p>
+              <p className="text-[13.5px] text-ink-2">{r.ko}</p>
             </div>
           </li>
         ))}
       </ul>
-      <div className="rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
+      <div className="rounded-2xl bg-chip px-4 py-3 text-[14px]">
         <p className="font-extrabold">think · believe · guess · suppose · imagine과 쓰면 의문사가 맨 앞으로</p>
         <p className="mt-1.5 text-[1.04em] font-medium">
           <En en="[[What]] do you think [[Minsu wants]] for his birthday?" />
         </p>
-        <p className="text-[14px] text-ink-2">&lsquo;응, 아니&rsquo;로 대답할 수 없는 질문이라 의문사가 먼저 나와요.</p>
+        <p className="text-[13.5px] text-ink-2">&lsquo;응, 아니&rsquo;로 대답할 수 없는 질문이라 의문사가 먼저 나와요.</p>
       </div>
     </div>
   );
@@ -485,16 +485,16 @@ export function CjAdverbMap() {
       {ADVERB_MAP.map((m) => (
         <li key={m.name} className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className={`text-[15px] ${TONE[m.tone]}`}>{m.name}</Chip>
-            <span className="text-[15px] font-extrabold">&ldquo;{m.ask}&rdquo;</span>
+            <Chip className={`text-[14.5px] ${TONE[m.tone]}`}>{m.name}</Chip>
+            <span className="text-[14.5px] font-extrabold">&ldquo;{m.ask}&rdquo;</span>
           </p>
-          <p lang="en" className="mt-1.5 text-[14.5px] font-bold text-ink-2">
+          <p lang="en" className="mt-1.5 text-[14px] font-bold text-ink-2">
             {m.words}
           </p>
           <p className="mt-1.5 text-[1.04em] font-medium">
             <En en={m.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{m.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{m.ko}</p>
         </li>
       ))}
     </ul>
@@ -506,7 +506,7 @@ export function CjAdverbMap() {
 function Slot({ children, tone }: { children: ReactNode; tone: Tone | "line" }) {
   return (
     <span
-      className={`inline-flex items-center rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${
+      className={`inline-flex items-center rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${
         tone === "line" ? "border border-line" : TONE[tone]
       }`}
     >
@@ -532,7 +532,7 @@ export function CjSoSuch() {
         <p className="mt-2 text-[1.05em] font-medium">
           <En en="Minho ran [[{so|부사:너무, 아주} fast {that|접속사:(so ~ that) 그래서 ~하다}]] nobody could catch him." />
         </p>
-        <p className="text-[14px] text-ink-2">민호가 너무 빨리 달려서 아무도 그를 잡지 못했어.</p>
+        <p className="text-[13.5px] text-ink-2">민호가 너무 빨리 달려서 아무도 그를 잡지 못했어.</p>
       </div>
       <div className="rounded-2xl border border-line px-4 py-3">
         <p className="flex flex-wrap items-center gap-1.5">
@@ -551,9 +551,9 @@ export function CjSoSuch() {
         <p className="mt-2 text-[1.05em] font-medium">
           <En en="It was [[{such|형용사:그렇게 …한} a funny movie {that|접속사:(such ~ that) 그래서 ~하다}]] we laughed the whole time." />
         </p>
-        <p className="text-[14px] text-ink-2">너무 웃긴 영화라서 우리는 내내 웃었어. 복수 명사면 a 없이 such kind neighbors처럼 써요.</p>
+        <p className="text-[13.5px] text-ink-2">너무 웃긴 영화라서 우리는 내내 웃었어. 복수 명사면 a 없이 such kind neighbors처럼 써요.</p>
       </div>
-      <div className="grid gap-2 text-[14.5px] sm:grid-cols-2">
+      <div className="grid gap-2 text-[14px] sm:grid-cols-2">
         <div className="rounded-xl bg-chip px-3 py-2.5">
           <p className="font-extrabold">so that: 붙어 있으면 목적</p>
           <p className="mt-0.5 text-ink-2">&lsquo;~하도록, ~하기 위해&rsquo;</p>
@@ -621,7 +621,7 @@ const PAIRS: { first: string; second: string; ko: string; en: string; enKo: stri
 function Blank({ letter, stress = false }: { letter: "A" | "B"; stress?: boolean }) {
   return (
     <span
-      className={`grid h-8 min-w-9 place-items-center rounded-lg border-2 border-dashed px-2 text-[15px] font-extrabold ${
+      className={`grid h-8 min-w-9 place-items-center rounded-lg border-2 border-dashed px-2 text-[14.5px] font-extrabold ${
         stress ? "border-coral text-coral-ink" : "border-ink-3 text-ink-2"
       }`}
     >
@@ -632,7 +632,7 @@ function Blank({ letter, stress = false }: { letter: "A" | "B"; stress?: boolean
 
 function PairWord({ w }: { w: string }) {
   return (
-    <span lang="en" className="rounded-lg bg-amber-soft px-2 py-1 text-[15px] font-extrabold text-amber-ink">
+    <span lang="en" className="rounded-lg bg-amber-soft px-2 py-1 text-[14.5px] font-extrabold text-amber-ink">
       {w}
     </span>
   );
@@ -660,16 +660,16 @@ export function CjPairs() {
                   <Blank letter="B" stress={p.stress} />
                 </>
               )}
-              <span className="ml-1 text-[15px] font-extrabold">{p.ko}</span>
+              <span className="ml-1 text-[14.5px] font-extrabold">{p.ko}</span>
             </p>
             <p className="mt-2 text-[1.04em] font-medium">
               <En en={p.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{p.enKo}</p>
+            <p className="text-[13.5px] text-ink-2">{p.enKo}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         빨간 테두리의 <span className="font-extrabold text-coral-ink">B</span>: not A but B, not only A but also B, B as well as A는 B 쪽을 더 힘주어 말해요.
       </p>
     </div>
@@ -719,7 +719,7 @@ const AGREE: { expr: string; target: "both" | "B" | "front"; rule: string; en: s
 function Who({ target }: { target: "both" | "B" | "front" }) {
   const box = (l: string, on: boolean) => (
     <span
-      className={`grid h-8 min-w-9 place-items-center rounded-lg px-2 text-[15px] font-extrabold ${
+      className={`grid h-8 min-w-9 place-items-center rounded-lg px-2 text-[14.5px] font-extrabold ${
         on ? "bg-coral text-white" : "border border-line text-ink-3"
       }`}
     >
@@ -727,7 +727,7 @@ function Who({ target }: { target: "both" | "B" | "front" }) {
     </span>
   );
   const verb = (
-    <span className="inline-flex items-center gap-1 rounded-lg border-2 border-coral px-2 py-0.5 text-[14px] font-extrabold text-coral-ink">
+    <span className="inline-flex items-center gap-1 rounded-lg border-2 border-coral px-2 py-0.5 text-[13.5px] font-extrabold text-coral-ink">
       <CrownIcon size={14} />
       동사
     </span>
@@ -756,16 +756,16 @@ export function CjAgreement() {
       {AGREE.map((a) => (
         <li key={a.expr} className="rounded-2xl border border-line px-4 py-3">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            <span lang="en" className="text-[15px] font-extrabold">
+            <span lang="en" className="text-[14.5px] font-extrabold">
               {a.expr}
             </span>
             <Who target={a.target} />
-            <span className="text-[14px] font-bold text-coral-ink">{a.rule}</span>
+            <span className="text-[13.5px] font-bold text-coral-ink">{a.rule}</span>
           </div>
           <p className="mt-1.5 text-[1.04em] font-medium">
             <En en={a.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{a.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{a.ko}</p>
         </li>
       ))}
     </ul>
@@ -808,15 +808,15 @@ export function CjSameShape() {
       <ul className="mt-3 grid gap-2">
         {BALANCE.map((r) => (
           <li key={r.shape} className="rounded-2xl border border-line px-4 py-2.5">
-            <p className="text-[14px] font-extrabold text-sky-ink">{r.shape}</p>
+            <p className="text-[13.5px] font-extrabold text-sky-ink">{r.shape}</p>
             <p lang="en" className="mt-1 flex flex-wrap items-center gap-1.5 text-[1.04em] font-medium">
               <Mark ok />
-              {r.pre && <span className="text-[14.5px] font-bold text-amber-ink">{r.pre}</span>}
+              {r.pre && <span className="text-[14px] font-bold text-amber-ink">{r.pre}</span>}
               <span className="rounded-lg bg-sky-soft px-2 py-0.5 text-sky-ink">{r.a}</span>
-              <span className="text-[14.5px] font-bold text-amber-ink">{r.link}</span>
+              <span className="text-[14px] font-bold text-amber-ink">{r.link}</span>
               <span className="rounded-lg bg-sky-soft px-2 py-0.5 text-sky-ink">{r.b}</span>
             </p>
-            <p lang="en" className="mt-1 flex flex-wrap items-center gap-1.5 text-[14.5px] text-ink-3">
+            <p lang="en" className="mt-1 flex flex-wrap items-center gap-1.5 text-[14px] text-ink-3">
               <Mark ok={false} />
               {r.pre && <span>{r.pre}</span>}
               <span>{r.a}</span>
@@ -850,7 +850,7 @@ function Coupler({ word }: { word: string }) {
   return (
     <span className="inline-flex items-center pb-3">
       <span className="h-1 w-2.5 bg-ink-3" aria-hidden />
-      <span lang="en" className="rounded-full border-2 border-ink px-2 text-[14px] font-extrabold">
+      <span lang="en" className="rounded-full border-2 border-ink px-2 text-[13.5px] font-extrabold">
         {word}
       </span>
       <span className="h-1 w-2.5 bg-ink-3" aria-hidden />
@@ -869,7 +869,7 @@ export function CjTrainMatch() {
   return (
     <div className="grid gap-3">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="flex items-center gap-2 text-[15px] font-extrabold">
+        <p className="flex items-center gap-2 text-[14.5px] font-extrabold">
           <Mark ok />
           동명사 칸 + 동명사 칸
         </p>
@@ -883,7 +883,7 @@ export function CjTrainMatch() {
         </p>
       </div>
       <div className="rounded-2xl border-2 border-dashed border-coral px-4 py-3">
-        <p className="flex items-center gap-2 text-[15px] font-extrabold text-coral-ink">
+        <p className="flex items-center gap-2 text-[14.5px] font-extrabold text-coral-ink">
           <Mark ok={false} />
           동명사 칸 + 동사원형 칸 → 탈선!
         </p>
@@ -895,13 +895,13 @@ export function CjTrainMatch() {
           <Coupler word="and" />
           <Car en="ride" bad />
         </p>
-        <p className="mt-2 text-[14px] text-ink-2">like의 목적어 두 칸이니까 뒤 칸도 -ing로 맞춰요.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">like의 목적어 두 칸이니까 뒤 칸도 -ing로 맞춰요.</p>
       </div>
       <ul className="grid gap-2 sm:grid-cols-3">
         {MATCHED.map((m) => (
           <li key={m.shape} className="rounded-2xl bg-chip px-3.5 py-2.5">
-            <p className="text-[14px] font-extrabold text-sky-ink">{m.shape}</p>
-            <p lang="en" className="mt-1 flex flex-wrap items-center gap-1.5 text-[14.5px] font-bold">
+            <p className="text-[13.5px] font-extrabold text-sky-ink">{m.shape}</p>
+            <p lang="en" className="mt-1 flex flex-wrap items-center gap-1.5 text-[14px] font-bold">
               <span className="rounded-md bg-card px-1.5 py-0.5">{m.a}</span>
               <span className="text-amber-ink">{m.link}</span>
               <span className="rounded-md bg-card px-1.5 py-0.5">{m.b}</span>
@@ -934,38 +934,38 @@ export function CjEitherNeither() {
       <div className="grid gap-2.5 sm:grid-cols-2">
         <div className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-mint-soft text-[15px] text-mint-ink">either A or B</Chip>
-            <span className="text-[15px] font-extrabold">둘 중 하나</span>
+            <Chip className="bg-mint-soft text-[14.5px] text-mint-ink">either A or B</Chip>
+            <span className="text-[14.5px] font-extrabold">둘 중 하나</span>
           </p>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <Pick2 en="a cat" state="maybe" />
-            <span className="text-[15px] font-extrabold text-ink-3">또는</span>
+            <span className="text-[14.5px] font-extrabold text-ink-3">또는</span>
             <Pick2 en="a dog" state="maybe" />
           </div>
-          <p className="mt-1.5 text-[14px] font-bold text-mint-ink">이 중 하나를 골라요</p>
+          <p className="mt-1.5 text-[13.5px] font-bold text-mint-ink">이 중 하나를 골라요</p>
           <p className="mt-2 text-[1.03em] font-medium">
             <En en="We can {get|동사:(동물을) 데려오다, 들이다} [[{either|접속사:(either A or B) A나 B 둘 중 하나}]] a cat [[or]] a dog." />
           </p>
-          <p className="text-[14px] text-ink-2">우리는 고양이나 개 중 한 마리를 데려올 수 있어.</p>
+          <p className="text-[13.5px] text-ink-2">우리는 고양이나 개 중 한 마리를 데려올 수 있어.</p>
         </div>
         <div className="rounded-2xl border-2 border-coral px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-coral-soft text-[15px] text-coral-ink">neither A nor B</Chip>
-            <span className="text-[15px] font-extrabold">둘 다 아니에요</span>
+            <Chip className="bg-coral-soft text-[14.5px] text-coral-ink">neither A nor B</Chip>
+            <span className="text-[14.5px] font-extrabold">둘 다 아니에요</span>
           </p>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <Pick2 en="coffee" state="no" />
-            <span className="text-[15px] font-extrabold text-ink-3">도</span>
+            <span className="text-[14.5px] font-extrabold text-ink-3">도</span>
             <Pick2 en="tea" state="no" />
           </div>
-          <p className="mt-1.5 text-[14px] font-bold text-coral-ink">둘 다 지워요</p>
+          <p className="mt-1.5 text-[13.5px] font-bold text-coral-ink">둘 다 지워요</p>
           <p className="mt-2 text-[1.03em] font-medium">
             <En en="My dad drinks [[{neither|접속사:(neither A nor B) A도 B도 아닌}]] coffee [[{nor|접속사:(neither A nor B) ~도 아닌}]] tea." />
           </p>
-          <p className="text-[14px] text-ink-2">아빠는 커피도 차도 안 드셔.</p>
+          <p className="text-[13.5px] text-ink-2">아빠는 커피도 차도 안 드셔.</p>
         </div>
       </div>
-      <div className="mt-3 grid gap-2 text-[14.5px] font-bold sm:grid-cols-2">
+      <div className="mt-3 grid gap-2 text-[14px] font-bold sm:grid-cols-2">
         <p className="flex flex-wrap items-center gap-1.5 rounded-xl bg-chip px-3 py-2">
           <span lang="en" className="rounded-md bg-coral-soft px-1.5 text-coral-ink">
             neither
@@ -1042,14 +1042,14 @@ export function CjPairCount() {
     <div className="grid gap-2.5">
       {PAIR_COUNTS.map((r) => (
         <div key={r.key} className={`rounded-2xl px-3.5 py-3 ${r.plus ? "border-2 border-coral" : "border border-line"}`}>
-          <p className="text-[15px] font-extrabold">{r.title}</p>
+          <p className="text-[14.5px] font-extrabold">{r.title}</p>
           <div className="mt-2.5">
             <PieceRow pieces={r.pieces} />
           </div>
-          <p className={`mt-2 text-[14px] font-bold ${r.plus ? "text-coral-ink" : "text-ink-2"}`}>{r.count}</p>
+          <p className={`mt-2 text-[13.5px] font-bold ${r.plus ? "text-coral-ink" : "text-ink-2"}`}>{r.count}</p>
         </div>
       ))}
-      <p className="text-center text-[14px] font-bold text-ink-2">
+      <p className="text-center text-[13.5px] font-bold text-ink-2">
         <span className="rounded-md bg-amber-soft px-1.5 text-amber-ink">짝 앞 + 짝 뒤</span> = 접속사 1개로 세요
       </p>
     </div>
@@ -1064,7 +1064,7 @@ function LabeledBox({ en, label }: { en: string; label: string }) {
       <span className="rounded-lg border border-line px-2 py-1">
         <En en={en} />
       </span>
-      <span className="text-[14px] font-extrabold text-ink-3">{label}</span>
+      <span className="text-[13.5px] font-extrabold text-ink-3">{label}</span>
     </span>
   );
 }
@@ -1074,19 +1074,19 @@ export function CjThatWrap() {
   return (
     <div className="mx-auto grid max-w-xl gap-2.5">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">① 빠진 것 없는 완전한 문장</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">① 빠진 것 없는 완전한 문장</p>
         <p className="mt-2 flex flex-wrap items-start gap-x-2 gap-y-2 text-[1.08em] font-medium">
           <LabeledBox en="you" label="주어" />
           <PieceChip p={{ en: "feel", kind: "verb", sub: "동사" }} />
           <LabeledBox en="{better|형용사:(몸이) 나아진} soon" label="나머지" />
         </p>
       </div>
-      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <div className="flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight className="rotate-90 text-coral" />
         앞에 that을 붙이면
       </div>
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">② &lsquo;~라는 것&rsquo; 명사 덩어리</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">② &lsquo;~라는 것&rsquo; 명사 덩어리</p>
         <p className="mt-2 flex flex-wrap items-center gap-2">
           <span className="inline-flex flex-wrap items-center gap-1.5 rounded-xl border-2 border-sky-ink/60 bg-sky-soft px-2.5 py-1.5 text-[1.08em] font-medium text-sky-ink">
             <span className="rounded-md bg-amber-soft px-1.5 font-bold text-amber-ink">
@@ -1095,16 +1095,16 @@ export function CjThatWrap() {
             <En en="you feel {better|형용사:(몸이) 나아진} soon" />
           </span>
         </p>
-        <p className="mt-1.5 text-[14px] text-ink-2">
+        <p className="mt-1.5 text-[13.5px] text-ink-2">
           = &lsquo;네가 곧 낫는 것&rsquo;. <span className="font-bold text-amber-ink">that</span>은 절 안에서 주어도 목적어도 아닌 이음새예요.
         </p>
       </div>
-      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <div className="flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight className="rotate-90 text-coral" />
         명사 자리에 쏙
       </div>
       <div className="rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">③ hope의 목적어 자리</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">③ hope의 목적어 자리</p>
         <p className="mt-2 flex flex-wrap items-center gap-2 text-[1.08em] font-medium">
           <En en="I" />
           <span className="inline-flex items-center gap-1 rounded-lg bg-coral px-2 py-1 text-white">
@@ -1115,7 +1115,7 @@ export function CjThatWrap() {
             <En en="{that|접속사:~라는 것} you feel {better|형용사:(몸이) 나아진} soon." />
           </span>
         </p>
-        <p className="mt-1.5 text-[14px] text-ink-2">네가 빨리 낫기를 바라. 진짜 동사는 hope, feel 2개 = 접속사 that 1개 + 1</p>
+        <p className="mt-1.5 text-[13.5px] text-ink-2">네가 빨리 낫기를 바라. 진짜 동사는 hope, feel 2개 = 접속사 that 1개 + 1</p>
       </div>
     </div>
   );
@@ -1130,7 +1130,7 @@ export function CjWhJump() {
   return (
     <div className="grid gap-2.5 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">know: 응/아니로 대답할 수 있어요</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">know: 응/아니로 대답할 수 있어요</p>
         <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
           <Chip className="bg-chip">
             <En en="Do you know" />
@@ -1140,18 +1140,18 @@ export function CjWhJump() {
           </Chip>
           <En en="Minsu wants?" />
         </p>
-        <p className="mt-2 w-fit rounded-xl bg-mint-soft px-3 py-1.5 text-[14.5px] font-bold text-mint-ink">대답: &ldquo;응, 알아. 운동화래.&rdquo;</p>
-        <p className="mt-2 text-[14px] text-ink-2">Do you know가 맨 앞, 의문사는 제자리예요.</p>
+        <p className="mt-2 w-fit rounded-xl bg-mint-soft px-3 py-1.5 text-[14px] font-bold text-mint-ink">대답: &ldquo;응, 알아. 운동화래.&rdquo;</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">Do you know가 맨 앞, 의문사는 제자리예요.</p>
       </div>
       <div className="rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">think: 정보로만 대답할 수 있어요</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">think: 정보로만 대답할 수 있어요</p>
         <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.02em] text-ink-3">
           <Mark ok={false} />
           <span lang="en" className="line-through decoration-coral decoration-2">
             Do you think what Minsu wants?
           </span>
         </p>
-        <p className="mt-1 flex items-center gap-1.5 text-[14px] font-bold text-coral-ink">
+        <p className="mt-1 flex items-center gap-1.5 text-[13.5px] font-bold text-coral-ink">
           <ArrowRight size={18} className="-rotate-90" />
           의문사가 맨 앞으로 점프
         </p>
@@ -1164,9 +1164,9 @@ export function CjWhJump() {
           </Chip>
           <En en="Minsu wants?" />
         </p>
-        <p className="mt-2 w-fit rounded-xl bg-coral-soft px-3 py-1.5 text-[14.5px] font-bold text-coral-ink">대답: &ldquo;운동화일 것 같아.&rdquo;</p>
+        <p className="mt-2 w-fit rounded-xl bg-coral-soft px-3 py-1.5 text-[14px] font-bold text-coral-ink">대답: &ldquo;운동화일 것 같아.&rdquo;</p>
       </div>
-      <p lang="en" className="flex flex-wrap items-center justify-center gap-1.5 text-[14.5px] font-bold sm:col-span-2">
+      <p lang="en" className="flex flex-wrap items-center justify-center gap-1.5 text-[14px] font-bold sm:col-span-2">
         <span lang="ko">의문사를 맨 앞으로 보내는 동사:</span>
         {THINK_VERBS.map((v) => (
           <span key={v} className="rounded-md bg-chip px-2 py-0.5">
@@ -1230,7 +1230,7 @@ function IfBox({ en, slot }: { en: string; slot: string }) {
       <span className="rounded-xl border-2 border-dashed border-sky-ink/60 bg-sky-soft px-2.5 py-1 text-[1.05em] font-medium text-sky-ink">
         <En en={en} />
       </span>
-      <span className="text-[14px] font-bold text-sky-ink">{slot}</span>
+      <span className="text-[13.5px] font-bold text-sky-ink">{slot}</span>
     </span>
   );
 }
@@ -1242,8 +1242,8 @@ export function CjIfTwoFaces() {
       {IF_FACES.map((f) => (
         <div key={f.key} className={`flex flex-col rounded-2xl px-4 py-3 ${f.strong ? "border-2 border-coral" : "border border-line"}`}>
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className={`text-[15px] ${f.strong ? TONE.coral : TONE.sky}`}>{f.name}</Chip>
-            <span className="text-[15px] font-extrabold">&lsquo;{f.meaning}&rsquo;</span>
+            <Chip className={`text-[14.5px] ${f.strong ? TONE.coral : TONE.sky}`}>{f.name}</Chip>
+            <span className="text-[14.5px] font-extrabold">&lsquo;{f.meaning}&rsquo;</span>
           </p>
           <p className="mt-2 flex flex-wrap items-start gap-1.5">
             {f.clauseFirst && <IfBox en={f.clause.en} slot={f.slot} />}
@@ -1252,7 +1252,7 @@ export function CjIfTwoFaces() {
             </span>
             {!f.clauseFirst && <IfBox en={f.clause.en} slot={f.slot} />}
           </p>
-          <div className="mt-2 flex items-center gap-2 text-[14px] font-bold text-ink-2">
+          <div className="mt-2 flex items-center gap-2 text-[13.5px] font-bold text-ink-2">
             <ArrowRight size={18} className="rotate-90 text-coral" />
             if절을 빼 보면
           </div>
@@ -1260,8 +1260,8 @@ export function CjIfTwoFaces() {
             <Mark ok={f.leftOk} />
             <En en={f.left.en} />
           </p>
-          <p className="mt-1 text-[14px] text-ink-2">{f.verdict}</p>
-          <p className={`mt-auto pt-2 text-[14px] font-extrabold ${f.strong ? "text-coral-ink" : "text-sky-ink"}`}>시제: {f.tense}</p>
+          <p className="mt-1 text-[13.5px] text-ink-2">{f.verdict}</p>
+          <p className={`mt-auto pt-2 text-[13.5px] font-extrabold ${f.strong ? "text-coral-ink" : "text-sky-ink"}`}>시제: {f.tense}</p>
         </div>
       ))}
     </div>

@@ -15,8 +15,8 @@ const IN_TONE: Record<InTone, string> = {
 function InPiece({ c, m, tone }: { c: string; m: string; tone: InTone }) {
   return (
     <span className={`inline-flex flex-col rounded-xl px-3 py-1.5 leading-tight ${IN_TONE[tone]}`}>
-      <span className="text-[16px] font-extrabold">{c}</span>
-      <span className="text-[14px] font-bold opacity-90">{m}</span>
+      <span className="text-[15px] font-extrabold">{c}</span>
+      <span className="text-[13.5px] font-bold opacity-90">{m}</span>
     </span>
   );
 }
@@ -57,29 +57,29 @@ export function InTermDecoder() {
   return (
     <div className="grid gap-4">
       <div>
-        <p className="text-[14px] font-extrabold text-ink-3">대명사, 조각을 어떻게 읽느냐에 따라</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">대명사, 조각을 어떻게 읽느냐에 따라</p>
         <div className="mt-2 grid gap-2.5 sm:grid-cols-2">
           <div className="rounded-2xl border border-line px-4 py-3">
             <p className="flex items-center gap-2">
-              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-coral-soft text-[15px] font-extrabold text-coral-ink" aria-label="틀린 풀이">
+              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-coral-soft text-[14.5px] font-extrabold text-coral-ink" aria-label="틀린 풀이">
                 ✕
               </span>
               <InPiece c="대" m="크다" tone="coral" />
               <span className="text-ink-3">+</span>
               <InPiece c="명사" m="이름" tone="sky" />
             </p>
-            <p className="mt-2 text-[15px] font-bold text-coral-ink">= 큰 명사? 뜻이 엉뚱해져요.</p>
+            <p className="mt-2 text-[14.5px] font-bold text-coral-ink">= 큰 명사? 뜻이 엉뚱해져요.</p>
           </div>
           <div className="rounded-2xl border-2 border-mint-ink/40 px-4 py-3">
             <p className="flex items-center gap-2">
-              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-mint-soft text-[15px] font-extrabold text-mint-ink" aria-label="바른 풀이">
+              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-mint-soft text-[14.5px] font-extrabold text-mint-ink" aria-label="바른 풀이">
                 ✓
               </span>
               <InPiece c="대" m="대신하다" tone="mint" />
               <span className="text-ink-3">+</span>
               <InPiece c="명사" m="이름" tone="sky" />
             </p>
-            <p className="mt-2 text-[15px] font-bold text-mint-ink">
+            <p className="mt-2 text-[14.5px] font-bold text-mint-ink">
               = 명사를 대신하는 말 <span className="font-medium text-ink-2">(</span>
               <En en="I, you, he, it" className="font-medium text-ink" />
               <span className="font-medium text-ink-2">)</span>
@@ -88,11 +88,11 @@ export function InTermDecoder() {
         </div>
       </div>
       <div>
-        <p className="text-[14px] font-extrabold text-ink-3">처음 보는 용어도 조각을 맞추면 읽혀요</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">처음 보는 용어도 조각을 맞추면 읽혀요</p>
         <div role="list" className="mt-2 grid gap-2">
           {IN_DECODE.map((d) => (
             <div role="listitem" key={d.term} className="rounded-2xl border border-line px-4 py-3">
-              <p className="text-[16px] font-extrabold">{d.term}</p>
+              <p className="text-[15px] font-extrabold">{d.term}</p>
               <p className="mt-1.5 flex flex-wrap items-center gap-2">
                 {d.pieces.map((p, i) => (
                   <span key={p.c} className="inline-flex items-center gap-2">
@@ -103,7 +103,7 @@ export function InTermDecoder() {
               </p>
               <p className="mt-2 flex items-center gap-2">
                 <span className="text-ink-3">=</span>
-                <span className="rounded-xl bg-chip px-3 py-2 text-[15px] font-bold">
+                <span className="rounded-xl bg-chip px-3 py-2 text-[14.5px] font-bold">
                   {d.result}
                   {d.en && (
                     <>
@@ -150,7 +150,7 @@ function InKingCell({ c }: { c: InCell }) {
           <CrownIcon size={18} />
           <En en={c.en} />
         </span>
-        <span className="text-[14px] font-extrabold text-coral-ink">{c.add}</span>
+        <span className="text-[13.5px] font-extrabold text-coral-ink">{c.add}</span>
       </span>
     );
   if (c.mask)
@@ -160,7 +160,7 @@ function InKingCell({ c }: { c: InCell }) {
           <MaskIcon size={18} />
           <En en={c.en} />
         </span>
-        <span className="text-[14px] font-extrabold text-amber-ink">늘 그대로</span>
+        <span className="text-[13.5px] font-extrabold text-amber-ink">늘 그대로</span>
       </span>
     );
   return (
@@ -168,7 +168,7 @@ function InKingCell({ c }: { c: InCell }) {
       <span className="min-w-[4.75rem] rounded-xl border border-line px-3 py-1.5 text-center text-[1.1em] font-medium">
         <En en={c.en} />
       </span>
-      <span className="text-[14px]" aria-hidden>
+      <span className="text-[13.5px]" aria-hidden>
         &nbsp;
       </span>
     </span>
@@ -182,7 +182,7 @@ export function InKingChanges() {
       <div role="list" className="grid gap-2">
         {IN_KING_ROWS.map((r) => (
           <div role="listitem" key={r.label} className="flex flex-col gap-2 rounded-2xl border border-line px-4 py-3 sm:flex-row sm:items-center sm:gap-4">
-            <span className="w-fit shrink-0 rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold sm:w-32">{r.label}</span>
+            <span className="w-fit shrink-0 rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold sm:w-32">{r.label}</span>
             <span className="flex flex-wrap items-start gap-2">
               {r.cells.map((c, i) => (
                 <InKingCell key={i} c={c} />
@@ -191,7 +191,7 @@ export function InKingChanges() {
           </div>
         ))}
       </div>
-      <div className="mt-3 grid gap-2 text-[14px] sm:grid-cols-2">
+      <div className="mt-3 grid gap-2 text-[13.5px] sm:grid-cols-2">
         <p className="rounded-xl bg-coral-soft px-3 py-2 text-coral-ink">
           <b>진짜 동사(왕)</b>: 주어와 시제에 맞춰 옷을 갈아입어요.
         </p>

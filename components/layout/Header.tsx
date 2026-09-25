@@ -2,18 +2,19 @@ import Link from "next/link";
 import { Logo } from "@/components/brand/Mate";
 import { brand } from "@/lib/brand";
 import { ThemeToggle } from "./ThemeToggle";
-import { NavTabs } from "./NavTabs";
+import { NavMenu } from "./NavMenu";
 
+/** 메뉴 이름은 모두 짧은 명사형(2어절 이내)으로 맞춘다. */
 export const navItems = [
-  { href: "/", label: "첫 페이지" },
-  { href: "/learn/intro/reading-terms", label: "처음부터 배우기" },
+  { href: "/", label: "그래머랑 소개" },
   { href: "/learn", label: "전체 목차" },
+  { href: "/learn/intro/reading-terms", label: "기초 다지기" },
   { href: "/terms", label: "용어 사전" },
   { href: "/roadmap", label: "필수 문법" },
   { href: "/me", label: "내 공부" },
 ];
 
-/** 넓은 화면: 로고 오른쪽에 탭. 좁은 화면: 로고 아래 줄에 탭(옆으로 밀어서 보기). */
+/** 로고는 왼쪽, 오른쪽에 드롭다운 목차와 화면 밝기 단추. */
 export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75">
@@ -21,13 +22,10 @@ export function Header() {
         <Link href="/" aria-label="그래머랑 홈" className="shrink-0 rounded-lg">
           <Logo size={36} tagline={brand.tagline} />
         </Link>
-        <div className="flex min-w-0 items-center gap-2">
-          <NavTabs items={navItems} className="hidden lg:block" />
+        <div className="flex min-w-0 items-center gap-1.5 sm:gap-2">
+          <NavMenu items={navItems} />
           <ThemeToggle />
         </div>
-      </div>
-      <div className="mx-auto flex max-w-6xl px-4 pb-2.5 sm:px-6 lg:hidden">
-        <NavTabs items={navItems} className="min-w-0" />
       </div>
     </header>
   );

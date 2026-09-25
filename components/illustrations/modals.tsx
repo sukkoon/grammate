@@ -10,7 +10,7 @@ function Mark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -60,18 +60,18 @@ export function MdHelper() {
             <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">can</span>
             <span className="rounded-lg bg-coral px-2.5 py-1 text-white">swim</span>
           </span>
-          <span className="text-[14px] font-extrabold text-coral-ink">한 덩어리 진짜 동사</span>
+          <span className="text-[13.5px] font-extrabold text-coral-ink">한 덩어리 진짜 동사</span>
         </span>
         <span className="pb-9">.</span>
       </p>
       <div className="mt-4 grid gap-2 sm:grid-cols-2">
         <div className="rounded-2xl bg-sky-soft px-4 py-3 text-sky-ink">
           <p className="font-extrabold">조동사 can: 도우미</p>
-          <p className="text-[14px]">&lsquo;~할 수 있다&rsquo;는 뜻을 더해요. 주어가 he여도 모양이 그대로예요.</p>
+          <p className="text-[13.5px]">&lsquo;~할 수 있다&rsquo;는 뜻을 더해요. 주어가 he여도 모양이 그대로예요.</p>
         </div>
         <div className="rounded-2xl bg-coral-soft px-4 py-3 text-coral-ink">
           <p className="font-extrabold">동사 swim: 동사원형</p>
-          <p className="text-[14px]">-s, -ed, -ing, to를 붙이지 않은 맨 처음 모양으로 와요.</p>
+          <p className="text-[13.5px]">-s, -ed, -ing, to를 붙이지 않은 맨 처음 모양으로 와요.</p>
         </div>
       </div>
       <ul className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -82,7 +82,7 @@ export function MdHelper() {
               <span className={`block text-[1.08em] font-medium ${c.ok ? "" : "text-ink-2 line-through decoration-coral/60"}`}>
                 <En en={c.en} />
               </span>
-              <span className="block text-[14px] text-ink-2">{c.why}</span>
+              <span className="block text-[13.5px] text-ink-2">{c.why}</span>
             </span>
           </li>
         ))}
@@ -128,8 +128,8 @@ export function MdMoves() {
       {MODAL_MOVES.map((row) => (
         <li key={row.label} className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className="rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold">{row.label}</span>
-            <span className="text-[14px] text-ink-2">{row.hint}</span>
+            <span className="rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold">{row.label}</span>
+            <span className="text-[13.5px] text-ink-2">{row.hint}</span>
           </p>
           <p className="mt-2.5 flex flex-wrap items-center gap-1.5 text-[1.2em] font-medium">
             {row.chips.map((c, i) => (
@@ -139,7 +139,7 @@ export function MdMoves() {
             ))}
           </p>
           {row.answer && (
-            <p className="mt-2 text-[15px]">
+            <p className="mt-2 text-[14.5px]">
               <span className="mr-1.5 font-extrabold text-ink-2">대답</span>
               <En en={row.answer.en} />
             </p>
@@ -177,16 +177,16 @@ function RuleCard({
           <span lang="en" className="block text-[1.25em] font-extrabold leading-tight">
             {title}
           </span>
-          <span className="block text-[14.5px] font-bold">{ko}</span>
+          <span className="block text-[14px] font-bold">{ko}</span>
         </span>
       </div>
       <p className="mt-3 rounded-xl bg-card px-3 py-2 text-ink">
         <span className="block text-[1.05em] font-medium">
           <En en={en} />
         </span>
-        <span className="block text-[14px] text-ink-2">{enKo}</span>
+        <span className="block text-[13.5px] text-ink-2">{enKo}</span>
       </p>
-      <p className="mt-2 text-[14px]">{sub}</p>
+      <p className="mt-2 text-[13.5px]">{sub}</p>
     </div>
   );
 }
@@ -199,9 +199,9 @@ export function MdMustNotVsDontHaveTo() {
         <p className="text-[1.15em] font-bold">
           <En en="must = {have to}" />
         </p>
-        <p className="text-[14px] text-ink-2">긍정일 때는 둘 다 &lsquo;~해야 한다&rsquo;</p>
+        <p className="text-[13.5px] text-ink-2">긍정일 때는 둘 다 &lsquo;~해야 한다&rsquo;</p>
       </div>
-      <p className="my-3 text-center text-[14.5px] font-extrabold text-ink-2">그런데 not이 붙으면 뜻이 갈라져요</p>
+      <p className="my-3 text-center text-[14px] font-extrabold text-ink-2">그런데 not이 붙으면 뜻이 갈라져요</p>
       <div className="grid gap-3 sm:grid-cols-2">
         <RuleCard
           icon={<BanIcon />}
@@ -275,7 +275,7 @@ const LADDER: { modal: string; ko: string; level: number; label: string; en: str
 export function MdCertaintyLadder() {
   return (
     <div>
-      <p className="text-center text-[15px] font-bold">
+      <p className="text-center text-[14.5px] font-bold">
         전화벨이 울려요. 엄마일까요? <span className="font-normal text-ink-2">막대는 &lsquo;그렇다고 믿는 정도&rsquo;예요.</span>
       </p>
       <ol className="mt-3 space-y-2">
@@ -285,13 +285,13 @@ export function MdCertaintyLadder() {
               <span lang="en" className="text-[1.12em] font-extrabold">
                 {r.modal}
               </span>
-              <span className="text-[14.5px] font-bold text-ink-2">{r.ko}</span>
+              <span className="text-[14px] font-bold text-ink-2">{r.ko}</span>
             </div>
             <div className="mt-2 flex items-center gap-2.5">
               <span className="h-3 flex-1 overflow-hidden rounded-full bg-chip" aria-hidden>
                 <span className="block h-3 rounded-full" style={{ width: `${r.level}%`, background: r.tone }} />
               </span>
-              <span className="w-28 shrink-0 text-right text-[14px] text-ink-2">{r.label}</span>
+              <span className="w-28 shrink-0 text-right text-[13.5px] text-ink-2">{r.label}</span>
             </div>
             <p className="mt-1.5 text-[1.05em] font-medium">
               <En en={r.en} />
@@ -299,7 +299,7 @@ export function MdCertaintyLadder() {
           </li>
         ))}
       </ol>
-      <p className="mt-3 text-center text-[14px] text-ink-2">might는 may보다 살짝 더 자신 없을 때 써요. must be의 반대말은 can&rsquo;t be예요.</p>
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">might는 may보다 살짝 더 자신 없을 때 써요. must be의 반대말은 can&rsquo;t be예요.</p>
     </div>
   );
 }
@@ -364,8 +364,8 @@ export function MdLookBack() {
       <div className="mx-auto flex max-w-xl items-end gap-2">
         <div className="flex w-20 shrink-0 flex-col items-center text-center">
           <span className="size-5 rounded-full" style={{ background: "var(--sky-ink)" }} aria-hidden />
-          <span className="mt-1.5 text-[15px] font-extrabold">과거</span>
-          <span className="text-[14px] text-ink-2">이미 지난 일</span>
+          <span className="mt-1.5 text-[14.5px] font-extrabold">과거</span>
+          <span className="text-[13.5px] text-ink-2">이미 지난 일</span>
         </div>
         <svg viewBox="0 0 200 70" className="h-16 min-w-0 flex-1" aria-hidden>
           <path d="M0 58 H200" strokeWidth="2.5" style={{ stroke: "var(--ink-3)" }} />
@@ -374,11 +374,11 @@ export function MdLookBack() {
         </svg>
         <div className="flex w-20 shrink-0 flex-col items-center text-center">
           <PersonIcon size={30} className="text-coral" />
-          <span className="mt-1 text-[15px] font-extrabold text-coral-ink">지금</span>
-          <span className="text-[14px] text-ink-2">돌아보며 생각</span>
+          <span className="mt-1 text-[14.5px] font-extrabold text-coral-ink">지금</span>
+          <span className="text-[13.5px] text-ink-2">돌아보며 생각</span>
         </div>
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[15px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
         <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">조동사 = 지금의 생각</span>
         <span aria-hidden>+</span>
         <span className="rounded-lg bg-amber-soft px-2.5 py-1 text-amber-ink">have p.p. = 과거의 일</span>
@@ -388,7 +388,7 @@ export function MdLookBack() {
           <li key={r.form} className="rounded-2xl border border-line px-4 py-3">
             <div className="flex flex-wrap items-center gap-2">
               <span
-                className={`rounded-lg px-2 py-0.5 text-[14px] font-extrabold ${
+                className={`rounded-lg px-2 py-0.5 text-[13.5px] font-extrabold ${
                   r.kind === "guess" ? "bg-sky-soft text-sky-ink" : "bg-coral-soft text-coral-ink"
                 }`}
               >
@@ -398,13 +398,13 @@ export function MdLookBack() {
                 {r.form}
               </span>
             </div>
-            <p className="mt-1 text-[14.5px] font-bold">
+            <p className="mt-1 text-[14px] font-bold">
               {r.ko} <span className="font-normal text-ink-2">· {r.real}</span>
             </p>
             <p className="mt-1.5 text-[1.03em] font-medium">
               <En en={r.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{r.enKo}</p>
+            <p className="text-[13.5px] text-ink-2">{r.enKo}</p>
           </li>
         ))}
       </ul>
@@ -447,7 +447,7 @@ const FORMULA: { t: string; tone: string }[] = [
 export function MdShouldFormula() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[15px] font-extrabold">
+      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[14.5px] font-extrabold">
         {FORMULA.map((f, i) => (
           <span key={f.t} className="inline-flex items-center gap-1.5">
             {i > 0 && <span className="text-ink-3" aria-hidden>+</span>}
@@ -459,22 +459,22 @@ export function MdShouldFormula() {
         <p className="text-[1.08em] font-medium">
           <En en="The doctor [[suggested]] {that|접속사:~라고} he [[(should) rest]]." />
         </p>
-        <p className="text-[14px] text-ink-2">의사는 그가 쉬어야 한다고 제안했어.</p>
-        <p className="mt-2 text-[14px] text-ink-2">
+        <p className="text-[13.5px] text-ink-2">의사는 그가 쉬어야 한다고 제안했어.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">
           주어가 he이고 문장이 과거여도 <b className="text-ink">rests ✕, rested ✕</b>. should를 빼도 원형 rest 그대로예요.
         </p>
       </div>
       <ul className="mt-3 grid gap-2 sm:grid-cols-4">
         {SHOULD_VERBS.map((g) => (
           <li key={g.group} className="rounded-2xl border border-line px-3 py-2.5">
-            <p className="text-[14px] font-extrabold text-ink-2">{g.group}</p>
+            <p className="text-[13.5px] font-extrabold text-ink-2">{g.group}</p>
             <ul className="mt-1 space-y-0.5">
               {g.words.map((w) => (
-                <li key={w.en} className="text-[15px]">
+                <li key={w.en} className="text-[14.5px]">
                   <span className="font-medium">
                     <En en={w.en} />
                   </span>{" "}
-                  <span className="text-[14px] text-ink-2">{w.ko}</span>
+                  <span className="text-[13.5px] text-ink-2">{w.ko}</span>
                 </li>
               ))}
             </ul>
@@ -517,13 +517,13 @@ const ECHO_ROWS: { kind: string; pairs: { say: Line; reply: Line }[] }[] = [
 export function MdSoNeither() {
   return (
     <div>
-      <p className="text-center text-[15px] font-bold">
+      <p className="text-center text-[14.5px] font-bold">
         So(나도 그래) · Neither(나도 아니야) + <span className="text-coral-ink">동사</span> + 주어
       </p>
       <ul className="mt-3 space-y-2.5">
         {ECHO_ROWS.map((row) => (
           <li key={row.kind} className="rounded-2xl border border-line px-4 py-3">
-            <p className="text-[14px] font-extrabold text-ink-2">{row.kind}</p>
+            <p className="text-[13.5px] font-extrabold text-ink-2">{row.kind}</p>
             <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
               {row.pairs.map((p) => (
                 <p key={p.say.en} className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[1.05em] font-medium">
@@ -580,7 +580,7 @@ export function MdAdviceScale({ withHadBetter = false }: { withHadBetter?: boole
   const rows = ADVICE.filter((r) => withHadBetter || !r.full);
   return (
     <div>
-      <p className="flex items-center justify-between text-[14px] font-extrabold text-ink-2">
+      <p className="flex items-center justify-between text-[13.5px] font-extrabold text-ink-2">
         <span>세게</span>
         <span aria-hidden className="mx-2 h-px flex-1 bg-line" />
         <span>부드럽게</span>
@@ -592,18 +592,18 @@ export function MdAdviceScale({ withHadBetter = false }: { withHadBetter?: boole
               <span lang="en" className="text-[1.12em] font-extrabold">
                 {r.modal}
               </span>
-              <span className="text-[14.5px] font-bold text-ink-2">{r.ko}</span>
+              <span className="text-[14px] font-bold text-ink-2">{r.ko}</span>
             </div>
             <div className="mt-2 flex items-center gap-2.5">
               <span className="h-3 flex-1 overflow-hidden rounded-full bg-chip" aria-hidden>
                 <span className="block h-3 rounded-full" style={{ width: `${r.level}%`, background: r.tone }} />
               </span>
-              <span className="w-32 shrink-0 text-right text-[14px] text-ink-2">{r.feel}</span>
+              <span className="w-32 shrink-0 text-right text-[13.5px] text-ink-2">{r.feel}</span>
             </div>
             <p className="mt-1.5 text-[1.05em] font-medium">
               <En en={r.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{r.enKo}</p>
+            <p className="text-[13.5px] text-ink-2">{r.enKo}</p>
           </li>
         ))}
       </ol>
@@ -677,11 +677,11 @@ export function MdTwoMusts() {
               {m.icon}
               <span>
                 <span className="block font-extrabold">{m.title}</span>
-                <span className="block text-[14px] font-bold">{m.ko}</span>
+                <span className="block text-[13.5px] font-bold">{m.ko}</span>
               </span>
             </div>
             <div className="grid flex-1 content-start gap-2 px-4 py-3">
-              <ul className="grid gap-1 text-[14.5px]">
+              <ul className="grid gap-1 text-[14px]">
                 {m.clues.map((c) => (
                   <li key={c} className="flex gap-1.5">
                     <span aria-hidden className="text-ink-3">
@@ -695,20 +695,20 @@ export function MdTwoMusts() {
                 <span className="block text-[1.03em] font-medium">
                   <En en={m.en} />
                 </span>
-                <span className="block text-[14px] text-ink-2">{m.enKo}</span>
+                <span className="block text-[13.5px] text-ink-2">{m.enKo}</span>
               </p>
-              <p className="text-[14.5px]">
-                <span className="mr-1.5 rounded-md bg-chip px-1.5 py-0.5 text-[14px] font-extrabold text-ink-2">반대말</span>
+              <p className="text-[14px]">
+                <span className="mr-1.5 rounded-md bg-chip px-1.5 py-0.5 text-[13.5px] font-extrabold text-ink-2">반대말</span>
                 <span className="font-medium">
                   <En en={m.neg.en} />
                 </span>{" "}
-                <span className="text-[14px] text-ink-2">{m.neg.ko}</span>
+                <span className="text-[13.5px] text-ink-2">{m.neg.ko}</span>
               </p>
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">마지막 판단은 언제나 문맥이에요. be가 와도 규칙을 말하면 의무예요.</p>
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">마지막 판단은 언제나 문맥이에요. be가 와도 규칙을 말하면 의무예요.</p>
     </div>
   );
 }
@@ -743,7 +743,7 @@ function NotBar({ step }: { step: NotStep }) {
         <span lang="en" className="font-extrabold">
           {step.form}
         </span>
-        <span className="text-[14px] text-ink-2">{step.ko}</span>
+        <span className="text-[13.5px] text-ink-2">{step.ko}</span>
       </p>
       <span className="mt-1 block h-3 overflow-hidden rounded-full bg-chip" aria-hidden>
         <span className="block h-3 rounded-full" style={{ width: `${step.level}%`, background: step.tone }} />
@@ -761,13 +761,13 @@ export function MdNotShift() {
           <p className="font-extrabold">{s.title}</p>
           <div className="mt-2.5 grid gap-1.5">
             <NotBar step={s.from} />
-            <p className="text-center text-[14px] font-extrabold text-ink-3">↓ not</p>
+            <p className="text-center text-[13.5px] font-extrabold text-ink-3">↓ not</p>
             <NotBar step={s.to} />
           </div>
           <p className="mt-3 text-[1.03em] font-medium">
             <En en={s.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{s.enKo}</p>
+          <p className="text-[13.5px] text-ink-2">{s.enKo}</p>
         </div>
       ))}
     </div>
@@ -807,7 +807,7 @@ const PAST_WRONG: { en: string }[] = [{ en: "She must was busy." }, { en: "It mu
 function ShiftRow({ row }: { row: (typeof PAST_SHIFT)[number] }) {
   return (
     <div className="rounded-2xl border border-line px-4 py-3">
-      <p className="text-[14px] font-extrabold text-ink-2">{row.label}</p>
+      <p className="text-[13.5px] font-extrabold text-ink-2">{row.label}</p>
       <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.15em] font-medium">
         {row.chips.map((c, i) => (
           <span key={i} className={`rounded-lg px-2.5 py-1 ${SHIFT_TONE[c.kind ?? "plain"]}`}>
@@ -815,7 +815,7 @@ function ShiftRow({ row }: { row: (typeof PAST_SHIFT)[number] }) {
           </span>
         ))}
       </p>
-      <p className="mt-1.5 text-[14px] text-ink-2">{row.ko}</p>
+      <p className="mt-1.5 text-[13.5px] text-ink-2">{row.ko}</p>
     </div>
   );
 }
@@ -825,10 +825,10 @@ export function MdPastShift() {
   return (
     <div>
       <ShiftRow row={PAST_SHIFT[0]} />
-      <p className="my-2 text-center text-[14.5px] font-extrabold text-amber-ink">↓ be → have been · 시간을 한 칸 과거로</p>
+      <p className="my-2 text-center text-[14px] font-extrabold text-amber-ink">↓ be → have been · 시간을 한 칸 과거로</p>
       <ShiftRow row={PAST_SHIFT[1]} />
       <div className="mt-3 rounded-2xl bg-coral-soft px-4 py-3 text-coral-ink">
-        <p className="text-[14px] font-extrabold">과거형을 바로 붙이면 ✕</p>
+        <p className="text-[13.5px] font-extrabold">과거형을 바로 붙이면 ✕</p>
         <ul className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
           {PAST_WRONG.map((w) => (
             <li key={w.en} className="text-[1.03em] font-medium text-ink-2 line-through decoration-coral/60">
@@ -836,7 +836,7 @@ export function MdPastShift() {
             </li>
           ))}
         </ul>
-        <p className="mt-1 text-[14px]">조동사 뒤에는 원형만 와요. 그래서 원형 have를 세우고 p.p.를 붙여요.</p>
+        <p className="mt-1 text-[13.5px]">조동사 뒤에는 원형만 와요. 그래서 원형 have를 세우고 p.p.를 붙여요.</p>
       </div>
     </div>
   );
@@ -875,22 +875,22 @@ export function MdRegretFlip() {
       {REGRET_FLIPS.map((r) => (
         <li key={r.form} className="grid gap-2 rounded-2xl border border-line px-3 py-3 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,0.8fr)] sm:items-center">
           <div className="rounded-xl bg-coral-soft px-3 py-2">
-            <p lang="en" className="text-[14px] font-extrabold text-coral-ink">
+            <p lang="en" className="text-[13.5px] font-extrabold text-coral-ink">
               말: {r.form}
             </p>
             <p className="text-[1.03em] font-medium">
               <En en={r.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{r.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{r.ko}</p>
           </div>
-          <p className="text-center text-[14px] font-extrabold text-ink-3">
+          <p className="text-center text-[13.5px] font-extrabold text-ink-3">
             <span className="sm:hidden">↓ </span>반대<span className="hidden sm:inline"> ⇄</span>
           </p>
           <div className="flex items-center gap-2.5 rounded-xl bg-chip px-3 py-2">
             <Mark ok={r.did} />
             <span>
-              <span className="block text-[14px] font-extrabold text-ink-2">실제로는</span>
-              <span className="block text-[14.5px] font-bold">{r.real}</span>
+              <span className="block text-[13.5px] font-extrabold text-ink-2">실제로는</span>
+              <span className="block text-[14px] font-bold">{r.real}</span>
             </span>
           </div>
         </li>
@@ -911,19 +911,19 @@ function FormGrid({ heads, rows }: { heads: [string, string, string, string]; ro
           <span lang="en" className="block font-extrabold">
             {heads[0]}
           </span>
-          <span className="block text-[14px] font-bold">{heads[1]}</span>
+          <span className="block text-[13.5px] font-bold">{heads[1]}</span>
         </p>
         <p className="rounded-2xl bg-mint-soft px-2 py-2 text-mint-ink">
           <span lang="en" className="block font-extrabold">
             {heads[2]}
           </span>
-          <span className="block text-[14px] font-bold">{heads[3]}</span>
+          <span className="block text-[13.5px] font-bold">{heads[3]}</span>
         </p>
       </div>
       <ul className="mt-2 space-y-2">
         {rows.map((r) => (
           <li key={r.label} className="rounded-2xl border border-line px-3 py-2.5">
-            <p className="text-center text-[14px] font-extrabold text-ink-2">{r.label}</p>
+            <p className="text-center text-[13.5px] font-extrabold text-ink-2">{r.label}</p>
             <div className="mt-1 grid grid-cols-2 gap-2">
               {[r.a, r.b].map((c, i) => (
                 <p key={i} className="text-[1.02em] font-medium">
@@ -937,7 +937,7 @@ function FormGrid({ heads, rows }: { heads: [string, string, string, string]; ro
                       <En en={c.en} />
                     </span>
                   )}
-                  {c.note && <span className="block text-[14px] font-normal text-ink-2">{c.note}</span>}
+                  {c.note && <span className="block text-[13.5px] font-normal text-ink-2">{c.note}</span>}
                 </p>
               ))}
             </div>
@@ -1019,23 +1019,23 @@ export function MdUsedTo() {
       <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-center">
         <p className="rounded-2xl bg-mint-soft px-2 py-2.5 text-mint-ink">
           <span className="block font-extrabold">예전 ✓</span>
-          <span className="block text-[14px] font-bold">그랬어요</span>
+          <span className="block text-[13.5px] font-bold">그랬어요</span>
         </p>
         <ArrowRight size={20} className="text-ink-3" />
         <p className="rounded-2xl bg-coral-soft px-2 py-2.5 text-coral-ink">
           <span className="block font-extrabold">지금 ✕</span>
-          <span className="block text-[14px] font-bold">지금은 아니에요</span>
+          <span className="block text-[13.5px] font-bold">지금은 아니에요</span>
         </p>
       </div>
       <ul className="mt-3 space-y-2">
         {USED_TO_ROWS.map((r) => (
           <li key={r.kind} className="rounded-2xl border border-line px-4 py-3">
-            <p className="w-fit rounded-md bg-chip px-2 py-0.5 text-[14px] font-extrabold text-ink-2">{r.kind}</p>
+            <p className="w-fit rounded-md bg-chip px-2 py-0.5 text-[13.5px] font-extrabold text-ink-2">{r.kind}</p>
             <p className="mt-1.5 text-[1.05em] font-medium">
               <En en={r.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{r.ko}</p>
-            <div className="mt-2 grid grid-cols-2 gap-2 text-[14px] font-bold">
+            <p className="text-[13.5px] text-ink-2">{r.ko}</p>
+            <div className="mt-2 grid grid-cols-2 gap-2 text-[13.5px] font-bold">
               <span className="rounded-lg bg-mint-soft px-2 py-1 text-mint-ink">예전: {r.then}</span>
               <span className="rounded-lg bg-coral-soft px-2 py-1 text-coral-ink">{r.now}</span>
             </div>
@@ -1064,11 +1064,11 @@ export function MdStandIn() {
   return (
     <div>
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">되풀이하면 길어요</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">되풀이하면 길어요</p>
         <p className="mt-1 text-[1.05em] font-medium">
           <En en="My dad drinks coffee, and my mom drinks coffee, too." />
         </p>
-        <p className="mt-3 text-[14px] font-extrabold text-ink-3">대동사로 받으면</p>
+        <p className="mt-3 text-[13.5px] font-extrabold text-ink-3">대동사로 받으면</p>
         <p className="mt-1 text-[1.05em] font-medium leading-loose">
           <En en="My dad" />{" "}
           <span className="rounded-lg bg-sky-soft px-1.5 py-0.5 text-sky-ink">
@@ -1080,21 +1080,21 @@ export function MdStandIn() {
           </span>
           <En en=", too." />
         </p>
-        <p className="mt-2 w-fit rounded-lg bg-chip px-2.5 py-1 text-[14px] font-bold">
+        <p className="mt-2 w-fit rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-bold">
           does = drinks coffee · 주어 my mom(3인칭 단수)과 현재에 맞춰 does
         </p>
       </div>
-      <p className="mt-3 text-center text-[14.5px] font-extrabold text-ink-2">받는 말은 앞 동사의 종류를 따라가요</p>
+      <p className="mt-3 text-center text-[14px] font-extrabold text-ink-2">받는 말은 앞 동사의 종류를 따라가요</p>
       <ul className="mt-2 grid gap-2 sm:grid-cols-3">
         {STAND_IN_RULES.map((r) => (
           <li key={r.from} className="rounded-2xl border border-line px-3 py-2.5">
-            <p className="text-[14px] font-extrabold">
+            <p className="text-[13.5px] font-extrabold">
               <span className="text-ink-2">앞이 {r.from}</span> → <span className="text-coral-ink">{r.to}</span>
             </p>
             <p className="mt-1 text-[1.02em] font-medium">
               <En en={r.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{r.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{r.ko}</p>
           </li>
         ))}
       </ul>

@@ -93,7 +93,7 @@ export function Mate({
 
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`whitespace-nowrap font-extrabold tracking-[-0.035em] ${className}`}>
+    <span className={`wordmark whitespace-nowrap font-extrabold tracking-[-0.035em] ${className}`}>
       gramma<span className="text-coral">rang</span>
     </span>
   );
@@ -106,11 +106,11 @@ export function Logo({ size = 34, className = "", tagline }: { size?: number; cl
       <Mate size={size} />
       {tagline ? (
         <span className="flex flex-col">
-          <Wordmark className="text-[1.28rem] leading-none sm:text-[1.45rem]" />
+          <Wordmark className="text-[1.18rem] leading-none sm:text-[1.35rem]" />
           <span className="mt-1 whitespace-nowrap text-[12px] font-bold leading-none tracking-[-0.01em] text-ink-3 sm:text-[12.5px]">{tagline}</span>
         </span>
       ) : (
-        <Wordmark className="text-[1.28rem] leading-none sm:text-[1.45rem]" />
+        <Wordmark className="text-[1.18rem] leading-none sm:text-[1.35rem]" />
       )}
     </span>
   );

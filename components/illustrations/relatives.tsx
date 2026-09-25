@@ -68,7 +68,7 @@ function Mark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -83,7 +83,7 @@ function Chip({ children, className = "" }: { children: ReactNode; className?: s
 
 function RlLegend() {
   return (
-    <p className="flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+    <p className="flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
       <span className="rounded-md bg-amber-soft px-2 py-0.5 text-amber-ink">선행사</span>
       <span className="rounded-md bg-sky-soft px-2 py-0.5 text-sky-ink">관계사</span>
       <span className="inline-flex items-center gap-1 rounded-md bg-coral px-2 py-0.5 text-white">
@@ -165,7 +165,7 @@ export function RlJoin() {
             className={`rounded-2xl px-4 py-3 ${s.clauseFrom !== undefined ? "bg-mint-soft/60 ring-2 ring-mint-ink/40" : "border border-line"}`}
           >
             <p className="flex flex-wrap items-baseline gap-x-2">
-              <span className={`rounded-lg px-2 py-0.5 text-[14px] font-extrabold ${s.key === "start" ? "bg-chip text-ink-2" : "bg-ink text-on-ink"}`}>
+              <span className={`rounded-lg px-2 py-0.5 text-[13.5px] font-extrabold ${s.key === "start" ? "bg-chip text-ink-2" : "bg-ink text-on-ink"}`}>
                 {s.step}
               </span>
               <span className="font-extrabold">{s.title}</span>
@@ -179,7 +179,7 @@ export function RlJoin() {
                     <span key={i} className="flex flex-col items-center gap-1">
                       <RlWord bit={b} />
                       {b.kind === "ante" && (
-                        <span lang="ko" className="text-[14px] font-extrabold text-amber-ink">
+                        <span lang="ko" className="text-[13.5px] font-extrabold text-amber-ink">
                           선행사
                         </span>
                       )}
@@ -191,14 +191,14 @@ export function RlJoin() {
                         <RlWord key={i} bit={b} />
                       ))}
                     </span>
-                    <span lang="ko" className="text-[14px] font-extrabold text-sky-ink">
+                    <span lang="ko" className="text-[13.5px] font-extrabold text-sky-ink">
                       관계절: 어떤 친구?
                     </span>
                   </span>
                 </div>
               ),
             )}
-            <p className="mt-1.5 text-[14px] text-ink-2">{s.note}</p>
+            <p className="mt-1.5 text-[13.5px] text-ink-2">{s.note}</p>
           </li>
         ))}
       </ol>
@@ -249,7 +249,7 @@ export function RlCaseGrid() {
   return (
     <div>
       <div className="overflow-hidden rounded-2xl border border-line">
-        <div className="grid grid-cols-4 bg-chip text-center text-[14px] font-extrabold">
+        <div className="grid grid-cols-4 bg-chip text-center text-[13.5px] font-extrabold">
           <span className="px-1.5 py-2">선행사</span>
           <span className="px-1.5 py-2 text-sky-ink">주격</span>
           <span className="px-1.5 py-2 text-mint-ink">목적격</span>
@@ -257,9 +257,9 @@ export function RlCaseGrid() {
         </div>
         {CASE_ROWS.map((r) => (
           <div key={r.ante} className="grid grid-cols-4 border-t border-line text-center">
-            <span className="px-1.5 py-2 text-[14px] font-bold text-ink-2">{r.ante}</span>
+            <span className="px-1.5 py-2 text-[13.5px] font-bold text-ink-2">{r.ante}</span>
             {[r.subj, r.obj, r.poss].map((w, i) => (
-              <span key={i} lang="en" className={`px-1.5 py-2 text-[15px] font-extrabold ${w === "✕" ? "text-ink-3" : ""}`}>
+              <span key={i} lang="en" className={`px-1.5 py-2 text-[14.5px] font-extrabold ${w === "✕" ? "text-ink-3" : ""}`}>
                 {w}
               </span>
             ))}
@@ -270,15 +270,15 @@ export function RlCaseGrid() {
         {CASE_CARDS.map((c) => (
           <li key={c.name} className="flex flex-col rounded-2xl border border-line">
             <div className={`rounded-t-2xl px-4 py-2 ${c.tone}`}>
-              <p className="text-[16px] font-extrabold">{c.name}</p>
-              <p className="text-[14px] font-bold">{c.slot}</p>
+              <p className="text-[15px] font-extrabold">{c.name}</p>
+              <p className="text-[13.5px] font-bold">{c.slot}</p>
             </div>
             <div className="px-4 py-3">
               <p className="text-[1.03em] font-medium">
                 <En en={c.en} />
               </p>
-              <p className="text-[14px] text-ink-2">{c.ko}</p>
-              <p className="mt-1.5 text-[14px] font-bold text-ink-3">
+              <p className="text-[13.5px] text-ink-2">{c.ko}</p>
+              <p className="mt-1.5 text-[13.5px] font-bold text-ink-3">
                 속을 보면: <span lang="en">{c.gap}</span>
               </p>
             </div>
@@ -352,7 +352,7 @@ export function RlTwoKings() {
               <span className="font-extrabold">{k.title}</span>
             </p>
             <RlLine bits={k.bits} className={`mt-2 ${k.ok ? "" : "opacity-80"}`} />
-            <p className={`mt-1.5 text-[14px] font-bold ${k.ok ? "text-ink-2" : "text-coral-ink"}`}>{k.count}</p>
+            <p className={`mt-1.5 text-[13.5px] font-bold ${k.ok ? "text-ink-2" : "text-coral-ink"}`}>{k.count}</p>
           </li>
         ))}
       </ul>
@@ -402,16 +402,16 @@ export function RlWhatInside() {
           <En en="{what|관계대명사:~하는 것}" />
         </span>
       </div>
-      <p className="mt-2 text-center text-[14.5px] font-bold text-ink-2">선행사를 품은 관계대명사 = &lsquo;~하는 것&rsquo;. 그래서 앞에 명사가 오지 않아요.</p>
+      <p className="mt-2 text-center text-[14px] font-bold text-ink-2">선행사를 품은 관계대명사 = &lsquo;~하는 것&rsquo;. 그래서 앞에 명사가 오지 않아요.</p>
       <ul className="mt-4 grid gap-2.5 sm:grid-cols-3">
         {WHAT_SLOTS.map((w) => (
           <li key={w.slot} className="rounded-2xl border border-line px-4 py-3">
-            <Chip className="bg-chip text-[15px]">{w.slot} 자리</Chip>
+            <Chip className="bg-chip text-[14.5px]">{w.slot} 자리</Chip>
             <p className="mt-2 text-[1.03em] font-medium">
               <En en={w.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{w.ko}</p>
-            <p className="mt-1.5 text-[14px] font-bold text-ink-3">{w.inside}</p>
+            <p className="text-[13.5px] text-ink-2">{w.ko}</p>
+            <p className="mt-1.5 text-[13.5px] font-bold text-ink-3">{w.inside}</p>
           </li>
         ))}
       </ul>
@@ -458,7 +458,7 @@ const CHOICES: { ante: boolean; full: boolean; name: string; words: string; en: 
 
 function CondChip({ yes, label }: { yes: boolean; label: string }) {
   return (
-    <span className={`rounded-md px-2 py-0.5 text-[14px] font-extrabold ${yes ? "bg-ink text-on-ink" : "border border-ink-3 text-ink-2"}`}>
+    <span className={`rounded-md px-2 py-0.5 text-[13.5px] font-extrabold ${yes ? "bg-ink text-on-ink" : "border border-ink-3 text-ink-2"}`}>
       {label}
     </span>
   );
@@ -468,13 +468,13 @@ function CondChip({ yes, label }: { yes: boolean; label: string }) {
 export function RlWordChoice() {
   return (
     <div>
-      <div className="grid gap-2 text-[14.5px] font-bold sm:grid-cols-2">
+      <div className="grid gap-2 text-[14px] font-bold sm:grid-cols-2">
         <p className="flex items-start gap-2 rounded-xl bg-chip px-3 py-2">
-          <span className="grid size-6 shrink-0 place-items-center rounded-full bg-ink text-[14px] text-on-ink">1</span>
+          <span className="grid size-6 shrink-0 place-items-center rounded-full bg-ink text-[13.5px] text-on-ink">1</span>
           앞에 꾸밈 받는 명사(선행사)가 있나요?
         </p>
         <p className="flex items-start gap-2 rounded-xl bg-chip px-3 py-2">
-          <span className="grid size-6 shrink-0 place-items-center rounded-full bg-ink text-[14px] text-on-ink">2</span>
+          <span className="grid size-6 shrink-0 place-items-center rounded-full bg-ink text-[13.5px] text-on-ink">2</span>
           뒤 절에 주어·목적어 같은 빈자리가 있나요?
         </p>
       </div>
@@ -486,13 +486,13 @@ export function RlWordChoice() {
               <CondChip yes={!c.full} label={c.full ? "뒤가 완전" : "뒤가 불완전"} />
             </p>
             <p className="mt-2 flex flex-wrap items-baseline gap-x-2">
-              <span className="text-[16px] font-extrabold text-sky-ink">{c.name}</span>
-              <span className="text-[14px] font-bold text-ink-3">{c.words}</span>
+              <span className="text-[15px] font-extrabold text-sky-ink">{c.name}</span>
+              <span className="text-[13.5px] font-bold text-ink-3">{c.words}</span>
             </p>
             <p className="mt-1 text-[1.05em] font-medium">
               <En en={c.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{c.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{c.ko}</p>
           </li>
         ))}
       </ul>
@@ -544,16 +544,16 @@ export function RlAdverbCards() {
     <div>
       <ol className="mx-auto grid max-w-xl gap-1.5 text-[1.05em] font-medium">
         <li className="flex flex-wrap items-center gap-2 rounded-xl border border-line px-3 py-2">
-          <span className="text-[14px] font-extrabold text-ink-3">원래</span>
+          <span className="text-[13.5px] font-extrabold text-ink-3">원래</span>
           <En en="We play soccer [[in the park]]." />
-          <span className="text-[14px] font-bold text-ink-2">(= there)</span>
+          <span className="text-[13.5px] font-bold text-ink-2">(= there)</span>
         </li>
         <li className="flex flex-wrap items-center gap-2 rounded-xl border border-line px-3 py-2">
-          <span className="text-[14px] font-extrabold text-ink-3">전치사 + which</span>
+          <span className="text-[13.5px] font-extrabold text-ink-3">전치사 + which</span>
           <En en="the park [[in {which|관계대명사:~하는 (사물)}]] we play soccer" />
         </li>
         <li className="flex flex-wrap items-center gap-2 rounded-xl bg-mint-soft/60 px-3 py-2 ring-2 ring-mint-ink/40">
-          <span className="text-[14px] font-extrabold text-mint-ink">관계부사</span>
+          <span className="text-[13.5px] font-extrabold text-mint-ink">관계부사</span>
           <En en="the park [[{where|관계부사:~하는 (곳)}]] we play soccer" />
         </li>
       </ol>
@@ -564,20 +564,20 @@ export function RlAdverbCards() {
               <Chip className="bg-sky-soft text-[1.05em] text-sky-ink">
                 <span lang="en">{a.word}</span>
               </Chip>
-              <span className="text-[15px] font-extrabold">{a.kind}</span>
-              <span lang="en" className="text-[14px] font-bold text-ink-3">
+              <span className="text-[14.5px] font-extrabold">{a.kind}</span>
+              <span lang="en" className="text-[13.5px] font-bold text-ink-3">
                 = {a.prep}
               </span>
             </p>
-            <p className="mt-1.5 text-[14px] text-ink-2">
+            <p className="mt-1.5 text-[13.5px] text-ink-2">
               선행사: <span lang="en">{a.ante}</span>
             </p>
             <p className="mt-1 text-[1.05em] font-medium">
               <En en={a.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{a.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{a.ko}</p>
             {a.warn && (
-              <p lang="en" className="mt-1.5 w-fit rounded-md bg-coral-soft px-2 py-0.5 text-[14px] font-extrabold text-coral-ink">
+              <p lang="en" className="mt-1.5 w-fit rounded-md bg-coral-soft px-2 py-0.5 text-[13.5px] font-extrabold text-coral-ink">
                 {a.warn}
               </p>
             )}
@@ -594,7 +594,7 @@ function Cousins({ inside, outside }: { inside: number; outside: number }) {
   return (
     <div className="mt-2 flex flex-wrap items-end gap-3">
       <div className="rounded-xl border-2 border-mint-ink/50 bg-mint-soft/60 px-2.5 pb-1.5 pt-1">
-        <p className="text-[14px] font-extrabold text-mint-ink">부산</p>
+        <p className="text-[13.5px] font-extrabold text-mint-ink">부산</p>
         <p className="flex gap-1 text-mint-ink">
           {Array.from({ length: inside }, (_, i) => (
             <PersonIcon key={i} size={30} />
@@ -603,7 +603,7 @@ function Cousins({ inside, outside }: { inside: number; outside: number }) {
       </div>
       {outside > 0 && (
         <div className="px-1 pb-1.5">
-          <p className="text-[14px] font-bold text-ink-3">다른 곳에도?</p>
+          <p className="text-[13.5px] font-bold text-ink-3">다른 곳에도?</p>
           <p className="flex gap-1 text-ink-3 opacity-50">
             {Array.from({ length: outside }, (_, i) => (
               <PersonIcon key={i} size={30} />
@@ -622,30 +622,30 @@ export function RlCommaSplit() {
       <div className="grid gap-2.5 sm:grid-cols-2">
         <div className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-chip text-[15px]">쉼표 없음 · 한정적 용법</Chip>
+            <Chip className="bg-chip text-[14.5px]">쉼표 없음 · 한정적 용법</Chip>
           </p>
           <p className="mt-2 text-[1.05em] font-medium">
             <En en="I have two cousins [[{who|관계대명사:~하는 (사람)} live in Busan]]." />
           </p>
           <Cousins inside={2} outside={2} />
-          <p className="mt-1.5 text-[14px] text-ink-2">부산에 사는 사촌이 둘이에요. 다른 곳에 사는 사촌이 더 있을 수도 있어요.</p>
-          <p className="mt-1 text-[14px] font-bold text-ink-3">&lsquo;어떤 사촌?&rsquo; → 범위를 좁혀요</p>
+          <p className="mt-1.5 text-[13.5px] text-ink-2">부산에 사는 사촌이 둘이에요. 다른 곳에 사는 사촌이 더 있을 수도 있어요.</p>
+          <p className="mt-1 text-[13.5px] font-bold text-ink-3">&lsquo;어떤 사촌?&rsquo; → 범위를 좁혀요</p>
         </div>
         <div className="rounded-2xl border-2 border-coral px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-coral-soft text-[15px] text-coral-ink">쉼표 있음 · 계속적 용법</Chip>
+            <Chip className="bg-coral-soft text-[14.5px] text-coral-ink">쉼표 있음 · 계속적 용법</Chip>
           </p>
           <p className="mt-2 text-[1.05em] font-medium">
             <En en="I have two cousins, [[{who|관계대명사:그리고 그 사람들은} live in Busan]]." />
           </p>
           <Cousins inside={2} outside={0} />
-          <p className="mt-1.5 text-[14px] text-ink-2">사촌은 딱 둘이고, 둘 다 부산에 살아요.</p>
-          <p className="mt-1 text-[14px] font-bold text-ink-3">
+          <p className="mt-1.5 text-[13.5px] text-ink-2">사촌은 딱 둘이고, 둘 다 부산에 살아요.</p>
+          <p className="mt-1 text-[13.5px] font-bold text-ink-3">
             = <span lang="en">and they live in Busan</span> → 설명을 이어 붙여요
           </p>
         </div>
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <span>쉼표 뒤에는</span>
         <Chip className="bg-mint-soft text-mint-ink">
           <span lang="en">who · which</span>
@@ -696,7 +696,7 @@ export function RlPrepMove() {
   return (
     <div>
       <p className="flex flex-wrap items-center justify-center gap-2 text-[1.08em] font-medium">
-        <span className="text-[14px] font-extrabold text-ink-3">원래 문장</span>
+        <span className="text-[13.5px] font-extrabold text-ink-3">원래 문장</span>
         <En en="I sat [[on the chair]]." />
       </p>
       <ul className="mt-3 grid gap-2">
@@ -713,12 +713,12 @@ export function RlPrepMove() {
                   {r.bad}
                 </p>
               )}
-              <p className="mt-0.5 text-[14px] text-ink-2">{r.note}</p>
+              <p className="mt-0.5 text-[13.5px] text-ink-2">{r.note}</p>
             </div>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-center text-[14.5px] font-bold">
+      <p className="mt-3 text-center text-[14px] font-bold">
         전치사 + 관계대명사 뒤는 <span className="rounded-md bg-mint-soft px-1.5 text-mint-ink">완전한 절</span>이에요. 빈자리를 전치사와 함께 데려갔으니까요.
       </p>
     </div>
@@ -757,8 +757,8 @@ export function RlEverTable() {
       {EVER_GROUPS.map((g) => (
         <section key={g.title} className="rounded-2xl bg-chip px-3 py-3">
           <p className="flex flex-wrap items-baseline gap-x-2 px-1">
-            <span className="text-[16px] font-extrabold">{g.title}</span>
-            <span className="text-[14px] font-bold text-ink-3">{g.sub}</span>
+            <span className="text-[15px] font-extrabold">{g.title}</span>
+            <span className="text-[13.5px] font-bold text-ink-3">{g.sub}</span>
           </p>
           <ul className="mt-2 grid gap-2 sm:grid-cols-3">
             {g.items.map((it) => (
@@ -766,18 +766,18 @@ export function RlEverTable() {
                 <p lang="en" className="text-[1.12em] font-extrabold text-sky-ink">
                   {it.word}
                 </p>
-                <p className="mt-1.5 text-[14px]">
+                <p className="mt-1.5 text-[13.5px]">
                   <span className="mr-1 rounded bg-sky-soft px-1.5 py-0.5 font-extrabold text-sky-ink">{g.plainLabel}</span>
                   {it.plain}
                 </p>
-                <p lang="en" className="text-[14px] text-ink-3">
+                <p lang="en" className="text-[13.5px] text-ink-3">
                   = {it.plainEn}
                 </p>
-                <p className="mt-1.5 text-[14px]">
+                <p className="mt-1.5 text-[13.5px]">
                   <span className="mr-1 rounded bg-amber-soft px-1.5 py-0.5 font-extrabold text-amber-ink">양보</span>
                   {it.conc}
                 </p>
-                <p lang="en" className="text-[14px] text-ink-3">
+                <p lang="en" className="text-[13.5px] text-ink-3">
                   = {it.concEn}
                 </p>
               </li>
@@ -785,7 +785,7 @@ export function RlEverTable() {
           </ul>
         </section>
       ))}
-      <p className="text-center text-[14px] text-ink-2">
+      <p className="text-center text-[13.5px] text-ink-2">
         -ever절을 빼 보세요. 문장이 무너지면 명사절, 멀쩡하면 양보나 때·장소를 더하는 부사절이에요.
       </p>
     </div>
@@ -819,8 +819,8 @@ export function RlThatOnly() {
       <ul className="grid gap-2.5 sm:grid-cols-3">
         {THAT_TRIGGERS.map((t) => (
           <li key={t.title} className="flex flex-col rounded-2xl border border-line px-4 py-3">
-            <p className="text-[15px] font-extrabold">{t.title}</p>
-            <p lang="en" className="mt-1.5 flex flex-wrap gap-1.5 text-[14.5px]">
+            <p className="text-[14.5px] font-extrabold">{t.title}</p>
+            <p lang="en" className="mt-1.5 flex flex-wrap gap-1.5 text-[14px]">
               {t.words.map((w) => (
                 <span key={w} className="rounded-md bg-amber-soft px-2 py-0.5 font-bold text-amber-ink">
                   {w}
@@ -834,17 +834,17 @@ export function RlThatOnly() {
         ))}
       </ul>
       <div className="mt-2.5 rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[15px] font-extrabold">사람 + 동물·사물이 함께 선행사일 때</p>
+        <p className="text-[14.5px] font-extrabold">사람 + 동물·사물이 함께 선행사일 때</p>
         <div className="mt-2 grid gap-2 sm:grid-cols-3">
           <div className="flex items-center gap-2 rounded-xl bg-chip px-3 py-2">
             <Mark ok={false} />
-            <span className="text-[14.5px] font-bold">
+            <span className="text-[14px] font-bold">
               <span lang="en">who</span> → 소년만 받아요
             </span>
           </div>
           <div className="flex items-center gap-2 rounded-xl bg-chip px-3 py-2">
             <Mark ok={false} />
-            <span className="text-[14.5px] font-bold">
+            <span className="text-[14px] font-bold">
               <span lang="en">which</span> → 고양이만 받아요
             </span>
           </div>
@@ -854,7 +854,7 @@ export function RlThatOnly() {
               <PersonIcon size={24} />
               <CatIcon size={24} />
             </span>
-            <span className="text-[14.5px] font-extrabold">
+            <span className="text-[14px] font-extrabold">
               <span lang="en">that</span> → 둘 다
             </span>
           </div>
@@ -905,7 +905,7 @@ const ADVERB_SWAPS: { kind: string; tone: string; from: { en: string }; to: { en
 export function RlAdverbSwap() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <span className="rounded-md border-2 border-dashed border-ink-3 px-2 py-0.5">겹치는 부사</span>
         <ArrowRight size={18} className="text-coral" />
         <span className="rounded-md bg-sky-soft px-2 py-0.5 text-sky-ink">관계부사</span>
@@ -915,12 +915,12 @@ export function RlAdverbSwap() {
         {ADVERB_SWAPS.map((a) => (
           <li key={a.kind} className="rounded-2xl border border-line px-4 py-2.5">
             <p className="flex flex-wrap items-center gap-2">
-              <span className={`rounded-lg px-2.5 py-0.5 text-[14.5px] font-extrabold ${a.tone}`}>{a.kind}</span>
-              <span lang="en" className="text-[14px] font-bold text-ink-3">
+              <span className={`rounded-lg px-2.5 py-0.5 text-[14px] font-extrabold ${a.tone}`}>{a.kind}</span>
+              <span lang="en" className="text-[13.5px] font-bold text-ink-3">
                 = {a.prep}
               </span>
               {a.warn && (
-                <span lang="en" className="rounded-md bg-coral-soft px-2 py-0.5 text-[14px] font-extrabold text-coral-ink">
+                <span lang="en" className="rounded-md bg-coral-soft px-2 py-0.5 text-[13.5px] font-extrabold text-coral-ink">
                   {a.warn}
                 </span>
               )}
@@ -971,16 +971,16 @@ export function RlPutBack() {
           <p lang="en" className="text-[1.05em] font-bold">
             {p.head}
           </p>
-          <div className="mt-2 flex items-center gap-2 text-[14px] font-bold text-ink-2">
+          <div className="mt-2 flex items-center gap-2 text-[13.5px] font-bold text-ink-2">
             <ArrowRight size={18} className="rotate-90 text-coral" />
             선행사를 다시 넣어 보면
           </div>
           <p className="mt-1 text-[1.05em] font-medium">
             <En en={p.en} />
           </p>
-          <p className="mt-1 text-[14px] text-ink-2">{p.fits}</p>
+          <p className="mt-1 text-[13.5px] text-ink-2">{p.fits}</p>
           <p className="mt-auto pt-2">
-            <span className={`inline-block rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${p.ok ? "bg-sky-soft text-sky-ink" : "bg-coral-soft text-coral-ink"}`}>
+            <span className={`inline-block rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${p.ok ? "bg-sky-soft text-sky-ink" : "bg-coral-soft text-coral-ink"}`}>
               {p.answer}
             </span>
           </p>
@@ -1022,7 +1022,7 @@ export function RlGapCheck() {
           <p className="text-[1.06em] font-medium">
             <En en={r.en} />
           </p>
-          <p className="mt-2 text-[14px] font-bold text-ink-3">뒤를 뜯어 보면</p>
+          <p className="mt-2 text-[13.5px] font-bold text-ink-3">뒤를 뜯어 보면</p>
           <p className="mt-1 flex flex-wrap items-end gap-1.5">
             {r.slots.map((s) => (
               <span key={s.label} className="inline-flex flex-col items-center gap-1">
@@ -1035,11 +1035,11 @@ export function RlGapCheck() {
                     ?
                   </span>
                 )}
-                <span className="text-[14px] font-bold text-ink-3">{s.label}</span>
+                <span className="text-[13.5px] font-bold text-ink-3">{s.label}</span>
               </span>
             ))}
           </p>
-          <p className={`mt-2 text-[14.5px] font-extrabold ${r.strong ? "text-coral-ink" : "text-sky-ink"}`}>{r.verdict}</p>
+          <p className={`mt-2 text-[14px] font-extrabold ${r.strong ? "text-coral-ink" : "text-sky-ink"}`}>{r.verdict}</p>
         </div>
       ))}
     </div>
@@ -1053,7 +1053,7 @@ export function RlWhichWhole() {
   return (
     <div className="grid gap-2.5">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">명사 하나를 받을 때</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">명사 하나를 받을 때</p>
         <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
           <En en="We visited" />
           <span className="rounded-lg border-2 border-dashed border-amber-ink/60 bg-amber-soft px-2 py-0.5 text-amber-ink">
@@ -1064,10 +1064,10 @@ export function RlWhichWhole() {
           </span>
           <En en="is famous for bibimbap." />
         </p>
-        <p className="mt-1.5 text-[14px] font-bold text-amber-ink">which = Jeonju (그곳)</p>
+        <p className="mt-1.5 text-[13.5px] font-bold text-amber-ink">which = Jeonju (그곳)</p>
       </div>
       <div className="rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">앞 문장 전체를 받을 때</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">앞 문장 전체를 받을 때</p>
         <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
           <span className="rounded-lg border-2 border-dashed border-coral/70 bg-coral-soft px-2 py-0.5 text-coral-ink">
             <En en="Minho {fell asleep} in class," />
@@ -1081,7 +1081,7 @@ export function RlWhichWhole() {
           </span>
           <En en="everyone laugh." />
         </p>
-        <p className="mt-1.5 text-[14px] font-bold text-coral-ink">which = 민호가 수업 중에 잠든 일 (한 가지 일 → 단수 취급)</p>
+        <p className="mt-1.5 text-[13.5px] font-bold text-coral-ink">which = 민호가 수업 중에 잠든 일 (한 가지 일 → 단수 취급)</p>
       </div>
     </div>
   );

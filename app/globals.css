@@ -95,8 +95,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  /* 좁은 화면은 머리글 아래에 메뉴 탭 줄이 하나 더 있다 */
-  scroll-padding-top: 7.5rem;
+  scroll-padding-top: 4.5rem;
 }
 @media (min-width: 1024px) {
   html {
@@ -108,7 +107,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-en), var(--font-ko), system-ui, sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.8;
   word-break: keep-all;
   overflow-wrap: anywhere;
@@ -117,7 +116,7 @@ body {
 
 @media (min-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
@@ -140,7 +139,7 @@ body {
 
 /* 단원 본문 */
 .lesson > h2 {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 800;
   line-height: 1.4;
   margin: 3rem 0 1rem;
@@ -156,7 +155,7 @@ body {
   margin-bottom: 0.9rem;
 }
 .lesson > h3 {
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   font-weight: 800;
   margin: 2rem 0 0.6rem;
 }
@@ -316,4 +315,50 @@ html[data-level="elem"] .lv-above[data-need="middle"],
 html[data-level="elem"] .lv-above[data-need="high"],
 html[data-level="middle"] .lv-above[data-need="high"] {
   display: inline-block;
+}
+
+/* ───────── 초등·중등·고등 배지: 한 색조로, 위로 갈수록 진하게 ───────── */
+.lv-badge[data-band="elem"] {
+  background: linear-gradient(135deg, #e4f0ff 0%, #c6ddf9 100%);
+  color: #2b4f8c;
+}
+.lv-badge[data-band="middle"] {
+  background: linear-gradient(135deg, #7fa9e6 0%, #4f80cf 100%);
+  color: #ffffff;
+}
+.lv-badge[data-band="high"] {
+  background: linear-gradient(135deg, #3a63ae 0%, #1c3d7c 100%);
+  color: #ffffff;
+}
+[data-theme="dark"] .lv-badge[data-band="elem"] {
+  background: linear-gradient(135deg, #253a5e 0%, #1c2d4b 100%);
+  color: #a9c4f2;
+}
+[data-theme="dark"] .lv-badge[data-band="middle"] {
+  background: linear-gradient(135deg, #3b619f 0%, #2c4b82 100%);
+  color: #e6eefb;
+}
+[data-theme="dark"] .lv-badge[data-band="high"] {
+  background: linear-gradient(135deg, #6f97dc 0%, #4b74bf 100%);
+  color: #0e1a33;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lv-badge[data-band="elem"] {
+    background: linear-gradient(135deg, #253a5e 0%, #1c2d4b 100%);
+    color: #a9c4f2;
+  }
+  :root:not([data-theme="light"]) .lv-badge[data-band="middle"] {
+    background: linear-gradient(135deg, #3b619f 0%, #2c4b82 100%);
+    color: #e6eefb;
+  }
+  :root:not([data-theme="light"]) .lv-badge[data-band="high"] {
+    background: linear-gradient(135deg, #6f97dc 0%, #4b74bf 100%);
+    color: #0e1a33;
+  }
+}
+
+/* 글자 로고: Changa 보통 굵기는 작은 크기에서 g의 꼬리 이음새가 끊겨 보여, 획을 살짝 두껍게 그린다 */
+.wordmark {
+  -webkit-text-stroke: 0.5px currentColor;
+  paint-order: stroke fill;
 }

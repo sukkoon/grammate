@@ -40,7 +40,7 @@ export function TnTimeline() {
           현재형: 어제도 오늘도 내일도
         </text>
       </svg>
-      <div role="list" className="mt-2 grid gap-2 text-[15px] sm:grid-cols-3">
+      <div role="list" className="mt-2 grid gap-2 text-[14.5px] sm:grid-cols-3">
         <div role="listitem" className="rounded-xl bg-sky-soft px-3 py-2 text-sky-ink">
           <b>과거</b>
           <span className="block font-medium">
@@ -109,13 +109,13 @@ export function TnPerfectBridge() {
       <div role="list" className="mt-2 grid gap-2 sm:grid-cols-2">
         {uses.map((u) => (
           <div role="listitem" key={u.name} className="rounded-xl border border-line px-3 py-2.5">
-            <p className="text-[14px] font-extrabold text-coral-ink">
+            <p className="text-[13.5px] font-extrabold text-coral-ink">
               {u.name} <span className="font-normal text-ink-3">· {u.words}</span>
             </p>
-            <p className="text-[15.5px] font-medium">
+            <p className="text-[15px] font-medium">
               <En en={u.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{u.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{u.ko}</p>
           </div>
         ))}
       </div>
@@ -126,12 +126,12 @@ export function TnPerfectBridge() {
 function MiniLine({ title, children, caption }: { title: string; children: ReactNode; caption: ReactNode }) {
   return (
     <div className="rounded-2xl border border-line px-3 py-3">
-      <p className="text-[14px] font-extrabold">{title}</p>
+      <p className="text-[13.5px] font-extrabold">{title}</p>
       <svg viewBox="0 0 300 70" className="w-full" aria-hidden>
         <path d="M10 40 H290" strokeWidth="2" style={line} />
         {children}
       </svg>
-      <div className="text-[15px] font-medium">{caption}</div>
+      <div className="text-[14.5px] font-medium">{caption}</div>
     </div>
   );
 }
@@ -180,15 +180,15 @@ export function TnTimeClause() {
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl bg-mint-soft px-4 py-3 text-mint-ink">
         <p className="font-extrabold">부사절 (언제? 만약?)</p>
-        <p className="text-[14px]">미래 일이어도 현재형으로</p>
-        <p className="mt-2 text-[15.5px] font-medium text-ink">
+        <p className="text-[13.5px]">미래 일이어도 현재형으로</p>
+        <p className="mt-2 text-[15px] font-medium text-ink">
           <En en="If it [[rains]] tomorrow, we will stay home." />
         </p>
       </div>
       <div className="rounded-2xl bg-sky-soft px-4 py-3 text-sky-ink">
         <p className="font-extrabold">명사절 (~인지, 언제 ~인지)</p>
-        <p className="text-[14px]">미래 일이면 will 그대로</p>
-        <p className="mt-2 text-[15.5px] font-medium text-ink">
+        <p className="text-[13.5px]">미래 일이면 will 그대로</p>
+        <p className="mt-2 text-[15px] font-medium text-ink">
           <En en="I don't know if it [[will rain]] tomorrow." />
         </p>
       </div>
@@ -337,14 +337,14 @@ export function TnPresentUses() {
       {PRESENT_USES.map((u) => (
         <div role="listitem" key={u.name} className="rounded-2xl border border-line px-3.5 py-3">
           <p className="flex flex-wrap items-baseline gap-x-2">
-            <span className="text-[15.5px] font-extrabold text-coral-ink">{u.name}</span>
-            <span className="text-[14px] text-ink-2">{u.desc}</span>
+            <span className="text-[15px] font-extrabold text-coral-ink">{u.name}</span>
+            <span className="text-[13.5px] text-ink-2">{u.desc}</span>
           </p>
           <PresentPattern shape={u.shape} aria={u.aria} />
           <p className="text-[1.03em] font-medium">
             <En en={u.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{u.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{u.ko}</p>
         </div>
       ))}
     </div>
@@ -363,8 +363,8 @@ export function TnFutureTwo() {
   return (
     <div className="grid gap-2.5 sm:grid-cols-2">
       <Card>
-        <p className="text-[15.5px] font-extrabold text-coral-ink">will + 동사원형</p>
-        <p className="text-[14px] text-ink-2">말하는 지금, 막 정한 일 · 예측 · 의지</p>
+        <p className="text-[15px] font-extrabold text-coral-ink">will + 동사원형</p>
+        <p className="text-[13.5px] text-ink-2">말하는 지금, 막 정한 일 · 예측 · 의지</p>
         <Rail h={92} y={50} now={110} label="지금 막 정한 일이 미래로 이어져요">
           <path d="M118 50 H236" strokeWidth="4" strokeDasharray="7 6" strokeLinecap="round" style={coralStroke} />
           <Head x={240} y={50} />
@@ -379,11 +379,11 @@ export function TnFutureTwo() {
         <p className="text-[1.03em] font-medium">
           <En en={FUTURE_EX[0].en} />
         </p>
-        <p className="text-[14px] text-ink-2">{FUTURE_EX[0].ko}</p>
+        <p className="text-[13.5px] text-ink-2">{FUTURE_EX[0].ko}</p>
       </Card>
       <Card>
-        <p className="text-[15.5px] font-extrabold text-coral-ink">be going to + 동사원형</p>
-        <p className="text-[14px] text-ink-2">전부터 계획해 둔 일 · 눈앞의 증거</p>
+        <p className="text-[15px] font-extrabold text-coral-ink">be going to + 동사원형</p>
+        <p className="text-[13.5px] text-ink-2">전부터 계획해 둔 일 · 눈앞의 증거</p>
         <Rail h={92} y={50} now={150} label="미리 정해 둔 계획이 지금을 지나 미래로 이어져요">
           <circle cx="52" cy="50" r="8" style={skyFill} />
           <path d="M60 50 H240" strokeWidth="4" strokeLinecap="round" style={coralStroke} />
@@ -399,7 +399,7 @@ export function TnFutureTwo() {
         <p className="text-[1.03em] font-medium">
           <En en={FUTURE_EX[1].en} />
         </p>
-        <p className="text-[14px] text-ink-2">{FUTURE_EX[1].ko}</p>
+        <p className="text-[13.5px] text-ink-2">{FUTURE_EX[1].ko}</p>
       </Card>
     </div>
   );
@@ -424,8 +424,8 @@ export function TnPastProgressive() {
       <p className="mt-1 text-[1.05em] font-medium">
         <En en="We [[were eating]] dinner {when|접속사:~할 때} Dad [[came]] home." />
       </p>
-      <p className="text-[14px] text-ink-2">아빠가 집에 오셨을 때 우리는 저녁을 먹고 있었어.</p>
-      <p className="mt-2 grid gap-1.5 text-[14px] font-bold sm:grid-cols-2">
+      <p className="text-[13.5px] text-ink-2">아빠가 집에 오셨을 때 우리는 저녁을 먹고 있었어.</p>
+      <p className="mt-2 grid gap-1.5 text-[13.5px] font-bold sm:grid-cols-2">
         <span className="rounded-xl bg-amber-soft px-3 py-1.5 text-amber-ink">긴 구간: was/were + -ing</span>
         <span className="rounded-xl bg-sky-soft px-3 py-1.5 text-sky-ink">끼어든 한 점: 과거형 (came)</span>
       </p>
@@ -440,8 +440,8 @@ export function TnPastVsPerfect() {
   return (
     <div className="grid gap-2.5 sm:grid-cols-2">
       <Card>
-        <p className="text-[15.5px] font-extrabold text-sky-ink">과거형 lost</p>
-        <p className="text-[14px] text-ink-2">어제의 한 점. 지금은 관심 밖이에요</p>
+        <p className="text-[15px] font-extrabold text-sky-ink">과거형 lost</p>
+        <p className="text-[13.5px] text-ink-2">어제의 한 점. 지금은 관심 밖이에요</p>
         <Rail h={94} y={46} now={252} label="과거의 한 점만 있고 지금과는 이어져 있지 않아요">
           <circle cx="70" cy="46" r="8" style={skyFill} />
           <text x="252" y="24" textAnchor="middle" fontSize="22" fontWeight="800" style={{ fill: "var(--ink-3)" }}>
@@ -454,12 +454,12 @@ export function TnPastVsPerfect() {
         <p className="text-[1.03em] font-medium">
           <En en="I [[lost]] my key yesterday." />
         </p>
-        <p className="text-[14px] text-ink-2">어제 열쇠를 잃어버렸어.</p>
-        <p className="mt-1.5 rounded-lg bg-chip px-2.5 py-1 text-[14px] font-bold text-ink-2">지금은? 찾았는지 몰라요</p>
+        <p className="text-[13.5px] text-ink-2">어제 열쇠를 잃어버렸어.</p>
+        <p className="mt-1.5 rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-bold text-ink-2">지금은? 찾았는지 몰라요</p>
       </Card>
       <Card className="border-2 border-coral">
-        <p className="text-[15.5px] font-extrabold text-coral-ink">현재완료 have lost</p>
-        <p className="text-[14px] text-ink-2">과거의 일을 지금의 눈으로 봐요</p>
+        <p className="text-[15px] font-extrabold text-coral-ink">현재완료 have lost</p>
+        <p className="text-[13.5px] text-ink-2">과거의 일을 지금의 눈으로 봐요</p>
         <Rail h={94} y={46} now={252} label="과거에 잃어버린 일이 지금까지 이어져 있어요">
           <circle cx="70" cy="46" r="8" style={skyFill} />
           <path d="M76 36 Q160 0 244 30" fill="none" strokeWidth="4" strokeLinecap="round" style={coralStroke} />
@@ -471,8 +471,8 @@ export function TnPastVsPerfect() {
         <p className="text-[1.03em] font-medium">
           <En en="I [[have lost]] my key." />
         </p>
-        <p className="text-[14px] text-ink-2">열쇠를 잃어버렸어.</p>
-        <p className="mt-1.5 rounded-lg bg-coral-soft px-2.5 py-1 text-[14px] font-bold text-coral-ink">그래서 지금 열쇠가 없어요</p>
+        <p className="text-[13.5px] text-ink-2">열쇠를 잃어버렸어.</p>
+        <p className="mt-1.5 rounded-lg bg-coral-soft px-2.5 py-1 text-[13.5px] font-bold text-coral-ink">그래서 지금 열쇠가 없어요</p>
       </Card>
     </div>
   );
@@ -529,11 +529,11 @@ function PerfectCard({ s }: { s: (typeof PERFECT_SHAPES)[number] }) {
   return (
     <>
       <p className="flex flex-wrap items-baseline gap-x-2">
-        <span className="text-[15.5px] font-extrabold text-coral-ink">{s.name}의 모양</span>
-        <span className="text-[14px] text-ink-2">{s.desc}</span>
+        <span className="text-[15px] font-extrabold text-coral-ink">{s.name}의 모양</span>
+        <span className="text-[13.5px] text-ink-2">{s.desc}</span>
       </p>
       <PerfectPattern shape={s.shape} aria={s.aria} />
-      <p className="text-[14px] font-bold text-ink-3">
+      <p className="text-[13.5px] font-bold text-ink-3">
         자주 함께 쓰는 말: <span lang="en">{s.words}</span>
       </p>
     </>
@@ -586,8 +586,8 @@ export function TnForSince() {
       </Rail>
       <div className="mt-2 grid gap-2.5 sm:grid-cols-2">
         <div className="rounded-2xl bg-sky-soft px-3.5 py-3">
-          <p className="text-[15px] font-extrabold text-sky-ink">since + 시작한 때 · 언제부터?</p>
-          <p className="mt-1.5 flex flex-wrap gap-1.5 text-[15px] font-medium">
+          <p className="text-[14.5px] font-extrabold text-sky-ink">since + 시작한 때 · 언제부터?</p>
+          <p className="mt-1.5 flex flex-wrap gap-1.5 text-[14.5px] font-medium">
             {SINCE_CHIPS.map((c) => (
               <span key={c.en} className="rounded-lg bg-card px-2 py-0.5">
                 <En en={c.en} />
@@ -597,11 +597,11 @@ export function TnForSince() {
           <p className="mt-2 text-[1.02em] font-medium">
             <En en="We [[have lived]] here [[since]] 2020." />
           </p>
-          <p className="text-[14px] text-ink-2">우리는 2020년부터 여기 살고 있어.</p>
+          <p className="text-[13.5px] text-ink-2">우리는 2020년부터 여기 살고 있어.</p>
         </div>
         <div className="rounded-2xl bg-amber-soft px-3.5 py-3">
-          <p className="text-[15px] font-extrabold text-amber-ink">for + 기간 · 얼마 동안?</p>
-          <p className="mt-1.5 flex flex-wrap gap-1.5 text-[15px] font-medium">
+          <p className="text-[14.5px] font-extrabold text-amber-ink">for + 기간 · 얼마 동안?</p>
+          <p className="mt-1.5 flex flex-wrap gap-1.5 text-[14.5px] font-medium">
             {FOR_CHIPS.map((c) => (
               <span key={c.en} className="rounded-lg bg-card px-2 py-0.5">
                 <En en={c.en} />
@@ -611,7 +611,7 @@ export function TnForSince() {
           <p className="mt-2 text-[1.02em] font-medium">
             <En en="We [[have lived]] here [[for]] five years." />
           </p>
-          <p className="text-[14px] text-ink-2">우리는 5년째 여기 살고 있어.</p>
+          <p className="text-[13.5px] text-ink-2">우리는 5년째 여기 살고 있어.</p>
         </div>
       </div>
     </div>
@@ -645,20 +645,20 @@ export function TnPastPerfectOrder() {
       <p className="mt-1 text-[1.05em] font-medium">
         <En en="The class [[had started]] {when|접속사:~할 때} I [[arrived]] at school." />
       </p>
-      <p className="text-[14px] text-ink-2">내가 학교에 도착했을 때 수업은 이미 시작했었어.</p>
+      <p className="text-[13.5px] text-ink-2">내가 학교에 도착했을 때 수업은 이미 시작했었어.</p>
       <div className="mt-3 rounded-2xl bg-chip px-3.5 py-3">
-        <p className="text-[14px] font-extrabold text-ink-2">말하는 순서와 일어난 순서는 다를 수 있어요</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">말하는 순서와 일어난 순서는 다를 수 있어요</p>
         <p className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[1.03em] font-medium">
           <span className="inline-flex items-center gap-1.5">
-            <span className="grid size-6 shrink-0 place-items-center rounded-full bg-ink text-[14px] font-extrabold text-bg">②</span>
+            <span className="grid size-6 shrink-0 place-items-center rounded-full bg-ink text-[13.5px] font-extrabold text-bg">②</span>
             <En en="I [[found]] the book" />
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <span className="grid size-6 shrink-0 place-items-center rounded-full bg-sky-soft text-[14px] font-extrabold text-sky-ink">①</span>
+            <span className="grid size-6 shrink-0 place-items-center rounded-full bg-sky-soft text-[13.5px] font-extrabold text-sky-ink">①</span>
           <En en="{that|관계대명사:~한 (앞의 명사 book을 꾸며요)} I [[had lost]]." />
           </span>
         </p>
-        <p className="text-[14px] text-ink-2">나는 잃어버렸던 책을 찾았어. 문장에서는 ②가 먼저 나와도, 먼저 일어난 일은 ①이에요.</p>
+        <p className="text-[13.5px] text-ink-2">나는 잃어버렸던 책을 찾았어. 문장에서는 ②가 먼저 나와도, 먼저 일어난 일은 ①이에요.</p>
       </div>
     </div>
   );
@@ -670,11 +670,11 @@ export function TnPastPerfectOrder() {
 export function TnDeadline() {
   return (
     <div className="mx-auto max-w-xl">
-      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[15px] font-extrabold">
+      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[14.5px] font-extrabold">
         <span className="rounded-lg bg-coral px-2.5 py-1 text-white">will have + p.p.</span>
         <span className="text-ink-3">+</span>
         <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">by + 미래 시점</span>
-        <span className="text-[14px] text-ink-2">= 그때까지는 다 ~해 두었을 것이다</span>
+        <span className="text-[13.5px] text-ink-2">= 그때까지는 다 ~해 두었을 것이다</span>
       </p>
       <Rail h={114} y={60} now={40} label="지금부터 일을 해서, 미래의 기준 시점인 7시가 되기 전에 끝나 있어요">
         <path d="M48 60 H186" strokeWidth="5" strokeLinecap="round" style={coralStroke} />
@@ -695,7 +695,7 @@ export function TnDeadline() {
       <p className="mt-1 text-[1.05em] font-medium">
         <En en="Mom [[will have cooked]] dinner by seven." />
       </p>
-      <p className="text-[14px] text-ink-2">7시까지는 엄마가 저녁을 다 해 두셨을 거야.</p>
+      <p className="text-[13.5px] text-ink-2">7시까지는 엄마가 저녁을 다 해 두셨을 거야.</p>
     </div>
   );
 }
@@ -708,8 +708,8 @@ export function TnPerfectProgMerge() {
     <div className="mx-auto max-w-xl">
       <div className="flex flex-col items-center justify-center gap-1.5 text-center sm:flex-row sm:gap-2">
         <div className="rounded-xl bg-sky-soft px-3 py-2 text-sky-ink">
-          <p className="text-[14px] font-bold">현재완료 · 지금까지</p>
-          <p lang="en" className="text-[16px] font-extrabold">
+          <p className="text-[13.5px] font-bold">현재완료 · 지금까지</p>
+          <p lang="en" className="text-[15px] font-extrabold">
             have + p.p.
           </p>
         </div>
@@ -717,8 +717,8 @@ export function TnPerfectProgMerge() {
           +
         </span>
         <div className="rounded-xl bg-amber-soft px-3 py-2 text-amber-ink">
-          <p className="text-[14px] font-bold">진행형 · 한창 하는 중</p>
-          <p lang="en" className="text-[16px] font-extrabold">
+          <p className="text-[13.5px] font-bold">진행형 · 한창 하는 중</p>
+          <p lang="en" className="text-[15px] font-extrabold">
             be + -ing
           </p>
         </div>
@@ -726,13 +726,13 @@ export function TnPerfectProgMerge() {
           =
         </span>
         <div className="rounded-xl bg-coral px-3 py-2 text-white">
-          <p className="text-[14px] font-bold">현재완료진행</p>
-          <p lang="en" className="text-[16px] font-extrabold">
+          <p className="text-[13.5px] font-bold">현재완료진행</p>
+          <p lang="en" className="text-[15px] font-extrabold">
             have + been + -ing
           </p>
         </div>
       </div>
-      <p className="mt-2 text-center text-[14px] text-ink-2">
+      <p className="mt-2 text-center text-[13.5px] text-ink-2">
         진행형의 be가 have 뒤에 오면서 p.p. 모양 <b lang="en">been</b>으로 바뀌었어요.
       </p>
       <Rail h={100} y={52} now={228} label="과거에 시작해서 지금도 계속 진행되고 있어요">
@@ -749,7 +749,7 @@ export function TnPerfectProgMerge() {
       <p className="text-[1.05em] font-medium">
         <En en="It [[has been snowing]] since last night." />
       </p>
-      <p className="text-[14px] text-ink-2">어젯밤부터 계속 눈이 오고 있어. (지금도 와요)</p>
+      <p className="text-[13.5px] text-ink-2">어젯밤부터 계속 눈이 오고 있어. (지금도 와요)</p>
     </div>
   );
 }
@@ -803,18 +803,18 @@ export function TnClauseSlots() {
     <div role="list" className="grid gap-2.5">
       {CLAUSE_SLOTS.map((r) => (
         <div role="listitem" key={r.title} className="rounded-2xl border border-line px-3.5 py-3">
-          <p className={`text-[15px] font-extrabold ${r.tone === "mint" ? "text-mint-ink" : "text-sky-ink"}`}>{r.title}</p>
+          <p className={`text-[14.5px] font-extrabold ${r.tone === "mint" ? "text-mint-ink" : "text-sky-ink"}`}>{r.title}</p>
           <p className="mt-2 flex flex-wrap items-start gap-x-1.5 gap-y-2">
             {r.parts.map((p) => (
               <span key={p.en} className="inline-flex flex-col items-start gap-1">
                 <span className={`rounded-lg px-2.5 py-1 text-[1.04em] font-medium ${SLOT_TONE[p.kind]}`}>
                   <En en={p.en} />
                 </span>
-                {p.label && <span className="text-[14px] font-bold text-ink-2">{p.label}</span>}
+                {p.label && <span className="text-[13.5px] font-bold text-ink-2">{p.label}</span>}
               </span>
             ))}
           </p>
-          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[14px]">
+          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[13.5px]">
             <span className="font-extrabold text-ink-3">빼 보면</span>
             {r.rest.map((p, i) =>
               p.en === undefined ? (
@@ -822,21 +822,21 @@ export function TnClauseSlots() {
                   무엇을?
                 </span>
               ) : (
-                <span key={i} className={`rounded-lg px-2 py-0.5 text-[15px] font-medium ${SLOT_TONE[p.kind]}`}>
+                <span key={i} className={`rounded-lg px-2 py-0.5 text-[14.5px] font-medium ${SLOT_TONE[p.kind]}`}>
                   <En en={p.en} />
                 </span>
               ),
             )}
             <span
               aria-label={r.ok ? "문장이 그대로예요" : "빈자리가 생겨요"}
-              className={`grid size-6 place-items-center rounded-full text-[14px] font-extrabold ${
+              className={`grid size-6 place-items-center rounded-full text-[13.5px] font-extrabold ${
                 r.ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
               }`}
             >
               {r.ok ? "✓" : "✕"}
             </span>
           </p>
-          <p className="mt-1.5 text-[14px] text-ink-2">{r.note}</p>
+          <p className="mt-1.5 text-[13.5px] text-ink-2">{r.note}</p>
         </div>
       ))}
     </div>
@@ -859,7 +859,7 @@ const CLAUSE_VERBS: { en: string; kind?: "conj" | "verb"; tag?: string }[] = [
 export function TnClauseVerbs() {
   return (
     <div className="text-center">
-      <p className="inline-flex flex-wrap items-center justify-center gap-2 text-[15px] font-extrabold">
+      <p className="inline-flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-extrabold">
         <span className="rounded-xl bg-sky-soft px-3 py-1.5 text-sky-ink">접속사 1개</span>
         <span>+ 1 =</span>
         <span className="rounded-xl bg-coral px-3 py-1.5 text-white">진짜 동사 2개</span>
@@ -875,11 +875,11 @@ export function TnClauseVerbs() {
             >
               <En en={w.en} />
             </span>
-            <span className={`text-[14px] font-extrabold ${w.kind === "verb" ? "text-coral-ink" : w.tag ? "text-sky-ink" : "invisible"}`}>{w.tag ?? "·"}</span>
+            <span className={`text-[13.5px] font-extrabold ${w.kind === "verb" ? "text-coral-ink" : w.tag ? "text-sky-ink" : "invisible"}`}>{w.tag ?? "·"}</span>
           </span>
         ))}
       </p>
-      <p className="mt-3 text-[14px] text-ink-2">
+      <p className="mt-3 text-[13.5px] text-ink-2">
         두 절에 진짜 동사가 하나씩 있어요. 미래라는 표시(will)는 주절이 맡고, if절의 동사는 현재형으로 가볍게 써요.
       </p>
     </div>

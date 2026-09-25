@@ -40,18 +40,18 @@ export function VbBeTable() {
             <span lang="en" className={`inline-block rounded-xl px-3 py-1.5 text-[1.4em] font-extrabold leading-none ${c.tone}`}>
               {c.be}
             </span>
-            <p className="mt-2 text-[14px] font-extrabold text-ink-2">{c.who}</p>
-            <p lang="en" className="mt-1 text-[15px] font-medium">
+            <p className="mt-2 text-[13.5px] font-extrabold text-ink-2">{c.who}</p>
+            <p lang="en" className="mt-1 text-[14.5px] font-medium">
               {c.subjects}
             </p>
             <p className="mt-3 border-t border-line pt-3 text-[1.05em] font-medium">
               <En en={c.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{c.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{c.ko}</p>
           </div>
         ))}
       </div>
-      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-2xl bg-chip px-4 py-3 text-[15px]">
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
         <span className="font-extrabold text-ink-2">과거로 가면</span>
         <span className="inline-flex items-center gap-1.5">
           <span lang="en" className="font-bold">
@@ -111,8 +111,8 @@ export function VbBeMoves() {
       {BE_MOVES.map((row) => (
         <div role="listitem" key={row.label} className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className="rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold">{row.label}</span>
-            <span className="text-[14px] text-ink-2">{row.hint}</span>
+            <span className="rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold">{row.label}</span>
+            <span className="text-[13.5px] text-ink-2">{row.hint}</span>
           </p>
           <p className="mt-2.5 flex flex-wrap items-center gap-1.5 text-[1.2em] font-medium">
             {row.chips.map((c, i) => (
@@ -122,7 +122,7 @@ export function VbBeMoves() {
             ))}
           </p>
           {row.answer && (
-            <p className="mt-2 text-[15px]">
+            <p className="mt-2 text-[14.5px]">
               <span className="mr-1.5 font-extrabold text-ink-2">대답</span>
               <En en={row.answer.en} />
             </p>
@@ -171,8 +171,8 @@ export function VbSRule() {
       {S_RULES.map((r) => (
         <div key={r.end} className="rounded-2xl border border-line px-4 py-4">
           <p className="flex flex-wrap items-center justify-between gap-2">
-            <span className="text-[14px] font-extrabold text-ink-2">{r.end}</span>
-            <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${r.tone}`}>{r.how}</span>
+            <span className="text-[13.5px] font-extrabold text-ink-2">{r.end}</span>
+            <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${r.tone}`}>{r.how}</span>
           </p>
           <div role="list" className="mt-3 space-y-1.5">
             {r.pairs.map((p) => (
@@ -181,7 +181,7 @@ export function VbSRule() {
               </div>
             ))}
           </div>
-          {r.note && <p className="mt-2 text-[14px] text-ink-2">{r.note}</p>}
+          {r.note && <p className="mt-2 text-[13.5px] text-ink-2">{r.note}</p>}
         </div>
       ))}
     </div>
@@ -250,13 +250,13 @@ export function VbDoesTakesOver({ tense = "present" }: { tense?: "present" | "pa
     <div role="list" className="space-y-2.5">
       {TAKEOVER[tense].map((row) => (
         <div role="listitem" key={row.label} className="rounded-2xl border border-line px-4 py-3">
-          <span className="rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold">{row.label}</span>
+          <span className="rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold">{row.label}</span>
           <p lang="en" className="mt-2.5 flex flex-wrap items-center gap-1.5 text-[1.2em] font-medium">
             {row.pieces.map((p, i) => (
               <PieceChip key={i} p={p} />
             ))}
           </p>
-          <p className="mt-2 text-[14px] text-ink-2">{row.note}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{row.note}</p>
         </div>
       ))}
     </div>
@@ -315,7 +315,7 @@ export function VbEndingSound({ ending }: { ending: "s" | "ed" }) {
       {ENDING_SOUNDS[ending].map((g) => (
         <div key={g.sound} className="rounded-2xl border border-line px-4 py-4">
           <span className={`inline-block rounded-lg px-2.5 py-1 text-[1.2em] font-extrabold ${g.tone}`}>{g.sound}</span>
-          <p className="mt-2 text-[14px] text-ink-2">{g.when}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{g.when}</p>
           <div role="list" className="mt-2.5 flex flex-wrap gap-x-3 gap-y-1.5 text-[1.1em] font-medium">
             {g.list.map((w) => (
               <div role="listitem" key={w.en}>
@@ -343,35 +343,35 @@ const TIME_POINTS: { en: string; ko: string }[] = [
 export function VbTimeline() {
   return (
     <div>
-      <p className="mb-3 flex items-center gap-2 text-[14px] font-extrabold text-ink-2">
+      <p className="mb-3 flex items-center gap-2 text-[13.5px] font-extrabold text-ink-2">
         <ClockIcon size={20} />
         옛날 → 지금
       </p>
       <div role="list" className="grid gap-2 sm:grid-cols-6 sm:gap-1.5">
         {TIME_POINTS.map((p) => (
           <div role="listitem" key={p.en} className="border-l-4 border-sky-ink/40 py-1 pl-3 sm:border-l-0 sm:border-t-4 sm:pl-0 sm:pt-2 sm:text-center">
-            <span className="block text-[15px] font-bold">
+            <span className="block text-[14.5px] font-bold">
               <En en={p.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{p.ko}</span>
+            <span className="block text-[13.5px] text-ink-2">{p.ko}</span>
           </div>
         ))}
         <div role="listitem" className="border-l-4 border-coral py-1 pl-3 sm:border-l-0 sm:border-t-4 sm:pl-0 sm:pt-2 sm:text-center">
-          <span className="block text-[15px] font-extrabold text-coral-ink">
+          <span className="block text-[14.5px] font-extrabold text-coral-ink">
             <En en="now" />
           </span>
-          <span className="block text-[14px] text-ink-2">지금</span>
+          <span className="block text-[13.5px] text-ink-2">지금</span>
         </div>
       </div>
       <div className="mt-4 grid gap-2 sm:grid-cols-2">
         <div className="rounded-2xl bg-sky-soft px-4 py-3">
-          <p className="text-[14px] font-extrabold text-sky-ink">지나간 일 → 과거형</p>
+          <p className="text-[13.5px] font-extrabold text-sky-ink">지나간 일 → 과거형</p>
           <p className="mt-1 text-[1.05em] font-medium">
             <En en="I [[played]] soccer yesterday." />
           </p>
         </div>
         <div className="rounded-2xl bg-coral-soft px-4 py-3">
-          <p className="text-[14px] font-extrabold text-coral-ink">요즘 늘 하는 일 → 현재형</p>
+          <p className="text-[13.5px] font-extrabold text-coral-ink">요즘 늘 하는 일 → 현재형</p>
           <p className="mt-1 text-[1.05em] font-medium">
             <En en="I [[play]] soccer every day." />
           </p>
@@ -395,14 +395,14 @@ const IRREGULAR_TYPES: { type: string; desc: string; rows: { en: string }[] }[] 
 ];
 
 function LetterChip({ l }: { l: string }) {
-  return <span className={`grid size-8 place-items-center rounded-lg text-[15px] font-extrabold ${LETTER_TONE[l]}`}>{l}</span>;
+  return <span className={`grid size-8 place-items-center rounded-lg text-[14.5px] font-extrabold ${LETTER_TONE[l]}`}>{l}</span>;
 }
 
 /** 불규칙 동사의 네 가지 모양: 원형 – 과거형 – 과거분사 */
 export function VbIrregularTypes() {
   return (
     <div>
-      <p className="mb-3 text-center text-[14px] font-extrabold text-ink-2">원형 – 과거형 – 과거분사</p>
+      <p className="mb-3 text-center text-[13.5px] font-extrabold text-ink-2">원형 – 과거형 – 과거분사</p>
       <div className="grid gap-3 sm:grid-cols-2">
         {IRREGULAR_TYPES.map((g) => (
           <div key={g.type} className="rounded-2xl border border-line px-4 py-4">
@@ -412,7 +412,7 @@ export function VbIrregularTypes() {
                   <LetterChip key={i} l={l} />
                 ))}
               </span>
-              <span className="text-[14px] font-extrabold text-ink-2">{g.desc}</span>
+              <span className="text-[13.5px] font-extrabold text-ink-2">{g.desc}</span>
             </div>
             <div role="list" className="mt-3 space-y-1.5">
               {g.rows.map((r) => (
@@ -460,8 +460,8 @@ export function VbBeFamily() {
         <span className="rounded-2xl bg-coral px-5 py-2 text-[1.6em] font-extrabold leading-none text-white">
           <En en="be" />
         </span>
-        <span className="mt-1.5 text-[14px] font-extrabold text-coral-ink">원래 모양 · 사전에 실린 이름</span>
-        <span className="mt-2 flex items-center gap-1.5 text-[14px] font-bold text-ink-2">
+        <span className="mt-1.5 text-[13.5px] font-extrabold text-coral-ink">원래 모양 · 사전에 실린 이름</span>
+        <span className="mt-2 flex items-center gap-1.5 text-[13.5px] font-bold text-ink-2">
           <HatIcon size={22} className="text-amber-ink" />
           주어와 때에 맞춰 옷을 갈아입어요
         </span>
@@ -470,21 +470,21 @@ export function VbBeFamily() {
       <div className="mt-2 grid gap-2.5 sm:grid-cols-2">
         {BE_FAMILY.map((g) => (
           <div key={g.when} className="rounded-2xl border border-line px-4 py-3">
-            <p className="text-[14px] font-extrabold text-ink-2">{g.when}</p>
+            <p className="text-[13.5px] font-extrabold text-ink-2">{g.when}</p>
             <div role="list" className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
               {g.forms.map((f) => (
                 <div role="listitem" key={f.en} className="flex flex-col items-center gap-1">
                   <span className={`rounded-xl px-3 py-1.5 text-[1.25em] font-extrabold leading-none ${g.tone}`}>
                     <En en={f.en} />
                   </span>
-                  <span className="text-[14px] text-ink-2">{f.who}</span>
+                  <span className="text-[13.5px] text-ink-2">{f.who}</span>
                 </div>
               ))}
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         다섯 모양을 한 식구로 묶어 부르는 이름이 <b>be동사</b>예요.
       </p>
     </div>
@@ -508,11 +508,11 @@ function MeaningRows({ rows }: { rows: { en: string; ko: string; tag: string }[]
     <div role="list" className="mt-3 grid gap-2">
       {rows.map((r) => (
         <div role="listitem" key={r.en}>
-          <p className="text-[14px] font-bold text-ink-3">{r.tag}</p>
+          <p className="text-[13.5px] font-bold text-ink-3">{r.tag}</p>
           <p className="text-[1.05em] font-medium">
             <En en={r.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{r.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{r.ko}</p>
         </div>
       ))}
     </div>
@@ -524,7 +524,7 @@ export function VbBeMeanings() {
   return (
     <div className="grid gap-2.5 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="rounded-lg bg-sky-soft px-2.5 py-1 text-[15px] font-extrabold text-sky-ink">be + 명사·형용사 → ~이다</p>
+        <p className="rounded-lg bg-sky-soft px-2.5 py-1 text-[14.5px] font-extrabold text-sky-ink">be + 명사·형용사 → ~이다</p>
         <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[1.1em] font-medium">
           <span className="rounded-lg border border-line px-2.5 py-1">
             <En en="Minsu" />
@@ -536,11 +536,11 @@ export function VbBeMeanings() {
             <En en="my cousin" />
           </span>
         </p>
-        <p className="mt-1 text-center text-[14px] text-ink-2">주어와 뒤의 설명을 등호처럼 이어요</p>
+        <p className="mt-1 text-center text-[13.5px] text-ink-2">주어와 뒤의 설명을 등호처럼 이어요</p>
         <MeaningRows rows={BE_IS_ROWS} />
       </div>
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="rounded-lg bg-mint-soft px-2.5 py-1 text-[15px] font-extrabold text-mint-ink">be + 장소 → ~에 있다</p>
+        <p className="rounded-lg bg-mint-soft px-2.5 py-1 text-[14.5px] font-extrabold text-mint-ink">be + 장소 → ~에 있다</p>
         <p className="mt-3 flex items-end justify-center gap-2">
           <CatIcon size={40} className="text-ink" />
           <span className="pb-1 text-[1.1em] font-medium">
@@ -548,7 +548,7 @@ export function VbBeMeanings() {
           </span>
           <BoxIcon size={44} className="text-amber-ink" />
         </p>
-        <p className="mt-1 text-center text-[14px] text-ink-2">주어가 어디에 있는지 알려 줘요</p>
+        <p className="mt-1 text-center text-[13.5px] text-ink-2">주어가 어디에 있는지 알려 줘요</p>
         <MeaningRows rows={BE_AT_ROWS} />
       </div>
     </div>
@@ -587,13 +587,13 @@ export function VbPersonGrid() {
       <div className="grid grid-cols-[auto_repeat(3,minmax(0,1fr))] gap-1.5 text-center">
         <span aria-hidden />
         {PERSON_COLS.map((c) => (
-          <span key={c} className="rounded-lg bg-chip px-1 py-1.5 text-[14px] font-extrabold text-ink-2">
+          <span key={c} className="rounded-lg bg-chip px-1 py-1.5 text-[13.5px] font-extrabold text-ink-2">
             {c}
           </span>
         ))}
         {PERSON_ROWS.map((r) => (
           <div key={r.label} className="contents">
-            <span className="grid place-items-center rounded-lg bg-chip px-2 text-[14px] font-extrabold text-ink-2">
+            <span className="grid place-items-center rounded-lg bg-chip px-2 text-[13.5px] font-extrabold text-ink-2">
               <span>
                 {r.label}
                 <span className="block font-bold text-ink-3">{r.sub}</span>
@@ -604,7 +604,7 @@ export function VbPersonGrid() {
                 key={i}
                 className={`flex flex-col items-center justify-center gap-1 rounded-xl px-1.5 py-2 ${c.hot ? "border-2 border-coral bg-coral-soft" : "border border-line"}`}
               >
-                <span className="text-[14.5px] leading-snug text-ink-2">
+                <span className="text-[14px] leading-snug text-ink-2">
                   <En en={c.who.en} />
                 </span>
                 <span className={`rounded-md px-2 py-0.5 text-[1.05em] font-bold ${c.hot ? "bg-coral text-white" : "bg-chip"}`}>
@@ -615,7 +615,7 @@ export function VbPersonGrid() {
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         여섯 칸 가운데 <b className="text-coral-ink">3인칭 단수</b> 한 칸에만 -s가 붙어요. 나머지는 모두 원형 그대로예요.
       </p>
     </div>
@@ -641,7 +641,7 @@ const DO_QA: { q: { en: string; ko: string }; a: { en: string; ko: string }; map
 export function VbDoAnswer() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[15px] font-extrabold">
+      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[14.5px] font-extrabold">
         <span lang="en" className="rounded-lg bg-coral px-2.5 py-1 text-white">
           Do / Does
         </span>
@@ -655,24 +655,24 @@ export function VbDoAnswer() {
           <div role="listitem" key={x.q.en} className="rounded-2xl border border-line px-3.5 py-3">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
               <div className="rounded-xl bg-chip px-3 py-2 sm:flex-1">
-                <p className="text-[14px] font-extrabold text-ink-3">질문</p>
+                <p className="text-[13.5px] font-extrabold text-ink-3">질문</p>
                 <p className="text-[1.05em] font-medium">
                   <En en={x.q.en} />
                 </p>
-                <p className="text-[14px] text-ink-2">{x.q.ko}</p>
+                <p className="text-[13.5px] text-ink-2">{x.q.ko}</p>
               </div>
               <ArrowRight className="mx-auto rotate-90 text-coral sm:mx-0 sm:rotate-0" />
               <div className="rounded-xl border-2 border-coral px-3 py-2 sm:flex-1">
-                <p className="text-[14px] font-extrabold text-coral-ink">대답</p>
+                <p className="text-[13.5px] font-extrabold text-coral-ink">대답</p>
                 <p className="text-[1.05em] font-medium">
                   <En en={x.a.en} />
                 </p>
-                <p className="text-[14px] text-ink-2">{x.a.ko}</p>
+                <p className="text-[13.5px] text-ink-2">{x.a.ko}</p>
               </div>
             </div>
             <p className="mt-2 flex flex-wrap gap-1.5">
               {x.map.map((m) => (
-                <span key={m} lang="en" className="rounded-md bg-amber-soft px-2 py-0.5 text-[14px] font-bold text-amber-ink">
+                <span key={m} lang="en" className="rounded-md bg-amber-soft px-2 py-0.5 text-[13.5px] font-bold text-amber-ink">
                   {m}
                 </span>
               ))}
@@ -680,7 +680,7 @@ export function VbDoAnswer() {
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         대답의 주어는 대명사로 바꾸고, Do로 물었으면 do로 받아요. <span lang="en">Yes, I am.</span>처럼 be동사로 받으면 틀려요.
       </p>
     </div>

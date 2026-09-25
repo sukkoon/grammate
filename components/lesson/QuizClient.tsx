@@ -39,7 +39,7 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
     <section aria-label="확인 문제" className="my-8">
       <div className="mb-3 flex items-center gap-2">
         <Mate mood="thinking" size={30} className="text-ink" />
-        <h2 className="text-[1.25rem] font-extrabold">스스로 확인해 봐요</h2>
+        <h2 className="text-[1.15rem] font-extrabold">스스로 확인해 봐요</h2>
       </div>
       <p className="mb-4 text-[0.93em] text-ink-2">
         점수를 매기는 시험이 아니에요. 내가 정말 이해했는지 스스로 확인하는 시간이에요.
@@ -101,7 +101,7 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
         <button
           type="button"
           onClick={() => setShowAll(true)}
-          className="mt-3 w-full rounded-2xl border border-dashed border-line px-4 py-3 text-[14.5px] text-ink-2 hover:border-ink-3"
+          className="mt-3 w-full rounded-2xl border border-dashed border-line px-4 py-3 text-[14px] text-ink-2 hover:border-ink-3"
         >
           더 높은 수준의 문제가 {hidden}개 더 있어요 · <b className="text-coral-ink">도전해 보기</b>
         </button>
@@ -125,7 +125,7 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
               <button
                 type="button"
                 onClick={() => setPicked({})}
-                className="mt-3 rounded-full border border-on-ink/40 px-4 py-2 text-[14px] font-bold hover:bg-on-ink/10"
+                className="mt-3 rounded-full border border-on-ink/40 px-4 py-2 text-[13.5px] font-bold hover:bg-on-ink/10"
               >
                 처음부터 다시 풀기
               </button>

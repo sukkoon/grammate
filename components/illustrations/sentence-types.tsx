@@ -25,14 +25,14 @@ function WordChip({ en, tone, label }: { en: string; tone: Tone; label?: string 
       <span className={`rounded-xl px-2.5 py-1.5 text-[1.12em] font-medium leading-none ${TONE[tone]}`}>
         <En en={en} />
       </span>
-      {label && <span className="text-[14px] font-bold leading-tight text-ink-2">{label}</span>}
+      {label && <span className="text-[13.5px] font-bold leading-tight text-ink-2">{label}</span>}
     </span>
   );
 }
 
 function FormulaChip({ t, tone, en = false }: { t: string; tone: Tone; en?: boolean }) {
   return (
-    <span lang={en ? "en" : undefined} className={`rounded-lg px-2 py-1 text-[15px] font-extrabold leading-none ${TONE[tone]}`}>
+    <span lang={en ? "en" : undefined} className={`rounded-lg px-2 py-1 text-[14.5px] font-extrabold leading-none ${TONE[tone]}`}>
       {t}
     </span>
   );
@@ -42,7 +42,7 @@ function SignBadge({ sign }: { sign: "+" | "−" }) {
   return (
     <span
       aria-label={sign === "+" ? "긍정" : "부정"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[16px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
         sign === "+" ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -74,12 +74,12 @@ export function StWhWords() {
             <span className="block text-[1.35em] font-bold leading-tight">
               <En en={w.en} />
             </span>
-            <span className="mt-1 block text-[15px] font-extrabold">{w.ko}</span>
-            <span className="block text-[14px] opacity-80">{w.asks}</span>
+            <span className="mt-1 block text-[14.5px] font-extrabold">{w.ko}</span>
+            <span className="block text-[13.5px] opacity-80">{w.asks}</span>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         how만 빼고 모두 <b lang="en">wh</b>로 시작해요. 그래서 영어로는 wh-word라고도 불러요.
       </p>
     </div>
@@ -126,13 +126,13 @@ export function StWordOrder() {
     <div role="list" className="space-y-2.5">
       {ORDER_STEPS.map((s) => (
         <div role="listitem" key={s.step} className="rounded-2xl border border-line px-4 py-3">
-          <p className="text-[14px] font-extrabold text-ink-3">{s.step}</p>
+          <p className="text-[13.5px] font-extrabold text-ink-3">{s.step}</p>
           <p className="mt-2 flex flex-wrap items-start gap-x-2 gap-y-2">
             {s.words.map((w) => (
               <WordChip key={w.en} en={w.en} tone={w.tone} label={w.label} />
             ))}
           </p>
-          <p className="mt-2 text-[14px] text-ink-2">{s.note}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{s.note}</p>
         </div>
       ))}
     </div>
@@ -161,18 +161,18 @@ export function StCommandCards() {
         </span>
         <En en="[[Sit]] down." />
       </p>
-      <p className="mt-1.5 text-center text-[14px] text-ink-2">
+      <p className="mt-1.5 text-center text-[13.5px] text-ink-2">
         명령은 늘 눈앞의 너(you)에게 하는 말이라서 you를 빼고 동사원형부터 말해요.
       </p>
       <div role="list" className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
         {COMMANDS.map((c) => (
           <div role="listitem" key={c.title} className="rounded-2xl border border-line px-3 py-3">
-            <span className={`inline-block rounded-lg px-2 py-0.5 text-[14px] font-extrabold ${TONE[c.tone]}`}>{c.title}</span>
+            <span className={`inline-block rounded-lg px-2 py-0.5 text-[13.5px] font-extrabold ${TONE[c.tone]}`}>{c.title}</span>
             <span className="mt-2 block text-[1.08em] font-medium leading-snug">
               <En en={c.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{c.ko}</span>
-            <span className="mt-1.5 block text-[14px] font-bold text-ink-3">{c.how}</span>
+            <span className="block text-[13.5px] text-ink-2">{c.ko}</span>
+            <span className="mt-1.5 block text-[13.5px] font-bold text-ink-3">{c.how}</span>
           </div>
         ))}
       </div>
@@ -230,19 +230,19 @@ export function StWhatHow() {
             <p className="mt-3 text-[1.1em] font-medium">
               <En en={x.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{x.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{x.ko}</p>
           </div>
         ))}
       </div>
       <div className="mt-3 rounded-2xl bg-chip px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-2">a/an을 빼는 때: 여럿이거나 셀 수 없을 때</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">a/an을 빼는 때: 여럿이거나 셀 수 없을 때</p>
         <div role="list" className="mt-1.5 space-y-1">
           {NO_A.map((n) => (
             <div role="listitem" key={n.why} className="flex flex-wrap items-baseline gap-x-2">
               <span className="text-[1.08em] font-medium">
                 <En en={n.en} />
               </span>
-              <span className="text-[14px] text-ink-2">
+              <span className="text-[13.5px] text-ink-2">
                 {n.ko} ({n.why})
               </span>
             </div>
@@ -289,8 +289,8 @@ export function StThereLook() {
               <WordChip key={i} en={p.en} tone={p.tone} label={p.label} />
             ))}
           </p>
-          <p className="mt-2 text-[14px] text-ink-2">{r.ko}</p>
-          <p className="mt-1 flex items-center gap-1.5 text-[14px] font-bold text-coral-ink">
+          <p className="mt-2 text-[13.5px] text-ink-2">{r.ko}</p>
+          <p className="mt-1 flex items-center gap-1.5 text-[13.5px] font-bold text-coral-ink">
             <ArrowRight size={16} className="rotate-180" />
             동사는 뒤를 봐요: {r.why}
           </p>
@@ -334,7 +334,7 @@ export function StTagFlip() {
                 <En en={r.parts[0].en} />
               </span>
             </span>
-            <span className="flex items-center gap-1 pl-1 text-[14px] font-bold text-ink-3 sm:pl-0">
+            <span className="flex items-center gap-1 pl-1 text-[13.5px] font-bold text-ink-3 sm:pl-0">
               <ArrowRight size={18} className="rotate-90 sm:rotate-0" />
               뒤집기
             </span>
@@ -345,8 +345,8 @@ export function StTagFlip() {
               </span>
             </span>
           </div>
-          <p className="mt-2 text-[14px] text-ink-2">{r.ko}</p>
-          <p className="text-[14px] font-bold text-ink-3">{r.steps}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{r.ko}</p>
+          <p className="text-[13.5px] font-bold text-ink-3">{r.steps}</p>
         </div>
       ))}
     </div>
@@ -364,23 +364,23 @@ function AnswerBoard({ q, cols, note }: { q: { en: string; ko: string }; cols: A
       <p className="text-center text-[1.2em] font-medium">
         <En en={q.en} />
       </p>
-      <p className="text-center text-[14px] text-ink-2">{q.ko}</p>
+      <p className="text-center text-[13.5px] text-ink-2">{q.ko}</p>
       <div className="mt-3 grid grid-cols-2 gap-2">
         {cols.map((c) => (
           <div key={c.fact} className="rounded-2xl border border-line px-3 py-3">
-            <p className="text-[14px] font-extrabold text-ink-3">{c.fact}</p>
-            <p className="mt-2 text-[14px] font-bold text-sky-ink">영어</p>
+            <p className="text-[13.5px] font-extrabold text-ink-3">{c.fact}</p>
+            <p className="mt-2 text-[13.5px] font-bold text-sky-ink">영어</p>
             <p className="text-[1.1em] font-medium">
               <En en={c.en} />
             </p>
-            <p className="mt-2 text-[14px] font-bold text-coral-ink">우리말</p>
-            <p className="text-[15px]">
+            <p className="mt-2 text-[13.5px] font-bold text-coral-ink">우리말</p>
+            <p className="text-[14.5px]">
               <b className="rounded bg-coral-soft px-1 text-coral-ink">{c.koWord}</b> {c.ko}
             </p>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">{note}</p>
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">{note}</p>
     </div>
   );
 }
@@ -447,36 +447,36 @@ export function StAnswerKinds() {
         {ANSWER_KINDS.map((k) => (
           <div key={k.title} className="flex flex-col rounded-2xl border border-line">
             <div className={`rounded-t-2xl px-4 py-2.5 ${k.head}`}>
-              <p className="text-[16px] font-extrabold">{k.title}</p>
-              <p className="text-[14px] font-bold">{k.sub}</p>
+              <p className="text-[15px] font-extrabold">{k.title}</p>
+              <p className="text-[13.5px] font-bold">{k.sub}</p>
             </div>
             <div className="grid gap-1.5 px-4 py-3">
               <p className="text-[1.05em] font-medium">
-                <span className="mr-1.5 text-[14px] font-extrabold text-ink-3">묻기</span>
+                <span className="mr-1.5 text-[13.5px] font-extrabold text-ink-3">묻기</span>
                 <En en={k.q.en} />
               </p>
               <p className="text-[1.05em] font-medium">
-                <span className="mr-1.5 text-[14px] font-extrabold text-ink-3">대답</span>
+                <span className="mr-1.5 text-[13.5px] font-extrabold text-ink-3">대답</span>
                 <En en={k.a.en} />
               </p>
-              <p className="w-fit rounded-lg bg-chip px-2.5 py-0.5 text-[14px] font-bold text-ink-2">{k.badge}</p>
+              <p className="w-fit rounded-lg bg-chip px-2.5 py-0.5 text-[13.5px] font-bold text-ink-2">{k.badge}</p>
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-4 text-[14px] font-extrabold text-ink-2">의문사를 보면 대답에 담을 정보가 보여요</p>
+      <p className="mt-4 text-[13.5px] font-extrabold text-ink-2">의문사를 보면 대답에 담을 정보가 보여요</p>
       <div role="list" className="mt-2 grid grid-cols-1 gap-2 min-[420px]:grid-cols-2 sm:grid-cols-3">
         {WH_ANSWERS.map((w) => (
           <div role="listitem" key={w.wh.en} className="rounded-xl border border-line px-3 py-2">
             <p className="flex items-center gap-2">
-              <span className="rounded-lg bg-coral px-2 py-0.5 text-[15px] font-bold text-white">
+              <span className="rounded-lg bg-coral px-2 py-0.5 text-[14.5px] font-bold text-white">
                 <En en={w.wh.en} />
               </span>
-              <span className="text-[14px] font-extrabold text-ink-2">{w.info}</span>
+              <span className="text-[13.5px] font-extrabold text-ink-2">{w.info}</span>
             </p>
             <p className="mt-1 flex items-center gap-1.5">
               <ArrowRight size={16} className="shrink-0 text-ink-3" />
-              <span className="text-[15px] font-medium">
+              <span className="text-[14.5px] font-medium">
                 <En en={w.a.en} />
               </span>
             </p>
@@ -533,7 +533,7 @@ export function StWhoSubject() {
                   <WordChip key={i} en={w.en} tone={w.tone} label={w.label} />
                 ))}
               </p>
-              <span className="flex items-center gap-1 text-[14px] font-bold text-ink-3 sm:pt-1.5">
+              <span className="flex items-center gap-1 text-[13.5px] font-bold text-ink-3 sm:pt-1.5">
                 <ArrowRight size={18} className="rotate-90 sm:rotate-0" />
                 주어만 바꾸기
               </span>
@@ -543,11 +543,11 @@ export function StWhoSubject() {
                 ))}
               </p>
             </div>
-            <p className="mt-2 text-[14px] text-ink-2">{r.ko}</p>
+            <p className="mt-2 text-[13.5px] text-ink-2">{r.ko}</p>
           </div>
         ))}
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px]">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px]">
         <span className="font-bold">주어 자리에 의문사를 넣었을 뿐이라 순서가 그대로예요.</span>
         <span className="rounded-lg bg-coral-soft px-2 py-0.5 font-bold text-coral-ink">
           <span lang="en">Who did make this?</span> ✕
@@ -571,34 +571,34 @@ export function StLetsWho() {
     <div>
       <div className="grid gap-2.5 sm:grid-cols-2">
         <div className="rounded-2xl border border-line px-4 py-3">
-          <p className="w-fit rounded-lg bg-amber-soft px-2.5 py-1 text-[15px] font-extrabold text-amber-ink">명령문: 너 해</p>
+          <p className="w-fit rounded-lg bg-amber-soft px-2.5 py-1 text-[14.5px] font-extrabold text-amber-ink">명령문: 너 해</p>
           <p className="mt-3 flex items-center justify-center gap-2" aria-label="말하는 내가 너에게 시켜요">
             <PersonIcon size={34} className="text-ink-3" />
             <ArrowRight className="text-ink-3" />
             <PersonIcon size={40} className="text-coral" />
           </p>
-          <p className="mt-1 text-center text-[14px] font-bold text-ink-2">하는 사람: 듣는 너</p>
+          <p className="mt-1 text-center text-[13.5px] font-bold text-ink-2">하는 사람: 듣는 너</p>
           <p className="mt-2 text-[1.05em] font-medium">
             <En en={LETS_EX[0].en} />
           </p>
-          <p className="text-[14px] text-ink-2">{LETS_EX[0].ko}</p>
+          <p className="text-[13.5px] text-ink-2">{LETS_EX[0].ko}</p>
         </div>
         <div className="rounded-2xl border-2 border-coral px-4 py-3">
-          <p className="w-fit rounded-lg bg-coral-soft px-2.5 py-1 text-[15px] font-extrabold text-coral-ink">제안문: 우리 같이 하자</p>
+          <p className="w-fit rounded-lg bg-coral-soft px-2.5 py-1 text-[14.5px] font-extrabold text-coral-ink">제안문: 우리 같이 하자</p>
           <p className="mt-3 flex justify-center" aria-label="나와 너가 함께 해요">
             <span className="flex items-center gap-0.5 rounded-full bg-coral-soft px-3 py-0.5">
               <PersonIcon size={40} className="text-coral" />
               <PersonIcon size={40} className="text-coral" />
             </span>
           </p>
-          <p className="mt-1 text-center text-[14px] font-bold text-ink-2">하는 사람: 나 + 너 = 우리</p>
+          <p className="mt-1 text-center text-[13.5px] font-bold text-ink-2">하는 사람: 나 + 너 = 우리</p>
           <p className="mt-2 text-[1.05em] font-medium">
             <En en={LETS_EX[1].en} />
           </p>
-          <p className="text-[14px] text-ink-2">{LETS_EX[1].ko}</p>
+          <p className="text-[13.5px] text-ink-2">{LETS_EX[1].ko}</p>
         </div>
       </div>
-      <div className="mt-3 grid gap-2 rounded-2xl bg-chip px-4 py-3 text-[14.5px] sm:grid-cols-2">
+      <div className="mt-3 grid gap-2 rounded-2xl bg-chip px-4 py-3 text-[14px] sm:grid-cols-2">
         <p className="flex flex-wrap items-center gap-1.5">
           <span lang="en" className="rounded-lg bg-card px-2 py-0.5 font-extrabold">
             Let&apos;s
@@ -653,7 +653,7 @@ export function StAndOrFork() {
       <p className="mx-auto w-fit rounded-xl bg-ink px-3.5 py-2 text-[1.1em] font-medium text-bg">
         <En en={FORK_BASE.en} />
       </p>
-      <p className="mt-1 text-center text-[14px] text-ink-2">{FORK_BASE.ko}</p>
+      <p className="mt-1 text-center text-[13.5px] text-ink-2">{FORK_BASE.ko}</p>
       <svg viewBox="0 0 320 40" className="mx-auto hidden w-full max-w-md sm:block" aria-hidden>
         <path d="M160 2 Q160 22 80 36" fill="none" strokeWidth="3" strokeLinecap="round" style={{ stroke: "var(--mint-ink)" }} />
         <path d="M160 2 Q160 22 240 36" fill="none" strokeWidth="3" strokeLinecap="round" style={{ stroke: "var(--coral)" }} />
@@ -664,17 +664,17 @@ export function StAndOrFork() {
             <p className="flex flex-wrap items-center gap-2">
               <span
                 lang="en"
-                className={`rounded-lg px-2.5 py-0.5 text-[16px] font-extrabold ${w.good ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"}`}
+                className={`rounded-lg px-2.5 py-0.5 text-[15px] font-extrabold ${w.good ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"}`}
               >
                 {w.word}
               </span>
-              <span className="text-[14.5px] font-extrabold">{w.mean}</span>
+              <span className="text-[14px] font-extrabold">{w.mean}</span>
             </p>
             <p className="mt-2 text-[1.05em] font-medium">
               <En en={w.res.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{w.res.ko}</p>
-            <p className="mt-2 rounded-lg bg-chip px-2.5 py-1 text-[14.5px] font-medium">
+            <p className="text-[13.5px] text-ink-2">{w.res.ko}</p>
+            <p className="mt-2 rounded-lg bg-chip px-2.5 py-1 text-[14px] font-medium">
               <En en={w.same.en} />
             </p>
           </div>
@@ -754,30 +754,30 @@ export function StExclaimSteps() {
       <div className="grid gap-2.5 sm:grid-cols-2">
         {EXCLAIM_TRACKS.map((t) => (
           <div key={t.title} className="rounded-2xl border border-line px-3.5 py-3">
-            <p className="text-[15.5px] font-extrabold">{t.title}</p>
+            <p className="text-[15px] font-extrabold">{t.title}</p>
             <div role="list" className="mt-2 grid gap-2.5">
               {t.steps.map((s, i) => (
                 <div role="listitem" key={s.label} className="flex gap-2.5">
-                  <span aria-hidden className="grid size-7 shrink-0 place-items-center rounded-full bg-ink text-[14px] font-extrabold text-bg">
+                  <span aria-hidden className="grid size-7 shrink-0 place-items-center rounded-full bg-ink text-[13.5px] font-extrabold text-bg">
                     {i + 1}
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-[14px] font-bold text-ink-2">{s.label}</span>
+                    <span className="block text-[13.5px] font-bold text-ink-2">{s.label}</span>
                     <span className="mt-1 flex flex-wrap items-center gap-1">
                       {s.chips.map((c, j) => (
                         <ExclaimChip key={j} c={c} keyTone={t.key} />
                       ))}
                     </span>
-                    {s.note && <span className="mt-1 block text-[14px] text-ink-3">{s.note}</span>}
+                    {s.note && <span className="mt-1 block text-[13.5px] text-ink-3">{s.note}</span>}
                   </span>
                 </div>
               ))}
             </div>
-            <p className="mt-2 border-t border-line pt-2 text-[14px] font-bold text-ink-2">{t.ko}</p>
+            <p className="mt-2 border-t border-line pt-2 text-[13.5px] font-bold text-ink-2">{t.ko}</p>
           </div>
         ))}
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px]">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px]">
         <span className="rounded-md border-2 border-dashed border-ink-3 px-1.5 text-ink-3 line-through decoration-coral decoration-2">지움</span>
         <span className="rounded-md bg-coral-soft px-1.5 font-bold text-coral-ink">맨 앞 덩어리</span>
         <span className="rounded-md bg-amber-soft px-1.5 font-bold text-amber-ink">맨 뒤로 간 주어 + 동사</span>
@@ -817,7 +817,7 @@ const THERE_BINS: { head: { en: string }; who: string; tone: Tone; items: { en: 
 export function StThereSort() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[15px] font-extrabold">
+      <p className="flex flex-wrap items-center justify-center gap-1.5 text-[14.5px] font-extrabold">
         <span lang="en" className="rounded-lg bg-chip px-2.5 py-1">
           There
         </span>
@@ -827,7 +827,7 @@ export function StThereSort() {
         <ArrowRight size={18} className="text-coral" />
         <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">뒤의 명사</span>
       </p>
-      <p className="mt-1 text-center text-[14px] text-ink-2">be동사는 뒤에 오는 명사를 보고 골라요</p>
+      <p className="mt-1 text-center text-[13.5px] text-ink-2">be동사는 뒤에 오는 명사를 보고 골라요</p>
       <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
         {THERE_BINS.map((b) => (
           <div key={b.who} className="rounded-2xl border border-line px-4 py-3">
@@ -835,7 +835,7 @@ export function StThereSort() {
               <span className={`rounded-lg px-2.5 py-1 text-[1.1em] font-bold ${TONE[b.tone]}`}>
                 <En en={b.head.en} />
               </span>
-              <span className="text-[14px] font-extrabold text-ink-2">{b.who}</span>
+              <span className="text-[13.5px] font-extrabold text-ink-2">{b.who}</span>
             </p>
             <div role="list" className="mt-2.5 flex flex-wrap gap-1.5">
               {b.items.map((it) => (
@@ -843,14 +843,14 @@ export function StThereSort() {
                   <span className="text-[1.02em] font-medium">
                     <En en={it.en} />
                   </span>
-                  <span className="text-[14px] text-ink-3">{it.why}</span>
+                  <span className="text-[13.5px] text-ink-3">{it.why}</span>
                 </div>
               ))}
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         some, a lot of가 붙어도 명사만 보세요. water는 셀 수 없어서 is, students는 여럿이라 are예요.
       </p>
     </div>
@@ -899,17 +899,17 @@ export function StHowManyThere() {
       <div role="list" className="space-y-2.5">
         {HOW_MANY_STEPS.map((s) => (
           <div role="listitem" key={s.step} className="rounded-2xl border border-line px-4 py-3">
-            <p className="text-[14px] font-extrabold text-ink-3">{s.step}</p>
+            <p className="text-[13.5px] font-extrabold text-ink-3">{s.step}</p>
             <p className="mt-2 flex flex-wrap items-start gap-x-2 gap-y-2">
               {s.words.map((w, i) => (
                 <WordChip key={i} en={w.en} tone={w.tone} label={w.label} />
               ))}
             </p>
-            <p className="mt-2 text-[14px] text-ink-2">{s.note}</p>
+            <p className="mt-2 text-[13.5px] text-ink-2">{s.note}</p>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">
         How many 뒤에는 늘 복수 명사가 오니까 be동사도 늘 <b lang="en">are</b>(과거는 <b lang="en">were</b>)예요.
       </p>
     </div>

@@ -55,8 +55,8 @@ export function FeatureCards({ items }: { items: Feature[] }) {
               }`}
             >
               <Mate mood={f.mood} size={36} className="text-ink" />
-              <h2 className="mt-3 text-[15.5px] font-extrabold leading-snug sm:text-[1.08rem]">{f.title}</h2>
-              <p className="mt-1.5 flex-1 text-[13.5px] leading-relaxed text-ink-2 sm:text-[15px]">{f.body}</p>
+              <h2 className="mt-3 text-[15px] font-extrabold leading-snug sm:text-[1.02rem]">{f.title}</h2>
+              <p className="mt-1.5 flex-1 text-[13.5px] leading-relaxed text-ink-2 sm:text-[14.5px]">{f.body}</p>
               <button
                 type="button"
                 aria-expanded={on}
@@ -94,7 +94,7 @@ export function WordDemo() {
   return (
     <div>
       <p className="text-[12.5px] font-extrabold text-coral-ink">단어 뜻풀이</p>
-      <p lang="en" className="mt-2 text-[1.25rem] font-medium">
+      <p lang="en" className="mt-2 text-[1.15rem] font-medium">
         {WORDS.map((x, i) => (
           <Fragment key={x.w}>
             {i > 0 && " "}
@@ -118,7 +118,7 @@ export function WordDemo() {
         {cur ? (
           <>
             <p className="flex items-center gap-2">
-              <span lang="en" className="text-[1.05rem]">
+              <span lang="en" className="text-[1rem]">
                 {cur.w}
               </span>
               <span className="rounded-full bg-card px-2 py-0.5 text-[12px] font-bold text-ink-2">{cur.pos}</span>
@@ -126,7 +126,7 @@ export function WordDemo() {
             <p className="mt-0.5 font-bold">{cur.m}</p>
           </>
         ) : (
-          <p className="text-[14px] text-ink-2">밑줄 친 단어에 마우스를 올리거나 눌러 보세요.</p>
+          <p className="text-[13.5px] text-ink-2">밑줄 친 단어에 마우스를 올리거나 눌러 보세요.</p>
         )}
       </div>
       <p className="mt-3 text-[13px] leading-relaxed text-ink-3">
@@ -141,7 +141,7 @@ export function AskDemo() {
   return (
     <div className="space-y-2.5">
       <p className="text-[12.5px] font-extrabold text-coral-ink">말로 묻고 답 듣기</p>
-      <p className="ml-auto flex w-fit max-w-[90%] items-center gap-1.5 rounded-2xl rounded-br-md bg-ink px-3.5 py-2 text-[14.5px] text-on-ink">
+      <p className="ml-auto flex w-fit max-w-[90%] items-center gap-1.5 rounded-2xl rounded-br-md bg-ink px-3.5 py-2 text-[14px] text-on-ink">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden>
           <rect x="9" y="3" width="6" height="11" rx="3" />
           <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
@@ -150,7 +150,7 @@ export function AskDemo() {
       </p>
       <div className="flex gap-2.5 rounded-2xl bg-chip px-3.5 py-3">
         <Mate mood="happy" size={28} className="mt-0.5 shrink-0 text-ink" />
-        <div className="min-w-0 text-[14.5px] leading-relaxed">
+        <div className="min-w-0 text-[14px] leading-relaxed">
           <p>
             뒤에 오는 단어의 <b>첫 소리</b>가 모음 소리면 an, 아니면 a예요. 철자가 아니라 <b>소리</b>가 기준이에요.
           </p>
@@ -173,7 +173,7 @@ export function RecordDemo() {
   return (
     <div>
       <p className="text-[12.5px] font-extrabold text-coral-ink">내 공부</p>
-      <ul className="mt-2 space-y-1.5 text-[14.5px]">
+      <ul className="mt-2 space-y-1.5 text-[14px]">
         {rows.map(([k, v]) => (
           <li key={k} className="flex items-center justify-between rounded-xl bg-chip px-3.5 py-2">
             <span className="font-bold">{k}</span>

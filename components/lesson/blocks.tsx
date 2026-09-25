@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { plain } from "@/lib/lexicon";
 import { Mate, type Mood } from "@/components/brand/Mate";
 import type { Level } from "@/content/curriculum";
-import { bandOf, type Band } from "@/lib/level";
+import { BANDS, bandLabel, bandOf, type Band } from "@/lib/level";
 import { Lv } from "@/components/level/Lv";
 import { En } from "./En";
 import { Speak } from "./Speak";
@@ -41,7 +41,7 @@ export function Mistake({ wrong, right, why }: { wrong: string; right: string; w
   return (
     <div className="my-5 overflow-hidden rounded-2xl border border-line bg-card">
       <div className="flex items-start gap-3 px-4 py-3 sm:px-5">
-        <span aria-label="틀린 문장" className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-coral-soft text-[15px] font-extrabold text-coral-ink">
+        <span aria-label="틀린 문장" className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-coral-soft text-[14.5px] font-extrabold text-coral-ink">
           ✕
         </span>
         <p className="text-[1.08em] text-ink-2 line-through decoration-coral/60 decoration-2">
@@ -49,7 +49,7 @@ export function Mistake({ wrong, right, why }: { wrong: string; right: string; w
         </p>
       </div>
       <div className="flex items-start gap-3 border-t border-line px-4 py-3 sm:px-5">
-        <span aria-label="맞는 문장" className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-mint-soft text-[15px] font-extrabold text-mint-ink">
+        <span aria-label="맞는 문장" className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-mint-soft text-[14.5px] font-extrabold text-mint-ink">
           ✓
         </span>
         <div className="min-w-0 flex-1">
@@ -77,7 +77,7 @@ export function ExamPoint({
   return (
     <Lv min={level} topic={title}>
     <aside className="my-6 rounded-2xl bg-amber-soft px-4 py-4 sm:px-5">
-      <p className="flex items-center gap-2 text-[14px] font-extrabold text-amber-ink">
+      <p className="flex items-center gap-2 text-[13.5px] font-extrabold text-amber-ink">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M9 11l3 3L22 4" />
           <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
@@ -125,7 +125,7 @@ export function DeepDive({ level = "고1", title, children }: { level?: Level; t
 export function Summary({ title = "한눈에 정리", children }: { title?: string; children: ReactNode }) {
   return (
     <section className="my-8">
-      <p className="mb-2 flex items-center gap-2 text-[15px] font-extrabold">
+      <p className="mb-2 flex items-center gap-2 text-[14.5px] font-extrabold">
         <Mate mood="happy" size={26} className="text-ink" />
         {title}
       </p>
@@ -139,7 +139,7 @@ export function Figure({ caption, children }: { caption?: ReactNode; children: R
   return (
     <figure className="my-7 overflow-hidden rounded-2xl border border-line bg-card">
       <div className="px-3 py-5 sm:px-6">{children}</div>
-      {caption && <figcaption className="border-t border-line px-4 py-2.5 text-[14px] text-ink-2 sm:px-5">{caption}</figcaption>}
+      {caption && <figcaption className="border-t border-line px-4 py-2.5 text-[13.5px] text-ink-2 sm:px-5">{caption}</figcaption>}
     </figure>
   );
 }
@@ -164,13 +164,21 @@ export function E({ en }: { en: string }) {
 }
 
 export function LevelBadges({ levels }: { levels: Level[] }) {
+  const bands = BANDS.filter((b) => levels.some((l) => bandOf(l) === b));
   return (
     <span className="inline-flex flex-wrap gap-1">
-      {levels.map((l) => (
-        <span key={l} className="rounded-full bg-mint-soft px-2 py-0.5 text-[12px] font-extrabold text-mint-ink">
-          {l}
-        </span>
+      {bands.map((b) => (
+        <LevelBadge key={b} band={b} />
       ))}
+    </span>
+  );
+}
+
+/** 초등·중등·고등 표시: 모서리가 둥근 네모, 고등으로 갈수록 진한 색 (색은 globals.css의 .lv-badge) */
+export function LevelBadge({ band, className = "" }: { band: Band; className?: string }) {
+  return (
+    <span data-band={band} className={`lv-badge inline-block rounded-md px-2 py-0.5 text-[12px] font-extrabold leading-[1.5] `}>
+      {bandLabel[band]}
     </span>
   );
 }

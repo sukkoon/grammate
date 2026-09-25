@@ -43,15 +43,15 @@ export function PcPhraseJobs() {
       {cards.map((c) => (
         <div key={c.name} className="rounded-2xl border border-line px-4 py-4">
           <p className="flex flex-wrap items-center gap-2">
-            <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${PC_JOB[c.job].tone}`}>{c.name}</span>
-            <span className="text-[14px] font-bold text-ink-3">{PC_JOB[c.job].like}</span>
+            <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${PC_JOB[c.job].tone}`}>{c.name}</span>
+            <span className="text-[13.5px] font-bold text-ink-3">{PC_JOB[c.job].like}</span>
           </p>
-          <p className="mt-2 text-[14px] text-ink-2">{c.does}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{c.does}</p>
           <p className="mt-2.5 text-[1.08em] font-medium">
             <En en={c.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{c.ko}</p>
-          <p className="mt-2 w-fit rounded-lg bg-chip px-2 py-1 text-[14px] font-bold text-ink">{c.ask}</p>
+          <p className="text-[13.5px] text-ink-2">{c.ko}</p>
+          <p className="mt-2 w-fit rounded-lg bg-chip px-2 py-1 text-[13.5px] font-bold text-ink">{c.ask}</p>
         </div>
       ))}
     </div>
@@ -67,7 +67,7 @@ function PcClauseBox({ parts, tag, dashed = false }: { parts: PcPart[]; tag: str
         dashed ? "border-2 border-dashed border-sky-ink" : "border-2 border-ink-3"
       }`}
     >
-      <span className="text-[14px] font-extrabold text-ink-3">{tag}</span>
+      <span className="text-[13.5px] font-extrabold text-ink-3">{tag}</span>
       <span lang="en" className="flex flex-wrap items-center gap-1.5 text-[1.08em] font-medium">
         {parts.map((p) =>
           p.verb ? (
@@ -87,7 +87,7 @@ function PcClauseBox({ parts, tag, dashed = false }: { parts: PcPart[]; tag: str
 
 function PcLink({ word }: { word: string }) {
   return (
-    <span className="self-center rounded-full bg-sky-soft px-3 py-1 text-[15px] font-extrabold text-sky-ink">
+    <span className="self-center rounded-full bg-sky-soft px-3 py-1 text-[14.5px] font-extrabold text-sky-ink">
       <En en={word} />
     </span>
   );
@@ -98,16 +98,16 @@ export function PcClauseTrain() {
   return (
     <div className="space-y-3">
       <div className="rounded-2xl bg-chip px-3 py-3.5">
-        <p className="text-[15px] font-extrabold">등위접속사: 나란히 잇기</p>
+        <p className="text-[14.5px] font-extrabold">등위접속사: 나란히 잇기</p>
         <div className="mt-2.5 flex flex-wrap items-stretch gap-2">
           <PcClauseBox tag="절 1" parts={[{ en: "I" }, { en: "like", verb: true }, { en: "cats," }]} />
           <PcLink word="but" />
           <PcClauseBox tag="절 2" parts={[{ en: "my sister" }, { en: "likes", verb: true }, { en: "dogs." }]} />
         </div>
-        <p className="mt-2.5 text-[14px] text-ink-2">두 절을 떼어 놓아도 둘 다 혼자 문장이 돼요.</p>
+        <p className="mt-2.5 text-[13.5px] text-ink-2">두 절을 떼어 놓아도 둘 다 혼자 문장이 돼요.</p>
       </div>
       <div className="rounded-2xl bg-chip px-3 py-3.5">
-        <p className="text-[15px] font-extrabold">종속접속사: 딸려 붙이기</p>
+        <p className="text-[14.5px] font-extrabold">종속접속사: 딸려 붙이기</p>
         <div className="mt-2.5 flex flex-wrap items-stretch gap-2">
           <PcClauseBox tag="주절 · 혼자 설 수 있어요" parts={[{ en: "I" }, { en: "was", verb: true }, { en: "late" }]} />
           <PcClauseBox
@@ -116,9 +116,9 @@ export function PcClauseTrain() {
             parts={[{ en: "because" }, { en: "I" }, { en: "missed", verb: true }, { en: "the bus." }]}
           />
         </div>
-        <p className="mt-2.5 text-[14px] text-ink-2">because가 붙은 절은 주절에 기대야 뜻이 끝나요.</p>
+        <p className="mt-2.5 text-[13.5px] text-ink-2">because가 붙은 절은 주절에 기대야 뜻이 끝나요.</p>
       </div>
-      <p className="text-center text-[14px] text-ink-2">
+      <p className="text-center text-[13.5px] text-ink-2">
         <span className="rounded-md bg-coral px-1.5 font-bold text-white">진짜 동사</span> 2개 = 접속사 1개 + 1
       </p>
     </div>
@@ -155,14 +155,14 @@ export function PcClauseJobs() {
       {rows.map((r) => (
         <li key={r.name} className="rounded-2xl border border-line px-3 py-3">
           <p className="flex flex-wrap items-center gap-2">
-            <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${PC_JOB[r.job].tone}`}>{r.name}</span>
-            <span className="text-[14px] font-bold text-ink-3">{PC_JOB[r.job].like} 일해요</span>
+            <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${PC_JOB[r.job].tone}`}>{r.name}</span>
+            <span className="text-[13.5px] font-bold text-ink-3">{PC_JOB[r.job].like} 일해요</span>
           </p>
           <p className="mt-2 text-[1.08em] font-medium">
             <En en={r.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{r.ko}</p>
-          <p className="mt-1.5 flex items-center gap-1.5 text-[14px] font-bold text-ink">
+          <p className="text-[13.5px] text-ink-2">{r.ko}</p>
+          <p className="mt-1.5 flex items-center gap-1.5 text-[13.5px] font-bold text-ink">
             <ArrowRight size={16} className="shrink-0 text-ink-3" />
             {r.does}
           </p>
@@ -175,7 +175,7 @@ export function PcClauseJobs() {
 function PcStep({ n, q }: { n: number; q: string }) {
   return (
     <p className="flex items-start gap-2 font-extrabold">
-      <span className="grid size-7 shrink-0 place-items-center rounded-full bg-ink text-[14px] text-on-ink">{n}</span>
+      <span className="grid size-7 shrink-0 place-items-center rounded-full bg-ink text-[13.5px] text-on-ink">{n}</span>
       <span className="pt-0.5">{q}</span>
     </p>
   );
@@ -184,8 +184,8 @@ function PcStep({ n, q }: { n: number; q: string }) {
 function PcAnswer({ job, name, when }: { job: PcJob; name: string; when: string }) {
   return (
     <div className="rounded-xl border border-line px-3 py-2.5">
-      <p className="text-[14px] text-ink-2">{when}</p>
-      <p className={`mt-1 w-fit rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${PC_JOB[job].tone}`}>{name}</p>
+      <p className="text-[13.5px] text-ink-2">{when}</p>
+      <p className={`mt-1 w-fit rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${PC_JOB[job].tone}`}>{name}</p>
     </div>
   );
 }
@@ -198,7 +198,7 @@ export function PcClauseCheck() {
         <PcStep n={1} q="절을 빼 보세요. 문장이 무너지나요?" />
         <div className="mt-2.5 grid gap-2 sm:grid-cols-2">
           <PcAnswer job="noun" name="명사절" when="무너져요: 주어·목적어·보어가 사라졌어요" />
-          <div className="rounded-xl border border-dashed border-ink-3 px-3 py-2.5 text-[14px] text-ink-2">
+          <div className="rounded-xl border border-dashed border-ink-3 px-3 py-2.5 text-[13.5px] text-ink-2">
             멀쩡해요: 꾸미는 절이에요 → 2번으로
           </div>
         </div>
@@ -233,7 +233,7 @@ function PcCar({ tag, parts, cargo = false }: { tag: string; parts: PcPart[]; ca
           cargo ? "border-2 border-dashed border-ink-3 bg-card" : "border-2 border-coral bg-coral-soft"
         }`}
       >
-        <span className={`text-[14px] font-extrabold ${cargo ? "text-ink-3" : "text-coral-ink"}`}>{tag}</span>
+        <span className={`text-[13.5px] font-extrabold ${cargo ? "text-ink-3" : "text-coral-ink"}`}>{tag}</span>
         <span lang="en" className="flex flex-wrap items-center gap-1.5 text-[1.05em] font-medium">
           {parts.map((p) =>
             p.verb ? (
@@ -258,7 +258,7 @@ function PcHitch({ word }: { word?: string }) {
   return word ? (
     <span className="flex flex-col items-center self-center sm:flex-row sm:pb-2">
       <span className="h-2 w-0.5 bg-ink-3 sm:h-0.5 sm:w-2" aria-hidden />
-      <span className="rounded-full bg-sky-soft px-2.5 py-0.5 text-[15px] font-extrabold text-sky-ink">
+      <span className="rounded-full bg-sky-soft px-2.5 py-0.5 text-[14.5px] font-extrabold text-sky-ink">
         <En en={word} />
       </span>
       <span className="h-2 w-0.5 bg-ink-3 sm:h-0.5 sm:w-2" aria-hidden />
@@ -285,8 +285,8 @@ export function PcTrain() {
         <PcHitch />
         <PcCar tag="구 · 짐칸" parts={[{ en: "in the morning." }]} cargo />
       </div>
-      <p className="mt-2 text-center text-[14px] text-ink-2">나는 아침에 버스를 놓쳐서 늦었어.</p>
-      <ul className="mt-3 flex flex-wrap justify-center gap-2 text-[14px] font-bold">
+      <p className="mt-2 text-center text-[13.5px] text-ink-2">나는 아침에 버스를 놓쳐서 늦었어.</p>
+      <ul className="mt-3 flex flex-wrap justify-center gap-2 text-[13.5px] font-bold">
         {PC_TRAIN_COUNT.map((c) => (
           <li key={c.label} className={`rounded-lg px-2.5 py-1 ${c.tone}`}>
             {c.label}
@@ -321,7 +321,7 @@ const PC_ANTECEDENT_ROWS: { noun: { en: string }; clause: { en: string }; ask: s
 export function PcAntecedent() {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-2 text-center text-[14px] font-extrabold">
+      <div className="grid grid-cols-2 gap-2 text-center text-[13.5px] font-extrabold">
         <span className="rounded-lg border-2 border-mint-ink/50 py-1 text-mint-ink">선행사 · 먼저 나온 명사</span>
         <span className="rounded-lg bg-mint-soft py-1 text-mint-ink">형용사절 · 뒤에서 꾸며요</span>
       </div>
@@ -337,7 +337,7 @@ export function PcAntecedent() {
                 <En en={r.clause.en} />
               </span>
             </p>
-            <p className="mt-1.5 w-fit rounded-lg bg-chip px-2 py-0.5 text-[14px] font-bold">{r.ask}</p>
+            <p className="mt-1.5 w-fit rounded-lg bg-chip px-2 py-0.5 text-[13.5px] font-bold">{r.ask}</p>
           </li>
         ))}
       </ul>

@@ -20,7 +20,7 @@ const SEATS: { n: string; seat: string; hint: string; en: string; ko: string; ki
 export function GdSeats() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-2xl bg-sky-soft px-4 py-2.5 text-center text-[15px] font-extrabold text-sky-ink">
+      <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-2xl bg-sky-soft px-4 py-2.5 text-center text-[14.5px] font-extrabold text-sky-ink">
         <MaskIcon size={24} className="text-sky-ink" />
         동사 + -ing = 명사로 변장 → 명사 자리라면 어디든!
       </p>
@@ -28,16 +28,16 @@ export function GdSeats() {
         {SEATS.map((s) => (
           <li key={s.n} className="rounded-2xl border border-line px-4 py-3">
             <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-[14px] font-extrabold text-sky-ink">
+              <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-[13.5px] font-extrabold text-sky-ink">
                 {s.n} {s.seat}
               </span>
-              <span className="text-[14px] text-ink-2">{s.hint}</span>
+              <span className="text-[13.5px] text-ink-2">{s.hint}</span>
             </p>
             <p className="mt-2 text-[1.12em] font-medium">
               <En en={s.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{s.ko}</p>
-            <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[14px]">
+            <p className="text-[13.5px] text-ink-2">{s.ko}</p>
+            <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[13.5px]">
               <CrownIcon size={18} className="text-coral" />
               <span className="font-extrabold text-coral-ink">진짜 동사</span>
               <span lang="en" className="rounded-md bg-coral px-2 py-0.5 font-bold text-white">
@@ -113,12 +113,12 @@ export function GdVerbBins() {
       {BINS.map((b) => (
         <li key={b.title} className="rounded-2xl border border-line px-4 py-4">
           <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${b.tone}`}>{b.title}</span>
-            <span className="text-[14px] text-ink-2">{b.sub}</span>
+            <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${b.tone}`}>{b.title}</span>
+            <span className="text-[13.5px] text-ink-2">{b.sub}</span>
           </p>
           <ul className="mt-3 flex flex-wrap gap-1.5">
             {b.verbs.map((v) => (
-              <li key={v.en} className={`rounded-lg px-2 py-1 text-[15px] font-bold ${b.tone}`}>
+              <li key={v.en} className={`rounded-lg px-2 py-1 text-[14.5px] font-bold ${b.tone}`}>
                 <En en={v.en} />
               </li>
             ))}
@@ -126,7 +126,7 @@ export function GdVerbBins() {
           <p className="mt-3 border-t border-line pt-3 text-[1.02em] font-medium">
             <En en={b.ex.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{b.ex.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{b.ex.ko}</p>
         </li>
       ))}
     </ul>
@@ -182,7 +182,7 @@ export function GdTimeArrow() {
             <p className="text-[1.08em] font-extrabold">
               <En en={p.en} />
             </p>
-            <div className="mt-1.5 grid grid-cols-2 gap-2 text-[14px]">
+            <div className="mt-1.5 grid grid-cols-2 gap-2 text-[13.5px]">
               <span className="rounded-lg bg-sky-soft px-2 py-1.5 text-sky-ink">
                 <b lang="en">-ing</b> {p.ing}
               </span>
@@ -228,8 +228,8 @@ const STOP_WAYS: { title: string; sub: string; steps: Step[]; en: string; ko: st
 function StepChip({ step }: { step: Step }) {
   return (
     <span className="inline-flex flex-col items-center gap-1">
-      <span className={`rounded-xl px-3 py-1.5 text-[15px] font-extrabold ${step.tone}`}>{step.t}</span>
-      <span className="text-[14px] text-ink-2">{step.tag}</span>
+      <span className={`rounded-xl px-3 py-1.5 text-[14.5px] font-extrabold ${step.tone}`}>{step.t}</span>
+      <span className="text-[13.5px] text-ink-2">{step.tag}</span>
     </span>
   );
 }
@@ -244,7 +244,7 @@ export function GdStopTwoWays() {
             <span lang="en" className="text-[1.15em] font-extrabold">
               {w.title}
             </span>
-            <span className="text-[14px] text-ink-2">{w.sub}</span>
+            <span className="text-[13.5px] text-ink-2">{w.sub}</span>
           </p>
           <div className="mt-3 flex flex-wrap items-start gap-x-1.5 gap-y-2">
             {w.steps.map((s, i) => (
@@ -257,7 +257,7 @@ export function GdStopTwoWays() {
           <p className="mt-3 border-t border-line pt-3 text-[1.05em] font-medium">
             <En en={w.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{w.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{w.ko}</p>
         </div>
       ))}
     </div>
@@ -294,8 +294,8 @@ export function GdDoerTag() {
           <p className="text-[1.1em] font-medium">
             <En en={d.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{d.ko}</p>
-          <div className="mt-2.5 flex flex-wrap gap-2 text-[14px]">
+          <p className="text-[13.5px] text-ink-2">{d.ko}</p>
+          <div className="mt-2.5 flex flex-wrap gap-2 text-[13.5px]">
             <span className="rounded-lg bg-coral-soft px-2.5 py-1 font-bold text-coral-ink">
               꺼리는 사람 (<span lang="en">mind</span>의 주어): <span lang="en">{d.verbWho}</span>
             </span>
@@ -303,7 +303,7 @@ export function GdDoerTag() {
               여는 사람 (<span lang="en">opening</span>의 주인): <span lang="en">{d.ingWho}</span>
             </span>
           </div>
-          <p className={`mt-2 text-[14px] font-extrabold ${d.same ? "text-ink-2" : "text-coral-ink"}`}>{d.result}</p>
+          <p className={`mt-2 text-[13.5px] font-extrabold ${d.same ? "text-ink-2" : "text-coral-ink"}`}>{d.result}</p>
         </li>
       ))}
     </ul>
@@ -327,39 +327,39 @@ export function GdToTwoFaces() {
       <div className="grid gap-3 sm:grid-cols-2">
         <div className="rounded-2xl bg-amber-soft px-4 py-4 text-amber-ink">
           <p className="font-extrabold">to부정사의 to</p>
-          <p className="text-[14px]">to + 동사원형</p>
+          <p className="text-[13.5px]">to + 동사원형</p>
           <p className="mt-2 text-[1.05em] font-medium text-ink">
             <En en="I want [[to visit]] Jeju." />
           </p>
-          <p className="mt-2 text-[14px] font-bold">명사를 넣어 보면</p>
+          <p className="mt-2 text-[13.5px] font-bold">명사를 넣어 보면</p>
           <p className="text-[1.02em] font-medium text-ink">
             <En en="I want to [[the trip]]." /> <span className="text-coral-ink">✕</span>
           </p>
-          <p className="mt-1 text-[14px]">말이 안 되니까 전치사가 아니에요.</p>
+          <p className="mt-1 text-[13.5px]">말이 안 되니까 전치사가 아니에요.</p>
         </div>
         <div className="rounded-2xl bg-sky-soft px-4 py-4 text-sky-ink">
           <p className="font-extrabold">전치사 to</p>
-          <p className="text-[14px]">to + 명사 · 동명사(-ing)</p>
+          <p className="text-[13.5px]">to + 명사 · 동명사(-ing)</p>
           <p className="mt-2 text-[1.05em] font-medium text-ink">
             <En en="I'm {looking forward to} [[{visiting|동명사:방문하기}]] Jeju." />
           </p>
-          <p className="mt-2 text-[14px] font-bold">명사를 넣어 보면</p>
+          <p className="mt-2 text-[13.5px] font-bold">명사를 넣어 보면</p>
           <p className="text-[1.02em] font-medium text-ink">
             <En en="I'm {looking forward to} [[the trip]]." /> <span className="text-mint-ink">✓</span>
           </p>
-          <p className="mt-1 text-[14px]">말이 되니까 전치사예요. 동사는 -ing로!</p>
+          <p className="mt-1 text-[13.5px]">말이 되니까 전치사예요. 동사는 -ing로!</p>
         </div>
       </div>
       <div className="mt-3 rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-2">뒤에 -ing가 오는 전치사 to 표현</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">뒤에 -ing가 오는 전치사 to 표현</p>
         <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
           {TO_PREP_LIST.map((t) => (
-            <li key={t.en} className="flex flex-wrap items-baseline gap-x-2 text-[15px]">
+            <li key={t.en} className="flex flex-wrap items-baseline gap-x-2 text-[14.5px]">
               <span className="font-bold">
                 <En en={t.en} />
               </span>
               <span className="text-ink-3">+ -ing</span>
-              <span className="text-[14px] text-ink-2">{t.ko}</span>
+              <span className="text-[13.5px] text-ink-2">{t.ko}</span>
             </li>
           ))}
         </ul>
@@ -415,7 +415,7 @@ export function GdFormGrid() {
     <ul className="grid gap-2.5 sm:grid-cols-2">
       {GD_FORMS.map((f) => (
         <li key={f.key} className="rounded-2xl border border-line px-3.5 py-3">
-          <p className="flex flex-wrap gap-1.5 text-[14px] font-bold">
+          <p className="flex flex-wrap gap-1.5 text-[13.5px] font-bold">
             <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.time}</span>
             <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
           </p>
@@ -425,7 +425,7 @@ export function GdFormGrid() {
           <p className="mt-2 text-[1.02em] font-medium">
             <En en={f.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{f.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{f.ko}</p>
         </li>
       ))}
     </ul>
@@ -442,21 +442,21 @@ export function GdHavingTimeline() {
   return (
     <div className="grid gap-2 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
       <div className="rounded-2xl bg-sky-soft px-4 py-3">
-        <p className="text-[14px] font-extrabold text-sky-ink">① 먼저 (작년) · having p.p.</p>
+        <p className="text-[13.5px] font-extrabold text-sky-ink">① 먼저 (작년) · having p.p.</p>
         <p className="mt-1 text-[1.05em] font-medium">
           <En en={GD_BEFORE.en} />
         </p>
-        <p className="text-[14px] text-ink-2">{GD_BEFORE.ko}</p>
+        <p className="text-[13.5px] text-ink-2">{GD_BEFORE.ko}</p>
       </div>
       <ArrowRight size={26} className="mx-auto rotate-90 text-ink-3 sm:rotate-0" />
       <div className="rounded-2xl bg-coral-soft px-4 py-3">
-        <p className="flex items-center gap-1.5 text-[14px] font-extrabold text-coral-ink">
+        <p className="flex items-center gap-1.5 text-[13.5px] font-extrabold text-coral-ink">
           <CrownIcon size={16} />② 나중 (지금) · 진짜 동사
         </p>
         <p className="mt-1 text-[1.05em] font-medium">
           <En en={GD_NOW.en} />
         </p>
-        <p className="text-[14px] text-ink-2">{GD_NOW.ko}</p>
+        <p className="text-[13.5px] text-ink-2">{GD_NOW.ko}</p>
       </div>
     </div>
   );

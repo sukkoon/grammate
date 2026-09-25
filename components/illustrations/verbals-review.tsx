@@ -8,7 +8,7 @@ import { CrownIcon, MaskIcon } from "./icons";
 
 function StepNo({ n }: { n: number }) {
   return (
-    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-ink text-[15px] font-extrabold text-bg" aria-hidden>
+    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-ink text-[14.5px] font-extrabold text-bg" aria-hidden>
       {n}
     </span>
   );
@@ -19,9 +19,9 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
     <li className="rounded-2xl border border-line px-4 py-3">
       <p className="flex items-center gap-2.5">
         <StepNo n={n} />
-        <span className="text-[16px] font-extrabold">{title}</span>
+        <span className="text-[15px] font-extrabold">{title}</span>
       </p>
-      <div className="mt-2 text-[14.5px]">{children}</div>
+      <div className="mt-2 text-[14px]">{children}</div>
     </li>
   );
 }
@@ -81,11 +81,11 @@ export function VrDecisionTree() {
         </Step>
       </ol>
       <div className="mt-3 rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">따라 해 보기</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">따라 해 보기</p>
         <p className="mt-1 text-[1.05em] font-medium">
           <En en="The boy (playing / plays) soccer over there is my cousin." />
         </p>
-        <p className="mt-1 text-[14.5px] text-ink-2">
+        <p className="mt-1 text-[14px] text-ink-2">
           ① 접속사·관계사 0개 → 진짜 동사 자리 1개 ② 이미 is가 차지 ③ boy를 꾸미는 자리 ④ 소년이 축구를 하니까 →{" "}
           <span className="font-extrabold text-ink">playing</span>
         </p>
@@ -135,8 +135,8 @@ export function VrSlotMap() {
       {SLOTS.map((s) => (
         <li key={s.slot} className="flex flex-col rounded-2xl border border-line">
           <div className={`rounded-t-2xl px-4 py-2.5 ${s.tone}`}>
-            <p className="text-[16px] font-extrabold">{s.slot}</p>
-            <p className="text-[14px] font-bold">{s.costumes}</p>
+            <p className="text-[15px] font-extrabold">{s.slot}</p>
+            <p className="text-[13.5px] font-bold">{s.costumes}</p>
           </div>
           <ul className="grid gap-2 px-4 py-3">
             {s.rows.map((r) => (
@@ -144,7 +144,7 @@ export function VrSlotMap() {
                 <p className="text-[1.03em] font-medium">
                   <En en={r.en} />
                 </p>
-                <p className="text-[14px] text-ink-2">{r.ko}</p>
+                <p className="text-[13.5px] text-ink-2">{r.ko}</p>
               </li>
             ))}
           </ul>
@@ -176,27 +176,27 @@ export function VrActivePassive() {
       <ul className="grid gap-2.5">
         {PAIRS.map((p) => (
           <li key={p.who} className="rounded-2xl border border-line px-4 py-3">
-            <p className="text-[14px] font-extrabold text-ink-3">{p.who}</p>
+            <p className="text-[13.5px] font-extrabold text-ink-3">{p.who}</p>
             <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
               <div className="rounded-xl bg-mint-soft px-3 py-2">
-                <p className="text-[14px] font-extrabold text-mint-ink">한다 → -ing</p>
+                <p className="text-[13.5px] font-extrabold text-mint-ink">한다 → -ing</p>
                 <p className="text-[1.03em] font-medium">
                   <En en={p.active.en} />
                 </p>
-                <p className="text-[14px] text-ink-2">{p.active.ko}</p>
+                <p className="text-[13.5px] text-ink-2">{p.active.ko}</p>
               </div>
               <div className="rounded-xl bg-amber-soft px-3 py-2">
-                <p className="text-[14px] font-extrabold text-amber-ink">당한다 → p.p.</p>
+                <p className="text-[13.5px] font-extrabold text-amber-ink">당한다 → p.p.</p>
                 <p className="text-[1.03em] font-medium">
                   <En en={p.passive.en} />
                 </p>
-                <p className="text-[14px] text-ink-2">{p.passive.ko}</p>
+                <p className="text-[13.5px] text-ink-2">{p.passive.ko}</p>
               </div>
             </div>
           </li>
         ))}
       </ul>
-      <p className="mt-3 rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
+      <p className="mt-3 rounded-2xl bg-chip px-4 py-3 text-[14px]">
         <span className="font-extrabold">확인법:</span> 꾸밈을 받는 말을 주어로 세우고 be + p.p.를 붙여 봐요.{" "}
         <span lang="en" className="font-bold">
           The song is sung.
@@ -275,11 +275,11 @@ export function VrHiddenLink() {
               <VrWord key={i} en={b.en} kind={b.kind} />
             ))}
           </p>
-          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[14px] font-bold">
+          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[13.5px] font-bold">
             <span className="rounded-full border-2 border-dashed border-ink-3 px-2.5 py-0.5 text-ink-2">{h.hidden}</span>
             <span className="rounded-full bg-coral-soft px-2.5 py-0.5 text-coral-ink">{h.count}</span>
           </p>
-          <p className="mt-1.5 text-[14px] text-ink-2">{h.hint}</p>
+          <p className="mt-1.5 text-[13.5px] text-ink-2">{h.hint}</p>
         </li>
       ))}
     </ul>

@@ -44,7 +44,7 @@ export function TermCard({ t, compact = false }: { t: Term; compact?: boolean })
               </span>
             )}
             <span className="rounded-xl bg-chip px-3 py-2 text-center leading-tight">
-              <span className="block text-[1.15rem] font-extrabold">{p.c}</span>
+              <span className="block text-[1.08rem] font-extrabold">{p.c}</span>
               <span className="mt-0.5 block text-[12.5px] text-ink-2">{p.m}</span>
             </span>
           </Fragment>
@@ -102,7 +102,7 @@ export function TermAnatomy({ id }: { id: string }) {
           용어 사전 ›
         </Link>
       </div>
-      <p className="mb-3 text-[1.7rem] font-extrabold leading-tight tracking-[-0.01em]">{t.term}</p>
+      <p className="mb-3 text-[1.55rem] font-extrabold leading-tight tracking-[-0.01em]">{t.term}</p>
       <TermCard t={t} />
     </section>
   );

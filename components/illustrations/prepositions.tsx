@@ -81,16 +81,16 @@ function TimeLayerBox({ layer, children }: { layer: TimeLayer; children?: ReactN
         <span lang="en" className="text-[1.5em] font-bold leading-none">
           {layer.p}
         </span>
-        <span className="inline-flex items-center gap-1 rounded-full bg-card px-2 py-0.5 text-[14px] font-extrabold">
+        <span className="inline-flex items-center gap-1 rounded-full bg-card px-2 py-0.5 text-[13.5px] font-extrabold">
           <ShapeMark kind={layer.shape} />
           {layer.shapeKo}
         </span>
-        <span className="text-[14px] font-bold">{layer.what}</span>
+        <span className="text-[13.5px] font-bold">{layer.what}</span>
       </p>
       <ul className="mt-2 flex flex-wrap gap-1.5">
         {layer.ex.map((e) => (
-          <li key={e.en} className="rounded-lg bg-card px-2 py-1 text-[15px] text-ink">
-            <En en={e.en} /> <span className="text-[14px] text-ink-2">{e.ko}</span>
+          <li key={e.en} className="rounded-lg bg-card px-2 py-1 text-[14.5px] text-ink">
+            <En en={e.en} /> <span className="text-[13.5px] text-ink-2">{e.ko}</span>
           </li>
         ))}
       </ul>
@@ -108,7 +108,7 @@ export function PrAtOnIn() {
           <TimeLayerBox layer={LAYER_AT} />
         </TimeLayerBox>
       </TimeLayerBox>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[15px] font-extrabold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-extrabold">
         <span className="rounded-lg bg-amber-soft px-2 py-1 text-amber-ink">점 at</span>
         <span aria-hidden className="text-ink-3">
           →
@@ -119,7 +119,7 @@ export function PrAtOnIn() {
         </span>
         <span className="rounded-lg bg-sky-soft px-2 py-1 text-sky-ink">공간 in</span>
       </p>
-      <p className="mt-1 text-center text-[14px] text-ink-2">좁은 때에서 넓은 때로</p>
+      <p className="mt-1 text-center text-[13.5px] text-ink-2">좁은 때에서 넓은 때로</p>
     </div>
   );
 }
@@ -179,14 +179,14 @@ export function PrByUntil() {
       {rows.map((r) => (
         <div key={r.kind} className="rounded-2xl border border-line px-4 py-3">
           <p className="font-extrabold">{r.title}</p>
-          <p className="text-[14px] text-ink-2">{r.how}</p>
+          <p className="text-[13.5px] text-ink-2">{r.how}</p>
           <div className="mt-2">
             <TimeBar kind={r.kind} />
           </div>
           <p className="mt-2 text-[1.05em] font-medium">
             <En en={r.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{r.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{r.ko}</p>
         </div>
       ))}
     </div>
@@ -205,8 +205,8 @@ function Building({ en, ko, focus = false }: { en: string; ko: string; focus?: b
         <rect x="7" y="12" width="26" height="15" rx="1.5" style={{ fill: "var(--chip)", stroke: "var(--ink-2)" }} strokeWidth="1.8" />
         <rect x="17" y="18" width="6" height="9" style={{ fill: "var(--ink-2)" }} />
       </svg>
-      <p className="text-[14px] font-extrabold">{ko}</p>
-      <p className="text-[15px]">
+      <p className="text-[13.5px] font-extrabold">{ko}</p>
+      <p className="text-[14.5px]">
         <En en={en} />
       </p>
     </div>
@@ -246,7 +246,7 @@ export function PrStreetMap() {
         </div>
         <div className="relative my-2 flex h-11 items-center justify-center rounded-lg bg-chip" aria-hidden>
           <span className="absolute inset-x-3 top-1/2 border-t-2 border-dashed border-ink-3/60" />
-          <span className="relative rounded-md bg-chip px-2 text-[14px] font-bold text-ink-2">길</span>
+          <span className="relative rounded-md bg-chip px-2 text-[13.5px] font-bold text-ink-2">길</span>
         </div>
         <div className="grid grid-cols-3 gap-2">
           <span />
@@ -260,7 +260,7 @@ export function PrStreetMap() {
             <span className="text-[1.05em] font-medium">
               <En en={l.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{l.ko}</span>
+            <span className="block text-[13.5px] text-ink-2">{l.ko}</span>
           </li>
         ))}
       </ul>
@@ -418,7 +418,7 @@ export function PrMoves() {
           <p className="mt-1 text-[1.15em] font-bold">
             <En en={m.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{m.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{m.ko}</p>
         </li>
       ))}
     </ul>
@@ -493,17 +493,17 @@ function RideCard({ ride }: { ride: Ride }) {
         <span lang="en" className="text-[1.5em] font-bold leading-none">
           {ride.p}
         </span>
-        <span className="text-[14px] font-bold text-ink-2">{ride.how}</span>
+        <span className="text-[13.5px] font-bold text-ink-2">{ride.how}</span>
       </p>
       <div className="mt-3">{ride.drawing}</div>
       <ul className="mt-3 flex flex-wrap gap-1.5">
         {ride.list.map((r) => (
-          <li key={r.en} className="rounded-lg bg-chip px-2 py-1 text-[15px]">
+          <li key={r.en} className="rounded-lg bg-chip px-2 py-1 text-[14.5px]">
             <En en={r.en} />
           </li>
         ))}
       </ul>
-      <p className="mt-2 text-[14px] text-ink-2">
+      <p className="mt-2 text-[13.5px] text-ink-2">
         타고 내리기: <En en={ride.getOnOff.en} />
       </p>
     </div>
@@ -576,7 +576,7 @@ function TokChip({ t }: { t: Tok }) {
   return (
     <span className="inline-flex flex-col items-center gap-1">
       <span className={`rounded-lg px-2 py-1 ${TAG_STYLE[t.tag]}`}>{t.label ?? <En en={t.en} />}</span>
-      <span className={`text-[14px] font-extrabold ${TAG_LABEL_STYLE[t.tag]}`}>{t.sub}</span>
+      <span className={`text-[13.5px] font-extrabold ${TAG_LABEL_STYLE[t.tag]}`}>{t.sub}</span>
     </span>
   );
 }
@@ -584,14 +584,14 @@ function TokChip({ t }: { t: Tok }) {
 function ClauseRow({ title, row, formula, note }: { title: string; row: Tok[]; formula: string; note: string }) {
   return (
     <div className="rounded-2xl border border-line px-4 py-4">
-      <p className="text-[14px] font-extrabold text-ink-2">{title}</p>
+      <p className="text-[13.5px] font-extrabold text-ink-2">{title}</p>
       <p lang="en" className="mt-3 flex flex-wrap items-start gap-x-2 gap-y-3 text-[1.2em] font-medium">
         {row.map((t, i) => (
           <TokChip key={i} t={t} />
         ))}
       </p>
-      <p className="mt-3 w-fit rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold">{formula}</p>
-      <p className="mt-1.5 text-[14px] text-ink-2">{note}</p>
+      <p className="mt-3 w-fit rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold">{formula}</p>
+      <p className="mt-1.5 text-[13.5px] text-ink-2">{note}</p>
     </div>
   );
 }
@@ -649,11 +649,11 @@ const DAY_AT: { en: string; ko: string }[] = [
 function DayChipBox({ title, tone, items }: { title: string; tone: string; items: { en: string; ko: string }[] }) {
   return (
     <div className={`rounded-2xl px-3 py-2.5 ${tone}`}>
-      <p className="text-[14px] font-extrabold">{title}</p>
+      <p className="text-[13.5px] font-extrabold">{title}</p>
       <ul className="mt-1.5 flex flex-wrap gap-1.5">
         {items.map((e) => (
-          <li key={e.en} className="rounded-lg bg-card px-2 py-1 text-[15px] text-ink">
-            <En en={e.en} /> <span className="text-[14px] text-ink-2">{e.ko}</span>
+          <li key={e.en} className="rounded-lg bg-card px-2 py-1 text-[14.5px] text-ink">
+            <En en={e.en} /> <span className="text-[13.5px] text-ink-2">{e.ko}</span>
           </li>
         ))}
       </ul>
@@ -771,16 +771,16 @@ export function PrForDuring() {
         <div key={r.key} className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span className="font-extrabold">{r.title}</span>
-            <span className="rounded-full bg-chip px-2 py-0.5 text-[14px] font-bold text-ink-2">{r.q}</span>
+            <span className="rounded-full bg-chip px-2 py-0.5 text-[13.5px] font-bold text-ink-2">{r.q}</span>
           </p>
           <div className="mt-2">{r.bar}</div>
           <p className="mt-1 text-[1.05em] font-medium">
             <En en={r.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{r.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{r.ko}</p>
           <ul className="mt-2 flex flex-wrap gap-1.5">
             {r.after.map((a) => (
-              <li key={a.en} className="rounded-lg bg-chip px-2 py-0.5 text-[15px]">
+              <li key={a.en} className="rounded-lg bg-chip px-2 py-0.5 text-[14.5px]">
                 <En en={a.en} />
               </li>
             ))}
@@ -875,12 +875,12 @@ export function PrOverAbove() {
             <p className="mt-1 text-[1.15em] font-bold">
               <En en={h.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{h.ko}</p>
-            <p className="mt-0.5 text-[14px] font-bold text-ink-3">{h.pair}</p>
+            <p className="text-[13.5px] text-ink-2">{h.ko}</p>
+            <p className="mt-0.5 text-[13.5px] font-bold text-ink-3">{h.pair}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-center text-[14px] text-ink-2">회색이 기준(식탁, 선)이고, 빨간 것이 위치를 말하려는 물건이에요.</p>
+      <p className="mt-3 text-center text-[13.5px] text-ink-2">회색이 기준(식탁, 선)이고, 빨간 것이 위치를 말하려는 물건이에요.</p>
     </div>
   );
 }
@@ -905,7 +905,7 @@ function TeamWords({ words, tone }: { words: { en: string }[]; tone: string }) {
   return (
     <ul className="flex flex-wrap content-start gap-1.5">
       {words.map((w) => (
-        <li key={w.en} className={`rounded-lg px-2 py-0.5 text-[15px] font-medium ${tone}`}>
+        <li key={w.en} className={`rounded-lg px-2 py-0.5 text-[14.5px] font-medium ${tone}`}>
           <En en={w.en} />
         </li>
       ))}
@@ -920,17 +920,17 @@ export function PrPairTeams() {
       <div className="grid grid-cols-2 gap-2 text-center">
         <p className="rounded-2xl bg-mint-soft px-2 py-2 text-mint-ink">
           <span className="block font-extrabold">전치사 편</span>
-          <span className="block text-[14px] font-bold">뒤에 명사(구) · -ing</span>
+          <span className="block text-[13.5px] font-bold">뒤에 명사(구) · -ing</span>
         </p>
         <p className="rounded-2xl bg-sky-soft px-2 py-2 text-sky-ink">
           <span className="block font-extrabold">접속사 편</span>
-          <span className="block text-[14px] font-bold">뒤에 주어 + 동사</span>
+          <span className="block text-[13.5px] font-bold">뒤에 주어 + 동사</span>
         </p>
       </div>
       <ul className="mt-2 space-y-2">
         {PR_TEAMS.map((t) => (
           <li key={t.ko} className="rounded-2xl border border-line px-3 py-2.5">
-            <p className="text-center text-[14px] font-extrabold text-ink-2">{t.ko}</p>
+            <p className="text-center text-[13.5px] font-extrabold text-ink-2">{t.ko}</p>
             <div className="mt-1.5 grid grid-cols-2 gap-2">
               <TeamWords words={t.prep} tone="bg-mint-soft text-mint-ink" />
               <TeamWords words={t.conj} tone="bg-sky-soft text-sky-ink" />
@@ -938,7 +938,7 @@ export function PrPairTeams() {
           </li>
         ))}
       </ul>
-      <p className="mt-2 rounded-2xl bg-chip px-3 py-2 text-center text-[14px] font-bold">양쪽 편을 오가는 말: before · after · since · until</p>
+      <p className="mt-2 rounded-2xl bg-chip px-3 py-2 text-center text-[13.5px] font-bold">양쪽 편을 오가는 말: before · after · since · until</p>
     </div>
   );
 }
@@ -955,7 +955,7 @@ function IngMark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞아요" : "틀려요"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -974,7 +974,7 @@ export function PrIngSlot() {
         </span>
         <span className="inline-flex flex-col items-center gap-1">
           <span className="rounded-lg bg-coral px-2 py-1 text-white">went</span>
-          <span className="text-[14px] font-extrabold text-coral-ink">동사 1</span>
+          <span className="text-[13.5px] font-extrabold text-coral-ink">동사 1</span>
         </span>
         <span className="pt-1">
           <En en="to bed" />
@@ -983,11 +983,11 @@ export function PrIngSlot() {
           <span className="rounded-lg bg-chip px-2 py-1 ring-1 ring-ink-3">
             <En en="without" />
           </span>
-          <span className="text-[14px] font-extrabold text-ink-2">전치사</span>
+          <span className="text-[13.5px] font-extrabold text-ink-2">전치사</span>
         </span>
         <span className="inline-flex flex-col items-center gap-1">
           <span className="rounded-lg border-2 border-dashed border-mint-ink px-4 py-1 text-mint-ink">?</span>
-          <span className="text-[14px] font-extrabold text-mint-ink">명사 자리</span>
+          <span className="text-[13.5px] font-extrabold text-mint-ink">명사 자리</span>
         </span>
         <span className="pt-1">
           <En en="her teeth." />
@@ -1001,7 +1001,7 @@ export function PrIngSlot() {
               <span className={`block text-[1.08em] font-medium ${c.ok ? "" : "text-ink-2 line-through decoration-coral/60"}`}>
                 <En en={c.en} />
               </span>
-              <span className="block text-[14px] text-ink-2">{c.why}</span>
+              <span className="block text-[13.5px] text-ink-2">{c.why}</span>
             </span>
           </li>
         ))}
@@ -1010,7 +1010,7 @@ export function PrIngSlot() {
         <p className="text-[1.05em] font-medium">
           <En en="Jisu went to bed [[without brushing]] her teeth." />
         </p>
-        <p className="text-[14px] text-ink-2">지수는 이를 닦지 않고 잤어.</p>
+        <p className="text-[13.5px] text-ink-2">지수는 이를 닦지 않고 잤어.</p>
       </div>
     </div>
   );
@@ -1052,18 +1052,18 @@ export function PrBothWays() {
           </p>
           <div className="mt-2 grid gap-1.5">
             <p className="rounded-xl bg-mint-soft px-3 py-1.5">
-              <span className="block text-[14px] font-extrabold text-mint-ink">전치사 + 명사</span>
+              <span className="block text-[13.5px] font-extrabold text-mint-ink">전치사 + 명사</span>
               <span className="block text-[1.02em] font-medium">
                 <En en={b.prep.en} />
               </span>
-              <span className="block text-[14px] text-ink-2">{b.prep.ko}</span>
+              <span className="block text-[13.5px] text-ink-2">{b.prep.ko}</span>
             </p>
             <p className="rounded-xl bg-sky-soft px-3 py-1.5">
-              <span className="block text-[14px] font-extrabold text-sky-ink">접속사 + 주어 + 동사</span>
+              <span className="block text-[13.5px] font-extrabold text-sky-ink">접속사 + 주어 + 동사</span>
               <span className="block text-[1.02em] font-medium">
                 <En en={b.conj.en} />
               </span>
-              <span className="block text-[14px] text-ink-2">{b.conj.ko}</span>
+              <span className="block text-[13.5px] text-ink-2">{b.conj.ko}</span>
             </p>
           </div>
         </div>

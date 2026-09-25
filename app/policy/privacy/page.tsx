@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "개인정보처리방침" };
 export default function PrivacyPage() {
   return (
     <div className="lesson mx-auto max-w-3xl px-4 pb-10 pt-10 sm:px-6">
-      <h1 className="text-[2rem] font-extrabold">개인정보처리방침</h1>
+      <h1 className="text-[1.8rem] font-extrabold">개인정보처리방침</h1>
       <p className="text-ink-3">초안 · 정식 서비스 전에 내용을 확정할 예정이에요.</p>
 
       <h2>1. 지금 모으는 정보</h2>

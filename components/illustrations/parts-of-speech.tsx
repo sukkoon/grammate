@@ -19,7 +19,7 @@ const PO_POS: Record<string, string> = {
 
 function PoTag({ pos, children }: { pos: string; children?: ReactNode }) {
   return (
-    <span className={`inline-flex items-center rounded-lg px-2 py-1 text-[14px] font-extrabold leading-none ${PO_POS[pos] ?? "bg-chip"}`}>
+    <span className={`inline-flex items-center rounded-lg px-2 py-1 text-[13.5px] font-extrabold leading-none ${PO_POS[pos] ?? "bg-chip"}`}>
       {children ?? pos}
     </span>
   );
@@ -42,7 +42,7 @@ export function PoFamilies() {
       {PO_FAMILIES.map((f) => (
         <div role="listitem" key={f.family} className="flex flex-col gap-2 rounded-2xl border border-line px-4 py-3 sm:flex-row sm:items-center sm:gap-4">
           <span className="flex shrink-0 flex-wrap items-center gap-1.5 sm:w-56">
-            <span className="mr-1 text-[16px] font-extrabold">{f.family}</span>
+            <span className="mr-1 text-[15px] font-extrabold">{f.family}</span>
             {f.members.map((m) => (
               <PoTag key={m} pos={m}>
                 {m === "관사" ? "(관사)" : m}
@@ -50,7 +50,7 @@ export function PoFamilies() {
             ))}
           </span>
           <span className="min-w-0">
-            <span className="block text-[15px] font-bold text-ink-2">{f.role}</span>
+            <span className="block text-[14.5px] font-bold text-ink-2">{f.role}</span>
             <span className="block text-[1.05em] font-medium">
               <En en={f.en} />
             </span>
@@ -97,7 +97,7 @@ export function PoDictEntry() {
                     <PoTag pos={s.pos}>
                       {s.mark} {s.abbr}
                     </PoTag>
-                    <span className="text-[15px] font-bold">{s.meaning}</span>
+                    <span className="text-[14.5px] font-bold">{s.meaning}</span>
                   </p>
                   <p className="mt-0.5 text-[1.02em]">
                     <En en={s.ex.en} />
@@ -108,7 +108,7 @@ export function PoDictEntry() {
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] font-bold text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] font-bold text-ink-2">
         뜻보다 먼저 나오는 <span className="rounded-md bg-chip px-1.5 py-0.5">[동] v.</span> 같은 기호가 바로 품사예요. 품사가 바뀌면 뜻도 바뀌어요.
       </p>
     </div>
@@ -169,8 +169,8 @@ export function PoSkeleton() {
       {PO_SKELETON.map((r, i) => (
         <div role="listitem" key={i} className={`rounded-2xl border px-4 py-3 ${i === 0 ? "border-2 border-ink/30" : "border-line"}`}>
           <p className="flex flex-wrap items-center gap-2">
-            <span className={`rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${i === 0 ? "bg-ink text-bg" : "bg-chip"}`}>{r.step}</span>
-            <span className="text-[14px] text-ink-2">{r.note}</span>
+            <span className={`rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${i === 0 ? "bg-ink text-bg" : "bg-chip"}`}>{r.step}</span>
+            <span className="text-[13.5px] text-ink-2">{r.note}</span>
           </p>
           <p className="mt-2.5 flex flex-wrap items-start gap-x-2 gap-y-3">
             {r.words.map((w, j) => (
@@ -182,7 +182,7 @@ export function PoSkeleton() {
               </span>
             ))}
           </p>
-          <p className="mt-2 text-[14px] text-ink-2">{r.ko}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{r.ko}</p>
         </div>
       ))}
     </div>
@@ -199,7 +199,7 @@ function PoSeat({ en, label }: { en: string; label: string }) {
           <En en={en} />
         </span>
       </span>
-      <span className="text-[14px] font-extrabold text-mint-ink">{label}</span>
+      <span className="text-[13.5px] font-extrabold text-mint-ink">{label}</span>
     </span>
   );
 }
@@ -210,7 +210,7 @@ function PoPlain({ en }: { en: string }) {
       <span className="rounded-xl border border-line px-2.5 py-1.5 text-[1.15em] font-medium">
         <En en={en} />
       </span>
-      <span className="text-[14px]" aria-hidden>
+      <span className="text-[13.5px]" aria-hidden>
         &nbsp;
       </span>
     </span>
@@ -223,23 +223,23 @@ export function PoAdjSeats() {
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-4 py-3">
         <p className="font-extrabold">① 명사 바로 앞</p>
-        <p className="text-[14px] text-ink-2">명사를 앞에서 꾸며요.</p>
+        <p className="text-[13.5px] text-ink-2">명사를 앞에서 꾸며요.</p>
         <p className="mt-2.5 flex flex-wrap items-start gap-2">
           <PoPlain en="a" />
           <PoSeat en="cute" label="형용사" />
           <PoPlain en="dog" />
         </p>
-        <p className="mt-1 text-[14px] text-ink-2">귀여운 강아지 · 우리말과 순서가 같아요</p>
+        <p className="mt-1 text-[13.5px] text-ink-2">귀여운 강아지 · 우리말과 순서가 같아요</p>
       </div>
       <div className="rounded-2xl border border-line px-4 py-3">
         <p className="font-extrabold">② be동사 뒤</p>
-        <p className="text-[14px] text-ink-2">주어가 어떤 상태인지 설명해요.</p>
+        <p className="text-[13.5px] text-ink-2">주어가 어떤 상태인지 설명해요.</p>
         <p className="mt-2.5 flex flex-wrap items-start gap-2">
           <PoPlain en="The dog" />
           <PoPlain en="is" />
           <PoSeat en="cute." label="형용사" />
         </p>
-        <p className="mt-1 text-[14px] text-ink-2">
+        <p className="mt-1 text-[13.5px] text-ink-2">
           그 강아지는 귀여워 · <En en="look, feel, sound" /> 뒤도 이 자리예요
         </p>
       </div>
@@ -258,7 +258,7 @@ const PO_BRIDGE = { en: "so" };
 function PoIsland({ words, label }: { words: PoWord[]; label: string }) {
   return (
     <div className="rounded-2xl border border-line px-4 py-3">
-      <p className="text-[14px] font-extrabold text-ink-3">{label}</p>
+      <p className="text-[13.5px] font-extrabold text-ink-3">{label}</p>
       <p className="mt-1.5 flex flex-wrap items-end gap-1.5 text-[1.12em] font-medium">
         {words.map((w, i) =>
           w.king ? (
@@ -289,16 +289,16 @@ export function PoConjBridge() {
           <span className="rounded-full bg-sky-soft px-4 py-1.5 text-[1.15em] font-bold text-sky-ink">
             <En en={PO_BRIDGE.en} />
           </span>
-          <span className="text-[14px] font-extrabold text-sky-ink">접속사 다리</span>
+          <span className="text-[13.5px] font-extrabold text-sky-ink">접속사 다리</span>
         </div>
         <PoIsland words={PO_RIGHT} label="문장 2" />
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[15px] font-extrabold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-extrabold">
         <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-sky-ink">접속사 1개</span>
         <ArrowRight size={18} className="text-ink-3" />
         <span className="rounded-lg bg-coral px-2.5 py-1 text-white">진짜 동사 2개</span>
       </p>
-      <p className="mt-2 text-center text-[14px] text-ink-2">
+      <p className="mt-2 text-center text-[13.5px] text-ink-2">
         배가 고파서 빵을 좀 먹었어. 단어와 단어를 이을 때도 써요: <En en="cats [[and]] dogs" />
       </p>
     </div>
@@ -349,7 +349,7 @@ function PoLens() {
 export function PoNeighborClues() {
   return (
     <div>
-      <p className="mb-2 flex flex-wrap gap-2 text-[14px] font-bold">
+      <p className="mb-2 flex flex-wrap gap-2 text-[13.5px] font-bold">
         <span className="rounded-lg border-2 border-dashed border-coral px-2 py-0.5 text-coral-ink">단서: 앞뒤 말</span>
         <span className="rounded-lg bg-marker px-2 py-0.5">품사를 알아낼 단어</span>
       </p>
@@ -368,7 +368,7 @@ export function PoNeighborClues() {
                 </span>
               ))}
             </p>
-            <p className="mt-2 flex flex-wrap items-center gap-2 text-[14px]">
+            <p className="mt-2 flex flex-wrap items-center gap-2 text-[13.5px]">
               <span className="inline-flex items-center gap-1 font-bold text-coral-ink">
                 <PoLens />
                 {r.clue}

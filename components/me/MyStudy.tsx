@@ -51,7 +51,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
         <div className="flex flex-col items-center rounded-2xl border border-dashed border-line px-6 py-10 text-center">
           <Mate mood="thinking" size={56} className="text-ink" />
           <p className="mt-3 font-extrabold">아직 기록이 없어요</p>
-          <p className="mt-1 text-[15px] text-ink-2">예문에서 단어를 누르고 ★를 눌러 담거나, 단원 끝의 확인 문제를 풀어 보세요.</p>
+          <p className="mt-1 text-[14.5px] text-ink-2">예문에서 단어를 누르고 ★를 눌러 담거나, 단원 끝의 확인 문제를 풀어 보세요.</p>
           <Link href="/learn" className="mt-4 rounded-full bg-ink px-5 py-2.5 font-bold text-on-ink">
             공부하러 가기
           </Link>
@@ -60,20 +60,20 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
 
       {again.length > 0 && (
         <section aria-labelledby="again">
-          <h2 id="again" className="text-[1.3rem] font-extrabold">
+          <h2 id="again" className="text-[1.2rem] font-extrabold">
             다시 볼 문제
           </h2>
-          <p className="mt-1 text-[14.5px] text-ink-2">헷갈렸던 문제예요. 다시 풀어서 맞히면 여기서 사라져요.</p>
+          <p className="mt-1 text-[14px] text-ink-2">헷갈렸던 문제예요. 다시 풀어서 맞히면 여기서 사라져요.</p>
           <ul className="mt-4 space-y-3">
             {again.map(([unit, list]) => (
               <li key={unit} className="rounded-2xl border border-line bg-card px-4 py-4">
                 <div className="flex items-baseline justify-between gap-3">
                   <p className="font-extrabold">{units[unit]?.title ?? unit}</p>
-                  <Link href={`/learn/${unit}`} className="shrink-0 text-[14px] font-bold text-coral-ink hover:underline">
+                  <Link href={`/learn/${unit}`} className="shrink-0 text-[13.5px] font-bold text-coral-ink hover:underline">
                     다시 풀기 ›
                   </Link>
                 </div>
-                <ul className="mt-2 list-disc space-y-1 pl-5 text-[15px] text-ink-2">
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-[14.5px] text-ink-2">
                   {list.map((r) => (
                     <li key={r.key}>{r.question}</li>
                   ))}
@@ -86,7 +86,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
 
       {words.length > 0 && (
         <section aria-labelledby="words">
-          <h2 id="words" className="text-[1.3rem] font-extrabold">
+          <h2 id="words" className="text-[1.2rem] font-extrabold">
             내 단어장 <span className="text-ink-3">{words.length}</span>
           </h2>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -96,7 +96,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
                   <p lang="en" className="text-[1.1em] font-bold">
                     {w.lemma}
                   </p>
-                  <p className="text-[14.5px] text-ink-2">
+                  <p className="text-[14px] text-ink-2">
                     <span className="mr-1.5 rounded-full bg-chip px-1.5 py-0.5 text-[12px] font-bold">{w.pos}</span>
                     {w.meaning}
                   </p>
@@ -130,7 +130,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
 
       {read.length > 0 && (
         <section aria-labelledby="read">
-          <h2 id="read" className="text-[1.3rem] font-extrabold">
+          <h2 id="read" className="text-[1.2rem] font-extrabold">
             다 읽은 단원
           </h2>
           <ul className="mt-4 divide-y divide-line rounded-2xl border border-line bg-card">
@@ -146,7 +146,7 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
         </section>
       )}
 
-      <div className="border-t border-line pt-6 text-[14px] text-ink-3">
+      <div className="border-t border-line pt-6 text-[13.5px] text-ink-3">
         <p>
           지금은 이 기기(브라우저)에만 저장돼요. 로그인 기능이 생기면 다른 기기에서도 이어서 볼 수 있어요.
         </p>

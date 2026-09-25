@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps<"/learn/[chapter]/[
 
 function ChapterNav({ at: r }: { at: UnitRef }) {
   return (
-    <nav aria-label={`${r.chapter.title} 단원`} className="text-[15px]">
+    <nav aria-label={`${r.chapter.title} 단원`} className="text-[14.5px]">
       <p className="text-[13px] font-extrabold text-coral-ink">{r.part.label}</p>
       <p className="font-extrabold">{r.chapter.title}</p>
       <ol className="mt-3 space-y-1 border-l-2 border-line">
@@ -55,7 +55,7 @@ function ChapterNav({ at: r }: { at: UnitRef }) {
           );
         })}
       </ol>
-      <Link href="/learn" className="mt-4 inline-block text-[14px] font-bold text-ink-3 hover:text-ink">
+      <Link href="/learn" className="mt-4 inline-block text-[13.5px] font-bold text-ink-3 hover:text-ink">
         ← 전체 목차
       </Link>
     </nav>
@@ -93,11 +93,11 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
         </details>
 
         <header>
-          <p className="text-[14px] font-bold text-ink-3">
+          <p className="text-[13.5px] font-bold text-ink-3">
             {ref.part.label} {ref.part.title} · {ref.chapter.title}
           </p>
-          <h1 className="mt-2 text-[1.85rem] font-extrabold leading-snug tracking-[-0.02em] sm:text-[2.2rem]">{ref.unit.title}</h1>
-          <p className="mt-2 text-[1.05rem] text-ink-2">{ref.unit.summary}</p>
+          <h1 className="mt-2 text-[1.7rem] font-extrabold leading-snug tracking-[-0.02em] sm:text-[2rem]">{ref.unit.title}</h1>
+          <p className="mt-2 text-[1rem] text-ink-2">{ref.unit.summary}</p>
           <div className="mt-3">
             <LevelBadges levels={ref.unit.levels} />
           </div>

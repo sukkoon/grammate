@@ -13,7 +13,7 @@ export default function Home() {
       demo: (
         <div>
           <p className="text-[12.5px] font-extrabold text-coral-ink">용어 뜻풀이</p>
-          <p className="mb-3 mt-1 text-[1.4rem] font-extrabold">{pronoun.term}</p>
+          <p className="mb-3 mt-1 text-[1.3rem] font-extrabold">{pronoun.term}</p>
           <TermCard t={pronoun} compact />
         </div>
       ),
@@ -42,12 +42,12 @@ export default function Home() {
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
       {/* 첫 화면 */}
       <section className="pb-12 pt-10 md:pt-16">
-        <h1 className="text-[2.1rem] font-extrabold leading-[1.3] tracking-[-0.02em] sm:text-[2.7rem]">
+        <h1 className="text-[1.9rem] font-extrabold leading-[1.3] tracking-[-0.02em] sm:text-[2.4rem]">
           문법 용어,
           <br />
           <span className="marker">뜻부터 알면</span> 쉬워져요
         </h1>
-        <p className="mt-5 max-w-[52rem] text-[1.05rem] text-ink-2">
+        <p className="mt-5 max-w-[52rem] text-[1rem] text-ink-2">
           영어 문법이 어려운 건, 용어의 뜻을 모른 채 외우기 때문이에요.
           <br />
           그래머랑은 &lsquo;대명사&rsquo;, &lsquo;분사&rsquo;, &lsquo;관계사&rsquo;처럼 낯선 용어를 뜻부터 하나하나 짚어 줘요.

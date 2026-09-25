@@ -53,7 +53,7 @@ export function LevelTabs({ variant = "page" }: { variant?: "page" | "compact" }
             onClick={() => setBand(b)}
             onKeyDown={(e) => onKeyDown(e, i)}
             className={`rounded-full font-extrabold transition-colors ${
-              variant === "compact" ? "h-8 text-[14px]" : "h-10 text-[15.5px]"
+              variant === "compact" ? "h-8 text-[13.5px]" : "h-10 text-[15px]"
             } ${on ? "bg-ink text-on-ink shadow-sm" : "text-ink-2 hover:bg-card hover:text-ink"}`}
           >
             {bandLabel[b]}
@@ -68,13 +68,13 @@ export function LevelTabs({ variant = "page" }: { variant?: "page" | "compact" }
   return (
     <section aria-label="설명 수준" className="rounded-2xl border border-line bg-card px-4 py-3.5">
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2.5">
-        <p className="flex items-center gap-2 text-[15px] font-extrabold">
+        <p className="flex items-center gap-2 text-[14.5px] font-extrabold">
           <Mate mood={chosen ? "happy" : "wink"} size={26} className="shrink-0 text-ink" />
           {chosen ? "지금 보는 설명 수준" : "나에게 맞는 수준을 골라 봐요"}
         </p>
         <div className="w-full sm:w-72">{tabs}</div>
       </div>
-      <p className="mt-2.5 text-[14px] text-ink-2" aria-live="polite">
+      <p className="mt-2.5 text-[13.5px] text-ink-2" aria-live="polite">
         {band ? (
           <>
             <b className="text-ink">{bandLabel[band]}</b> · {bandDesc[band]} {CHANGES[band]}

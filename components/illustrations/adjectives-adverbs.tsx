@@ -19,12 +19,12 @@ const seatVerbs: { en: string; ko: string }[] = [
 function SeatCard({ title, sub, children, note }: { title: string; sub: string; children: ReactNode; note: ReactNode }) {
   return (
     <div className="rounded-2xl border border-line px-4 py-4">
-      <p className="text-[15px] font-extrabold">{title}</p>
-      <p className="text-[14px] text-ink-2">{sub}</p>
+      <p className="text-[14.5px] font-extrabold">{title}</p>
+      <p className="text-[13.5px] text-ink-2">{sub}</p>
       <p lang="en" className="mt-3 flex flex-wrap items-center gap-1.5 text-[1.25em] font-medium">
         {children}
       </p>
-      <p className="mt-3 text-[14px] text-ink-2">{note}</p>
+      <p className="mt-3 text-[13.5px] text-ink-2">{note}</p>
     </div>
   );
 }
@@ -72,11 +72,11 @@ export function AaTwoSeats() {
         </SeatCard>
       </div>
       <div className="rounded-2xl bg-chip px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-2">자리 ②를 열어 주는 동사들</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">자리 ②를 열어 주는 동사들</p>
         <ul className="mt-2 flex flex-wrap gap-2">
           {seatVerbs.map((v) => (
-            <li key={v.en} className="rounded-lg bg-card px-2.5 py-1 text-[14px]">
-              <span className="text-[15px] font-bold">
+            <li key={v.en} className="rounded-lg bg-card px-2.5 py-1 text-[13.5px]">
+              <span className="text-[14.5px] font-bold">
                 <En en={v.en} />
               </span>{" "}
               <span className="text-ink-2">{v.ko}</span>
@@ -114,16 +114,16 @@ export function AaAdjectiveOrder() {
             key={s.label}
             className={`rounded-2xl px-2 py-3 text-center ${s.noun ? "bg-sky-soft text-sky-ink" : "bg-mint-soft text-mint-ink"}`}
           >
-            <p className="text-[14px] font-extrabold">
+            <p className="text-[13.5px] font-extrabold">
               {i + 1}. {s.label}
             </p>
-            <p className="mt-1 text-[15px] font-medium text-ink">
+            <p className="mt-1 text-[14.5px] font-medium text-ink">
               <En en={s.en} />
             </p>
           </li>
         ))}
       </ol>
-      <p className="mt-2 text-center text-[14px] text-ink-2">
+      <p className="mt-2 text-center text-[13.5px] text-ink-2">
         명사에서 멀수록 사람마다 다른 생각, 가까울수록 잘 변하지 않는 성질이에요.
       </p>
       <ul className="mt-3 space-y-1.5">
@@ -132,7 +132,7 @@ export function AaAdjectiveOrder() {
             <span className="text-[1.1em] font-medium">
               <En en={e.en} />
             </span>
-            <span className="text-[14px] text-ink-2">{e.ko}</span>
+            <span className="text-[13.5px] text-ink-2">{e.ko}</span>
           </li>
         ))}
       </ul>
@@ -213,14 +213,14 @@ export function AaQuantityScale() {
       <div className="grid gap-3 sm:grid-cols-3">
         {scale.map((s) => (
           <div key={s.title} className="rounded-2xl border border-line px-4 py-3">
-            <p className={`text-[15px] font-extrabold ${s.tone}`}>{s.title}</p>
-            <p className="text-[14px] text-ink-2">{s.mood}</p>
+            <p className={`text-[14.5px] font-extrabold ${s.tone}`}>{s.title}</p>
+            <p className="text-[13.5px] text-ink-2">{s.mood}</p>
             <ul className="mt-2 space-y-2">
               {s.rows.map((r) => (
                 <li key={r.en} className="flex items-center gap-2">
                   {r.kind === "count" ? <Cookies n={s.count} /> : <Glass level={s.level} />}
                   <span className="min-w-0">
-                    <span className="block text-[14px] text-ink-3">{r.kind === "count" ? "셀 수 있어요" : "셀 수 없어요"}</span>
+                    <span className="block text-[13.5px] text-ink-3">{r.kind === "count" ? "셀 수 있어요" : "셀 수 없어요"}</span>
                     <span className="block text-[1.05em] font-medium">
                       <En en={r.en} />
                     </span>
@@ -232,10 +232,10 @@ export function AaQuantityScale() {
         ))}
       </div>
       <div className="rounded-2xl bg-chip px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-2">둘 다 쓸 수 있는 말</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">둘 다 쓸 수 있는 말</p>
         <p className="mt-2 flex flex-wrap gap-2">
           {bothWords.map((w) => (
-            <span key={w.en} className="rounded-lg bg-card px-2.5 py-1 text-[15px] font-medium">
+            <span key={w.en} className="rounded-lg bg-card px-2.5 py-1 text-[14.5px] font-medium">
               <En en={w.en} />
             </span>
           ))}
@@ -266,10 +266,10 @@ export function AaLyRules() {
       {lyRules.map((r) => (
         <div key={r.rule} className="rounded-2xl border border-line px-4 py-3">
           <p className="font-extrabold">{r.rule}</p>
-          <p className="text-[14px] text-ink-2">{r.how}</p>
+          <p className="text-[13.5px] text-ink-2">{r.how}</p>
           <ul className="mt-2 space-y-1">
             {r.pairs.map((p) => (
-              <li key={p.en} className="text-[15px] font-medium">
+              <li key={p.en} className="text-[14.5px] font-medium">
                 <En en={p.en} />
               </li>
             ))}
@@ -301,12 +301,12 @@ export function AaFrequencyBar() {
             <span className="block text-[1.08em] font-bold">
               <En en={f.en} />
             </span>
-            <span className="block text-[14px] leading-tight text-ink-2">{f.ko}</span>
+            <span className="block text-[13.5px] leading-tight text-ink-2">{f.ko}</span>
           </span>
           <span className="block h-4 overflow-hidden rounded-full bg-chip">
             <span className="block h-4 rounded-full bg-coral" style={{ width: `${f.p}%` }} />
           </span>
-          <span className="text-right text-[14px] font-bold text-ink-2">{f.label}</span>
+          <span className="text-right text-[13.5px] font-bold text-ink-2">{f.label}</span>
         </li>
       ))}
     </ul>
@@ -357,7 +357,7 @@ export function AaFrequencySeat() {
       <ul className="space-y-2">
         {seatRows.map((r) => (
           <li key={r.label} className="flex flex-col gap-2 rounded-2xl border border-line px-3 py-3 sm:flex-row sm:items-center sm:gap-4">
-            <span className="w-fit shrink-0 rounded-lg bg-chip px-2.5 py-1 text-[14px] font-extrabold sm:w-28">{r.label}</span>
+            <span className="w-fit shrink-0 rounded-lg bg-chip px-2.5 py-1 text-[13.5px] font-extrabold sm:w-28">{r.label}</span>
             <span lang="en" className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[1.15em] font-medium">
               {r.pieces.map((p, i) => (
                 <PieceChip key={i} p={p} />
@@ -366,7 +366,7 @@ export function AaFrequencySeat() {
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
         <span className="rounded-lg bg-coral px-2 py-1 text-white">동사</span>
         <span className="rounded-lg bg-amber-soft px-2 py-1 text-amber-ink">빈도부사</span>
         <span className="text-ink-2">be동사·조동사는 뒤, 일반동사는 앞</span>
@@ -396,14 +396,14 @@ export function AaLookAlikes() {
             <span className="block text-[1.15em] font-bold">
               <En en={w.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{w.ko}</span>
+            <span className="block text-[13.5px] text-ink-2">{w.ko}</span>
           </span>
           <ArrowRight size={18} className="text-ink-3" />
           <span className="min-w-0">
             <span className="block text-[1.15em] font-bold text-coral-ink">
               <En en={w.ly.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{w.ly.ko}</span>
+            <span className="block text-[13.5px] text-ink-2">{w.ly.ko}</span>
           </span>
         </li>
       ))}
@@ -438,18 +438,18 @@ export function AaRemoveTest() {
     <div className="grid gap-3 sm:grid-cols-2">
       {removeCases.map((c) => (
         <div key={c.en} className="rounded-2xl border border-line px-4 py-4">
-          <p className="text-[14px] font-extrabold text-ink-3">{c.tag}</p>
+          <p className="text-[13.5px] font-extrabold text-ink-3">{c.tag}</p>
           <p className="mt-1.5 text-[1.15em] font-medium">
             <En en={c.en} />
           </p>
-          <p className="mt-3 text-[14px] font-bold text-ink-2">빼 보면</p>
+          <p className="mt-3 text-[13.5px] font-bold text-ink-2">빼 보면</p>
           <p className="mt-1 text-[1.1em] font-medium">
             <En en={c.rest} />{" "}
             <span className="inline-block w-12 border-b-2 border-dashed border-ink-3 align-middle" aria-hidden />.
           </p>
-          <p className={`mt-1 text-[14px] ${c.ok ? "text-mint-ink" : "text-coral-ink"}`}>{c.verdict}</p>
+          <p className={`mt-1 text-[13.5px] ${c.ok ? "text-mint-ink" : "text-coral-ink"}`}>{c.verdict}</p>
           <p
-            className={`mt-3 w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${
+            className={`mt-3 w-fit rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${
               c.ok ? "bg-amber-soft text-amber-ink" : "bg-mint-soft text-mint-ink"
             }`}
           >
@@ -499,7 +499,7 @@ export function AaNarrowDown() {
                 <AaDog key={s} size={s} className={c.pick(s) ? (i > 0 ? "text-mint-ink" : "text-amber-ink") : "text-ink-3 opacity-25"} />
               ))}
             </p>
-            <p className="mt-2 text-[14px] text-ink-2">{c.note}</p>
+            <p className="mt-2 text-[13.5px] text-ink-2">{c.note}</p>
           </div>
         </Fragment>
       ))}
@@ -536,17 +536,17 @@ const moodCards: { title: string; mood: string; tone: string; border: string; ro
 export function AaGlassMood() {
   return (
     <div>
-      <p className="text-center text-[14px] font-extrabold text-ink-2">남은 양은 똑같아요. 말하는 사람의 마음이 달라요.</p>
+      <p className="text-center text-[13.5px] font-extrabold text-ink-2">남은 양은 똑같아요. 말하는 사람의 마음이 달라요.</p>
       <div className="mt-3 grid gap-3 sm:grid-cols-2">
         {moodCards.map((c) => (
           <div key={c.title} className={`rounded-2xl px-4 py-3 ${c.border}`}>
-            <p className={`w-fit rounded-2xl rounded-bl-sm bg-chip px-3 py-1.5 text-[15px] font-extrabold ${c.tone}`}>&ldquo;{c.title}&rdquo;</p>
+            <p className={`w-fit rounded-2xl rounded-bl-sm bg-chip px-3 py-1.5 text-[14.5px] font-extrabold ${c.tone}`}>&ldquo;{c.title}&rdquo;</p>
             <ul className="mt-3 space-y-2">
               {c.rows.map((r) => (
                 <li key={r.en} className="flex items-center gap-2">
                   {r.kind === "count" ? <Cookies n={2} /> : <Glass level={0.18} />}
                   <span className="min-w-0">
-                    <span className="block text-[14px] text-ink-3">{r.kind === "count" ? "셀 수 있어요" : "셀 수 없어요"}</span>
+                    <span className="block text-[13.5px] text-ink-3">{r.kind === "count" ? "셀 수 있어요" : "셀 수 없어요"}</span>
                     <span className="block text-[1.05em] font-medium">
                       <En en={r.en} />
                     </span>
@@ -554,7 +554,7 @@ export function AaGlassMood() {
                 </li>
               ))}
             </ul>
-            <p className={`mt-2.5 text-[14px] font-bold ${c.tone}`}>{c.mood}</p>
+            <p className={`mt-2.5 text-[13.5px] font-bold ${c.tone}`}>{c.mood}</p>
           </div>
         ))}
       </div>

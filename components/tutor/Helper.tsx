@@ -74,7 +74,7 @@ function AnswerCard({ item, speaking, onSpeak }: { item: FaqPayload; speaking: b
           </button>
         )}
       </div>
-      <div className="text-[15px] leading-relaxed">
+      <div className="text-[14.5px] leading-relaxed">
         <RichText text={item.a} />
       </div>
       {item.ex && item.ex.length > 0 && (
@@ -93,7 +93,7 @@ function AnswerCard({ item, speaking, onSpeak }: { item: FaqPayload; speaking: b
         </ul>
       )}
       {item.check && (
-        <p className="mt-2.5 flex items-start gap-2 text-[14px]">
+        <p className="mt-2.5 flex items-start gap-2 text-[13.5px]">
           <Mate mood="thinking" size={22} className="mt-0.5 shrink-0 text-ink" />
           <span>
             <b>확인해 볼까요?</b> {item.check}
@@ -204,7 +204,7 @@ export function Helper() {
         <span className="grid size-9 place-items-center rounded-full bg-on-ink/10">
           <Mate mood="listening" size={26} className="text-on-ink" />
         </span>
-        <span className="text-[14.5px] font-extrabold">
+        <span className="text-[14px] font-extrabold">
           <span className="sm:hidden">물어보기</span>
           <span className="hidden sm:inline">{brand.helperLabel}</span>
         </span>
@@ -245,10 +245,10 @@ export function Helper() {
       <div ref={listRef} className="min-h-40 flex-1 space-y-3 overflow-y-auto px-4 py-4" aria-live="polite">
         {turns.length === 0 && (
           <div>
-            <p className="text-[14.5px] text-ink-2">
+            <p className="text-[14px] text-ink-2">
               마이크를 누르고 말하거나, 아래에 적어 주세요. 예를 들면 &ldquo;a랑 an은 왜 달라요?&rdquo;처럼요.
             </p>
-            {loadError && <p className="mt-2 text-[14px] text-coral-ink">질문 은행을 불러오지 못했어요. 인터넷 연결을 확인해 주세요.</p>}
+            {loadError && <p className="mt-2 text-[13.5px] text-coral-ink">질문 은행을 불러오지 못했어요. 인터넷 연결을 확인해 주세요.</p>}
             {suggestions.length > 0 && (
               <div className="mt-3">
                 <p className="text-[12.5px] font-bold text-ink-3">{unit ? "이 단원에서 많이 묻는 질문" : "많이 묻는 질문"}</p>
@@ -272,13 +272,13 @@ export function Helper() {
 
         {turns.map((t) => (
           <div key={t.key} className="space-y-2">
-            <p className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-ink px-3.5 py-2 text-[14.5px] text-on-ink">{t.query}</p>
+            <p className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-ink px-3.5 py-2 text-[14px] text-on-ink">{t.query}</p>
             {t.answer ? (
               <AnswerCard item={t.answer} speaking={speakingKey === t.key} onSpeak={() => toggleSpeak(t.key, t.answer!)} />
             ) : (
               <div className="flex gap-2.5 rounded-2xl bg-coral-soft px-4 py-3">
                 <Mate mood="oops" size={28} className="mt-0.5 shrink-0 text-ink" />
-                <div className="text-[14.5px]">
+                <div className="text-[14px]">
                   <p className="font-extrabold text-coral-ink">아직 그 질문에 딱 맞는 답을 준비하지 못했어요.</p>
                   <p className="mt-0.5">
                     조금 다르게 물어보거나, <Link href="/learn" className="font-bold underline">전체 목차</Link>와{" "}
@@ -316,7 +316,7 @@ export function Helper() {
               ))}
           </div>
         ))}
-        {waiting && <p className="text-[14px] text-ink-3">질문 은행을 여는 중이에요…</p>}
+        {waiting && <p className="text-[13.5px] text-ink-3">질문 은행을 여는 중이에요…</p>}
       </div>
 
       <form
@@ -327,7 +327,7 @@ export function Helper() {
         className="border-t border-line px-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3"
       >
         {speech.listening && (
-          <p className="mb-2 rounded-xl bg-chip px-3 py-2 text-[14.5px]" aria-live="polite">
+          <p className="mb-2 rounded-xl bg-chip px-3 py-2 text-[14px]" aria-live="polite">
             {speech.interim || <span className="text-ink-3">말해 보세요…</span>}
           </p>
         )}
@@ -363,7 +363,7 @@ export function Helper() {
             onChange={(e) => setText(e.target.value)}
             placeholder={speech.supported ? "말하거나 적어 주세요" : "궁금한 것을 적어 주세요"}
             aria-label="질문"
-            className="h-12 min-w-0 flex-1 rounded-full border border-line bg-card px-4 text-[15.5px] outline-none focus:border-ink-3"
+            className="h-12 min-w-0 flex-1 rounded-full border border-line bg-card px-4 text-[15px] outline-none focus:border-ink-3"
           />
           <button
             type="submit"

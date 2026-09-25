@@ -11,7 +11,7 @@ function Mark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -23,8 +23,8 @@ function Mark({ ok }: { ok: boolean }) {
 function Card({ title, tone, children }: { title: string; tone: string; children: ReactNode }) {
   return (
     <li className="flex flex-col rounded-2xl border border-line">
-      <p className={`rounded-t-2xl px-4 py-2 text-[15px] font-extrabold ${tone}`}>{title}</p>
-      <div className="grid gap-1.5 px-4 py-3 text-[14.5px]">{children}</div>
+      <p className={`rounded-t-2xl px-4 py-2 text-[14.5px] font-extrabold ${tone}`}>{title}</p>
+      <div className="grid gap-1.5 px-4 py-3 text-[14px]">{children}</div>
     </li>
   );
 }
@@ -77,7 +77,7 @@ export function SnSubjectBracket() {
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <span className="rounded-lg border border-dashed border-ink-3 px-2 py-1 text-ink-3">( 꾸미는 말 )</span>
         <span>은 지우고</span>
         <span className="rounded-lg bg-coral-soft px-2 py-1 text-coral-ink">핵심 명사</span>
@@ -131,14 +131,14 @@ export function SnPronounMatch() {
     <ul className="grid gap-2.5 sm:grid-cols-2">
       {PRONOUNS.map((p) => (
         <li key={p.title} className="rounded-2xl border border-line px-4 py-3">
-          <p className="flex items-center gap-2 text-[15px] font-extrabold">
+          <p className="flex items-center gap-2 text-[14.5px] font-extrabold">
             <Mark ok={p.ok} />
             {p.title}
           </p>
           <p className="mt-1.5 text-[1.03em] font-medium">
             <En en={p.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{p.why}</p>
+          <p className="text-[13.5px] text-ink-2">{p.why}</p>
         </li>
       ))}
     </ul>
@@ -152,29 +152,29 @@ export function SnVoiceCheck() {
   return (
     <div className="grid gap-2.5">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[15px] font-extrabold">① 주어가 그 동작을 하나요, 당하나요?</p>
+        <p className="text-[14.5px] font-extrabold">① 주어가 그 동작을 하나요, 당하나요?</p>
         <div className="mt-2 grid gap-2 sm:grid-cols-2">
           <div className="rounded-xl bg-mint-soft px-3 py-2">
-            <p className="text-[14px] font-extrabold text-mint-ink">한다 → 능동</p>
+            <p className="text-[13.5px] font-extrabold text-mint-ink">한다 → 능동</p>
             <p className="text-[1.02em] font-medium">
               <En en="My uncle [[built]] this house." />
             </p>
           </div>
           <div className="rounded-xl bg-amber-soft px-3 py-2">
-            <p className="text-[14px] font-extrabold text-amber-ink">당한다 → be + p.p.</p>
+            <p className="text-[13.5px] font-extrabold text-amber-ink">당한다 → be + p.p.</p>
             <p className="text-[1.02em] font-medium">
               <En en="This house [[was built]] in 1990." />
             </p>
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <div className="flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight className="rotate-90 text-coral" />
         헷갈리면 뒤를 봐요
       </div>
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[15px] font-extrabold">② 타동사 뒤에 목적어가 있나요?</p>
-        <ul className="mt-2 grid gap-1.5 text-[14.5px]">
+        <p className="text-[14.5px] font-extrabold">② 타동사 뒤에 목적어가 있나요?</p>
+        <ul className="mt-2 grid gap-1.5 text-[14px]">
           <li className="flex items-start gap-2">
             <Mark ok />
             <span>
@@ -188,7 +188,7 @@ export function SnVoiceCheck() {
             </span>
           </li>
         </ul>
-        <p className="mt-2 text-[14px] text-ink-3">예외: 4형식·5형식 수동은 뒤에 말이 남아요 (was given a prize, is called Coco).</p>
+        <p className="mt-2 text-[13.5px] text-ink-3">예외: 4형식·5형식 수동은 뒤에 말이 남아요 (was given a prize, is called Coco).</p>
       </div>
     </div>
   );
@@ -219,11 +219,11 @@ export function SnNoPassive() {
             <p lang="en" className="font-extrabold">
               {v.en}
             </p>
-            <p className="text-[14px] text-ink-2">{v.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{v.ko}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px]">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px]">
         <Mark ok={false} />
         <span lang="en" className="font-bold line-through decoration-coral">
           The accident was happened last night.
@@ -257,7 +257,7 @@ export function SnComplementTable() {
             {c.verbs}
           </p>
           <p>
-            <span className="rounded-lg bg-coral-soft px-2 py-0.5 text-[14px] font-extrabold text-coral-ink">{c.form}</span>
+            <span className="rounded-lg bg-coral-soft px-2 py-0.5 text-[13.5px] font-extrabold text-coral-ink">{c.form}</span>
           </p>
           <p className="text-[1.02em] font-medium">
             <En en={c.en} />
@@ -285,7 +285,7 @@ export function SnCompleteCheck() {
         {COMPLETE_ROWS.map((r) => (
           <li key={r.en} className="flex items-start gap-3 rounded-2xl border border-line px-4 py-2.5">
             <span
-              className={`mt-0.5 shrink-0 rounded-lg px-2 py-0.5 text-[14px] font-extrabold ${
+              className={`mt-0.5 shrink-0 rounded-lg px-2 py-0.5 text-[13.5px] font-extrabold ${
                 r.full ? "bg-mint-soft text-mint-ink" : "bg-amber-soft text-amber-ink"
               }`}
             >
@@ -295,12 +295,12 @@ export function SnCompleteCheck() {
               <span lang="en" className="block font-bold">
                 {r.en}
               </span>
-              <span className="text-[14px] text-ink-2">{r.ko}</span>
+              <span className="text-[13.5px] text-ink-2">{r.ko}</span>
             </span>
           </li>
         ))}
       </ul>
-      <p className="mt-3 rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
+      <p className="mt-3 rounded-2xl bg-chip px-4 py-3 text-[14px]">
         <b>불완전</b> → 관계대명사(which, who, that) 또는 what · <b>완전</b> → 접속사 that 또는 관계부사(where, when, why)
       </p>
     </div>
@@ -327,7 +327,7 @@ export function SnWhichWord() {
             <span className="text-ink-3">vs</span>
             <span className="rounded-lg bg-coral-soft px-2.5 py-1 font-extrabold text-coral-ink">{p.b}</span>
           </p>
-          <p className="mt-1.5 text-[14.5px] font-bold">{p.test}</p>
+          <p className="mt-1.5 text-[14px] font-bold">{p.test}</p>
         </li>
       ))}
     </ul>
@@ -406,11 +406,11 @@ export function SnWhoPoints() {
                 ),
               )}
             </p>
-            <p className={`mt-1 text-[14px] font-bold ${r.tricky ? "text-coral-ink" : "text-ink-2"}`}>{r.rule}</p>
+            <p className={`mt-1 text-[13.5px] font-bold ${r.tricky ? "text-coral-ink" : "text-ink-2"}`}>{r.rule}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
         <span className="rounded-md bg-amber-soft px-2 py-0.5 text-amber-ink">선행사</span>
         <ArrowRight size={16} className="rotate-180 text-ink-3" />
         <span className="rounded-md bg-sky-soft px-2 py-0.5 text-sky-ink">관계대명사</span>
@@ -443,15 +443,15 @@ function FourRow({ r }: { r: (typeof FOUR_ROWS)[number] }) {
   return (
     <>
       <span className="grid place-items-center rounded-xl border-2 border-coral px-1.5 py-2">
-        <span className="text-[15px] font-extrabold text-coral-ink">{r.place}</span>
-        <span className="text-[14px] font-bold text-ink-3">{r.when}</span>
+        <span className="text-[14.5px] font-extrabold text-coral-ink">{r.place}</span>
+        <span className="text-[13.5px] font-bold text-ink-3">{r.when}</span>
       </span>
       {[r.active, r.passive].map((c) => (
         <span key={c.form} className="flex flex-col items-center justify-center gap-1 rounded-xl border border-line px-1.5 py-2">
-          <span className="text-[14px] font-extrabold">
+          <span className="text-[13.5px] font-extrabold">
             {c.form}
           </span>
-          <span className="text-[14.5px] font-medium">
+          <span className="text-[14px] font-medium">
             <En en={c.en} />
           </span>
         </span>
@@ -465,23 +465,23 @@ export function SnFourBoxes() {
   return (
     <div>
       <div className="grid grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)_minmax(0,1fr)] gap-1.5 text-center">
-        <span className="grid place-items-center rounded-xl bg-chip px-1.5 py-2 text-[14px] font-extrabold text-ink-2">
+        <span className="grid place-items-center rounded-xl bg-chip px-1.5 py-2 text-[13.5px] font-extrabold text-ink-2">
           ① 자리
           <br />② 태
         </span>
-        <span className="grid place-items-center rounded-xl bg-mint-soft px-1.5 py-2 text-[14.5px] font-extrabold text-mint-ink">
+        <span className="grid place-items-center rounded-xl bg-mint-soft px-1.5 py-2 text-[14px] font-extrabold text-mint-ink">
           능동
-          <span className="block text-[14px] font-bold">하는 쪽</span>
+          <span className="block text-[13.5px] font-bold">하는 쪽</span>
         </span>
-        <span className="grid place-items-center rounded-xl bg-amber-soft px-1.5 py-2 text-[14.5px] font-extrabold text-amber-ink">
+        <span className="grid place-items-center rounded-xl bg-amber-soft px-1.5 py-2 text-[14px] font-extrabold text-amber-ink">
           수동
-          <span className="block text-[14px] font-bold">당하는 쪽</span>
+          <span className="block text-[13.5px] font-bold">당하는 쪽</span>
         </span>
         {FOUR_ROWS.map((r) => (
           <FourRow key={r.place} r={r} />
         ))}
       </div>
-      <p className="mt-3 text-center text-[14px] font-bold text-ink-2">
+      <p className="mt-3 text-center text-[13.5px] font-bold text-ink-2">
         자리는 접속사·관계사 개수 + 1로, 태는 &lsquo;하나, 당하나&rsquo;와 목적어로 정해요.
       </p>
     </div>

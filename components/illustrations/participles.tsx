@@ -99,9 +99,9 @@ export function PtActivePassive() {
         {PT_AP_CARDS.map((c) => (
           <div key={c.key} className="rounded-2xl border border-line px-4 py-4">
             <p className="flex flex-wrap items-center gap-2">
-              <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${c.tone}`}>{c.tag}</span>
+              <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${c.tone}`}>{c.tag}</span>
             </p>
-            <p className="mt-1.5 text-[14px] font-bold text-ink-2">{c.meaning}</p>
+            <p className="mt-1.5 text-[13.5px] font-bold text-ink-2">{c.meaning}</p>
             <div className="mt-2 flex justify-center">{c.picture}</div>
             <ul className="mt-2 space-y-2">
               {c.rows.map((r) => (
@@ -109,14 +109,14 @@ export function PtActivePassive() {
                   <span className="block text-[1.1em] font-medium">
                     <En en={r.en} />
                   </span>
-                  <span className="block text-[14px] text-ink-2">{r.ko}</span>
+                  <span className="block text-[13.5px] text-ink-2">{r.ko}</span>
                 </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
-      <p className="mt-3 rounded-xl bg-chip px-3 py-2.5 text-center text-[14px] font-bold">
+      <p className="mt-3 rounded-xl bg-chip px-3 py-2.5 text-center text-[13.5px] font-bold">
         꾸밈받는 명사가 그 동작을 직접 하면 -ing, 당하거나 이미 끝났으면 p.p.
       </p>
     </div>
@@ -175,7 +175,7 @@ export function PtPosition() {
       {PT_POSITION.map((r) => (
         <li key={r.key} className="rounded-2xl border border-line px-4 py-4">
           <p className="font-extrabold">{r.title}</p>
-          <p className="text-[14px] text-ink-2">{r.sub}</p>
+          <p className="text-[13.5px] text-ink-2">{r.sub}</p>
           <p className="mt-3 flex flex-wrap items-center gap-2">
             {r.arrowBack ? (
               <>
@@ -192,7 +192,7 @@ export function PtPosition() {
               </>
             )}
           </p>
-          <p className="mt-3 text-[14.5px]">
+          <p className="mt-3 text-[14px]">
             <span className="font-bold text-ink-3">또: </span>
             <span className="font-medium">
               <En en={r.more.en} />
@@ -236,15 +236,15 @@ export function PtGerundVsParticiple() {
     <div className="grid gap-3 sm:grid-cols-2">
       {PT_GP.map((c) => (
         <div key={c.key} className="rounded-2xl border border-line px-4 py-4">
-          <p className={`w-fit rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${c.tone}`}>{c.tag}</p>
+          <p className={`w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${c.tone}`}>{c.tag}</p>
           <p className="mt-3 text-[1.25em] font-medium">
             <En en={c.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{c.ko}</p>
-          <p className={`mt-3 rounded-lg px-2.5 py-1.5 text-[14px] font-bold ${c.ok ? "bg-mint-soft text-mint-ink" : "bg-chip text-ink-2"}`}>
+          <p className="text-[13.5px] text-ink-2">{c.ko}</p>
+          <p className={`mt-3 rounded-lg px-2.5 py-1.5 text-[13.5px] font-bold ${c.ok ? "bg-mint-soft text-mint-ink" : "bg-chip text-ink-2"}`}>
             {c.test}
           </p>
-          <p className="mt-2 text-[14.5px]">
+          <p className="mt-2 text-[14px]">
             <span className="font-bold text-ink-3">= </span>
             <span className="font-medium">
               <En en={c.means.en} />
@@ -268,21 +268,21 @@ export function PtEmotionArrow() {
             <PtScreenIcon />
           </div>
           <p className="mt-2 font-extrabold text-coral-ink">영화: 감정을 일으키는 쪽</p>
-          <p className="text-[14px] text-ink-2">흥미를 &lsquo;주는&rsquo; 원인</p>
+          <p className="text-[13.5px] text-ink-2">흥미를 &lsquo;주는&rsquo; 원인</p>
           <p className="mx-auto mt-2 w-fit rounded-lg bg-card px-2.5 py-1 text-[1.1em] font-medium">
-            <En en="{interesting|형용사:흥미로운}" /> <span className="text-[14px] font-bold text-coral-ink">-ing</span>
+            <En en="{interesting|형용사:흥미로운}" /> <span className="text-[13.5px] font-bold text-coral-ink">-ing</span>
           </p>
         </div>
         <div className="flex flex-col items-center gap-1">
           <ArrowRight size={34} className="rotate-90 text-coral sm:rotate-0" />
-          <span className="text-[14px] font-bold text-ink-2">흥미를 줘요</span>
+          <span className="text-[13.5px] font-bold text-ink-2">흥미를 줘요</span>
         </div>
         <div className="rounded-2xl bg-sky-soft px-4 py-4 text-center">
           <PersonIcon size={44} className="mx-auto text-sky-ink" />
           <p className="mt-2 font-extrabold text-sky-ink">나: 감정을 느끼는 쪽</p>
-          <p className="text-[14px] text-ink-2">흥미를 &lsquo;받은&rsquo; 사람</p>
+          <p className="text-[13.5px] text-ink-2">흥미를 &lsquo;받은&rsquo; 사람</p>
           <p className="mx-auto mt-2 w-fit rounded-lg bg-card px-2.5 py-1 text-[1.1em] font-medium">
-            <En en="{interested|형용사:흥미를 느끼는}" /> <span className="text-[14px] font-bold text-sky-ink">p.p.</span>
+            <En en="{interested|형용사:흥미를 느끼는}" /> <span className="text-[13.5px] font-bold text-sky-ink">p.p.</span>
           </p>
         </div>
       </div>
@@ -291,13 +291,13 @@ export function PtEmotionArrow() {
           <span className="block text-[1.05em] font-medium">
             <En en="The movie is [[{interesting|형용사:흥미로운}]]." />
           </span>
-          <span className="block text-[14px] text-ink-2">그 영화는 흥미로워. (흥미를 주는 쪽)</span>
+          <span className="block text-[13.5px] text-ink-2">그 영화는 흥미로워. (흥미를 주는 쪽)</span>
         </li>
         <li className="rounded-xl border border-line px-3 py-2.5">
           <span className="block text-[1.05em] font-medium">
             <En en="I am [[{interested|형용사:흥미를 느끼는}]] in the movie." />
           </span>
-          <span className="block text-[14px] text-ink-2">나는 그 영화에 흥미가 있어. (흥미를 받은 쪽)</span>
+          <span className="block text-[13.5px] text-ink-2">나는 그 영화에 흥미가 있어. (흥미를 받은 쪽)</span>
         </li>
       </ul>
     </div>
@@ -333,26 +333,26 @@ export function PtEmotionPairs() {
               <span className="text-[1.1em] font-bold">
                 <En en={p.verb.en} />
               </span>
-              <span className="text-[14px] text-ink-2">{p.verb.ko}</span>
+              <span className="text-[13.5px] text-ink-2">{p.verb.ko}</span>
             </p>
             <div className="mt-2 grid grid-cols-2 gap-1.5">
               <span className="rounded-lg bg-coral-soft px-2 py-1.5">
                 <span className="block text-[1.02em] font-medium text-coral-ink">
                   <En en={p.ing.en} />
                 </span>
-                <span className="block text-[14px] text-ink-2">{p.ing.ko}</span>
+                <span className="block text-[13.5px] text-ink-2">{p.ing.ko}</span>
               </span>
               <span className="rounded-lg bg-sky-soft px-2 py-1.5">
                 <span className="block text-[1.02em] font-medium text-sky-ink">
                   <En en={p.pp.en} />
                 </span>
-                <span className="block text-[14px] text-ink-2">{p.pp.ko}</span>
+                <span className="block text-[13.5px] text-ink-2">{p.pp.ko}</span>
               </span>
             </div>
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
         <span className="rounded-full bg-coral-soft px-2.5 py-1 text-coral-ink">-ing: 감정을 일으키는 쪽</span>
         <span className="rounded-full bg-sky-soft px-2.5 py-1 text-sky-ink">p.p.: 감정을 느끼는 쪽</span>
       </p>
@@ -371,16 +371,16 @@ export function PtCostume() {
       {rows.map((r, i) => (
         <li key={r.kind} className={`rounded-2xl px-4 py-4 text-center ${i === 0 ? "bg-coral-soft" : "bg-mint-soft"}`}>
           {i === 0 ? (
-            <span className="mx-auto block w-fit rounded-lg bg-coral px-2.5 py-1 text-[14px] font-extrabold text-white">{r.kind}</span>
+            <span className="mx-auto block w-fit rounded-lg bg-coral px-2.5 py-1 text-[13.5px] font-extrabold text-white">{r.kind}</span>
           ) : (
-            <span className="mx-auto flex w-fit items-center gap-1.5 rounded-lg bg-card px-2.5 py-1 text-[14px] font-extrabold text-mint-ink">
+            <span className="mx-auto flex w-fit items-center gap-1.5 rounded-lg bg-card px-2.5 py-1 text-[13.5px] font-extrabold text-mint-ink">
               <MaskIcon size={20} /> {r.kind}
             </span>
           )}
           <p className="mt-3 text-[1.25em] font-medium">
             <En en={r.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{r.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{r.ko}</p>
         </li>
       ))}
     </ul>
@@ -409,7 +409,7 @@ function PtActor({ kind, label, focus }: { kind: PtActorKind; label: string; foc
       ) : (
         <PersonIcon size={34} className="text-ink" />
       )}
-      <span className="text-[14px] font-extrabold">{label}</span>
+      <span className="text-[13.5px] font-extrabold">{label}</span>
     </span>
   );
 }
@@ -453,24 +453,24 @@ export function PtPersonCause() {
       <div className="grid gap-3 sm:grid-cols-2">
         {PT_CAUSE.map((c) => (
           <div key={c.key} className="rounded-2xl border border-line px-4 py-4">
-            <p className={`w-fit rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${c.tone}`}>{c.tag}</p>
+            <p className={`w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${c.tone}`}>{c.tag}</p>
             <div className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-chip px-2 py-2.5">
               <PtActor {...c.from} />
               <span className="flex flex-col items-center">
                 <ArrowRight size={28} className="text-coral" />
-                <span className="text-[14px] font-bold text-ink-2">지루함</span>
+                <span className="text-[13.5px] font-bold text-ink-2">지루함</span>
               </span>
               <PtActor {...c.to} />
             </div>
             <p className="mt-3 text-[1.15em] font-medium">
               <En en={c.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{c.ko}</p>
-            <p className="mt-1 text-[14px] font-bold text-ink-3">{c.who}</p>
+            <p className="text-[13.5px] text-ink-2">{c.ko}</p>
+            <p className="mt-1 text-[13.5px] font-bold text-ink-3">{c.who}</p>
           </div>
         ))}
       </div>
-      <p className="mt-3 rounded-xl bg-chip px-3 py-2.5 text-center text-[14px] font-bold">
+      <p className="mt-3 rounded-xl bg-chip px-3 py-2.5 text-center text-[13.5px] font-bold">
         사람이냐 사물이냐가 아니라, 감정의 화살을 쏘느냐 맞느냐로 정해요.
       </p>
     </div>
@@ -527,7 +527,7 @@ const PT_HIDDEN: { key: string; bits: { en: string; tone: PtBitTone }[]; hidden:
 export function PtHiddenSentence() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-2 text-[15px] font-extrabold">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-extrabold">
         <span className="rounded-lg bg-marker px-2.5 py-1">목적어</span>
         <span aria-hidden>+</span>
         <span className="rounded-lg bg-mint-soft px-2.5 py-1 text-mint-ink">-ing</span>
@@ -542,11 +542,11 @@ export function PtHiddenSentence() {
                 <PtBit key={b.en} en={b.en} tone={b.tone} />
               ))}
             </p>
-            <p className="mt-2 text-[14px] text-ink-3">숨은 문장</p>
+            <p className="mt-2 text-[13.5px] text-ink-3">숨은 문장</p>
             <p className="text-[1.02em] font-medium">
               <En en={h.hidden.en} />
             </p>
-            <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${h.tone}`}>{h.judge}</p>
+            <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${h.tone}`}>{h.judge}</p>
           </li>
         ))}
       </ul>

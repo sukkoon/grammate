@@ -9,10 +9,10 @@ function Bin({ title, sub, tone, words }: { title: string; sub: string; tone: st
   return (
     <div className={`rounded-2xl px-4 py-4 ${tone}`}>
       <p className="font-extrabold">{title}</p>
-      <p className="text-[14px] opacity-80">{sub}</p>
+      <p className="text-[13.5px] opacity-80">{sub}</p>
       <p className="mt-2 flex flex-wrap gap-1.5">
         {words.map((w) => (
-          <span key={w} className="rounded-lg bg-card px-2 py-1 text-[15px] font-medium text-ink">
+          <span key={w} className="rounded-lg bg-card px-2 py-1 text-[14.5px] font-medium text-ink">
             <En en={w} />
           </span>
         ))}
@@ -39,10 +39,10 @@ function RuleCard({ rule, how, pairs }: { rule: string; how: string; pairs: [str
   return (
     <div className="rounded-2xl border border-line px-4 py-3">
       <p className="font-extrabold">{rule}</p>
-      <p className="text-[14px] text-ink-2">{how}</p>
+      <p className="text-[13.5px] text-ink-2">{how}</p>
       <ul className="mt-2 space-y-1">
         {pairs.map(([a, b]) => (
-          <li key={a} className="flex items-center gap-2 text-[15px] font-medium">
+          <li key={a} className="flex items-center gap-2 text-[14.5px] font-medium">
             <En en={a} />
             <span aria-hidden className="text-ink-3">
               →
@@ -77,10 +77,10 @@ function Vessel({ children, label, en }: { children: ReactNode; label: string; e
       <svg viewBox="0 0 48 48" className="size-12" aria-hidden>
         {children}
       </svg>
-      <p className="mt-1.5 text-[15px] font-medium">
+      <p className="mt-1.5 text-[14.5px] font-medium">
         <En en={en} />
       </p>
-      <p className="text-[14px] text-ink-2">{label}</p>
+      <p className="text-[13.5px] text-ink-2">{label}</p>
     </div>
   );
 }
@@ -137,12 +137,12 @@ export function NnNoRules() {
       {NN_NO_RULES.map((r, i) => (
         <div role="listitem" key={r.rule} className="flex flex-col rounded-2xl border border-line">
           <p className="flex items-center gap-2 rounded-t-2xl bg-sky-soft px-4 py-2.5 text-sky-ink">
-            <span className="grid size-7 shrink-0 place-items-center rounded-full bg-card text-[15px] font-extrabold">{i + 1}</span>
-            <span className="text-[16px] font-extrabold">{r.rule}</span>
+            <span className="grid size-7 shrink-0 place-items-center rounded-full bg-card text-[14.5px] font-extrabold">{i + 1}</span>
+            <span className="text-[15px] font-extrabold">{r.rule}</span>
           </p>
           <div className="grid gap-1.5 px-4 py-3">
             <p className="flex items-center gap-2">
-              <span className="grid size-6 shrink-0 place-items-center rounded-full bg-coral-soft text-[14px] font-extrabold text-coral-ink" aria-label="틀린 표현">
+              <span className="grid size-6 shrink-0 place-items-center rounded-full bg-coral-soft text-[13.5px] font-extrabold text-coral-ink" aria-label="틀린 표현">
                 ✕
               </span>
               <span lang="en" className="text-[1.03em] text-coral-ink line-through">
@@ -150,14 +150,14 @@ export function NnNoRules() {
               </span>
             </p>
             <p className="flex items-center gap-2">
-              <span className="grid size-6 shrink-0 place-items-center rounded-full bg-mint-soft text-[14px] font-extrabold text-mint-ink" aria-label="맞는 표현">
+              <span className="grid size-6 shrink-0 place-items-center rounded-full bg-mint-soft text-[13.5px] font-extrabold text-mint-ink" aria-label="맞는 표현">
                 ✓
               </span>
               <span className="text-[1.05em] font-medium">
                 <En en={r.en} />
               </span>
             </p>
-            <p className="mt-1 text-[14px] text-ink-2">
+            <p className="mt-1 text-[13.5px] text-ink-2">
               {r.hint}: <En en={r.more.en} className="font-bold text-ink" />
             </p>
           </div>
@@ -233,17 +233,17 @@ export function NnPairs() {
     <div className="grid gap-4">
       <div>
         <p className="font-extrabold">두 쪽이 모여 하나: 늘 복수</p>
-        <p className="text-[14px] text-ink-2">하나, 둘 셀 때는 a pair of(한 벌, 한 켤레)를 써요. 동사도 복수(are)예요.</p>
+        <p className="text-[13.5px] text-ink-2">하나, 둘 셀 때는 a pair of(한 벌, 한 켤레)를 써요. 동사도 복수(are)예요.</p>
         <div role="list" className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
           {NN_PAIRS.map((p) => (
             <div role="listitem" key={p.en} className="flex flex-col items-center rounded-2xl border border-line px-2 py-3 text-center">
               <svg viewBox="0 0 48 48" className="size-12" aria-hidden>
                 {p.draw}
               </svg>
-              <p className="mt-1.5 text-[15px] font-medium">
+              <p className="mt-1.5 text-[14.5px] font-medium">
                 <En en={p.en} />
               </p>
-              <p className="text-[14px] text-ink-2">{p.ko}</p>
+              <p className="text-[13.5px] text-ink-2">{p.ko}</p>
             </div>
           ))}
         </div>
@@ -264,7 +264,7 @@ export function NnPairs() {
             </div>
           ))}
         </div>
-        <p className="mt-2 text-[14px] text-ink-2">
+        <p className="mt-2 text-[13.5px] text-ink-2">
           <En en="sheep, deer" className="font-bold text-ink" />도 하나든 여럿이든 모양이 같아요. -s를 붙이지 않아요.
         </p>
       </div>
@@ -306,19 +306,19 @@ export function NnGlassCount() {
               <span className={`rounded-xl px-2.5 py-1 text-[1.2em] font-medium ${p.tone ?? "border border-line"}`}>
                 <En en={p.en} />
               </span>
-              {p.tag && <span className="text-[14px] font-extrabold text-ink-2">{p.tag}</span>}
+              {p.tag && <span className="text-[13.5px] font-extrabold text-ink-2">{p.tag}</span>}
             </span>
           ))}
         </p>
       </div>
-      <p className="mt-2 text-center text-[14px] text-ink-2">물 두 잔 · 세는 건 물이 아니라 잔이에요</p>
+      <p className="mt-2 text-center text-[13.5px] text-ink-2">물 두 잔 · 세는 건 물이 아니라 잔이에요</p>
       <div role="list" className="mt-3 grid gap-2 sm:grid-cols-3">
         {NN_COUNT_MORE.map((m) => (
           <div role="listitem" key={m.en} className="rounded-2xl border border-line px-3 py-2.5 text-center">
             <p className="text-[1.05em] font-medium">
               <En en={m.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{m.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{m.ko}</p>
           </div>
         ))}
       </div>
@@ -371,7 +371,7 @@ export function NnFewLittle() {
     <div className="grid gap-3 sm:grid-cols-2">
       {NN_FEW.map((f, i) => (
         <div key={f.kind} className="rounded-2xl border border-line">
-          <p className="rounded-t-2xl bg-chip px-4 py-2 text-[15px] font-extrabold">{f.kind}</p>
+          <p className="rounded-t-2xl bg-chip px-4 py-2 text-[14.5px] font-extrabold">{f.kind}</p>
           <div className="grid gap-2 px-4 py-3">
             <div className="flex items-center gap-3 rounded-xl bg-mint-soft px-3 py-2.5">
               {i === 0 ? <NnPeople n={3} /> : <NnMilkGlass top={28} />}
@@ -379,7 +379,7 @@ export function NnFewLittle() {
                 <span className="block text-[1.08em] font-medium">
                   <En en={f.plus.en} />
                 </span>
-                <span className="block text-[14px] font-bold text-mint-ink">{f.plus.ko} · 긍정</span>
+                <span className="block text-[13.5px] font-bold text-mint-ink">{f.plus.ko} · 긍정</span>
               </span>
             </div>
             <div className="flex items-center gap-3 rounded-xl bg-coral-soft px-3 py-2.5">
@@ -388,7 +388,7 @@ export function NnFewLittle() {
                 <span className="block text-[1.08em] font-medium">
                   <En en={f.minus.en} />
                 </span>
-                <span className="block text-[14px] font-bold text-coral-ink">{f.minus.ko} · 부정</span>
+                <span className="block text-[13.5px] font-bold text-coral-ink">{f.minus.ko} · 부정</span>
               </span>
             </div>
           </div>

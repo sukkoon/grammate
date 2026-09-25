@@ -30,8 +30,8 @@ export function CpStairs() {
                 <En en={s.en} />
               </span>
             </div>
-            <p className="mt-2 text-[14px] font-extrabold">{s.grade}</p>
-            <p className="text-[14px] text-ink-2">{s.ko}</p>
+            <p className="mt-2 text-[13.5px] font-extrabold">{s.grade}</p>
+            <p className="text-[13.5px] text-ink-2">{s.ko}</p>
           </div>
         ))}
       </div>
@@ -41,7 +41,7 @@ export function CpStairs() {
             <span className="text-[1.05em] font-medium">
               <En en={l.en} />
             </span>
-            <span className="text-[14px] text-ink-2">{l.ko}</span>
+            <span className="text-[13.5px] text-ink-2">{l.ko}</span>
           </li>
         ))}
       </ul>
@@ -55,10 +55,10 @@ function FormCard({ rule, how, rows, tone }: { rule: string; how: string; rows: 
   return (
     <div className="rounded-2xl border border-line px-4 py-3">
       <p className="font-extrabold">{rule}</p>
-      <p className="text-[14px] text-ink-2">{how}</p>
+      <p className="text-[13.5px] text-ink-2">{how}</p>
       <ul className="mt-2 space-y-1">
         {rows.map((r) => (
-          <li key={r.en} className={`w-fit rounded-md px-1.5 text-[15px] font-medium ${tone}`}>
+          <li key={r.en} className={`w-fit rounded-md px-1.5 text-[14.5px] font-medium ${tone}`}>
             <En en={r.en} />
           </li>
         ))}
@@ -130,21 +130,21 @@ export function CpSeesaw() {
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-3 py-3">
-        <p className="text-[14px] font-extrabold text-mint-ink">수평: 무게가 똑같아요</p>
+        <p className="text-[13.5px] font-extrabold text-mint-ink">수평: 무게가 똑같아요</p>
         <Seesaw tilt={0} label="고양이와 개가 시소에서 수평을 이룬 그림" />
         <p className="mt-2 text-[1.05em] font-medium">
           <En en="My cat is [[{as|부사:그만큼} heavy {as|접속사:…만큼}]] your dog." />
         </p>
-        <p className="text-[14px] text-ink-2">우리 고양이는 너희 개만큼 무거워.</p>
+        <p className="text-[13.5px] text-ink-2">우리 고양이는 너희 개만큼 무거워.</p>
       </div>
       <div className="rounded-2xl border border-line px-3 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">기울었어요: 개 쪽이 더 무거워요</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">기울었어요: 개 쪽이 더 무거워요</p>
         <Seesaw tilt={12} label="개 쪽으로 시소가 기운 그림" />
         <p className="mt-2 text-[1.05em] font-medium">
           <En en="My cat is [[not {as|부사:그만큼} heavy {as|접속사:…만큼}]] your dog." />
         </p>
-        <p className="text-[14px] text-ink-2">우리 고양이는 너희 개만큼 무겁지 않아.</p>
-        <p className="mt-1 text-[15px] font-medium">
+        <p className="text-[13.5px] text-ink-2">우리 고양이는 너희 개만큼 무겁지 않아.</p>
+        <p className="mt-1 text-[14.5px] font-medium">
           = <En en="Your dog is [[heavier than]] my cat." />
         </p>
       </div>
@@ -173,7 +173,7 @@ export function CpTimes() {
       <ul className="space-y-2.5" aria-label="1배, 두 배, 세 배 길이의 줄">
         {TIMES_BARS.map((b) => (
           <li key={b.tag}>
-            <p className="flex items-baseline justify-between gap-2 text-[14px]">
+            <p className="flex items-baseline justify-between gap-2 text-[13.5px]">
               <span className="font-bold">{b.ko}</span>
               <span lang="en" className={`font-extrabold ${b.tagTone}`}>
                 {b.tag}
@@ -189,7 +189,7 @@ export function CpTimes() {
             <span className="text-[1.05em] font-medium">
               <En en={l.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{l.ko}</span>
+            <span className="block text-[13.5px] text-ink-2">{l.ko}</span>
           </li>
         ))}
       </ul>
@@ -207,7 +207,7 @@ function RisingBars({ title, tone }: { title: string; tone: string }) {
         <span className={`w-5 rounded-t-md ${tone} h-10`} />
         <span className={`w-5 rounded-t-md ${tone} h-16`} />
       </div>
-      <p className="mt-2 text-center text-[14px] font-extrabold">{title}</p>
+      <p className="mt-2 text-center text-[13.5px] font-extrabold">{title}</p>
     </div>
   );
 }
@@ -224,7 +224,7 @@ export function CpTheMoreThe() {
       <p className="mt-4 text-center text-[1.1em] font-medium">
         <En en="[[The {more|부사:더 많이}]] you practice, [[the {better|부사:더 잘}]] you play." />
       </p>
-      <p className="mt-2 flex flex-wrap items-center justify-center gap-1.5 text-[14px] font-bold">
+      <p className="mt-2 flex flex-wrap items-center justify-center gap-1.5 text-[13.5px] font-bold">
         <span className="rounded-lg bg-sky-soft px-2 py-1 text-sky-ink">the + 비교급 + 주어 + 동사</span>
         <span className="text-ink-3">,</span>
         <span className="rounded-lg bg-coral-soft px-2 py-1 text-coral-ink">the + 비교급 + 주어 + 동사</span>
@@ -254,7 +254,7 @@ export function CpFiveWays() {
       <ol className="mt-3 space-y-2">
         {FIVE_WAYS.map((w, i) => (
           <li key={w.pat} className="rounded-2xl border border-line px-3 py-2.5">
-            <p className="w-fit rounded-lg bg-chip px-2 py-0.5 text-[14px] font-extrabold">
+            <p className="w-fit rounded-lg bg-chip px-2 py-0.5 text-[13.5px] font-extrabold">
               {i + 1}. {w.pat}
             </p>
             <p className="mt-1.5 text-[1.05em] font-medium">
@@ -273,7 +273,7 @@ function CpMark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -293,11 +293,11 @@ export function CpInOf() {
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-3 py-3">
         <p className="flex flex-wrap items-center gap-2">
-          <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-[15px] font-extrabold text-sky-ink">in + 장소·무리</span>
-          <span className="text-[14px] text-ink-2">울타리 하나 안에서</span>
+          <span className="rounded-lg bg-sky-soft px-2.5 py-1 text-[14.5px] font-extrabold text-sky-ink">in + 장소·무리</span>
+          <span className="text-[13.5px] text-ink-2">울타리 하나 안에서</span>
         </p>
         <div className="mt-3 rounded-2xl border-2 border-sky-ink/50 px-2 pb-1 pt-2" role="img" aria-label="한 반 울타리 안의 다섯 명 가운데 가장 큰 사람에게 왕관">
-          <p lang="en" className="text-[14px] font-extrabold text-sky-ink">
+          <p lang="en" className="text-[13.5px] font-extrabold text-sky-ink">
             our class
           </p>
           <div className="flex items-end justify-center gap-1.5">
@@ -312,26 +312,26 @@ export function CpInOf() {
         <p className="mt-2.5 text-[1.03em] font-medium">
           <En en="He is [[the tallest]] boy [[in]] our class." />
         </p>
-        <p lang="en" className="text-[14px] text-ink-2">in my family, in Korea, in the world</p>
+        <p lang="en" className="text-[13.5px] text-ink-2">in my family, in Korea, in the world</p>
       </div>
       <div className="rounded-2xl border border-line px-3 py-3">
         <p className="flex flex-wrap items-center gap-2">
-          <span className="rounded-lg bg-amber-soft px-2.5 py-1 text-[15px] font-extrabold text-amber-ink">of + 여럿</span>
-          <span className="text-[14px] text-ink-2">하나씩 세는 사람들 가운데</span>
+          <span className="rounded-lg bg-amber-soft px-2.5 py-1 text-[14.5px] font-extrabold text-amber-ink">of + 여럿</span>
+          <span className="text-[13.5px] text-ink-2">하나씩 세는 사람들 가운데</span>
         </p>
         <div className="mt-3 flex items-end justify-center gap-3 pb-1 pt-2" role="img" aria-label="삼 형제 가운데 가장 어린 막내에게 왕관">
           {BROTHER_HEIGHTS.map((h, i) => (
             <span key={h} className="flex flex-col items-center">
               {h === 28 && <CrownIcon size={18} className="text-coral" />}
               <PersonIcon size={h} className={h === 28 ? "text-coral" : "text-ink-3"} />
-              <span className="mt-1 grid size-6 place-items-center rounded-full bg-amber-soft text-[14px] font-extrabold text-amber-ink">{i + 1}</span>
+              <span className="mt-1 grid size-6 place-items-center rounded-full bg-amber-soft text-[13.5px] font-extrabold text-amber-ink">{i + 1}</span>
             </span>
           ))}
         </div>
         <p className="mt-2.5 text-[1.03em] font-medium">
           <En en="Minsu is [[the youngest]] [[of]] the three brothers." />
         </p>
-        <p lang="en" className="text-[14px] text-ink-2">of the three, of all, of my friends</p>
+        <p lang="en" className="text-[13.5px] text-ink-2">of the three, of all, of my friends</p>
       </div>
     </div>
   );
@@ -371,7 +371,7 @@ export function CpSyllables() {
             <span className="text-[1.05em] font-medium">
               <En en={r.en} />
             </span>
-            <span className={`rounded-md px-2 py-0.5 text-[14px] font-extrabold ${r.tone}`}>{r.how}</span>
+            <span className={`rounded-md px-2 py-0.5 text-[13.5px] font-extrabold ${r.tone}`}>{r.how}</span>
           </span>
         </li>
       ))}
@@ -409,7 +409,7 @@ export function CpEraseAs() {
               "off" in p ? (
                 <span key={i} className="relative rounded-md border-2 border-dashed border-coral/60 px-1.5 text-ink-3" aria-label="지운 as">
                   {p.off}
-                  <span className="absolute -right-1.5 -top-2 grid size-5 place-items-center rounded-full bg-coral text-[14px] font-extrabold leading-none text-white" aria-hidden>
+                  <span className="absolute -right-1.5 -top-2 grid size-5 place-items-center rounded-full bg-coral text-[13.5px] font-extrabold leading-none text-white" aria-hidden>
                     ✕
                   </span>
                 </span>
@@ -421,12 +421,12 @@ export function CpEraseAs() {
             )}
           </p>
           <p className="mt-2 flex flex-wrap items-center gap-2 border-t border-line pt-2">
-            <span className="text-[14px] font-extrabold text-ink-3">지우고 읽기</span>
+            <span className="text-[13.5px] font-extrabold text-ink-3">지우고 읽기</span>
             <ArrowRight size={16} className="text-ink-3" />
             <span className="font-medium">
               <En en={r.left.en} />
             </span>
-            <span className={`rounded-md px-2 py-0.5 text-[14px] font-extrabold ${r.tone}`}>{r.verdict}</span>
+            <span className={`rounded-md px-2 py-0.5 text-[13.5px] font-extrabold ${r.tone}`}>{r.verdict}</span>
           </p>
         </li>
       ))}
@@ -452,9 +452,9 @@ export function CpMuchGap() {
           <li key={r.title} className="rounded-2xl border border-line px-3 py-3">
             <p className="flex flex-wrap items-baseline gap-2">
               <span className="font-extrabold">{r.title}</span>
-              <span className="text-[14px] text-ink-2">{r.sub}</span>
+              <span className="text-[13.5px] text-ink-2">{r.sub}</span>
             </p>
-            <div className="mt-2 grid grid-cols-[4.5rem_1fr] items-center gap-x-2 gap-y-1.5 text-[14px] font-bold" aria-hidden>
+            <div className="mt-2 grid grid-cols-[4.5rem_1fr] items-center gap-x-2 gap-y-1.5 text-[13.5px] font-bold" aria-hidden>
               <span className="text-ink-2">내 자전거</span>
               <span className="h-3.5 rounded-full bg-ink-3/50" style={{ width: `${r.mine}%` }} />
               <span className="text-coral-ink">네 자전거</span>
@@ -466,7 +466,7 @@ export function CpMuchGap() {
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-1.5 text-[14px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-1.5 text-[13.5px] font-bold">
         <span className="text-ink-2">&lsquo;훨씬&rsquo; 자리에 오는 말</span>
         {MUCH_WORDS.map((w) => (
           <span key={w} lang="en" className="rounded-lg bg-coral-soft px-2 py-0.5 text-coral-ink">
@@ -488,7 +488,7 @@ const SEASONS = ["봄", "여름", "가을", "겨울"];
 function SeasonChip({ name }: { name: string }) {
   const summer = name === "여름";
   return (
-    <span className={`rounded-lg px-2.5 py-1 text-[15px] font-extrabold ${summer ? "bg-coral text-white" : "bg-chip text-ink"}`}>{name}</span>
+    <span className={`rounded-lg px-2.5 py-1 text-[14.5px] font-extrabold ${summer ? "bg-coral text-white" : "bg-chip text-ink"}`}>{name}</span>
   );
 }
 
@@ -508,7 +508,7 @@ export function CpOtherGroup() {
             <SeasonChip key={s} name={s} />
           ))}
         </div>
-        <p className="mt-2 text-[14px] text-ink-2">견주는 무리 안에 여름도 들어 있어요. 여름이 여름보다 더워야 하니 말이 안 돼요.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">견주는 무리 안에 여름도 들어 있어요. 여름이 여름보다 더워야 하니 말이 안 돼요.</p>
       </div>
       <div className="rounded-2xl border-2 border-mint-ink/50 px-3 py-3">
         <p className="flex items-center gap-2">
@@ -519,14 +519,14 @@ export function CpOtherGroup() {
         </p>
         <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
           <SeasonChip name="여름" />
-          <span className="text-[14px] font-extrabold text-ink-3">vs</span>
+          <span className="text-[13.5px] font-extrabold text-ink-3">vs</span>
           <span className="flex flex-wrap gap-1.5 rounded-2xl border-2 border-dashed border-mint-ink/60 px-2 py-2">
             {SEASONS.filter((s) => s !== "여름").map((s) => (
               <SeasonChip key={s} name={s} />
             ))}
           </span>
         </div>
-        <p className="mt-2 text-[14px] text-ink-2">
+        <p className="mt-2 text-[13.5px] text-ink-2">
           <b lang="en">other</b>가 여름을 무리 밖으로 빼 줘요. 남은 계절 하나하나와 견줘요.
         </p>
       </div>
@@ -556,7 +556,7 @@ export function CpEverTimeline() {
       <div className="px-1 pt-7" role="img" aria-label="과거부터 지금까지 먹어 본 피자 네 판 가운데 하나에 왕관">
         <div className="relative flex items-center justify-between">
           <span className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-ink-3/40" aria-hidden />
-          <span className="relative rounded-lg bg-chip px-2 py-0.5 text-[14px] font-extrabold text-ink-2">처음</span>
+          <span className="relative rounded-lg bg-chip px-2 py-0.5 text-[13.5px] font-extrabold text-ink-2">처음</span>
           {PIZZA_DOTS.map((best, i) => (
             <span key={i} className="relative flex flex-col items-center">
               {best && (
@@ -567,7 +567,7 @@ export function CpEverTimeline() {
               <Pizza best={best} />
             </span>
           ))}
-          <span className="relative flex items-center gap-1 rounded-lg bg-coral px-2 py-0.5 text-[14px] font-extrabold text-white">
+          <span className="relative flex items-center gap-1 rounded-lg bg-coral px-2 py-0.5 text-[13.5px] font-extrabold text-white">
             지금
             <ArrowRight size={14} />
           </span>
@@ -576,13 +576,13 @@ export function CpEverTimeline() {
       <div className="mt-3 flex items-center gap-2 px-1">
         <span className="h-2.5 flex-1 rounded-b-lg border-x-2 border-b-2 border-sky-ink" aria-hidden />
       </div>
-      <p className="mt-1 text-center text-[14px] font-bold text-sky-ink">
+      <p className="mt-1 text-center text-[13.5px] font-bold text-sky-ink">
         <span lang="en">have ever eaten</span> = 지금까지 먹어 본 (현재완료)
       </p>
       <p className="mt-3 text-center text-[1.05em] font-medium">
         <En en="This is [[the most delicious]] pizza I [[{have|조동사:완료형을 만드는 말} ever eaten]]." />
       </p>
-      <p className="text-center text-[14px] text-ink-2">이건 내가 지금까지 먹어 본 피자 중 가장 맛있어.</p>
+      <p className="text-center text-[13.5px] text-ink-2">이건 내가 지금까지 먹어 본 피자 중 가장 맛있어.</p>
     </div>
   );
 }

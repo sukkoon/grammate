@@ -123,7 +123,7 @@ function Pc2StepList({ steps }: { steps: Pc2StepData[] }) {
       {steps.map((s) => (
         <li key={s.key} className={`rounded-2xl px-4 py-3 ${s.last ? "bg-mint-soft/60 ring-2 ring-mint-ink/40" : "border border-line"}`}>
           <p className="flex flex-wrap items-baseline gap-x-2">
-            <span className={`rounded-lg px-2 py-0.5 text-[14px] font-extrabold ${s.key === "start" ? "bg-chip text-ink-2" : "bg-ink text-on-ink"}`}>
+            <span className={`rounded-lg px-2 py-0.5 text-[13.5px] font-extrabold ${s.key === "start" ? "bg-chip text-ink-2" : "bg-ink text-on-ink"}`}>
               {s.step}
             </span>
             <span className="font-extrabold">{s.title}</span>
@@ -133,7 +133,7 @@ function Pc2StepList({ steps }: { steps: Pc2StepData[] }) {
               <Pc2Word key={i} bit={b} />
             ))}
           </p>
-          <p className="mt-1.5 text-[14px] text-ink-2">{s.note}</p>
+          <p className="mt-1.5 text-[13.5px] text-ink-2">{s.note}</p>
         </li>
       ))}
     </ol>
@@ -232,13 +232,13 @@ export function Pc2Meanings() {
       {PC2_MEANINGS.map((m) => (
         <li key={m.name} className="rounded-2xl border border-line px-3.5 py-3">
           <p className="flex flex-wrap items-baseline gap-x-2">
-            <span className="rounded-lg bg-amber-soft px-2 py-0.5 text-[14px] font-extrabold text-amber-ink">{m.name}</span>
-            <span className="text-[14px] text-ink-2">{m.conj}</span>
+            <span className="rounded-lg bg-amber-soft px-2 py-0.5 text-[13.5px] font-extrabold text-amber-ink">{m.name}</span>
+            <span className="text-[13.5px] text-ink-2">{m.conj}</span>
           </p>
           <p className="mt-2 text-[1.05em] font-medium">
             <En en={m.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{m.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{m.ko}</p>
         </li>
       ))}
     </ul>
@@ -292,7 +292,7 @@ export function Pc2FormGrid() {
     <ul className="grid gap-2.5 sm:grid-cols-2">
       {PC2_FORMS.map((f) => (
         <li key={f.key} className="rounded-2xl border border-line px-3.5 py-3">
-          <p className="flex flex-wrap gap-1.5 text-[14px] font-bold">
+          <p className="flex flex-wrap gap-1.5 text-[13.5px] font-bold">
             <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.time}</span>
             <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
           </p>
@@ -302,7 +302,7 @@ export function Pc2FormGrid() {
           <p className="mt-2 text-[1.02em] font-medium">
             <En en={f.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{f.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{f.ko}</p>
         </li>
       ))}
     </ul>
@@ -327,19 +327,19 @@ export function Pc2HavingTimeline() {
       </svg>
       <div className="mt-2 grid gap-2 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
         <div className="rounded-2xl bg-sky-soft px-3.5 py-3">
-          <p className="text-[14px] font-extrabold text-sky-ink">① 먼저 · Having p.p.</p>
+          <p className="text-[13.5px] font-extrabold text-sky-ink">① 먼저 · Having p.p.</p>
           <p className="mt-1 text-[1.05em] font-medium">
             <En en={PC2_BEFORE.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{PC2_BEFORE.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{PC2_BEFORE.ko}</p>
         </div>
         <ArrowRight size={26} className="mx-auto rotate-90 text-ink-3 sm:rotate-0" />
         <div className="rounded-2xl bg-coral-soft px-3.5 py-3">
-          <p className="text-[14px] font-extrabold text-coral-ink">② 나중 · 주절</p>
+          <p className="text-[13.5px] font-extrabold text-coral-ink">② 나중 · 주절</p>
           <p className="mt-1 text-[1.05em] font-medium">
             <En en={PC2_AFTER.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{PC2_AFTER.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{PC2_AFTER.ko}</p>
         </div>
       </div>
     </div>
@@ -376,14 +376,14 @@ export function Pc2WhoDoes() {
           <p className="text-[1.08em] font-medium">
             <En en={o.en} />
           </p>
-          <p className="mt-2.5 flex flex-wrap items-center gap-2 text-[14px] font-bold">
+          <p className="mt-2.5 flex flex-wrap items-center gap-2 text-[13.5px] font-bold">
             <span className="text-ink-3">주인(주절의 주어)</span>
-            <span className="rounded-lg bg-marker px-2 py-0.5 text-[15px] text-ink">
+            <span className="rounded-lg bg-marker px-2 py-0.5 text-[14.5px] text-ink">
               <En en={o.owner.en} />
             </span>
           </p>
-          <p className="mt-1.5 text-[14px] text-ink-2">{o.q}</p>
-          <p className={`mt-1.5 w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${o.tone}`}>{o.a}</p>
+          <p className="mt-1.5 text-[13.5px] text-ink-2">{o.q}</p>
+          <p className={`mt-1.5 w-fit rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${o.tone}`}>{o.a}</p>
         </li>
       ))}
     </ul>
@@ -413,7 +413,7 @@ const PC2_WITH: { key: string; en: string; hidden: { en: string }; judge: string
 export function Pc2WithNoun() {
   return (
     <div>
-      <p className="flex flex-wrap items-center justify-center gap-2 text-[15px] font-extrabold">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-extrabold">
         <span lang="en" className="rounded-lg bg-chip px-2.5 py-1">
           with
         </span>
@@ -430,11 +430,11 @@ export function Pc2WithNoun() {
             <p className="text-[1.15em] font-medium">
               <En en={w.en} />
             </p>
-            <p className="mt-2 text-[14px] text-ink-3">숨은 문장</p>
+            <p className="mt-2 text-[13.5px] text-ink-3">숨은 문장</p>
             <p className="text-[1.02em] font-medium">
               <En en={w.hidden.en} />
             </p>
-            <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[14px] font-extrabold ${w.tone}`}>{w.judge}</p>
+            <p className={`mt-2 w-fit rounded-lg px-2.5 py-1 text-[13.5px] font-extrabold ${w.tone}`}>{w.judge}</p>
           </li>
         ))}
       </ul>

@@ -62,7 +62,7 @@ export function VerbHuntClient({ rounds, title }: { rounds: HuntRound[]; title: 
         </p>
       </div>
       <div className="px-4 py-5 sm:px-5">
-        <p className="text-[14px] text-ink-2">
+        <p className="text-[13.5px] text-ink-2">
           문장에서 <b className="text-coral-ink">진짜 동사</b>를 눌러 보세요. 이 문장의 진짜 동사는 <b>{verbIdx.length}개</b>예요.
         </p>
         <p lang="en" className="mt-4 flex flex-wrap items-end gap-x-1.5 gap-y-3 text-[1.3em] font-medium leading-none">
@@ -127,11 +127,11 @@ export function VerbHuntClient({ rounds, title }: { rounds: HuntRound[]; title: 
             {round.why && <p className="mt-2 text-[0.93em] text-ink-2">{round.why}</p>}
             <div className="mt-3">
               {r < rounds.length - 1 ? (
-                <button type="button" onClick={() => go(r + 1)} className="rounded-full bg-ink px-5 py-2.5 text-[15px] font-bold text-on-ink">
+                <button type="button" onClick={() => go(r + 1)} className="rounded-full bg-ink px-5 py-2.5 text-[14.5px] font-bold text-on-ink">
                   다음 문장
                 </button>
               ) : (
-                <button type="button" onClick={() => go(0)} className="rounded-full border border-line bg-card px-5 py-2.5 text-[15px] font-bold">
+                <button type="button" onClick={() => go(0)} className="rounded-full border border-line bg-card px-5 py-2.5 text-[14.5px] font-bold">
                   처음부터 다시
                 </button>
               )}

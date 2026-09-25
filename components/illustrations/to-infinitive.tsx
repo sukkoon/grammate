@@ -19,7 +19,7 @@ function Mark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -73,14 +73,14 @@ export function TiThreeJobs() {
         <Chip className="border border-line">to</Chip>
         <span aria-hidden>+</span>
         <Chip className="bg-coral text-white">동사원형</Chip>
-        <span className="text-[15px] font-bold text-ink-2">= 변장한 동사 하나, 일은 세 가지</span>
+        <span className="text-[14.5px] font-bold text-ink-2">= 변장한 동사 하나, 일은 세 가지</span>
       </p>
       <ul className="mt-4 grid gap-2.5 sm:grid-cols-3">
         {JOBS.map((j) => (
           <li key={j.job} className="flex flex-col rounded-2xl border border-line">
             <div className={`rounded-t-2xl px-4 py-2.5 ${TONE[j.tone]}`}>
-              <p className="text-[16px] font-extrabold">{j.job}</p>
-              <p className="text-[14px] font-bold">
+              <p className="text-[15px] font-extrabold">{j.job}</p>
+              <p className="text-[13.5px] font-bold">
                 {j.q} · {j.ko}
               </p>
             </div>
@@ -88,8 +88,8 @@ export function TiThreeJobs() {
               <p className="text-[1.05em] font-medium">
                 <En en={j.en} />
               </p>
-              <p className="text-[14px] text-ink-2">{j.enKo}</p>
-              <p className="mt-1.5 text-[14px] font-bold text-ink-3">{j.note}</p>
+              <p className="text-[13.5px] text-ink-2">{j.enKo}</p>
+              <p className="mt-1.5 text-[13.5px] font-bold text-ink-3">{j.note}</p>
             </div>
           </li>
         ))}
@@ -105,7 +105,7 @@ export function TiItMove() {
   return (
     <div className="mx-auto grid max-w-xl gap-3">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">머리가 무거운 문장</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">머리가 무거운 문장</p>
         <p className="mt-2 flex flex-wrap items-center gap-2 text-[1.08em]">
           <Chip className="bg-coral-soft text-coral-ink">
             <En en="To learn a new language" />
@@ -117,14 +117,14 @@ export function TiItMove() {
             <En en="fun." />
           </Chip>
         </p>
-        <p className="mt-1.5 text-[14px] text-ink-2">주어가 길어서 진짜 동사 is가 한참 뒤에 나와요.</p>
+        <p className="mt-1.5 text-[13.5px] text-ink-2">주어가 길어서 진짜 동사 is가 한참 뒤에 나와요.</p>
       </div>
-      <div className="flex items-center justify-center gap-2 text-[14px] font-bold text-ink-2">
+      <div className="flex items-center justify-center gap-2 text-[13.5px] font-bold text-ink-2">
         <ArrowRight className="rotate-90 text-coral" />
         긴 주어는 뒤로, 빈자리에는 it
       </div>
       <div className="rounded-2xl border-2 border-coral px-4 py-3">
-        <p className="text-[14px] font-extrabold text-coral-ink">가볍게 시작하는 문장</p>
+        <p className="text-[13.5px] font-extrabold text-coral-ink">가볍게 시작하는 문장</p>
         <p className="mt-2 flex flex-wrap items-center gap-2 text-[1.08em]">
           <Chip className="border-2 border-dashed border-ink-3">
             <En en="{It|대명사:가주어 (뜻 없이 자리만 채워요)}" />
@@ -139,7 +139,7 @@ export function TiItMove() {
             <En en="to learn a new language." />
           </Chip>
         </p>
-        <div className="mt-2 grid gap-1.5 text-[14px] sm:grid-cols-2">
+        <div className="mt-2 grid gap-1.5 text-[13.5px] sm:grid-cols-2">
           <p>
             <span className="font-extrabold">It</span> = 가주어. &lsquo;그것&rsquo;이라고 해석하지 않아요.
           </p>
@@ -171,12 +171,12 @@ export function TiNounTag() {
         <Chip className="bg-chip">명사</Chip>
         <span aria-hidden>+</span>
         <Chip className="bg-mint-soft text-mint-ink">to부정사 꼬리표</Chip>
-        <span className="text-[15px] font-bold text-ink-2">= &lsquo;~할 명사&rsquo;</span>
+        <span className="text-[14.5px] font-bold text-ink-2">= &lsquo;~할 명사&rsquo;</span>
       </p>
       <ul className="mt-4 grid gap-2 sm:grid-cols-2">
         {TAGS.map((t) => (
           <li key={t.en} className="rounded-2xl border border-line px-4 py-2.5">
-            <p className="flex flex-wrap items-center gap-x-2 text-[14.5px] text-ink-2">
+            <p className="flex flex-wrap items-center gap-x-2 text-[14px] text-ink-2">
               <span>원래:</span>
               <span lang="en" className="font-bold">
                 {t.from}
@@ -184,9 +184,9 @@ export function TiNounTag() {
             </p>
             <p className="mt-1 flex flex-wrap items-center gap-2 text-[1.08em] font-medium">
               <En en={t.en} />
-              {t.prep && <span className="rounded-md bg-coral-soft px-1.5 text-[14px] font-extrabold text-coral-ink">{t.prep} 남아요</span>}
+              {t.prep && <span className="rounded-md bg-coral-soft px-1.5 text-[13.5px] font-extrabold text-coral-ink">{t.prep} 남아요</span>}
             </p>
-            <p className="text-[14px] text-ink-2">{t.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{t.ko}</p>
           </li>
         ))}
       </ul>
@@ -246,15 +246,15 @@ export function TiAdverbUses() {
       {ADVERB_USES.map((u, i) => (
         <li key={u.use} className={`rounded-2xl border border-line px-4 py-3 ${i === 0 ? "sm:col-span-2" : ""}`}>
           <div className="flex flex-wrap items-center gap-2">
-            <Chip className="bg-amber-soft text-[15px] text-amber-ink">{u.use}</Chip>
-            <span className="text-[15px] font-extrabold">{u.ko}</span>
-            <span className="text-[14px] font-bold text-ink-3">&ldquo;{u.q}&rdquo;</span>
+            <Chip className="bg-amber-soft text-[14.5px] text-amber-ink">{u.use}</Chip>
+            <span className="text-[14.5px] font-extrabold">{u.ko}</span>
+            <span className="text-[13.5px] font-bold text-ink-3">&ldquo;{u.q}&rdquo;</span>
           </div>
           <p className="mt-1.5 text-[1.05em] font-medium">
             <En en={u.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{u.enKo}</p>
-          <p className="mt-1 text-[14px] font-bold text-ink-3">{u.hint}</p>
+          <p className="text-[13.5px] text-ink-2">{u.enKo}</p>
+          <p className="mt-1 text-[13.5px] font-bold text-ink-3">{u.hint}</p>
         </li>
       ))}
     </ul>
@@ -283,35 +283,35 @@ export function TiTooEnough() {
         <div className="rounded-2xl border border-line px-4 py-3">
           <p className="flex items-center gap-2">
             <Mark ok={false} />
-            <span className="text-[16px] font-extrabold text-coral-ink">too + 형용사 + to</span>
+            <span className="text-[15px] font-extrabold text-coral-ink">too + 형용사 + to</span>
           </p>
           <Gauge fill={94} over />
-          <p className="mt-1 text-[14px] font-bold text-ink-2">무거움이 &lsquo;들 수 있는 선&rsquo;을 넘었어요</p>
+          <p className="mt-1 text-[13.5px] font-bold text-ink-2">무거움이 &lsquo;들 수 있는 선&rsquo;을 넘었어요</p>
           <p className="mt-2 text-[1.06em] font-medium">
             <En en="The box is [[too heavy to lift]]." />
           </p>
-          <p className="text-[14px] text-ink-2">상자가 너무 무거워서 들 수 없어.</p>
-          <p className="mt-1.5 text-[14px] font-bold">
+          <p className="text-[13.5px] text-ink-2">상자가 너무 무거워서 들 수 없어.</p>
+          <p className="mt-1.5 text-[13.5px] font-bold">
             = so heavy that I <span className="text-coral-ink">can&apos;t</span> lift it
           </p>
         </div>
         <div className="rounded-2xl border border-line px-4 py-3">
           <p className="flex items-center gap-2">
             <Mark ok />
-            <span className="text-[16px] font-extrabold text-mint-ink">형용사 + enough + to</span>
+            <span className="text-[15px] font-extrabold text-mint-ink">형용사 + enough + to</span>
           </p>
           <Gauge fill={72} over={false} />
-          <p className="mt-1 text-[14px] font-bold text-ink-2">힘이 &lsquo;들 수 있는 선&rsquo;에 닿았어요</p>
+          <p className="mt-1 text-[13.5px] font-bold text-ink-2">힘이 &lsquo;들 수 있는 선&rsquo;에 닿았어요</p>
           <p className="mt-2 text-[1.06em] font-medium">
             <En en="Minho is [[strong enough to lift]] the box." />
           </p>
-          <p className="text-[14px] text-ink-2">민호는 그 상자를 들 만큼 힘이 세.</p>
-          <p className="mt-1.5 text-[14px] font-bold">
+          <p className="text-[13.5px] text-ink-2">민호는 그 상자를 들 만큼 힘이 세.</p>
+          <p className="mt-1.5 text-[13.5px] font-bold">
             = so strong that he <span className="text-mint-ink">can</span> lift the box
           </p>
         </div>
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <span>자리 주의:</span>
         <Chip className="bg-mint-soft text-mint-ink">old enough</Chip>
         <span className="text-ink-3">enough old ✕</span>
@@ -344,16 +344,16 @@ export function TiWhTo() {
             <p className="text-[1.08em] font-bold">
               <En en={`[[${w.en}]]`} />
             </p>
-            <p className="text-[14px] text-ink-2">{w.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{w.ko}</p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
         <Chip className="bg-sky-soft text-sky-ink">의문사 + to부정사</Chip>
         <span aria-hidden>=</span>
         <Chip className="border border-line">의문사 + 주어 + should + 동사원형</Chip>
       </p>
-      <p className="mt-2 text-center text-[14px] text-ink-2">
+      <p className="mt-2 text-center text-[13.5px] text-ink-2">
         <span lang="en" className="font-bold">
           why to
         </span>
@@ -376,9 +376,9 @@ export function TiForOf() {
         <div className="rounded-2xl border border-line px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
             <Chip className="bg-sky-soft text-[1.05em] text-sky-ink">for + 사람</Chip>
-            <span className="text-[15px] font-extrabold">그 일이 어떤지</span>
+            <span className="text-[14.5px] font-extrabold">그 일이 어떤지</span>
           </p>
-          <p lang="en" className="mt-2 flex flex-wrap gap-1.5 text-[14.5px]">
+          <p lang="en" className="mt-2 flex flex-wrap gap-1.5 text-[14px]">
             {FOR_WORDS.map((w) => (
               <span key={w} className="rounded-md bg-chip px-2 py-0.5">
                 {w}
@@ -388,14 +388,14 @@ export function TiForOf() {
           <p className="mt-2 text-[1.04em] font-medium">
             <En en="It is hard [[{for|전치사:(to부정사의 주어) ~가} me]] to wake up early." />
           </p>
-          <p className="text-[14px] text-ink-2">내가 일찍 일어나는 것은 어려워.</p>
+          <p className="text-[13.5px] text-ink-2">내가 일찍 일어나는 것은 어려워.</p>
         </div>
         <div className="rounded-2xl border-2 border-coral px-4 py-3">
           <p className="flex flex-wrap items-center gap-2">
             <Chip className="bg-coral-soft text-[1.05em] text-coral-ink">of + 사람</Chip>
-            <span className="text-[15px] font-extrabold">그 사람이 어떤지 (성격)</span>
+            <span className="text-[14.5px] font-extrabold">그 사람이 어떤지 (성격)</span>
           </p>
-          <p lang="en" className="mt-2 flex flex-wrap gap-1.5 text-[14.5px]">
+          <p lang="en" className="mt-2 flex flex-wrap gap-1.5 text-[14px]">
             {OF_WORDS.map((w) => (
               <span key={w} className="rounded-md bg-chip px-2 py-0.5">
                 {w}
@@ -405,10 +405,10 @@ export function TiForOf() {
           <p className="mt-2 text-[1.04em] font-medium">
             <En en="It was kind [[{of|전치사:(to부정사의 주어) ~가} you]] to help me." />
           </p>
-          <p className="text-[14px] text-ink-2">네가 나를 도와주다니 친절했어.</p>
+          <p className="text-[13.5px] text-ink-2">네가 나를 도와주다니 친절했어.</p>
         </div>
       </div>
-      <div className="mt-3 rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
+      <div className="mt-3 rounded-2xl bg-chip px-4 py-3 text-[14px]">
         <p className="font-extrabold">헷갈리면 사람을 주어로 바꿔 보세요</p>
         <ul className="mt-1.5 grid gap-1.5 sm:grid-cols-2">
           <li className="flex items-center gap-2">
@@ -455,7 +455,7 @@ const TENSE_ROWS: { en: string; ko: string; same: boolean; that: string }[] = [
 function Dot({ label, tone }: { label: string; tone: "real" | "verbal" }) {
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-[14px] font-extrabold ${
+      className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-[13.5px] font-extrabold ${
         tone === "real" ? "bg-coral text-white" : "bg-sky-soft text-sky-ink"
       }`}
     >
@@ -469,7 +469,7 @@ function Dot({ label, tone }: { label: string; tone: "real" | "verbal" }) {
 export function TiTenseShift() {
   return (
     <div className="mx-auto max-w-xl">
-      <div className="grid grid-cols-[1fr_1fr] gap-2 text-center text-[14.5px] font-extrabold">
+      <div className="grid grid-cols-[1fr_1fr] gap-2 text-center text-[14px] font-extrabold">
         <span className="rounded-lg bg-chip py-1">더 먼저 (과거)</span>
         <span className="rounded-lg bg-chip py-1">지금 (seems)</span>
       </div>
@@ -486,14 +486,14 @@ export function TiTenseShift() {
             <p className="mt-2 text-[1.05em] font-medium">
               <En en={r.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{r.ko}</p>
-            <p lang="en" className="mt-1 text-[14px] font-bold text-ink-3">
+            <p className="text-[13.5px] text-ink-2">{r.ko}</p>
+            <p lang="en" className="mt-1 text-[13.5px] font-bold text-ink-3">
               {r.that}
             </p>
           </li>
         ))}
       </ul>
-      <p className="mt-3 grid gap-1.5 text-[14.5px] font-bold sm:grid-cols-2">
+      <p className="mt-3 grid gap-1.5 text-[14px] font-bold sm:grid-cols-2">
         <span className="rounded-xl bg-sky-soft px-3 py-2 text-sky-ink">to 동사원형: 진짜 동사와 같은 때 (또는 그 뒤)</span>
         <span className="rounded-xl bg-amber-soft px-3 py-2 text-amber-ink">to have p.p.: 진짜 동사보다 더 먼저</span>
       </p>
@@ -513,14 +513,14 @@ const FIXED_ROWS: { tag: string; subj: { en: string }; verb: { en: string } }[] 
 export function TiFixedTo() {
   return (
     <div className="mx-auto max-w-xl">
-      <p className="flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+      <p className="flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
         <span className="rounded-full bg-coral px-2.5 py-1 text-white">진짜 동사: 주어·때 따라 바뀌어요</span>
         <span className="rounded-full bg-sky-soft px-2.5 py-1 text-sky-ink">to부정사: 늘 그대로</span>
       </p>
       <ul className="mt-3 grid gap-2">
         {FIXED_ROWS.map((r) => (
           <li key={r.tag} className="flex flex-wrap items-center gap-1.5 rounded-2xl border border-line px-3.5 py-2.5 text-[1.08em]">
-            <span className="mr-1 rounded-full bg-chip px-2.5 py-0.5 text-[14px] font-bold text-ink-2">{r.tag}</span>
+            <span className="mr-1 rounded-full bg-chip px-2.5 py-0.5 text-[13.5px] font-bold text-ink-2">{r.tag}</span>
             <span className="font-medium">
               <En en={r.subj.en} />
             </span>
@@ -536,7 +536,7 @@ export function TiFixedTo() {
           </li>
         ))}
       </ul>
-      <p className="mt-3 flex items-center justify-center gap-1.5 text-center text-[14.5px] font-bold text-ink-2">
+      <p className="mt-3 flex items-center justify-center gap-1.5 text-center text-[14px] font-bold text-ink-2">
         <CrownIcon size={18} className="shrink-0 text-coral" />
         옷을 갈아입는 건 진짜 동사뿐, to 뒤는 언제나 동사원형이에요.
       </p>
@@ -565,15 +565,15 @@ export function TiLookAhead() {
             <CrownIcon size={18} />
             지금: 진짜 동사
           </p>
-          <p className="text-[14px] text-ink-2">바라고, 정하고, 약속해요</p>
+          <p className="text-[13.5px] text-ink-2">바라고, 정하고, 약속해요</p>
         </div>
         <div className="flex flex-col items-center gap-0.5">
           <ArrowRight size={30} className="rotate-90 text-amber-ink sm:rotate-0" />
-          <span className="text-[14px] font-bold text-amber-ink">to = ~ 쪽으로</span>
+          <span className="text-[13.5px] font-bold text-amber-ink">to = ~ 쪽으로</span>
         </div>
         <div className="rounded-2xl bg-amber-soft px-4 py-3 text-center">
           <p className="font-extrabold text-amber-ink">앞으로: to + 동사원형</p>
-          <p className="text-[14px] text-ink-2">아직 하지 않은 일</p>
+          <p className="text-[13.5px] text-ink-2">아직 하지 않은 일</p>
         </div>
       </div>
       <ul className="mt-3 grid grid-cols-2 gap-2 min-[420px]:grid-cols-3">
@@ -582,7 +582,7 @@ export function TiLookAhead() {
             <span className="block text-[1.05em] font-bold">
               <En en={v.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{v.ko}</span>
+            <span className="block text-[13.5px] text-ink-2">{v.ko}</span>
           </li>
         ))}
       </ul>
@@ -590,7 +590,7 @@ export function TiLookAhead() {
         <span className="block text-[1.05em] font-medium">
           <En en="We plan [[to visit]] Grandma this Sunday." />
         </span>
-        <span className="block text-[14px] text-ink-2">우리는 이번 일요일에 할머니 댁에 가려고 계획하고 있어. (가는 건 아직 앞으로의 일)</span>
+        <span className="block text-[13.5px] text-ink-2">우리는 이번 일요일에 할머니 댁에 가려고 계획하고 있어. (가는 건 아직 앞으로의 일)</span>
       </p>
     </div>
   );
@@ -603,7 +603,7 @@ export function TiEnoughSpot() {
   return (
     <div className="grid gap-2.5 sm:grid-cols-2">
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">형용사·부사 + enough</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">형용사·부사 + enough</p>
         <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.08em]">
           <Chip className="bg-mint-soft text-mint-ink">
             <En en="warm" />
@@ -613,12 +613,12 @@ export function TiEnoughSpot() {
           </Chip>
           <Mark ok />
         </p>
-        <p className="mt-1.5 text-[14px] font-bold text-ink-2">형용사·부사가 enough 앞에 서요</p>
+        <p className="mt-1.5 text-[13.5px] font-bold text-ink-2">형용사·부사가 enough 앞에 서요</p>
         <p className="mt-2 text-[1.04em] font-medium">
           <En en="The soup is [[warm enough]] to eat now." />
         </p>
-        <p className="text-[14px] text-ink-2">수프가 이제 먹기 딱 좋을 만큼 따뜻해.</p>
-        <p className="mt-2 flex items-center gap-2 text-[14px] text-ink-3">
+        <p className="text-[13.5px] text-ink-2">수프가 이제 먹기 딱 좋을 만큼 따뜻해.</p>
+        <p className="mt-2 flex items-center gap-2 text-[13.5px] text-ink-3">
           <Mark ok={false} />
           <span lang="en" className="font-bold line-through decoration-coral decoration-2">
             enough warm
@@ -626,7 +626,7 @@ export function TiEnoughSpot() {
         </p>
       </div>
       <div className="rounded-2xl border border-line px-4 py-3">
-        <p className="text-[14px] font-extrabold text-ink-3">enough + 명사</p>
+        <p className="text-[13.5px] font-extrabold text-ink-3">enough + 명사</p>
         <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[1.08em]">
           <Chip className="bg-coral text-white">
             <En en="enough" />
@@ -636,11 +636,11 @@ export function TiEnoughSpot() {
           </Chip>
           <Mark ok />
         </p>
-        <p className="mt-1.5 text-[14px] font-bold text-ink-2">명사는 enough 뒤에 와요</p>
+        <p className="mt-1.5 text-[13.5px] font-bold text-ink-2">명사는 enough 뒤에 와요</p>
         <p className="mt-2 text-[1.04em] font-medium">
           <En en="Do we have [[enough eggs]] to make a cake?" />
         </p>
-        <p className="text-[14px] text-ink-2">케이크를 만들 만큼 달걀이 충분히 있어?</p>
+        <p className="text-[13.5px] text-ink-2">케이크를 만들 만큼 달걀이 충분히 있어?</p>
       </div>
     </div>
   );
@@ -693,7 +693,7 @@ export function TiFormGrid() {
     <ul className="grid gap-2.5 sm:grid-cols-2">
       {TI_FORMS.map((f) => (
         <li key={f.key} className="rounded-2xl border border-line px-3.5 py-3">
-          <p className="flex flex-wrap gap-1.5 text-[14px] font-bold">
+          <p className="flex flex-wrap gap-1.5 text-[13.5px] font-bold">
             <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">진짜 동사와 {f.time}</span>
             <span className="rounded-full bg-chip px-2.5 py-0.5 text-ink-2">{f.rel}</span>
           </p>
@@ -703,7 +703,7 @@ export function TiFormGrid() {
           <p className="mt-2 text-[1.02em] font-medium">
             <En en={f.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{f.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{f.ko}</p>
         </li>
       ))}
     </ul>

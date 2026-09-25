@@ -32,39 +32,39 @@ export function PnOneOrIt() {
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl border border-line">
         <div className="rounded-t-2xl bg-sky-soft px-4 py-2.5 text-sky-ink">
-          <p className="text-[16px] font-extrabold">it = 바로 그것</p>
-          <p className="text-[14px] font-bold">잃어버렸던 그 펜을 다시 가리켜요</p>
+          <p className="text-[15px] font-extrabold">it = 바로 그것</p>
+          <p className="text-[13.5px] font-bold">잃어버렸던 그 펜을 다시 가리켜요</p>
         </div>
         <div className="px-4 py-3">
           <div className="flex items-center justify-center gap-3">
             <span className="flex flex-col items-center">
               <PnPen color="var(--coral)" faded />
-              <span className="text-[14px] text-ink-2">잃어버린 펜</span>
+              <span className="text-[13.5px] text-ink-2">잃어버린 펜</span>
             </span>
             <ArrowRight className="text-ink-3" />
             <span className="flex flex-col items-center">
               <PnPicked>
                 <PnPen color="var(--coral)" />
               </PnPicked>
-              <span className="mt-1 text-[14px] font-bold text-coral-ink">같은 펜</span>
+              <span className="mt-1 text-[13.5px] font-bold text-coral-ink">같은 펜</span>
             </span>
           </div>
           <p className="mt-2 text-[1.03em] font-medium">
             <En en={PN_IT.en} />
           </p>
-          <p className="text-[14px] text-ink-2">펜을 찾았어. 그걸 찾았어!</p>
+          <p className="text-[13.5px] text-ink-2">펜을 찾았어. 그걸 찾았어!</p>
         </div>
       </div>
       <div className="rounded-2xl border border-line">
         <div className="rounded-t-2xl bg-amber-soft px-4 py-2.5 text-amber-ink">
-          <p className="text-[16px] font-extrabold">one = 같은 종류의 다른 하나</p>
-          <p className="text-[14px] font-bold">펜이라는 종류 가운데 아무거나 하나</p>
+          <p className="text-[15px] font-extrabold">one = 같은 종류의 다른 하나</p>
+          <p className="text-[13.5px] font-bold">펜이라는 종류 가운데 아무거나 하나</p>
         </div>
         <div className="px-4 py-3">
           <div className="flex items-center justify-center gap-3">
             <span className="flex flex-col items-center">
               <PnPen color="var(--coral)" faded />
-              <span className="text-[14px] text-ink-2">잃어버린 펜</span>
+              <span className="text-[13.5px] text-ink-2">잃어버린 펜</span>
             </span>
             <ArrowRight className="text-ink-3" />
             <span className="flex flex-col items-center">
@@ -75,13 +75,13 @@ export function PnOneOrIt() {
                 </PnPicked>
                 <PnPen color="var(--amber-ink)" />
               </span>
-              <span className="mt-1 text-[14px] font-bold text-amber-ink">새 펜 하나</span>
+              <span className="mt-1 text-[13.5px] font-bold text-amber-ink">새 펜 하나</span>
             </span>
           </div>
           <p className="mt-2 text-[1.03em] font-medium">
             <En en={PN_ONE.en} />
           </p>
-          <p className="text-[14px] text-ink-2">펜을 잃어버렸어. 새 거 하나가 필요해.</p>
+          <p className="text-[13.5px] text-ink-2">펜을 잃어버렸어. 새 거 하나가 필요해.</p>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@ export function PnHimHimself() {
         <p className="mt-1 text-[1.08em] font-medium">
           <En en={PN_HIM.en} />
         </p>
-        <p className="text-[14px] text-ink-2">그가 (다른) 그를 다치게 했어. 두 사람이에요.</p>
+        <p className="text-[13.5px] text-ink-2">그가 (다른) 그를 다치게 했어. 두 사람이에요.</p>
       </div>
       <div className="rounded-2xl border-2 border-coral/60 px-4 py-3">
         <svg viewBox="0 0 220 142" className="mx-auto w-full max-w-[260px]" role="img" aria-label="그가 자기 자신을 다치게 했어요">
@@ -146,7 +146,7 @@ export function PnHimHimself() {
         <p className="mt-1 text-[1.08em] font-medium">
           <En en={PN_HIMSELF.en} />
         </p>
-        <p className="text-[14px] text-ink-2">그가 (자기 자신을) 다쳤어. 한 사람이에요.</p>
+        <p className="text-[13.5px] text-ink-2">그가 (자기 자신을) 다쳤어. 한 사람이에요.</p>
       </div>
     </div>
   );
@@ -187,8 +187,8 @@ export function PnSelfBuilder() {
         {PN_SELF.map((l) => (
           <div key={l.lane} className="rounded-2xl border border-line">
             <p className={`rounded-t-2xl px-4 py-2.5 ${l.tone}`}>
-              <span className="block text-[16px] font-extrabold">{l.lane}</span>
-              <span className="block text-[14px] font-bold">{l.sub}</span>
+              <span className="block text-[15px] font-extrabold">{l.lane}</span>
+              <span className="block text-[13.5px] font-bold">{l.sub}</span>
             </p>
             <div role="list" className="grid gap-2 px-4 py-3">
               {l.rows.map((r) => (
@@ -206,21 +206,21 @@ export function PnSelfBuilder() {
                       <En en={r.en} />
                     </span>
                   </p>
-                  {r.note && <p className="text-[14px] text-ink-2">{r.note}</p>}
+                  {r.note && <p className="text-[13.5px] text-ink-2">{r.note}</p>}
                 </div>
               ))}
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[14px] font-bold">
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[13.5px] font-bold">
         <span className="grid size-6 place-items-center rounded-full bg-coral-soft text-coral-ink" aria-label="틀린 말">
           ✕
         </span>
-        <span lang="en" className="text-[15px] text-coral-ink line-through">
+        <span lang="en" className="text-[14.5px] text-coral-ink line-through">
           hisself
         </span>
-        <span lang="en" className="text-[15px] text-coral-ink line-through">
+        <span lang="en" className="text-[14.5px] text-coral-ink line-through">
           theirselves
         </span>
         <span className="text-ink-2">3인칭은 소유격(his, their)이 아니라 목적격에 붙여요.</span>

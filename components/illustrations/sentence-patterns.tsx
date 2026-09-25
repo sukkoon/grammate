@@ -40,7 +40,7 @@ function Block({ role, en, label }: Piece) {
       <span className={`rounded-xl px-2.5 py-1.5 text-[1.08em] font-medium leading-snug ${ROLE_STYLE[role]}`}>
         <En en={en} />
       </span>
-      <span className="whitespace-nowrap text-[14px] font-extrabold text-ink-2">{label ?? `${role} · ${ROLE_KO[role]}`}</span>
+      <span className="whitespace-nowrap text-[13.5px] font-extrabold text-ink-2">{label ?? `${role} · ${ROLE_KO[role]}`}</span>
     </span>
   );
 }
@@ -66,7 +66,7 @@ function Legend() {
   return (
     <ul className="mt-4 flex flex-wrap gap-2">
       {items.map((it) => (
-        <li key={it.role} className={`rounded-full px-2.5 py-1 text-[14px] font-bold ${ROLE_STYLE[it.role]}`}>
+        <li key={it.role} className={`rounded-full px-2.5 py-1 text-[13.5px] font-bold ${ROLE_STYLE[it.role]}`}>
           {it.text}
         </li>
       ))}
@@ -143,16 +143,16 @@ export function SpFivePatterns() {
         {PATTERNS.map((p) => (
           <li key={p.n} className="rounded-2xl border border-line px-3 py-3 sm:px-4">
             <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="rounded-lg bg-ink px-2 py-0.5 text-[14px] font-extrabold text-on-ink">{p.n}</span>
+              <span className="rounded-lg bg-ink px-2 py-0.5 text-[13.5px] font-extrabold text-on-ink">{p.n}</span>
               <span lang="en" className="font-extrabold">
                 {p.formula}
               </span>
-              <span className="text-[14px] text-ink-2">{p.hint}</span>
+              <span className="text-[13.5px] text-ink-2">{p.hint}</span>
             </p>
             <div className="mt-3">
               <Blocks pieces={p.pieces} />
             </div>
-            <p className="mt-2 text-[14px] text-ink-2">{p.ko}</p>
+            <p className="mt-2 text-[13.5px] text-ink-2">{p.ko}</p>
           </li>
         ))}
       </ol>
@@ -189,15 +189,15 @@ export function SpPatternSteps() {
             <CrownIcon size={22} className="shrink-0 text-coral" />
             1. 진짜 동사 찾기
           </p>
-          <p className="mt-1 text-[14px] text-ink-2">왕관을 쓴 동사 하나. 형식은 이 동사가 정해요.</p>
+          <p className="mt-1 text-[13.5px] text-ink-2">왕관을 쓴 동사 하나. 형식은 이 동사가 정해요.</p>
         </li>
         <li className="rounded-2xl border-2 border-dashed border-ink-3/60 px-4 py-3">
           <p className="font-extrabold">2. 수식어에 괄호 치기</p>
-          <p className="mt-1 text-[14px] text-ink-2">부사, &lsquo;전치사 + 명사&rsquo; 덩어리는 빼도 문장이 무너지지 않아요.</p>
+          <p className="mt-1 text-[13.5px] text-ink-2">부사, &lsquo;전치사 + 명사&rsquo; 덩어리는 빼도 문장이 무너지지 않아요.</p>
         </li>
         <li className="rounded-2xl bg-chip px-4 py-3">
           <p className="font-extrabold">3. 동사 뒤 덩어리 세기</p>
-          <p className="mt-1 text-[14px] text-ink-2">괄호 밖에 몇 개 남았는지, 서로 어떤 사이인지 봐요.</p>
+          <p className="mt-1 text-[13.5px] text-ink-2">괄호 밖에 몇 개 남았는지, 서로 어떤 사이인지 봐요.</p>
         </li>
       </ol>
       <div className="my-3 flex justify-center">
@@ -206,13 +206,13 @@ export function SpPatternSteps() {
       <ul className="grid gap-2.5 sm:grid-cols-3">
         {BRANCHES.map((b) => (
           <li key={b.left} className="rounded-2xl border border-line px-4 py-3">
-            <p className="text-[14px] font-extrabold text-ink-3">남은 덩어리 {b.left}</p>
+            <p className="text-[13.5px] font-extrabold text-ink-3">남은 덩어리 {b.left}</p>
             <ul className="mt-2 space-y-2.5">
               {b.results.map((r) => (
                 <li key={r.r}>
                   <p className="flex flex-wrap items-center gap-x-2">
-                    <span className="rounded-lg bg-ink px-2 py-0.5 text-[14px] font-extrabold text-on-ink">{r.r}</span>
-                    <span className="text-[14px] text-ink-2">{r.when}</span>
+                    <span className="rounded-lg bg-ink px-2 py-0.5 text-[13.5px] font-extrabold text-on-ink">{r.r}</span>
+                    <span className="text-[13.5px] text-ink-2">{r.when}</span>
                   </p>
                   <p className="mt-1 font-medium">
                     <En en={r.en} />
@@ -249,24 +249,24 @@ export function SpSenseVerbs() {
               <span lang="en" className="text-[1.15em] font-extrabold">
                 {s.verb}
               </span>
-              <span className="text-[14px] text-ink-2">{s.mean}</span>
+              <span className="text-[13.5px] text-ink-2">{s.mean}</span>
             </span>
             <span className="mt-1 block font-medium">
               <En en={s.en} />
             </span>
-            <span className="block text-[14px] text-ink-2">{s.ko}</span>
+            <span className="block text-[13.5px] text-ink-2">{s.ko}</span>
           </span>
         </li>
       ))}
       <li className="rounded-2xl bg-amber-soft px-4 py-3 text-amber-ink">
         <p className="font-extrabold">뒤에 오는 말</p>
-        <p className="mt-1 text-[14px]">
+        <p className="mt-1 text-[13.5px]">
           형용사 → 감각동사 + <b>형용사</b>
         </p>
         <p className="font-medium">
           <En en="You look [[happy]]." />
         </p>
-        <p className="mt-1 text-[14px]">
+        <p className="mt-1 text-[13.5px]">
           명사 → 감각동사 + <b>like</b> + 명사
         </p>
         <p className="font-medium">
@@ -321,21 +321,21 @@ export function SpGiveArrows() {
     <div>
       <div className="rounded-2xl border border-line px-3 py-3 sm:px-4">
         <p className="flex flex-wrap items-center gap-2">
-          <span className="rounded-lg bg-ink px-2 py-0.5 text-[14px] font-extrabold text-on-ink">4형식</span>
-          <span className="text-[14px] text-ink-2">사람 먼저, 물건 나중</span>
+          <span className="rounded-lg bg-ink px-2 py-0.5 text-[13.5px] font-extrabold text-on-ink">4형식</span>
+          <span className="text-[13.5px] text-ink-2">사람 먼저, 물건 나중</span>
         </p>
         <div className="mt-3">
           <Blocks pieces={GIVE_4} />
         </div>
       </div>
-      <p className="my-2.5 flex items-center justify-center gap-2 text-center text-[14px] font-bold text-coral-ink">
+      <p className="my-2.5 flex items-center justify-center gap-2 text-center text-[13.5px] font-bold text-coral-ink">
         <ArrowRight size={20} className="shrink-0 rotate-90" />
         물건을 앞으로, 사람 앞에는 전치사
       </p>
       <div className="rounded-2xl border border-line px-3 py-3 sm:px-4">
         <p className="flex flex-wrap items-center gap-2">
-          <span className="rounded-lg bg-ink px-2 py-0.5 text-[14px] font-extrabold text-on-ink">3형식</span>
-          <span className="text-[14px] text-ink-2">&lsquo;전치사 + 사람&rsquo;은 수식어가 돼요</span>
+          <span className="rounded-lg bg-ink px-2 py-0.5 text-[13.5px] font-extrabold text-on-ink">3형식</span>
+          <span className="text-[13.5px] text-ink-2">&lsquo;전치사 + 사람&rsquo;은 수식어가 돼요</span>
         </p>
         <div className="mt-3">
           <Blocks pieces={GIVE_3} />
@@ -347,14 +347,14 @@ export function SpGiveArrows() {
             <p lang="en" className="text-[1.5em] font-extrabold leading-none text-coral-ink">
               {pr.p}
             </p>
-            <p className="mt-1.5 text-[14px] font-bold">{pr.hint}</p>
-            <p lang="en" className="mt-1.5 text-[14px] text-ink-2">
+            <p className="mt-1.5 text-[13.5px] font-bold">{pr.hint}</p>
+            <p lang="en" className="mt-1.5 text-[13.5px] text-ink-2">
               {pr.verbs}
             </p>
             <p className="mt-2 font-medium">
               <En en={pr.en} />
             </p>
-            <p className="text-[14px] text-ink-2">{pr.ko}</p>
+            <p className="text-[13.5px] text-ink-2">{pr.ko}</p>
           </li>
         ))}
       </ul>
@@ -413,7 +413,7 @@ export function SpOCBox() {
               <Blocks pieces={row.pieces.slice(2)} />
             </span>
           </div>
-          <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-[14px] text-amber-ink">
+          <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-[13.5px] text-amber-ink">
             <span className="font-extrabold">숨은 문장</span>
             <span className="text-[1.1em] font-medium text-ink">
               <En en={row.hidden.en} />
@@ -483,15 +483,15 @@ export function SpOCForms() {
           <p lang="en" className="font-extrabold">
             {f.verbs}
             {f.kind && (
-              <span lang="ko" className="ml-2 text-[14px] font-bold text-ink-3">
+              <span lang="ko" className="ml-2 text-[13.5px] font-bold text-ink-3">
                 {f.kind}
               </span>
             )}
           </p>
           <p className="mt-1.5 flex flex-wrap items-center gap-2">
-            <span className="text-[14px] text-ink-2">목적격보어</span>
+            <span className="text-[13.5px] text-ink-2">목적격보어</span>
             <span
-              className={`inline-flex items-center gap-1.5 rounded-lg px-2 py-0.5 text-[14px] font-extrabold ${
+              className={`inline-flex items-center gap-1.5 rounded-lg px-2 py-0.5 text-[13.5px] font-extrabold ${
                 f.disguise ? "bg-amber-soft text-amber-ink" : "bg-chip text-ink"
               }`}
             >
@@ -502,7 +502,7 @@ export function SpOCForms() {
           <p className="mt-2 font-medium">
             <En en={f.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{f.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{f.ko}</p>
         </li>
       ))}
     </ul>
@@ -512,14 +512,14 @@ export function SpOCForms() {
 /* ───────── 공통: 작은 역할 칩, 맞음·틀림 표시 ───────── */
 
 function RoleMini({ role }: { role: Role }) {
-  return <span className={`rounded-md px-2 py-0.5 text-[14px] font-extrabold ${ROLE_STYLE[role]}`}>{role}</span>;
+  return <span className={`rounded-md px-2 py-0.5 text-[13.5px] font-extrabold ${ROLE_STYLE[role]}`}>{role}</span>;
 }
 
 function SpMark({ ok }: { ok: boolean }) {
   return (
     <span
       aria-label={ok ? "맞는 문장" : "틀린 문장"}
-      className={`grid size-7 shrink-0 place-items-center rounded-full text-[15px] font-extrabold ${
+      className={`grid size-7 shrink-0 place-items-center rounded-full text-[14.5px] font-extrabold ${
         ok ? "bg-mint-soft text-mint-ink" : "bg-coral-soft text-coral-ink"
       }`}
     >
@@ -574,9 +574,9 @@ export function SpBracketOff() {
       {BRACKET_OFF.map((row) => (
         <li key={row.ko} className="rounded-2xl border border-line px-3 py-3 sm:px-4">
           <Blocks pieces={row.pieces} />
-          <p className="mt-2 text-[14px] text-ink-2">{row.ko}</p>
+          <p className="mt-2 text-[13.5px] text-ink-2">{row.ko}</p>
           <p className="mt-2 flex flex-wrap items-center gap-1.5 border-t border-line pt-2">
-            <span className="mr-1 text-[14px] font-extrabold text-ink-3">괄호 밖 뼈대</span>
+            <span className="mr-1 text-[13.5px] font-extrabold text-ink-3">괄호 밖 뼈대</span>
             {row.bone.map((r, i) => (
               <span key={r} className="flex items-center gap-1.5">
                 {i > 0 && <span className="text-ink-3">+</span>}
@@ -584,7 +584,7 @@ export function SpBracketOff() {
               </span>
             ))}
             <ArrowRight size={16} className="text-ink-3" />
-            <span className="rounded-lg bg-ink px-2 py-0.5 text-[14px] font-extrabold text-on-ink">{row.n}</span>
+            <span className="rounded-lg bg-ink px-2 py-0.5 text-[13.5px] font-extrabold text-on-ink">{row.n}</span>
           </p>
         </li>
       ))}
@@ -616,14 +616,14 @@ export function SpEqualBridge() {
         </span>
         <Block role="C" en="happy." />
       </div>
-      <p className="mt-2 flex flex-wrap items-center justify-center gap-2 text-[15px] font-extrabold">
+      <p className="mt-2 flex flex-wrap items-center justify-center gap-2 text-[14.5px] font-extrabold">
         <span className="rounded-lg bg-sky-soft px-2 py-0.5 text-sky-ink">그녀</span>
         <span className="text-[1.2em]">=</span>
         <span className="rounded-lg bg-amber-soft px-2 py-0.5 text-amber-ink">행복한 상태</span>
-        <span className="text-[14px] font-bold text-ink-2">다리는 주어와 보어를 등호로 이어요</span>
+        <span className="text-[13.5px] font-bold text-ink-2">다리는 주어와 보어를 등호로 이어요</span>
       </p>
       <div className="mt-4 rounded-2xl bg-chip px-3 py-3">
-        <p className="text-[14px] font-extrabold text-ink-2">헷갈리면 동사를 is로 바꿔 보세요</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">헷갈리면 동사를 is로 바꿔 보세요</p>
         <ul className="mt-2 space-y-2">
           {IS_TEST.map((t) => (
             <li key={t.test.en} className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl bg-card px-3 py-2">
@@ -635,7 +635,7 @@ export function SpEqualBridge() {
               <span className={`font-medium ${t.ok ? "" : "text-ink-3"}`}>
                 <En en={t.test.en} />
               </span>
-              <span className={`text-[14px] font-bold ${t.ok ? "text-mint-ink" : "text-coral-ink"}`}>{t.note}</span>
+              <span className={`text-[13.5px] font-bold ${t.ok ? "text-mint-ink" : "text-coral-ink"}`}>{t.note}</span>
             </li>
           ))}
         </ul>
@@ -653,8 +653,8 @@ function HandCard({ icon, en, role, note, tone }: { icon: ReactNode; en: string;
       <span className="mt-1 text-[1.02em] font-bold">
         <En en={en} />
       </span>
-      <span className="text-[14px] font-extrabold leading-tight">{role}</span>
-      {note && <span className="mt-1 text-[14px] leading-tight text-ink-2">{note}</span>}
+      <span className="text-[13.5px] font-extrabold leading-tight">{role}</span>
+      {note && <span className="mt-1 text-[13.5px] leading-tight text-ink-2">{note}</span>}
     </span>
   );
 }
@@ -690,11 +690,11 @@ export function SpHandOver() {
         />
       </div>
       <div className="mt-4 rounded-2xl bg-chip px-3 py-3">
-        <p className="text-[14px] font-extrabold text-ink-2">문장에서는 사람 먼저, 물건 나중</p>
+        <p className="text-[13.5px] font-extrabold text-ink-2">문장에서는 사람 먼저, 물건 나중</p>
         <div className="mt-2">
           <Blocks pieces={HAND_4} />
         </div>
-        <p className="mt-2 text-[14px] text-ink-2">엄마가 나에게 선물을 주셨어.</p>
+        <p className="mt-2 text-[13.5px] text-ink-2">엄마가 나에게 선물을 주셨어.</p>
       </div>
     </div>
   );
@@ -743,8 +743,8 @@ export function SpSeeFrames() {
       {SEE_ROWS.map((row) => (
         <li key={row.form} className="rounded-2xl border border-line px-3 py-3 sm:px-4">
           <p className="flex flex-wrap items-center gap-2">
-            <span className="rounded-lg bg-amber-soft px-2 py-0.5 text-[14px] font-extrabold text-amber-ink">{row.form}</span>
-            <span className="text-[14px] font-bold text-ink-2">{row.note}</span>
+            <span className="rounded-lg bg-amber-soft px-2 py-0.5 text-[13.5px] font-extrabold text-amber-ink">{row.form}</span>
+            <span className="text-[13.5px] font-bold text-ink-2">{row.note}</span>
           </p>
           <div className="mt-2.5 grid grid-cols-4 gap-1.5" role="img" aria-label={`길을 건너는 네 장면 가운데 ${row.on.length === 4 ? "네 장면 모두" : "한 장면만"} 본 그림`}>
             {SEE_X.map((x, i) => (
@@ -759,7 +759,7 @@ export function SpSeeFrames() {
           <p className="mt-2 font-medium">
             <En en={row.en} />
           </p>
-          <p className="text-[14px] text-ink-2">{row.ko}</p>
+          <p className="text-[13.5px] text-ink-2">{row.ko}</p>
         </li>
       ))}
     </ul>
