@@ -19,6 +19,7 @@ export function InstallButton({ className = "", iconOnlyOnMobile = false }: { cl
   const [ready, setReady] = useState(false);
   const [standalone, setStandalone] = useState(false);
   const [ios, setIos] = useState(false);
+  const [inApp, setInApp] = useState<"kakao" | "other" | null>(null);
   const [guide, setGuide] = useState(false);
 
   useEffect(() => {
@@ -28,8 +29,11 @@ export function InstallButton({ className = "", iconOnlyOnMobile = false }: { cl
     }
     const media = window.matchMedia("(display-mode: standalone)");
     const nav = navigator as Navigator & { standalone?: boolean };
+    const ua = navigator.userAgent;
     setStandalone(media.matches || nav.standalone === true);
-    setIos(/iphone|ipad|ipod/i.test(navigator.userAgent) && !/crios|fxios/i.test(navigator.userAgent));
+    setIos(/iphone|ipad|ipod/i.test(ua) && !/crios|fxios/i.test(ua));
+    // 카카오톡·네이버·인스타그램 같은 앱 속 브라우저에서는 설치가 안 된다 → 진짜 브라우저로 열도록 안내
+    setInApp(/kakaotalk/i.test(ua) ? "kakao" : /naver\(inapp|instagram|fban|fbav|line\//i.test(ua) ? "other" : null);
     setReady(deferred !== null);
     const onPrompt = (e: Event) => {
       e.preventDefault();
@@ -51,7 +55,25 @@ export function InstallButton({ className = "", iconOnlyOnMobile = false }: { cl
 
   if (standalone) return null;
 
+  /** 앱 속 브라우저에서 빠져나와 기본 브라우저로 이 주소를 연다 */
+  function openInBrowser() {
+    const url = location.href;
+    if (inApp === "kakao") {
+      location.href = `kakaotalk://web/openExternal?url=${encodeURIComponent(url)}`;
+      return;
+    }
+    if (/android/i.test(navigator.userAgent)) {
+      location.href = `intent://${location.host}${location.pathname}${location.search}#Intent;scheme=https;package=com.android.chrome;end`;
+      return;
+    }
+    setGuide(true);
+  }
+
   async function install() {
+    if (inApp) {
+      setGuide(true);
+      return;
+    }
     if (deferred) {
       await deferred.prompt();
       const { outcome } = await deferred.userChoice;
@@ -87,7 +109,19 @@ export function InstallButton({ className = "", iconOnlyOnMobile = false }: { cl
         >
           <div className="w-full max-w-sm rounded-2xl bg-card p-5 text-ink shadow-xl" onClick={(e) => e.stopPropagation()}>
             <p className="text-[1.1rem] font-extrabold">{brand.appName} 앱으로 설치하기</p>
-            {ios ? (
+            {inApp ? (
+              <>
+                <p className="mt-3 text-[14.5px] text-ink-2">
+                  {inApp === "kakao" ? "카카오톡 안의 브라우저" : "앱 안의 브라우저"}에서는 앱을 설치할 수 없어요. 아래 단추로 {ios ? "Safari" : "크롬"}에서 연 다음, 거기서 다시 ‘앱 설치’를 눌러 주세요.
+                </p>
+                <button type="button" onClick={openInBrowser} className="mt-3 h-11 w-full rounded-lg bg-coral text-[15px] font-extrabold text-white">
+                  {ios ? "Safari로 열기" : "크롬으로 열기"}
+                </button>
+                <p className="mt-2 text-[12.5px] text-ink-3">
+                  단추가 안 되면 화면 {ios ? "오른쪽 아래" : "오른쪽 위"} 메뉴(⋮ 또는 ⋯)에서 ‘다른 브라우저로 열기’를 골라 주세요.
+                </p>
+              </>
+            ) : ios ? (
               <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-[14.5px] text-ink-2">
                 <li>
                   아래 가운데의 <b className="text-ink">공유</b> 단추(네모에서 화살표가 나가는 모양)를 눌러요.
