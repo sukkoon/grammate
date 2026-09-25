@@ -3,6 +3,7 @@ import { Logo } from "@/components/brand/Mate";
 import { ThemeToggle } from "./ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
 import { LevelSwitch } from "@/components/level/LevelSwitch";
+import { LevelTabs } from "@/components/level/LevelTabs";
 
 export const navItems = [
   { href: "/learn", label: "전체 목차" },
@@ -28,7 +29,10 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <span className="ml-1">
+          <span className="ml-1 hidden lg:block">
+            <LevelTabs variant="compact" />
+          </span>
+          <span className="ml-1 lg:hidden">
             <LevelSwitch />
           </span>
           <ThemeToggle />

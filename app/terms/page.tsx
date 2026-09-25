@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TermCard } from "@/components/lesson/TermAnatomy";
 import { termGroups, terms } from "@/content/terms";
+import { LevelTabs } from "@/components/level/LevelTabs";
 
 export const metadata: Metadata = {
   title: "문법 용어 사전",
@@ -15,6 +16,9 @@ export default function TermsPage() {
       <p className="mt-2 text-ink-2">
         용어를 조각내면 뜻이 보여요. &lsquo;-사&rsquo;는 단어의 종류, &lsquo;-어&rsquo;는 문장 속 역할이에요. 영어 이름의 뜻도 함께 붙였어요.
       </p>
+      <div className="mt-5">
+        <LevelTabs />
+      </div>
       <nav aria-label="용어 분류" className="mt-6 flex flex-wrap gap-2">
         {termGroups.map((g) => (
           <a key={g} href={`#g-${g}`} className="rounded-full bg-card px-3.5 py-1.5 text-[14px] font-bold ring-1 ring-line hover:bg-chip">

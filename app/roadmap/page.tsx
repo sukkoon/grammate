@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Mate } from "@/components/brand/Mate";
 import { ReadMark } from "@/components/lesson/ReadMark";
 import { Lv } from "@/components/level/Lv";
+import { LevelTabs } from "@/components/level/LevelTabs";
 import { roadmap, type RoadmapLevel } from "@/content/roadmap";
 
 export const metadata: Metadata = {
@@ -76,10 +77,13 @@ export default function RoadmapPage() {
           </a>
         ))}
       </nav>
-      <p className="mt-4 flex items-start gap-2 rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
+      <div className="mt-4">
+        <LevelTabs />
+      </div>
+      <p className="mt-3 flex items-start gap-2 rounded-2xl bg-chip px-4 py-3 text-[14.5px]">
         <Mate mood="wink" size={24} className="mt-0.5 shrink-0 text-ink" />
         <span>
-          오른쪽 위에서 고른 수준까지 펼쳐져 있어요. 더 높은 단계가 궁금하면 &lsquo;더 학습하기&rsquo;를 눌러 봐요. 이 목록은 남과 비교하려는 게 아니라, 내가 어디까지 왔는지 스스로 확인하는 지도예요.
+          위에서 고른 수준까지 펼쳐져 있어요. 더 높은 단계가 궁금하면 &lsquo;더 학습하기&rsquo;를 눌러 봐요. 이 목록은 남과 비교하려는 게 아니라, 내가 어디까지 왔는지 스스로 확인하는 지도예요.
         </span>
       </p>
 

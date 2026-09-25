@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LevelBadges } from "@/components/lesson/blocks";
 import { ReadButton, ReadMark } from "@/components/lesson/ReadMark";
-import { LevelPrompt } from "@/components/level/LevelPrompt";
+import { LevelTabs } from "@/components/level/LevelTabs";
 import { LevelAbove } from "@/components/level/LevelAbove";
 import { findUnit, neighbors, readyUnits, unitHref, type UnitRef } from "@/content/curriculum";
 
@@ -92,8 +92,6 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
           </div>
         </details>
 
-        <LevelPrompt />
-
         <header>
           <p className="text-[14px] font-bold text-ink-3">
             {ref.part.label} {ref.part.title} · {ref.chapter.title}
@@ -104,6 +102,10 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
             <LevelBadges levels={ref.unit.levels} />
           </div>
         </header>
+
+        <div className="mt-5">
+          <LevelTabs />
+        </div>
 
         <article className="lesson mt-6">
           <Content />
