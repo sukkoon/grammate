@@ -26,7 +26,9 @@ export function Header() {
         </Link>
         <div className="flex min-w-0 items-center gap-1.5 sm:gap-2">
           <NavMenu items={navItems} />
-          <InstallButton className="hidden sm:inline-flex" />
+          <span className="hidden sm:contents">
+            <InstallButton />
+          </span>
           <AuthStatus />
           <ThemeToggle />
         </div>
