@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState, type FormEvent } from "react";
-import { adoptSession, normPhone, phoneAuth, useMe, validPhone } from "@/lib/auth";
+import { adoptSession, enterAsGuest, normPhone, phoneAuth, useMe, validPhone } from "@/lib/auth";
 import { authEnabled } from "@/lib/supabase";
 
 type Mode = "login" | "signup" | "reset";
@@ -131,7 +131,19 @@ export function LoginCard() {
     <div className="rounded-2xl border border-line bg-card p-5 shadow-[0_18px_40px_-24px_rgba(31,42,68,0.45)] sm:p-6">
       <h2 className="text-[1.25rem] font-extrabold">{title}</h2>
       {!enabled && (
-        <p className="mt-2 rounded-lg bg-amber-soft px-3 py-2 text-[13.5px] text-amber-ink">아직 로그인 기능이 준비되지 않았어요. 로그인 없이도 모든 단원을 볼 수 있어요.</p>
+        <div className="mt-2 rounded-lg bg-amber-soft px-3 py-2.5 text-[13.5px] text-amber-ink">
+          <p>아직 로그인 기능이 준비되지 않았어요. 준비될 때까지는 로그인 없이 둘러볼 수 있어요.</p>
+          <button
+            type="button"
+            onClick={() => {
+              enterAsGuest();
+              router.replace("/");
+            }}
+            className="mt-2 h-10 w-full rounded-lg bg-ink text-[14px] font-bold text-on-ink"
+          >
+            로그인 없이 둘러보기
+          </button>
+        </div>
       )}
       <form onSubmit={onSubmit} className="mt-4 space-y-4">
         <div>

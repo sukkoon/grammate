@@ -88,3 +88,18 @@ export const normPhone = (p: string) => {
   return d;
 };
 export const validPhone = (p: string) => /^01[016789][0-9]{7,8}$/.test(p);
+
+/** 로그인 기능이 꺼져 있을 때만 쓰는 '둘러보기' 표시. 이 탭(세션)에서만 유효하다. */
+const GUEST_KEY = "gm-guest";
+export function isGuest(): boolean {
+  try {
+    return sessionStorage.getItem(GUEST_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+export function enterAsGuest() {
+  try {
+    sessionStorage.setItem(GUEST_KEY, "1");
+  } catch {}
+}
