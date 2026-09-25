@@ -2,6 +2,7 @@ import { AskDemo, FeatureCards, RecordDemo, WordDemo, type Feature } from "@/com
 import { TermCard } from "@/components/lesson/TermAnatomy";
 import { termById } from "@/content/terms";
 import { Phrases } from "@/components/text/Phrases";
+import { BrandStory } from "@/components/brand/BrandStory";
 
 export default function Home() {
   const pronoun = termById("pronoun")!;
@@ -27,8 +28,8 @@ export default function Home() {
     },
     {
       mood: "listening",
-      title: "질문은 말로 해요",
-      body: "공부하다 막히면 오른쪽 아래 ‘물어보기’를 누르고 편하게 말해 보세요. ‘그 a랑 an 있잖아요…’처럼 두서없이 말해도 알아듣고, 쉬운 설명과 예문으로 답해 줘요. 답을 소리 내어 읽어 주기도 해요.",
+      title: "질문은 글로도, 말로도 해요",
+      body: "공부하다 막히면 오른쪽 아래 ‘물어보기’를 눌러 보세요. 궁금한 걸 글로 적어도 되고, 마이크 단추를 누르고 말로 물어봐도 돼요. ‘그 a랑 an 있잖아요…’처럼 두서없이 말해도 알아듣고, 쉬운 설명과 예문으로 답해 줘요. 답을 소리 내어 읽어 주기도 해요.",
       demo: <AskDemo />,
     },
     {
@@ -61,6 +62,9 @@ export default function Home() {
       <section aria-label="그래머랑의 특징">
         <FeatureCards items={features} />
       </section>
+
+      {/* 브랜드 스토리 */}
+      <BrandStory />
     </div>
   );
 }

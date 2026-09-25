@@ -93,8 +93,8 @@ export function Mate({
 
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`wordmark whitespace-nowrap font-extrabold tracking-[-0.035em] ${className}`}>
-      gramma<span className="text-coral">rang</span>
+    <span className={`wordmark font-korean whitespace-nowrap font-extrabold tracking-[-0.02em] ${className}`}>
+      grammar<span className="text-coral">ang</span>
     </span>
   );
 }

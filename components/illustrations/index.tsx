@@ -753,3 +753,5 @@ export * from "./intro";
 export * from "./parts-of-speech";
 export * from "./articles";
 export * from "./pronouns";
+
+export * from "./easy";

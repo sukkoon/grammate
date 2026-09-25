@@ -33,7 +33,7 @@ export function FeatureCards({ items }: { items: Feature[] }) {
   }, [open]);
 
   return (
-    <div ref={rootRef} className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+    <div ref={rootRef} className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
       {items.map((f, i) => {
         const on = open === i;
         return (
@@ -143,11 +143,12 @@ export function WordDemo() {
 export function AskDemo() {
   return (
     <div className="space-y-2.5">
-      <p className="text-[12.5px] font-extrabold text-coral-ink">말로 묻고 답 듣기</p>
+      <p className="text-[12.5px] font-extrabold text-coral-ink">글로 적거나, 말로 묻거나</p>
+      {/* 글로 적어 물은 질문 */}
       <p className="ml-auto flex w-fit max-w-[90%] items-center gap-1.5 rounded-2xl rounded-br-md bg-ink px-3.5 py-2 text-[14px] text-on-ink">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden>
-          <rect x="9" y="3" width="6" height="11" rx="3" />
-          <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <rect x="3" y="6" width="18" height="12" rx="2" />
+          <path d="M7 10h.01M11 10h.01M15 10h.01M8 14h8" />
         </svg>
         a랑 an은 왜 달라요?
       </p>
@@ -161,6 +162,30 @@ export function AskDemo() {
             an apple · a cat
           </p>
         </div>
+      </div>
+      {/* 마이크로 말한 질문 */}
+      <p className="ml-auto flex w-fit max-w-[90%] items-center gap-1.5 rounded-2xl rounded-br-md bg-ink px-3.5 py-2 text-[14px] text-on-ink">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden>
+          <rect x="9" y="3" width="6" height="11" rx="3" />
+          <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+        </svg>
+        그럼 an hour는요? h가 있는데…
+      </p>
+      <div className="flex gap-2.5 rounded-2xl bg-chip px-3.5 py-3">
+        <Mate mood="wink" size={28} className="mt-0.5 shrink-0 text-ink" />
+        <p className="min-w-0 text-[14px] leading-relaxed">
+          hour는 h 소리가 나지 않고 <b>[아워]</b>로 시작해요. 모음 소리니까 an hour가 맞아요.
+        </p>
+      </div>
+      {/* 입력 줄: 글로 적는 칸과 마이크 단추 */}
+      <div className="flex items-center gap-1.5 rounded-full border border-line bg-card py-1 pl-3.5 pr-1 text-[13px] text-ink-3" aria-hidden>
+        <span className="flex-1 truncate">궁금한 걸 적거나, 마이크를 눌러 말해 보세요</span>
+        <span className="grid size-8 shrink-0 place-items-center rounded-full bg-coral text-white">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden>
+            <rect x="9" y="3" width="6" height="11" rx="3" />
+            <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+          </svg>
+        </span>
       </div>
     </div>
   );

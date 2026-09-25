@@ -7,9 +7,9 @@ import { setBand, useBand, useBandChosen } from "@/lib/use-level";
 
 /** 수준을 고르면 무엇이 달라지는지 한 줄로 */
 const CHANGES: Record<Band, string> = {
-  elem: "쉬운 풀이가 보이고, 중학생 이상 내용은 '더 학습하기'로 접혀 있어요.",
+  elem: "설명이 쉬운 말투와 그림으로 바뀌고, 중학생 이상 내용은 '더 학습하기'로 접혀 있어요.",
   middle: "내신 포인트까지 보이고, 고등 내용은 '더 학습하기'로 접혀 있어요.",
-  high: "심화·수능 포인트와 '선생님의 한마디'까지 모두 펼쳐져 있어요.",
+  high: "정확한 용어로 설명하고, 심화·수능 포인트까지 모두 펼쳐져 있어요.",
 };
 
 function useTabKeys(band: Band | null) {

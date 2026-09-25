@@ -3,6 +3,8 @@ import { Logo } from "@/components/brand/Mate";
 import { brand } from "@/lib/brand";
 import { ThemeToggle } from "./ThemeToggle";
 import { NavMenu } from "./NavMenu";
+import { InstallButton } from "@/components/pwa/InstallButton";
+import { AuthStatus } from "@/components/auth/AuthStatus";
 
 /** 메뉴 이름은 모두 짧은 명사형(2어절 이내)으로 맞춘다. */
 export const navItems = [
@@ -24,6 +26,8 @@ export function Header() {
         </Link>
         <div className="flex min-w-0 items-center gap-1.5 sm:gap-2">
           <NavMenu items={navItems} />
+          <InstallButton className="hidden sm:inline-flex" />
+          <AuthStatus />
           <ThemeToggle />
         </div>
       </div>

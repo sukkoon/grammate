@@ -138,14 +138,14 @@ body {
 }
 
 /* 단원 본문 */
-.lesson > h2 {
+:is(.lesson, .lesson [data-voice]) > h2 {
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.4;
   margin: 3rem 0 1rem;
   letter-spacing: -0.01em;
 }
-.lesson > h2::before {
+:is(.lesson, .lesson [data-voice]) > h2::before {
   content: "";
   display: block;
   width: 28px;
@@ -154,14 +154,14 @@ body {
   background: var(--coral);
   margin-bottom: 0.9rem;
 }
-.lesson > h3 {
+:is(.lesson, .lesson [data-voice]) > h3 {
   font-size: 1.2rem;
   font-weight: 800;
   margin: 2rem 0 0.6rem;
 }
-.lesson > p,
-.lesson > ul,
-.lesson > ol {
+:is(.lesson, .lesson [data-voice]) > p,
+:is(.lesson, .lesson [data-voice]) > ul,
+:is(.lesson, .lesson [data-voice]) > ol {
   margin: 0.9rem 0;
 }
 /* 마크다운으로 쓴 목록(class가 없는 ul·ol)만 꾸민다. 그림 속 목록(class가 있는 ul·ol)은 건드리지 않는다 */
@@ -211,28 +211,28 @@ body {
   background: var(--card);
 }
 .table-wrap table,
-.lesson > table {
+:is(.lesson, .lesson [data-voice]) > table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95em;
 }
 .table-wrap th,
 .table-wrap td,
-.lesson > table th,
-.lesson > table td {
+:is(.lesson, .lesson [data-voice]) > table th,
+:is(.lesson, .lesson [data-voice]) > table td {
   padding: 0.65rem 0.9rem;
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
 }
 .table-wrap th,
-.lesson > table th {
+:is(.lesson, .lesson [data-voice]) > table th {
   background: var(--chip);
   font-weight: 800;
   white-space: nowrap;
 }
 .table-wrap tr:last-child td,
-.lesson > table tr:last-child td {
+:is(.lesson, .lesson [data-voice]) > table tr:last-child td {
   border-bottom: 0;
 }
 
@@ -357,8 +357,17 @@ html[data-level="middle"] .lv-above[data-need="high"] {
   }
 }
 
-/* 글자 로고: Changa 보통 굵기는 작은 크기에서 g의 꼬리 이음새가 끊겨 보여, 획을 살짝 두껍게 그린다 */
+/* 글자 로고: Changa의 소문자 g가 작은 크기에서 끊겨 보여, 글자 로고만 나눔스퀘어 ac(굵게)로 쓴다 */
 .wordmark {
-  -webkit-text-stroke: 0.5px currentColor;
-  paint-order: stroke fill;
+  font-family: var(--font-ko), system-ui, sans-serif;
+}
+
+/* ───────── 수준별 목소리 (Voices / Voice): 고른 수준의 목소리 하나만 보인다 ───────── */
+[data-voice] {
+  display: none;
+}
+html[data-level="elem"] [data-voice="elem"],
+html[data-level="middle"] [data-voice="middle"],
+html[data-level="high"] [data-voice="high"] {
+  display: block;
 }

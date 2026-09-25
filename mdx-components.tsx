@@ -20,6 +20,7 @@ import { VerbHunt } from "@/components/lesson/VerbHunt";
 import * as illustrations from "@/components/illustrations";
 import { chunkNodes } from "@/components/text/Phrases";
 import { Easy, Lv, More } from "@/components/level/Lv";
+import { Voice, Voices } from "@/components/level/Voices";
 
 // 단원 MDX에서 import 없이 바로 쓸 수 있는 컴포넌트들
 const components = {
@@ -54,6 +55,8 @@ const components = {
   Lv,
   Easy,
   More,
+  Voices,
+  Voice,
   ...illustrations,
 } satisfies MDXComponents;
 

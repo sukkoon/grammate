@@ -11,7 +11,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${brand.appName} · 영어 문법 학습 도우미`,
+    default: `영어 문법 학습 도우미, ${brand.appName}`,
     template: `%s · ${brand.appName}`,
   },
   description: brand.description,
