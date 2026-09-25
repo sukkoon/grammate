@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local tooling
 /.claude/
+
+# 작성 에이전트의 임시 검사 파일
+/tests/zz-*
