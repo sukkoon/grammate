@@ -38,7 +38,8 @@ def git(*args: str) -> str:
 
 git("add", "-A")
 staged = [l for l in git("diff", "--cached", "--name-only").splitlines() if l]
-held = [f for f in staged if chapter_of(f) in drafts]
+# 작성 중인 장의 파일과 에이전트의 임시 검사 파일(tests/zz-*)은 올리지 않는다
+held = [f for f in staged if chapter_of(f) in drafts or f.replace("\\", "/").startswith("tests/zz-")]
 if held:
     git("reset", "-q", "--", *held)
 print(f"올린 파일 {len(staged) - len(held)}개, 초안이라 뺀 파일 {len(held)}개")
