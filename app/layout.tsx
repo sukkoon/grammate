@@ -3,6 +3,7 @@ import { brand } from "@/lib/brand";
 import { changa, nanumSquare } from "./fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AuthGate } from "@/components/auth/AuthGate";
 import { WordTooltipLayer } from "@/components/lesson/WordTooltipLayer";
 import { LevelLayer } from "@/components/level/LevelLayer";
 import { Helper } from "@/components/tutor/Helper";
@@ -53,7 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <Header />
         <main id="main" className="flex-1">
-          {children}
+          <AuthGate>{children}</AuthGate>
         </main>
         <Footer />
         <WordTooltipLayer />

@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
 import { brand } from "@/lib/brand";
 
-/** 앱 설치(홈 화면에 추가) 정보: 이름은 Grammarang로 보인다. */
+/** 앱 설치(홈 화면에 추가) 정보: 이름은 Grammarang, 시작은 로그인 화면부터. */
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: brand.appName,
     short_name: brand.appName,
     description: brand.description,
     lang: "ko",
-    start_url: "/",
+    start_url: "/login",
     scope: "/",
     display: "standalone",
     background_color: "#fbf8f3",

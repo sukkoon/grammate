@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState, type FormEvent } from "react";
 import { adoptSession, normPhone, phoneAuth, useMe, validPhone } from "@/lib/auth";
@@ -40,7 +39,7 @@ export function LoginCard() {
   }, []);
 
   useEffect(() => {
-    if (me) router.replace("/me");
+    if (me) router.replace("/");
   }, [me, router]);
 
   const enabled = authEnabled();
@@ -74,7 +73,7 @@ export function LoginCard() {
           else localStorage.removeItem(REMEMBER_KEY);
         } catch {}
         await adoptSession(r.session);
-        router.replace("/me");
+        router.replace("/");
         return;
       }
       if (mode === "signup") {
@@ -90,7 +89,7 @@ export function LoginCard() {
         const l = await phoneAuth("login", { phone: p, password: pw });
         if (l.ok && l.session) {
           await adoptSession(l.session);
-          router.replace("/me");
+          router.replace("/");
           return;
         }
         setMsg({ kind: "ok", text: "가입했어요. 이제 로그인해 주세요." });
@@ -247,12 +246,6 @@ export function LoginCard() {
           </button>
         )}
       </div>
-      <p className="mt-4 text-center text-[13px] text-ink-3">
-        로그인 없이도 공부할 수 있어요.{" "}
-        <Link href="/start" className="font-bold text-ink-2 underline hover:text-ink">
-          바로 시작하기
-        </Link>
-      </p>
     </div>
   );
 }
