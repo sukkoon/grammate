@@ -78,6 +78,7 @@
 |---|---|
 | `<Quiz id="chapter/unit" items={[{ q, en?, options, answer, why, level? }]} />` | 확인 문제 |
 | `<VerbHunt items={[{ en, ko, why? }]} />` | 진짜 동사 찾기 게임. 표기법은 5장 참고 |
+| `<Pick id="chapter/unit" title="…" items={[{ en, answer, why, ko?, level? }]} />` | 수능식 네모 고르기. 문장 속 고를 곳을 `((is\|are))`처럼 쓴다. 한 문장에 여러 곳이면 answer를 `[0, 1]`처럼 배열로 |
 
 Quiz 문제 하나의 필드는 다음과 같다.
 
