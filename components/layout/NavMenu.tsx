@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
-import { signOut, useMe } from "@/lib/auth";
 
 /**
  * 머리글 오른쪽의 드롭다운 목차.
@@ -13,7 +12,6 @@ import { signOut, useMe } from "@/lib/auth";
  */
 export function NavMenu({ items, className = "" }: { items: { href: string; label: string }[]; className?: string }) {
   const pathname = usePathname();
-  const me = useMe();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
@@ -95,22 +93,6 @@ export function NavMenu({ items, className = "" }: { items: { href: string; labe
             </li>
           );
         })}
-        {me && (
-          <li role="none" className="mt-1 border-t border-line pt-1">
-            <button
-              type="button"
-              role="menuitem"
-              onClick={() => {
-                setOpen(false);
-                signOut();
-              }}
-              className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-[14px] font-bold text-ink-3 transition-colors hover:bg-chip hover:text-ink"
-            >
-              <span aria-hidden className="size-1.5 shrink-0 rounded-full bg-transparent" />
-              로그아웃
-            </button>
-          </li>
-        )}
       </ul>
     </div>
   );
