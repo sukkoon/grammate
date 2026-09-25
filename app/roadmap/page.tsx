@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Mate } from "@/components/brand/Mate";
 import { ReadMark } from "@/components/lesson/ReadMark";
-import { Lv } from "@/components/level/Lv";
-import { LevelTabs } from "@/components/level/LevelTabs";
 import { roadmap, type RoadmapLevel } from "@/content/roadmap";
 import { Phrases } from "@/components/text/Phrases";
 
@@ -75,33 +73,31 @@ export default function RoadmapPage() {
       <p className="mt-2 text-ink-2">
         <Phrases text="참고한 베스트셀러 문법 교재들이 학년마다 공통으로 다루는 내용을 골라, 초등·중등·고등에서 꼭 알아야 할 문법만 추렸어요. 교재마다 학년 배치가 조금씩 다르니, 앞 단계부터 차근차근 다지면 돼요." />
       </p>
-      <nav aria-label="수준 바로가기" className="mt-5 flex flex-wrap gap-2">
-        {roadmap.map((lv) => (
-          <a key={lv.band} href={`#lv-${lv.band}`} className="rounded-lg bg-card px-3.5 py-1.5 text-[13.5px] font-bold ring-1 ring-line hover:bg-chip">
-            {LABEL[lv.band]}
+      {/* 수준 바로가기: 한 상자 안에 초등·중등·고등 세 칸. 누르면 그 수준의 목록으로 내려간다 */}
+      <nav aria-label="수준 바로가기" className="mt-5 grid grid-cols-3 overflow-hidden rounded-2xl border border-line bg-card">
+        {roadmap.map((lv, i) => (
+          <a
+            key={lv.band}
+            href={`#lv-${lv.band}`}
+            className={`flex flex-col items-center gap-1.5 px-2 py-3.5 text-center transition-colors hover:bg-chip sm:py-4 ${i > 0 ? "border-l border-line" : ""}`}
+          >
+            <span className={`rounded-lg px-2.5 py-0.5 text-[14.5px] font-extrabold ${TONE[lv.band]}`}>{LABEL[lv.band]}</span>
+            <span className="text-[12.5px] font-bold text-ink-3">{lv.groups.length}개 묶음 · {lv.groups.reduce((n, g) => n + g.items.length, 0)}개 항목</span>
           </a>
         ))}
       </nav>
-      <div className="mt-4">
-        <LevelTabs />
-      </div>
       <p className="mt-3 flex items-start gap-2 rounded-2xl bg-chip px-4 py-3 text-[14px]">
         <Mate mood="wink" size={24} className="mt-0.5 shrink-0 text-ink" />
         <span>
-          위에서 고른 수준까지 펼쳐져 있어요. 더 높은 단계가 궁금하면 &lsquo;더 학습하기&rsquo;를 눌러 봐요. 이 목록은 남과 비교하려는 게 아니라, 내가 어디까지 왔는지 스스로 확인하는 지도예요.
+          <Phrases text="이 목록은 남과 비교하려는 게 아니라, 내가 어디까지 왔는지 스스로 확인하는 지도예요. 앞 단계부터 차근차근 다지면 돼요." />
         </span>
       </p>
 
+      {/* 세 수준을 모두 펼쳐 둔다. 위의 바로가기를 누르면 그 수준으로 내려간다 */}
       <div className="mt-10 space-y-12">
         <LevelSection lv={elem} />
-        <Lv min="middle" topic="문장의 형식, 준동사, 관계사까지 · 내신 문법의 중심">
-          <LevelSection lv={middle} />
-          <div className="mt-12">
-            <Lv min="high" topic="준동사·관계사 심화, 특수구문, 수능 어법까지">
-              <LevelSection lv={high} />
-            </Lv>
-          </div>
-        </Lv>
+        <LevelSection lv={middle} />
+        <LevelSection lv={high} />
       </div>
     </div>
   );
