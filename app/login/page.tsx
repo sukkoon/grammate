@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { LoginCard } from "@/components/auth/LoginCard";
 import { BrandStory } from "@/components/brand/BrandStory";
 import { Phrases } from "@/components/text/Phrases";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "로그인",
+  // 즐겨찾기·탭에 "Grammarang 로그인"으로 보이게 (기본 꼴 "로그인 · Grammarang" 대신)
+  title: { absolute: `${brand.appName} 로그인` },
   robots: { index: false },
 };
 
