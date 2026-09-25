@@ -657,7 +657,7 @@ export function SjHiddenIf() {
 export function SjTwoModes() {
   return (
     <div>
-      <div className="mx-auto flex max-w-md items-stretch overflow-hidden rounded-full border-2 border-line text-[14px] font-extrabold" aria-hidden>
+      <div className="mx-auto flex max-w-md items-stretch overflow-hidden rounded-xl border-2 border-line text-[14px] font-extrabold" aria-hidden>
         <span className="flex flex-1 items-center justify-center gap-1.5 bg-mint-soft px-3 py-2 text-mint-ink">
           <SunIcon size={20} />
           현실 모드

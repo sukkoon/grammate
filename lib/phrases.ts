@@ -18,6 +18,8 @@ const MIN_CONNECTIVE = 4; // 이보다 짧은 덩어리는 연결 어미 뒤라�
 const MIN_PARTICLE = 7; // 이보다 짧은 덩어리는 조사 뒤라도 붙인다
 const MAX = 16; // 이보다 길면 어절 사이에서 끊는다
 const TINY = 3; // 마지막 덩어리가 이보다 짧으면 앞 덩어리에 붙인다
+// "-어도 되다/좋다/괜찮다"처럼 다음 말과 한 덩어리인 꼴은 조사 '도' 뒤라도 끊지 않는다
+const BOUND_NEXT = /^(되|돼|좋|괜찮|상관|무방|않|못|안\s)/;
 
 export function splitPhrases(text: string): string[] {
   const words = text.trim().split(/\s+/).filter(Boolean);
@@ -38,7 +40,7 @@ export function splitPhrases(text: string): string[] {
     if (!next) break;
     if (PUNCT.test(w)) flush();
     else if (len >= MIN_CONNECTIVE && CONNECTIVE.test(w)) flush();
-    else if (len >= MIN_PARTICLE && PARTICLE.test(w)) flush();
+    else if (len >= MIN_PARTICLE && PARTICLE.test(w) && !BOUND_NEXT.test(next)) flush();
   }
   flush();
   // 끝에 남은 짧은 꼬리('돼요.' 같은)는 앞에 붙인다
