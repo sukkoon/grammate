@@ -51,7 +51,7 @@ export function NavMenu({ items, className = "" }: { items: { href: string; labe
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden className="shrink-0">
           <path d="M4 7h16M4 12h16M4 17h16" />
         </svg>
-        <span className="truncate">{current?.label ?? "메뉴"}</span>
+        <span className="hidden truncate sm:inline">{current?.label ?? "메뉴"}</span>
         <svg
           width="14"
           height="14"

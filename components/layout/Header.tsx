@@ -5,6 +5,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { NavMenu } from "./NavMenu";
 import { InstallButton } from "@/components/pwa/InstallButton";
 import { AuthStatus } from "@/components/auth/AuthStatus";
+import { SearchBox } from "@/components/search/SearchBox";
 
 /** 메뉴 이름은 모두 짧은 명사형(2어절 이내)으로 맞춘다. */
 export const navItems = [
@@ -25,6 +26,7 @@ export function Header() {
           <Logo size={36} tagline={brand.tagline} />
         </Link>
         <div className="flex min-w-0 shrink-0 items-center gap-1 sm:gap-2">
+          <SearchBox />
           <NavMenu items={navItems} />
           <AuthStatus />
           <ThemeToggle />
