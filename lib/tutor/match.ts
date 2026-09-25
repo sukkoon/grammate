@@ -100,7 +100,8 @@ export const MIN_SCORE = 0.45;
 /** 질문에 영어 낱말이나 문법·공부 이야기가 들어 있는지 */
 export function hasSignal(query: string): boolean {
   const nq = normalize(query);
-  return /[a-z]/.test(nq) || SIGNALS.some((s) => nq.includes(s));
+  const raw = query.toLowerCase();
+  return /[a-z]/.test(nq) || SIGNALS.some((s) => nq.includes(s) || raw.includes(s));
 }
 
 /** 가장 좋은 답을 보여 줘도 될 만큼 확실한지 */
