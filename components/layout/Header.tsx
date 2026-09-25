@@ -7,6 +7,7 @@ import { LevelSwitch } from "@/components/level/LevelSwitch";
 export const navItems = [
   { href: "/learn", label: "전체 목차" },
   { href: "/terms", label: "용어 사전" },
+  { href: "/verbs", label: "불규칙 동사" },
   { href: "/me", label: "내 공부" },
 ];
 

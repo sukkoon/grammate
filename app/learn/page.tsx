@@ -63,7 +63,7 @@ export default function LearnPage() {
                           <span className="font-bold">
                             {i + 1}. {u.title}
                           </span>
-                          <span className="mt-1 text-[13px]">준비 중이에요</span>
+                          <span className="mt-1 text-[14px]">준비 중이에요</span>
                         </li>
                       ),
                     )}
@@ -73,6 +73,27 @@ export default function LearnPage() {
             </div>
           </section>
         ))}
+        <section aria-labelledby="part-appendix">
+          <div className="flex items-baseline gap-3 border-b-2 border-ink pb-2">
+            <span className="text-[14px] font-extrabold text-coral-ink">부록</span>
+            <h2 id="part-appendix" className="text-[1.45rem] font-extrabold">
+              찾아보기
+            </h2>
+          </div>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            {[
+              { href: "/terms", title: "문법 용어 사전", sub: "용어를 글자 조각의 뜻으로 풀었어요" },
+              { href: "/verbs", title: "불규칙 동사표", sub: "모양별로 찾고, 가리고 외우고, 들어 봐요" },
+            ].map((a) => (
+              <li key={a.href}>
+                <Link href={a.href} className="group flex h-full flex-col rounded-2xl border border-line bg-card px-4 py-3 transition-colors hover:border-ink-3">
+                  <span className="font-extrabold group-hover:text-coral-ink">{a.title}</span>
+                  <span className="mt-1 text-[14px] text-ink-2">{a.sub}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </div>
   );
