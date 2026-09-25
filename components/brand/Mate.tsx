@@ -99,11 +99,19 @@ export function Wordmark({ className = "" }: { className?: string }) {
   );
 }
 
-export function Logo({ size = 34, className = "" }: { size?: number; className?: string }) {
+/** 로고 = 윙크 G + 글자 로고. tagline을 주면 글자 로고 아래에 한 줄 소개를 붙인다. */
+export function Logo({ size = 34, className = "", tagline }: { size?: number; className?: string; tagline?: string }) {
   return (
     <span className={`inline-flex shrink-0 items-center gap-2 text-ink ${className}`}>
       <Mate size={size} />
-      <Wordmark className="text-[1.28rem] leading-none sm:text-[1.45rem]" />
+      {tagline ? (
+        <span className="flex flex-col">
+          <Wordmark className="text-[1.28rem] leading-none sm:text-[1.45rem]" />
+          <span className="mt-1 whitespace-nowrap text-[12px] font-bold leading-none tracking-[-0.01em] text-ink-3 sm:text-[12.5px]">{tagline}</span>
+        </span>
+      ) : (
+        <Wordmark className="text-[1.28rem] leading-none sm:text-[1.45rem]" />
+      )}
     </span>
   );
 }

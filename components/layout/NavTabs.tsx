@@ -5,15 +5,21 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 /**
- * 머리글의 메뉴 탭. 어떤 메뉴가 있는지 한눈에 보이도록 모두 펼쳐 둔다.
- * 좁은 화면에서는 옆으로 밀어서 보고, 가려진 탭이 있는 쪽은 흐리게 덮고 화살표를 보인다.
- * 지금 보고 있는 탭은 화면 안에 들어오게 맞춘다.
+ * 머리글의 메뉴 탭(네모 상자). 어떤 메뉴가 있는지 한눈에 보이도록 모두 펼쳐 둔다.
+ * - 지금 보고 있는 페이지의 탭을 진하게 칠한다. 누르는 순간 바로 칠해서 어디로 가는지 보여 준다.
+ * - 여러 탭의 주소가 겹치면(처음부터 배우기 ⊂ 전체 목차) 가장 길게 맞는 탭 하나만 칠한다.
+ * - 좁은 화면에서는 옆으로 밀어서 보고, 가려진 탭이 있는 쪽은 흐리게 덮고 화살표를 보인다.
+ * - 지금 보고 있는 탭은 화면 안에 들어오게 맞춘다.
  */
 export function NavTabs({ items, className = "" }: { items: { href: string; label: string }[]; className?: string }) {
   const pathname = usePathname();
   const listRef = useRef<HTMLUListElement>(null);
   const [more, setMore] = useState({ left: false, right: false });
-  const isOn = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+  // 누른 탭: 새 페이지가 뜨기 전까지 먼저 칠해 둔다 (그 사이 다른 페이지로 가면 무시)
+  const [pressed, setPressed] = useState<{ href: string; from: string } | null>(null);
+  const matches = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+  const current = items.filter((i) => matches(i.href)).sort((a, b) => b.href.length - a.href.length)[0]?.href;
+  const active = pressed && pressed.from === pathname ? pressed.href : current;
 
   useEffect(() => {
     const list = listRef.current;
@@ -39,22 +45,25 @@ export function NavTabs({ items, className = "" }: { items: { href: string; labe
     if (on.offsetLeft < list.scrollLeft || right > list.scrollLeft + list.clientWidth) list.scrollLeft = right - list.clientWidth + 8;
   }, [pathname]);
 
-  const fade = "pointer-events-none absolute inset-y-0 flex w-12 items-center transition-opacity";
+  const fade = "pointer-events-none absolute inset-y-0 flex w-10 items-center transition-opacity";
   return (
     <nav aria-label="주요 메뉴" className={`relative ${className}`}>
       <ul
         ref={listRef}
-        className="relative flex max-w-full gap-1 overflow-x-auto rounded-full bg-chip p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="relative flex max-w-full gap-1.5 overflow-x-auto py-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {items.map((item) => {
-          const on = isOn(item.href);
+          const on = active === item.href;
           return (
             <li key={item.href} className="shrink-0">
               <Link
                 href={item.href}
+                onClick={() => setPressed({ href: item.href, from: pathname })}
                 aria-current={on ? "page" : undefined}
-                className={`inline-flex h-8 items-center whitespace-nowrap rounded-full px-3.5 text-[14.5px] font-bold transition-colors ${
-                  on ? "bg-ink text-on-ink shadow-sm" : "text-ink-2 hover:bg-card hover:text-ink"
+                className={`inline-flex h-9 items-center whitespace-nowrap rounded-lg border px-3.5 text-[14.5px] font-bold transition-colors ${
+                  on
+                    ? "border-ink bg-ink text-on-ink shadow-[inset_0_-3px_0_var(--coral)]"
+                    : "border-line bg-card text-ink-2 hover:border-ink-3 hover:text-ink"
                 }`}
               >
                 {item.label}
@@ -63,10 +72,10 @@ export function NavTabs({ items, className = "" }: { items: { href: string; labe
           );
         })}
       </ul>
-      <span aria-hidden className={`${fade} left-0 justify-start rounded-l-full bg-linear-to-r from-chip from-40% to-transparent pl-2 ${more.left ? "opacity-100" : "opacity-0"}`}>
+      <span aria-hidden className={`${fade} left-0 justify-start bg-linear-to-r from-bg from-40% to-transparent pl-1 ${more.left ? "opacity-100" : "opacity-0"}`}>
         <Chevron flip />
       </span>
-      <span aria-hidden className={`${fade} right-0 justify-end rounded-r-full bg-linear-to-l from-chip from-40% to-transparent pr-2 ${more.right ? "opacity-100" : "opacity-0"}`}>
+      <span aria-hidden className={`${fade} right-0 justify-end bg-linear-to-l from-bg from-40% to-transparent pr-1 ${more.right ? "opacity-100" : "opacity-0"}`}>
         <Chevron />
       </span>
     </nav>

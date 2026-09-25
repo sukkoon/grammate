@@ -1,10 +1,6 @@
-import Link from "next/link";
-import { Mate } from "@/components/brand/Mate";
 import { AskDemo, FeatureCards, RecordDemo, WordDemo, type Feature } from "@/components/home/FeatureCards";
 import { TermCard } from "@/components/lesson/TermAnatomy";
-import { unitHref } from "@/content/curriculum";
 import { termById } from "@/content/terms";
-import { brand } from "@/lib/brand";
 
 export default function Home() {
   const pronoun = termById("pronoun")!;
@@ -13,7 +9,7 @@ export default function Home() {
     {
       mood: "wink",
       title: "용어는 뜻부터 풀어요",
-      body: "대명사는 ‘대신하는’ 명사. 이름을 알면 개념이 보여요.",
+      body: "‘대명사’는 이름을 ‘대신하는’ 말, ‘부정사’는 모양이 ‘정해지지 않은’ 말이에요. 어려운 문법 용어를 글자 하나하나의 뜻으로 풀어 주니까, 이름만 알아도 개념이 절반은 보여요. 외우기 전에 먼저 이해해요.",
       demo: (
         <div>
           <p className="text-[12.5px] font-extrabold text-coral-ink">용어 뜻풀이</p>
@@ -25,19 +21,19 @@ export default function Home() {
     {
       mood: "happy",
       title: "단어는 뜻이 바로 떠요",
-      body: "예문 속 단어를 누르면 문맥에 맞게 직접 정리한 뜻이 떠요.",
+      body: "예문 속 모르는 단어는 톡 눌러 보세요. 사전을 따로 찾지 않아도 그 문장에 딱 맞는 뜻과 발음이 바로 떠요. 기억하고 싶은 단어는 ★를 눌러 나만의 단어장에 모아 둘 수 있어요.",
       demo: <WordDemo />,
     },
     {
       mood: "listening",
       title: "질문은 말로 해요",
-      body: "모르는 게 있으면 마이크를 누르고 편하게 물어봐요.",
+      body: "공부하다 막히면 오른쪽 아래 ‘물어보기’를 누르고 편하게 말해 보세요. ‘그 a랑 an 있잖아요…’처럼 두서없이 말해도 알아듣고, 쉬운 설명과 예문으로 답해 줘요. 답을 소리 내어 읽어 주기도 해요.",
       demo: <AskDemo />,
     },
     {
       mood: "cheer",
-      title: "기록은 나만 봐요",
-      body: "순위도 비교도 없어요. 어디서 헷갈렸는지만 차곡차곡 모아 둬요.",
+      title: "각 단원별 학습 평가 기록은 나만 봐요",
+      body: "단원마다 확인 문제를 풀면, 어디서 헷갈렸는지가 ‘내 공부’에 차곡차곡 모여요. 순위도, 남과의 비교도 없어요. 오직 나만 보는, 나를 위한 복습 지도예요.",
       demo: <RecordDemo />,
     },
   ];
@@ -46,11 +42,7 @@ export default function Home() {
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
       {/* 첫 화면 */}
       <section className="pb-12 pt-10 md:pt-16">
-        <p className="inline-flex items-center gap-2 rounded-full bg-card px-3 py-1.5 text-[13.5px] font-bold text-ink-2 ring-1 ring-line">
-          <Mate size={20} className="text-ink" />
-          {brand.tagline}
-        </p>
-        <h1 className="mt-5 text-[2.1rem] font-extrabold leading-[1.3] tracking-[-0.02em] sm:text-[2.7rem]">
+        <h1 className="text-[2.1rem] font-extrabold leading-[1.3] tracking-[-0.02em] sm:text-[2.7rem]">
           문법 용어,
           <br />
           <span className="marker">뜻부터 알면</span> 쉬워져요
@@ -62,17 +54,6 @@ export default function Home() {
           <br />
           한 걸음씩 차근차근 밟아 가다 보면, 어느새 이해가 쌓이는 문법 공부. 그래머랑과 함께해요.
         </p>
-        <div className="mt-7">
-          <Link
-            href={unitHref("intro", "reading-terms")}
-            className="inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-6 font-bold text-on-ink transition-transform hover:-translate-y-0.5"
-          >
-            처음부터 배우기
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </Link>
-        </div>
       </section>
 
       {/* 특징 */}

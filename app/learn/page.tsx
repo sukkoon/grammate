@@ -7,7 +7,7 @@ import { curriculum, unitHref, allUnits } from "@/content/curriculum";
 
 export const metadata: Metadata = {
   title: "전체 목차",
-  description: "서장부터 수능 어법까지, 7부 24장으로 정리한 그래머랑 영어 문법 전체 목차.",
+  description: "서장부터 수능 어법까지, 7부 27장 88단원으로 정리한 그래머랑 영어 문법 전체 목차.",
 };
 
 export default function LearnPage() {
@@ -28,6 +28,32 @@ export default function LearnPage() {
         </Link>
       </p>
 
+      {/* 장 지도: 7부 24장을 한눈에. 장을 누르면 아래 그 장의 단원 목록으로 내려간다 */}
+      <section id="map" aria-labelledby="h-map" className="mt-8 scroll-mt-24 rounded-2xl border border-line bg-card px-4 py-4 sm:px-5">
+        <h2 id="h-map" className="text-[1.08rem] font-extrabold">
+          한눈에 보는 핵심 문법
+        </h2>
+        <p className="mt-1 text-[14px] text-ink-2">7부 {curriculum.reduce((n, p) => n + p.chapters.length, 0)}장이에요. 장 이름을 누르면 그 장의 단원 목록으로 내려가요.</p>
+        <ol className="mt-3 grid gap-2.5 sm:grid-cols-2">
+          {curriculum.map((part) => (
+            <li key={part.id} className="rounded-xl bg-chip px-3.5 py-3">
+              <p className="text-[13px] font-extrabold text-coral-ink">
+                {part.label} <span className="text-ink">{part.title}</span>
+              </p>
+              <ul className="mt-2 flex flex-wrap gap-1.5">
+                {part.chapters.map((c) => (
+                  <li key={c.slug}>
+                    <a href={`#${c.slug}`} className="inline-block rounded-full bg-card px-3 py-1 text-[13.5px] font-bold text-ink ring-1 ring-line hover:bg-ink hover:text-on-ink hover:ring-ink">
+                      {c.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       <div className="mt-10 space-y-12">
         {curriculum.map((part) => (
           <section key={part.id} aria-labelledby={`part-${part.id}`}>
@@ -39,7 +65,7 @@ export default function LearnPage() {
             </div>
             <div className="mt-4 space-y-6">
               {part.chapters.map((c) => (
-                <div key={c.slug} id={c.slug}>
+                <div key={c.slug} id={c.slug} className="scroll-mt-24">
                   <h3 className="text-[1.15rem] font-extrabold">{c.title}</h3>
                   <p className="text-[15px] text-ink-2">{c.hook}</p>
                   <ol className="mt-3 grid gap-2 sm:grid-cols-2">
