@@ -2,7 +2,7 @@
 
 /**
  * 로그인 전에도 쓸 수 있도록 이 기기에 저장하는 학습 기록.
- * 로그인 기능이 붙으면 같은 모양으로 Supabase와 동기화한다.
+ * 로그인하면 lib/sync.ts가 같은 모양으로 계정(Supabase gm_records)과 맞춘다.
  */
 
 export interface SavedWord {
@@ -29,6 +29,8 @@ const READ_KEY = "gm-read";
 // 지운 기록의 흔적(무엇을 언제 지웠는지). 다른 기기와 합칠 때 지운 것이 되살아나지 않게 한다
 const WORDS_GONE_KEY = "gm-words-gone";
 const READ_GONE_KEY = "gm-read-gone";
+// '기록 모두 지우기'를 누른 시각. 이보다 앞선 기록은 어느 기기에서 와도 버린다
+const CLEARED_KEY = "gm-cleared-at";
 const EVENT = "gm-store";
 
 function read<T>(key: string, fallback: T): T {
@@ -56,12 +58,24 @@ export const rawSnapshot = (key: "words" | "quiz" | "read") => () => {
   }
 };
 
+const RECORD_KEYS = [WORDS_KEY, QUIZ_KEY, READ_KEY, WORDS_GONE_KEY, READ_GONE_KEY];
+
+/** 이 기기의 기록만 비운다 (다른 계정으로 로그인했을 때). 계정에 저장된 기록은 그대로다 */
 export function clearAll() {
-  for (const k of [WORDS_KEY, QUIZ_KEY, READ_KEY, WORDS_GONE_KEY, READ_GONE_KEY]) {
+  for (const k of [...RECORD_KEYS, CLEARED_KEY]) {
     try {
       localStorage.removeItem(k);
     } catch {}
   }
+  window.dispatchEvent(new Event(EVENT));
+}
+
+/** '기록 모두 지우기': 지운 시각을 남겨, 로그인한 다른 기기의 기록도 함께 지워지게 한다 */
+export function clearMine() {
+  try {
+    for (const k of RECORD_KEYS) localStorage.removeItem(k);
+    localStorage.setItem(CLEARED_KEY, JSON.stringify(Date.now()));
+  } catch {}
   window.dispatchEvent(new Event(EVENT));
 }
 
@@ -126,6 +140,8 @@ export interface RecordsBundle {
   quiz: Record<string, QuizRecord>;
   read: Record<string, number>;
   readGone: Record<string, number>;
+  /** 기록 모두 지우기를 누른 시각 (없으면 0) */
+  clearedAt: number;
 }
 export const exportAll = (): RecordsBundle => ({
   words: getWords(),
@@ -133,6 +149,7 @@ export const exportAll = (): RecordsBundle => ({
   quiz: getQuiz(),
   read: getRead(),
   readGone: read<Record<string, number>>(READ_GONE_KEY, {}),
+  clearedAt: read<number>(CLEARED_KEY, 0),
 });
 /** 동기화용: 합친 결과를 이 기기에 덮어쓴다 (화면도 새로 그려진다) */
 export function importAll(b: RecordsBundle) {
@@ -142,6 +159,8 @@ export function importAll(b: RecordsBundle) {
     localStorage.setItem(QUIZ_KEY, JSON.stringify(b.quiz));
     localStorage.setItem(READ_KEY, JSON.stringify(b.read));
     localStorage.setItem(READ_GONE_KEY, JSON.stringify(b.readGone));
+    if (b.clearedAt) localStorage.setItem(CLEARED_KEY, JSON.stringify(b.clearedAt));
+    else localStorage.removeItem(CLEARED_KEY);
   } catch {}
   window.dispatchEvent(new Event(EVENT));
 }

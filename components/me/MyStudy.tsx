@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useSyncExternalStore } from "react";
 import { Mate } from "@/components/brand/Mate";
 import {
-  clearAll,
+  clearMine,
   onStoreChange,
   rawSnapshot,
   removeWord,
@@ -12,6 +12,9 @@ import {
   type SavedWord,
 } from "@/lib/local-store";
 import { speak } from "@/lib/speech";
+import { useMe } from "@/lib/auth";
+import { syncNow, useSyncState } from "@/lib/sync";
+import { Phrases } from "@/components/text/Phrases";
 
 const parse = <T,>(raw: string, fallback: T): T => {
   try {
@@ -44,10 +47,20 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
   );
 
   const empty = words.length === 0 && again.length === 0 && read.length === 0;
+  // 다른 기기에서 쌓은 기록을 처음 받아 오는 동안에는 '기록이 없어요' 대신 기다려 달라고 한다
+  const me = useMe();
+  const sync = useSyncState();
+  const loading = empty && me !== null && sync.at === null && sync.status !== "offline";
 
   return (
     <div className="mt-8 space-y-10">
-      {empty && (
+      {loading && (
+        <div className="flex flex-col items-center rounded-2xl border border-dashed border-line px-6 py-10 text-center" aria-live="polite">
+          <Mate mood="thinking" size={56} className="text-ink" />
+          <p className="mt-3 font-extrabold">내 계정에서 기록을 불러오고 있어요</p>
+        </div>
+      )}
+      {empty && !loading && (
         <div className="flex flex-col items-center rounded-2xl border border-dashed border-line px-6 py-10 text-center">
           <Mate mood="thinking" size={56} className="text-ink" />
           <p className="mt-3 font-extrabold">아직 기록이 없어요</p>
@@ -146,22 +159,64 @@ export function MyStudy({ units }: { units: Record<string, { title: string; chap
         </section>
       )}
 
-      <div className="border-t border-line pt-6 text-[13.5px] text-ink-3">
-        <p>
-          지금은 이 기기(브라우저)에만 저장돼요. 로그인 기능이 생기면 다른 기기에서도 이어서 볼 수 있어요.
-        </p>
-        {!empty && (
+      <SyncFooter empty={empty} />
+    </div>
+  );
+}
+
+const timeOf = (t: number) => new Date(t).toLocaleTimeString("ko-KR", { hour: "numeric", minute: "2-digit" });
+
+/** 어디에 저장되는지, 마지막으로 계정과 맞춘 때, 기록 모두 지우기 */
+function SyncFooter({ empty }: { empty: boolean }) {
+  const me = useMe();
+  const sync = useSyncState();
+  const signedIn = !!me;
+  return (
+    <div className="border-t border-line pt-6 text-[13.5px] text-ink-3">
+      <p>
+        <Phrases
+          text={
+            signedIn
+              ? "내 계정에 저장돼요. 같은 계정으로 로그인한 기기라면 어디서 공부했든 똑같은 기록이 보여요."
+              : "지금은 이 기기(브라우저)에만 저장돼요. 로그인하면 내 계정에 저장되어 다른 기기에서도 똑같이 보여요."
+          }
+        />
+      </p>
+      {signedIn && (
+        <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1" aria-live="polite">
+          <span>
+            {sync.status === "syncing"
+              ? "계정과 맞추는 중…"
+              : sync.status === "offline"
+                ? "인터넷이 연결되지 않아 이 기기에 먼저 저장해 두었어요. 연결되면 저절로 맞춰져요."
+                : sync.at
+                  ? `${timeOf(sync.at)}에 계정과 맞췄어요`
+                  : ""}
+          </span>
           <button
             type="button"
-            onClick={() => {
-              if (confirm("이 기기에 저장된 내 공부 기록을 모두 지울까요?")) clearAll();
-            }}
-            className="mt-3 rounded-lg px-4 py-2 font-bold ring-1 ring-line hover:bg-chip"
+            onClick={() => syncNow(me.id)}
+            disabled={sync.status === "syncing"}
+            className="rounded-lg px-2.5 py-1 font-bold text-ink-2 ring-1 ring-line hover:bg-chip hover:text-ink disabled:opacity-50"
           >
-            기록 모두 지우기
+            지금 맞추기
           </button>
-        )}
-      </div>
+        </p>
+      )}
+      {!empty && (
+        <button
+          type="button"
+          onClick={() => {
+            const ask = signedIn
+              ? "내 공부 기록을 모두 지울까요?\n이 계정으로 로그인한 다른 기기에서도 함께 지워져요."
+              : "이 기기에 저장된 내 공부 기록을 모두 지울까요?";
+            if (confirm(ask)) clearMine();
+          }}
+          className="mt-3 rounded-lg px-4 py-2 font-bold ring-1 ring-line hover:bg-chip"
+        >
+          기록 모두 지우기
+        </button>
+      )}
     </div>
   );
 }
