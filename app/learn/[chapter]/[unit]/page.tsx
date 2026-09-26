@@ -117,9 +117,7 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
         <div
           hidden
           data-swipe-prev={unitHref(swipePrev.chapter.slug, swipePrev.unit.slug)}
-          data-swipe-prev-label={`${prev ? "이전 단원" : "마지막 단원"}: ${swipePrev.unit.title}`}
           data-swipe-next={unitHref(swipeNext.chapter.slug, swipeNext.unit.slug)}
-          data-swipe-next-label={`${next ? "다음 단원" : "처음 단원"}: ${swipeNext.unit.title}`}
         />
 
         <nav aria-label="이전·다음 단원" className="mt-8 grid gap-3 sm:grid-cols-2">
