@@ -21,7 +21,7 @@ export const navItems = [
 export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-16">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-6 lg:h-16">
         <Link href="/" aria-label="그래머랑 홈" className="shrink-0 rounded-lg">
           <Logo size={36} tagline={brand.tagline} />
         </Link>

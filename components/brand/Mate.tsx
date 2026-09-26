@@ -106,11 +106,11 @@ export function Logo({ size = 34, className = "", tagline }: { size?: number; cl
       <Mate size={size} />
       {tagline ? (
         <span className="flex flex-col">
-          <Wordmark className="text-[1.18rem] leading-none sm:text-[1.35rem]" />
+          <Wordmark className="text-[1.08rem] leading-none sm:text-[1.35rem]" />
           <span className="mt-1 hidden whitespace-nowrap text-[12px] font-bold leading-none tracking-[-0.01em] text-ink-3 sm:block sm:text-[12.5px]">{tagline}</span>
         </span>
       ) : (
-        <Wordmark className="text-[1.18rem] leading-none sm:text-[1.35rem]" />
+        <Wordmark className="text-[1.08rem] leading-none sm:text-[1.35rem]" />
       )}
     </span>
   );

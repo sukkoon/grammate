@@ -39,7 +39,7 @@ export function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={dark ? "밝은 화면으로 바꾸기" : "어두운 화면으로 바꾸기"}
-      className="hidden size-10 place-items-center rounded-full text-ink-2 transition-colors hover:bg-chip hover:text-ink sm:grid"
+      className="grid size-9 shrink-0 place-items-center rounded-lg border border-line bg-card text-ink-2 transition-colors hover:border-ink-3 hover:text-ink sm:size-10 sm:rounded-full sm:border-0 sm:bg-transparent"
     >
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
         {dark ? (
