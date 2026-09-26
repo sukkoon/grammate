@@ -3,7 +3,7 @@
 import { Fragment, useState, type ReactNode } from "react";
 import { Mate } from "@/components/brand/Mate";
 import { saveQuiz } from "@/lib/local-store";
-import { bandLabel, bandRank, type Band } from "@/lib/level";
+import { bandRank, type Band } from "@/lib/level";
 import { useBand } from "@/lib/use-level";
 
 export interface PreparedPick {
@@ -54,9 +54,6 @@ export function PickClient({ id, title, items }: { id: string; title?: string; i
             <li key={i} className="rounded-2xl border border-line bg-card px-4 py-4 sm:px-5">
               <p className="text-[1.08em] font-medium leading-[2.3]">
                 <span className="mr-2 font-bold text-coral-ink">{n + 1}.</span>
-                {it.level && it.level !== "elem" && (
-                  <span className="mr-2 rounded-lg bg-sky-soft px-2 py-0.5 align-middle text-[12.5px] font-extrabold text-sky-ink">{bandLabel[it.level]}</span>
-                )}
                 {it.parts.map((p, pi) => {
                   if (p.kind === "text") return <Fragment key={pi}>{p.node}</Fragment>;
                   const b = p.b;

@@ -3,7 +3,7 @@
 import { useState, type ReactNode } from "react";
 import { Mate } from "@/components/brand/Mate";
 import { saveQuiz } from "@/lib/local-store";
-import { bandLabel, bandRank, type Band } from "@/lib/level";
+import { bandRank, type Band } from "@/lib/level";
 import { useBand } from "@/lib/use-level";
 
 export interface PreparedItem {
@@ -54,11 +54,6 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
               <p className="font-bold">
                 <span className="mr-2 text-coral-ink">{n + 1}.</span>
                 {it.q}
-                {it.level && it.level !== "elem" && (
-                  <span className="ml-2 rounded-lg bg-sky-soft px-2 py-0.5 align-middle text-[11.5px] font-extrabold text-sky-ink">
-                    {bandLabel[it.level]}
-                  </span>
-                )}
               </p>
               {it.enNode && <p className="mt-2 text-[1.1em] font-medium">{it.enNode}</p>}
               <div className="mt-3 grid gap-2 sm:grid-cols-2">

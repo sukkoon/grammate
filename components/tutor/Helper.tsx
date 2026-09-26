@@ -6,7 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Mate } from "@/components/brand/Mate";
 import { Speak } from "@/components/lesson/Speak";
 import { brand } from "@/lib/brand";
-import { bandLabel, bandRank, type Band } from "@/lib/level";
+import { bandRank, type Band } from "@/lib/level";
 import { canSpeak, speak, stopSpeaking } from "@/lib/speech";
 import { buildIndex, isConfident, search, type Hit, type Index } from "@/lib/tutor/match";
 import type { FaqPayload } from "@/lib/tutor/types";
@@ -54,11 +54,6 @@ function AnswerCard({ item, speaking, onSpeak }: { item: FaqPayload; speaking: b
       <div className="flex items-start justify-between gap-2">
         <p className="text-[13px] font-bold text-coral-ink">
           {item.q}
-          {item.level && item.level !== "elem" && (
-            <span className="ml-1.5 rounded-lg bg-sky-soft px-1.5 py-0.5 align-middle text-[11px] font-extrabold text-sky-ink">
-              {bandLabel[item.level]}
-            </span>
-          )}
         </p>
         {canSpeak() && (
           <button

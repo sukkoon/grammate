@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { plain } from "@/lib/lexicon";
 import { Mate, type Mood } from "@/components/brand/Mate";
 import type { Level } from "@/content/curriculum";
-import { BANDS, bandLabel, bandOf, type Band } from "@/lib/level";
+import { bandOf, type Band } from "@/lib/level";
 import { Lv } from "@/components/level/Lv";
 import { En } from "./En";
 import { Speak } from "./Speak";
@@ -159,26 +159,6 @@ export function E({ en }: { en: string }) {
   return (
     <span className="font-medium">
       <En en={en} />
-    </span>
-  );
-}
-
-export function LevelBadges({ levels }: { levels: Level[] }) {
-  const bands = BANDS.filter((b) => levels.some((l) => bandOf(l) === b));
-  return (
-    <span className="inline-flex flex-wrap gap-1">
-      {bands.map((b) => (
-        <LevelBadge key={b} band={b} />
-      ))}
-    </span>
-  );
-}
-
-/** 초등·중등·고등 표시: 모서리가 둥근 네모, 고등으로 갈수록 진한 색 (색은 globals.css의 .lv-badge) */
-export function LevelBadge({ band, className = "" }: { band: Band; className?: string }) {
-  return (
-    <span data-band={band} className={`lv-badge inline-block rounded-md px-2 py-0.5 text-[12px] font-extrabold leading-[1.5] `}>
-      {bandLabel[band]}
     </span>
   );
 }

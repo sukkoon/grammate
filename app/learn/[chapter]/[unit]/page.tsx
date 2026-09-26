@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { LevelBadges } from "@/components/lesson/blocks";
 import { ReadButton, ReadMark } from "@/components/lesson/ReadMark";
 import { LevelTabs } from "@/components/level/LevelTabs";
-import { LevelAbove } from "@/components/level/LevelAbove";
 import { findUnit, neighbors, readyUnits, unitHref, type UnitRef } from "@/content/curriculum";
 import { Phrases } from "@/components/text/Phrases";
 
@@ -44,10 +42,7 @@ function ChapterNav({ at: r }: { at: UnitRef }) {
                   }`}
                 >
                   <span>{label}</span>
-                  <span className="flex shrink-0 flex-col items-end gap-1">
-                    <ReadMark unit={`${r.chapter.slug}/${u.slug}`} />
-                    <LevelAbove levels={u.levels} />
-                  </span>
+                  <ReadMark unit={`${r.chapter.slug}/${u.slug}`} />
                 </Link>
               ) : (
                 <span className="block border-l-2 border-transparent py-1.5 pl-3 text-ink-3">{label} · 준비 중</span>
@@ -101,9 +96,6 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
           <p className="mt-2 text-[1rem] text-ink-2">
             <Phrases text={ref.unit.summary} />
           </p>
-          <div className="mt-3">
-            <LevelBadges levels={ref.unit.levels} />
-          </div>
         </header>
 
         <div className="mt-5">

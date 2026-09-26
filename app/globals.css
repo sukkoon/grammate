@@ -279,8 +279,7 @@ body {
 
 /* ───────── 수준별 보기 (html[data-level] = elem | middle | high) ───────── */
 .lv-peek,
-.lv-fold,
-.lv-above {
+.lv-fold {
   display: none;
 }
 /* 펼친 뒤에는 '접기' 단추를 보여 준다 (내 수준보다 높은 상자에서만) */
@@ -310,53 +309,6 @@ html[data-level="elem"] [data-lv-only-min="high"],
 html[data-level="middle"] [data-lv-only-min="high"] {
   display: none;
 }
-/* 목차: 내 수준보다 높은 단원 표시 */
-html[data-level="elem"] .lv-above[data-need="middle"],
-html[data-level="elem"] .lv-above[data-need="high"],
-html[data-level="middle"] .lv-above[data-need="high"] {
-  display: inline-block;
-}
-
-/* ───────── 초등·중등·고등 배지: 한 색조로, 위로 갈수록 진하게 ───────── */
-.lv-badge[data-band="elem"] {
-  background: linear-gradient(135deg, #e4f0ff 0%, #c6ddf9 100%);
-  color: #2b4f8c;
-}
-.lv-badge[data-band="middle"] {
-  background: linear-gradient(135deg, #7fa9e6 0%, #4f80cf 100%);
-  color: #ffffff;
-}
-.lv-badge[data-band="high"] {
-  background: linear-gradient(135deg, #3a63ae 0%, #1c3d7c 100%);
-  color: #ffffff;
-}
-[data-theme="dark"] .lv-badge[data-band="elem"] {
-  background: linear-gradient(135deg, #253a5e 0%, #1c2d4b 100%);
-  color: #a9c4f2;
-}
-[data-theme="dark"] .lv-badge[data-band="middle"] {
-  background: linear-gradient(135deg, #3b619f 0%, #2c4b82 100%);
-  color: #e6eefb;
-}
-[data-theme="dark"] .lv-badge[data-band="high"] {
-  background: linear-gradient(135deg, #6f97dc 0%, #4b74bf 100%);
-  color: #0e1a33;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .lv-badge[data-band="elem"] {
-    background: linear-gradient(135deg, #253a5e 0%, #1c2d4b 100%);
-    color: #a9c4f2;
-  }
-  :root:not([data-theme="light"]) .lv-badge[data-band="middle"] {
-    background: linear-gradient(135deg, #3b619f 0%, #2c4b82 100%);
-    color: #e6eefb;
-  }
-  :root:not([data-theme="light"]) .lv-badge[data-band="high"] {
-    background: linear-gradient(135deg, #6f97dc 0%, #4b74bf 100%);
-    color: #0e1a33;
-  }
-}
-
 /* 글자 로고: Changa의 소문자 g가 작은 크기에서 끊겨 보여, 글자 로고만 나눔스퀘어 ac(굵게)로 쓴다 */
 .wordmark {
   font-family: var(--font-ko), system-ui, sans-serif;

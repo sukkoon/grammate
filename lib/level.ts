@@ -21,10 +21,6 @@ export function bandOf(level: Level): Band {
   return "high";
 }
 
-/** 단원 학년 목록 중 가장 낮은 수준 */
-export const minBand = (levels: Level[]): Band =>
-  levels.map(bandOf).sort((a, b) => bandRank(a) - bandRank(b))[0] ?? "elem";
-
 export const LEVEL_KEY = "gm-level";
 export const LEVEL_EVENT = "gm-level";
 export const DEFAULT_BAND: Band = "middle";
