@@ -24,6 +24,10 @@ describe("사전 검색", () => {
     expect(lookupPhrase("look after")?.lemma).toBe("look after");
   });
 
+  it("품사 이름으로는 찾지 않는다 ('명사'를 찾아도 모든 명사가 나오지 않는다)", () => {
+    expect(searchWords("명사").length).toBeLessThan(3);
+  });
+
   it("빈 말은 아무것도 찾지 않는다", () => {
     expect(searchWords("  ")).toEqual([]);
   });

@@ -62,7 +62,7 @@ export function AuthStatus() {
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((v) => !v)}
-        className={`inline-flex h-9 max-w-[7rem] items-center gap-1.5 rounded-lg border px-2.5 sm:px-3 text-[13.5px] font-bold transition-colors ${
+        className={`inline-flex h-8 w-8 max-w-[7rem] items-center justify-center gap-1.5 rounded-lg border px-0 sm:h-9 sm:w-auto sm:px-3 text-[13.5px] font-bold transition-colors ${
           open ? "border-ink bg-ink text-on-ink" : "border-line bg-card text-ink hover:border-ink-3"
         }`}
       >
@@ -70,7 +70,7 @@ export function AuthStatus() {
           <circle cx="12" cy="8" r="4" />
           <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
         </svg>
-        <span className="hidden truncate sm:inline">{me.name}</span>
+        <span className="hidden truncate md:inline">{me.name}</span>
       </button>
       <div
         id={panelId}

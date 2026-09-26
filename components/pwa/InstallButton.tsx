@@ -92,7 +92,7 @@ export function InstallButton({ className = "", iconOnlyOnMobile = false }: { cl
         type="button"
         onClick={install}
         aria-label={`${brand.appName} 앱 설치`}
-        className={`inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg bg-coral text-[13.5px] font-extrabold text-white transition-colors hover:bg-coral-ink ${iconOnlyOnMobile ? "w-9 justify-center px-0 sm:w-auto sm:px-3" : "px-3"} ${className}`}
+        className={`inline-flex h-8 shrink-0 items-center gap-1.5 rounded-lg bg-coral sm:h-9 text-[13.5px] font-extrabold text-white transition-colors hover:bg-coral-ink ${iconOnlyOnMobile ? "w-8 justify-center px-0 sm:w-auto sm:px-3" : "px-3"} ${className}`}
       >
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M12 3v12M6 9l6 6 6-6M4 21h16" />

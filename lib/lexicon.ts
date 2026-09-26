@@ -265,10 +265,12 @@ export function searchWords(q: string, limit = 12): WordHit[] {
   for (const [k, e] of Object.entries(WORDS)) {
     let s = 0;
     if (hangul) {
-      const pieces = e[1].split(/[,;·/]\s*/).map((m) => m.replace(/\([^)]*\)/g, "").trim());
-      if (pieces.includes(t)) s = 3;
-      else if (e[1].includes(t)) s = 2;
-      else if (e.slice(2).some((x) => x.includes(t))) s = 1;
+      // 괄호 속 설명('(뒤에 명사·동명사)')과 다른 뜻 앞의 품사 이름('명사: ')은 빼고 뜻만 본다
+      const bare = (m: string) => m.replace(/\([^)]*\)/g, "").trim();
+      const main = bare(e[1]);
+      if (main.split(/[,;·/]\s*/).map((m) => m.trim()).includes(t)) s = 3;
+      else if (main.includes(t)) s = 2;
+      else if (e.slice(2).some((x) => bare(x.replace(/^[^:]+:\s*/, "")).includes(t))) s = 1;
     } else {
       const kl = k.toLowerCase();
       if (kl === lower) s = 3;
