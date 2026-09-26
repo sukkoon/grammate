@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AuthGate } from "@/components/auth/AuthGate";
 import { ScrollTop } from "@/components/layout/ScrollTop";
+import { RecordsSync } from "@/components/auth/RecordsSync";
 import { WordTooltipLayer } from "@/components/lesson/WordTooltipLayer";
 import { LevelLayer } from "@/components/level/LevelLayer";
 import { Helper } from "@/components/tutor/Helper";
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <LevelLayer />
         <Helper />
         <ScrollTop />
+        <RecordsSync />
       </body>
     </html>
   );
