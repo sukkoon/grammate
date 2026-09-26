@@ -99,18 +99,23 @@ export function Wordmark({ className = "" }: { className?: string }) {
   );
 }
 
-/** 로고 = 윙크 G + 글자 로고. tagline을 주면 글자 로고 아래에 한 줄 소개를 붙인다. */
-export function Logo({ size = 34, className = "", tagline }: { size?: number; className?: string; tagline?: string }) {
+/**
+ * 로고 = 윙크 G + 글자 로고. tagline을 주면 글자 로고 아래에 한 줄 소개를 붙인다.
+ * 윙크 G는 조금 작게, 글자 로고는 조금 크게: 이름이 먼저 읽히도록 (휴대폰 G 30px·글자 1.2rem, 태블릿·PC G 34px·글자 1.5rem).
+ * 휴대폰 머리글에서 로그인 전후 모두 같은 크기로 한 줄에 들어가는 폭에 맞췄다 (360px 화면 + 오른쪽 단추 5개).
+ */
+export function Logo({ className = "", tagline }: { className?: string; tagline?: string }) {
+  const word = "text-[1.2rem] leading-none sm:text-[1.5rem]";
   return (
-    <span className={`inline-flex shrink-0 items-center gap-2 text-ink ${className}`}>
-      <Mate size={size} />
+    <span className={`inline-flex shrink-0 items-center gap-1.5 text-ink sm:gap-2 ${className}`}>
+      <Mate size={34} className="size-[30px] sm:size-[34px]" />
       {tagline ? (
         <span className="flex flex-col">
-          <Wordmark className="text-[1.08rem] leading-none sm:text-[1.35rem]" />
+          <Wordmark className={word} />
           <span className="mt-1 hidden whitespace-nowrap text-[12px] font-bold leading-none tracking-[-0.01em] text-ink-3 sm:block sm:text-[12.5px]">{tagline}</span>
         </span>
       ) : (
-        <Wordmark className="text-[1.08rem] leading-none sm:text-[1.35rem]" />
+        <Wordmark className={word} />
       )}
     </span>
   );
