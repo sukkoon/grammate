@@ -5,7 +5,7 @@ import { allUnits, curriculum } from "@/content/curriculum";
 
 export const metadata: Metadata = {
   title: "전체 목차",
-  description: "서장부터 제7부 수능 어법까지, 그래머랑 영어 문법의 전체 목차.",
+  description: "서장부터 제7부 수능 문법까지, 그래머랑 영어 문법의 전체 목차.",
 };
 
 /** 전체 목차: 부와 장 이름만 한눈에. 단원 요약과 수준은 각 단원별 학습(/start)에서 본다. */

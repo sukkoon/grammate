@@ -122,7 +122,7 @@ export const roadmap: RoadmapLevel[] = [
   {
     band: "high",
     title: "고등학생이 꼭 알아야 할 문법",
-    intro: "중학 문법을 깊게 다지고, 긴 문장을 정확히 읽는 힘과 수능 어법에서 구별하는 눈을 길러요. 핵심은 '진짜 동사 찾기'예요.",
+    intro: "중학 문법을 깊게 다지고, 긴 문장을 정확히 읽는 힘을 길러요. 핵심은 '진짜 동사 찾기'예요. 여기서 다진 문법이 수능 문법의 바탕이 돼요.",
     books: ["GRAMMAR ZONE 기본·필수", "천일문 고등 GRAMMAR", "어법끝 START"],
     groups: [
       {
@@ -158,18 +158,6 @@ export const roadmap: RoadmapLevel[] = [
           { title: "생략·동격·삽입", know: "동격 that과 관계대명사 that을 구별해요.", links: [L("생략·동격·삽입", "special-constructions/ellipsis-apposition")] },
           { title: "부분부정과 병렬", know: "not all과 none을 구별하고, 병렬 구조의 모양을 맞춰요.", links: [L("부정과 병렬", "special-constructions/negation-parallel")] },
           { title: "최상급을 나타내는 여러 표현", know: "No other ~ 비교급 than 같은 표현과 배수 비교를 알아요.", links: [L("최상급 표현", "comparison/superlative-meaning")] },
-        ],
-      },
-      {
-        name: "수능 어법",
-        items: [
-          { title: "수일치와 대명사 일치", know: "괄호로 수식어를 지우고 진짜 주어와 동사의 수를 맞춰요.", links: [L("수일치", "suneung/agreement")] },
-          { title: "동사 vs 준동사, 능동 vs 수동", know: "자리를 먼저, 태를 그다음에 확인해요.", links: [L("동사와 태", "suneung/verb-verbal")] },
-          { title: "that/what, 관계사, 형용사/부사, 전치사/접속사", know: "선행사와 뒤 절의 완전성, 보어 자리, 뒤에 오는 말로 골라요.", links: [L("헷갈리는 짝", "suneung/which-word")] },
-          { title: "목적격보어와 자동사·타동사", know: "동사가 고르는 목적격보어의 모양과, 목적어가 필요한 동사인지를 확인해요.", links: [L("목적격보어·자동사/타동사", "suneung/complement-transitive")] },
-          { title: "병렬·대동사·도치", know: "짝의 모양을 맞추고, 대동사는 앞 동사의 종류에, 도치된 동사는 뒤의 주어에 맞춰요.", links: [L("병렬·대동사·도치", "suneung/parallel-inversion")] },
-          { title: "시제·가정법·조동사", know: "시간 단서로 시제를 정하고, 가정법의 짝과 조동사 have p.p.의 뜻을 가려요.", links: [L("시제·가정법·조동사", "suneung/tense-mood")] },
-          { title: "실전 29번형 지문", know: "지문 하나에서 밑줄 다섯 개를 점검표로 차례차례 확인해요.", links: [L("실전 세트", "suneung/practice")] },
         ],
       },
     ],

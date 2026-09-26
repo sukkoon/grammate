@@ -99,6 +99,26 @@ export default function RoadmapPage() {
         <LevelSection lv={middle} />
         <LevelSection lv={high} />
       </div>
+
+      {/* 고등 다음 단계: 수능 문법은 따로 모았다 */}
+      <Link
+        href="/suneung"
+        className="group mt-10 flex items-center gap-3 rounded-2xl border border-line bg-card px-4 py-4 transition-colors hover:border-ink-3 sm:px-5"
+      >
+        <Mate mood="cheer" size={36} className="shrink-0 text-ink" />
+        <span className="min-w-0 flex-1">
+          <span className="flex flex-wrap items-center gap-2">
+            <span className="rounded-lg bg-amber-soft px-2 py-0.5 text-[12.5px] font-extrabold text-amber-ink">다음 단계</span>
+            <span className="text-[1.1rem] font-extrabold group-hover:text-coral-ink">수능 문법</span>
+          </span>
+          <span className="mt-1 block text-[14px] text-ink-2">
+            <Phrases text="여기서 다진 문법이 수능 문제에서 어떻게 나오는지, 수능 문법에서 이어서 익혀요." />
+          </span>
+        </span>
+        <span aria-hidden className="shrink-0 text-[1.2rem] font-extrabold text-coral-ink">
+          ›
+        </span>
+      </Link>
     </div>
   );
 }

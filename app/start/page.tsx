@@ -6,7 +6,7 @@ import { allUnits, curriculum, unitHref } from "@/content/curriculum";
 
 export const metadata: Metadata = {
   title: "각 단원별 학습",
-  description: "서장부터 제7부 수능 어법까지, 모든 단원의 요약과 수준을 보고 바로 들어가는 학습 목록.",
+  description: "서장부터 제7부 수능 문법까지, 모든 단원의 요약과 수준을 보고 바로 들어가는 학습 목록.",
 };
 
 /** 각 단원별 학습: 서장과 제1부~제7부의 단원을 요약·수준과 함께 모두 보여 준다. 전체 목차(/learn)는 장 이름만 보여 준다. */
