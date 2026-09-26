@@ -5,6 +5,8 @@ import { Mate } from "@/components/brand/Mate";
 import { saveQuiz } from "@/lib/local-store";
 import { bandRank, type Band } from "@/lib/level";
 import { useBand } from "@/lib/use-level";
+import { playFeedback } from "@/lib/feedback";
+import { SoundToggle } from "./SoundToggle";
 
 export interface PreparedPick {
   parts: ({ kind: "text"; node: ReactNode } | { kind: "box"; b: number; choices: string[] })[];
@@ -33,8 +35,11 @@ export function PickClient({ id, title, items }: { id: string; title?: string; i
     const next = { ...picked, [k]: c };
     setPicked(next);
     const it = items[i];
-    if (it.answers.every((_, bb) => next[`${i}.${bb}`] !== undefined))
-      saveQuiz({ key: `${id}#p${i}`, unit: id, question: `네모 고르기: ${it.plain}`, correct: it.answers.every((a, bb) => next[`${i}.${bb}`] === a) });
+    if (it.answers.every((_, bb) => next[`${i}.${bb}`] !== undefined)) {
+      const correct = it.answers.every((a, bb) => next[`${i}.${bb}`] === a);
+      playFeedback(correct);
+      saveQuiz({ key: `${id}#p${i}`, unit: id, question: `네모 고르기: ${it.plain}`, correct });
+    }
   }
 
   const allDone = visible.length > 0 && visible.every(({ i }) => isDone(i));
@@ -44,6 +49,7 @@ export function PickClient({ id, title, items }: { id: string; title?: string; i
       <div className="mb-3 flex items-center gap-2">
         <Mate mood="thinking" size={30} className="text-ink" />
         <h2 className="text-[1.25rem] font-extrabold">{title ?? "네모 고르기"}</h2>
+        <SoundToggle />
       </div>
       <p className="mb-4 text-[0.93em] text-ink-2">괄호 안에서 어법에 맞는 것을 눌러요. 고르기 전에 진짜 동사 개수부터 세어 보세요.</p>
       <ol className="space-y-3">

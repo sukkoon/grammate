@@ -5,6 +5,8 @@ import { Mate } from "@/components/brand/Mate";
 import { saveQuiz } from "@/lib/local-store";
 import { bandRank, type Band } from "@/lib/level";
 import { useBand } from "@/lib/use-level";
+import { playFeedback } from "@/lib/feedback";
+import { SoundToggle } from "./SoundToggle";
 
 export interface PreparedItem {
   q: string;
@@ -32,6 +34,7 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
   function choose(i: number, o: number) {
     if (picked[i] !== undefined) return;
     setPicked((p) => ({ ...p, [i]: o }));
+    playFeedback(o === items[i].answer);
     saveQuiz({ key: `${id}#${i}`, unit: id, question: items[i].q, correct: o === items[i].answer });
   }
 
@@ -40,6 +43,7 @@ export function QuizClient({ id, items }: { id: string; items: PreparedItem[] })
       <div className="mb-3 flex items-center gap-2">
         <Mate mood="thinking" size={30} className="text-ink" />
         <h2 className="text-[1.25rem] font-extrabold">스스로 확인해 봐요</h2>
+        <SoundToggle />
       </div>
       <p className="mb-4 text-[0.93em] text-ink-2">
         점수를 매기는 시험이 아니에요. 내가 정말 이해했는지 스스로 확인하는 시간이에요.
