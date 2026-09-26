@@ -44,7 +44,8 @@ export function NavMenu({ items, className = "" }: { items: { href: string; labe
         aria-expanded={open}
         aria-controls={menuId}
         onClick={() => setOpen((v) => !v)}
-        className={`inline-flex h-9 max-w-[52vw] items-center gap-1.5 rounded-lg border px-3 text-[14px] font-bold transition-colors sm:max-w-none sm:px-3.5 ${
+        aria-label={`메뉴: ${current?.label ?? "전체"}`}
+        className={`inline-flex h-9 max-w-[52vw] items-center gap-1.5 rounded-lg border px-2.5 text-[14px] font-bold transition-colors sm:max-w-none sm:px-3.5 ${
           open ? "border-ink bg-ink text-on-ink" : "border-line bg-card text-ink hover:border-ink-3"
         }`}
       >
@@ -62,7 +63,7 @@ export function NavMenu({ items, className = "" }: { items: { href: string; labe
           strokeLinecap="round"
           strokeLinejoin="round"
           aria-hidden
-          className={`shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`hidden shrink-0 transition-transform sm:block ${open ? "rotate-180" : ""}`}
         >
           <path d="m6 9 6 6 6-6" />
         </svg>

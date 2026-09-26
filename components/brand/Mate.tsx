@@ -99,13 +99,16 @@ export function Wordmark({ className = "" }: { className?: string }) {
   );
 }
 
-/** 로고 = 윙크 G + 글자 로고. tagline을 주면 글자 로고 아래에 한 줄 소개를 붙인다. */
-export function Logo({ size = 34, className = "", tagline }: { size?: number; className?: string; tagline?: string }) {
+/**
+ * 로고 = 윙크 G + 글자 로고. tagline을 주면 글자 로고 아래에 한 줄 소개를 붙인다.
+ * compact면 폭이 좁은 휴대폰(450px 미만)에서는 윙크 G만 보인다 (머리글 단추들이 한 줄에 들어가도록).
+ */
+export function Logo({ size = 34, className = "", tagline, compact = false }: { size?: number; className?: string; tagline?: string; compact?: boolean }) {
   return (
     <span className={`inline-flex shrink-0 items-center gap-2 text-ink ${className}`}>
       <Mate size={size} />
       {tagline ? (
-        <span className="flex flex-col">
+        <span className={compact ? "hidden flex-col min-[450px]:flex" : "flex flex-col"}>
           <Wordmark className="text-[1.08rem] leading-none sm:text-[1.35rem]" />
           <span className="mt-1 hidden whitespace-nowrap text-[12px] font-bold leading-none tracking-[-0.01em] text-ink-3 sm:block sm:text-[12.5px]">{tagline}</span>
         </span>

@@ -245,3 +245,40 @@ export function missingWords(en: string): string[] {
 
 export const naverUrl = (lemma: string) =>
   `https://en.dict.naver.com/#/search?query=${encodeURIComponent(lemma)}`;
+
+export interface WordHit {
+  lemma: string;
+  pos: string;
+  meaning: string;
+}
+
+/**
+ * 사전 검색 목록: 영어는 앞글자가 같은 표제어(apple → apple, applause…, after → look after),
+ * 우리말은 뜻에 그 말이 들어 있는 표제어(사과 → apple). 가까운 것부터 limit개.
+ */
+export function searchWords(q: string, limit = 12): WordHit[] {
+  const t = norm(q).trim();
+  if (!t) return [];
+  const hangul = /[가-힣]/.test(t);
+  const lower = t.toLowerCase();
+  const found: { hit: WordHit; s: number }[] = [];
+  for (const [k, e] of Object.entries(WORDS)) {
+    let s = 0;
+    if (hangul) {
+      const pieces = e[1].split(/[,;·/]\s*/).map((m) => m.replace(/\([^)]*\)/g, "").trim());
+      if (pieces.includes(t)) s = 3;
+      else if (e[1].includes(t)) s = 2;
+      else if (e.slice(2).some((x) => x.includes(t))) s = 1;
+    } else {
+      const kl = k.toLowerCase();
+      if (kl === lower) s = 3;
+      else if (kl.startsWith(lower)) s = 2;
+      else if (lower.length >= 3 && kl.split(/[\s-]+/).some((w) => w.startsWith(lower))) s = 1; // after → look after
+    }
+    if (s) found.push({ hit: { lemma: k, pos: e[0], meaning: e[1] }, s });
+  }
+  return found
+    .sort((a, b) => b.s - a.s || a.hit.lemma.length - b.hit.lemma.length || a.hit.lemma.localeCompare(b.hit.lemma))
+    .slice(0, limit)
+    .map((x) => x.hit);
+}
