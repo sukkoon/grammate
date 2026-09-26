@@ -75,5 +75,306 @@
       { "en": "[[Although]] it rained, we went out.", "ko": "뒤에 주어 + 동사 → 접속사" }
     ],
     "level": "high"
+  },
+  {
+    "id": "snct-1",
+    "unit": "suneung/complement-transitive",
+    "q": "make 뒤에는 왜 to를 안 붙여요?",
+    "alts": ["사역동사 뒤에 동사원형", "made me to 틀려요?", "메이크 해브 렛 뒤에 투 빼요?", "목적격보어 원형부정사 언제 써요", "시키는 동사 뒤에 to"],
+    "keys": ["make", "have", "let", "사역동사", "동사원형"],
+    "a": "make, have, let은 **사역동사**라서 목적격보어로 **동사원형**을 써요. 목적어가 그 동작을 하는 쪽이면 to 없이 원형을 붙이면 돼요.\n다만 같은 '시키다'라도 **get**은 to부정사를 써요. 그리고 make가 수동태(be made)가 되면 원형 앞에 **to가 돌아와요**.",
+    "ex": [
+      { "en": "The coach {made|동사:(억지로) ~하게 했다} us [[run]] ten laps.", "ko": "코치님이 우리에게 열 바퀴를 뛰게 하셨어. (to run ✕)" },
+      { "en": "We [[were made to run]] ten laps.", "ko": "우리는 열 바퀴를 뛰어야 했어. (수동태에서는 to가 돌아와요)" }
+    ],
+    "check": "I got my brother ___ the dishes. (wash / to wash)",
+    "level": "high"
+  },
+  {
+    "id": "snct-2",
+    "unit": "suneung/complement-transitive",
+    "q": "had my hair cut에서 왜 cut이 p.p.예요?",
+    "alts": ["목적격보어에 과거분사가 오는 경우", "have 목적어 pp 뜻", "머리 잘랐다 영어로 왜 had my hair cut", "해브 목적어 피피", "get my bike fixed 왜 fixed"],
+    "keys": ["have", "get", "과거분사", "목적격보어"],
+    "a": "목적어와 보어를 떼어서 **숨은 문장**을 만들어 보세요. 머리카락은 스스로 자르지 않고 **잘리는 쪽**이죠. 목적어가 당하는 쪽이면 동사가 무엇이든 목적격보어는 거의 늘 **p.p.**예요.\n그래서 have, get, make, 지각동사, keep 모두 목적어가 당하면 p.p.를 써요.",
+    "ex": [
+      { "en": "I {had|동사:~되게 했다} my phone screen [[repaired]].", "ko": "화면이 수리되는 쪽 → p.p." },
+      { "en": "I heard my name [[called]] in the hallway.", "ko": "이름이 불리는 쪽 → p.p." }
+    ],
+    "check": "I had my bike ___ yesterday. (fix / fixed)",
+    "level": "high"
+  },
+  {
+    "id": "snct-3",
+    "unit": "suneung/complement-transitive",
+    "q": "지각동사 뒤에는 원형이랑 -ing 중에 뭘 써요?",
+    "alts": ["see 목적어 동사원형 ing 차이", "hear someone call calling 둘 다 돼요?", "지각동사 목적격보어 to 써도 돼요?", "와치 목적어 뒤에 뭐 와요"],
+    "keys": ["see", "hear", "watch", "지각동사", "-ing"],
+    "a": "둘 다 돼요. **동사원형**은 장면을 처음부터 끝까지 본 느낌, **-ing**는 진행 중인 한순간을 본 느낌이에요. 하지만 **to부정사는 안 돼요**.\n목적어가 당하는 쪽이면 p.p.를 쓰고, 수동태(be seen)가 되면 원형 앞에 to가 붙어요.",
+    "ex": [
+      { "en": "I saw the bus [[leave]] without me.", "ko": "장면 전체 → 원형" },
+      { "en": "We heard the rain [[falling]] all night.", "ko": "진행 중 → -ing" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snct-4",
+    "unit": "suneung/complement-transitive",
+    "q": "lie랑 lay 너무 헷갈려요",
+    "alts": ["라이 레이 차이", "눕다 놓다 영어 변화형", "lay가 lie의 과거형이에요?", "laid lay lain 구별", "rise raise 차이"],
+    "keys": ["lie", "lay", "자동사", "타동사"],
+    "a": "**뒤에 목적어가 있는지**만 보세요. 목적어가 없으면 자동사 **lie(눕다)**: lie–lay–lain. 목적어가 있으면 타동사 **lay(놓다, 눕히다)**: lay–laid–laid예요.\n그래서 '누웠다'는 lay, '놓았다'는 laid예요. rise(오르다) / raise(올리다), sit(앉다) / seat(앉히다)도 같은 방법으로 골라요.",
+    "ex": [
+      { "en": "She [[{lay|동사:누웠다 (lie의 과거형)}]] down on the grass.", "ko": "목적어 없음 → lie의 과거형" },
+      { "en": "Please [[lay]] the books on the desk.", "ko": "목적어 the books → 타동사 lay" }
+    ],
+    "check": "The sun ___ in the east. (rises / raises)",
+    "level": "high"
+  },
+  {
+    "id": "snct-5",
+    "unit": "suneung/complement-transitive",
+    "q": "discuss about은 왜 틀려요?",
+    "alts": ["디스커스 어바웃", "marry with 틀린 이유", "reach at 써도 돼요?", "전치사 붙이면 틀리는 동사", "resemble to 틀려요?"],
+    "keys": ["discuss", "reach", "marry", "타동사", "전치사"],
+    "a": "discuss는 목적어를 **바로** 받는 **타동사**예요. 우리말로 '~에 대해 의논하다'라서 about을 넣고 싶어지지만, 영어에서는 전치사를 붙이면 틀려요.\nreach, marry, enter, resemble, approach, attend, mention도 같아요. 반대로 listen to, arrive at, complain about은 자동사라 전치사가 꼭 필요해요.",
+    "ex": [
+      { "en": "We [[discussed]] the plan for the school trip.", "ko": "discussed about ✕" },
+      { "en": "The train [[reached]] the station at noon.", "ko": "reached at ✕ / arrived at ○" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snct-6",
+    "unit": "suneung/complement-transitive",
+    "q": "happen이나 consist of는 왜 수동태가 안 돼요?",
+    "alts": ["was happened 틀려요?", "is consisted of 왜 틀림", "belong to 수동태", "해픈 수동태", "resemble 수동태 안 되는 이유"],
+    "keys": ["happen", "consist", "수동태", "자동사"],
+    "a": "수동태는 **목적어가 주어 자리로 올라가는** 문장이에요. happen, occur, appear, disappear, remain, arise는 목적어가 없는 **자동사**라 올라갈 목적어가 없어요.\nconsist of, belong to도 수동태로 쓰지 않고, resemble처럼 상태를 나타내는 동사도 수동태로 쓰지 않아요.",
+    "ex": [
+      { "en": "The accident [[occurred]] on a foggy morning.", "ko": "was occurred ✕" },
+      { "en": "Our class [[consists of]] thirty students.", "ko": "is consisted of ✕" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snpi-1",
+    "unit": "suneung/parallel-inversion",
+    "q": "and 뒤에 -ing가 오면 틀린 거예요?",
+    "alts": ["병렬 구조 찾는 법", "and 앞뒤 모양 맞추기", "앤드 뒤에 동사 모양", "and 뒤에 ing랑 ed 중에 뭐 써요", "병렬 어법 문제 푸는 법"],
+    "keys": ["병렬", "and", "짝"],
+    "a": "-ing라서 틀린 게 아니라, **and 앞의 짝**과 모양이 다르면 틀려요. and 뒤의 말과 같은 자리에 선 말을 앞에서 찾아보세요.\n- 짝이 진짜 동사(opened) → 뒤도 진짜 동사(found)\n- 짝이 동명사(reading) → 뒤도 동명사(watching)\n- 짝이 to부정사(to save) → 뒤도 (to) 동사원형",
+    "ex": [
+      { "en": "She [[opened]] the box and [[found]] a letter.", "ko": "짝이 진짜 동사 opened → found (finding ✕)" },
+      { "en": "I like [[reading]] novels and [[watching]] movies.", "ko": "짝이 동명사 reading → watching" }
+    ],
+    "check": "He came home and (taking / took) a shower. 무엇이 맞을까요?",
+    "level": "high"
+  },
+  {
+    "id": "snpi-2",
+    "unit": "suneung/parallel-inversion",
+    "q": "대동사 do랑 be동사는 어떻게 골라요?",
+    "alts": ["than 뒤에 do 쓸지 is 쓸지", "대동사 고르는 법", "비교급 뒤에 do does did", "댄 아이 엠이랑 댄 아이 두 차이", "대동사가 뭐예요"],
+    "keys": ["대동사", "do", "than"],
+    "a": "앞에 나온 동사가 무엇인지 보면 돼요. **일반동사**면 do·does·did, **be동사**면 be동사, **조동사**면 그 조동사, **완료형**이면 have·has·had로 받아요.\n그다음 시제와 **대동사 자리의 주어 수**를 맞춰요.",
+    "ex": [
+      { "en": "My sister is taller than I [[am]].", "ko": "앞 동사가 be동사 is → am (do ✕)" },
+      { "en": "My cat sleeps more than my dog [[does]].", "ko": "일반동사 sleeps, 주어 my dog(단수) → does" }
+    ],
+    "check": "She runs faster than I (am / do). 무엇이 맞을까요?",
+    "level": "high"
+  },
+  {
+    "id": "snpi-3",
+    "unit": "suneung/parallel-inversion",
+    "q": "so do I랑 neither do I는 언제 써요?",
+    "alts": ["나도 그래를 영어로", "쏘 두 아이 뜻", "neither do I 뜻", "so am I랑 so do I 차이", "나도 안 그래 영어로"],
+    "keys": ["so", "neither", "대동사"],
+    "a": "앞 말에 **'나도 그래'**라고 하면 so, **'나도 안 그래'**라고 하면 neither를 써요. 뒤는 **대동사 + 주어** 순서예요.\n대동사는 앞 동사의 종류에 맞춰 고르고(be동사면 be동사, 일반동사면 do), neither에는 이미 부정의 뜻이 있어서 not을 붙이지 않아요.",
+    "ex": [
+      { "en": "Minsu was late, and [[{so|부사:~도 그렇다} was]] Jisu.", "ko": "be동사 was → so was" },
+      { "en": "My parents don't drink coffee, and [[{neither|부사:~도 아니다} do]] I.", "ko": "neither don't ✕" }
+    ],
+    "check": "I'm hungry.에 '나도'라고 답하면 So am I일까요, So do I일까요?",
+    "level": "high"
+  },
+  {
+    "id": "snpi-4",
+    "unit": "suneung/parallel-inversion",
+    "q": "도치된 문장에서 동사 수일치는 어떻게 해요?",
+    "alts": ["On the table 뒤에 was were 고르기", "장소 부사구 도치 수일치", "도치 문장에서 주어 찾기", "앞에 복수 명사가 있는데 왜 단수 동사예요", "어몽 더 뒤에 was"],
+    "keys": ["도치", "수일치", "주어"],
+    "a": "장소·방향 부사구나 보어가 앞으로 나오면 주어가 **동사 뒤**로 가요. 동사 앞에 있는 명사는 전치사 뒤의 명사라서 주어가 아니에요. **동사 뒤의 명사**를 찾아 수를 맞춰요.",
+    "ex": [
+      { "en": "Among the guests [[were]] two famous singers.", "ko": "주어 two famous singers(복수) → were" },
+      { "en": "Under the bed [[was]] a box of old toys.", "ko": "주어 a box(단수) → was" }
+    ],
+    "check": "On the wall (hang / hangs) three pictures. 주어는 무엇일까요?",
+    "level": "high"
+  },
+  {
+    "id": "snpi-5",
+    "unit": "suneung/parallel-inversion",
+    "q": "Little did he know에서 왜 knew가 아니라 know예요?",
+    "alts": ["부정어 도치 did 뒤에 동사원형", "Never have I 순서", "부정어가 앞에 오면 왜 순서가 바뀌어요", "리틀 디드 히 노우 뜻", "Rarely does 뒤에 동사 모양"],
+    "keys": ["도치", "부정어", "did"],
+    "a": "부정어(Never, Rarely, Little, Hardly)가 문장 맨 앞에 오면 **의문문처럼** 순서가 바뀌어요. 일반동사 문장은 do·does·did를 불러와 주어 앞에 세우는데, 시제는 did가 가져가서 뒤의 동사는 **원형**이 돼요.\nDid he know?와 같은 모양이라고 생각하면 쉬워요.",
+    "ex": [
+      { "en": "[[{Little|부사:(부정) 전혀 ~않다} {did|조동사:(도치) 주어 앞으로 나온 조동사} he know]] about the plan.", "ko": "did he knew ✕" },
+      { "en": "[[Never {have|조동사:완료형을 만드는 말} I seen]] such a big dog.", "ko": "완료의 have가 주어 앞으로" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snpi-6",
+    "unit": "suneung/parallel-inversion",
+    "q": "than 뒤에도 모양을 맞춰야 해요?",
+    "alts": ["비교 대상 병렬", "than 뒤에 to부정사 동명사", "비교급 뒤 ing", "댄 뒤에 뭐 와요", "비교할 때 that those"],
+    "keys": ["비교", "than", "병렬"],
+    "a": "네, than과 as 뒤도 병렬 자리예요. **동명사는 동명사**와, **to부정사는 to부정사**와 견줘요. 명사를 되풀이할 때는 단수면 that, 복수면 those로 받아요.",
+    "ex": [
+      { "en": "[[Riding]] a bike to school is faster than [[walking]].", "ko": "동명사끼리 (to walk ✕)" },
+      { "en": "The seats in the new stadium are wider than [[those]] in the old {one|대명사:(앞의 명사를 받아) 것}.", "ko": "those = the seats (복수)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snpr-1",
+    "unit": "suneung/practice",
+    "q": "어법 문제는 어디부터 봐요?",
+    "alts": ["29번 어디서부터 풀어요", "어법 지문 처음부터 다 해석해야 돼요?", "밑줄 순서대로 풀면 돼요?", "이십구번 어법 푸는 순서", "어법 지문 받으면 뭐부터 해요"],
+    "keys": ["29번", "어법", "순서", "밑줄"],
+    "a": "지문을 처음부터 꼼꼼히 해석할 필요는 없어요. 첫 문장으로 무엇에 관한 글인지만 잡고, **밑줄이 있는 문장**에서 접속사·관계사를 세어 진짜 동사 개수를 확인해요.\n그다음 밑줄마다 **종류**(동사, 관계사, 형용사·부사, 대명사 등)를 붙이고, 그 종류에서 확인할 것 하나만 봐요.",
+    "ex": [
+      { "en": "Students {who|관계대명사:~하는 (사람)} sleep well [[remember]] more.", "ko": "잘 자는 학생들이 더 많이 기억해요. (관계사 1개 → 진짜 동사 2개: sleep, remember)" }
+    ],
+    "check": "관계사가 두 개 있는 문장에는 진짜 동사가 몇 개일까요?",
+    "level": "high"
+  },
+  {
+    "id": "snpr-2",
+    "unit": "suneung/practice",
+    "q": "어법 문제 풀 시간이 부족하면 어떻게 해요?",
+    "alts": ["어법 문제 시간이 너무 오래 걸려요", "29번 빨리 푸는 법", "시간 없을 때 어법은 어떻게", "어법에서 자꾸 시간이 모자라요", "어법 타임 줄이는 방법"],
+    "keys": ["시간", "어법", "빨리"],
+    "a": "해석에 시간을 쓰지 말고 **밑줄 주변의 구조**만 봐요. 동사에 밑줄이 있으면 주어에 괄호, 관계사에 밑줄이 있으면 뒤가 완전한지처럼 확인할 것이 정해져 있어요.\n그리고 **확실히 맞는 밑줄부터 지우면** 남은 한두 개만 따지면 돼요. 평소에 점검표를 손에 익혀 두면 밑줄을 보자마자 확인할 것이 떠올라서 저절로 빨라져요.",
+    "ex": [
+      { "en": "The angle of the dance [[tells]] the other bees which way to fly.", "ko": "춤의 각도가 다른 벌들에게 어느 쪽으로 날아갈지 알려 줘요. (of the dance에 괄호를 치면 주어는 The angle → tells)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snpr-3",
+    "unit": "suneung/practice",
+    "q": "틀린 걸 두 개 찾았으면 어떡해요?",
+    "alts": ["틀린 게 두 개 같아요", "답이 두 개인 것 같아요", "둘 다 틀려 보이는데 뭘 골라요", "어법 밑줄 두 개가 이상해요", "정답이 두 개면 어떡해"],
+    "keys": ["틀린", "두 개", "어법", "밑줄"],
+    "a": "밑줄형 어법 문제에서 틀린 것은 **딱 하나**예요. 그러니 둘 중 하나는 맞는 표현이에요.\n두 밑줄의 **종류와 확인할 것**을 처음부터 다시 따져 보세요. 맞는 쪽은 쉼표 뒤의 which, 가목적어 it 뒤의 형용사, 쉼표 사이에 낀 p.p. 분사처럼 **낯설지만 맞는** 표현인 경우가 많아요.",
+    "ex": [
+      { "en": "Scientists found {it|대명사:가목적어 (뜻 없이 자리만 채워요)} {hard|형용사:어려운} [[to believe]] the result.", "ko": "과학자들은 그 결과를 믿기 어렵다고 생각했어요. (가목적어 it + 형용사 + to부정사: 낯설어 보여도 맞는 표현)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snpr-4",
+    "unit": "suneung/practice",
+    "q": "해석이 안 되는 지문도 어법은 풀 수 있어요?",
+    "alts": ["어법 지문이 너무 어려워요", "내용을 몰라도 어법 풀 수 있어요", "과학 지문 해석이 안 돼요", "모르는 단어가 많은데 어법 풀 수 있나요"],
+    "keys": ["해석", "어법", "지문", "단어"],
+    "a": "네. 어법 문제는 **문장 구조**를 묻는 문제라 내용을 다 몰라도 풀 수 있는 경우가 많아요.\n모르는 단어가 있어도 그 단어가 **명사인지 동사인지**만 알면 돼요. 주어에 괄호를 치고, 접속사·관계사를 세고, 밑줄 뒤에 목적어가 있는지 보는 일은 뜻을 몰라도 할 수 있어요.",
+    "ex": [
+      { "en": "The {polyps|명사:폴립 (산호를 이루는 작은 동물)} on the reef [[are]] very small.", "ko": "산호초의 폴립들은 아주 작아요. (polyps의 뜻을 몰라도 -s가 붙은 복수 주어라는 것은 보여요 → are)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "snpr-5",
+    "unit": "suneung/practice",
+    "q": "틀린 어법 문제는 어떻게 복습해요?",
+    "alts": ["어법 오답 정리 방법", "오답 노트 어떻게 써요", "어법에서 자꾸 같은 걸 틀려요", "틀린 문제 다시 보는 법"],
+    "keys": ["복습", "오답", "어법"],
+    "a": "몇 개 틀렸는지보다 **어떤 종류에서 멈칫했는지** 적어 두세요. 예를 들어 '분사의 능동·수동', '관계사 뒤가 완전한지'처럼요.\n같은 종류가 두세 번 반복되면 그 종류의 단원으로 돌아가 예문과 예시 문제를 다시 풀어 봐요.",
+    "ex": [
+      { "en": "The pictures [[taken]] by my brother won a prize.", "ko": "형이 찍은 사진들이 상을 받았어요. (사진은 찍히는 쪽 → p.p. taken)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sntm-1",
+    "unit": "suneung/tense-mood",
+    "q": "수능에서 will에 밑줄이 있으면 뭘 봐요?",
+    "alts": ["when 뒤에 will 쓰면 틀려요?", "if 절에 윌 써도 돼요", "시간 조건 부사절 현재시제 수능", "명사절 if will 맞아요?", "until 뒤에 will"],
+    "keys": ["will", "부사절", "명사절", "if", "when"],
+    "a": "will이 **시간·조건 부사절**(when, if, until, as soon as) 안에 있으면 틀린 거예요. 미래 일이어도 현재형을 써요.\n하지만 if·when을 '**~인지**', '**언제 ~할지**'로 읽으면 동사의 목적어인 명사절이라 will이 맞아요. 수능은 이 둘을 한 지문에 같이 넣어 헷갈리게 하기도 해요.",
+    "ex": [
+      { "en": "{When|접속사:~할 때} the rain [[stops]], we will leave.", "ko": "비가 그치면 우리는 떠날 거야. (부사절 → 현재형)" },
+      { "en": "I don't know {if|접속사:~인지} the rain [[will stop]] soon.", "ko": "비가 곧 그칠지 모르겠어. (명사절 → will)" }
+    ],
+    "check": "I will wait until he (comes / will come). 무엇이 맞을까요?",
+    "level": "high"
+  },
+  {
+    "id": "sntm-2",
+    "unit": "suneung/tense-mood",
+    "q": "yesterday가 있으면 현재완료를 못 써요?",
+    "alts": ["어제랑 현재완료 같이 쓰면 틀려요?", "ago 현재완료 틀려요", "have p.p. 과거 표현", "해브 피피 예스터데이", "when 현재완료 의문문"],
+    "keys": ["현재완료", "yesterday", "ago", "since"],
+    "a": "네, 못 써요. 현재완료는 과거의 일을 **지금과 이어서** 보는 시제라서, yesterday, ago, last ~, in 2019, When ~?처럼 **끝난 과거의 한 점**을 콕 집는 말과는 어울리지 않아요.\n반대로 since, for, so far, lately처럼 지금까지의 기간을 말하면 현재완료를 써요.",
+    "ex": [
+      { "en": "I [[lost]] my wallet yesterday.", "ko": "어제 지갑을 잃어버렸어. (have lost ✕)" },
+      { "en": "I [[have used]] this bag {since|전치사:~ 이후로} 2020.", "ko": "나는 2020년부터 이 가방을 써 왔어." }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sntm-3",
+    "unit": "suneung/tense-mood",
+    "q": "가정법에서 would랑 would have는 어떻게 골라요?",
+    "alts": ["would have p.p. 언제 써요", "가정법 과거 과거완료 구별", "혼합가정법 now", "우드 해브 피피", "if had p.p. 뒤에 would 동사원형 돼요?"],
+    "keys": ["가정법", "would", "혼합가정법", "now"],
+    "a": "**주절의 시간 단서**를 봐요. 지금 사실의 반대면 would + 동사원형, 과거 사실의 반대면 would have p.p.예요.\nif절이 had p.p.인데 주절에 **now**가 있으면 혼합가정법이라 would + 동사원형이 맞아요. 반대로 주절에 yesterday, last year가 있으면 would have p.p.예요.",
+    "ex": [
+      { "en": "If I [[{had|조동사:과거완료를 만드는 말} slept]] more, I [[{would|조동사:~할 텐데} feel]] better now.", "ko": "잠을 더 잤더라면 지금 기분이 더 좋을 텐데. (혼합가정법)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sntm-4",
+    "unit": "suneung/tense-mood",
+    "q": "Had I known은 왜 had가 앞에 와요?",
+    "alts": ["가정법 도치", "if 생략하면", "were i you 뜻", "해드 아이 노운", "should가 문장 맨 앞에"],
+    "keys": ["도치", "if 생략", "had", "were"],
+    "a": "if를 빼면 **were, had, should**가 주어 앞으로 나와요. Had I known은 If I had known과 같은 뜻이에요.\n앞으로 나올 수 있는 건 이 셋뿐이라 If I knew를 Knew I로 바꾸지는 않아요. not은 주어 뒤에 남아요.",
+    "ex": [
+      { "en": "[[{Had|조동사:과거완료를 만드는 말} I]] known, I [[{would|조동사:~했을 텐데} {have|조동사:완료형을 만드는 말} helped]] you.", "ko": "알았더라면 너를 도왔을 텐데. (= If I had known)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sntm-5",
+    "unit": "suneung/tense-mood",
+    "q": "insist that 뒤에 동사원형을 안 쓸 때도 있어요?",
+    "alts": ["insist 사실 주장", "suggest 암시하다 should", "주요제명 예외", "인시스트 댓 뒤에", "suggest that 뒤에 과거형"],
+    "keys": ["insist", "suggest", "should", "동사원형", "당위"],
+    "a": "있어요. that절이 '**~해야 한다**'는 당위면 (should) 동사원형이지만, **이미 있는 사실**을 말하면 시제를 그대로 맞춰요.\ninsist가 '(사실이라고) 주장하다', suggest가 '암시하다, 보여 주다'일 때예요. '~해야 한다'로 해석해서 어색하면 사실 쪽이에요.",
+    "ex": [
+      { "en": "He {insisted|동사:(사실이라고) 주장했다} {that|접속사:~라고} he [[had paid]] for the tickets.", "ko": "그는 자기가 표값을 냈다고 주장했어. (사실 → 시제대로)" },
+      { "en": "She {insisted|동사:(~해야 한다고) 고집했다} {that|접속사:~라고} he [[pay]] for the tickets.", "ko": "그녀는 그가 표값을 내야 한다고 고집했어. (당위 → 동사원형)" }
+    ],
+    "level": "high"
+  },
+  {
+    "id": "sntm-6",
+    "unit": "suneung/tense-mood",
+    "q": "must have p.p.랑 should have p.p.가 헷갈려요",
+    "alts": ["머스트 해브 피피 슈드 해브 피피 차이", "~했음에 틀림없다 영어로", "~했어야 했는데 영어로", "can't have p.p. 뜻", "조동사 have pp 수능"],
+    "keys": ["must have", "should have", "can't have", "추측", "후회"],
+    "a": "must have p.p.는 근거를 보고 '**~했음에 틀림없다**'고 추측하는 말이고, should have p.p.는 하지 않은 일을 '**~했어야 했는데**' 하고 후회하는 말이에요.\ncan't have p.p.는 '~했을 리 없다', may·might have p.p.는 '~했을지도 모른다'예요. 앞뒤에 근거 문장이 있으면 추측, 후회하는 말이 있으면 should를 골라요.",
+    "ex": [
+      { "en": "Her eyes are red. She [[{must|조동사:~했음에 틀림없다} {have|조동사:완료형을 만드는 말} cried]].", "ko": "눈이 빨개. 울었던 게 틀림없어. (추측)" },
+      { "en": "I'm {so|부사:너무} sleepy. I [[{should|조동사:~했어야 했는데} {have|조동사:완료형을 만드는 말} slept]] earlier.", "ko": "너무 졸려. 더 일찍 잤어야 했는데. (후회)" }
+    ],
+    "level": "high"
   }
 ]

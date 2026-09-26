@@ -755,3 +755,5 @@ export * from "./articles";
 export * from "./pronouns";
 
 export * from "./easy";
+export * from "./suneung-complement-transitive";
+export * from "./suneung-parallel-inversion";

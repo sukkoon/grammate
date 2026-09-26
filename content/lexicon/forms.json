@@ -1,6 +1,8 @@
 {
   "am": ["be", "현재형 (주어가 I일 때)"],
   "are": ["be", "현재형 (주어가 you·we·they·복수일 때)"],
+  "arisen": ["arise", "과거분사"],
+  "arose": ["arise", "과거형"],
   "ate": ["eat", "과거형"],
   "became": ["become", "과거형"],
   "been": ["be", "과거분사"],
