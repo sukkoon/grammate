@@ -64,6 +64,10 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
   if (!ref || !ref.unit.ready) notFound();
   const { default: Content } = await import(`@/content/lessons/${chapter}/${unit}.mdx`);
   const { prev, next } = neighbors(chapter, unit);
+  // 휴대폰·태블릿에서 옆으로 밀 때 갈 곳 (components/layout/SwipeNav.tsx). 끝에 닿으면 반대쪽 끝으로 이어진다
+  const ready = readyUnits();
+  const swipePrev = prev ?? ready[ready.length - 1];
+  const swipeNext = next ?? ready[0];
 
   return (
     <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-10 pt-6 sm:px-6 lg:grid-cols-[230px_minmax(0,1fr)] lg:pt-10">
@@ -109,6 +113,14 @@ export default async function UnitPage({ params }: PageProps<"/learn/[chapter]/[
         <div className="mt-12 flex justify-center">
           <ReadButton unit={`${chapter}/${unit}`} />
         </div>
+
+        <div
+          hidden
+          data-swipe-prev={unitHref(swipePrev.chapter.slug, swipePrev.unit.slug)}
+          data-swipe-prev-label={`${prev ? "이전 단원" : "마지막 단원"}: ${swipePrev.unit.title}`}
+          data-swipe-next={unitHref(swipeNext.chapter.slug, swipeNext.unit.slug)}
+          data-swipe-next-label={`${next ? "다음 단원" : "처음 단원"}: ${swipeNext.unit.title}`}
+        />
 
         <nav aria-label="이전·다음 단원" className="mt-8 grid gap-3 sm:grid-cols-2">
           {prev ? (

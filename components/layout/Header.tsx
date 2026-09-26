@@ -6,16 +6,8 @@ import { NavMenu } from "./NavMenu";
 import { InstallButton } from "@/components/pwa/InstallButton";
 import { AuthStatus } from "@/components/auth/AuthStatus";
 import { SearchBox } from "@/components/search/SearchBox";
+import { navItems } from "@/lib/nav";
 
-/** 메뉴 이름은 모두 짧은 명사형(2어절 이내)으로 맞춘다. */
-export const navItems = [
-  { href: "/", label: "그래머랑 소개" },
-  { href: "/learn", label: "전체 목차" },
-  { href: "/terms", label: "용어 사전" },
-  { href: "/start", label: "각 단원별 학습" },
-  { href: "/roadmap", label: "필수 문법" },
-  { href: "/me", label: "내 공부" },
-];
 
 /** 로고는 왼쪽, 오른쪽에 드롭다운 목차와 화면 밝기 단추. */
 export function Header() {
