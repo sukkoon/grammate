@@ -48,9 +48,9 @@ export default function SuneungPage() {
       <h1 className="text-[2rem] font-extrabold tracking-[-0.02em]">수능 문법</h1>
       <p className="mt-2 text-ink-2">
         <Phrases
-          text={`수능 영어의 문법 문제는 처음 보는 문법을 묻지 않아요.
-그래머랑에서 품사부터 준동사, 관계사까지 차근차근 쌓아 온 문법이 그대로 나와요.
-기초를 단단히 다져 두면 수능 문제도 거뜬히 풀 수 있어요.`}
+          text={`수능 영어 어법 문제는 낯선 문법을 묻지 않아요.
+그래머랑에서 품사부터 준동사, 관계사까지 차근차근 쌓아 온 바로 그 문법이 나와요.
+기초만 단단히 다져 두면 수능 문제도 자신 있게 풀 수 있어요.`}
         />
       </p>
 
