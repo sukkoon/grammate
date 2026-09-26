@@ -2,7 +2,8 @@ import type { Band } from "@/lib/level";
 
 /**
  * 수준별 꼭 알아야 할 문법.
- * 참고한 베스트셀러 문법 교재들이 그 학년에 공통으로 다루는 내용을 골라 묶었다.
+ * 여러 시중 문법 교재가 그 학년에 공통으로 다루는 내용을 참고해 골라 묶었다.
+ * 특정 교재·출판사 이름은 적지 않는다(상표이고, 제휴한 것처럼 보이지 않게).
  * links의 href는 실제 단원이어야 한다 (tests/content.test.ts가 검사).
  */
 export interface RoadmapItem {
@@ -16,7 +17,6 @@ export interface RoadmapLevel {
   band: Band;
   title: string;
   intro: string;
-  books: string[];
   groups: { name: string; items: RoadmapItem[] }[];
 }
 
@@ -27,7 +27,6 @@ export const roadmap: RoadmapLevel[] = [
     band: "elem",
     title: "초등학생이 꼭 알아야 할 문법",
     intro: "문장을 이루는 낱말의 종류와 동사의 기본 모양을 익혀요. 쉬운 문장을 스스로 만들고 물어볼 수 있으면 충분해요.",
-    books: ["초등영문법 3800제", "초등 Grammar Inside"],
     groups: [
       {
         name: "낱말의 종류",
@@ -69,7 +68,6 @@ export const roadmap: RoadmapLevel[] = [
     band: "middle",
     title: "중학생이 꼭 알아야 할 문법",
     intro: "문장의 뼈대(문장 성분과 형식)를 세우고, 동사가 변장하는 법(준동사)과 문장을 잇는 법(접속사·관계사)을 익혀요. 내신 문법의 대부분이 여기에 있어요.",
-    books: ["중학영문법 3800제", "천일문 중등 GRAMMAR", "GRAMMAR ZONE 중등"],
     groups: [
       {
         name: "문장의 뼈대",
@@ -123,7 +121,6 @@ export const roadmap: RoadmapLevel[] = [
     band: "high",
     title: "고등학생이 꼭 알아야 할 문법",
     intro: "중학 문법을 깊게 다지고, 긴 문장을 정확히 읽는 힘을 길러요. 핵심은 '진짜 동사 찾기'예요. 여기서 다진 문법이 수능 문법의 바탕이 돼요.",
-    books: ["GRAMMAR ZONE 기본·필수", "천일문 고등 GRAMMAR", "어법끝 START"],
     groups: [
       {
         name: "동사 깊게",

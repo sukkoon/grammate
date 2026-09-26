@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { brand } from "@/lib/brand";
-import { changa, nanumSquare } from "./fonts";
+import { changa, koFont } from "./fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AuthGate } from "@/components/auth/AuthGate";
 import { ScrollTop } from "@/components/layout/ScrollTop";
 import { RecordsSync } from "@/components/auth/RecordsSync";
 import { SwipeNav } from "@/components/layout/SwipeNav";
+import { AiVoiceNotice } from "@/components/layout/AiVoiceNotice";
 import { WordTooltipLayer } from "@/components/lesson/WordTooltipLayer";
 import { LevelLayer } from "@/components/level/LevelLayer";
 import { Helper } from "@/components/tutor/Helper";
@@ -44,7 +45,7 @@ const themeScript = `try{var t=localStorage.getItem('gm-theme');if(t==='light'||
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko" className={`${changa.variable} ${nanumSquare.variable}`} suppressHydrationWarning>
+    <html lang="ko" className={`${changa.variable} ${koFont.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript + levelScript }} />
       </head>
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ScrollTop />
         <RecordsSync />
         <SwipeNav />
+        <AiVoiceNotice />
       </body>
     </html>
   );

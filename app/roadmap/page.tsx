@@ -7,7 +7,7 @@ import { Phrases } from "@/components/text/Phrases";
 
 export const metadata: Metadata = {
   title: "수준별 필수 문법",
-  description: "초등·중등·고등 학생이 꼭 알아야 할 영어 문법을 베스트셀러 교재의 학년 구성에 맞춰 골라 정리했어요.",
+  description: "초등·중등·고등 학생이 꼭 알아야 할 영어 문법을 학년별로 골라 정리했어요.",
 };
 
 const TONE: Record<RoadmapLevel["band"], string> = {
@@ -29,7 +29,6 @@ function LevelSection({ lv }: { lv: RoadmapLevel }) {
       <p className="mt-3 text-ink-2">
         <Phrases text={lv.intro} />
       </p>
-      <p className="mt-1 text-[13.5px] text-ink-3">참고 교재: {lv.books.join(" · ")}</p>
       <div className="mt-5 space-y-6">
         {lv.groups.map((g) => (
           <div key={g.name}>
@@ -71,7 +70,7 @@ export default function RoadmapPage() {
     <div className="mx-auto max-w-4xl px-4 pb-10 pt-10 sm:px-6">
       <h1 className="text-[2rem] font-extrabold tracking-[-0.02em]">수준별 필수 문법</h1>
       <p className="mt-2 text-ink-2">
-        <Phrases text="참고한 베스트셀러 문법 교재들이 학년마다 공통으로 다루는 내용을 골라, 초등·중등·고등에서 꼭 알아야 할 문법만 추렸어요. 교재마다 학년 배치가 조금씩 다르니, 앞 단계부터 차근차근 다지면 돼요." />
+        <Phrases text="여러 시중 문법 교재가 학년마다 공통으로 다루는 내용을 살펴보고, 초등·중등·고등에서 꼭 알아야 할 문법만 추렸어요. 교재마다 학년 배치가 조금씩 다르니, 앞 단계부터 차근차근 다지면 돼요." />
       </p>
       {/* 수준 바로가기: 한 상자 안에 초등·중등·고등 세 칸. 누르면 그 수준의 목록으로 내려간다 */}
       <nav aria-label="수준 바로가기" className="mt-5 grid grid-cols-3 overflow-hidden rounded-2xl border border-line bg-card">

@@ -102,6 +102,20 @@ function browserSpeak(text: string, lang: Lang, onEnd?: () => void) {
   synth.speak(u);
 }
 
+// ── AI 음성 알림 ─────────────────────────────────────────────
+/**
+ * 서버의 AI 음성(OpenAI·Microsoft)으로 읽을 때는 이용자에게 AI가 만든 목소리라고 알려야 한다(두 회사의 이용 정책).
+ * 이 탭에서 처음 AI 음성이 나올 때 한 번 알린다 (components/layout/AiVoiceNotice.tsx가 화면에 띄운다).
+ */
+export const AI_VOICE_EVENT = "gm-ai-voice";
+function announceAiVoice() {
+  try {
+    if (sessionStorage.getItem(AI_VOICE_EVENT)) return;
+    sessionStorage.setItem(AI_VOICE_EVENT, "1");
+  } catch {}
+  window.dispatchEvent(new Event(AI_VOICE_EVENT));
+}
+
 // ── 공개 API ─────────────────────────────────────────────
 let seq = 0;
 
@@ -127,7 +141,9 @@ export function speak(text: string, lang: Lang = "en-US", onEnd?: () => void) {
         if (current === a) current = null;
         browserSpeak(text, lang, onEnd);
       };
-      a.play().catch(() => browserSpeak(text, lang, onEnd));
+      a.play()
+        .then(announceAiVoice)
+        .catch(() => browserSpeak(text, lang, onEnd));
     });
 }
 
